@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
-tags: [readme, documentation, onboarding]
-related: [project-tooling/sphinx-docs-builder, project-tooling/contribution-guide-builder]
-prerequisites: []
-outputs: [markdown]
+tags: [ readme, documentation, onboarding ]
+related: [ project-tooling/sphinx-docs-builder, project-tooling/contribution-guide-builder ]
+prerequisites: [ ]
+outputs: [ markdown ]
 difficulty: beginner
 estimated_tokens: 1800
 permissions:
@@ -17,6 +17,8 @@ permissions:
   network: false
   execute_code: false
 language: en
+last_reviewed: 2026-11-02
+verified_against: [ ]
 ---
 
 # Readme Generator
@@ -70,12 +72,14 @@ language: en
 # researchkit — Reproducible research utilities that don't get in your way.
 
 ## What & Why
+
 researchkit packages the small helpers every lab project ends up writing:
 config loaders, seed setters, dataset adapters, and metric calculators.
 It exists so we stop copy-pasting the same 200 lines across repos and so
 reviewers can rerun results without bespoke setup.
 
 ## Quick Start
+
 \`\`\`bash
 git clone https://github.com/example/researchkit
 cd researchkit
@@ -84,8 +88,11 @@ python Main.py --config configs/QuickStart.yaml
 \`\`\`
 
 ## Usage
+
 \`\`\`python
+
 # Load a config and run a single training pass.
+
 from src.ConfigLoader import LoadConfig
 from src.Trainer import Trainer
 
@@ -95,6 +102,7 @@ trainer.Fit()
 \`\`\`
 
 ## Installation
+
 Python 3.10+ is required.
 \`\`\`bash
 pip install -e .
@@ -106,6 +114,7 @@ pip install -e ".[dev,test,docs]"
 \`\`\`
 
 ## License
+
 MIT — see [LICENSE](LICENSE).
 ```
 
@@ -115,6 +124,7 @@ Audit helper:
 # AuditReadme.py — list README commands and try each one.
 import re
 import subprocess
+
 
 def ExtractCommands(readmePath):
   # Pull every ```bash block from the README.

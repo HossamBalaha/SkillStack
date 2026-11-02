@@ -1,0 +1,37 @@
+<svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SkillStack logo (dark mode)">
+    <title>SkillStack (dark mode)</title>
+    <desc>SkillStack wordmark for dark backgrounds: four stacked rectangles forming an S-shape next to the word
+        SkillStack. Dark navy background with light-blue and orange bars and a light-grey wordmark.
+    </desc>
+
+    <!-- Dark background fill so the logo works when placed on a light page too.
+         Palette: background #0f172a, light blue #60a5fa, accent orange #f97316,
+         light text #e2e8f0. This is the dark-mode inverse of logo.svg. -->
+    <rect x="0" y="0" width="200" height="60" fill="#0f172a"/>
+
+    <!-- Logo mark: four stacked rounded rectangles forming an "S" shape.
+         Top and bottom bars span the full width (light blue); the two middle
+         bars alternate left and right in orange to suggest the curve. -->
+    <g shape-rendering="geometricPrecision">
+        <!-- Top horizontal stroke (full width, light blue). -->
+        <rect x="8" y="9" width="34" height="7" rx="2" fill="#60a5fa"/>
+        <!-- Upper-middle stroke, left-aligned (narrower, orange). -->
+        <rect x="8" y="19" width="22" height="7" rx="2" fill="#f97316"/>
+        <!-- Lower-middle stroke, right-aligned (narrower, orange). -->
+        <rect x="20" y="29" width="22" height="7" rx="2" fill="#f97316"/>
+        <!-- Bottom horizontal stroke (full width, light blue). -->
+        <rect x="8" y="39" width="34" height="7" rx="2" fill="#60a5fa"/>
+    </g>
+
+    <!-- Wordmark. "Skill" in light grey, "Stack" in orange.
+         Vertically centered on the logo mark (which spans y=9..46, center y=27.5). -->
+    <text x="52" y="27.5"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="22"
+          font-weight="700"
+          fill="#e2e8f0"
+          dominant-baseline="central"
+          text-rendering="geometricPrecision">Skill
+        <tspan fill="#f97316">Stack</tspan>
+    </text>
+</svg>

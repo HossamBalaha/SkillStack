@@ -1,12 +1,12 @@
 ---
 name: maestro
-description: Top-level orchestrator for the SkillStack 168-skill composable toolkit. When a task arrives, classify it into one of 9 themes (academic-research, style-integrity, ml-engineering, data-engineering, visualization, writing-citation, ai-text, ai-output-judgement, project-tooling) and point the agent at the correct skill folder and skill name. Themes are non-numbered so any can be dropped, swapped, or renamed without renumbering — removing a theme never breaks routing for the others. Use this FIRST whenever the agent needs to find a skill, before loading any individual skill.
+description: Top-level orchestrator for the SkillStack 237-skill composable toolkit. When a task arrives, classify it into one of 14 themes (academic-research, style-integrity, ml-engineering, data-engineering, visualization, writing-citation, ai-text, ai-output-judgement, project-tooling, prompt-engineering, ethics-compliance, devops, teaching-pedagogy, data-storytelling) and point the agent at the correct skill folder and skill name. Themes are non-numbered so any can be dropped, swapped, or renamed without renumbering — removing a theme never breaks routing for the others. Use this FIRST whenever the agent needs to find a skill, before loading any individual skill.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   role: orchestrator
-  skill_count: 168
-  theme_count: 9
+  skill_count: 237
+  theme_count: 14
   repo_name: SkillStack
 tags: [orchestrator, routing, classification, themes, skillstack]
 related: []
@@ -20,6 +20,8 @@ permissions:
   network: false
   execute_code: false
 language: en
+last_reviewed: 2026-11-02
+verified_against: []
 ---
 
 # Maestro — Skill Orchestrator
@@ -31,7 +33,7 @@ independent modules — drop, swap, or rename any of them and the rest of the st
 do NOT guess which skill to load. Instead:
 
 1. Read the task description.
-2. Match it to **one** of the 9 themes below.
+2. Match it to **one** of the 14 themes below.
 3. Inside that theme folder, find the skill whose name and description best fit.
 4. Load that skill's `SKILL.md` and follow it.
 
@@ -40,7 +42,7 @@ do NOT guess which skill to load. Instead:
 ```
 skillstack/
 ├── maestro/SKILL.md                          ← YOU ARE HERE
-├── README.md                                 ← Master index (all 168 skills)
+├── README.md                                 ← Master index (all 237 skills)
 ├── academic-research/    (20 skills)         ← research planning & writing
 ├── style-integrity/      (18 skills)         ← LaTeX, prose, coding conventions
 ├── ml-engineering/        (22 skills)         ← PyTorch, training, validation
@@ -49,7 +51,12 @@ skillstack/
 ├── writing-citation/      (18 skills)         ← BibTeX, editing, paraphrasing
 ├── ai-text/               (15 skills)         ← detect & humanize AI text
 ├── ai-output-judgement/   (18 skills)         ← judge & verify AI outputs
-└── project-tooling/       (20 skills)         ← packaging, Docker, CI/CD
+├── project-tooling/       (20 skills)         ← packaging, Docker, CI/CD
+├── prompt-engineering/    (15 skills)         ← prompt patterns & testing
+├── ethics-compliance/      (12 skills)         ← IRB, GDPR, HIPAA, dual-use
+├── devops/                 (18 skills)         ← K8s, Terraform, observability
+├── teaching-pedagogy/      (13 skills)         ← course design, rubrics, UDL
+└── data-storytelling/      (11 skills)         ← narratives, dashboards, pitches
 ```
 
 Each theme subfolder contains one folder per skill, and each skill folder has a `SKILL.md` (some also have a
@@ -68,6 +75,11 @@ Each theme subfolder contains one folder per skill, and each skill folder has a 
 | `ai-text/`             | detecting AI-generated text, humanizing AI text, perplexity/burstiness, watermark detection                                                      | 15       |
 | `ai-output-judgement/` | judging AI outputs for factuality, hallucination, bias, safety, groundedness, faithfulness, alignment, code correctness, building eval harnesses | 18       |
 | `project-tooling/`     | packaging, Docker, CI/CD, pytest, docs, READMEs, pyproject.toml, Makefiles                                                                       | 20       |
+| `prompt-engineering/`  | designing prompts (CoT, ReAct, RAG, ToT), few-shot templates, system prompts, prompt testing, prompt injection defense                           | 15       |
+| `ethics-compliance/`   | IRB protocols, informed consent, GDPR/HIPAA/CCPA compliance, dual-use review, AI impact assessment, fairness metrics, algorithmic audits         | 12       |
+| `devops/`              | Kubernetes, Helm, Terraform, Prometheus/Grafana, OpenTelemetry, SRE runbooks, incident response, GitOps, service mesh, disaster recovery         | 18       |
+| `teaching-pedagogy/`   | course design, learning objectives (Bloom), assessment, rubrics, lesson plans, accessibility (WCAG), UDL, active learning, learning analytics    | 13       |
+| `data-storytelling/`   | narrative visualization, executive dashboards, presentation slides, data journalism, infographics, interactive narratives, pitch decks           | 11       |
 
 ## How To Route
 

@@ -1,0 +1,23 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SkillStack favicon">
+    <title>SkillStack</title>
+    <desc>SkillStack favicon: four stacked rounded rectangles forming an S-shape on a deep-blue square. Derived from
+        docs/assets/logo.svg.
+    </desc>
+
+    <!-- Deep-blue square background, slightly rounded for visual softness.
+         Palette matches docs/assets/logo.svg: deep blue #1e3a8a + orange #f97316. -->
+    <rect x="0" y="0" width="32" height="32" rx="6" ry="6" fill="#1e3a8a"/>
+
+    <!-- Stacked-rectangles "S" mark, centered on the 32x32 canvas.
+         Coordinates mirror the logo.svg mark scaled to the favicon grid. -->
+    <g shape-rendering="geometricPrecision">
+        <!-- Top horizontal stroke, full width of the inner safe area. -->
+        <rect x="6" y="6" width="20" height="4" rx="1.5" fill="#f97316"/>
+        <!-- Upper-middle stroke, left-aligned (narrower, blue). -->
+        <rect x="6" y="12" width="13" height="4" rx="1.5" fill="#e2e8f0"/>
+        <!-- Lower-middle stroke, right-aligned (narrower, blue). -->
+        <rect x="13" y="18" width="13" height="4" rx="1.5" fill="#e2e8f0"/>
+        <!-- Bottom horizontal stroke, full width (orange). -->
+        <rect x="6" y="24" width="20" height="4" rx="1.5" fill="#f97316"/>
+    </g>
+</svg>

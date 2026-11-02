@@ -17,6 +17,8 @@ permissions:
   network: false
   execute_code: true
 language: en
+last_reviewed: 2026-11-02
+verified_against: []
 ---
 
 # Data Quality Validator

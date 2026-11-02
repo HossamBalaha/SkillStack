@@ -17,6 +17,8 @@ permissions:
   network: false
   execute_code: false
 language: en
+last_reviewed: 2026-11-02
+verified_against: []
 ---
 
 # Scientific Poster Designer

@@ -18,6 +18,8 @@ permissions:
   network: true
   execute_code: false
 language: en
+last_reviewed: 2026-11-02
+verified_against: []
 ---
 
 # Citation Hallucination Detector

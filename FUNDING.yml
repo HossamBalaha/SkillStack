@@ -1,0 +1,17 @@
+# GitHub Funding Configuration for SkillStack
+#
+# This file powers the "Sponsor" button on the SkillStack GitHub repository
+# (https://github.com/HossamBalaha/skillstack). Each key below enables one
+# sponsor platform link on the repo sidebar.
+#
+# SkillStack is MIT-licensed and free for everyone. Sponsorship is voluntary,
+# never paywalled, and never gates access to skills, scripts, or the maestro.
+
+# GitHub Sponsors profile.
+github: [ HossamBalaha ]
+
+# Ko-fi profile.
+ko_fi: hossammbalaha
+
+# Buy Me a Coffee profile.
+custom: [ "https://www.buymeacoffee.com/hossammbalaha" ]

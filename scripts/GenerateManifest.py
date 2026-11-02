@@ -90,6 +90,8 @@ def BuildManifest(rootPath: Path) -> dict:
     "academic-research", "style-integrity", "ml-engineering",
     "data-engineering", "visualization", "writing-citation",
     "ai-text", "ai-output-judgement", "project-tooling",
+    "prompt-engineering", "ethics-compliance", "devops",
+    "teaching-pedagogy", "data-storytelling",
   }
   # Group parsed skills by their theme, scoped to SkillStack-owned themes.
   byTheme: dict[str, list[SkillDoc]] = {}

@@ -1,0 +1,103 @@
+// SkillStack VS Code Dev Container.
+//
+// Boots a Python 3.11 container, installs the repo's helper-script
+// dependencies (requirements-scripts.txt), installs pre-commit, mounts
+// the repo into /workspace, and sets the Python interpreter path so VS
+// Code picks the right venv automatically.
+//
+// Reopen in container:
+//   VS Code → Command Palette → "Dev Containers: Reopen in Container".
+//
+// Requirements:
+//   - Docker (https://docs.docker.com/get-docker/)
+//   - VS Code + the "Dev Containers" extension
+//     (https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+{
+  "name": "SkillStack",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  // Fallback image when no Dockerfile is provided: a stock Python 3.11
+  // image is sufficient for SkillStack's helper scripts.
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  // Mount the repo into the container at /workspace.
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  // Run as the devcontainer's default non-root user (vscode) so files
+  // created inside the container are owned by the host user.
+  "remoteUser": "vscode",
+  // Install helper-script deps and pre-commit on container creation.
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install -r requirements-scripts.txt && python -m pip install pre-commit streamlit graphviz && pre-commit install",
+  // VS Code settings forwarded into the container.
+  "customizations": {
+    "vscode": {
+      // Pin the Python interpreter so the Python extension does not
+      // prompt the user to pick one on first launch.
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.autoImportCompletions": true,
+        "python.terminal.activateEnvironment": false,
+        "editor.formatOnSave": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "[python]": {
+          "editor.tabSize": 2,
+          "editor.insertSpaces": true
+        },
+        "[markdown]": {
+          "editor.wordWrap": "on"
+        },
+        "[yaml]": {
+          "editor.tabSize": 2,
+          "editor.insertSpaces": true,
+          "editor.autoIndent": "advanced"
+        },
+        "search.exclude": {
+          "**/.cache": true,
+          "**/export": true,
+          "**/__pycache__": true,
+          "**/.audit-log.jsonl": true
+        }
+      },
+      // Recommended extensions for SkillStack development.
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "redhat.vscode-yaml",
+        "yzhang.markdown-all-in-one",
+        "tamasfe.even-better-toml",
+        "EditorConfig.EditorConfig",
+        "ms-azuretools.vscode-docker",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  },
+  // Forward the Streamlit port so the SkillBrowser app is reachable from
+  // the host. Streamlit defaults to 8501.
+  "forwardPorts": [
+    8501
+  ],
+  "portsAttributes": {
+    "8501": {
+      "label": "SkillStack Browser (Streamlit)",
+      "onAutoForward": "notify"
+    }
+  },
+  // Mount the host's git config so commits made inside the container are
+  // attributed to the host user.
+  "mounts": [
+    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached",
+    "source=skillstack-venv,target=/workspace/.venv,type=volume"
+  ],
+  // Run the container with a larger shared memory segment so Streamlit
+  // and pytest do not run out of /dev/shm on large datasets.
+  "runArgs": [
+    "--shm-size=2g"
+  ]
+}

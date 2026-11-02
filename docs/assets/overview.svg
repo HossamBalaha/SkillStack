@@ -1,0 +1,175 @@
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SkillStack overview infographic">
+    <title>SkillStack Overview</title>
+    <desc>Infographic: 14 theme chips arranged in a circle around the maestro orchestrator at the center, with three
+        example skill chains drawn as arrows. Palette: deep blue #1e3a8a + accent orange #f97316. The 9 solid themes
+        ship in v1.0.0; the 5 dashed themes are planned for v1.1.
+    </desc>
+
+    <!-- Background: very light fill so the infographic works on a white page. -->
+    <rect x="0" y="0" width="1200" height="400" fill="#f8fafc"/>
+
+    <!-- Title block, top-left. -->
+    <text x="32" y="44"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="22"
+          font-weight="700"
+          fill="#1e3a8a"
+          text-rendering="geometricPrecision">SkillStack — 14 themes around one maestro
+    </text>
+    <text x="32" y="68"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="14"
+          fill="#475569"
+          text-rendering="geometricPrecision">9 shipped (solid) + 5 planned (dashed) · 168 skills today · MIT License ·
+        by Hossam Magdy Balaha
+    </text>
+
+    <!-- Legend block, bottom-left. -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12"
+       fill="#334155">
+        <rect x="32" y="320" width="18" height="14" rx="3" fill="#1e3a8a"/>
+        <text x="56" y="331" dominant-baseline="central">Shipped in v1.0.0</text>
+        <rect x="32" y="346" width="18" height="14" rx="3" fill="#1e3a8a" fill-opacity="0.25" stroke="#1e3a8a"
+              stroke-dasharray="3 2"/>
+        <text x="56" y="357" dominant-baseline="central">Planned for v1.1</text>
+        <rect x="200" y="320" width="18" height="14" rx="3" fill="#f97316"/>
+        <text x="224" y="331" dominant-baseline="central">Maestro (route here first)</text>
+        <line x1="200" y1="353" x2="218" y2="353" stroke="#f97316" stroke-width="2" marker-end="url(#arrow-orange)"/>
+        <text x="224" y="357" dominant-baseline="central">Example skill chain</text>
+    </g>
+
+    <!-- Arrowhead definitions for the three example chains. -->
+    <defs>
+        <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+                orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#f97316"/>
+        </marker>
+        <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+                orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e3a8a"/>
+        </marker>
+    </defs>
+
+    <!-- Three example skill chains drawn as curved arrows.
+         Chain A (blue): academic-research → visualization → writing-citation (write a paper + figures).
+         Chain B (orange): ml-engineering → ai-output-judgement (train + verify).
+         Chain C (blue dashed): data-engineering → ml-engineering → project-tooling (ETL + train + ship). -->
+    <g fill="none" stroke-width="2.5" shape-rendering="geometricPrecision">
+        <!-- Chain A: along the right side of the circle. -->
+        <path d="M 660 70 Q 820 200 760 230" stroke="#1e3a8a" marker-end="url(#arrow-blue)"/>
+        <path d="M 760 250 Q 760 280 730 290" stroke="#1e3a8a" marker-end="url(#arrow-blue)"/>
+        <!-- Chain B: from upper-right to bottom. -->
+        <path d="M 720 120 Q 800 260 640 345" stroke="#f97316" marker-end="url(#arrow-orange)"/>
+        <!-- Chain C: from right to bottom-left, dashed. -->
+        <path d="M 745 175 Q 760 380 555 340" stroke="#1e3a8a" stroke-dasharray="5 3" marker-end="url(#arrow-blue)"/>
+    </g>
+
+    <!-- Chain labels, written next to each arc. -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11"
+       fill="#1e3a8a">
+        <text x="820" y="170">Chain A — paper + figures</text>
+        <text x="820" y="186" fill="#475569">academic-research → visualization → writing-citation</text>
+        <text x="820" y="240" fill="#f97316">Chain B — train + verify</text>
+        <text x="820" y="256" fill="#475569">ml-engineering → ai-output-judgement</text>
+        <text x="820" y="305" fill="#1e3a8a">Chain C — ETL + train + ship</text>
+        <text x="820" y="321" fill="#475569">data-engineering → ml-engineering → project-tooling</text>
+    </g>
+
+    <!-- Center: maestro orchestrator chip (slightly larger, orange). -->
+    <g shape-rendering="geometricPrecision">
+        <rect x="540" y="180" width="120" height="40" rx="8" fill="#f97316"/>
+        <text x="600" y="200"
+              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="14"
+              font-weight="700"
+              fill="#ffffff"
+              text-anchor="middle"
+              dominant-baseline="central"
+              text-rendering="geometricPrecision">maestro
+        </text>
+        <text x="600" y="232"
+              font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="10"
+              fill="#475569"
+              text-anchor="middle"
+              text-rendering="geometricPrecision">load first · then route
+        </text>
+    </g>
+
+    <!-- 14 theme chips arranged in a circle of radius 150 around (600, 200).
+         Shipped themes (9): solid blue fill, white text.
+         Planned themes (5, marked with *): light-blue fill with dashed blue border. -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11"
+       font-weight="600" shape-rendering="geometricPrecision">
+
+        <!-- 0: academic-research (top) -->
+        <rect x="540" y="38" width="120" height="24" rx="6" fill="#1e3a8a"/>
+        <text x="600" y="50" fill="#ffffff" text-anchor="middle" dominant-baseline="central">academic-research</text>
+
+        <!-- 1: style-integrity -->
+        <rect x="620" y="55" width="120" height="24" rx="6" fill="#1e3a8a"/>
+        <text x="680" y="67" fill="#ffffff" text-anchor="middle" dominant-baseline="central">style-integrity</text>
+
+        <!-- 2: ml-engineering -->
+        <rect x="670" y="100" width="120" height="24" rx="6" fill="#1e3a8a"/>
+        <text x="730" y="112" fill="#ffffff" text-anchor="middle" dominant-baseline="central">ml-engineering</text>
+
+        <!-- 3: data-engineering -->
+        <rect x="700" y="158" width="120" height="24" rx="6" fill="#1e3a8a"/>
+        <text x="760" y="170" fill="#ffffff" text-anchor="middle" dominant-baseline="central">data-engineering</text>
+
+        <!-- 4: visualization -->
+        <rect x="700" y="218" width="120" height="24" rx="6" fill="#1e3a8a"/>
+        <text x="760" y="230" fill="#ffffff" text-anchor="middle" dominant-baseline="central">visualization</text>
+
+        <!-- 5: writing-citation -->
+        <rect x="670" y="276" width="120" height="24" rx="6" fill="#1e3a8a"/>
+        <text x="730" y="288" fill="#ffffff" text-anchor="middle" dominant-baseline="central">writing-citation</text>
+
+        <!-- 6: ai-text -->
+        <rect x="620" y="322" width="120" height="24" rx="6" fill="#1e3a8a"/>
+        <text x="680" y="334" fill="#ffffff" text-anchor="middle" dominant-baseline="central">ai-text</text>
+
+        <!-- 7: ai-output-judgement (bottom) -->
+        <rect x="540" y="340" width="120" height="24" rx="6" fill="#1e3a8a"/>
+        <text x="600" y="352" fill="#ffffff" text-anchor="middle" dominant-baseline="central">ai-output-judgement</text>
+
+        <!-- 8: project-tooling -->
+        <rect x="460" y="322" width="120" height="24" rx="6" fill="#1e3a8a"/>
+        <text x="520" y="334" fill="#ffffff" text-anchor="middle" dominant-baseline="central">project-tooling</text>
+
+        <!-- 9: prompt-engineering (planned) -->
+        <rect x="410" y="276" width="120" height="24" rx="6" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a"
+              stroke-dasharray="4 2"/>
+        <text x="470" y="288" fill="#1e3a8a" text-anchor="middle" dominant-baseline="central">prompt-engineering*</text>
+
+        <!-- 10: ethics-compliance (planned) -->
+        <rect x="380" y="218" width="120" height="24" rx="6" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a"
+              stroke-dasharray="4 2"/>
+        <text x="440" y="230" fill="#1e3a8a" text-anchor="middle" dominant-baseline="central">ethics-compliance*</text>
+
+        <!-- 11: devops (planned) -->
+        <rect x="380" y="158" width="120" height="24" rx="6" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a"
+              stroke-dasharray="4 2"/>
+        <text x="440" y="170" fill="#1e3a8a" text-anchor="middle" dominant-baseline="central">devops*</text>
+
+        <!-- 12: teaching-pedagogy (planned) -->
+        <rect x="410" y="100" width="120" height="24" rx="6" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a"
+              stroke-dasharray="4 2"/>
+        <text x="470" y="112" fill="#1e3a8a" text-anchor="middle" dominant-baseline="central">teaching-pedagogy*</text>
+
+        <!-- 13: data-storytelling (planned) -->
+        <rect x="460" y="55" width="120" height="24" rx="6" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a"
+              stroke-dasharray="4 2"/>
+        <text x="520" y="67" fill="#1e3a8a" text-anchor="middle" dominant-baseline="central">data-storytelling*</text>
+    </g>
+
+    <!-- Footnote: asterisk explanation, bottom-right. -->
+    <text x="1168" y="380"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="11"
+          fill="#64748b"
+          text-anchor="end"
+          text-rendering="geometricPrecision">* planned for v1.1 (Q1 2027) — see docs/ROADMAP.md
+    </text>
+</svg>

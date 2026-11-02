@@ -1,12 +1,12 @@
 ---
 name: maestro
-description: Top-level orchestrator for the SkillStack 168-skill composable toolkit. When a task arrives, classify it into one of 9 themes (academic-research, style-integrity, ml-engineering, data-engineering, visualization, writing-citation, ai-text, ai-output-judgement, project-tooling) and point the agent at the correct skill folder and skill name. Themes are non-numbered so any can be dropped, swapped, or renamed without renumbering — removing a theme never breaks routing for the others. Use this FIRST whenever the agent needs to find a skill, before loading any individual skill.
+description: Top-level orchestrator for the SkillStack 237-skill composable toolkit. When a task arrives, classify it into one of 14 themes (academic-research, style-integrity, ml-engineering, data-engineering, visualization, writing-citation, ai-text, ai-output-judgement, project-tooling) and point the agent at the correct skill folder and skill name. Themes are non-numbered so any can be dropped, swapped, or renamed without renumbering — removing a theme never breaks routing for the others. Use this FIRST whenever the agent needs to find a skill, before loading any individual skill.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   role: orchestrator
-  skill_count: 168
-  theme_count: 9
+  skill_count: 237
+  theme_count: 14
   repo_name: SkillStack
 tags: [orchestrator, routing, classification, themes, skillstack]
 related: []

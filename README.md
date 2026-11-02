@@ -4,8 +4,8 @@
 
 ### A composable skill library with a maestro orchestrator that routes any task to the correct skill.
 
-[![Skills](https://img.shields.io/badge/Skills-168-blue)]()
-[![Themes](https://img.shields.io/badge/Themes-9-green)]()
+[![Skills](https://img.shields.io/badge/Skills-237-blue)]()
+[![Themes](https://img.shields.io/badge/Themes-14-green)]()
 [![Maestro](https://img.shields.io/badge/Maestro-Orchestrator-orange)]()
 [![Status](https://img.shields.io/badge/Status-Active-success)]()
 [![Version](https://img.shields.io/badge/Version-1.0-blue)]()
@@ -23,7 +23,8 @@
 [![MCP](https://img.shields.io/badge/MCP-server-teal)](mcp-server/)
 
 **`academic-research`** · **`style-integrity`** · **`ml-engineering`** · **`data-engineering`** · **`visualization`** ·
-**`writing-citation`** · **`ai-text`** · **`ai-output-judgement`** · **`project-tooling`**
+**`writing-citation`** · **`ai-text`** · **`ai-output-judgement`** · **`project-tooling`** · **`prompt-engineering`** ·
+**`ethics-compliance`** · **`devops`** · **`teaching-pedagogy`** · **`data-storytelling`**
 
 *Themes are independent modules — drop, swap, or rename any of them and the rest of the stack still works.*
 
@@ -33,7 +34,7 @@
 
 ## 📖 Overview
 
-SkillStack is a composable library of 168 skills, organized into 9 independent theme folders. Each skill lives in its
+SkillStack is a composable library of 237 skills, organized into 14 independent theme folders. Each skill lives in its
 own folder and is described by a `SKILL.md` file the agent loads on demand. A maestro orchestrator at the root
 classifies any incoming task and routes it to the correct theme and skill.
 
@@ -64,19 +65,24 @@ SkillStack/
 ├── LICENSE, .gitignore, NOTICE ← governance
 ├── CONTRIBUTING.md, CODE_OF_CONDUCT.md
 ├── requirements-scripts.txt, .pre-commit-config.yaml
-├── skills.yaml ← auto-generated manifest (167 themed + 1 maestro)
+├── skills.yaml ← auto-generated manifest (236 themed + 1 maestro)
 ├── maestro/ ← orchestrator (load first)
 │ ├── SKILL.md, SKILL.ar.md, SKILL.zh.md
 │ └── test-cases.md ← 50 routing regression tests
-├── academic-research/   (20 skills + README.md)
-├── style-integrity/      (18 skills + README.md)
-├── ml-engineering/        (22 skills + README.md)
-├── data-engineering/      (18 skills + README.md)
-├── visualization/         (18 skills + README.md)
-├── writing-citation/      (18 skills + README.md)
-├── ai-text/               (15 skills + README.md)
-├── ai-output-judgement/   (18 skills + README.md)
-├── project-tooling/       (20 skills + README.md)
+├── academic-research/      (20 skills + README.md)
+├── style-integrity/        (18 skills + README.md)
+├── ml-engineering/         (22 skills + README.md)
+├── data-engineering/       (18 skills + README.md)
+├── visualization/          (18 skills + README.md)
+├── writing-citation/       (18 skills + README.md)
+├── ai-text/                (15 skills + README.md)
+├── ai-output-judgement/    (18 skills + README.md)
+├── project-tooling/        (20 skills + README.md)
+├── prompt-engineering/     (15 skills + README.md)
+├── ethics-compliance/      (12 skills + README.md)
+├── devops/                 (18 skills + README.md)
+├── teaching-pedagogy/      (13 skills + README.md)
+├── data-storytelling/      (11 skills + README.md)
 ├── scripts/ ← 11 CamelCase Python utility scripts
 ├── docs/ ← QUICKSTART, COOKBOOK, FAQ, etc.
 │ └── assets/ ← logo.svg, og-image.svg, etc.
@@ -97,9 +103,10 @@ Some skills also have a `references/` subfolder with deeper rule files.
 - Inside the folder: one `SKILL.md`.
 - Optional `references/` subfolder for auxiliary rule files referenced by the main skill.
 
-## 📚 Master Index — All 168 Skills
+## 📚 Master Index — All 237 Skills
 
-### 🎓 [`academic-research/`](academic-research/README.md) — Research Planning & Writing
+<details><summary><strong>🎓 <code>academic-research/</code> — Research Planning & Writing</strong></summary>
+
 
 > Plan studies, draft manuscripts, write theses, design grants, review papers, prepare talks.
 
@@ -126,7 +133,10 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 19 | [`reproducibility-checklist-author`](academic-research/reproducibility-checklist-author/SKILL.md)   | Author a reproducibility checklist for a submitted manuscript.                                 | `academic-research/reproducibility-checklist-author/SKILL.md`  |
 | 20 | [`supplementary-materials-organizer`](academic-research/supplementary-materials-organizer/SKILL.md) | Organize supplementary materials (appendices, code, data, figures).                            | `academic-research/supplementary-materials-organizer/SKILL.md` |
 
-### 🛡️ [`style-integrity/`](style-integrity/README.md) — LaTeX, Prose & Coding Conventions
+</details>
+
+<details><summary><strong>🛡️ <code>style-integrity/</code> — LaTeX, Prose & Coding Conventions</strong></summary>
+
 
 > Enforce strict style rules, verify citations, audit notation, execute multi-step tasks with discipline.
 
@@ -151,7 +161,10 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 17 | [`meta-commentary-stripper`](style-integrity/meta-commentary-stripper/SKILL.md)                 | Remove "In this section we will show" / "The reader will learn" patterns.                                                       | `style-integrity/meta-commentary-stripper/SKILL.md`         |
 | 18 | [`voice-matching-guard`](style-integrity/voice-matching-guard/SKILL.md)                         | Match author voice sample if provided; override generic rules.                                                                  | `style-integrity/voice-matching-guard/SKILL.md`             |
 
-### ⚙️ [`ml-engineering/`](ml-engineering/README.md) — PyTorch, Training & Validation
+</details>
+
+<details><summary><strong>⚙️ <code>ml-engineering/</code> — PyTorch, Training & Validation</strong></summary>
+
 
 > Build, train, tune, explain, and validate ML models in PyTorch/Lightning/HuggingFace.
 
@@ -180,7 +193,10 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 21 | [`cross-validation-engine`](ml-engineering/cross-validation-engine/SKILL.md)               | k-fold, stratified, grouped, and time-series cross-validation.                           | `ml-engineering/cross-validation-engine/SKILL.md`        |
 | 22 | [`metrics-computation-suite`](ml-engineering/metrics-computation-suite/SKILL.md)           | Accuracy, F1, AUC, MCC, Cohen's kappa, calibration error.                                | `ml-engineering/metrics-computation-suite/SKILL.md`      |
 
-### 🔬 [`data-engineering/`](data-engineering/README.md) — ETL, Schemas & Lineage
+</details>
+
+<details><summary><strong>🔬 <code>data-engineering/</code> — ETL, Schemas & Lineage</strong></summary>
+
 
 > Build robust data pipelines, enforce schemas, anonymize PII, track lineage.
 
@@ -205,7 +221,10 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 17 | [`tabular-data-sampler`](data-engineering/tabular-data-sampler/SKILL.md)               | Sample tabular data: random, stratified, weighted, reservoir.            | `data-engineering/tabular-data-sampler/SKILL.md`        |
 | 18 | [`data-lineage-tracker`](data-engineering/data-lineage-tracker/SKILL.md)               | Track data lineage: source → transform → sink with provenance graph.     | `data-engineering/data-lineage-tracker/SKILL.md`        |
 
-### 📊 [`visualization/`](visualization/README.md) — Figures, TikZ & Posters
+</details>
+
+<details><summary><strong>📊 <code>visualization/</code> — Figures, TikZ & Posters</strong></summary>
+
 
 > Generate publication-ready figures, TikZ diagrams, A0 posters, results tables, dashboards.
 
@@ -230,7 +249,10 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 17 | [`surface-plotter`](visualization/surface-plotter/SKILL.md)                         | 3D surface plots with proper view angles and colorbars.                 | `visualization/surface-plotter/SKILL.md`             |
 | 18 | [`network-graph-visualizer`](visualization/network-graph-visualizer/SKILL.md)       | Visualize network graphs with layout algorithms.                        | `visualization/network-graph-visualizer/SKILL.md`    |
 
-### 📝 [`writing-citation/`](writing-citation/README.md) — BibTeX, Editing & Paraphrasing
+</details>
+
+<details><summary><strong>📝 <code>writing-citation/</code> — BibTeX, Editing & Paraphrasing</strong></summary>
+
 
 > Manage citations, draft abstracts, edit non-native English, paraphrase safely.
 
@@ -255,7 +277,10 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 17 | [`cohesive-device-checker`](writing-citation/cohesive-device-checker/SKILL.md)               | Check cohesive devices: reference, conjunction, lexical.               | `writing-citation/cohesive-device-checker/SKILL.md`        |
 | 18 | [`reading-level-adjuster`](writing-citation/reading-level-adjuster/SKILL.md)                 | Adjust reading level to target grade (Flesch-Kincaid).                 | `writing-citation/reading-level-adjuster/SKILL.md`         |
 
-### 🤖 [`ai-text/`](ai-text/README.md) — Detect & Humanize AI Text
+</details>
+
+<details><summary><strong>🤖 <code>ai-text/</code> — Detect & Humanize AI Text</strong></summary>
+
 
 > Detect AI-generated text, restore natural voice, verify citations, detect watermarks.
 
@@ -277,7 +302,10 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 14 | [`ai-watermark-detector`](ai-text/ai-watermark-detector/SKILL.md)                     | Detect LLM watermarks (Kirchenbauer et al. 2023).             | `ai-text/ai-watermark-detector/SKILL.md`           |
 | 15 | [`multi-engine-verification`](ai-text/multi-engine-verification/SKILL.md)             | Cross-reference outputs across GPTZero, Originality.ai, etc.  | `ai-text/multi-engine-verification/SKILL.md`       |
 
-### 🔍 [`ai-output-judgement/`](ai-output-judgement/README.md) — Judge & Verify AI Outputs
+</details>
+
+<details><summary><strong>🔍 <code>ai-output-judgement/</code> — Judge & Verify AI Outputs</strong></summary>
+
 
 > Evaluate AI outputs for factuality, hallucination, bias, safety, groundedness, faithfulness, and correctness. Build
 > evaluation harnesses.
@@ -303,7 +331,10 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 17 | [`code-output-validator`](ai-output-judgement/code-output-validator/SKILL.md)           | Validate AI-generated code: syntax, execution, tests, spec match, security.            | `ai-output-judgement/code-output-validator/SKILL.md`      |
 | 18 | [`evaluation-harness-builder`](ai-output-judgement/evaluation-harness-builder/SKILL.md) | Build eval harnesses (lm-eval-harness, HELM, OpenAI Evals style).                      | `ai-output-judgement/evaluation-harness-builder/SKILL.md` |
 
-### 🧰 [`project-tooling/`](project-tooling/README.md) — Packaging, Docker & CI/CD
+</details>
+
+<details><summary><strong>🧰 <code>project-tooling/</code> — Packaging, Docker & CI/CD</strong></summary>
+
 
 > Bundle, containerize, automate, test, document, and release research projects.
 
@@ -329,6 +360,130 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 18 | [`makefile-generator`](project-tooling/makefile-generator/SKILL.md)                   | Generate Makefile with install/test/lint/docs/run/format targets.         | `project-tooling/makefile-generator/SKILL.md`          |
 | 19 | [`pre-commit-hook-builder`](project-tooling/pre-commit-hook-builder/SKILL.md)         | Build .pre-commit-config.yaml with ruff, black, mypy, end-of-file.        | `project-tooling/pre-commit-hook-builder/SKILL.md`     |
 | 20 | [`release-notes-generator`](project-tooling/release-notes-generator/SKILL.md)         | Generate release notes from git log since last tag.                       | `project-tooling/release-notes-generator/SKILL.md`     |
+
+</details>
+
+<details><summary><strong>🧩 <code>prompt-engineering/</code> — Prompt Patterns & Testing</strong></summary>
+
+
+> Design prompts (CoT, ReAct, RAG, ToT), few-shot templates, system prompts, prompt testing, prompt injection defense.
+
+| #  | Skill                                                                                      | One-Line Description                                                           | Link                                                       |
+|----|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------|
+| 1  | [`chain-of-thought-prompter`](prompt-engineering/chain-of-thought-prompter/SKILL.md)       | Design CoT prompts: zero-shot, few-shot, self-consistency.                     | `prompt-engineering/chain-of-thought-prompter/SKILL.md`    |
+| 2  | [`react-agent-prompter`](prompt-engineering/react-agent-prompter/SKILL.md)                 | Build ReAct prompts interleaving Thought/Action/Observation loops with tools.  | `prompt-engineering/react-agent-prompter/SKILL.md`         |
+| 3  | [`rag-prompt-designer`](prompt-engineering/rag-prompt-designer/SKILL.md)                   | Design RAG prompts with inline citations and "I don't know" fallback.          | `prompt-engineering/rag-prompt-designer/SKILL.md`          |
+| 4  | [`tree-of-thoughts-prompter`](prompt-engineering/tree-of-thoughts-prompter/SKILL.md)       | Build ToT prompts that turn reasoning into a BFS/DFS search.                   | `prompt-engineering/tree-of-thoughts-prompter/SKILL.md`    |
+| 5  | [`few-shot-template-builder`](prompt-engineering/few-shot-template-builder/SKILL.md)       | Build few-shot templates with principled exemplar-selection strategies.        | `prompt-engineering/few-shot-template-builder/SKILL.md`    |
+| 6  | [`system-prompt-architect`](prompt-engineering/system-prompt-architect/SKILL.md)           | Architect system prompts with role, safety, and output-format specs.           | `prompt-engineering/system-prompt-architect/SKILL.md`      |
+| 7  | [`prompt-template-library`](prompt-engineering/prompt-template-library/SKILL.md)           | Curate a reusable library of prompt templates organized by task family.        | `prompt-engineering/prompt-template-library/SKILL.md`      |
+| 8  | [`prompt-testing-harness`](prompt-engineering/prompt-testing-harness/SKILL.md)             | Build a prompt regression-test harness scoring BLEU/ROUGE/semantic similarity. | `prompt-engineering/prompt-testing-harness/SKILL.md`       |
+| 9  | [`prompt-injection-defense`](prompt-engineering/prompt-injection-defense/SKILL.md)         | Build injection-resistant prompts with delimiter fences and role-locking.      | `prompt-engineering/prompt-injection-defense/SKILL.md`     |
+| 10 | [`output-format-enforcer`](prompt-engineering/output-format-enforcer/SKILL.md)             | Enforce structured LLM output via JSON schema or function calling.             | `prompt-engineering/output-format-enforcer/SKILL.md`       |
+| 11 | [`context-window-optimizer`](prompt-engineering/context-window-optimizer/SKILL.md)         | Fit prompts under a token budget with prioritization and sliding windows.      | `prompt-engineering/context-window-optimizer/SKILL.md`     |
+| 12 | [`prompt-versioning-system`](prompt-engineering/prompt-versioning-system/SKILL.md)         | Version prompts with semver, A/B testing, and rollback.                        | `prompt-engineering/prompt-versioning-system/SKILL.md`     |
+| 13 | [`constitutional-ai-prompter`](prompt-engineering/constitutional-ai-prompter/SKILL.md)     | Build Constitutional AI prompts with self-critique and revision loops.         | `prompt-engineering/constitutional-ai-prompter/SKILL.md`   |
+| 14 | [`multimodal-prompt-designer`](prompt-engineering/multimodal-prompt-designer/SKILL.md)     | Design multimodal prompts fusing image and text inputs.                        | `prompt-engineering/multimodal-prompt-designer/SKILL.md`   |
+| 15 | [`agent-orchestration-prompter`](prompt-engineering/agent-orchestration-prompter/SKILL.md) | Build multi-agent orchestration prompts with role assignment and protocols.    | `prompt-engineering/agent-orchestration-prompter/SKILL.md` |
+
+</details>
+
+<details><summary><strong>⚖️ <code>ethics-compliance/</code> — IRB, Privacy & AI Accountability</strong></summary>
+
+
+> Draft IRB protocols, assess GDPR/HIPAA/CCPA compliance, review dual-use research, audit algorithms, select fairness
+> metrics.
+
+| #  | Skill                                                                                             | One-Line Description                                                                     | Link                                                          |
+|----|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| 1  | [`ai-impact-assessment`](ethics-compliance/ai-impact-assessment/SKILL.md)                         | Conduct AI impact assessments aligned with EU AI Act, NIST AI RMF, Canada AIA.           | `ethics-compliance/ai-impact-assessment/SKILL.md`             |
+| 2  | [`algorithmic-audit-reporter`](ethics-compliance/algorithmic-audit-reporter/SKILL.md)             | Produce algorithmic audit reports with model card, fairness metrics, recommendations.    | `ethics-compliance/algorithmic-audit-reporter/SKILL.md`       |
+| 3  | [`ccpa-compliance-auditor`](ethics-compliance/ccpa-compliance-auditor/SKILL.md)                   | Audit CCPA/CPRA compliance: consumer rights, privacy policy, service provider contracts. | `ethics-compliance/ccpa-compliance-auditor/SKILL.md`          |
+| 4  | [`consent-form-translator`](ethics-compliance/consent-form-translator/SKILL.md)                   | Translate informed consent forms across reading levels (Flesch-Kincaid grade 6-8).       | `ethics-compliance/consent-form-translator/SKILL.md`          |
+| 5  | [`data-minimization-designer`](ethics-compliance/data-minimization-designer/SKILL.md)             | Design data-minimized pipelines with privacy-by-design principles.                       | `ethics-compliance/data-minimization-designer/SKILL.md`       |
+| 6  | [`dual-use-research-reviewer`](ethics-compliance/dual-use-research-reviewer/SKILL.md)             | Review dual-use research of concern (DURC) under NSPM-33 and USG DURC policy.            | `ethics-compliance/dual-use-research-reviewer/SKILL.md`       |
+| 7  | [`fairness-metric-selector`](ethics-compliance/fairness-metric-selector/SKILL.md)                 | Select fairness metrics: demographic parity, equalized odds, predictive parity.          | `ethics-compliance/fairness-metric-selector/SKILL.md`         |
+| 8  | [`gdpr-data-protection-assessor`](ethics-compliance/gdpr-data-protection-assessor/SKILL.md)       | Assess GDPR compliance: lawful basis, DPIA, ROPA.                                        | `ethics-compliance/gdpr-data-protection-assessor/SKILL.md`    |
+| 9  | [`hipaa-compliance-checker`](ethics-compliance/hipaa-compliance-checker/SKILL.md)                 | Check HIPAA compliance: PHI, Safe Harbor de-identification, BAAs.                        | `ethics-compliance/hipaa-compliance-checker/SKILL.md`         |
+| 10 | [`informed-consent-writer`](ethics-compliance/informed-consent-writer/SKILL.md)                   | Write informed consent forms covering procedures, risks, benefits, withdrawal.           | `ethics-compliance/informed-consent-writer/SKILL.md`          |
+| 11 | [`irb-protocol-drafter`](ethics-compliance/irb-protocol-drafter/SKILL.md)                         | Draft IRB protocols aligned with 45 CFR 46 (Common Rule).                                | `ethics-compliance/irb-protocol-drafter/SKILL.md`             |
+| 12 | [`research-ethics-checklist-author`](ethics-compliance/research-ethics-checklist-author/SKILL.md) | Author research ethics checklists aligned with COPE and ICMJE.                           | `ethics-compliance/research-ethics-checklist-author/SKILL.md` |
+
+</details>
+
+<details><summary><strong>☸️ <code>devops/</code> — Infrastructure, Delivery & Reliability</strong></summary>
+
+
+> Build Kubernetes manifests, Helm charts, Terraform modules, CI/CD, GitOps, observability stacks, SRE runbooks.
+
+| #  | Skill                                                                        | One-Line Description                                                             | Link                                          |
+|----|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------|
+| 1  | [`kubernetes-manifest-builder`](devops/kubernetes-manifest-builder/SKILL.md) | Build production K8s manifests: Deployments, Services, ConfigMaps, Ingress, PVC. | `devops/kubernetes-manifest-builder/SKILL.md` |
+| 2  | [`helm-chart-author`](devops/helm-chart-author/SKILL.md)                     | Author Helm charts with Chart.yaml, values.yaml, templates/, hooks.              | `devops/helm-chart-author/SKILL.md`           |
+| 3  | [`terraform-module-author`](devops/terraform-module-author/SKILL.md)         | Author reusable Terraform modules following the standard module structure.       | `devops/terraform-module-author/SKILL.md`     |
+| 4  | [`prometheus-metrics-designer`](devops/prometheus-metrics-designer/SKILL.md) | Design Prometheus metrics with correct types, naming, and bounded cardinality.   | `devops/prometheus-metrics-designer/SKILL.md` |
+| 5  | [`grafana-dashboard-builder`](devops/grafana-dashboard-builder/SKILL.md)     | Build Grafana dashboards as JSON with PromQL queries and alerting.               | `devops/grafana-dashboard-builder/SKILL.md`   |
+| 6  | [`opentelemetry-instrumenter`](devops/opentelemetry-instrumenter/SKILL.md)   | Instrument code with OpenTelemetry traces, spans, metrics, and logs.             | `devops/opentelemetry-instrumenter/SKILL.md`  |
+| 7  | [`sre-runbook-author`](devops/sre-runbook-author/SKILL.md)                   | Author SRE runbooks tied to alerts with diagnosis and postmortem template.       | `devops/sre-runbook-author/SKILL.md`          |
+| 8  | [`incident-response-planner`](devops/incident-response-planner/SKILL.md)     | Plan incident response with severity matrix, on-call, and blameless postmortem.  | `devops/incident-response-planner/SKILL.md`   |
+| 9  | [`ci-cd-pipeline-builder`](devops/ci-cd-pipeline-builder/SKILL.md)           | Build CI/CD pipelines with build, test, scan, deploy, and rollback.              | `devops/ci-cd-pipeline-builder/SKILL.md`      |
+| 10 | [`container-image-hardener`](devops/container-image-hardener/SKILL.md)       | Harden container images with distroless bases, SBOM, and Trivy scanning.         | `devops/container-image-hardener/SKILL.md`    |
+| 11 | [`gitops-deployment-builder`](devops/gitops-deployment-builder/SKILL.md)     | Build GitOps deployments with ArgoCD/FluxCD and sync waves.                      | `devops/gitops-deployment-builder/SKILL.md`   |
+| 12 | [`service-mesh-configurator`](devops/service-mesh-configurator/SKILL.md)     | Configure Istio service mesh: VirtualService, mTLS, canary releases.             | `devops/service-mesh-configurator/SKILL.md`   |
+| 13 | [`secrets-management-builder`](devops/secrets-management-builder/SKILL.md)   | Build secrets management with Vault, External Secrets, rotation.                 | `devops/secrets-management-builder/SKILL.md`  |
+| 14 | [`log-aggregation-builder`](devops/log-aggregation-builder/SKILL.md)         | Build log aggregation pipelines with Loki/ELK and Fluent Bit shippers.           | `devops/log-aggregation-builder/SKILL.md`     |
+| 15 | [`health-endpoint-designer`](devops/health-endpoint-designer/SKILL.md)       | Design K8s health endpoints: liveness, readiness, startup probes.                | `devops/health-endpoint-designer/SKILL.md`    |
+| 16 | [`capacity-planner`](devops/capacity-planner/SKILL.md)                       | Plan capacity with HPA, VPA, cluster autoscaler, and cost forecasting.           | `devops/capacity-planner/SKILL.md`            |
+| 17 | [`disaster-recovery-planner`](devops/disaster-recovery-planner/SKILL.md)     | Plan disaster recovery with RTO/RPO, backups, and multi-region failover.         | `devops/disaster-recovery-planner/SKILL.md`   |
+| 18 | [`observability-stack-builder`](devops/observability-stack-builder/SKILL.md) | Build observability stack integrating metrics, logs, traces with SLOs.           | `devops/observability-stack-builder/SKILL.md` |
+
+</details>
+
+<details><summary><strong>🍎 <code>teaching-pedagogy/</code> — Course Design, Assessment & Learning Analytics</strong></summary>
+
+
+> Design courses, write measurable objectives, build assessments and rubrics, embed accessibility and UDL, run learning
+> analytics.
+
+| #  | Skill                                                                                     | One-Line Description                                                           | Link                                                      |
+|----|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------|
+| 1  | [`course-syllabus-designer`](teaching-pedagogy/course-syllabus-designer/SKILL.md)         | Design course syllabi using backward design with outcomes and assessments.     | `teaching-pedagogy/course-syllabus-designer/SKILL.md`     |
+| 2  | [`learning-objective-writer`](teaching-pedagogy/learning-objective-writer/SKILL.md)       | Write measurable learning objectives using Bloom's revised taxonomy.           | `teaching-pedagogy/learning-objective-writer/SKILL.md`    |
+| 3  | [`assessment-designer`](teaching-pedagogy/assessment-designer/SKILL.md)                   | Design formative/summative assessments: MCQs, rubrics, peer-review forms.      | `teaching-pedagogy/assessment-designer/SKILL.md`          |
+| 4  | [`rubric-builder`](teaching-pedagogy/rubric-builder/SKILL.md)                             | Build analytic and holistic rubrics with criteria, levels, descriptors.        | `teaching-pedagogy/rubric-builder/SKILL.md`               |
+| 5  | [`lesson-plan-builder`](teaching-pedagogy/lesson-plan-builder/SKILL.md)                   | Build lesson plans using the Hunter lesson design with hook and closure.       | `teaching-pedagogy/lesson-plan-builder/SKILL.md`          |
+| 6  | [`accessible-content-designer`](teaching-pedagogy/accessible-content-designer/SKILL.md)   | Design accessible content meeting WCAG 2.2 AA: alt text, captions, contrast.   | `teaching-pedagogy/accessible-content-designer/SKILL.md`  |
+| 7  | [`universal-design-builder`](teaching-pedagogy/universal-design-builder/SKILL.md)         | Apply UDL with multiple means of engagement, representation, expression.       | `teaching-pedagogy/universal-design-builder/SKILL.md`     |
+| 8  | [`active-learning-designer`](teaching-pedagogy/active-learning-designer/SKILL.md)         | Design active-learning activities: think-pair-share, jigsaw, peer instruction. | `teaching-pedagogy/active-learning-designer/SKILL.md`     |
+| 9  | [`formative-feedback-writer`](teaching-pedagogy/formative-feedback-writer/SKILL.md)       | Write formative feedback using the Hattie and Timperley model.                 | `teaching-pedagogy/formative-feedback-writer/SKILL.md`    |
+| 10 | [`learning-analytics-dashboard`](teaching-pedagogy/learning-analytics-dashboard/SKILL.md) | Build learning-analytics dashboards: LMS data, engagement, at-risk prediction. | `teaching-pedagogy/learning-analytics-dashboard/SKILL.md` |
+| 11 | [`curriculum-mapper`](teaching-pedagogy/curriculum-mapper/SKILL.md)                       | Map curriculum to program outcomes via course × outcome matrix.                | `teaching-pedagogy/curriculum-mapper/SKILL.md`            |
+| 12 | [`exam-question-author`](teaching-pedagogy/exam-question-author/SKILL.md)                 | Author exam questions targeting higher-order thinking (Bloom's).               | `teaching-pedagogy/exam-question-author/SKILL.md`         |
+| 13 | [`microlearning-designer`](teaching-pedagogy/microlearning-designer/SKILL.md)             | Design microlearning modules with spaced-repetition and mobile-first delivery. | `teaching-pedagogy/microlearning-designer/SKILL.md`       |
+
+</details>
+
+<details><summary><strong>🎬 <code>data-storytelling/</code> — Narratives, Dashboards & Decks</strong></summary>
+
+
+> Turn analysis into stories that move a decision: narrative arcs, dashboards, slides, data journalism, infographics,
+> pitch decks.
+
+| #  | Skill                                                                                       | One-Line Description                                                              | Link                                                       |
+|----|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------------------|
+| 1  | [`narrative-arc-designer`](data-storytelling/narrative-arc-designer/SKILL.md)               | Design narrative arcs mapping evidence onto a setup-conflict-resolution spine.    | `data-storytelling/narrative-arc-designer/SKILL.md`        |
+| 2  | [`executive-dashboard-designer`](data-storytelling/executive-dashboard-designer/SKILL.md)   | Design executive dashboards with KPI hierarchy and drill-down paths.              | `data-storytelling/executive-dashboard-designer/SKILL.md`  |
+| 3  | [`presentation-slide-builder`](data-storytelling/presentation-slide-builder/SKILL.md)       | Build assertion-evidence slides with full-bleed charts and narrative flow.        | `data-storytelling/presentation-slide-builder/SKILL.md`    |
+| 4  | [`data-journalism-writer`](data-storytelling/data-journalism-writer/SKILL.md)               | Write data-journalism pieces with finding-first lede and sourced quotes.          | `data-storytelling/data-journalism-writer/SKILL.md`        |
+| 5  | [`infographic-crafter`](data-storytelling/infographic-crafter/SKILL.md)                     | Craft single-takeaway infographics with visual hierarchy and callouts.            | `data-storytelling/infographic-crafter/SKILL.md`           |
+| 6  | [`data-annotation-writer`](data-storytelling/data-annotation-writer/SKILL.md)               | Write chart annotations highlighting the right data points with callouts.         | `data-storytelling/data-annotation-writer/SKILL.md`        |
+| 7  | [`audience-tailor`](data-storytelling/audience-tailor/SKILL.md)                             | Tailor a data story for a named audience by reshaping lead, depth, caveats.       | `data-storytelling/audience-tailor/SKILL.md`               |
+| 8  | [`interactive-narrative-builder`](data-storytelling/interactive-narrative-builder/SKILL.md) | Build scrollytelling narratives with D3.js and IntersectionObserver.              | `data-storytelling/interactive-narrative-builder/SKILL.md` |
+| 9  | [`data-story-storyboarder`](data-storytelling/data-story-storyboarder/SKILL.md)             | Storyboard a data story into panels with transitions and conclusion.              | `data-storytelling/data-story-storyboarder/SKILL.md`       |
+| 10 | [`metric-translation-writer`](data-storytelling/metric-translation-writer/SKILL.md)         | Translate technical metrics into human-scaled outcomes for non-technical readers. | `data-storytelling/metric-translation-writer/SKILL.md`     |
+| 11 | [`data-pitch-deck-builder`](data-storytelling/data-pitch-deck-builder/SKILL.md)             | Build data-driven pitch decks with TAM/SAM/SOM and traction slides.               | `data-storytelling/data-pitch-deck-builder/SKILL.md`       |
+
+</details>
 
 ## 🔗 Common Skill Chains
 
@@ -433,6 +588,55 @@ then load the next.
 | `jupyter-to-script-converter` → `coding-conventions-enforcer` → `modular-ml-architect` → `pyproject-toml-builder` → `sphinx-docs-builder` | Notebook → script → style → package → docs      |
 | `project-zip-packager` → `release-notes-generator` → `changelog-writer`                                                                   | Final release bundle                            |
 
+### 🧩 Prompt Engineering Chains
+
+| Chain                                                                                            | Why                                    |
+|--------------------------------------------------------------------------------------------------|----------------------------------------|
+| `system-prompt-architect` → `few-shot-template-builder` → `prompt-testing-harness`               | System prompt → examples → test        |
+| `chain-of-thought-prompter` → `tree-of-thoughts-prompter` → `output-format-enforcer`             | CoT → ToT → structured output          |
+| `rag-prompt-designer` → `prompt-injection-defense` → `ai-output-judgement/groundedness-verifier` | RAG prompt → defend → verify grounding |
+| `constitutional-ai-prompter` → `ai-output-judgement/alignment-evaluator`                         | Constitutional → alignment check       |
+| `multimodal-prompt-designer` → `agent-orchestration-prompter` → `prompt-versioning-system`       | Multimodal → multi-agent → version     |
+
+### ⚖️ Ethics & Compliance Chains
+
+| Chain                                                                                               | Why                            |
+|-----------------------------------------------------------------------------------------------------|--------------------------------|
+| `irb-protocol-drafter` → `informed-consent-writer` → `consent-form-translator`                      | IRB → consent → plain language |
+| `gdpr-data-protection-assessor` → `data-minimization-designer` → `data-engineering/data-anonymizer` | GDPR → minimize → anonymize    |
+| `ai-impact-assessment` → `fairness-metric-selector` → `algorithmic-audit-reporter`                  | AIA → fairness → audit         |
+| `dual-use-research-reviewer` → `research-ethics-checklist-author`                                   | Dual-use → ethics checklist    |
+
+### ☸️ DevOps Chains
+
+| Chain                                                                                                                      | Why                                          |
+|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
+| `kubernetes-manifest-builder` → `helm-chart-author` → `gitops-deployment-builder`                                          | K8s → Helm → GitOps                          |
+| `prometheus-metrics-designer` → `grafana-dashboard-builder` → `opentelemetry-instrumenter` → `observability-stack-builder` | Metrics → dashboard → traces → observability |
+| `sre-runbook-author` → `incident-response-planner` → `disaster-recovery-planner`                                           | Runbook → incident → DR                      |
+| `container-image-hardener` → `secrets-management-builder` → `ci-cd-pipeline-builder`                                       | Harden → secrets → CI/CD                     |
+| `health-endpoint-designer` → `capacity-planner` → `log-aggregation-builder`                                                | Health → capacity → logs                     |
+
+### 🍎 Teaching & Pedagogy Chains
+
+| Chain                                                                                     | Why                                    |
+|-------------------------------------------------------------------------------------------|----------------------------------------|
+| `learning-objective-writer` → `course-syllabus-designer` → `curriculum-mapper`            | Objectives → syllabus → curriculum map |
+| `assessment-designer` → `rubric-builder` → `exam-question-author`                         | Assessment → rubric → exam             |
+| `lesson-plan-builder` → `active-learning-designer` → `formative-feedback-writer`          | Lesson → active learning → feedback    |
+| `accessible-content-designer` → `universal-design-builder` → `microlearning-designer`     | Accessibility → UDL → microlearning    |
+| `course-syllabus-designer` → `learning-analytics-dashboard` → `formative-feedback-writer` | Syllabus → analytics → feedback        |
+
+### 🎬 Data Storytelling Chains
+
+| Chain                                                                                                       | Why                                    |
+|-------------------------------------------------------------------------------------------------------------|----------------------------------------|
+| `narrative-arc-designer` → `data-story-storyboarder` → `data-annotation-writer`                             | Arc → storyboard → annotations         |
+| `executive-dashboard-designer` → `audience-tailor` → `metric-translation-writer`                            | Dashboard → tailor → translate metrics |
+| `presentation-slide-builder` → `data-journalism-writer` → `infographic-crafter`                             | Slides → article → infographic         |
+| `interactive-narrative-builder` → `data-pitch-deck-builder`                                                 | Interactive → pitch deck               |
+| `narrative-arc-designer` → `visualization/publication-figure-maker` → `visualization/figure-caption-writer` | Arc → figure → caption                 |
+
 ### 🌐 Cross-Theme Mega-Chains
 
 | Chain                                                                                                                                                                                                                                                                                                                       | Why                                                                                                                         |
@@ -470,19 +674,57 @@ Framework-mandated lowercase (`forward`, `backward`, `training_step`, `validatio
 8. If a `LITE.md` exists in the same folder and your context is tight, load that instead.
 9. If a `SKILL.ar.md` or `SKILL.zh.md` exists and you need Arabic or Chinese, load that instead.
 
+## 🚀 Quick Start by Persona
+
+| If you are...                              | Start with these skills                                                                                                                                                          |
+|--------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **A PhD student writing your first paper** | `academic-research/research-ideation-planner` → `academic-research/journal-manuscript-writer` → `style-integrity/latex-style-guard` → `writing-citation/bibtex-citation-manager` |
+| **An ML engineer shipping a model**        | `ml-engineering/reproducible-experiment-runner` → `ml-engineering/hyperparameter-tuner` → `ml-engineering/inference-pipeline-builder` → `devops/kubernetes-manifest-builder`     |
+| **A reviewer peer-reviewing a paper**      | `academic-research/peer-review-simulator` → `style-integrity/zero-fabrication-guard` → `writing-citation/doi-verifier`                                                           |
+| **An instructor designing a course**       | `teaching-pedagogy/course-syllabus-designer` → `teaching-pedagogy/learning-objective-writer` → `teaching-pedagogy/assessment-designer` → `teaching-pedagogy/rubric-builder`      |
+| **A data journalist**                      | `data-storytelling/data-journalism-writer` → `data-storytelling/narrative-arc-designer` → `visualization/publication-figure-maker`                                               |
+| **A prompt engineer**                      | `prompt-engineering/system-prompt-architect` → `prompt-engineering/few-shot-template-builder` → `prompt-engineering/prompt-testing-harness`                                      |
+| **A compliance officer**                   | `ethics-compliance/gdpr-data-protection-assessor` → `ethics-compliance/hipaa-compliance-checker` → `ethics-compliance/ai-impact-assessment`                                      |
+| **An SRE on call**                         | `devops/sre-runbook-author` → `devops/incident-response-planner` → `devops/observability-stack-builder`                                                                          |
+
+## 🏷️ Emoji Legend
+
+| Emoji | Theme               |
+|-------|---------------------|
+| 🎓    | academic-research   |
+| 🛡️    | style-integrity     |
+| ⚙️    | ml-engineering      |
+| 🔬    | data-engineering    |
+| 📊    | visualization       |
+| 📝    | writing-citation    |
+| 🤖    | ai-text             |
+| 🔍    | ai-output-judgement |
+| 🧰    | project-tooling     |
+| 🧩    | prompt-engineering  |
+| ⚖️    | ethics-compliance   |
+| ☸️    | devops              |
+| 🍎    | teaching-pedagogy   |
+| 🎬    | data-storytelling   |
+
 ## 🛠️ Repo Tooling
 
 ### Root Governance Files
 
-| File                       | Purpose                                                           |
-|----------------------------|-------------------------------------------------------------------|
-| `LICENSE`                  | MIT License (2026, Hossam Magdy Balaha)                           |
-| `.gitignore`               | Python + Data + IDE patterns                                      |
-| `NOTICE`                   | Defensive attribution (original work, paraphrased best practices) |
-| `CONTRIBUTING.md`          | How to report bugs, suggest changes, author new skills            |
-| `CODE_OF_CONDUCT.md`       | Contributor Covenant v2.1                                         |
-| `.pre-commit-config.yaml`  | Auto-run linter + ruff on every commit                            |
-| `requirements-scripts.txt` | Pinned deps for the `scripts/` utilities                          |
+| File                              | Purpose                                                           |
+|-----------------------------------|-------------------------------------------------------------------|
+| `LICENSE`                         | MIT License (2026, Hossam Magdy Balaha)                           |
+| `.gitignore`                      | Python + Data + IDE patterns                                      |
+| `NOTICE`                          | Defensive attribution (original work, paraphrased best practices) |
+| `CONTRIBUTING.md`                 | How to report bugs, suggest changes, author new skills            |
+| `CODE_OF_CONDUCT.md`              | Contributor Covenant v2.1                                         |
+| `.pre-commit-config.yaml`         | Auto-run linter + ruff on every commit                            |
+| `requirements-scripts.txt`        | Pinned deps for the `scripts/` utilities                          |
+| `SECURITY.md`                     | GitHub security policy (vulnerability reporting)                  |
+| `FUNDING.yml`                     | GitHub Sponsors / Ko-fi config                                    |
+| `CITATION.cff`                    | Citation File Format for "Cite this repository" button            |
+| `Makefile`                        | `make lint`, `make manifest`, `make health`, etc.                 |
+| `justfile`                        | Modern alternative to Makefile                                    |
+| `.devcontainer/devcontainer.json` | VS Code Dev Container config                                      |
 
 ### Python Utility Scripts (`scripts/`)
 
@@ -501,6 +743,10 @@ All scripts follow the repo's strict coding conventions. Install deps: `pip inst
 | `SkillHealth.py`      | Generate `docs/health.html` dashboard                        | `python scripts/SkillHealth.py`                                |
 | `GraphvizChains.py`   | Generate `docs/skill-graph.svg` dependency graph             | `python scripts/GraphvizChains.py`                             |
 | `ExportAnthropic.py`  | Export to Anthropic Agent Skills format                      | `python scripts/ExportAnthropic.py [--out export/anthropic]`   |
+| `SkillBrowser.py`     | Streamlit app for browsing skills in a browser               | `streamlit run scripts/SkillBrowser.py`                        |
+| `ExportCollection.py` | Export all cited papers as BibTeX `.bib`                     | `python scripts/ExportCollection.py`                           |
+| `SmokeTest.py`        | Smoke test harness (parse + execute fenced code)             | `python scripts/SmokeTest.py`                                  |
+| `TestMaestro.py`      | Maestro routing test suite (50 cases)                        | `python scripts/TestMaestro.py`                                |
 
 ### Skill CLI — Many Examples
 
@@ -510,7 +756,7 @@ Below are concrete examples covering every subcommand.
 #### `list` — enumerate skills
 
 ```bash
-# List every skill across every theme (defaults to all 9 SkillStack themes).
+# List every skill across every theme (defaults to all 14 SkillStack themes).
 python scripts/Skill.py list
 
 # List is theme-aware: skills are grouped under their theme header.
@@ -607,10 +853,10 @@ python scripts/Skill.py tags | head -10
 python scripts/Skill.py health
 
 # Sample output:
-#   Total skills: 168
+#   Total skills: 237
 #   Average lines: 109.5
-#   % with examples: 99.4% (167/168)
-#   % with references: 99.4% (167/168)
+#   % with examples: 99.6% (236/237)
+#   % with references: 99.6% (236/237)
 ```
 
 ### Other Scripts — Many Examples
@@ -625,7 +871,7 @@ python scripts/GenerateManifest.py
 python scripts/GenerateManifest.py --check
 
 # Sample output:
-#   wrote /home/z/my-project/skills/skills.yaml (167 skills, 9 themes)
+#   wrote /home/z/my-project/skills/skills.yaml (236 skills, 14 themes)
 ```
 
 #### `LintSkills.py` — validate every SKILL.md
@@ -747,7 +993,7 @@ python scripts/CacheSkill.py --all
 
 | Path                   | Source                                                                   |
 |------------------------|--------------------------------------------------------------------------|
-| `skills.yaml`          | `GenerateManifest.py` — machine-readable manifest of all 168+ skills     |
+| `skills.yaml`          | `GenerateManifest.py` — machine-readable manifest of all 237+ skills     |
 | `docs/Coverage.md`     | `CoverageReport.py` — per-skill line count, has-examples, has-references |
 | `docs/health.html`     | `SkillHealth.py` — visual dashboard                                      |
 | `docs/skill-graph.svg` | `GraphvizChains.py` — skill dependency graph                             |
@@ -755,16 +1001,24 @@ python scripts/CacheSkill.py --all
 
 ## 📚 Documentation (`docs/`)
 
-| File                      | Purpose                                                                   |
-|---------------------------|---------------------------------------------------------------------------|
-| `docs/QUICKSTART.md`      | 5-minute quickstart (load maestro → route → ship)                         |
-| `docs/COOKBOOK.md`        | 20 concrete scenarios → ordered skill chains                              |
-| `docs/FAQ.md`             | 28 Q&A pairs (adding themes, disabling skills, MCP, etc.)                 |
-| `docs/COMPARISON.md`      | How SkillStack differs from Anthropic skills, SkillDB, OpenAI Evals, etc. |
-| `docs/AUTHORING_GUIDE.md` | Canonical template + rules for writing a new skill                        |
-| `docs/Coverage.md`        | Auto-generated per-skill coverage report                                  |
-| `docs/health.html`        | Auto-generated skill health dashboard                                     |
-| `docs/skill-graph.svg`    | Auto-generated skill dependency graph                                     |
+| File                       | Purpose                                                                   |
+|----------------------------|---------------------------------------------------------------------------|
+| `docs/QUICKSTART.md`       | 5-minute quickstart (load maestro → route → ship)                         |
+| `docs/COOKBOOK.md`         | 20 concrete scenarios → ordered skill chains                              |
+| `docs/FAQ.md`              | 28 Q&A pairs (adding themes, disabling skills, MCP, etc.)                 |
+| `docs/COMPARISON.md`       | How SkillStack differs from Anthropic skills, SkillDB, OpenAI Evals, etc. |
+| `docs/AUTHORING_GUIDE.md`  | Canonical template + rules for writing a new skill                        |
+| `docs/Coverage.md`         | Auto-generated per-skill coverage report                                  |
+| `docs/health.html`         | Auto-generated skill health dashboard                                     |
+| `docs/skill-graph.svg`     | Auto-generated skill dependency graph                                     |
+| `docs/SECURITY.md`         | Detailed security guide                                                   |
+| `docs/DATA_PRIVACY.md`     | Per-skill data flow table (what data goes where)                          |
+| `docs/THREAT_MODEL.md`     | Threat model document                                                     |
+| `docs/ROADMAP.md`          | Public roadmap (v1.0 released, v1.1 planned, v2.0 considering)            |
+| `docs/GOVERNANCE.md`       | Governance model (BDFL until v2.0)                                        |
+| `docs/USE_CASES.md`        | 15 user stories with skill chains                                         |
+| `docs/CHANGELOG_SKILLS.md` | Skill-level changelog                                                     |
+| `docs/BY_TAG.md`           | Tag-based browse page                                                     |
 
 ### Per-Theme READMEs
 
@@ -772,13 +1026,14 @@ Each theme folder has its own `README.md` mini-index (skill table with difficult
 
 `academic-research/README.md` · `style-integrity/README.md` · `ml-engineering/README.md` ·`data-engineering/README.md` ·
 `visualization/README.md` · `writing-citation/README.md` · `ai-text/README.md` ·`ai-output-judgement/README.md` ·
-`project-tooling/README.md`
+`project-tooling/README.md` · `prompt-engineering/README.md` · `ethics-compliance/README.md` · `devops/README.md` ·
+`teaching-pedagogy/README.md` · `data-storytelling/README.md`
 
 ## 🔌 Integrations
 
 ### MCP Server (`mcp-server/`)
 
-Expose all 168 skills via the Model Context Protocol so any MCP client (Claude Desktop, Cursor, etc.) can load them on
+Expose all 237 skills via the Model Context Protocol so any MCP client (Claude Desktop, Cursor, etc.) can load them on
 demand.
 
 ```bash
@@ -822,6 +1077,9 @@ Exports every skill to Anthropic's format (single `.md` per skill with `name` + 
 | `docs/assets/og-image.svg`     | 1200×630 social preview image                         |
 | `docs/assets/skill-cloud.html` | Interactive tag-cloud page (reads `skills.yaml`)      |
 | `docs/assets/demo.txt`         | ASCII-art demo of maestro routing 3 sample tasks      |
+| `docs/assets/logo-dark.svg`    | Dark-mode logo variant                                |
+| `docs/assets/favicon.svg`      | 32×32 favicon                                         |
+| `docs/assets/overview.svg`     | 1200×400 overview infographic                         |
 
 ## 🪶 Lite Versions & Translations
 
@@ -852,7 +1110,7 @@ reproducible-experiment-runner, factuality-checker). Each has `language: zh` in 
 
 ## 🧪 Maestro Test Suite
 
-`maestro/test-cases.md` — 50 sample user prompts with their expected routes, covering all 9 themes (≥5 cases each). Use
+`maestro/test-cases.md` — 50 sample user prompts with their expected routes, covering all 14 themes (≥5 cases each). Use
 as a regression check when modifying the maestro's routing logic.
 
 ## 🧭 Enhanced Maestro Features
@@ -996,6 +1254,79 @@ is reproduced verbatim — every rule is paraphrased in the author's own words.
 - [pre-commit](https://pre-commit.com) — Pre-commit hooks
 - [ruff](https://docs.astral.sh/ruff) · [black](https://black.readthedocs.io) · [mypy](https://mypy.readthedocs.io) —
   Linting/formatting/type-checking
+
+### Prompt Engineering
+
+- Wei et al. 2022 — Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (NeurIPS)
+- Yao et al. 2022 — ReAct: Synergizing Reasoning and Acting in Language Models (arXiv:2210.03629)
+- Yao et al. 2023 — Tree of Thoughts: Deliberate Problem Solving with Large Language Models (NeurIPS)
+- Lewis et al. 2020 — Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (NeurIPS)
+- Bai et al. 2022 — Constitutional AI: Harmlessness from AI Feedback (arXiv:2212.08073)
+- Greshake et al. 2023 — Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with
+  Indirect Prompt Injection (arXiv:2302.12173)
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) — Official prompt
+  patterns
+- [LangSmith](https://docs.smith.langchain.com) · [LangGraph](https://langchain-ai.github.io/langgraph) — LangChain
+  observability and agent graphs
+- [promptfoo](https://www.promptfoo.dev) — Prompt evaluation and red-team testing
+- [AutoGen](https://microsoft.github.io/autogen) — Microsoft multi-agent framework
+- [CrewAI](https://docs.crewai.com) — Role-based multi-agent orchestration
+
+### Ethics & Compliance
+
+- [45 CFR 46](https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/index.html) — US Federal Common
+  Rule for protection of human subjects
+- [GDPR](https://gdpr.eu) — EU General Data Protection Regulation
+- [HIPAA](https://www.hhs.gov/hipaa/index.html) — Health Insurance Portability and Accountability Act
+- [CCPA / CPRA](https://oag.ca.gov/privacy/ccpa) — California Consumer Privacy Act as amended by CPRA
+- [EU AI Act](https://artificialintelligenceact.eu) — Risk-based AI regulation
+- [NIST AI RMF 1.0](https://www.nist.gov/itl/ai-risk-management-framework) — AI Risk Management Framework
+- [Belmont Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html) — Ethical principles for
+  human-subjects research
+- [COPE guidelines](https://publicationethics.org/guidance) — Committee on Publication Ethics
+- Barocas, Hardt & Narayanan 2019 — *Fairness and Machine Learning* (mitpress)
+- Raji et al. 2020 — Closing the AI Accountability Gap (FAccT)
+
+### DevOps
+
+- [Kubernetes docs](https://kubernetes.io/docs) — Container orchestration
+- [Helm docs](https://helm.sh/docs) — Kubernetes package manager
+- [Terraform docs](https://developer.hashicorp.com/terraform/docs) — Infrastructure as code
+- [Prometheus docs](https://prometheus.io/docs) — Metrics and alerting
+- [Grafana docs](https://grafana.com/docs) — Dashboards and visualisation
+- [OpenTelemetry docs](https://opentelemetry.io/docs) — Vendor-neutral observability
+- [Google SRE Book](https://sre.google/sre-book/table-of-contents) — Beyer et al. 2016
+- [NIST SP 800-190](https://csrc.nist.gov/pubs/sp/800/190/final) — Application Container Security Guide
+- [ArgoCD](https://argo-cd.readthedocs.io) · [FluxCD](https://fluxcd.io) — GitOps reconcilers
+- [Istio](https://istio.io/latest/docs) — Service mesh
+- [HashiCorp Vault](https://developer.hashicorp.com/vault/docs) — Secrets management
+
+### Teaching & Pedagogy
+
+- Wiggins & McTighe 2005 — *Understanding by Design* (ASCD) — Backward design
+- Bloom 1956 — *Taxonomy of Educational Objectives* — Cognitive domains
+- Anderson & Krathwohl 2001 — *A Taxonomy for Learning, Teaching, and Assessing* — Bloom's revised
+- [Carnegie Mellon Eberly Center](https://www.cmu.edu/teaching) — Evidence-based teaching resources
+- Stevens & Levi 2013 — *Introduction to Rubrics* (Stylus)
+- Hunter 1982 — Mastery Teaching (Hunter lesson design)
+- [WCAG 2.2](https://www.w3.org/TR/WCAG22/) — Web Content Accessibility Guidelines
+- [CAST UDL Guidelines](https://udlguidelines.cast.org) — Universal Design for Learning
+- Bonwell & Eison 1991 — *Active Learning: Creating Excitement in the Classroom* (ERIC)
+- Hattie & Timperley 2007 — The Power of Feedback (Review of Educational Research)
+- [SoLAR](https://www.solaresearch.org) — Society for Learning Analytics Research
+
+### Data Storytelling
+
+- Segel & Heer 2010 — Narrative Visualization: Storytelling with Data (IEEE TVCG)
+- Few 2006 — *Information Dashboard Design* (O'Reilly)
+- Alley 2013 — *The Craft of Scientific Presentations* (Springer)
+- Cairo 2013 — *The Functional Art* (New Riders)
+- Tufte 2001 — *The Visual Display of Quantitative Information* (Graphics Press)
+- Knaflic 2015 — *Storytelling with Data* (Wiley)
+- McKee 1997 — *Story: Substance, Structure, Style, and the Principles of Screenwriting* (Harper-Collins)
+- Heath & Heath 2007 — *Made to Stick* (Random House)
+- [ProPublica News Apps Style Guide](https://propublica.github.io/styleguide/) · [FiveThirtyEight Style Guide]
+  (https://fivethirtyeight.com/features/how-fivethirtyeight-uses-data-journalism/) — Newsroom data-journalism standards
 
 ### Research Methodology & Open Science
 

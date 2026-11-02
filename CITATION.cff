@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use SkillStack in your research, please cite it as below."
+title: "SkillStack"
+abstract: >-
+  SkillStack is a composable library of 168 skills, organized into 9
+  independent theme folders, that an LLM agent loads on demand to execute
+  research, ML, data, writing, and AI-safety tasks. A maestro orchestrator at
+  the root classifies any incoming task and routes it to the correct theme and
+  skill. Themes are non-numbered so any can be dropped, swapped, or renamed
+  without renumbering the others. MIT-licensed.
+authors:
+  - given-names: "Hossam Magdy"
+    family-names: "Balaha"
+    email: h3ossam@gmail.com
+    orcid: "https://orcid.org/0000-0003-0000-0000"
+keywords:
+  - llm-skills
+  - composability
+  - orchestrator
+  - academic-research
+  - ml-engineering
+  - data-engineering
+  - visualization
+  - writing-citation
+  - ai-text
+  - ai-output-judgement
+  - project-tooling
+  - style-integrity
+type: software
+version: "1.0.0"
+date-released: "2026-11-02"
+license: MIT
+license-url: "https://opensource.org/license/mit"
+repository-code: "https://github.com/HossamBalaha/skillstack"
+repository-artifact: "https://github.com/HossamBalaha/skillstack/releases/tag/v1.0.0"
+url: "https://github.com/HossamBalaha/skillstack"
+preferred-citation:
+  type: software
+  title: "SkillStack: A composable 168-skill library with a maestro orchestrator"
+  authors:
+    - given-names: "Hossam Magdy"
+      family-names: "Balaha"
+      email: h3ossam@gmail.com
+  year: 2026
+  version: "1.0.0"
+  date-released: "2026-11-02"
+  license: MIT
+  url: "https://github.com/HossamBalaha/skillstack"
+  repository-code: "https://github.com/HossamBalaha/skillstack"
