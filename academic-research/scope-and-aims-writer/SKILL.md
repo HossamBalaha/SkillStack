@@ -2,7 +2,7 @@
 name: scope-and-aims-writer
 description: Draft scope statements, three to four numbered specific aims, and contribution statements, with contributions reserved for the Introduction only and the Methodology focused on technical "how" and domain "why". Use when the user is preparing a thesis scope page, grant Specific Aims, or paper Introduction contributions block.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [scope, specific-aims, contributions, introduction, thesis]

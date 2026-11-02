@@ -2,7 +2,7 @@
 name: multi-engine-verification
 description: Run text through two or more external AI-detection engines (GPTZero, Originality.ai, Turnitin AI detection, OpenAI's retired classifier — note OpenAI retired theirs in 2023) and cross-reference their verdicts. Use when a single detector's verdict is insufficient, when stakes require triangulation, or when compliance demands multiple independent checks.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [ai-detection, multi-engine, triangulation, verification]

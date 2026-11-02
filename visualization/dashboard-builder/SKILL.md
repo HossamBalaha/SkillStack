@@ -2,7 +2,7 @@
 name: dashboard-builder
 description: Build interactive dashboards with Streamlit, Dash, or Gradio, featuring sidebar controls, metric cards, charts, and real-time callbacks. Trigger when prototyping an ML demo, sharing model results with stakeholders, or building an internal analytics tool.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [streamlit, dash, gradio, dashboard]

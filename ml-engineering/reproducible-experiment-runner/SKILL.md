@@ -2,7 +2,7 @@
 name: reproducible-experiment-runner
 description: Set up fully reproducible ML experiments when starting training, configuring devices, seeds, logging, progress bars, and output folders. Triggers on "reproducible training", "experiment folder", "device setup", "tqdm progress", "Results/DatasetName_Timestamp layout".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [reproducibility, seeds, device, tqdm, experiment-folder]

@@ -2,7 +2,7 @@
 name: related-work-surveyor
 description: Survey related work and build thematic comparison tables (paper x dimension matrix) grouped by methodology, not chronology, and identify the gap your work fills. Use when the user is drafting a Related Work section, preparing a state-of-the-art comparison table, or sharpening the novelty claim.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [related-work, comparison-table, novelty, gap-analysis, literature]

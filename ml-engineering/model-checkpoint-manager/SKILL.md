@@ -2,7 +2,7 @@
 name: model-checkpoint-manager
 description: Save and resume checkpoints with model, optimizer, scheduler, epoch, val metric, and RNG states. Triggers on "model checkpoint", "save state_dict", "resume training", "top-K checkpoints", "Lightning ModelCheckpoint", "torch.load map_location".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [checkpoint, state-dict, resume, top-k, lightning]

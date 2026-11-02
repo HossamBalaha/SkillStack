@@ -2,7 +2,7 @@
 name: meta-commentary-stripper
 description: Remove pedagogical, conversational, and meta phrases from academic prose so the text delivers direct, dense scientific exposition. Use when finalizing a manuscript for a top-tier journal, stripping phrases like "The reader will learn", "In this section we will show", or "Let us delve into".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [meta-commentary, prose, editing, exposition, density]

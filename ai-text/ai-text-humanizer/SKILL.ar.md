@@ -2,10 +2,21 @@
 name: ai-text-humanizer
 description: Rewrite AI-sounding text to restore natural voice and burstiness while preserving every fact, citation, date, name, and number verbatim. Use when a passage reads as machine-generated and needs to read as a human wrote it, or when an `ai-text-detector` verdict triggers a rewrite.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
-  language: ar
+tags: [humanization, rewriting, voice, ai-text]
+related: [ai-text/ai-text-detector, ai-text/voice-profile-matcher, ai-text/staging-tell-remover, ai-text/inflation-stripper, ai-text/rhythm-by-rule-fixer, ai-text/formatting-by-rule-cleaner, ai-text/chatbot-residue-cleaner]
+prerequisites: []
+outputs: [markdown]
+difficulty: advanced
+estimated_tokens: 2200
+permissions:
+  read_files: true
+  write_files: true
+  network: false
+  execute_code: false
+language: ar
 ---
 
 # مُأنسِن نصّ الذكاء الاصطناعيّ

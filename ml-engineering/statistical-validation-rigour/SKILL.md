@@ -2,7 +2,7 @@
 name: statistical-validation-rigour
 description: Apply rigorous statistical validation when reporting metrics, comparing models, or computing confidence intervals. Triggers on "bootstrap CI", "AUC binary vs multiclass", "Cohen's d", "McNemar test", "Wilcoxon signed-rank", "paired t-test", "LogisticRegression deprecated multi_class".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [statistics, bootstrap-ci, mcnemar, wilcoxon, cohen-d]

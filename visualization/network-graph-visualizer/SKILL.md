@@ -2,7 +2,7 @@
 name: network-graph-visualizer
 description: Visualize network graphs with layout algorithms, node sizing by degree, community colouring, and edge widths by weight. Trigger when analysing social networks, citation graphs, or neural-network architectures, and when producing static or interactive graph figures.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [network, graph, layout, community, citation-graph]

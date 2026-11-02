@@ -2,7 +2,7 @@
 name: math-symbol-auditor
 description: Audit a math-heavy manuscript for one-to-one symbol-to-concept mapping, immediate textual definition after first equation use, and standard calligraphic-font conventions for sets and spaces. Use when reviewing machine-learning or physics manuscripts, detecting symbol reuse, and mandating a Nomenclature table when distinct symbols exceed fifteen.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [math, symbols, nomenclature, latex, audit]

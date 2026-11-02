@@ -2,7 +2,7 @@
 name: peer-review-simulator
 description: Generate rigorous peer-review reports structured as Summary, Strengths, Major Revisions, Minor Revisions, Specific Comments by Section, and Decision Letter, plus draft author rebuttal letters responding point-by-point. Use when the user asks to peer review a manuscript, simulate reviewer feedback, or write a rebuttal letter for a journal or conference revision.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [peer-review, rebuttal, reviewer, decision-letter, revision]

@@ -2,7 +2,7 @@
 name: outlier-detector
 description: Detect outliers using statistical methods (IQR and z-score), distance-based methods (DBSCAN), tree-based methods (Isolation Forest), and local methods (Local Outlier Factor). Use this skill when flagging anomalous rows, attaching scores, and documenting the threshold and rationale per column.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [outliers, iqr, isolation-forest, dbscan, lof]

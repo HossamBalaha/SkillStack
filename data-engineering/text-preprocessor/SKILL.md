@@ -2,7 +2,7 @@
 name: text-preprocessor
 description: Preprocess raw text by lowercasing, tokenizing (word or subword via BPE/SentencePiece), removing punctuation and numbers, lemmatizing with spaCy or stemming with Porter/Snowball, removing stopwords via NLTK, and extracting n-grams. Use this skill when cleaning text for NLP models, with optional spell correction, URL/email removal, and HTML stripping.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [nlp, tokenization, lemmatization, stopwords, bpe]

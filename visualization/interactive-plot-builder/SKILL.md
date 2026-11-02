@@ -2,7 +2,7 @@
 name: interactive-plot-builder
 description: Build interactive plots with hover, zoom, and click using Plotly, Bokeh, or Holoviews/Datashader. Trigger when embedding interactive visuals in dashboards, reports, or notebooks, or when datasets are too large for static matplotlib.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [plotly, bokeh, holoviews, interactive, datashader]

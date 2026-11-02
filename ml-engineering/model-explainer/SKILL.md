@@ -2,7 +2,7 @@
 name: model-explainer
 description: Generate model explanations with SHAP, LIME, or Integrated Gradients when interpreting predictions, auditing feature importance, or satisfying explainability requirements. Triggers on "SHAP", "TreeExplainer", "DeepExplainer", "KernelExplainer", "Integrated Gradients", "Captum", "beeswarm plot", "feature ranking".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [shap, lime, integrated-gradients, captum, explainability]

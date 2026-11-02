@@ -2,7 +2,7 @@
 name: annotated-bibliography-builder
 description: Builds annotated bibliographies where each entry combines a full citation, a 2-4 sentence summary (what the paper did, its method, and key finding), and an assessment of strengths, limitations, and relevance to the user's work. Use when preparing a literature review, a grant proposal's background section, or a thesis's state-of-the-art chapter.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [bibliography, annotated, summary, literature-review, citation]

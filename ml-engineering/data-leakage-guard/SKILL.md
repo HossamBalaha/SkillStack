@@ -2,7 +2,7 @@
 name: data-leakage-guard
 description: Enforce strict train/validation/test isolation when preprocessing data, fitting transformers, or partitioning samples. Triggers on "data leakage", "fit on train only", "GroupShuffleSplit", "subject-level split", "stratified partitioning".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [data-leakage, train-test-isolation, preprocessing, fitting, partitioning]

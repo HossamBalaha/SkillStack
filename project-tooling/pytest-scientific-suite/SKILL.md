@@ -2,7 +2,7 @@
 name: pytest-scientific-suite
 description: "Write pytest test suites for scientific and ML code with `conftest.py` fixtures, `@pytest.mark.parametrize` for edge cases (n=0, n=1, binary/multiclass, single-class), deterministic seeds, and coverage gating via `--cov-fail-under=80`. Use this when adding tests to data loaders, model forward passes, or metric computations. Triggers: pytest, conftest, parametrize, fixtures, coverage, scientific tests."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [pytest, testing, fixtures, scientific]

@@ -2,7 +2,7 @@
 name: etl-pipeline-builder
 description: Design and implement idempotent ETL pipelines that Extract from APIs/DBs/files, Validate schemas, Transform clean data, and Load to warehouses or lakes. Use this skill when building batch pipelines, wiring Airflow/Prefect/Dagster DAGs, defining dbt models, or wiring row-level audit trails and provenance for every record.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [etl, pipeline, airflow, dbt]

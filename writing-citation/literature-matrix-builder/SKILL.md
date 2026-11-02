@@ -2,7 +2,7 @@
 name: literature-matrix-builder
 description: Builds a paper-by-dimension literature matrix (rows = papers, columns = year, methodology, dataset, sample size, key findings, limitations, relevance) as a Markdown table or CSV, sorted by year or theme. Use when synthesizing a body of literature for a review, identifying clusters and gaps, or preparing the input for a systematic-review narrative.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [literature-review, matrix, synthesis, csv, gaps]

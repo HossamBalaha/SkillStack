@@ -2,7 +2,7 @@
 name: hypothesis-designer
 description: Design testable hypotheses with explicit null (H0) and alternative (H1) statements, effect-size framing, expected direction, and the statistical test that will evaluate each hypothesis. Use when the user is converting a research question into formal hypotheses or planning the inferential step of a study.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [hypothesis, h0-h1, effect-size, statistical-test, finer]

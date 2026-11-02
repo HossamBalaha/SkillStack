@@ -2,7 +2,7 @@
 name: confusion-matrix-plotter
 description: Plot raw-count and row-normalised confusion matrices side by side with cell annotations and accuracy/F1 in a side panel. Trigger when evaluating a classifier, comparing models on class-wise performance, or reporting per-class errors.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [confusion-matrix, classifier, accuracy, f1, evaluation]

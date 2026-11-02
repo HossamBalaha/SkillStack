@@ -86,6 +86,41 @@ def _ResolveByPath(frontmatter: dict, dottedKey: str):
   return current
 
 
+def StripCodeBlocks(text: str) -> str:
+  """Remove fenced code blocks (``` ... ```) and inline code spans (`...`) so the banned-marker scan skips instructional examples.
+
+  Args:
+    text (str): The raw file text.
+
+  Returns:
+    str: The text with every fenced code block and inline code span replaced by blanks.
+  """
+  # Strip fenced code blocks first (line-by-line to preserve line numbering).
+  lines = text.split("\n")
+  output = []
+  inFence = False
+  # Iterate over every line and toggle the in-fence state on encountering a fence delimiter.
+  for line in lines:
+    stripped = line.lstrip()
+    if (stripped.startswith("```")):
+      # Toggle the fence state; replace the fence line itself with a blank to preserve line numbering.
+      inFence = (not inFence)
+      output.append("")
+      continue
+    if (inFence):
+      # Inside a code block: replace the line with a blank to skip its content.
+      output.append("")
+    else:
+      output.append(line)
+  fencedStripped = "\n".join(output)
+  # Now strip inline code spans (text between single backticks) using a regex.
+  import re
+  inlineStripped = re.sub(r"`[^`]*`", "", fencedStripped)
+  return inlineStripped
+
+
+
+
 def LintOne(doc: SkillDoc) -> list[Violation]:
   """
   Run all linter checks against a single parsed skill.
@@ -110,6 +145,12 @@ def LintOne(doc: SkillDoc) -> list[Violation]:
   if (doc.ParseError):
     Add("frontmatter.parse", doc.ParseError)
     return violations
+  # The maestro orchestrator is exempt from standard skill checks: it uses its own
+  # section structure (Purpose, Repo Layout, Theme Routing Table, etc.) and carries
+  # role: orchestrator instead of metadata.theme.
+  role = _ResolveByPath(doc.Frontmatter, "metadata.role")
+  if (role == "orchestrator"):
+    return violations  # Skip standard skill checks for the maestro orchestrator.
   # Verify each required frontmatter key is present and non-empty.
   for key in RequiredFrontmatterKeys:
     value = _ResolveByPath(doc.Frontmatter, key)
@@ -125,10 +166,25 @@ def LintOne(doc: SkillDoc) -> list[Violation]:
     Add("body.line-count", f"only {doc.LineCount} lines (minimum {MinLineCount})")
   if (doc.LineCount > MaxLineCount):
     Add("body.line-count", f"{doc.LineCount} lines exceeds maximum {MaxLineCount}")
-  # Scan for banned markers anywhere in the raw file.
+  # Scan for banned markers outside fenced code blocks and inline code spans.
+  # Markers inside ``` ... ``` blocks or `...` spans are legitimate instructional examples.
+  # Additionally, require TODO/FIXME to be followed by `:` or preceded by `//` / `#` (actual task markers, not prose mentions).
   rawText = doc.SkillPath.read_text(encoding="utf-8")
-  for marker in BannedMarkers:
-    if (marker in rawText):
+  # Strip fenced code blocks and inline code spans before scanning.
+  strippedText = StripCodeBlocks(rawText)
+  import re
+  # Define marker patterns that match actual task markers, not prose mentions.
+  markerPatterns = [
+    (r"\bTODO\b\s*:", "TODO"),       # TODO: (with colon)
+    (r"//\s*TODO\b", "TODO"),        # // TODO (code comment)
+    (r"#\s*TODO\b", "TODO"),         # # TODO (hash comment)
+    (r"\bFIXME\b\s*:", "FIXME"),     # FIXME: (with colon)
+    (r"//\s*FIXME\b", "FIXME"),      # // FIXME (code comment)
+    (r"#\s*FIXME\b", "FIXME"),       # # FIXME (hash comment)
+    (r"\bXXX\b(?!\w)", "XXX"),       # XXX (standalone, not part of XXXXXXX)
+  ]
+  for pattern, marker in markerPatterns:
+    if (re.search(pattern, strippedText)):
       Add("body.banned-marker", f"contains banned marker: {marker}")
   return violations
 

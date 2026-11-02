@@ -2,7 +2,7 @@
 name: docker-research-container
 description: "Build a `Dockerfile` for reproducible research that installs system deps, copies `Requirements.txt`, runs `pip install --no-cache-dir`, creates a non-root user, sets `WORKDIR`, and defines an `ENTRYPOINT`. Use this when shipping a runnable container for a paper's code, a shared compute cluster job, or a journal artifact review. Triggers: Dockerfile, reproducible research container, CUDA image, non-root user, multi-stage build."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [docker, container, reproducibility]

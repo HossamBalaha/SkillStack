@@ -2,7 +2,7 @@
 name: cohesive-device-checker
 description: Checks cohesive devices in academic prose — reference (this/that/these/those/it), conjunction (however, therefore, moreover), lexical (repetition, synonyms, superordinates), and ellipsis — to ensure cohesion without overusing any single device. Use when a reviewer flags "unclear referents" or when demonstratives pile up without clear antecedents.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [cohesion, reference, conjunction, lexical, ellipsis]

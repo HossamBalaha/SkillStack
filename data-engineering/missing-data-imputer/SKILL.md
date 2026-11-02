@@ -2,7 +2,7 @@
 name: missing-data-imputer
 description: Impute missing values with simple strategies (mean, median, mode), KNN imputation, iterative imputation modeling each feature as a function of the others, or MICE for multiple imputation. Use this skill when fitting imputers on the TRAIN split only to prevent leakage and documenting which columns were imputed with which strategy.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [imputation, knn, mice, missing-data, leakage-prevention]

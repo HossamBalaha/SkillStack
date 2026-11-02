@@ -2,7 +2,7 @@
 name: abbreviation-consistency-checker
 description: Verify every abbreviation in a manuscript is defined exactly once at first appearance, used consistently thereafter, and aggregated in a final abbreviations table when the count exceeds ten. Use when reviewing acronym usage, catching duplicate definitions, or preparing a manuscript for an abbreviations appendix.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [abbreviations, acronyms, consistency, manuscript, glossary]

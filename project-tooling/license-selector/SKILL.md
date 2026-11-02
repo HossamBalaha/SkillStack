@@ -2,7 +2,7 @@
 name: license-selector
 description: "Select an open-source license (MIT, Apache-2.0, GPL-3.0, AGPL-3.0, BSD-2/3-Clause) based on the project's use case, generate the matching `LICENSE` file text, and add the SPDX `license` field to `pyproject.toml`. Use this when bootstrapping a repo or auditing license consistency. Triggers: LICENSE, MIT, Apache-2.0, GPL, AGPL, BSD, choose a license, SPDX."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [license, mit, apache, gpl, spdx]

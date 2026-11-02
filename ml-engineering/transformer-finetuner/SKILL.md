@@ -2,7 +2,7 @@
 name: transformer-finetuner
 description: Fine-tune Hugging Face transformers for text classification, token classification, or sequence-to-sequence tasks. Triggers on "Hugging Face", "transformers Trainer", "TrainingArguments", "warmup_ratio", "weight_decay", "fp16 bf16", "LoRA PEFT", "tokenize dataset", "compute_metrics".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [huggingface, transformers, finetuning, peft]

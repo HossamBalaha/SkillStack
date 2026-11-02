@@ -2,7 +2,7 @@
 name: journal-manuscript-writer
 description: 'Draft publication-ready journal sections in LaTeX with strict structural style: only \section and \subsection (no \subsubsection), separator comments around floats, IEEE citation style, and mandatory back-matter sections. Use when the user asks to write, format, or polish a journal article draft for IEEE, Elsevier, or comparable venues.'
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [latex, manuscript, journal, imrad, writing]

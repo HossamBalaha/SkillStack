@@ -2,7 +2,7 @@
 name: reading-level-adjuster
 description: Adjusts the reading level of academic prose to a target grade using Flesch-Kincaid Grade Level, Gunning Fog Index, and SMOG metrics, by simplifying long sentences, reducing jargon, and defining abbreviations. Use when producing lay summaries, press releases, patient-facing consent forms, or broader-impacts sections in grant proposals.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [reading-level, flesch-kincaid, gunning-fog, smog, lay-summary]

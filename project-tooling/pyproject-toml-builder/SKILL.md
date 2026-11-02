@@ -2,7 +2,7 @@
 name: pyproject-toml-builder
 description: "Build a `pyproject.toml` file with the `[project]` table, a `[build-system]` backend, and tool config sections (`[tool.ruff]`, `[tool.black]`, `[tool.mypy]`, `[tool.pytest.ini_options]`). Use this when scaffolding a new Python package or standardising tooling across an existing repo. Triggers: pyproject.toml, build-system, setuptools, poetry, hatch, ruff config, mypy config."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [pyproject, packaging, pep-621, build-system]

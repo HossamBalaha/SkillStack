@@ -2,7 +2,7 @@
 name: feature-store-recipe
 description: Build feature engineering pipelines with point-in-time correctness, versioned feature definitions, and synced offline (training) and online (inference) stores. Use this skill when joining features to labels without leakage, syncing low-latency online stores, or operationalising Feast/Hopsworks/Tecton feature views.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [feature-store, feast, hopsworks, point-in-time, online-features]

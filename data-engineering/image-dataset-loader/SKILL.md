@@ -2,7 +2,7 @@
 name: image-dataset-loader
 description: Load image datasets from directory structures (`train/cat/`, `train/dog/`) using torchvision ImageFolder, apply augmentations (RandomResizedCrop, HorizontalFlip, ColorJitter, Normalize with ImageNet stats), and batch with DataLoader (num_workers, pin_memory, prefetch_factor) to overlap data loading and compute. Use this skill when feeding CNN/ViT training loops.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [images, torchvision, augmentation, dataloader, cnn]

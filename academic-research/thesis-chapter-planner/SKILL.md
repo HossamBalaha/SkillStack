@@ -2,7 +2,7 @@
 name: thesis-chapter-planner
 description: Plan thesis and dissertation chapters with strict cross-chapter non-redundancy enforcement. If a concept was defined in Chapter 2, Chapter 5 must reference "As detailed in Section 2.3..." instead of re-explaining. Produces a cumulative concept map and per-chapter scope. Use when the user is outlining a master's thesis, PhD dissertation, or any multi-chapter academic monograph.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [thesis, dissertation, chapter, monograph, concept-map]

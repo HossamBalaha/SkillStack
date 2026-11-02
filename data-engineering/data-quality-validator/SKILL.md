@@ -2,7 +2,7 @@
 name: data-quality-validator
 description: Validate datasets against declarative schemas using pandera DataFrameSchemas and Great Expectations suites. Use this skill when enforcing null/duplicate/outlier checks, detecting drift, or failing-fast pipelines with actionable error messages on tabular data.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [data-quality, pandera, great-expectations, validation, schema]

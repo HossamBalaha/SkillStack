@@ -2,7 +2,7 @@
 name: gitignore-builder
 description: "Generate a `.gitignore` tailored to the project's stack: Python (`__pycache__/`, `*.pyc`, `.pytest_cache/`, `*.egg-info/`, `.venv/`, `dist/`, `build/`), Node (`node_modules/`), R (`.Rhistory`, `.RData`), large data (`Datasets/`, `*.csv` if large, `*.parquet`), IDE (`.vscode/`, `.idea/`), and OS (`.DS_Store`, `Thumbs.db`). Use this when bootstrapping a repo or auditing an existing `.gitignore`. Triggers: gitignore, ignore file, node_modules, __pycache__, Datasets ignore, IDE files."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [gitignore, vcs, scaffolding, ignore-rules]

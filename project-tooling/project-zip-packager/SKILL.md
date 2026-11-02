@@ -2,7 +2,7 @@
 name: project-zip-packager
 description: "Generate a `CreateProjectZip.py` script that bundles the entire repository into a single `ProjectArchive.zip`. Use this when you need to ship, archive, or share a self-contained snapshot of the repo, especially before submission or handoff. Triggers: bundle repo, package project, zip archive, CreateProjectZip."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [zip, packaging, distribution]

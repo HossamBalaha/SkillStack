@@ -2,7 +2,7 @@
 name: zotero-better-bibtex-bridge
 description: Bridges Zotero reference libraries into LaTeX workflows via the BetterBibTeX plugin, configuring stable citekeys, exporting auto-updating `.bib` files, and wiring cite-as-you-write into editors such as vim, Atom, and Scrivener. Use when moving references from Zotero into a LaTeX manuscript, or when citekeys keep drifting between machines.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [zotero, betterbibtex, citekeys, latex, bibtex]

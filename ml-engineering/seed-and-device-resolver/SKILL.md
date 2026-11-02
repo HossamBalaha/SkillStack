@@ -2,7 +2,7 @@
 name: seed-and-device-resolver
 description: Resolve the torch device once and seed every RNG when starting a reproducible run. Triggers on "device resolution", "torch.cuda.is_available", "seed everything", "cudnn deterministic", "model.to(device) does not move sibling modules", "auxiliary branch returns zero tensor".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [seed, device, cuda, cudnn, determinism]

@@ -2,7 +2,7 @@
 name: tense-consistency-fixer
 description: Fixes tense drift in academic prose by enforcing PAST for Methods and Results, PRESENT for established facts and the Discussion, and PRESENT PERFECT for prior work leading to the current study. Use when a draft shifts tense mid-paragraph or when a reviewer has flagged inconsistent verb tense.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [tense, grammar, methods, results, discussion]

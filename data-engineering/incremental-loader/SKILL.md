@@ -2,7 +2,7 @@
 name: incremental-loader
 description: Load data incrementally using stateful checkpoints (last-modified or watermark columns), idempotent re-runs deduplicated by primary key, and a JSON state file. Use this skill for CDC pipelines, MERGE/UPSERT loads, and handling late-arriving records without full reprocessing.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [cdc, incremental, watermark, upsert, idempotent]

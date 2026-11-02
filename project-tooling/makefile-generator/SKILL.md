@@ -2,7 +2,7 @@
 name: makefile-generator
 description: "Generate a `Makefile` with targets `install`, `test`, `lint`, `format`, `typecheck`, `docs`, `run`, `clean`, and `zip`, all marked `.PHONY`. Use this when standardising the developer entrypoint so every contributor runs the same commands. Triggers: Makefile, make install, make test, make lint, make docs, make zip, .PHONY targets."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [makefile, automation, build, developer-entrypoint]

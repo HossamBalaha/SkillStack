@@ -2,7 +2,7 @@
 name: attention-map-visualizer
 description: Visualize transformer attention weights as per-head and per-layer heatmaps with token overlay. Trigger when debugging attention patterns, comparing heads, or explaining model behaviour in an NLP or vision-transformer paper.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [attention, transformer, heatmaps, nlp, visualization]

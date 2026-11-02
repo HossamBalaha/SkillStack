@@ -2,7 +2,7 @@
 name: roc-pr-curve-plotter
 description: Plot ROC and Precision-Recall curves with AUC in the legend, baseline references, and bootstrap 95% CI bands. Trigger when evaluating binary or multi-class classifiers on imbalanced data, or when reporting AUC values for a paper.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [roc, pr-curve, auc, classifier, imbalance]

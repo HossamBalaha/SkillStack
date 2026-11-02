@@ -2,7 +2,7 @@
 name: data-drift-monitor
 description: Monitor data drift between TRAIN and production data using Population Stability Index (PSI), Kolmogorov-Smirnov test, and Wasserstein distance per feature. Use this skill to alert when PSI exceeds 0.2 on any top-10 feature and to integrate with evidently AI or alibi-detect.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [drift, psi, monitoring, mlops]

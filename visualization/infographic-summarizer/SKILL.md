@@ -2,7 +2,7 @@
 name: infographic-summarizer
 description: Convert dense reports into single-page infographics with visual hierarchy, key-stat callouts, and a limited colour palette. Trigger when summarising a long document, briefing report, or survey for a one-page visual.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [infographic, summary, design, hierarchy, callouts]

@@ -2,7 +2,7 @@
 name: tabular-data-sampler
 description: Sample tabular data using random, stratified (preserve class proportions), weighted (oversample minority via WeightedRandomSampler), or reservoir sampling for streaming data. Use this skill when reducing dataset size for prototyping, balancing classes, or sampling from a stream that does not fit in memory, with a set random seed for reproducibility.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [sampling, stratified, weighted, reservoir, random-seed]

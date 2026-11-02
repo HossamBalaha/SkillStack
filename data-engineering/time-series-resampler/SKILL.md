@@ -2,7 +2,7 @@
 name: time-series-resampler
 description: Resample time series to a new frequency (minute to hourly mean), apply forward fill, backward fill, and interpolation (linear, spline), align multiple series to a common index, and handle irregular timestamps. Use this skill when preparing sensor, log, or financial series for downstream models.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [time-series, resampling, interpolation, forward-fill, alignment]

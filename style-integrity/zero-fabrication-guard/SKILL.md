@@ -2,7 +2,7 @@
 name: zero-fabrication-guard
 description: Verify every citation, DOI, URL, dataset name, author name, paper title, and numerical claim in a manuscript against authoritative external sources before submission. Use when checking factual integrity, hunting fabricated references, or auditing numerical claims for accuracy.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [verification, citations, fabrication, doi]

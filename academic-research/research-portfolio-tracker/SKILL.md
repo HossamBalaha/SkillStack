@@ -2,7 +2,7 @@
 name: research-portfolio-tracker
 description: Track research outputs (papers submitted/under-review/accepted, code repos, datasets, presentations) and produce a status dashboard as a Markdown table with deadlines and next actions. Use when the user wants to monitor the status of multiple research artifacts across a research group or solo portfolio.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [portfolio, dashboard, tracking, status, deadlines]

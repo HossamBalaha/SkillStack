@@ -2,7 +2,7 @@
 name: color-palette-selector
 description: Select colourblind-friendly palettes (viridis, cividis, ColorBrewer, Wong's palette) and verify them with simulators. Trigger when choosing colours for figures, dashboards, or diagrams that must be readable by viewers with colour vision deficiencies.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [color, palette, colorblind, viridis, accessibility]

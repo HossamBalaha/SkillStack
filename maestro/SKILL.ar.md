@@ -8,7 +8,18 @@ metadata:
   skill_count: 168
   theme_count: 9
   repo_name: SkillStack
-  language: ar
+tags: [orchestrator, routing, classification, themes, skillstack]
+related: []
+prerequisites: []
+outputs: [markdown]
+difficulty: beginner
+estimated_tokens: 1500
+permissions:
+  read_files: true
+  write_files: false
+  network: false
+  execute_code: false
+language: ar
 ---
 
 # Maestro — منسّق المهارات

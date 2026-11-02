@@ -2,7 +2,7 @@
 name: multi-panel-figure-composer
 description: Compose multi-panel matplotlib figures with shared axes, panel labels (a), (b), (c), and constrained layout. Trigger when combining several subplots into a single publication figure, sharing axes, or labelling panels for a paper.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [matplotlib, multi-panel, subplots, publication, panel-labels]

@@ -2,10 +2,21 @@
 name: coding-conventions-enforcer
 description: Enforce five strict Python coding rules across an entire repository — camelCase variables, CamelCase functions/classes/files/dict-keys, parenthesized if-conditions, period-terminated comments above every statement, and double-quoted strings. Use when auditing Python code, preparing ML/DL repos for review, or onboarding contributors to a strict-style codebase.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
-  language: ar
+tags: [python, style, lint, camelcase, conventions]
+related: [ml-engineering/modular-ml-architect, style-integrity/latex-style-guard, ml-engineering/reproducible-experiment-runner]
+prerequisites: []
+outputs: [python]
+difficulty: intermediate
+estimated_tokens: 2500
+permissions:
+  read_files: true
+  write_files: true
+  network: false
+  execute_code: false
+language: ar
 ---
 
 # منفِّذ قواعد البرمجة

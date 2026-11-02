@@ -2,7 +2,7 @@
 name: citation-style-converter
 description: Converts bibliographies and inline citations between IEEE, APA, Chicago, Vancouver, and MLA styles while keeping citekeys and the bibliography in sync. Use when a manuscript is retargeted to a journal with a different citation style, or when an existing `.bib` or inline citations must be reformatted wholesale.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [citation, ieee, apa, chicago, vancouver]

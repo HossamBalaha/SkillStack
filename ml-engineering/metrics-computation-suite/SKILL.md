@@ -2,7 +2,7 @@
 name: metrics-computation-suite
 description: Compute a comprehensive metrics suite (accuracy, precision, recall, F1, AUC, MCC, Cohen's kappa, ECE/MCE, confusion matrix) with 95% bootstrap CIs. Triggers on "compute metrics", "macro micro weighted F1", "AUC binary multiclass", "MCC", "Cohen kappa", "ECE MCE calibration", "confusion matrix".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [metrics, f1, auc, mcc, cohen-kappa, calibration]

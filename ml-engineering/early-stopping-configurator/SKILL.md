@@ -2,7 +2,7 @@
 name: early-stopping-configurator
 description: Configure early stopping when training a model that may plateau, overfit, or waste compute. Triggers on "early stopping", "patience", "min_delta", "restore best weights", "val_loss monitor", "Lightning EarlyStopping", "stopped epoch".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [early-stopping, patience, min-delta, val-loss, callbacks]

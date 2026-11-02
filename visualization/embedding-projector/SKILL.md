@@ -2,7 +2,7 @@
 name: embedding-projector
 description: Project high-dimensional embeddings to 2D or 3D using PCA, t-SNE, or UMAP with label colouring. Trigger when inspecting latent spaces, comparing encoders, or producing a t-SNE scatter for a paper.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [embeddings, tsne, umap, pca, latent-space]

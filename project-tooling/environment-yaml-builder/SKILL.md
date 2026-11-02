@@ -2,7 +2,7 @@
 name: environment-yaml-builder
 description: "Build an `environment.yml` (conda) with channels (`conda-forge`, `defaults`) and dependencies including a `- pip:` block plus `-r requirements.txt`, or a `Pipfile` for pipenv, or a `pixi.toml` for pixi. Use this when pinning a reproducible environment across machines. Triggers: environment.yml, conda env, conda-forge, pip block, Pipfile, pixi.toml, reproducible env."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [conda, environment, pip, reproducibility]

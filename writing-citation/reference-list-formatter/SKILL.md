@@ -2,7 +2,7 @@
 name: reference-list-formatter
 description: Formats reference lists in any citation style from a `.bib` source, applying author-name order, italics, punctuation, and abbreviated-vs-full journal-name rules. Use when producing the final bibliography block for a manuscript, or when a journal's copyeditor has requested style-compliant reference formatting.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [bibliography, reference-list, citation-style, italics, bibtex]

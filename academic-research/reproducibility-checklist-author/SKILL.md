@@ -2,7 +2,7 @@
 name: reproducibility-checklist-author
 description: Author a reproducibility checklist for a submitted manuscript covering code on GitHub with DOI, data on Zenodo with DOI, environment lockfile (requirements.txt or environment.yml), seeds fixed, random partitions documented, hardware and software stated, compute time reported, and a license file present. Use when the user is finalizing a manuscript submission and needs the reproducibility artifacts in order.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [reproducibility, checklist, zenodo, doi, environment-lock]

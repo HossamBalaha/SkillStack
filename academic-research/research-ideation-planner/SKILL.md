@@ -2,7 +2,7 @@
 name: research-ideation-planner
 description: Propose three or more novel research ideas aligned to a target venue's scope, then convert the user-selected idea into an end-to-end research blueprint. Use when the user asks to brainstorm research topics, plan a paper from scratch, or scope a project for a specific journal or conference such as IEEE TPAMI, Medical Image Analysis, or Nature Scientific Reports.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [ideation, brainstorm, venue, novelty, research-plan]

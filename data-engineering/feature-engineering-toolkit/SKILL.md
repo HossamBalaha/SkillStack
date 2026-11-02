@@ -2,7 +2,7 @@
 name: feature-engineering-toolkit
 description: Build numeric features (polynomial, log, sqrt, binning), categorical features (one-hot, ordinal, target/mean encoding with CV, frequency), interaction features, datetime features, and lag/rolling window features with closed='right' to prevent leakage. Use this skill when constructing features for tabular models.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [feature-engineering, polynomial, binning, lag-features, datetime]

@@ -2,7 +2,7 @@
 name: inflation-stripper
 description: Remove inflated-significance phrasing ("stands as a testament", "marking a pivotal moment", "left an indelible mark", "broader landscape") and replace with concrete facts drawn from the source. Use when `ai-text-detector` flags inflation-category tells, or when a draft overstates the importance of events beyond what the evidence supports.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [humanization, inflation, prose, ai-text]

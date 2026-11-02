@@ -2,7 +2,7 @@
 name: banned-vocabulary-filter
 description: Strip banned AI-tell vocabulary and cliché phrases from academic or technical prose and replace each with a precise synonym. Use when an author detects "AI flavor", when a draft leans on filler words like delve, leverage, robust, or when a style guide forbids rhetorical throat-clearing.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [vocabulary, banned-words, ai-tells, synonyms, prose]

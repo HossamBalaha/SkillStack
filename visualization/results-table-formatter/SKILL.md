@@ -2,7 +2,7 @@
 name: results-table-formatter
 description: Format experimental results tables in booktabs style with significance markers, confidence intervals, and bold best entries. Trigger when finalising a results section, ablation table, or benchmark comparison for a manuscript.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [table, booktabs, significance, ci, ablation]

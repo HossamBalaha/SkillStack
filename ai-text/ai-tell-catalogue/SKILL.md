@@ -2,7 +2,7 @@
 name: ai-tell-catalogue
 description: Reference catalogue of 26 AI tells organized into six categories, each with a name, what to watch for, why it is a problem, and a before/after pair. Use this as the lookup table when running `ai-text-detector` or `ai-text-humanizer`; do not invent new tells on the fly.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [reference, ai-tells, catalogue, ai-text]

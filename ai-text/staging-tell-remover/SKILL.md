@@ -2,7 +2,7 @@
 name: staging-tell-remover
 description: Remove staging tells that signal importance instead of adding a fact — "Not X but Y" constructions, one-line closers, sayings that sound deep, staged run-ups, and arguing with no one. Use when `ai-text-detector` flags staging-category tells, or when a draft gestures at significance rather than stating it.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [humanization, staging, rewriting, ai-text]

@@ -2,7 +2,7 @@
 name: train-val-test-splitter
 description: Split data into train/validation/test with stratification at the highest hierarchical level when preparing data for training. Triggers on "train validation test split", "GroupShuffleSplit", "StratifiedGroupKFold", "subject-level split", "PartitionManifest.json", "70/15/15 split".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [train-val-test, split, stratified, groupshuffle, manifest]

@@ -4,7 +4,7 @@ Generate the SkillStack coverage report.
 
 Walks every skill, computes per-skill metrics (line count, has-examples,
 has-references, under-80-lines, missing-required-sections), and writes a
-Markdown report to docs/coverage.md. Skills are sorted by theme then name.
+Markdown report to docs/Coverage.md. Skills are sorted by theme then name.
 A summary block at the top records total skills, average line count,
 percentage with examples, and percentage with references.
 
@@ -199,7 +199,7 @@ def WriteReport(reportPath: Path, rows: list[SkillRow]) -> None:
 def ParseArgs(argv: list[str] | None = None) -> argparse.Namespace:
   """Parse command-line arguments."""
   parser = argparse.ArgumentParser(
-    description="Generate docs/coverage.md with per-skill coverage metrics.",
+    description="Generate docs/Coverage.md with per-skill coverage metrics.",
   )
   parser.add_argument(
     "--root",
@@ -208,8 +208,8 @@ def ParseArgs(argv: list[str] | None = None) -> argparse.Namespace:
   )
   parser.add_argument(
     "--output",
-    default=str(SkillsRoot() / "docs" / "coverage.md"),
-    help="Destination report path (default: <root>/docs/coverage.md).",
+    default=str(SkillsRoot() / "docs" / "Coverage.md"),
+    help="Destination report path (default: <root>/docs/Coverage.md).",
   )
   return parser.parse_args(argv)
 

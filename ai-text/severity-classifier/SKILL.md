@@ -2,7 +2,7 @@
 name: severity-classifier
 description: Classify detected AI tells into four severity levels (S1 weak, S2 moderate, S3 strong, S4 critical) using specificity and how rarely the pattern occurs in human writing. Use when an `ai-text-detector` run produces raw matches and you need to weight them before issuing a verdict.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [severity, classification, tells, ai-detection]

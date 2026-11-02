@@ -2,7 +2,7 @@
 name: csv-json-converter
 description: Convert between CSV, JSON, Parquet, and Arrow formats while preserving types (dates, ints, floats, nulls) and streaming large files in chunks. Use this skill when moving data across formats, inferring schemas, or handling encodings and delimiters without loading the whole file into memory.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [csv, json, parquet, arrow, format-conversion]

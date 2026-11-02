@@ -2,7 +2,7 @@
 name: experimental-design-planner
 description: Plan experimental designs (RCT, factorial, crossover, repeated-measures, quasi-experimental) with sample-size calculation via power analysis (alpha=0.05, power=0.80), randomization scheme, blinding, and control conditions. Use when the user is converting hypotheses into an executable study protocol.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [experimental-design, rct, power-analysis, sample-size, randomization]

@@ -2,7 +2,7 @@
 name: scientific-poster-designer
 description: Design A0 scientific posters with IMRAD layout and one-metre readability. Trigger when preparing a conference poster, defence poster, or summary poster for a workshop.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [poster, a0, imrad, conference, readability]

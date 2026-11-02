@@ -2,7 +2,7 @@
 name: figure-caption-writer
 description: Write publication-ready figure captions explaining what the figure shows, how the methodology produced it, and why it validates the framework. Trigger when finalising manuscript figures, theses, or technical reports.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [caption, manuscript, figure, publication, writing]

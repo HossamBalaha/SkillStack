@@ -2,7 +2,7 @@
 name: training-curve-visualizer
 description: Plot train and validation loss and accuracy over epochs with dual y-axes, overfit shading, and a best-epoch marker. Trigger when monitoring model training, comparing optimisers, or reporting convergence behaviour in a paper.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [training, loss, accuracy, overfit, convergence]

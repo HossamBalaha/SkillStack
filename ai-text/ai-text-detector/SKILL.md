@@ -2,7 +2,7 @@
 name: ai-text-detector
 description: Detect AI-generated text by scanning for a structured catalogue of tells across lexical, structural, thematic, tonal, statistical, and citation categories. Use when you need to assess whether a passage was likely written by an LLM, audit a document for machine-written sections, or triage submissions for human review.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [ai-detection, tells, perplexity, burstiness]

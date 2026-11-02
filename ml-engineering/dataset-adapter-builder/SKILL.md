@@ -2,7 +2,7 @@
 name: dataset-adapter-builder
 description: Build defensive dataset adapters when wiring external datasets into a training pipeline. Triggers on "FileNotFoundError suggestions", "dataset directory empty", "pandas to numpy pre-conversion", "dataset adapter", "skip dataset with --datasets filter".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [dataset, adapter, pandas, numpy, defensive-loading]

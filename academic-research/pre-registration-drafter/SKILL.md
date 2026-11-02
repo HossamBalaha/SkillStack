@@ -2,7 +2,7 @@
 name: pre-registration-drafter
 description: 'Draft pre-registration documents: AsPredicted (7 questions), OSF registrations, and Registered Report Stage 1 protocols. Includes hypotheses, design, sample size, exclusion criteria, and analysis plan BEFORE data collection. Use when the user is preparing to pre-register a study, commit to hypotheses, or submit a Registered Report Stage 1.'
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [pre-registration, aspredicted, osf, registered-report, hypotheses]

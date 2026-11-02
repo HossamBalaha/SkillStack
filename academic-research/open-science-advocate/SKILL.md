@@ -2,7 +2,7 @@
 name: open-science-advocate
 description: 'Apply open-science practices across the research lifecycle: open data (Zenodo, Figshare, Dryad), open code (GitHub with DOI via Zenodo), preprints (arXiv, bioRxiv, medRxiv), pre-registration (OSF, AsPredicted), and Registered Reports. Use when the user asks to make their workflow open, FAIR, or reproducible, or when a venue requires open-science compliance.'
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [open-science, fair, preprints, osf, zenodo]

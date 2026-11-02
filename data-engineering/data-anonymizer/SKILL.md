@@ -2,7 +2,7 @@
 name: data-anonymizer
 description: Anonymize PII by hashing or removing direct identifiers, applying k-anonymity via generalization/suppression to quasi-identifiers, enforcing l-diversity and t-closeness on sensitive attributes, and adding calibrated noise for differential privacy. Use this skill when releasing data under GDPR Article 5 or HIPAA Safe Harbor constraints.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [pii, gdpr, hipaa, anonymization, privacy]

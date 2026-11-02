@@ -2,7 +2,7 @@
 name: release-notes-generator
 description: "Generate release notes from the git log since the last tag, grouping commits by Conventional Commits type (`feat:` → Features, `fix:` → Bug Fixes, `docs:` → Documentation, `refactor:` → Refactoring) and emit the body as a GitHub Release. Use this when cutting a release or auto-drafting notes for review. Triggers: release notes, git log, conventional commits, github release, auto-bump, tag push."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [release-notes, git, conventional-commits, github-release]

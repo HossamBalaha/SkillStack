@@ -2,7 +2,7 @@
 name: categorical-encoder
 description: Encode categorical columns using one-hot (low cardinality), ordinal (meaningful order), target/mean encoding with k-fold CV, frequency encoding, hash encoding (fixed dim for high cardinality), or entity embeddings learned via NN. Use this skill when picking the right encoding per column and documenting cardinality and strategy.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [categorical, encoding, one-hot, target-encoding, embeddings]

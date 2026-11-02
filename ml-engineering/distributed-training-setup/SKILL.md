@@ -2,7 +2,7 @@
 name: distributed-training-setup
 description: Set up Distributed Data Parallel (DDP) when training across multiple GPUs or nodes. Triggers on "DDP", "torchrun", "nproc_per_node", "init_process_group", "DistributedSampler", "DistributedDataParallel", "find_unused_parameters", "nccl backend".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [ddp, distributed, torchrun, multi-gpu, nccl]

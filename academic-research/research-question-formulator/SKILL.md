@@ -2,7 +2,7 @@
 name: research-question-formulator
 description: Formulate research questions using the FINER criteria (Feasible, Interesting, Novel, Ethical, Relevant) and PICO/SPIDER/PCC frameworks. Generate three to five candidate questions ranked by novelty and feasibility. Use when the user is scoping a new study, preparing a thesis proposal, or pre-registering a study's central question.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [research-question, finer, pico, spider, pcc]

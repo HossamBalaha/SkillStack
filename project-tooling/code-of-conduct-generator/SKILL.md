@@ -2,7 +2,7 @@
 name: code-of-conduct-generator
 description: "Generate a `CODE_OF_CONDUCT.md` based on the Contributor Covenant (latest version), with the enforcement contact filled in. Use this when opening a repo to public contributors or when an existing code of conduct is missing or outdated. Triggers: CODE_OF_CONDUCT.md, contributor covenant, code of conduct, enforcement contact."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [code-of-conduct, community, contributor-covenant, scaffolding]

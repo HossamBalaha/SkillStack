@@ -2,7 +2,7 @@
 name: passive-voice-detector
 description: Detect passive-voice constructions in prose ("is done", "was performed", "are preserved automatically") and rewrite them as active-voice sentences with a clear subject. Use when tightening academic or technical prose, reducing word count, or matching journals that prefer active voice.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [passive-voice, active-voice, prose, editing, grammar]

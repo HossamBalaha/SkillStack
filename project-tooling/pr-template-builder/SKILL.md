@@ -2,7 +2,7 @@
 name: pr-template-builder
 description: "Build `.github/PULL_REQUEST_TEMPLATE.md` with a Summary (what + why), a Type of change checklist (bug/feature/breaking/docs), a verification Checklist (tests added, docs updated, coding style, no new warnings), a Breaking Changes section, and an optional Screenshots section. Use this when standardising PR descriptions so reviewers get consistent context. Triggers: PULL_REQUEST_TEMPLATE.md, PR template, type of change, verification checklist, breaking changes."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [pr-template, github, code-review, checklist]

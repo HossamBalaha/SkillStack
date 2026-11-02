@@ -2,7 +2,7 @@
 name: supplementary-materials-organizer
 description: Organize supplementary materials (math derivations, additional figures, full tables, code release, dataset, model weights, video demos) and cross-reference every supplementary item from the main text. Use when the user is finalizing a journal submission and needs the supplementary package structured, indexed, and cross-referenced from the main manuscript.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [supplementary, appendix, cross-reference, multimedia, code-release]

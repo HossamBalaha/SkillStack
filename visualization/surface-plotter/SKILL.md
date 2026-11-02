@@ -2,7 +2,7 @@
 name: surface-plotter
 description: Plot 3D surfaces with proper view angles, colourbars, and a 2D contour overlay for loss landscapes. Trigger when visualising loss landscapes, response surfaces, or any scalar field over two variables.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [3d, surface, contour, loss-landscape, matplotlib]

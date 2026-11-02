@@ -2,7 +2,7 @@
 name: citation-hallucination-detector
 description: Detect hallucinated citations by verifying DOIs via Crossref, paper titles via Google Scholar or publisher sites, author-journal-name matches, and "featured in regional trade publications" claims with no verifiable source. Use when a passage cites papers, DOIs, or journals that may be fabricated, or when `ai-text-detector` flags citation-category tells (always S4).
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [citations, hallucination, doi, verification]

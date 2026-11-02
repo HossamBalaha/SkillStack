@@ -2,7 +2,7 @@
 name: paragraph-transition-smoother
 description: Smooths paragraph transitions using conceptual bridges and appropriate logical connectors (addition, contrast, cause-effect, sequence), while avoiding formulaic openers like "Furthermore" and "In conclusion." Use when a draft reads as a sequence of disconnected paragraphs, or when a reviewer has flagged choppy transitions.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [transitions, cohesion, connectors, flow, academic]

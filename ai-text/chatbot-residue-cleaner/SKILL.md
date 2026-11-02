@@ -2,7 +2,7 @@
 name: chatbot-residue-cleaner
 description: Strip conversational chatbot wrappers ("I hope this helps", "Great question!", "As an AI language model") from text that must stand alone as prose. Use when chatbot output is being converted into a deliverable document, or when an `ai-text-detector` flags conversational-residue tells.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [humanization, chatbot-residue, prose, ai-text]

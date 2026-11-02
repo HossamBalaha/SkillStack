@@ -2,7 +2,7 @@
 name: baseline-model-zoo
 description: Implement standard baseline models for fair comparison when the user needs reference points against a proposed model. Triggers on "baseline models", "Logistic Regression", "Random Forest", "XGBoost LightGBM", "simple MLP", "k-NN", "fair comparison pipeline".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [baselines, logistic-regression, random-forest, xgboost, comparison]

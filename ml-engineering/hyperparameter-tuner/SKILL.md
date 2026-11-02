@@ -2,7 +2,7 @@
 name: hyperparameter-tuner
 description: Drive Bayesian hyperparameter optimization with Optuna when tuning a model's learning rate, batch size, dropout, architecture depth, or any tunable knob. Triggers on "Optuna", "TPE sampler", "MedianPruner", "Bayesian optimization", "trials_dataframe", "Config.yaml search space".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [optuna, bayesian, tuning, hyperparameters]

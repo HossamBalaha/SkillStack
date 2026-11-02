@@ -1,11 +1,22 @@
 ---
 name: journal-manuscript-writer
-description: Draft publication-ready journal sections in LaTeX with strict structural style: only \section and \subsection (no \subsubsection), separator comments around floats, IEEE citation style, and mandatory back-matter sections. Use when the user asks to write, format, or polish a journal article draft for IEEE, Elsevier, or comparable venues.
+description: 'Draft publication-ready journal sections in LaTeX with strict structural style: only \section and \subsection (no \subsubsection), separator comments around floats, IEEE citation style, and mandatory back-matter sections. Use when the user asks to write, format, or polish a journal article draft for IEEE, Elsevier, or comparable venues.'
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
-  language: ar
+tags: [latex, manuscript, journal, imrad, writing]
+related: [style-integrity/latex-style-guard, academic-research/related-work-surveyor, academic-research/supplementary-materials-organizer]
+prerequisites: [style-integrity/latex-style-guard]
+outputs: [latex]
+difficulty: advanced
+estimated_tokens: 2200
+permissions:
+  read_files: true
+  write_files: true
+  network: false
+  execute_code: false
+language: ar
 ---
 
 # كاتب مخطوطة المجلة

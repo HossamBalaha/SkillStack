@@ -2,7 +2,7 @@
 name: ablation-study-runner
 description: Run ablation studies by systematically removing or altering components of a proposed model. Triggers on "ablation study", "remove component", "ablation table", "metric delta", "identical seeds", "component necessity".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [ablation, experiments, component-removal, metric-delta, controlled]

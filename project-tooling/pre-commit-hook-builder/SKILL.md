@@ -2,7 +2,7 @@
 name: pre-commit-hook-builder
 description: "Build a `.pre-commit-config.yaml` wiring up `pre-commit/pre-commit-hooks` (trailing-whitespace, end-of-file-fixer, check-yaml, check-added-large-files), `charliermarsh/ruff` (lint + format), `psf/black`, `pre-commit/mirrors-mypy`, and optionally `python-poetry/poetry`. Use this to enforce style and safety checks at commit time. Triggers: pre-commit, .pre-commit-config.yaml, ruff hook, black hook, mypy hook, trailing whitespace, large file guard."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [pre-commit, linting, hooks, automation]

@@ -2,7 +2,7 @@
 name: data-lineage-tracker
 description: Track data lineage as a provenance graph from source through transforms to sink, where each dataset carries a unique ID, version, source URI, transform function reference, parent dataset IDs, and a content hash (md5/sha256). Use this skill to output a lineage DAG as JSON or Graphviz, integrating with OpenLineage, Apache Atlas, or Amundsen.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [lineage, provenance, openlineage, atlas, dag]

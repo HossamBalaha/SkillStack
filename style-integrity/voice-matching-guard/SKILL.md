@@ -2,7 +2,7 @@
 name: voice-matching-guard
 description: When the user provides a writing sample, match its style exactly and override generic style rules. Use when an author's distinctive voice, idiosyncratic references, mixed feelings, dated slang, or genuine asides must be preserved even if they resemble AI tells.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [voice-matching, style, idiosyncratic, writing-sample, override]

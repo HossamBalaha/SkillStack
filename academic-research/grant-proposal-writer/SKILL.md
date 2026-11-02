@@ -2,7 +2,7 @@
 name: grant-proposal-writer
 description: Draft competitive grant proposals with Specific Aims (1 page), Background and Significance, Innovation, Approach (preliminary data, methodology, pitfalls, alternatives), Budget Justification, and Biosketch narrative. Use when the user is applying to NIH R01, NSF CAREER, ERC Starting Grant, or comparable funding bodies and needs a structured proposal narrative.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [grant, nsf, nih, proposal, specific-aims]

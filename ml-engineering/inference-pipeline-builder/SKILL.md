@@ -2,7 +2,7 @@
 name: inference-pipeline-builder
 description: Build a FastAPI inference endpoint when deploying a trained model as a service. Triggers on "FastAPI", "/predict endpoint", "pydantic schema", "torch.no_grad inference", "model.eval", "/healthz", "batch inference".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [fastapi, serving, inference, deployment]

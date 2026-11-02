@@ -2,7 +2,7 @@
 name: literature-review-synthesizer
 description: Build systematic literature reviews using PICO or SPIDER framing, Boolean search strings, a PRISMA 2020 flow diagram, thematic synthesis matrix, and quality appraisal with CASP, AMSTAR-2, or ROBIS. Use when the user asks to perform a systematic review, scoping review, or meta-analysis-ready literature synthesis.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [systematic-review, prisma, pico, synthesis, casp]

@@ -2,7 +2,7 @@
 name: github-actions-research-ci
 description: "Build GitHub Actions workflows in `.github/workflows/ci.yml` with jobs for install, lint, test, docs, and optional Docker push to GHCR. Use this when wiring up continuous integration for a research or ML repo so every push runs the full quality gate. Triggers: GitHub Actions, CI workflow, setup-python, pytest cov, ruff, GHCR push, matrix build."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [github-actions, ci-cd, automation]

@@ -2,7 +2,7 @@
 name: changelog-writer
 description: "Write a `CHANGELOG.md` in the Keep a Changelog format with `## [Unreleased]` and dated release sections, subsections for `### Added`, `### Changed`, `### Deprecated`, `### Removed`, `### Fixed`, `### Security`, and correct semantic-version bumps (major/minor/patch). Use this when cutting a release or maintaining a continuous record of notable changes. Triggers: CHANGELOG.md, keep a changelog, semver bump, release notes, Unreleased section."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [changelog, semver, releases, keep-a-changelog]

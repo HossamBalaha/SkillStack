@@ -2,7 +2,7 @@
 name: numerical-value-formatter
 description: Wrap every standalone numerical value in body text with the `\ineq{}` LaTeX macro, replace the `PIP` token with `\ineq{pip}`, normalize en-dash-minus variants to hyphen, and fix `etc.etc.` duplicates. Use when finalizing a LaTeX manuscript for consistent number typesetting and to ensure all in-text numerals route through a single macro.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [latex, numerical, ineq-macro, typography, formatting]

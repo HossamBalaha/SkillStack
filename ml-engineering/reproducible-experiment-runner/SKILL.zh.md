@@ -2,10 +2,21 @@
 name: reproducible-experiment-runner
 description: Set up fully reproducible ML experiments when starting training, configuring devices, seeds, logging, progress bars, and output folders. Triggers on "reproducible training", "experiment folder", "device setup", "tqdm progress", "Results/DatasetName_Timestamp layout".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
-  language: zh
+tags: [reproducibility, seeds, device, tqdm, experiment-folder]
+related: [ml-engineering/seed-and-device-resolver, ml-engineering/experiment-folder-organizer, ml-engineering/modular-ml-architect]
+prerequisites: [ml-engineering/modular-ml-architect]
+outputs: [python, bash]
+difficulty: intermediate
+estimated_tokens: 950
+permissions:
+  read_files: true
+  write_files: true
+  network: false
+  execute_code: false
+language: zh
 ---
 
 # 可复现实验运行器

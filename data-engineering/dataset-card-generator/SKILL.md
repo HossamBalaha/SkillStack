@@ -2,7 +2,7 @@
 name: dataset-card-generator
 description: Generate dataset cards in the model-card style documenting provenance, license, composition, intended use, out-of-scope use, limitations, and ethical considerations. Use this skill when publishing a dataset, requesting review, or onboarding downstream users to a new training corpus.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [dataset-card, documentation, ethics, provenance, model-card]

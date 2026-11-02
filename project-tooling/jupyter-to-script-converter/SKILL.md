@@ -2,7 +2,7 @@
 name: jupyter-to-script-converter
 description: "Convert a `.ipynb` notebook into a clean `.py` module by stripping metadata, extracting code cells into named functions, removing `display()` calls and `!` shell escapes, preserving cell outputs as `# Output:` comments, adding a module docstring, and wrapping runnable code in `if __name__ == \"__main__\":`. Use this when promoting an exploratory notebook into production source. Triggers: nbconvert, ipynb to py, notebook to script, clean notebook export."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [jupyter, nbconvert, notebook, refactoring]

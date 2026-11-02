@@ -2,7 +2,7 @@
 name: contribution-guide-builder
 description: "Build a `CONTRIBUTING.md` covering bug reporting, change suggestions via PRs, development setup (clone, install dev deps, run tests), coding style (links to the repo's `coding-conventions-enforcer`), branch naming (`feature/`, `fix/`, `docs/`), and Conventional Commits messages. Use this when opening a repo to external contributors or formalising the team's workflow. Triggers: CONTRIBUTING.md, contribution guide, PR workflow, branch naming, conventional commits, dev setup."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [contributing, onboarding, workflow, community]

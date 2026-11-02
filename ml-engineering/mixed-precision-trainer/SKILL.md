@@ -2,7 +2,7 @@
 name: mixed-precision-trainer
 description: Enable Automatic Mixed Precision (AMP) training when GPU memory is tight or throughput must improve. Triggers on "AMP", "autocast", "GradScaler", "fp16 bf16", "Ampere GPU", "memory savings", "training speedup".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [amp, autocast, gradscaler, fp16, bf16]

@@ -2,7 +2,7 @@
 name: tikz-framework-diagrammer
 description: Build publication-ready TikZ pipeline diagrams with solid grouping boxes, concise node labels, and explicit anchor connections. Trigger when drawing system architectures, data-flow pipelines, or workflow diagrams for a LaTeX manuscript.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [tikz, latex, diagrams, architecture]

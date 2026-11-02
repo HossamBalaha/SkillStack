@@ -2,7 +2,7 @@
 name: hedging-language-balancer
 description: Balances hedging (cautious language) to match evidence strength, deploying modal verbs, epistemic adverbs, and tentative reporting verbs where claims outrun the data, and removing excess hedging where claims are well-supported. Use when a draft overclaims or underclaims, or when a reviewer has asked for calibrated language.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [hedging, modals, epistemic, calibrated, claims]

@@ -2,7 +2,7 @@
 name: cross-reference-validator
 description: Verify that every `\label{}` in a LaTeX manuscript has a corresponding `\ref{}`, and vice versa, that every float and equation is cross-referenced, and that punctuation sits outside the closing brace. Use when finalizing a LaTeX manuscript, debugging undefined-reference warnings, or auditing cross-reference integrity before submission.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [latex, cross-reference, label, ref, floats]

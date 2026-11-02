@@ -2,7 +2,7 @@
 name: outline-to-prose-expander
 description: Expands a bullet outline into flowing academic prose where each bullet becomes a 3-5 sentence paragraph with topic sentence, evidence, and transition. Use when converting a section outline into a first draft, or when an author hands off bullets and asks for "real paragraphs." Inserts `[CITATION NEEDED]` placeholders rather than fabricating sources.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [outline, prose, paragraphs, topic-sentence, transition]

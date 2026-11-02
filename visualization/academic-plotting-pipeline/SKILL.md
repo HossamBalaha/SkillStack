@@ -2,7 +2,7 @@
 name: academic-plotting-pipeline
 description: Route academic figures into the correct rendering track (matplotlib for numerical data, diagrams for boxes-and-arrows). Trigger when building a complete paper figure suite, ablation charts, confusion matrices, or system diagrams.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [matplotlib, academic, figures, pipeline, routing]

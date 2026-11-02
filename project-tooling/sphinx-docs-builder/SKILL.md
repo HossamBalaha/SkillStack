@@ -2,7 +2,7 @@
 name: sphinx-docs-builder
 description: "Build Sphinx documentation with `conf.py` (autodoc, napoleon, intersphinx, doctest extensions), `index.rst` with a toctree, an `api/` folder of `automodule` directives, a `tutorial/` folder of narrative docs, and the Read the Docs theme. Use this when a package needs a hosted API reference and tutorials. Triggers: Sphinx, conf.py, autodoc, napoleon, intersphinx, toctree, RTD theme, MkDocs alternative."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [sphinx, documentation, autodoc, rtd]

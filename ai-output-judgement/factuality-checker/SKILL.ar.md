@@ -5,7 +5,19 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-output-judgement
-  language: ar
+tags: [factuality, llm, verification, factscore]
+related: [ai-output-judgement/hallucination-detector, ai-output-judgement/reference-accuracy-checker, ai-output-judgement/numeric-accuracy-verifier, style-integrity/zero-fabrication-guard]
+prerequisites: []
+outputs: [markdown, json]
+difficulty: advanced
+estimated_tokens: 2200
+cost_warning: "Optional: web search API calls may incur costs."
+permissions:
+  read_files: true
+  write_files: false
+  network: true
+  execute_code: false
+language: ar
 ---
 
 # مُتحقِّق الواقعيّة

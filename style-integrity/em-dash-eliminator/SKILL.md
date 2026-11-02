@@ -2,7 +2,7 @@
 name: em-dash-eliminator
 description: Find em-dashes (`—`) and en-dashes used as parenthetical separators in academic prose and replace them with commas, parentheses, or en-dashes for numerical ranges. Use when finalizing manuscript prose, enforcing a no-em-dash style rule, or normalizing dash usage across a document.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [em-dash, en-dash, punctuation, prose, typography]

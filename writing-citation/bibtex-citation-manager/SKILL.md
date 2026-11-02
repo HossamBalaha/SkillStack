@@ -2,7 +2,7 @@
 name: bibtex-citation-manager
 description: Manages BibTeX bibliography databases by generating stable citekeys, deduplicating entries, validating required fields, and enforcing IEEE citation style. Use when curating a .bib file, cleaning up duplicate or malformed entries, or aligning citation keys with the LaTeX `\cite{}` and `\bibitem{}` commands.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [bibtex, citations, latex, ieee]

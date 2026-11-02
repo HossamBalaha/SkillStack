@@ -2,7 +2,7 @@
 name: learning-rate-finder
 description: Run an LR range test to pick a sensible initial learning rate before full training. Triggers on "LR range test", "Smith 2015 cyclical learning rates", "torch_lr_finder", "Lightning Tuner.lr_find", "steepest loss descent", "log-scale LR plot".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [lr-finder, range-test, learning-rate, smith-2015, lightning-tuner]

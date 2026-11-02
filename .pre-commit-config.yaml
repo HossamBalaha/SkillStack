@@ -23,7 +23,6 @@ repos:
         name: Validate YAML syntax
         args: [--allow-multiple-documents]
         files: \.(yaml|yml)$
-        exclude: ^\.github/ISSUE_TEMPLATE/.*\.yml$
       - id: check-added-large-files
         name: Block large binary blobs
         args: [--maxkb=512]

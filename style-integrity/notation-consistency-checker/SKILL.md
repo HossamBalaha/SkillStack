@@ -2,7 +2,7 @@
 name: notation-consistency-checker
 description: Audit a mathematical manuscript for one-to-one symbol-to-concept mapping and enforce a Nomenclature table when symbol count exceeds fifteen. Use when reviewing LaTeX math notation, detecting symbol reuse, or normalizing calligraphic-font conventions for sets and spaces.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [notation, symbols, nomenclature, latex, math]

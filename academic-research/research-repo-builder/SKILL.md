@@ -2,7 +2,7 @@
 name: research-repo-builder
 description: Scaffold a complete modular research repository from an approved plan, including src/data, src/models, src/utils, Configs/Config.yaml, manual/ chapters, Datasets.md, unversioned Requirements.txt, CreateProjectZip.py, and Main.py entry point. Use when the user asks to scaffold, bootstrap, or generate a research codebase skeleton.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [scaffolding, repository, project-structure]

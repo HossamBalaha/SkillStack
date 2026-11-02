@@ -2,7 +2,7 @@
 name: cross-validation-engine
 description: Run k-fold cross-validation (stratified, grouped, or time-series) when evaluating model generalization. Triggers on "k-fold CV", "StratifiedKFold", "GroupKFold", "TimeSeriesSplit", "nested CV", "mean plus minus std", "subject-level CV".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [cross-validation, kfold, stratified, grouped, timeseries]

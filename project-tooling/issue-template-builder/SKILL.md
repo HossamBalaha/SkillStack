@@ -2,7 +2,7 @@
 name: issue-template-builder
 description: "Build GitHub issue templates as YAML form schemas: `.github/ISSUE_TEMPLATE/bug_report.yml`, `feature_request.yml`, and a `question.md` config-based template. Use this when standardising how bugs, features, and questions are reported. Triggers: issue template, bug report form, feature request form, .github/ISSUE_TEMPLATE, config.yml."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [issue-template, github, bug-report, feature-request]

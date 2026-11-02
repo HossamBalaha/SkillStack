@@ -2,7 +2,7 @@
 name: rhythm-by-rule-fixer
 description: Fix rhythm-by-rule tells — forced triads, repeated sentence openings, em-dashes used as universal connectors, stacked qualifiers, predicative hyphenated pairs, passive voice with missing actors, uniform sentence length. Use when `ai-text-detector` flags rhythm-category tells, or when prose has a mechanical, metronomic feel.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [humanization, rhythm, prose, ai-text]

@@ -2,7 +2,7 @@
 name: silent-omission-protocol
 description: Silently omit data the user has not provided, instead of inserting jarring declaration markers in the body. Use when a task demands facts, numbers, citations, or files that are missing, and the deliverable must still read as a cohesive professional narrative.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [silent-omission, missing-data, prose, narrative, cohesion]

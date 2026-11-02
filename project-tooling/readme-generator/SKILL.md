@@ -2,7 +2,7 @@
 name: readme-generator
 description: "Generate a `README.md` for any project with a title and one-line hook, a \"What & Why\" section, a zero-to-working quick-start, real tested code examples, per-ecosystem install steps, and only the sections that project actually needs. Use this when scaffolding a new repo or auditing an existing README for source drift. Triggers: README.md, readme generator, quick-start, install instructions, readme audit."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [readme, documentation, onboarding]

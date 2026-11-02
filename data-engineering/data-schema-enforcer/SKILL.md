@@ -2,7 +2,7 @@
 name: data-schema-enforcer
 description: Enforce schemas on incoming rows using pydantic BaseModel type annotations and validators or pandera DataFrameSchema. Use this skill when rejecting invalid rows, quarantining soft failures, or producing a validation report with passed/failed counts and sample failures.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
 tags: [schema, pydantic, pandera, validation, quarantine]

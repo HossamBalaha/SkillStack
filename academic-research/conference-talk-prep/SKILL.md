@@ -2,7 +2,7 @@
 name: conference-talk-prep
 description: Draft conference talks with slide-by-slide outline, speaker notes per slide, transition sentences, time-boxing per slide, anticipated Q&A with prepared answers, and accessibility checks (contrast, font size, alt text). Use when the user is preparing a conference presentation, keynote, or spotlight talk and needs a structured slide plan with delivery guidance.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [conference, slides, talk, presentation, qa-prep]

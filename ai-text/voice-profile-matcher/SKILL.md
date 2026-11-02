@@ -2,7 +2,7 @@
 name: voice-profile-matcher
 description: Extract an author's voice profile (vocabulary distribution, sentence-length distribution, rhetorical patterns, idiosyncratic phrases) from a writing sample and use it to override generic AI-tell rules during humanization. Use when humanizing text attributed to a specific author whose voice must survive the rewrite.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [voice-profiling, humanization, style, ai-text]

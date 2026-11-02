@@ -2,7 +2,7 @@
 name: ai-text-humanizer
 description: Rewrite AI-sounding text to restore natural voice and burstiness while preserving every fact, citation, date, name, and number verbatim. Use when a passage reads as machine-generated and needs to read as a human wrote it, or when an `ai-text-detector` verdict triggers a rewrite.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [humanization, rewriting, voice, ai-text]

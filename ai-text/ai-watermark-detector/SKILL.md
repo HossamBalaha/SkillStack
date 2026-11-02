@@ -2,7 +2,7 @@
 name: ai-watermark-detector
 description: Detect statistical watermarks embedded by LLMs using the Kirchenbauer et al. (2023) green-list/red-list scheme — green-list token ratio above baseline, watermark strength parameter δ, and hash-based seeding keyed to the preceding token. Use when you suspect a text was produced by a watermarked model and need to test the watermark signal directly.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [watermark, statistical-detection, green-list, ai-text]

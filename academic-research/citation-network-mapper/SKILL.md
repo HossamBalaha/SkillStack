@@ -2,7 +2,7 @@
 name: citation-network-mapper
 description: Map citation networks using tools like Connected Papers, Semantic Scholar, and Inciteful to identify influential/bridge papers, research lineages, and emerging trends, and output a citation graph (nodes = papers, edges = citations). Use when the user wants to visualize the literature landscape, find seminal works, or trace a research lineage.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [citations, literature, network-graph, semantic-scholar, connected-papers]

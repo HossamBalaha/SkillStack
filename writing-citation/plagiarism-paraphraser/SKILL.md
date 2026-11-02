@@ -2,7 +2,7 @@
 name: plagiarism-paraphraser
 description: Rewrites source text to reduce similarity scores below 15% on iThenticate/Turnitin while preserving meaning, structural integrity, and technical vocabulary. Use when a draft flags high similarity on a plagiarism checker, or when incorporating source material without falling into patchwriting.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [paraphrase, plagiarism, similarity, ithenticate, patchwriting]

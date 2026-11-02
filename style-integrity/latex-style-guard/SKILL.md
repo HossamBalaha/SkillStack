@@ -2,7 +2,7 @@
 name: latex-style-guard
 description: Enforce strict LaTeX typography and structural formatting rules on manuscripts before submission. Use when editing .tex files, reviewing equations, figures, tables, algorithms, or normalizing quote styles and float placements for camera-ready papers.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [latex, typography, manuscript, formatting, camera-ready]

@@ -2,7 +2,7 @@
 name: english-academic-editor
 description: Edits non-native English academic prose to improve article usage, tense consistency, register, and hedging, while preserving the author's meaning. Use when polishing a manuscript by a non-native English speaker before journal submission, or when a reviewer has flagged language issues.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [editing, english, academic, grammar, tense]

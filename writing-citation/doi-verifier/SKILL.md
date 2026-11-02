@@ -2,7 +2,7 @@
 name: doi-verifier
 description: Verifies that each DOI in a bibliography resolves to the paper claimed by the entry, by querying the Crossref REST API and matching title, first author, and journal. Use when cleaning a `.bib` file before submission, or when a reviewer has flagged suspected fake or mismatched DOIs.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [doi, crossref, verification, citations]

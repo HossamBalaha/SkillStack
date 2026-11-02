@@ -2,7 +2,7 @@
 name: formatting-by-rule-cleaner
 description: Clean formatting-by-rule tells — decorative bold, title-case headings, emojis and arrows in headings, horizontal rules between every section, curly quotation marks in plain-text or code contexts. Use when `ai-text-detector` flags formatting-category tells, or when a document has LLM-default visual chrome that obscures content.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [humanization, formatting, prose, ai-text]

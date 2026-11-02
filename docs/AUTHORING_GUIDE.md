@@ -44,6 +44,7 @@ tags: [pytorch, training, reproducibility]               # recommended, 3–8 lo
 related: [hyperparameter-tuner, reproducible-experiment-runner]  # recommended, sibling skill names
 prerequisites: [Configs/Config.yaml, Requirements.txt]    # recommended, files/state the skill expects
 outputs: [Aggregated/Metrics.csv, Checkpoints/Best.pt]    # recommended, artifacts the skill produces
+# Allowed `outputs:` values: latex, python, pdf, json, csv, bash, svg, html, markdown, yaml, dockerfile.
 difficulty: intermediate                # recommended, one of: beginner | intermediate | advanced
 estimated_tokens: 2400                   # recommended, integer, rough token size of SKILL.md
 cost_warning: "Calls the Crossref API; rate-limited without a polite-mail header."  # optional
@@ -104,7 +105,7 @@ A bulleted list of authoritative sources the skill paraphrases. Every entry must
 - **Paraphrase from verified sources only.** Read the official docs or the paper, then write the rule in your own words. Never copy-paste a paragraph from a third party.
 - **No fabricated citations.** Every reference must resolve. If you are unsure a paper exists, do not cite it. The `ai-output-judgement/citation-hallucination-detector` skill exists precisely because LLMs fabricate citations — do not add to that problem.
 - **Real URLs only.** Verify each link returns HTTP 200 before committing. Prefer canonical URLs (`https://optuna.org`, `https://docs.pytest.org`) over deep links that rot.
-- **Length: 80–180 lines.** A `SKILL.md` should fit in one screen of context. If yours exceeds 180 lines, split the overflow into `references/` files and link to them. If it is under 80 lines, you are probably missing a section or an example.
+- **Length: 80–250 lines (linter hard cap).** A typical `SKILL.md` should fit in one screen of context (target 80–180 lines). If yours exceeds 180 lines, consider splitting the overflow into `references/` files and link to them. If it is under 80 lines, you are probably missing a section or an example. The linter (`LintSkills.py`) rejects files shorter than 80 or longer than 250. The `coding-conventions-enforcer` skill is intentionally at the 250-line cap because it is the canonical reference for the repo's strict style rules. **LITE.md variants are exempt** from the 80-line minimum (target 25–35 lines).
 - **Match the repo's Python style** in any code blocks: `camelCase` variables, `CamelCase` functions/classes, parenthesized `if`, period-ended comments above statements, double-quoted strings, 2-space indent. Framework-mandated lowercase methods (`forward`, `training_step`, `configure_optimizers`) are exempt.
 - **No emojis in skill bodies** unless the user explicitly requests them. The maestro and theme badges use them; the skills do not.
 - **Write in second person imperative** ("Load the config", "Persist the trials dataframe"), not first person ("I will load...").
@@ -125,7 +126,7 @@ Before opening a pull request, confirm every item:
 - [ ] The `Examples` section uses fenced code blocks.
 - [ ] Every URL in `References` resolves with HTTP 200.
 - [ ] No fabricated citations. Every cited paper or tool has been verified to exist.
-- [ ] Body is 80–180 lines long.
+- [ ] Body is 80–250 lines long (target 80–180; `coding-conventions-enforcer` and LITE variants excepted).
 - [ ] Python code blocks follow the repo's strict style (camelCase/CamelCase, parenthesized `if`, period-ended comments, double quotes, 2-space indent).
 - [ ] The linter passes: `python scripts/LintSkills.py <theme>/<skill-name>/SKILL.md`.
 - [ ] You have updated the theme's skill count in `maestro/SKILL.md` and `README.md` if you added a new skill.

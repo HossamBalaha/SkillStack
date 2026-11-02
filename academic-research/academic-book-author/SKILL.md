@@ -2,7 +2,7 @@
 name: academic-book-author
 description: Draft academic book chapters in LaTeX with learning objectives, narrative hooks, progressive disclosure, mandatory code-walkthrough sequences, A-Z numerical examples, chapter summaries, Q&A, exercises, nomenclature glossary, and summary slides via tcolorbox. Use when the user asks to write, outline, or revise a textbook chapter or instructional academic book section.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
 tags: [latex, textbook, book-chapter, exercises, nomenclature]

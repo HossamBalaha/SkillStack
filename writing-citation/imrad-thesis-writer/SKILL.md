@@ -2,7 +2,7 @@
 name: imrad-thesis-writer
 description: Drafts full IMRaD theses and dissertations with strict cross-chapter non-redundancy, keeping contributions only in the Introduction, technical detail only in Methods, neutral reporting in Results, and interpretation in Discussion. Use when scaffolding or revising a multi-chapter thesis, dissertation, or long-form research monograph.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [imrad, thesis, dissertation, structure, non-redundancy]

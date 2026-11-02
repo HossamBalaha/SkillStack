@@ -2,7 +2,7 @@
 name: execution-protocol
 description: Apply a 10-stage meta-discipline wrapper around any complex multi-step task to guarantee comprehension, surgical edits, fact verification, and clean delivery. Use when the task spans multiple files, requires behavioral changes, or carries high risk of placeholder output and fabrication.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [meta-discipline, workflow, verification, multi-step, protocol]

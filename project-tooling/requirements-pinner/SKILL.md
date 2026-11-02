@@ -2,7 +2,7 @@
 name: requirements-pinner
 description: "Generate dependency files for a Python project — either an unversioned `Requirements.txt` for broad environment compatibility or a pinned `requirements.lock` for exact reproducibility. Use this when setting up a repo, freezing a tested environment, or preparing a release. Triggers: requirements.txt, requirements.lock, pip freeze, dependency pinning, lock file."
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
 tags: [requirements, dependencies, pip, reproducibility]

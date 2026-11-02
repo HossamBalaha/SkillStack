@@ -2,7 +2,7 @@
 name: perplexity-burstiness-scorer
 description: Compute statistical measures of how predictable and how uniform a text is, using per-token log-probabilities from a small language model and the coefficient of variation of sentence lengths. Use when you need numeric evidence to support an `ai-text-detector` verdict or to track humanization progress.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [perplexity, burstiness, statistics, ai-detection]

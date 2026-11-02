@@ -2,7 +2,7 @@
 name: modular-ml-architect
 description: Enforce modular Python conventions across ML projects when scaffolding a new repository, refactoring a monolithic script, or auditing code structure. Triggers on keywords like "modular ML project", "src layout", "split code into modules", "reusable functions", "Config.yaml".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [modular, src-layout, refactoring, conventions, scaffolding]

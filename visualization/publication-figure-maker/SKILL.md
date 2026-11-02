@@ -2,7 +2,7 @@
 name: publication-figure-maker
 description: Produce journal-ready matplotlib and seaborn figures sized to exact column widths. Trigger when building figures for Nature, PRL, IEEE, or any manuscript submission, when DPI/vector format matters, or when LaTeX sizing would corrupt fonts.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: visualization
 tags: [matplotlib, publication, figures, journal]

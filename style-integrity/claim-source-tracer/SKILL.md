@@ -2,7 +2,7 @@
 name: claim-source-tracer
 description: Map every factual claim in a manuscript to its originating binder, page, line, and citation, producing a verification table and a separate unverified-sources list. Use when auditing a paper against a research binder, checking whether every claim has a traceable origin, or preparing for editorial review.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [verification, claims, citations, binder, traceability]

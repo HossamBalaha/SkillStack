@@ -2,7 +2,7 @@
 name: research-methodology-designer
 description: Designs complete research methodologies covering study design, sampling strategy, sample-size calculation, data-collection methods, and ethical considerations. Use when planning an empirical study (RCT, cohort, case-control, cross-sectional, or qualitative) and when a grant proposal or IRB protocol requires a defensible methods section.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [methodology, rct, sampling, sample-size, irb]

@@ -2,7 +2,7 @@
 name: planning-note-logger
 description: Append a concise "Planning Note" section at the end of any deliverable summarizing what data was missing, what assumptions were made, and what the user must provide. Use when shipping a partial deliverable, when silent omissions occurred, or when the agent must surface residual unknowns without polluting the body.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [planning-note, deliverable, assumptions, unknowns, transparency]

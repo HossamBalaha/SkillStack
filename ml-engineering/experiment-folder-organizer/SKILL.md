@@ -2,7 +2,7 @@
 name: experiment-folder-organizer
 description: Create a single timestamped experiment folder with four split subfolders when starting a run, ensuring all artifacts land in the correct split. Triggers on "Results/DatasetName_Timestamp", "Train Validation Test Aggregated subfolders", "no per-file timestamps", "outputDirectory parameter", "execution.log".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [experiment, folder, timestamps, artifacts, layout]

@@ -2,7 +2,7 @@
 name: grace-degradation-protocol
 description: When a factual claim cannot be verified from the source text, either silently omit the claim or insert a `[Verify Source]` placeholder — never fabricate. Use during humanization or rewriting whenever a citation, name, date, number, or quote cannot be confirmed, so the narrative stays cohesive without inventing evidence.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [humanization, hallucination-prevention, citations, fallback]

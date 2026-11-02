@@ -2,7 +2,7 @@
 name: pytorch-lightning-scaffold
 description: Scaffold PyTorch Lightning modules when starting a new training project, defining the LightningModule, LightningDataModule, callbacks, and loggers. Triggers on "PyTorch Lightning", "LightningModule", "LightningDataModule", "EarlyStopping callback", "ModelCheckpoint", "W&B logger", "training_step", "configure_optimizers".
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: ml-engineering
 tags: [pytorch-lightning, lightningmodule, datamodule, callbacks, loggers]

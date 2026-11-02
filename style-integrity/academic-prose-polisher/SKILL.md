@@ -2,7 +2,7 @@
 name: academic-prose-polisher
 description: Rewrite informal or AI-flavored prose into formal academic register suitable for peer-reviewed venues. Use when editing manuscript body text, removing banned vocabulary, eliminating em-dashes, suppressing bullet points in main prose, and stripping meta-commentary.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: style-integrity
 tags: [prose, academic-register, editing, revision, formal]

@@ -2,7 +2,7 @@
 name: structured-abstract-writer
 description: Drafts structured abstracts with explicit bold inline headings (Background, Methods, Results, Conclusion) tuned to journal word limits, then appends 4-6 SEO-optimized keywords separated by semicolons. Use when a journal mandates a structured abstract or when preparing a manuscript for biomedical, public-health, or NIH-funded venues.
 metadata:
-  author: custom-skills-repo
+  author: Hossam Magdy Balaha
   version: "1.0"
   theme: writing-citation
 tags: [abstract, structured, imrad, keywords, biomedical]
