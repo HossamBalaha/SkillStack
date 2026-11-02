@@ -2,7 +2,8 @@
 
 > Produce publication-ready figures, multi-panel composites, TikZ framework diagrams, scientific posters, and
 > interactive dashboards. From color-palette selection through confusion matrices, ROC/PR curves, attention maps, and
-> embedding projectors, this theme covers every visual artifact a paper or talk needs. Output is vector-first (PDF / SVG)
+> embedding projectors, this theme covers every visual artifact a paper or talk needs. Output is vector-first (PDF /
+> SVG)
 > with a paired caption.
 
 <div align="center">

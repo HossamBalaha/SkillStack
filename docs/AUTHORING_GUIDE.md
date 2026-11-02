@@ -141,10 +141,10 @@ HTTP 200. Cite foundational papers with author, year, title, venue, and link. No
   add to that problem.
 - **Real URLs only.** Verify each link returns HTTP 200 before committing. Prefer canonical URLs (`https://optuna.org`,
   `https://docs.pytest.org`) over deep links that rot.
-- **Length: 80–250 lines (linter hard cap).** A typical `SKILL.md` should fit in one screen of context (target 80–180
+- **Length: 80–320 lines (linter hard cap).** A typical `SKILL.md` should fit in one screen of context (target 80–180
   lines). If yours exceeds 180 lines, consider splitting the overflow into `references/` files and link to them. If it
   is under 80 lines, you are probably missing a section or an example. The linter (`LintSkills.py`) rejects files
-  shorter than 80 or longer than 250. The `coding-conventions-enforcer` skill is intentionally at the 250-line cap
+  shorter than 80 or longer than 320. The `coding-conventions-enforcer` skill is intentionally at the 320-line cap
   because it is the canonical reference for the repo's strict style rules. **LITE.md variants are exempt** from the
   80-line minimum (target 25–35 lines).
 - **Match the repo's Python style** in any code blocks: `camelCase` variables, `CamelCase` functions/classes,
@@ -173,7 +173,7 @@ Before opening a pull request, confirm every item:
 - [ ] The `Examples` section uses fenced code blocks.
 - [ ] Every URL in `References` resolves with HTTP 200.
 - [ ] No fabricated citations. Every cited paper or tool has been verified to exist.
-- [ ] Body is 80–250 lines long (target 80–180; `coding-conventions-enforcer` and LITE variants excepted).
+- [ ] Body is 80–320 lines long (target 80–180; `coding-conventions-enforcer` and LITE variants excepted).
 - [ ] Python code blocks follow the repo's strict style (camelCase/CamelCase, parenthesized `if`, period-ended comments,
   double quotes, 2-space indent).
 - [ ] The linter passes: `python scripts/LintSkills.py <theme>/<skill-name>/SKILL.md`.

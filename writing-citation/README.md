@@ -2,7 +2,8 @@
 
 > Draft, edit, paraphrase, and cite academic prose with strict consistency. Skills cover outline expansion, paragraph
 > transitions, tense/hedging balance, IMRaD thesis writing, BibTeX management, DOI verification, citation-style
-> conversion, and plagiarism-safe paraphrasing. Every skill respects author voice and preserves every fact, citation, and
+> conversion, and plagiarism-safe paraphrasing. Every skill respects author voice and preserves every fact, citation,
+> and
 > number verbatim.
 
 <div align="center">

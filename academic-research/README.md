@@ -1,7 +1,8 @@
 # 🎓 Academic Research — Research Planning & Writing
 
 > Plan studies, draft manuscripts, write theses, design grants, peer-review papers, and prepare conference talks. Skills
-> cover the full research lifecycle — from formulating a research question and hypothesis, through experimental design and
+> cover the full research lifecycle — from formulating a research question and hypothesis, through experimental design
+> and
 > pre-registration, to journal articles, academic books, and reproducibility checklists. Use this theme whenever the
 > deliverable is a research artifact rather than raw code or data.
 
