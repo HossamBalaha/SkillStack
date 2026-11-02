@@ -43,6 +43,85 @@ MaxRetries = 3
 PolitePauseSeconds = 0.1
 # User-Agent string sent on every verification request.
 UserAgent = "SkillStack-CitationVerifier/1.0"
+# DOIs containing any of these (case-insensitive) substrings are instructional placeholders.
+DoiPlaceholderTokens = [
+  "fake",
+  "example",
+  "xxxx",
+  "1234567",
+  "7654321",
+  "99999",
+]
+# arXiv IDs that are malformed or fabricated instructional placeholders.
+ArxivPlaceholderIds = {"2023.99999", "2025.12345", "3147.3165"}
+# URL template tokens that indicate an API template rather than a real identifier.
+TemplateTokens = ["{DOI}", "{package}"]
+
+
+def StripCodeBlocks(text: str) -> str:
+  """Remove fenced code blocks (``` ... ```) and inline code spans (`...`) so the citation scan skips instructional examples.
+
+  Args:
+    text (str): The raw file text.
+
+  Returns:
+    str: The text with every fenced code block and inline code span replaced by blanks.
+  """
+  # Strip fenced code blocks first (line-by-line to preserve line numbering).
+  lines = text.split("\n")
+  output = []
+  inFence = False
+  # Iterate over every line and toggle the in-fence state on encountering a fence delimiter.
+  for line in lines:
+    stripped = line.lstrip()
+    if (stripped.startswith("```")):
+      # Toggle the fence state; replace the fence line itself with a blank to preserve line numbering.
+      inFence = (not inFence)
+      output.append("")
+      continue
+    if (inFence):
+      # Inside a code block: replace the line with a blank to skip its content.
+      output.append("")
+    else:
+      output.append(line)
+  fencedStripped = "\n".join(output)
+  # Now strip inline code spans (text between single backticks) using a regex.
+  import re
+  inlineStripped = re.sub(r"`[^`]*`", "", fencedStripped)
+  return inlineStripped
+
+
+def IsDoiPlaceholder(doi: str) -> bool:
+  """Return True when a DOI looks like an instructional placeholder rather than a real citation."""
+  # Lowercase the DOI once for case-insensitive substring checks.
+  lowered = doi.lower()
+  # Match any of the documented placeholder tokens.
+  for token in DoiPlaceholderTokens:
+    if (token in lowered):
+      return True
+  return False
+
+
+def IsArxivPlaceholder(arxivId: str) -> bool:
+  """Return True when an arXiv ID is malformed or a documented fake placeholder."""
+  # Match the curated set of fake arXiv IDs.
+  return arxivId in ArxivPlaceholderIds
+
+
+def IsTemplateContext(text: str, value: str) -> bool:
+  """Return True when the value appears inside an API URL template (e.g., ``{DOI}`` or ``{package}``)."""
+  # Find every occurrence of the value in the raw text.
+  start = 0
+  while (True):
+    idx = text.find(value, start)
+    if (idx == -1):
+      return False
+    # Inspect the surrounding window for any template token.
+    window = text[max(0, idx - 64): idx + len(value) + 64]
+    for token in TemplateTokens:
+      if (token in window):
+        return True
+    start = idx + len(value)
 
 
 @dataclass
@@ -122,15 +201,29 @@ def CollectCitations(rootPath: Path) -> list[tuple[str, str, str, str]]:
     rawText = doc.SkillPath.read_text(encoding="utf-8")
     skillName = doc.Name or doc.SkillPath.parent.name
     skillPath = RelativeToSkills(doc.SkillPath)
+    # Strip fenced code blocks and inline code spans so instructional examples are not scanned.
+    scanText = StripCodeBlocks(rawText)
     # Collect arXiv IDs first to keep kind ordering stable.
-    for arxivId in ExtractArxivIds(rawText):
+    for arxivId in ExtractArxivIds(scanText):
+      # Skip malformed or fake arXiv IDs.
+      if (IsArxivPlaceholder(arxivId)):
+        continue
+      # Skip arXiv IDs that appear inside an API URL template.
+      if (IsTemplateContext(scanText, arxivId)):
+        continue
       key = ("arxiv", arxivId, skillName)
       if (key in seen):
         continue
       seen.add(key)
       collected.append(("arxiv", arxivId, skillName, skillPath))
     # Then collect DOIs.
-    for doi in ExtractDois(rawText):
+    for doi in ExtractDois(scanText):
+      # Skip DOIs that look like instructional placeholders.
+      if (IsDoiPlaceholder(doi)):
+        continue
+      # Skip DOIs that appear inside an API URL template.
+      if (IsTemplateContext(scanText, doi)):
+        continue
       key = ("doi", doi, skillName)
       if (key in seen):
         continue

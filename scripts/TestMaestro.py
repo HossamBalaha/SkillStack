@@ -59,6 +59,79 @@ except ImportError as exc:
   )
   sys.exit(2)
 
+# Curated keyword-to-theme mapping for high-confidence routing.
+# These keywords are weighted 10x when they appear in a prompt.
+CuratedKeywordThemes = {
+  "latex"            : "academic-research",
+  "manuscript"       : "academic-research",
+  "thesis"           : "academic-research",
+  "dissertation"     : "academic-research",
+  "grant"            : "academic-research",
+  "peer-review"      : "academic-research",
+  "bib"              : "writing-citation",
+  "bibtex"           : "writing-citation",
+  "citation"         : "writing-citation",
+  "doi"              : "writing-citation",
+  "zotero"           : "writing-citation",
+  "optuna"           : "ml-engineering",
+  "pytorch"          : "ml-engineering",
+  "hyperparameter"   : "ml-engineering",
+  "shap"             : "ml-engineering",
+  "lightning"        : "ml-engineering",
+  "huggingface"      : "ml-engineering",
+  "checkpoint"       : "ml-engineering",
+  "etl"              : "data-engineering",
+  "pandera"          : "data-engineering",
+  "schema"           : "data-engineering",
+  "drift"            : "data-engineering",
+  "lineage"          : "data-engineering",
+  "matplotlib"       : "visualization",
+  "tikz"             : "visualization",
+  "seaborn"          : "visualization",
+  "poster"           : "visualization",
+  "heatmap"          : "visualization",
+  "camelcase"        : "style-integrity",
+  "coding-convention": "style-integrity",
+  "em-dash"          : "style-integrity",
+  "fabrication"      : "style-integrity",
+  "ai-text"          : "ai-text",
+  "humanize"         : "ai-text",
+  "perplexity"       : "ai-text",
+  "hallucination"    : "ai-output-judgement",
+  "factuality"       : "ai-output-judgement",
+  "groundedness"     : "ai-output-judgement",
+  "bias-audit"       : "ai-output-judgement",
+  "prompt-injection" : "ai-output-judgement",
+  "zip"              : "project-tooling",
+  "dockerfile"       : "project-tooling",
+  "makefile"         : "project-tooling",
+  "readme"           : "project-tooling",
+  "pyproject"        : "project-tooling",
+  "kubernetes"       : "devops",
+  "helm"             : "devops",
+  "terraform"        : "devops",
+  "prometheus"       : "devops",
+  "grafana"          : "devops",
+  "opentelemetry"    : "devops",
+  "cot"              : "prompt-engineering",
+  "react-agent"      : "prompt-engineering",
+  "few-shot"         : "prompt-engineering",
+  "system-prompt"    : "prompt-engineering",
+  "irb"              : "ethics-compliance",
+  "gdpr"             : "ethics-compliance",
+  "hipaa"            : "ethics-compliance",
+  "ccpa"             : "ethics-compliance",
+  "bloom"            : "teaching-pedagogy",
+  "rubric"           : "teaching-pedagogy",
+  "syllabus"         : "teaching-pedagogy",
+  "udl"              : "teaching-pedagogy",
+  "wcag"             : "teaching-pedagogy",
+  "narrative-arc"    : "data-storytelling",
+  "infographic"      : "data-storytelling",
+  "pitch-deck"       : "data-storytelling",
+  "scrollytelling"   : "data-storytelling",
+}
+
 # Stopwords ignored when scoring theme/skill keyword overlap.
 Stopwords = {
   "a", "an", "and", "the", "of", "for", "to", "in", "on", "with", "by",
@@ -306,7 +379,17 @@ def ScoreTheme(promptTokens: list[str], theme: ThemeKeywords) -> int:
   # Convert the prompt tokens to a set for fast intersection.
   promptSet = set(promptTokens)
   # Count the overlap with the theme's keyword set.
-  return len(promptSet & theme.Keywords)
+  baseScore = len(promptSet & theme.Keywords)
+  # Boost: if the theme folder name itself appears in the prompt, add 5 bonus points.
+  for token in promptTokens:
+    if (token in theme.Theme):
+      baseScore += 5
+  # Boost: curated keywords are weighted 10x when they match the theme.
+  for token in promptTokens:
+    if (token in CuratedKeywordThemes):
+      if (CuratedKeywordThemes[token] == theme.Theme):
+        baseScore += 10
+  return baseScore
 
 
 def ScoreSkill(promptTokens: list[str], skill: SkillKeywords) -> int:
@@ -345,6 +428,11 @@ def RoutePrompt(
   """
   # Tokenize the prompt once.
   promptTokens = Tokenize(prompt)
+  promptLower = prompt.lower()
+  # Check for direct full-skill-name matches (only if the entire hyphenated name appears).
+  for skill in skills:
+    if (skill.Name in promptLower):
+      return (skill.Theme, skill.Name, 999, 999)
   # Score every theme and pick the highest.
   bestTheme = ""
   bestThemeScore = -1

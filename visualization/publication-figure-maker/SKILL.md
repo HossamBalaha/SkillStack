@@ -76,7 +76,7 @@ plt.rcParams['font.sans-serif'] = ['Noto Sans SC', 'DejaVu Sans']
 plt.rcParams['axes.unicode_minus'] = False
 
 # Conversion constant.
-ONE_MM = 1 / 25.4.
+ONE_MM = 1 / 25.4
 
 def MakeJournalFigure(xData, yData, outputPath):
   # Size to PRL double column (178 mm) at 8 pt body text.

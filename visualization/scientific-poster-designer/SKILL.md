@@ -88,7 +88,7 @@ def PosterSpecs(orientation):
   }
 
 # Convert millimetres to inches for matplotlib or TikZ scaling.
-ONE_MM = 1 / 25.4.
+ONE_MM = 1 / 25.4
 poster = PosterSpecs("portrait")
 widthIn = poster["WidthMm"] * ONE_MM
 heightIn = poster["HeightMm"] * ONE_MM

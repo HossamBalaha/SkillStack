@@ -85,7 +85,7 @@ Before:
   year = {2023},
   volume = {45},
   pages = {1024--1038},
-  doi = {10.1109/TPAMI.2023.123456}
+  doi = {10.1109/TPAMI.2023.123456
 }
 
 After (merged, IEEE formatted):

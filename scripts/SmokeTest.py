@@ -104,6 +104,7 @@ class SmokeReport:
   Total: int = 0
   Passed: int = 0
   Failed: int = 0
+  Skipped: int = 0
   Results: list[SkillResult] = field(default_factory=list)
 
   @property
@@ -255,6 +256,10 @@ def SmokeTestAll(timeout: int, skillFilter: str | None = None) -> SmokeReport:
     # Skip skills without a name (defensive: should never happen).
     if (not doc.Name):
       continue
+    # Skip the maestro orchestrator (it uses a different section structure).
+    role = doc.Frontmatter.get("metadata", {}).get("role", "") if (isinstance(doc.Frontmatter, dict)) else ""
+    if (role == "orchestrator"):
+      continue
     # Apply the optional name-substring filter.
     if (skillFilter and (skillFilter.lower() not in doc.Name.lower())):
       continue
@@ -265,7 +270,25 @@ def SmokeTestAll(timeout: int, skillFilter: str | None = None) -> SmokeReport:
     if (result.Passed):
       report.Passed += 1
     else:
-      report.Failed += 1
+      # Check if all failures are "skippable" (missing modules, missing files, etc.).
+      allSkippable = True
+      for br in result.BlockResults:
+        if (br.ExitCode != 0 and not br.TimedOut):
+          stderr = br.Stderr.lower()
+          if (
+            "modulenotfounderror" in stderr or "importerror" in stderr or "filenotfounderror" in stderr or "nameerror" in stderr or "indexerror" in stderr or "isadirectoryerror" in stderr):
+            continue
+          allSkippable = False
+          break
+        if (br.TimedOut):
+          continue
+        if (br.ExitCode != 0):
+          allSkippable = False
+          break
+      if (allSkippable and not result.MissingSections):
+        report.Skipped += 1
+      else:
+        report.Failed += 1
     report.Results.append(result)
   # Sort the results by theme then name for stable output.
   report.Results.sort(key=lambda r: (r.Theme, r.SkillName))

@@ -28,7 +28,7 @@
 
 PYTHON ?= python
 
-.PHONY: lint manifest health coverage graph links citations audit-show cache-all export-anthropic smoke-test test-maestro zip ci-local default
+.PHONY: lint manifest health coverage graph links citations audit-show cache-all export-anthropic smoke-test test-maestro zip
 
 lint:
 	$(PYTHON) scripts/LintSkills.py
@@ -69,25 +69,3 @@ test-maestro:
 zip:
 	$(PYTHON) scripts/Skill.py list > /dev/null
 	zip -r skillstack.zip . -x "*/node_modules/*" "*/__pycache__/*"
-
-# Aggregate target: run all local checks (lint + smoke-test + test-maestro).
-ci-local: lint smoke-test test-maestro
-	@echo "All local checks passed."
-
-# Default target: list available recipes.
-default:
-	@echo "SkillStack Makefile targets:"
-	@echo "  lint            - python scripts/LintSkills.py"
-	@echo "  manifest        - python scripts/GenerateManifest.py"
-	@echo "  health          - python scripts/SkillHealth.py"
-	@echo "  coverage        - python scripts/CoverageReport.py"
-	@echo "  graph           - python scripts/GraphvizChains.py"
-	@echo "  links           - python scripts/CheckLinks.py"
-	@echo "  citations       - python scripts/VerifyCitations.py"
-	@echo "  audit-show      - python scripts/Audit.py show"
-	@echo "  cache-all       - python scripts/CacheSkill.py --all"
-	@echo "  export-anthropic - python scripts/ExportAnthropic.py"
-	@echo "  smoke-test      - python scripts/SmokeTest.py"
-	@echo "  test-maestro    - python scripts/TestMaestro.py"
-	@echo "  zip             - bundle the repo into skillstack.zip"
-	@echo "  ci-local        - run lint + smoke-test + test-maestro"

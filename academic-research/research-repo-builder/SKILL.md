@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
-tags: [scaffolding, repository, project-structure]
-related: [style-integrity/coding-conventions-enforcer, ml-engineering/modular-ml-architect, academic-research/reproducibility-checklist-author]
-prerequisites: []
-outputs: [python, markdown, bash]
+tags: [ scaffolding, repository, project-structure ]
+related: [ style-integrity/coding-conventions-enforcer, ml-engineering/modular-ml-architect, academic-research/reproducibility-checklist-author ]
+prerequisites: [ ]
+outputs: [ python, markdown, bash ]
 difficulty: intermediate
 estimated_tokens: 1800
 permissions:
@@ -18,7 +18,7 @@ permissions:
   execute_code: false
 language: en
 last_reviewed: 2026-11-02
-verified_against: []
+verified_against: [ ]
 ---
 
 # Research Repo Builder

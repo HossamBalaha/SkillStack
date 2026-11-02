@@ -387,13 +387,14 @@ def ExtractDois(text: str) -> list[str]:
   Returns:
     list[str]: Unique DOIs in first-seen order.
   """
-  # Match the DOI prefix plus the suffix up to whitespace or a paren.
-  matches = re.findall(r"\b10\.\d{4,}/[^\s\)]+", text)
+  # Match the DOI prefix plus the suffix up to whitespace or end-of-line.
+  # DOIs can contain parentheses (e.g., 10.1016/S0140-6736(02)07683-5), so do NOT stop at ( or ).
+  matches = re.findall(r"\b10\.\d{4,}/[^\s]+", text)
   seen = set()
   result = []
   for match in matches:
     # Strip trailing punctuation that is not part of the DOI.
-    cleaned = match.rstrip(".,;:!")
+    cleaned = match.rstrip(".,;:!\"'`}>")
     if (cleaned not in seen):
       seen.add(cleaned)
       result.append(cleaned)

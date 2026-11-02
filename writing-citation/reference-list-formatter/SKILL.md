@@ -80,7 +80,7 @@ Before (.bib entry):
   volume = {54},
   number = {2},
   pages = {1--38},
-  doi = {10.1145/3412345}
+  doi = {10.1145/3412345
 }
 
 After (IEEE LaTeX block):
