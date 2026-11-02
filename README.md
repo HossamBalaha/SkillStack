@@ -103,232 +103,232 @@ Some skills also have a `references/` subfolder with deeper rule files.
 
 > Plan studies, draft manuscripts, write theses, design grants, review papers, prepare talks.
 
-| #  | Skill                               | One-Line Description                                                                           | Link |
-|----|-------------------------------------|------------------------------------------------------------------------------------------------|---|
-| 1  | [`research-ideation-planner`](academic-research/research-ideation-planner/SKILL.md)         | Propose 3+ novel research ideas aligned to a target venue, then build an end-to-end blueprint. | `academic-research/research-ideation-planner/SKILL.md` |
-| 2  | [`research-repo-builder`](academic-research/research-repo-builder/SKILL.md)             | Scaffold a complete modular research repository (src/, configs, manual, datasets.md).          | `academic-research/research-repo-builder/SKILL.md` |
-| 3  | [`journal-manuscript-writer`](academic-research/journal-manuscript-writer/SKILL.md)         | Draft publication-ready journal sections in LaTeX with strict style rules.                     | `academic-research/journal-manuscript-writer/SKILL.md` |
-| 4  | [`academic-book-author`](academic-research/academic-book-author/SKILL.md)              | Draft academic book chapters with pedagogical structure and code walkthroughs.                 | `academic-research/academic-book-author/SKILL.md` |
-| 5  | [`grant-proposal-writer`](academic-research/grant-proposal-writer/SKILL.md)             | Draft competitive grant proposals (specific aims, significance, approach, budget).             | `academic-research/grant-proposal-writer/SKILL.md` |
-| 6  | [`literature-review-synthesizer`](academic-research/literature-review-synthesizer/SKILL.md)     | Build systematic reviews with PICO/SPIDER framing and PRISMA flow.                             | `academic-research/literature-review-synthesizer/SKILL.md` |
-| 7  | [`peer-review-simulator`](academic-research/peer-review-simulator/SKILL.md)             | Generate peer-review reports and author rebuttal letters.                                      | `academic-research/peer-review-simulator/SKILL.md` |
-| 8  | [`conference-talk-prep`](academic-research/conference-talk-prep/SKILL.md)              | Draft conference talks with slide outline, notes, and Q&A prep.                                | `academic-research/conference-talk-prep/SKILL.md` |
-| 9  | [`thesis-chapter-planner`](academic-research/thesis-chapter-planner/SKILL.md)            | Plan thesis/dissertation chapters with cross-chapter non-redundancy.                           | `academic-research/thesis-chapter-planner/SKILL.md` |
-| 10 | [`research-question-formulator`](academic-research/research-question-formulator/SKILL.md)      | Formulate FINER/PICO research questions and hypotheses.                                        | `academic-research/research-question-formulator/SKILL.md` |
-| 11 | [`hypothesis-designer`](academic-research/hypothesis-designer/SKILL.md)               | Design testable hypotheses with null/alternative and effect-size framing.                      | `academic-research/hypothesis-designer/SKILL.md` |
-| 12 | [`experimental-design-planner`](academic-research/experimental-design-planner/SKILL.md)       | Plan experimental designs (RCT, factorial, crossover) with sample-size calculation.            | `academic-research/experimental-design-planner/SKILL.md` |
-| 13 | [`scope-and-aims-writer`](academic-research/scope-and-aims-writer/SKILL.md)             | Draft scope, aims, and contribution statements.                                                | `academic-research/scope-and-aims-writer/SKILL.md` |
-| 14 | [`related-work-surveyor`](academic-research/related-work-surveyor/SKILL.md)             | Survey related work and build thematic comparison tables.                                      | `academic-research/related-work-surveyor/SKILL.md` |
-| 15 | [`citation-network-mapper`](academic-research/citation-network-mapper/SKILL.md)           | Map citation networks and identify influential/bridge papers.                                  | `academic-research/citation-network-mapper/SKILL.md` |
-| 16 | [`research-portfolio-tracker`](academic-research/research-portfolio-tracker/SKILL.md)        | Track research outputs, deadlines, and submission status.                                      | `academic-research/research-portfolio-tracker/SKILL.md` |
-| 17 | [`open-science-advocate`](academic-research/open-science-advocate/SKILL.md)             | Apply open-science practices (open data, open code, preprints, OSF).                           | `academic-research/open-science-advocate/SKILL.md` |
-| 18 | [`pre-registration-drafter`](academic-research/pre-registration-drafter/SKILL.md)          | Draft pre-registration documents (AsPredicted, OSF, Registered Report).                        | `academic-research/pre-registration-drafter/SKILL.md` |
-| 19 | [`reproducibility-checklist-author`](academic-research/reproducibility-checklist-author/SKILL.md)  | Author a reproducibility checklist for a submitted manuscript.                                 | `academic-research/reproducibility-checklist-author/SKILL.md` |
+| #  | Skill                                                                                               | One-Line Description                                                                           | Link                                                           |
+|----|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| 1  | [`research-ideation-planner`](academic-research/research-ideation-planner/SKILL.md)                 | Propose 3+ novel research ideas aligned to a target venue, then build an end-to-end blueprint. | `academic-research/research-ideation-planner/SKILL.md`         |
+| 2  | [`research-repo-builder`](academic-research/research-repo-builder/SKILL.md)                         | Scaffold a complete modular research repository (src/, configs, manual, datasets.md).          | `academic-research/research-repo-builder/SKILL.md`             |
+| 3  | [`journal-manuscript-writer`](academic-research/journal-manuscript-writer/SKILL.md)                 | Draft publication-ready journal sections in LaTeX with strict style rules.                     | `academic-research/journal-manuscript-writer/SKILL.md`         |
+| 4  | [`academic-book-author`](academic-research/academic-book-author/SKILL.md)                           | Draft academic book chapters with pedagogical structure and code walkthroughs.                 | `academic-research/academic-book-author/SKILL.md`              |
+| 5  | [`grant-proposal-writer`](academic-research/grant-proposal-writer/SKILL.md)                         | Draft competitive grant proposals (specific aims, significance, approach, budget).             | `academic-research/grant-proposal-writer/SKILL.md`             |
+| 6  | [`literature-review-synthesizer`](academic-research/literature-review-synthesizer/SKILL.md)         | Build systematic reviews with PICO/SPIDER framing and PRISMA flow.                             | `academic-research/literature-review-synthesizer/SKILL.md`     |
+| 7  | [`peer-review-simulator`](academic-research/peer-review-simulator/SKILL.md)                         | Generate peer-review reports and author rebuttal letters.                                      | `academic-research/peer-review-simulator/SKILL.md`             |
+| 8  | [`conference-talk-prep`](academic-research/conference-talk-prep/SKILL.md)                           | Draft conference talks with slide outline, notes, and Q&A prep.                                | `academic-research/conference-talk-prep/SKILL.md`              |
+| 9  | [`thesis-chapter-planner`](academic-research/thesis-chapter-planner/SKILL.md)                       | Plan thesis/dissertation chapters with cross-chapter non-redundancy.                           | `academic-research/thesis-chapter-planner/SKILL.md`            |
+| 10 | [`research-question-formulator`](academic-research/research-question-formulator/SKILL.md)           | Formulate FINER/PICO research questions and hypotheses.                                        | `academic-research/research-question-formulator/SKILL.md`      |
+| 11 | [`hypothesis-designer`](academic-research/hypothesis-designer/SKILL.md)                             | Design testable hypotheses with null/alternative and effect-size framing.                      | `academic-research/hypothesis-designer/SKILL.md`               |
+| 12 | [`experimental-design-planner`](academic-research/experimental-design-planner/SKILL.md)             | Plan experimental designs (RCT, factorial, crossover) with sample-size calculation.            | `academic-research/experimental-design-planner/SKILL.md`       |
+| 13 | [`scope-and-aims-writer`](academic-research/scope-and-aims-writer/SKILL.md)                         | Draft scope, aims, and contribution statements.                                                | `academic-research/scope-and-aims-writer/SKILL.md`             |
+| 14 | [`related-work-surveyor`](academic-research/related-work-surveyor/SKILL.md)                         | Survey related work and build thematic comparison tables.                                      | `academic-research/related-work-surveyor/SKILL.md`             |
+| 15 | [`citation-network-mapper`](academic-research/citation-network-mapper/SKILL.md)                     | Map citation networks and identify influential/bridge papers.                                  | `academic-research/citation-network-mapper/SKILL.md`           |
+| 16 | [`research-portfolio-tracker`](academic-research/research-portfolio-tracker/SKILL.md)               | Track research outputs, deadlines, and submission status.                                      | `academic-research/research-portfolio-tracker/SKILL.md`        |
+| 17 | [`open-science-advocate`](academic-research/open-science-advocate/SKILL.md)                         | Apply open-science practices (open data, open code, preprints, OSF).                           | `academic-research/open-science-advocate/SKILL.md`             |
+| 18 | [`pre-registration-drafter`](academic-research/pre-registration-drafter/SKILL.md)                   | Draft pre-registration documents (AsPredicted, OSF, Registered Report).                        | `academic-research/pre-registration-drafter/SKILL.md`          |
+| 19 | [`reproducibility-checklist-author`](academic-research/reproducibility-checklist-author/SKILL.md)   | Author a reproducibility checklist for a submitted manuscript.                                 | `academic-research/reproducibility-checklist-author/SKILL.md`  |
 | 20 | [`supplementary-materials-organizer`](academic-research/supplementary-materials-organizer/SKILL.md) | Organize supplementary materials (appendices, code, data, figures).                            | `academic-research/supplementary-materials-organizer/SKILL.md` |
 
 ### 🛡️ [`style-integrity/`](style-integrity/README.md) — LaTeX, Prose & Coding Conventions
 
 > Enforce strict style rules, verify citations, audit notation, execute multi-step tasks with discipline.
 
-| #  | Skill                              | One-Line Description                                                                                                            | Link |
-|----|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|---|
-| 1  | [`latex-style-guard`](style-integrity/latex-style-guard/SKILL.md)                | Enforce LaTeX typography: blank lines around floats, `% ====== %` separators, LaTeX quotes.                                     | `style-integrity/latex-style-guard/SKILL.md` |
-| 2  | [`academic-prose-polisher`](style-integrity/academic-prose-polisher/SKILL.md)          | Enforce formal prose: banned-vocabulary filter, no em-dashes, no meta-commentary.                                               | `style-integrity/academic-prose-polisher/SKILL.md` |
-| 3  | [`zero-fabrication-guard`](style-integrity/zero-fabrication-guard/SKILL.md)           | Verify every citation, DOI, URL, dataset name via web search; silent-omit if missing.                                           | `style-integrity/zero-fabrication-guard/SKILL.md` |
-| 4  | [`execution-protocol`](style-integrity/execution-protocol/SKILL.md)               | 10-stage meta-discipline: Comprehend → Clarify → Define Success → ... → Deliver.                                                | `style-integrity/execution-protocol/SKILL.md` |
-| 5  | [`notation-consistency-checker`](style-integrity/notation-consistency-checker/SKILL.md)     | Audit one-to-one symbol mapping; mandate Nomenclature table if >15 symbols.                                                     | `style-integrity/notation-consistency-checker/SKILL.md` |
-| 6  | [`coding-conventions-enforcer`](style-integrity/coding-conventions-enforcer/SKILL.md)      | Enforce camelCase variables, CamelCase functions/classes/files/dict-keys, parens in `if`, period-ended comments, double quotes. | `style-integrity/coding-conventions-enforcer/SKILL.md` |
-| 7  | [`banned-vocabulary-filter`](style-integrity/banned-vocabulary-filter/SKILL.md)         | Strip banned LLM-flavored words (delve, tapestry, leverage, paramount, etc.).                                                   | `style-integrity/banned-vocabulary-filter/SKILL.md` |
-| 8  | [`claim-source-tracer`](style-integrity/claim-source-tracer/SKILL.md)              | Map every factual claim in a manuscript to its source binder/page/quote.                                                        | `style-integrity/claim-source-tracer/SKILL.md` |
-| 9  | [`silent-omission-protocol`](style-integrity/silent-omission-protocol/SKILL.md)         | Remove jarring `[DECLARATION: ...]` text; relocate to external omission log.                                                    | `style-integrity/silent-omission-protocol/SKILL.md` |
-| 10 | [`planning-note-logger`](style-integrity/planning-note-logger/SKILL.md)             | Append a "Planning Note" listing data still needed for the task.                                                                | `style-integrity/planning-note-logger/SKILL.md` |
-| 11 | [`cross-reference-validator`](style-integrity/cross-reference-validator/SKILL.md)        | Verify every `\ref{}` and `\label{}` resolves and every float is referenced.                                                    | `style-integrity/cross-reference-validator/SKILL.md` |
+| #  | Skill                                                                                           | One-Line Description                                                                                                            | Link                                                        |
+|----|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| 1  | [`latex-style-guard`](style-integrity/latex-style-guard/SKILL.md)                               | Enforce LaTeX typography: blank lines around floats, `% ====== %` separators, LaTeX quotes.                                     | `style-integrity/latex-style-guard/SKILL.md`                |
+| 2  | [`academic-prose-polisher`](style-integrity/academic-prose-polisher/SKILL.md)                   | Enforce formal prose: banned-vocabulary filter, no em-dashes, no meta-commentary.                                               | `style-integrity/academic-prose-polisher/SKILL.md`          |
+| 3  | [`zero-fabrication-guard`](style-integrity/zero-fabrication-guard/SKILL.md)                     | Verify every citation, DOI, URL, dataset name via web search; silent-omit if missing.                                           | `style-integrity/zero-fabrication-guard/SKILL.md`           |
+| 4  | [`execution-protocol`](style-integrity/execution-protocol/SKILL.md)                             | 10-stage meta-discipline: Comprehend → Clarify → Define Success → ... → Deliver.                                                | `style-integrity/execution-protocol/SKILL.md`               |
+| 5  | [`notation-consistency-checker`](style-integrity/notation-consistency-checker/SKILL.md)         | Audit one-to-one symbol mapping; mandate Nomenclature table if >15 symbols.                                                     | `style-integrity/notation-consistency-checker/SKILL.md`     |
+| 6  | [`coding-conventions-enforcer`](style-integrity/coding-conventions-enforcer/SKILL.md)           | Enforce camelCase variables, CamelCase functions/classes/files/dict-keys, parens in `if`, period-ended comments, double quotes. | `style-integrity/coding-conventions-enforcer/SKILL.md`      |
+| 7  | [`banned-vocabulary-filter`](style-integrity/banned-vocabulary-filter/SKILL.md)                 | Strip banned LLM-flavored words (delve, tapestry, leverage, paramount, etc.).                                                   | `style-integrity/banned-vocabulary-filter/SKILL.md`         |
+| 8  | [`claim-source-tracer`](style-integrity/claim-source-tracer/SKILL.md)                           | Map every factual claim in a manuscript to its source binder/page/quote.                                                        | `style-integrity/claim-source-tracer/SKILL.md`              |
+| 9  | [`silent-omission-protocol`](style-integrity/silent-omission-protocol/SKILL.md)                 | Remove jarring `[DECLARATION: ...]` text; relocate to external omission log.                                                    | `style-integrity/silent-omission-protocol/SKILL.md`         |
+| 10 | [`planning-note-logger`](style-integrity/planning-note-logger/SKILL.md)                         | Append a "Planning Note" listing data still needed for the task.                                                                | `style-integrity/planning-note-logger/SKILL.md`             |
+| 11 | [`cross-reference-validator`](style-integrity/cross-reference-validator/SKILL.md)               | Verify every `\ref{}` and `\label{}` resolves and every float is referenced.                                                    | `style-integrity/cross-reference-validator/SKILL.md`        |
 | 12 | [`abbreviation-consistency-checker`](style-integrity/abbreviation-consistency-checker/SKILL.md) | Define abbreviations once at first use; enforce consistency thereafter.                                                         | `style-integrity/abbreviation-consistency-checker/SKILL.md` |
-| 13 | [`numerical-value-formatter`](style-integrity/numerical-value-formatter/SKILL.md)        | Wrap standalone numbers in `\ineq{}` and apply PIP/en-dash replacements.                                                        | `style-integrity/numerical-value-formatter/SKILL.md` |
-| 14 | [`math-symbol-auditor`](style-integrity/math-symbol-auditor/SKILL.md)              | Audit math symbols: no reuse, consistent notation, defined in nomenclature.                                                     | `style-integrity/math-symbol-auditor/SKILL.md` |
-| 15 | [`passive-voice-detector`](style-integrity/passive-voice-detector/SKILL.md)           | Detect passive voice and suggest active alternatives.                                                                           | `style-integrity/passive-voice-detector/SKILL.md` |
-| 16 | [`em-dash-eliminator`](style-integrity/em-dash-eliminator/SKILL.md)               | Replace em-dashes with standard punctuation or en-dashes.                                                                       | `style-integrity/em-dash-eliminator/SKILL.md` |
-| 17 | [`meta-commentary-stripper`](style-integrity/meta-commentary-stripper/SKILL.md)         | Remove "In this section we will show" / "The reader will learn" patterns.                                                       | `style-integrity/meta-commentary-stripper/SKILL.md` |
-| 18 | [`voice-matching-guard`](style-integrity/voice-matching-guard/SKILL.md)             | Match author voice sample if provided; override generic rules.                                                                  | `style-integrity/voice-matching-guard/SKILL.md` |
+| 13 | [`numerical-value-formatter`](style-integrity/numerical-value-formatter/SKILL.md)               | Wrap standalone numbers in `\ineq{}` and apply PIP/en-dash replacements.                                                        | `style-integrity/numerical-value-formatter/SKILL.md`        |
+| 14 | [`math-symbol-auditor`](style-integrity/math-symbol-auditor/SKILL.md)                           | Audit math symbols: no reuse, consistent notation, defined in nomenclature.                                                     | `style-integrity/math-symbol-auditor/SKILL.md`              |
+| 15 | [`passive-voice-detector`](style-integrity/passive-voice-detector/SKILL.md)                     | Detect passive voice and suggest active alternatives.                                                                           | `style-integrity/passive-voice-detector/SKILL.md`           |
+| 16 | [`em-dash-eliminator`](style-integrity/em-dash-eliminator/SKILL.md)                             | Replace em-dashes with standard punctuation or en-dashes.                                                                       | `style-integrity/em-dash-eliminator/SKILL.md`               |
+| 17 | [`meta-commentary-stripper`](style-integrity/meta-commentary-stripper/SKILL.md)                 | Remove "In this section we will show" / "The reader will learn" patterns.                                                       | `style-integrity/meta-commentary-stripper/SKILL.md`         |
+| 18 | [`voice-matching-guard`](style-integrity/voice-matching-guard/SKILL.md)                         | Match author voice sample if provided; override generic rules.                                                                  | `style-integrity/voice-matching-guard/SKILL.md`             |
 
 ### ⚙️ [`ml-engineering/`](ml-engineering/README.md) — PyTorch, Training & Validation
 
 > Build, train, tune, explain, and validate ML models in PyTorch/Lightning/HuggingFace.
 
-| #  | Skill                            | One-Line Description                                                                     | Link |
-|----|----------------------------------|------------------------------------------------------------------------------------------|---|
-| 1  | [`modular-ml-architect`](ml-engineering/modular-ml-architect/SKILL.md)           | Enforce modular Python conventions: 2-space indent, CamelCase, period-ended comments.    | `ml-engineering/modular-ml-architect/SKILL.md` |
+| #  | Skill                                                                                      | One-Line Description                                                                     | Link                                                     |
+|----|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| 1  | [`modular-ml-architect`](ml-engineering/modular-ml-architect/SKILL.md)                     | Enforce modular Python conventions: 2-space indent, CamelCase, period-ended comments.    | `ml-engineering/modular-ml-architect/SKILL.md`           |
 | 2  | [`reproducible-experiment-runner`](ml-engineering/reproducible-experiment-runner/SKILL.md) | Setup reproducible experiments: device resolution, seeds, dual logging, 4-split folders. | `ml-engineering/reproducible-experiment-runner/SKILL.md` |
-| 3  | [`data-leakage-guard`](ml-engineering/data-leakage-guard/SKILL.md)             | Enforce train/val/test isolation; fit preprocessing on train only.                       | `ml-engineering/data-leakage-guard/SKILL.md` |
-| 4  | [`statistical-validation-rigour`](ml-engineering/statistical-validation-rigour/SKILL.md)  | Bootstrap CIs, paired t-test/Wilcoxon/McNemar, AUC branching.                            | `ml-engineering/statistical-validation-rigour/SKILL.md` |
-| 5  | [`hyperparameter-tuner`](ml-engineering/hyperparameter-tuner/SKILL.md)           | Optuna Bayesian optimization (TPE, median pruner, multi-fidelity).                       | `ml-engineering/hyperparameter-tuner/SKILL.md` |
-| 6  | [`model-explainer`](ml-engineering/model-explainer/SKILL.md)                | SHAP/LIME/Integrated-Gradients explanations and plots.                                   | `ml-engineering/model-explainer/SKILL.md` |
-| 7  | [`pytorch-lightning-scaffold`](ml-engineering/pytorch-lightning-scaffold/SKILL.md)     | Scaffold LightningModule, DataModule, Callbacks, Loggers.                                | `ml-engineering/pytorch-lightning-scaffold/SKILL.md` |
-| 8  | [`transformer-finetuner`](ml-engineering/transformer-finetuner/SKILL.md)          | Fine-tune Hugging Face transformers with Trainer/PEFT.                                   | `ml-engineering/transformer-finetuner/SKILL.md` |
-| 9  | [`dataset-adapter-builder`](ml-engineering/dataset-adapter-builder/SKILL.md)        | Defensive dataset adapters with actionable FileNotFoundError.                            | `ml-engineering/dataset-adapter-builder/SKILL.md` |
-| 10 | [`seed-and-device-resolver`](ml-engineering/seed-and-device-resolver/SKILL.md)       | Resolve `torch.device` once and `.to(device)` on every nn.Module.                        | `ml-engineering/seed-and-device-resolver/SKILL.md` |
-| 11 | [`experiment-folder-organizer`](ml-engineering/experiment-folder-organizer/SKILL.md)    | Single timestamped experiment folder; 4 split subfolders (Train/Val/Test/Aggregated).    | `ml-engineering/experiment-folder-organizer/SKILL.md` |
-| 12 | [`train-val-test-splitter`](ml-engineering/train-val-test-splitter/SKILL.md)        | Stratified splitting at highest hierarchical level.                                      | `ml-engineering/train-val-test-splitter/SKILL.md` |
-| 13 | [`early-stopping-configurator`](ml-engineering/early-stopping-configurator/SKILL.md)    | Configure early stopping with patience, mode, delta.                                     | `ml-engineering/early-stopping-configurator/SKILL.md` |
-| 14 | [`learning-rate-finder`](ml-engineering/learning-rate-finder/SKILL.md)           | Run LR range test (Smith 2015) and plot loss-vs-LR.                                      | `ml-engineering/learning-rate-finder/SKILL.md` |
-| 15 | [`mixed-precision-trainer`](ml-engineering/mixed-precision-trainer/SKILL.md)        | AMP autocast + GradScaler for fp16/bf16 training.                                        | `ml-engineering/mixed-precision-trainer/SKILL.md` |
-| 16 | [`distributed-training-setup`](ml-engineering/distributed-training-setup/SKILL.md)     | DDP setup with `torchrun`, `find_unused_parameters`, world-size.                         | `ml-engineering/distributed-training-setup/SKILL.md` |
-| 17 | [`model-checkpoint-manager`](ml-engineering/model-checkpoint-manager/SKILL.md)       | Save/load checkpoints with epoch, val-metric, optimizer state.                           | `ml-engineering/model-checkpoint-manager/SKILL.md` |
-| 18 | [`inference-pipeline-builder`](ml-engineering/inference-pipeline-builder/SKILL.md)     | Build FastAPI inference endpoint with pre/post-processing.                               | `ml-engineering/inference-pipeline-builder/SKILL.md` |
-| 19 | [`baseline-model-zoo`](ml-engineering/baseline-model-zoo/SKILL.md)             | Implement baseline models (LR, RF, XGBoost, MLP) for comparison.                         | `ml-engineering/baseline-model-zoo/SKILL.md` |
-| 20 | [`ablation-study-runner`](ml-engineering/ablation-study-runner/SKILL.md)          | Run ablations by removing/altering components systematically.                            | `ml-engineering/ablation-study-runner/SKILL.md` |
-| 21 | [`cross-validation-engine`](ml-engineering/cross-validation-engine/SKILL.md)        | k-fold, stratified, grouped, and time-series cross-validation.                           | `ml-engineering/cross-validation-engine/SKILL.md` |
-| 22 | [`metrics-computation-suite`](ml-engineering/metrics-computation-suite/SKILL.md)      | Accuracy, F1, AUC, MCC, Cohen's kappa, calibration error.                                | `ml-engineering/metrics-computation-suite/SKILL.md` |
+| 3  | [`data-leakage-guard`](ml-engineering/data-leakage-guard/SKILL.md)                         | Enforce train/val/test isolation; fit preprocessing on train only.                       | `ml-engineering/data-leakage-guard/SKILL.md`             |
+| 4  | [`statistical-validation-rigour`](ml-engineering/statistical-validation-rigour/SKILL.md)   | Bootstrap CIs, paired t-test/Wilcoxon/McNemar, AUC branching.                            | `ml-engineering/statistical-validation-rigour/SKILL.md`  |
+| 5  | [`hyperparameter-tuner`](ml-engineering/hyperparameter-tuner/SKILL.md)                     | Optuna Bayesian optimization (TPE, median pruner, multi-fidelity).                       | `ml-engineering/hyperparameter-tuner/SKILL.md`           |
+| 6  | [`model-explainer`](ml-engineering/model-explainer/SKILL.md)                               | SHAP/LIME/Integrated-Gradients explanations and plots.                                   | `ml-engineering/model-explainer/SKILL.md`                |
+| 7  | [`pytorch-lightning-scaffold`](ml-engineering/pytorch-lightning-scaffold/SKILL.md)         | Scaffold LightningModule, DataModule, Callbacks, Loggers.                                | `ml-engineering/pytorch-lightning-scaffold/SKILL.md`     |
+| 8  | [`transformer-finetuner`](ml-engineering/transformer-finetuner/SKILL.md)                   | Fine-tune Hugging Face transformers with Trainer/PEFT.                                   | `ml-engineering/transformer-finetuner/SKILL.md`          |
+| 9  | [`dataset-adapter-builder`](ml-engineering/dataset-adapter-builder/SKILL.md)               | Defensive dataset adapters with actionable FileNotFoundError.                            | `ml-engineering/dataset-adapter-builder/SKILL.md`        |
+| 10 | [`seed-and-device-resolver`](ml-engineering/seed-and-device-resolver/SKILL.md)             | Resolve `torch.device` once and `.to(device)` on every nn.Module.                        | `ml-engineering/seed-and-device-resolver/SKILL.md`       |
+| 11 | [`experiment-folder-organizer`](ml-engineering/experiment-folder-organizer/SKILL.md)       | Single timestamped experiment folder; 4 split subfolders (Train/Val/Test/Aggregated).    | `ml-engineering/experiment-folder-organizer/SKILL.md`    |
+| 12 | [`train-val-test-splitter`](ml-engineering/train-val-test-splitter/SKILL.md)               | Stratified splitting at highest hierarchical level.                                      | `ml-engineering/train-val-test-splitter/SKILL.md`        |
+| 13 | [`early-stopping-configurator`](ml-engineering/early-stopping-configurator/SKILL.md)       | Configure early stopping with patience, mode, delta.                                     | `ml-engineering/early-stopping-configurator/SKILL.md`    |
+| 14 | [`learning-rate-finder`](ml-engineering/learning-rate-finder/SKILL.md)                     | Run LR range test (Smith 2015) and plot loss-vs-LR.                                      | `ml-engineering/learning-rate-finder/SKILL.md`           |
+| 15 | [`mixed-precision-trainer`](ml-engineering/mixed-precision-trainer/SKILL.md)               | AMP autocast + GradScaler for fp16/bf16 training.                                        | `ml-engineering/mixed-precision-trainer/SKILL.md`        |
+| 16 | [`distributed-training-setup`](ml-engineering/distributed-training-setup/SKILL.md)         | DDP setup with `torchrun`, `find_unused_parameters`, world-size.                         | `ml-engineering/distributed-training-setup/SKILL.md`     |
+| 17 | [`model-checkpoint-manager`](ml-engineering/model-checkpoint-manager/SKILL.md)             | Save/load checkpoints with epoch, val-metric, optimizer state.                           | `ml-engineering/model-checkpoint-manager/SKILL.md`       |
+| 18 | [`inference-pipeline-builder`](ml-engineering/inference-pipeline-builder/SKILL.md)         | Build FastAPI inference endpoint with pre/post-processing.                               | `ml-engineering/inference-pipeline-builder/SKILL.md`     |
+| 19 | [`baseline-model-zoo`](ml-engineering/baseline-model-zoo/SKILL.md)                         | Implement baseline models (LR, RF, XGBoost, MLP) for comparison.                         | `ml-engineering/baseline-model-zoo/SKILL.md`             |
+| 20 | [`ablation-study-runner`](ml-engineering/ablation-study-runner/SKILL.md)                   | Run ablations by removing/altering components systematically.                            | `ml-engineering/ablation-study-runner/SKILL.md`          |
+| 21 | [`cross-validation-engine`](ml-engineering/cross-validation-engine/SKILL.md)               | k-fold, stratified, grouped, and time-series cross-validation.                           | `ml-engineering/cross-validation-engine/SKILL.md`        |
+| 22 | [`metrics-computation-suite`](ml-engineering/metrics-computation-suite/SKILL.md)           | Accuracy, F1, AUC, MCC, Cohen's kappa, calibration error.                                | `ml-engineering/metrics-computation-suite/SKILL.md`      |
 
 ### 🔬 [`data-engineering/`](data-engineering/README.md) — ETL, Schemas & Lineage
 
 > Build robust data pipelines, enforce schemas, anonymize PII, track lineage.
 
-| #  | Skill                         | One-Line Description                                                     | Link |
-|----|-------------------------------|--------------------------------------------------------------------------|---|
-| 1  | [`etl-pipeline-builder`](data-engineering/etl-pipeline-builder/SKILL.md)        | Idempotent ETL with extract-validate-transform-load and audit trail.     | `data-engineering/etl-pipeline-builder/SKILL.md` |
-| 2  | [`feature-store-recipe`](data-engineering/feature-store-recipe/SKILL.md)        | Feature engineering with point-in-time correctness and freshness checks. | `data-engineering/feature-store-recipe/SKILL.md` |
-| 3  | [`data-quality-validator`](data-engineering/data-quality-validator/SKILL.md)      | Validate with pandera/great-expectations; null/duplicate/outlier checks. | `data-engineering/data-quality-validator/SKILL.md` |
-| 4  | [`csv-json-converter`](data-engineering/csv-json-converter/SKILL.md)          | Convert between CSV/JSON/Parquet/Arrow with type preservation.           | `data-engineering/csv-json-converter/SKILL.md` |
-| 5  | [`dataset-card-generator`](data-engineering/dataset-card-generator/SKILL.md)      | Generate dataset cards: provenance, license, composition, intended use.  | `data-engineering/dataset-card-generator/SKILL.md` |
-| 6  | [`data-schema-enforcer`](data-engineering/data-schema-enforcer/SKILL.md)        | Enforce schema with pydantic models or pandera DataFrameSchemas.         | `data-engineering/data-schema-enforcer/SKILL.md` |
-| 7  | [`incremental-loader`](data-engineering/incremental-loader/SKILL.md)          | Load incrementally with stateful checkpoints and idempotent re-runs.     | `data-engineering/incremental-loader/SKILL.md` |
-| 8  | [`data-anonymizer`](data-engineering/data-anonymizer/SKILL.md)             | Anonymize PII: hashing, k-anonymity, generalization, suppression.        | `data-engineering/data-anonymizer/SKILL.md` |
-| 9  | [`time-series-resampler`](data-engineering/time-series-resampler/SKILL.md)       | Resample time series with forward/backward fill and alignment.           | `data-engineering/time-series-resampler/SKILL.md` |
-| 10 | [`missing-data-imputer`](data-engineering/missing-data-imputer/SKILL.md)        | Impute missing data: mean/median/KNN/iterative/MICE.                     | `data-engineering/missing-data-imputer/SKILL.md` |
-| 11 | [`outlier-detector`](data-engineering/outlier-detector/SKILL.md)            | Detect outliers: IQR, z-score, isolation forest, DBSCAN.                 | `data-engineering/outlier-detector/SKILL.md` |
-| 12 | [`data-drift-monitor`](data-engineering/data-drift-monitor/SKILL.md)          | Monitor data drift: PSI, KS test, Wasserstein distance.                  | `data-engineering/data-drift-monitor/SKILL.md` |
+| #  | Skill                                                                                  | One-Line Description                                                     | Link                                                    |
+|----|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------|
+| 1  | [`etl-pipeline-builder`](data-engineering/etl-pipeline-builder/SKILL.md)               | Idempotent ETL with extract-validate-transform-load and audit trail.     | `data-engineering/etl-pipeline-builder/SKILL.md`        |
+| 2  | [`feature-store-recipe`](data-engineering/feature-store-recipe/SKILL.md)               | Feature engineering with point-in-time correctness and freshness checks. | `data-engineering/feature-store-recipe/SKILL.md`        |
+| 3  | [`data-quality-validator`](data-engineering/data-quality-validator/SKILL.md)           | Validate with pandera/great-expectations; null/duplicate/outlier checks. | `data-engineering/data-quality-validator/SKILL.md`      |
+| 4  | [`csv-json-converter`](data-engineering/csv-json-converter/SKILL.md)                   | Convert between CSV/JSON/Parquet/Arrow with type preservation.           | `data-engineering/csv-json-converter/SKILL.md`          |
+| 5  | [`dataset-card-generator`](data-engineering/dataset-card-generator/SKILL.md)           | Generate dataset cards: provenance, license, composition, intended use.  | `data-engineering/dataset-card-generator/SKILL.md`      |
+| 6  | [`data-schema-enforcer`](data-engineering/data-schema-enforcer/SKILL.md)               | Enforce schema with pydantic models or pandera DataFrameSchemas.         | `data-engineering/data-schema-enforcer/SKILL.md`        |
+| 7  | [`incremental-loader`](data-engineering/incremental-loader/SKILL.md)                   | Load incrementally with stateful checkpoints and idempotent re-runs.     | `data-engineering/incremental-loader/SKILL.md`          |
+| 8  | [`data-anonymizer`](data-engineering/data-anonymizer/SKILL.md)                         | Anonymize PII: hashing, k-anonymity, generalization, suppression.        | `data-engineering/data-anonymizer/SKILL.md`             |
+| 9  | [`time-series-resampler`](data-engineering/time-series-resampler/SKILL.md)             | Resample time series with forward/backward fill and alignment.           | `data-engineering/time-series-resampler/SKILL.md`       |
+| 10 | [`missing-data-imputer`](data-engineering/missing-data-imputer/SKILL.md)               | Impute missing data: mean/median/KNN/iterative/MICE.                     | `data-engineering/missing-data-imputer/SKILL.md`        |
+| 11 | [`outlier-detector`](data-engineering/outlier-detector/SKILL.md)                       | Detect outliers: IQR, z-score, isolation forest, DBSCAN.                 | `data-engineering/outlier-detector/SKILL.md`            |
+| 12 | [`data-drift-monitor`](data-engineering/data-drift-monitor/SKILL.md)                   | Monitor data drift: PSI, KS test, Wasserstein distance.                  | `data-engineering/data-drift-monitor/SKILL.md`          |
 | 13 | [`feature-engineering-toolkit`](data-engineering/feature-engineering-toolkit/SKILL.md) | Build features: polynomial, binning, target encoding, interactions.      | `data-engineering/feature-engineering-toolkit/SKILL.md` |
-| 14 | [`categorical-encoder`](data-engineering/categorical-encoder/SKILL.md)         | Encode categoricals: one-hot, ordinal, target, hash, embedding.          | `data-engineering/categorical-encoder/SKILL.md` |
-| 15 | [`text-preprocessor`](data-engineering/text-preprocessor/SKILL.md)           | Preprocess text: tokenize, lowercase, lemmatize, stopword removal.       | `data-engineering/text-preprocessor/SKILL.md` |
-| 16 | [`image-dataset-loader`](data-engineering/image-dataset-loader/SKILL.md)        | Load image datasets with augmentation, batching, and prefetch.           | `data-engineering/image-dataset-loader/SKILL.md` |
-| 17 | [`tabular-data-sampler`](data-engineering/tabular-data-sampler/SKILL.md)        | Sample tabular data: random, stratified, weighted, reservoir.            | `data-engineering/tabular-data-sampler/SKILL.md` |
-| 18 | [`data-lineage-tracker`](data-engineering/data-lineage-tracker/SKILL.md)        | Track data lineage: source → transform → sink with provenance graph.     | `data-engineering/data-lineage-tracker/SKILL.md` |
+| 14 | [`categorical-encoder`](data-engineering/categorical-encoder/SKILL.md)                 | Encode categoricals: one-hot, ordinal, target, hash, embedding.          | `data-engineering/categorical-encoder/SKILL.md`         |
+| 15 | [`text-preprocessor`](data-engineering/text-preprocessor/SKILL.md)                     | Preprocess text: tokenize, lowercase, lemmatize, stopword removal.       | `data-engineering/text-preprocessor/SKILL.md`           |
+| 16 | [`image-dataset-loader`](data-engineering/image-dataset-loader/SKILL.md)               | Load image datasets with augmentation, batching, and prefetch.           | `data-engineering/image-dataset-loader/SKILL.md`        |
+| 17 | [`tabular-data-sampler`](data-engineering/tabular-data-sampler/SKILL.md)               | Sample tabular data: random, stratified, weighted, reservoir.            | `data-engineering/tabular-data-sampler/SKILL.md`        |
+| 18 | [`data-lineage-tracker`](data-engineering/data-lineage-tracker/SKILL.md)               | Track data lineage: source → transform → sink with provenance graph.     | `data-engineering/data-lineage-tracker/SKILL.md`        |
 
 ### 📊 [`visualization/`](visualization/README.md) — Figures, TikZ & Posters
 
 > Generate publication-ready figures, TikZ diagrams, A0 posters, results tables, dashboards.
 
-| #  | Skill                         | One-Line Description                                                    | Link |
-|----|-------------------------------|-------------------------------------------------------------------------|---|
-| 1  | [`publication-figure-maker`](visualization/publication-figure-maker/SKILL.md)    | Journal-ready matplotlib figures with correct sizes and vector formats. | `visualization/publication-figure-maker/SKILL.md` |
-| 2  | [`academic-plotting-pipeline`](visualization/academic-plotting-pipeline/SKILL.md)  | Two-track: image-gen diagrams + matplotlib data figures.                | `visualization/academic-plotting-pipeline/SKILL.md` |
-| 3  | [`tikz-framework-diagrammer`](visualization/tikz-framework-diagrammer/SKILL.md)   | TikZ pipeline diagrams: concise nodes, solid groups, resizebox.         | `visualization/tikz-framework-diagrammer/SKILL.md` |
-| 4  | [`scientific-poster-designer`](visualization/scientific-poster-designer/SKILL.md)  | A0 posters (841×1189mm), IMRAD layout, 1m readability.                  | `visualization/scientific-poster-designer/SKILL.md` |
-| 5  | [`results-table-formatter`](visualization/results-table-formatter/SKILL.md)     | booktabs tables with multi-row headers and 95% CI columns.              | `visualization/results-table-formatter/SKILL.md` |
-| 6  | [`infographic-summarizer`](visualization/infographic-summarizer/SKILL.md)      | Single-page infographics with visual hierarchy.                         | `visualization/infographic-summarizer/SKILL.md` |
-| 7  | [`confusion-matrix-plotter`](visualization/confusion-matrix-plotter/SKILL.md)    | Plot confusion matrix with normalized + raw counts.                     | `visualization/confusion-matrix-plotter/SKILL.md` |
-| 8  | [`roc-pr-curve-plotter`](visualization/roc-pr-curve-plotter/SKILL.md)        | ROC and PR curves with AUC and baseline references.                     | `visualization/roc-pr-curve-plotter/SKILL.md` |
-| 9  | [`training-curve-visualizer`](visualization/training-curve-visualizer/SKILL.md)   | Plot train/val loss and accuracy over epochs.                           | `visualization/training-curve-visualizer/SKILL.md` |
-| 10 | [`attention-map-visualizer`](visualization/attention-map-visualizer/SKILL.md)    | Visualize transformer attention weights as heatmaps.                    | `visualization/attention-map-visualizer/SKILL.md` |
-| 11 | [`embedding-projector`](visualization/embedding-projector/SKILL.md)         | Project high-dim embeddings via PCA/t-SNE/UMAP.                         | `visualization/embedding-projector/SKILL.md` |
-| 12 | [`dashboard-builder`](visualization/dashboard-builder/SKILL.md)           | Build interactive dashboards (Streamlit, Dash, Gradio).                 | `visualization/dashboard-builder/SKILL.md` |
-| 13 | [`interactive-plot-builder`](visualization/interactive-plot-builder/SKILL.md)    | Interactive plots with Plotly/Bokeh/Holoviews.                          | `visualization/interactive-plot-builder/SKILL.md` |
-| 14 | [`color-palette-selector`](visualization/color-palette-selector/SKILL.md)      | Select colorblind-friendly palettes (viridis, cividis, colorbrewer).    | `visualization/color-palette-selector/SKILL.md` |
-| 15 | [`figure-caption-writer`](visualization/figure-caption-writer/SKILL.md)       | Write detailed captions: what / how / why.                              | `visualization/figure-caption-writer/SKILL.md` |
+| #  | Skill                                                                               | One-Line Description                                                    | Link                                                 |
+|----|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------|
+| 1  | [`publication-figure-maker`](visualization/publication-figure-maker/SKILL.md)       | Journal-ready matplotlib figures with correct sizes and vector formats. | `visualization/publication-figure-maker/SKILL.md`    |
+| 2  | [`academic-plotting-pipeline`](visualization/academic-plotting-pipeline/SKILL.md)   | Two-track: image-gen diagrams + matplotlib data figures.                | `visualization/academic-plotting-pipeline/SKILL.md`  |
+| 3  | [`tikz-framework-diagrammer`](visualization/tikz-framework-diagrammer/SKILL.md)     | TikZ pipeline diagrams: concise nodes, solid groups, resizebox.         | `visualization/tikz-framework-diagrammer/SKILL.md`   |
+| 4  | [`scientific-poster-designer`](visualization/scientific-poster-designer/SKILL.md)   | A0 posters (841×1189mm), IMRAD layout, 1m readability.                  | `visualization/scientific-poster-designer/SKILL.md`  |
+| 5  | [`results-table-formatter`](visualization/results-table-formatter/SKILL.md)         | booktabs tables with multi-row headers and 95% CI columns.              | `visualization/results-table-formatter/SKILL.md`     |
+| 6  | [`infographic-summarizer`](visualization/infographic-summarizer/SKILL.md)           | Single-page infographics with visual hierarchy.                         | `visualization/infographic-summarizer/SKILL.md`      |
+| 7  | [`confusion-matrix-plotter`](visualization/confusion-matrix-plotter/SKILL.md)       | Plot confusion matrix with normalized + raw counts.                     | `visualization/confusion-matrix-plotter/SKILL.md`    |
+| 8  | [`roc-pr-curve-plotter`](visualization/roc-pr-curve-plotter/SKILL.md)               | ROC and PR curves with AUC and baseline references.                     | `visualization/roc-pr-curve-plotter/SKILL.md`        |
+| 9  | [`training-curve-visualizer`](visualization/training-curve-visualizer/SKILL.md)     | Plot train/val loss and accuracy over epochs.                           | `visualization/training-curve-visualizer/SKILL.md`   |
+| 10 | [`attention-map-visualizer`](visualization/attention-map-visualizer/SKILL.md)       | Visualize transformer attention weights as heatmaps.                    | `visualization/attention-map-visualizer/SKILL.md`    |
+| 11 | [`embedding-projector`](visualization/embedding-projector/SKILL.md)                 | Project high-dim embeddings via PCA/t-SNE/UMAP.                         | `visualization/embedding-projector/SKILL.md`         |
+| 12 | [`dashboard-builder`](visualization/dashboard-builder/SKILL.md)                     | Build interactive dashboards (Streamlit, Dash, Gradio).                 | `visualization/dashboard-builder/SKILL.md`           |
+| 13 | [`interactive-plot-builder`](visualization/interactive-plot-builder/SKILL.md)       | Interactive plots with Plotly/Bokeh/Holoviews.                          | `visualization/interactive-plot-builder/SKILL.md`    |
+| 14 | [`color-palette-selector`](visualization/color-palette-selector/SKILL.md)           | Select colorblind-friendly palettes (viridis, cividis, colorbrewer).    | `visualization/color-palette-selector/SKILL.md`      |
+| 15 | [`figure-caption-writer`](visualization/figure-caption-writer/SKILL.md)             | Write detailed captions: what / how / why.                              | `visualization/figure-caption-writer/SKILL.md`       |
 | 16 | [`multi-panel-figure-composer`](visualization/multi-panel-figure-composer/SKILL.md) | Compose multi-panel figures with subplots and shared axes.              | `visualization/multi-panel-figure-composer/SKILL.md` |
-| 17 | [`surface-plotter`](visualization/surface-plotter/SKILL.md)             | 3D surface plots with proper view angles and colorbars.                 | `visualization/surface-plotter/SKILL.md` |
-| 18 | [`network-graph-visualizer`](visualization/network-graph-visualizer/SKILL.md)    | Visualize network graphs with layout algorithms.                        | `visualization/network-graph-visualizer/SKILL.md` |
+| 17 | [`surface-plotter`](visualization/surface-plotter/SKILL.md)                         | 3D surface plots with proper view angles and colorbars.                 | `visualization/surface-plotter/SKILL.md`             |
+| 18 | [`network-graph-visualizer`](visualization/network-graph-visualizer/SKILL.md)       | Visualize network graphs with layout algorithms.                        | `visualization/network-graph-visualizer/SKILL.md`    |
 
 ### 📝 [`writing-citation/`](writing-citation/README.md) — BibTeX, Editing & Paraphrasing
 
 > Manage citations, draft abstracts, edit non-native English, paraphrase safely.
 
-| #  | Skill                            | One-Line Description                                                   | Link |
-|----|----------------------------------|------------------------------------------------------------------------|---|
-| 1  | [`bibtex-citation-manager`](writing-citation/bibtex-citation-manager/SKILL.md)        | Manage BibTeX: citekeys, dedup, field validation, every bibitem cited. | `writing-citation/bibtex-citation-manager/SKILL.md` |
-| 2  | [`structured-abstract-writer`](writing-citation/structured-abstract-writer/SKILL.md)     | Draft structured abstracts (Background/Methods/Results/Conclusion).    | `writing-citation/structured-abstract-writer/SKILL.md` |
-| 3  | [`imrad-thesis-writer`](writing-citation/imrad-thesis-writer/SKILL.md)            | Draft full IMRaD theses with non-redundant cross-references.           | `writing-citation/imrad-thesis-writer/SKILL.md` |
-| 4  | [`research-methodology-designer`](writing-citation/research-methodology-designer/SKILL.md)  | Design methodologies: study design, sampling, sample size, ethics.     | `writing-citation/research-methodology-designer/SKILL.md` |
-| 5  | [`english-academic-editor`](writing-citation/english-academic-editor/SKILL.md)        | Edit non-native English: articles, tense, hedging, register.           | `writing-citation/english-academic-editor/SKILL.md` |
-| 6  | [`plagiarism-paraphraser`](writing-citation/plagiarism-paraphraser/SKILL.md)         | Rewrite to avoid plagiarism while preserving meaning.                  | `writing-citation/plagiarism-paraphraser/SKILL.md` |
-| 7  | [`zotero-better-bibtex-bridge`](writing-citation/zotero-better-bibtex-bridge/SKILL.md)    | Bridge Zotero BetterBibTeX exports to LaTeX workflows.                 | `writing-citation/zotero-better-bibtex-bridge/SKILL.md` |
-| 8  | [`citation-style-converter`](writing-citation/citation-style-converter/SKILL.md)       | Convert between IEEE, APA, Chicago, Vancouver, MLA.                    | `writing-citation/citation-style-converter/SKILL.md` |
-| 9  | [`doi-verifier`](writing-citation/doi-verifier/SKILL.md)                   | Verify DOIs resolve to the claimed paper via crossref.org.             | `writing-citation/doi-verifier/SKILL.md` |
-| 10 | [`reference-list-formatter`](writing-citation/reference-list-formatter/SKILL.md)       | Format reference lists in any citation style.                          | `writing-citation/reference-list-formatter/SKILL.md` |
+| #  | Skill                                                                                        | One-Line Description                                                   | Link                                                       |
+|----|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------|
+| 1  | [`bibtex-citation-manager`](writing-citation/bibtex-citation-manager/SKILL.md)               | Manage BibTeX: citekeys, dedup, field validation, every bibitem cited. | `writing-citation/bibtex-citation-manager/SKILL.md`        |
+| 2  | [`structured-abstract-writer`](writing-citation/structured-abstract-writer/SKILL.md)         | Draft structured abstracts (Background/Methods/Results/Conclusion).    | `writing-citation/structured-abstract-writer/SKILL.md`     |
+| 3  | [`imrad-thesis-writer`](writing-citation/imrad-thesis-writer/SKILL.md)                       | Draft full IMRaD theses with non-redundant cross-references.           | `writing-citation/imrad-thesis-writer/SKILL.md`            |
+| 4  | [`research-methodology-designer`](writing-citation/research-methodology-designer/SKILL.md)   | Design methodologies: study design, sampling, sample size, ethics.     | `writing-citation/research-methodology-designer/SKILL.md`  |
+| 5  | [`english-academic-editor`](writing-citation/english-academic-editor/SKILL.md)               | Edit non-native English: articles, tense, hedging, register.           | `writing-citation/english-academic-editor/SKILL.md`        |
+| 6  | [`plagiarism-paraphraser`](writing-citation/plagiarism-paraphraser/SKILL.md)                 | Rewrite to avoid plagiarism while preserving meaning.                  | `writing-citation/plagiarism-paraphraser/SKILL.md`         |
+| 7  | [`zotero-better-bibtex-bridge`](writing-citation/zotero-better-bibtex-bridge/SKILL.md)       | Bridge Zotero BetterBibTeX exports to LaTeX workflows.                 | `writing-citation/zotero-better-bibtex-bridge/SKILL.md`    |
+| 8  | [`citation-style-converter`](writing-citation/citation-style-converter/SKILL.md)             | Convert between IEEE, APA, Chicago, Vancouver, MLA.                    | `writing-citation/citation-style-converter/SKILL.md`       |
+| 9  | [`doi-verifier`](writing-citation/doi-verifier/SKILL.md)                                     | Verify DOIs resolve to the claimed paper via crossref.org.             | `writing-citation/doi-verifier/SKILL.md`                   |
+| 10 | [`reference-list-formatter`](writing-citation/reference-list-formatter/SKILL.md)             | Format reference lists in any citation style.                          | `writing-citation/reference-list-formatter/SKILL.md`       |
 | 11 | [`annotated-bibliography-builder`](writing-citation/annotated-bibliography-builder/SKILL.md) | Build annotated bibliographies with summary and assessment.            | `writing-citation/annotated-bibliography-builder/SKILL.md` |
-| 12 | [`literature-matrix-builder`](writing-citation/literature-matrix-builder/SKILL.md)      | Build a literature matrix (paper × dimension) for synthesis.           | `writing-citation/literature-matrix-builder/SKILL.md` |
-| 13 | [`outline-to-prose-expander`](writing-citation/outline-to-prose-expander/SKILL.md)      | Expand a bullet outline into flowing academic prose.                   | `writing-citation/outline-to-prose-expander/SKILL.md` |
-| 14 | [`paragraph-transition-smoother`](writing-citation/paragraph-transition-smoother/SKILL.md)  | Smooth paragraph transitions with logical connectors.                  | `writing-citation/paragraph-transition-smoother/SKILL.md` |
-| 15 | [`tense-consistency-fixer`](writing-citation/tense-consistency-fixer/SKILL.md)        | Fix tense: past for methods/results, present for discussion.           | `writing-citation/tense-consistency-fixer/SKILL.md` |
-| 16 | [`hedging-language-balancer`](writing-citation/hedging-language-balancer/SKILL.md)      | Balance hedging (modal verbs, adverbs) to match evidence strength.     | `writing-citation/hedging-language-balancer/SKILL.md` |
-| 17 | [`cohesive-device-checker`](writing-citation/cohesive-device-checker/SKILL.md)        | Check cohesive devices: reference, conjunction, lexical.               | `writing-citation/cohesive-device-checker/SKILL.md` |
-| 18 | [`reading-level-adjuster`](writing-citation/reading-level-adjuster/SKILL.md)         | Adjust reading level to target grade (Flesch-Kincaid).                 | `writing-citation/reading-level-adjuster/SKILL.md` |
+| 12 | [`literature-matrix-builder`](writing-citation/literature-matrix-builder/SKILL.md)           | Build a literature matrix (paper × dimension) for synthesis.           | `writing-citation/literature-matrix-builder/SKILL.md`      |
+| 13 | [`outline-to-prose-expander`](writing-citation/outline-to-prose-expander/SKILL.md)           | Expand a bullet outline into flowing academic prose.                   | `writing-citation/outline-to-prose-expander/SKILL.md`      |
+| 14 | [`paragraph-transition-smoother`](writing-citation/paragraph-transition-smoother/SKILL.md)   | Smooth paragraph transitions with logical connectors.                  | `writing-citation/paragraph-transition-smoother/SKILL.md`  |
+| 15 | [`tense-consistency-fixer`](writing-citation/tense-consistency-fixer/SKILL.md)               | Fix tense: past for methods/results, present for discussion.           | `writing-citation/tense-consistency-fixer/SKILL.md`        |
+| 16 | [`hedging-language-balancer`](writing-citation/hedging-language-balancer/SKILL.md)           | Balance hedging (modal verbs, adverbs) to match evidence strength.     | `writing-citation/hedging-language-balancer/SKILL.md`      |
+| 17 | [`cohesive-device-checker`](writing-citation/cohesive-device-checker/SKILL.md)               | Check cohesive devices: reference, conjunction, lexical.               | `writing-citation/cohesive-device-checker/SKILL.md`        |
+| 18 | [`reading-level-adjuster`](writing-citation/reading-level-adjuster/SKILL.md)                 | Adjust reading level to target grade (Flesch-Kincaid).                 | `writing-citation/reading-level-adjuster/SKILL.md`         |
 
 ### 🤖 [`ai-text/`](ai-text/README.md) — Detect & Humanize AI Text
 
 > Detect AI-generated text, restore natural voice, verify citations, detect watermarks.
 
-| #  | Skill                             | One-Line Description                                          | Link |
-|----|-----------------------------------|---------------------------------------------------------------|---|
-| 1  | [`ai-text-detector`](ai-text/ai-text-detector/SKILL.md)                | Detect AI text using 6-category tells with S1-S4 severity.    | `ai-text/ai-text-detector/SKILL.md` |
-| 2  | [`ai-text-humanizer`](ai-text/ai-text-humanizer/SKILL.md)               | Rewrite AI text to restore natural voice, preserving facts.   | `ai-text/ai-text-humanizer/SKILL.md` |
-| 3  | [`perplexity-burstiness-scorer`](ai-text/perplexity-burstiness-scorer/SKILL.md)    | Compute perplexity and burstiness statistics for a text.      | `ai-text/perplexity-burstiness-scorer/SKILL.md` |
-| 4  | [`ai-tell-catalogue`](ai-text/ai-tell-catalogue/SKILL.md)               | Reference catalogue of 26 AI tells organized by category.     | `ai-text/ai-tell-catalogue/SKILL.md` |
-| 5  | [`severity-classifier`](ai-text/severity-classifier/SKILL.md)             | Classify detected tells into S1/S2/S3/S4 severity.            | `ai-text/severity-classifier/SKILL.md` |
-| 6  | [`voice-profile-matcher`](ai-text/voice-profile-matcher/SKILL.md)           | Match a target author voice profile (vocabulary, rhythm).     | `ai-text/voice-profile-matcher/SKILL.md` |
-| 7  | [`chatbot-residue-cleaner`](ai-text/chatbot-residue-cleaner/SKILL.md)         | Remove "I hope this helps", "Great question!" residue.        | `ai-text/chatbot-residue-cleaner/SKILL.md` |
-| 8  | [`inflation-stripper`](ai-text/inflation-stripper/SKILL.md)              | Remove inflated significance ("pivotal moment", "testament"). | `ai-text/inflation-stripper/SKILL.md` |
-| 9  | [`staging-tell-remover`](ai-text/staging-tell-remover/SKILL.md)            | Remove staging tells ("Not X but Y", one-line closers).       | `ai-text/staging-tell-remover/SKILL.md` |
-| 10 | [`rhythm-by-rule-fixer`](ai-text/rhythm-by-rule-fixer/SKILL.md)            | Fix forced triads, repeated openings, dashes-as-connectors.   | `ai-text/rhythm-by-rule-fixer/SKILL.md` |
-| 11 | [`formatting-by-rule-cleaner`](ai-text/formatting-by-rule-cleaner/SKILL.md)      | Clean decorative bold, title-case headings, curly quotes.     | `ai-text/formatting-by-rule-cleaner/SKILL.md` |
+| #  | Skill                                                                                 | One-Line Description                                          | Link                                               |
+|----|---------------------------------------------------------------------------------------|---------------------------------------------------------------|----------------------------------------------------|
+| 1  | [`ai-text-detector`](ai-text/ai-text-detector/SKILL.md)                               | Detect AI text using 6-category tells with S1-S4 severity.    | `ai-text/ai-text-detector/SKILL.md`                |
+| 2  | [`ai-text-humanizer`](ai-text/ai-text-humanizer/SKILL.md)                             | Rewrite AI text to restore natural voice, preserving facts.   | `ai-text/ai-text-humanizer/SKILL.md`               |
+| 3  | [`perplexity-burstiness-scorer`](ai-text/perplexity-burstiness-scorer/SKILL.md)       | Compute perplexity and burstiness statistics for a text.      | `ai-text/perplexity-burstiness-scorer/SKILL.md`    |
+| 4  | [`ai-tell-catalogue`](ai-text/ai-tell-catalogue/SKILL.md)                             | Reference catalogue of 26 AI tells organized by category.     | `ai-text/ai-tell-catalogue/SKILL.md`               |
+| 5  | [`severity-classifier`](ai-text/severity-classifier/SKILL.md)                         | Classify detected tells into S1/S2/S3/S4 severity.            | `ai-text/severity-classifier/SKILL.md`             |
+| 6  | [`voice-profile-matcher`](ai-text/voice-profile-matcher/SKILL.md)                     | Match a target author voice profile (vocabulary, rhythm).     | `ai-text/voice-profile-matcher/SKILL.md`           |
+| 7  | [`chatbot-residue-cleaner`](ai-text/chatbot-residue-cleaner/SKILL.md)                 | Remove "I hope this helps", "Great question!" residue.        | `ai-text/chatbot-residue-cleaner/SKILL.md`         |
+| 8  | [`inflation-stripper`](ai-text/inflation-stripper/SKILL.md)                           | Remove inflated significance ("pivotal moment", "testament"). | `ai-text/inflation-stripper/SKILL.md`              |
+| 9  | [`staging-tell-remover`](ai-text/staging-tell-remover/SKILL.md)                       | Remove staging tells ("Not X but Y", one-line closers).       | `ai-text/staging-tell-remover/SKILL.md`            |
+| 10 | [`rhythm-by-rule-fixer`](ai-text/rhythm-by-rule-fixer/SKILL.md)                       | Fix forced triads, repeated openings, dashes-as-connectors.   | `ai-text/rhythm-by-rule-fixer/SKILL.md`            |
+| 11 | [`formatting-by-rule-cleaner`](ai-text/formatting-by-rule-cleaner/SKILL.md)           | Clean decorative bold, title-case headings, curly quotes.     | `ai-text/formatting-by-rule-cleaner/SKILL.md`      |
 | 12 | [`citation-hallucination-detector`](ai-text/citation-hallucination-detector/SKILL.md) | Detect fake DOIs, phantom citations, fake outlets.            | `ai-text/citation-hallucination-detector/SKILL.md` |
-| 13 | [`grace-degradation-protocol`](ai-text/grace-degradation-protocol/SKILL.md)      | When a fact can't be verified, omit or `[Verify Source]`.     | `ai-text/grace-degradation-protocol/SKILL.md` |
-| 14 | [`ai-watermark-detector`](ai-text/ai-watermark-detector/SKILL.md)           | Detect LLM watermarks (Kirchenbauer et al. 2023).             | `ai-text/ai-watermark-detector/SKILL.md` |
-| 15 | [`multi-engine-verification`](ai-text/multi-engine-verification/SKILL.md)       | Cross-reference outputs across GPTZero, Originality.ai, etc.  | `ai-text/multi-engine-verification/SKILL.md` |
+| 13 | [`grace-degradation-protocol`](ai-text/grace-degradation-protocol/SKILL.md)           | When a fact can't be verified, omit or `[Verify Source]`.     | `ai-text/grace-degradation-protocol/SKILL.md`      |
+| 14 | [`ai-watermark-detector`](ai-text/ai-watermark-detector/SKILL.md)                     | Detect LLM watermarks (Kirchenbauer et al. 2023).             | `ai-text/ai-watermark-detector/SKILL.md`           |
+| 15 | [`multi-engine-verification`](ai-text/multi-engine-verification/SKILL.md)             | Cross-reference outputs across GPTZero, Originality.ai, etc.  | `ai-text/multi-engine-verification/SKILL.md`       |
 
 ### 🔍 [`ai-output-judgement/`](ai-output-judgement/README.md) — Judge & Verify AI Outputs
 
 > Evaluate AI outputs for factuality, hallucination, bias, safety, groundedness, faithfulness, and correctness. Build
 > evaluation harnesses.
 
-| #  | Skill                        | One-Line Description                                                                   | Link |
-|----|------------------------------|----------------------------------------------------------------------------------------|---|
-| 1  | [`factuality-checker`](ai-output-judgement/factuality-checker/SKILL.md)         | Verify factual claims in AI outputs against trusted sources (FActScore, SAFE).         | `ai-output-judgement/factuality-checker/SKILL.md` |
-| 2  | [`hallucination-detector`](ai-output-judgement/hallucination-detector/SKILL.md)     | Detect hallucinated content: fabricated entities, fake citations, invented statistics. | `ai-output-judgement/hallucination-detector/SKILL.md` |
-| 3  | [`llm-as-judge-evaluator`](ai-output-judgement/llm-as-judge-evaluator/SKILL.md)     | Implement LLM-as-judge with rubrics, bias mitigation, inter-judge agreement.           | `ai-output-judgement/llm-as-judge-evaluator/SKILL.md` |
-| 4  | [`response-quality-scorer`](ai-output-judgement/response-quality-scorer/SKILL.md)    | Score responses on helpfulness, completeness, relevance, clarity, depth (1-5).         | `ai-output-judgement/response-quality-scorer/SKILL.md` |
-| 5  | [`bias-auditor`](ai-output-judgement/bias-auditor/SKILL.md)               | Audit outputs for demographic/cognitive bias via counterfactual prompts.               | `ai-output-judgement/bias-auditor/SKILL.md` |
-| 6  | [`safety-classifier`](ai-output-judgement/safety-classifier/SKILL.md)          | Classify outputs for violence, hate, sexual, self-harm, illegal content.               | `ai-output-judgement/safety-classifier/SKILL.md` |
-| 7  | [`groundedness-verifier`](ai-output-judgement/groundedness-verifier/SKILL.md)      | Verify RAG outputs are grounded in retrieved context via NLI models.                   | `ai-output-judgement/groundedness-verifier/SKILL.md` |
-| 8  | [`consistency-checker`](ai-output-judgement/consistency-checker/SKILL.md)        | Check consistency across temperature, paraphrased inputs, multiple samples.            | `ai-output-judgement/consistency-checker/SKILL.md` |
-| 9  | [`faithfulness-scorer`](ai-output-judgement/faithfulness-scorer/SKILL.md)        | Score summarization/QA faithfulness to source (NLI, QAGS, SummaC).                     | `ai-output-judgement/faithfulness-scorer/SKILL.md` |
-| 10 | [`relevance-scorer`](ai-output-judgement/relevance-scorer/SKILL.md)           | Score relevance to query via semantic similarity and intent matching.                  | `ai-output-judgement/relevance-scorer/SKILL.md` |
-| 11 | [`coherence-fluency-scorer`](ai-output-judgement/coherence-fluency-scorer/SKILL.md)   | Score coherence, fluency, grammaticality via perplexity and LanguageTool.              | `ai-output-judgement/coherence-fluency-scorer/SKILL.md` |
-| 12 | [`pii-leak-detector`](ai-output-judgement/pii-leak-detector/SKILL.md)          | Detect PII leakage (emails, phones, SSNs, names) via Presidio + spaCy NER.             | `ai-output-judgement/pii-leak-detector/SKILL.md` |
-| 13 | [`prompt-injection-detector`](ai-output-judgement/prompt-injection-detector/SKILL.md)  | Detect direct and indirect prompt injection attacks.                                   | `ai-output-judgement/prompt-injection-detector/SKILL.md` |
-| 14 | [`alignment-evaluator`](ai-output-judgement/alignment-evaluator/SKILL.md)        | Evaluate alignment with HHH framework (Helpful, Honest, Harmless).                     | `ai-output-judgement/alignment-evaluator/SKILL.md` |
+| #  | Skill                                                                                   | One-Line Description                                                                   | Link                                                      |
+|----|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| 1  | [`factuality-checker`](ai-output-judgement/factuality-checker/SKILL.md)                 | Verify factual claims in AI outputs against trusted sources (FActScore, SAFE).         | `ai-output-judgement/factuality-checker/SKILL.md`         |
+| 2  | [`hallucination-detector`](ai-output-judgement/hallucination-detector/SKILL.md)         | Detect hallucinated content: fabricated entities, fake citations, invented statistics. | `ai-output-judgement/hallucination-detector/SKILL.md`     |
+| 3  | [`llm-as-judge-evaluator`](ai-output-judgement/llm-as-judge-evaluator/SKILL.md)         | Implement LLM-as-judge with rubrics, bias mitigation, inter-judge agreement.           | `ai-output-judgement/llm-as-judge-evaluator/SKILL.md`     |
+| 4  | [`response-quality-scorer`](ai-output-judgement/response-quality-scorer/SKILL.md)       | Score responses on helpfulness, completeness, relevance, clarity, depth (1-5).         | `ai-output-judgement/response-quality-scorer/SKILL.md`    |
+| 5  | [`bias-auditor`](ai-output-judgement/bias-auditor/SKILL.md)                             | Audit outputs for demographic/cognitive bias via counterfactual prompts.               | `ai-output-judgement/bias-auditor/SKILL.md`               |
+| 6  | [`safety-classifier`](ai-output-judgement/safety-classifier/SKILL.md)                   | Classify outputs for violence, hate, sexual, self-harm, illegal content.               | `ai-output-judgement/safety-classifier/SKILL.md`          |
+| 7  | [`groundedness-verifier`](ai-output-judgement/groundedness-verifier/SKILL.md)           | Verify RAG outputs are grounded in retrieved context via NLI models.                   | `ai-output-judgement/groundedness-verifier/SKILL.md`      |
+| 8  | [`consistency-checker`](ai-output-judgement/consistency-checker/SKILL.md)               | Check consistency across temperature, paraphrased inputs, multiple samples.            | `ai-output-judgement/consistency-checker/SKILL.md`        |
+| 9  | [`faithfulness-scorer`](ai-output-judgement/faithfulness-scorer/SKILL.md)               | Score summarization/QA faithfulness to source (NLI, QAGS, SummaC).                     | `ai-output-judgement/faithfulness-scorer/SKILL.md`        |
+| 10 | [`relevance-scorer`](ai-output-judgement/relevance-scorer/SKILL.md)                     | Score relevance to query via semantic similarity and intent matching.                  | `ai-output-judgement/relevance-scorer/SKILL.md`           |
+| 11 | [`coherence-fluency-scorer`](ai-output-judgement/coherence-fluency-scorer/SKILL.md)     | Score coherence, fluency, grammaticality via perplexity and LanguageTool.              | `ai-output-judgement/coherence-fluency-scorer/SKILL.md`   |
+| 12 | [`pii-leak-detector`](ai-output-judgement/pii-leak-detector/SKILL.md)                   | Detect PII leakage (emails, phones, SSNs, names) via Presidio + spaCy NER.             | `ai-output-judgement/pii-leak-detector/SKILL.md`          |
+| 13 | [`prompt-injection-detector`](ai-output-judgement/prompt-injection-detector/SKILL.md)   | Detect direct and indirect prompt injection attacks.                                   | `ai-output-judgement/prompt-injection-detector/SKILL.md`  |
+| 14 | [`alignment-evaluator`](ai-output-judgement/alignment-evaluator/SKILL.md)               | Evaluate alignment with HHH framework (Helpful, Honest, Harmless).                     | `ai-output-judgement/alignment-evaluator/SKILL.md`        |
 | 15 | [`reference-accuracy-checker`](ai-output-judgement/reference-accuracy-checker/SKILL.md) | Verify AI-generated references resolve to real papers (Crossref, Semantic Scholar).    | `ai-output-judgement/reference-accuracy-checker/SKILL.md` |
-| 16 | [`numeric-accuracy-verifier`](ai-output-judgement/numeric-accuracy-verifier/SKILL.md)  | Verify numeric computations, statistics, dates, quantities in outputs.                 | `ai-output-judgement/numeric-accuracy-verifier/SKILL.md` |
-| 17 | [`code-output-validator`](ai-output-judgement/code-output-validator/SKILL.md)      | Validate AI-generated code: syntax, execution, tests, spec match, security.            | `ai-output-judgement/code-output-validator/SKILL.md` |
+| 16 | [`numeric-accuracy-verifier`](ai-output-judgement/numeric-accuracy-verifier/SKILL.md)   | Verify numeric computations, statistics, dates, quantities in outputs.                 | `ai-output-judgement/numeric-accuracy-verifier/SKILL.md`  |
+| 17 | [`code-output-validator`](ai-output-judgement/code-output-validator/SKILL.md)           | Validate AI-generated code: syntax, execution, tests, spec match, security.            | `ai-output-judgement/code-output-validator/SKILL.md`      |
 | 18 | [`evaluation-harness-builder`](ai-output-judgement/evaluation-harness-builder/SKILL.md) | Build eval harnesses (lm-eval-harness, HELM, OpenAI Evals style).                      | `ai-output-judgement/evaluation-harness-builder/SKILL.md` |
 
 ### 🧰 [`project-tooling/`](project-tooling/README.md) — Packaging, Docker & CI/CD
 
 > Bundle, containerize, automate, test, document, and release research projects.
 
-| #  | Skill                         | One-Line Description                                                      | Link |
-|----|-------------------------------|---------------------------------------------------------------------------|---|
-| 1  | [`project-zip-packager`](project-tooling/project-zip-packager/SKILL.md)        | Bundle repo into zip excluding `*.zip`, `Datasets/`, `results/`, `.git/`. | `project-tooling/project-zip-packager/SKILL.md` |
-| 2  | [`requirements-pinner`](project-tooling/requirements-pinner/SKILL.md)         | Generate unversioned Requirements.txt or pinned requirements.lock.        | `project-tooling/requirements-pinner/SKILL.md` |
-| 3  | [`pyproject-toml-builder`](project-tooling/pyproject-toml-builder/SKILL.md)      | Build pyproject.toml with Poetry/PDM/setuptools config.                   | `project-tooling/pyproject-toml-builder/SKILL.md` |
-| 4  | [`docker-research-container`](project-tooling/docker-research-container/SKILL.md)   | Build Dockerfile for reproducible research (non-root, multi-stage).       | `project-tooling/docker-research-container/SKILL.md` |
-| 5  | [`github-actions-research-ci`](project-tooling/github-actions-research-ci/SKILL.md)  | Build GitHub Actions: install → lint → test → docs → docker push.         | `project-tooling/github-actions-research-ci/SKILL.md` |
-| 6  | [`pytest-scientific-suite`](project-tooling/pytest-scientific-suite/SKILL.md)     | Write pytest tests with fixtures, parametrize, deterministic seeds.       | `project-tooling/pytest-scientific-suite/SKILL.md` |
-| 7  | [`sphinx-docs-builder`](project-tooling/sphinx-docs-builder/SKILL.md)         | Build Sphinx/MkDocs docs with autodoc and tutorials.                      | `project-tooling/sphinx-docs-builder/SKILL.md` |
-| 8  | [`readme-generator`](project-tooling/readme-generator/SKILL.md)            | Generate README.md with hook, what/why, quick-start, real examples.       | `project-tooling/readme-generator/SKILL.md` |
+| #  | Skill                                                                                 | One-Line Description                                                      | Link                                                   |
+|----|---------------------------------------------------------------------------------------|---------------------------------------------------------------------------|--------------------------------------------------------|
+| 1  | [`project-zip-packager`](project-tooling/project-zip-packager/SKILL.md)               | Bundle repo into zip excluding `*.zip`, `Datasets/`, `results/`, `.git/`. | `project-tooling/project-zip-packager/SKILL.md`        |
+| 2  | [`requirements-pinner`](project-tooling/requirements-pinner/SKILL.md)                 | Generate unversioned Requirements.txt or pinned requirements.lock.        | `project-tooling/requirements-pinner/SKILL.md`         |
+| 3  | [`pyproject-toml-builder`](project-tooling/pyproject-toml-builder/SKILL.md)           | Build pyproject.toml with Poetry/PDM/setuptools config.                   | `project-tooling/pyproject-toml-builder/SKILL.md`      |
+| 4  | [`docker-research-container`](project-tooling/docker-research-container/SKILL.md)     | Build Dockerfile for reproducible research (non-root, multi-stage).       | `project-tooling/docker-research-container/SKILL.md`   |
+| 5  | [`github-actions-research-ci`](project-tooling/github-actions-research-ci/SKILL.md)   | Build GitHub Actions: install → lint → test → docs → docker push.         | `project-tooling/github-actions-research-ci/SKILL.md`  |
+| 6  | [`pytest-scientific-suite`](project-tooling/pytest-scientific-suite/SKILL.md)         | Write pytest tests with fixtures, parametrize, deterministic seeds.       | `project-tooling/pytest-scientific-suite/SKILL.md`     |
+| 7  | [`sphinx-docs-builder`](project-tooling/sphinx-docs-builder/SKILL.md)                 | Build Sphinx/MkDocs docs with autodoc and tutorials.                      | `project-tooling/sphinx-docs-builder/SKILL.md`         |
+| 8  | [`readme-generator`](project-tooling/readme-generator/SKILL.md)                       | Generate README.md with hook, what/why, quick-start, real examples.       | `project-tooling/readme-generator/SKILL.md`            |
 | 9  | [`jupyter-to-script-converter`](project-tooling/jupyter-to-script-converter/SKILL.md) | Convert .ipynb to clean .py with functions and `__main__`.                | `project-tooling/jupyter-to-script-converter/SKILL.md` |
-| 10 | [`gitignore-builder`](project-tooling/gitignore-builder/SKILL.md)           | Generate .gitignore for Python/Node/R/Data/IDE-specific patterns.         | `project-tooling/gitignore-builder/SKILL.md` |
-| 11 | [`license-selector`](project-tooling/license-selector/SKILL.md)            | Select MIT/Apache-2.0/GPL-3.0/AGPL/BSD based on use case.                 | `project-tooling/license-selector/SKILL.md` |
-| 12 | [`changelog-writer`](project-tooling/changelog-writer/SKILL.md)            | Write Keep-a-Changelog format entries with semver bumps.                  | `project-tooling/changelog-writer/SKILL.md` |
-| 13 | [`contribution-guide-builder`](project-tooling/contribution-guide-builder/SKILL.md)  | Build CONTRIBUTING.md with workflow, style, PR template.                  | `project-tooling/contribution-guide-builder/SKILL.md` |
-| 14 | [`code-of-conduct-generator`](project-tooling/code-of-conduct-generator/SKILL.md)   | Generate Contributor Covenant Code of Conduct.                            | `project-tooling/code-of-conduct-generator/SKILL.md` |
-| 15 | [`issue-template-builder`](project-tooling/issue-template-builder/SKILL.md)      | Build bug/feature/question issue templates with YAML frontmatter.         | `project-tooling/issue-template-builder/SKILL.md` |
-| 16 | [`pr-template-builder`](project-tooling/pr-template-builder/SKILL.md)         | Build PR template with checklist, summary, testing, breaking changes.     | `project-tooling/pr-template-builder/SKILL.md` |
-| 17 | [`environment-yaml-builder`](project-tooling/environment-yaml-builder/SKILL.md)    | Build environment.yml (conda) or Pipfile for reproducible envs.           | `project-tooling/environment-yaml-builder/SKILL.md` |
-| 18 | [`makefile-generator`](project-tooling/makefile-generator/SKILL.md)          | Generate Makefile with install/test/lint/docs/run/format targets.         | `project-tooling/makefile-generator/SKILL.md` |
-| 19 | [`pre-commit-hook-builder`](project-tooling/pre-commit-hook-builder/SKILL.md)     | Build .pre-commit-config.yaml with ruff, black, mypy, end-of-file.        | `project-tooling/pre-commit-hook-builder/SKILL.md` |
-| 20 | [`release-notes-generator`](project-tooling/release-notes-generator/SKILL.md)     | Generate release notes from git log since last tag.                       | `project-tooling/release-notes-generator/SKILL.md` |
+| 10 | [`gitignore-builder`](project-tooling/gitignore-builder/SKILL.md)                     | Generate .gitignore for Python/Node/R/Data/IDE-specific patterns.         | `project-tooling/gitignore-builder/SKILL.md`           |
+| 11 | [`license-selector`](project-tooling/license-selector/SKILL.md)                       | Select MIT/Apache-2.0/GPL-3.0/AGPL/BSD based on use case.                 | `project-tooling/license-selector/SKILL.md`            |
+| 12 | [`changelog-writer`](project-tooling/changelog-writer/SKILL.md)                       | Write Keep-a-Changelog format entries with semver bumps.                  | `project-tooling/changelog-writer/SKILL.md`            |
+| 13 | [`contribution-guide-builder`](project-tooling/contribution-guide-builder/SKILL.md)   | Build CONTRIBUTING.md with workflow, style, PR template.                  | `project-tooling/contribution-guide-builder/SKILL.md`  |
+| 14 | [`code-of-conduct-generator`](project-tooling/code-of-conduct-generator/SKILL.md)     | Generate Contributor Covenant Code of Conduct.                            | `project-tooling/code-of-conduct-generator/SKILL.md`   |
+| 15 | [`issue-template-builder`](project-tooling/issue-template-builder/SKILL.md)           | Build bug/feature/question issue templates with YAML frontmatter.         | `project-tooling/issue-template-builder/SKILL.md`      |
+| 16 | [`pr-template-builder`](project-tooling/pr-template-builder/SKILL.md)                 | Build PR template with checklist, summary, testing, breaking changes.     | `project-tooling/pr-template-builder/SKILL.md`         |
+| 17 | [`environment-yaml-builder`](project-tooling/environment-yaml-builder/SKILL.md)       | Build environment.yml (conda) or Pipfile for reproducible envs.           | `project-tooling/environment-yaml-builder/SKILL.md`    |
+| 18 | [`makefile-generator`](project-tooling/makefile-generator/SKILL.md)                   | Generate Makefile with install/test/lint/docs/run/format targets.         | `project-tooling/makefile-generator/SKILL.md`          |
+| 19 | [`pre-commit-hook-builder`](project-tooling/pre-commit-hook-builder/SKILL.md)         | Build .pre-commit-config.yaml with ruff, black, mypy, end-of-file.        | `project-tooling/pre-commit-hook-builder/SKILL.md`     |
+| 20 | [`release-notes-generator`](project-tooling/release-notes-generator/SKILL.md)         | Generate release notes from git log since last tag.                       | `project-tooling/release-notes-generator/SKILL.md`     |
 
 ## 🔗 Common Skill Chains
 
@@ -504,7 +504,8 @@ All scripts follow the repo's strict coding conventions. Install deps: `pip inst
 
 ### Skill CLI — Many Examples
 
-The `scripts/Skill.py` CLI is the primary interface for terminal-based skill discovery, validation, and inspection. Below are concrete examples covering every subcommand.
+The `scripts/Skill.py` CLI is the primary interface for terminal-based skill discovery, validation, and inspection.
+Below are concrete examples covering every subcommand.
 
 #### `list` — enumerate skills
 
@@ -865,6 +866,8 @@ The maestro now supports 4 advanced routing features (see `maestro/SKILL.md`):
 | **Fallback Chain**          | First skill's output incomplete → loads next-best match from top 3           |
 | **Skill Conflict Resolver** | Two skills seem to apply → 10-row decision tree picks the right one          |
 
+## 📚 Sources & References
+
 <details>
 <summary><strong>📚 Sources & References (click to expand)</strong></summary>
 
@@ -1026,7 +1029,6 @@ is reproduced verbatim — every rule is paraphrased in the author's own words.
 - Boettiger 2015 — Docker for reproducible research (ACM)
 - Wong 2011 — Colorblind palette (Nature Methods)
 
-
 </details>
 
 ## 📜 License
@@ -1090,6 +1092,8 @@ Parkinson's, AMD).
 - 👨‍🏫 Teaches BE 544 (AI Techniques in Digital Histopathology) and BE 645 (AI and Radiomics) at UofL, with all materials
   open-sourced on GitHub and YouTube
 - ✉️ Contact: hmbala01@louisville.edu · hossam.m.balaha@mans.edu.eg
+
+## ⚠️ Disclaimers
 
 <details>
 <summary><strong>⚠️ Disclaimers (click to expand)</strong></summary>
@@ -1225,6 +1229,8 @@ run such a skill:
 - The author has **no control** over third-party services and accepts no liability for their behavior, outages, data
   handling, or pricing changes.
 
+</details>
+
 ---
 
 <div align="center">
@@ -1234,6 +1240,3 @@ run such a skill:
 Built with rigor by **Hossam Magdy Balaha** · MIT License · 2026
 
 </div>
-
-
-</details>
