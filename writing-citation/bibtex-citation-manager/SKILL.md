@@ -22,33 +22,43 @@ language: en
 # BibTeX Citation Manager
 
 ## When To Use
-- You are handed a `.bib` file with inconsistent citekeys (e.g., `smith2021a`, `Smith_21`, `paper1`) and need to normalize them.
+
+- You are handed a `.bib` file with inconsistent citekeys (e.g., `smith2021a`, `Smith_21`, `paper1`) and need to
+  normalize them.
 - The same DOI appears under two different entries and must be merged without losing fields.
 - A LaTeX build reports "undefined references" or "multiply defined" citekeys.
 - The target venue requires IEEE numbered citation style `[1]` and you must reformat the bibliography.
 - A reviewer flagged missing required fields (volume, pages, year) on specific entries.
 
 ## Workflow
+
 1. Parse the input `.bib` file into structured entries (entry type, fields, citekey).
 2. Normalize field names to canonical BibTeX (e.g., `journal` not `journalname`; `pages` not `page-range`).
-3. Generate stable citekeys using the pattern `Author + Year + FirstContentWord` (e.g., `Wang2023Federated`); append `a`, `b`, `c` for same-author/same-year collisions.
-4. Detect duplicates by DOI, then by (title + first-author + year); merge fields giving priority to the entry with the most complete record.
-5. Validate required fields per entry type: `@article` needs author, title, journal, year, volume, pages; `@inproceedings` needs author, title, booktitle, year; `@book` needs author/editor, title, publisher, year.
-6. Cross-check that every `\bibitem{X}` in the bibliography is referenced by at least one `\cite{X}` (or variant `\citep`, `\citet`) in the `.tex` source.
+3. Generate stable citekeys using the pattern `Author + Year + FirstContentWord` (e.g., `Wang2023Federated`); append
+   `a`, `b`, `c` for same-author/same-year collisions.
+4. Detect duplicates by DOI, then by (title + first-author + year); merge fields giving priority to the entry with the
+   most complete record.
+5. Validate required fields per entry type: `@article` needs author, title, journal, year, volume, pages;
+   `@inproceedings` needs author, title, booktitle, year; `@book` needs author/editor, title, publisher, year.
+6. Cross-check that every `\bibitem{X}` in the bibliography is referenced by at least one `\cite{X}` (or variant
+   `\citep`, `\citet`) in the `.tex` source.
 7. Apply IEEE style transformation to each entry: `[N] A. B. Author, "Title," Journal, vol. X, no. Y, pp. Z–W, Year.`
 8. Emit a cleaned `.bib`, a report of merged/removed entries, and a list of orphan citekeys.
 
 ## Inputs
+
 - One or more `.bib` files.
 - Optionally the `.tex` manuscript to test cite-key usage.
 - Target style declaration (default: IEEE numbered).
 
 ## Outputs
+
 - `references_clean.bib` — normalized, deduplicated bibliography.
 - `citation_report.md` — table of actions taken per entry (kept, merged, renamed, dropped).
 - `ieee_style_bibliography.tex` — formatted `\begin{thebibliography}` block ready to paste.
 
 ## Key Rules
+
 - Citekeys must be ASCII, start with a letter, and contain no spaces.
 - Never drop a field during merge — union the fields, preferring the more complete source.
 - A DOI is the strongest duplicate signal; (title + first-author + year) is the fallback.
@@ -57,6 +67,7 @@ language: en
 - Preserve original citekeys in the report so the author can audit renames.
 
 ## Examples
+
 ```text
 Before:
 @article{paper1,
@@ -87,6 +98,8 @@ Validation report excerpt:
 ```
 
 ## References
-- LaTeX bibliography management overview: https://resources.latex-cloud-studio.com/learn/latex/bibliography/bibliography-management-bibtex
+
+- LaTeX bibliography management
+  overview: https://resources.latex-cloud-studio.com/learn/latex/bibliography/bibliography-management-bibtex
 - IEEE Editorial Style Manual (citation format reference).
 - `biblatex` package documentation for field-name normalization.

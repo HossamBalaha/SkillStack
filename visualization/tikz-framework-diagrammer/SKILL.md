@@ -22,6 +22,7 @@ language: en
 # TikZ Framework Diagrammer
 
 ## When To Use
+
 - Drawing a system architecture or data-flow pipeline for a paper.
 - Producing a workflow diagram that must scale to a column width.
 - Composing a multi-stage framework where each stage has sub-blocks.
@@ -29,6 +30,7 @@ language: en
 - Reusing the same diagram in slides, posters, and the manuscript.
 
 ## Workflow
+
 1. List every pipeline stage and the blocks inside each stage.
 2. Assign a short identifier per block (for example, `Conv2D, k=3`).
 3. Choose a subtle colour per stage from a perceptually uniform palette.
@@ -40,16 +42,19 @@ language: en
 9. Check that the compiled PDF uses the same font family as the body text.
 
 ## Inputs
+
 - A pipeline specification listing stages, blocks, and connections.
 - A colour palette mapping stage names to fills.
 - Optional caption text for the figure environment.
 
 ## Outputs
+
 - A `.tex` file containing a `tikzpicture` environment.
 - A compiled PDF preview for the manuscript.
 - A standalone `.tex` for reuse in slides or posters.
 
 ## Key Rules
+
 - Node labels must be concise identifiers, never dense math formulations.
 - Grouping boxes use SOLID lines; never dashed.
 - Every arrow uses explicit anchors (`.east`, `.west`, `.north`, `.south`).
@@ -58,6 +63,7 @@ language: en
 - Keep padding generous; never let boxes touch arrows or text.
 
 ## Examples
+
 ```latex
 % TikZ pipeline diagram with solid grouping boxes.
 \documentclass[tikz,border=2mm]{standalone}
@@ -90,4 +96,5 @@ language: en
 ```
 
 ## References
+
 - TikZ & PGF manual: https://ctan.org/pkg/pgf

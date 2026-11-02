@@ -25,19 +25,17 @@ CLI:
 
 from __future__ import annotations
 
+import click
 import json
 import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
-
-import click
 from rich.console import Console
 from rich.table import Table
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _SkillLib import EnsureDir, FindSkillByName, SkillsRoot
-
 
 # Shared rich console for every subcommand.
 console = Console()
@@ -151,10 +149,10 @@ def LogCommand(skill: str, inputFiles: tuple[str, ...], outputFiles: tuple[str, 
   permissionsUsed = ResolveSkillPermissions(skill)
   # Compose the audit entry using CamelCase dict keys.
   entry = {
-    "Timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-    "Skill": skill,
-    "InputFiles": list(inputFiles),
-    "OutputFiles": list(outputFiles),
+    "Timestamp"      : datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    "Skill"          : skill,
+    "InputFiles"     : list(inputFiles),
+    "OutputFiles"    : list(outputFiles),
     "PermissionsUsed": permissionsUsed,
   }
   # Append the entry to the JSONL log.

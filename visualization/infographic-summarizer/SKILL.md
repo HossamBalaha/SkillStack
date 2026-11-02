@@ -22,12 +22,14 @@ language: en
 # Infographic Summarizer
 
 ## When To Use
+
 - Compressing a multi-page report into a single-page visual summary.
 - Producing a briefing slide for executives or stakeholders.
 - Highlighting three to five key statistics from a dataset.
 - Building a shareable HTML or PNG infographic for social media.
 
 ## Workflow
+
 1. Read the source report and extract the headline message.
 2. Pull out three to five key statistics that anchor the message.
 3. Choose a layout: title block, key-stat row, and detail columns.
@@ -37,16 +39,19 @@ language: en
 7. Review readability at the intended display size and iterate.
 
 ## Inputs
+
 - Source document (markdown, HTML, or plain text).
 - Optional key statistics already chosen by the author.
 - Brand palette and an icon set (for example, an open-licence emoji set).
 
 ## Outputs
+
 - A standalone HTML infographic.
 - A PNG snapshot rendered by Playwright.
 - A print-friendly PDF when requested.
 
 ## Key Rules
+
 - Establish visual hierarchy: title, key stats, then details.
 - Limit the palette to three or four colours.
 - Every section is paired with an icon for fast scanning.
@@ -55,6 +60,7 @@ language: en
 - One page only; if it overflows, cut content, do not shrink fonts.
 
 ## Examples
+
 ```python
 # Render an HTML infographic to PNG via Playwright.
 from playwright.sync_api import sync_playwright
@@ -97,5 +103,6 @@ def SnapshotInfographic(htmlPath, pngPath):
 ```
 
 ## References
+
 - Playwright Python docs: https://playwright.dev/python/
 - Canva infographic layouts: https://www.canva.com/infographics/templates/

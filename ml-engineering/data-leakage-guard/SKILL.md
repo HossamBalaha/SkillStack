@@ -22,6 +22,7 @@ language: en
 # Data Leakage Guard
 
 ## When To Use
+
 - Fitting any transformer that computes global statistics (scaler, imputer, PCA, feature selector).
 - Partitioning data into train/validation/test where subjects may have multiple samples.
 - Auditing a preprocessing pipeline for leakage between splits.
@@ -29,6 +30,7 @@ language: en
 - Writing the methods section that documents the partitioning scheme.
 
 ## Workflow
+
 1. Identify the highest hierarchical grouping (subject, patient, time-series window).
 2. Partition at that level using `GroupShuffleSplit` or `StratifiedGroupKFold`.
 3. Fit every statistical transformer EXCLUSIVELY on the training split.
@@ -39,16 +41,19 @@ language: en
 8. Add a runtime assertion that no group appears in more than one split.
 
 ## Inputs
+
 - Features and labels arrays.
 - A `Groups` array identifying the hierarchical unit for each sample.
 - A `Configs/Config.yaml` with split ratios and seed.
 
 ## Outputs
+
 - Three isolated splits (train, validation, test).
 - Fitted transformers persisted via `joblib.dump`.
 - A `PartitionManifest.json` listing groups per split.
 
 ## Key Rules
+
 - Scalers, imputers, PCA, and feature selectors MUST be fit on training data only.
 - Partition at the highest hierarchical level — never at the sample level.
 - The same seed must drive shuffle, weight init, and partitioning.
@@ -57,6 +62,7 @@ language: en
 - Document the partitioning scheme so reviewers can reproduce it.
 
 ## Examples
+
 ```python
 # Partition at subject level, then fit scaler on training only.
 import json
@@ -95,5 +101,6 @@ def FitScalersOnTrainOnly(TrainFeatures, ValFeatures, TestFeatures):
 ```
 
 ## References
+
 - sklearn preprocessing: https://scikit-learn.org/stable/modules/preprocessing.html
 - GroupShuffleSplit: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html

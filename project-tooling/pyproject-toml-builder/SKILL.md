@@ -22,42 +22,52 @@ language: en
 # Pyproject Toml Builder
 
 ## When To Use
+
 - You are creating a new Python package and need a single config file for build, metadata, and tooling.
 - You want to consolidate `setup.py`, `setup.cfg`, `ruff.toml`, `mypy.ini`, and `pytest.ini` into one file.
 - You are migrating a project from `setup.py` to a modern PEP 621 layout.
 - You need optional-dependencies groups (dev / docs / test) for clean `pip install -e .[dev]`.
 
 ## Workflow
+
 1. Ask the caller for: package name, version, one-line description, author(s), license, and Python range.
-2. Pick a build backend: `setuptools` (default, widely compatible), `poetry-core` (if using Poetry), or `hatchling` (Hatch).
-3. Write the `[project]` table with `name`, `version`, `description`, `authors`, `requires-python`, `dependencies`, `license`.
+2. Pick a build backend: `setuptools` (default, widely compatible), `poetry-core` (if using Poetry), or `hatchling`
+   (Hatch).
+3. Write the `[project]` table with `name`, `version`, `description`, `authors`, `requires-python`, `dependencies`,
+   `license`.
 4. Add `[project.optional-dependencies]` groups: `dev`, `docs`, `test`.
 5. Add `[build-system]` with the chosen `requires` and `build-backend`.
 6. Add `[project.urls]` (homepage, repository, issues) if the caller has them.
-7. Add `[tool.ruff]` (line length, target version, select rules), `[tool.black]` (line length), `[tool.mypy]` (strict + plugin), `[tool.pytest.ini_options]` (testpaths, addopts).
+7. Add `[tool.ruff]` (line length, target version, select rules), `[tool.black]` (line length), `[tool.mypy]` (strict +
+   plugin), `[tool.pytest.ini_options]` (testpaths, addopts).
 8. Validate with `python -c "import tomllib; tomllib.load(open('pyproject.toml','rb'))"`.
 9. Commit and reference it from the README install instructions.
 
 ## Inputs
+
 - Package name, version, description, author list, license SPDX id.
 - Minimum Python version (e.g. `>=3.10`).
 - Runtime dependencies (unversioned or loosely pinned).
 - Choice of build backend.
 
 ## Outputs
+
 - `pyproject.toml` at the repo root.
 - Optional dev/docs/test extras that collaborators can install with `pip install -e .[dev]`.
 
 ## Key Rules
+
 - Always include `requires-python`; never leave the Python range ambiguous.
 - Use SPDX identifiers for the license (e.g. `MIT`, `Apache-2.0`, `GPL-3.0-or-later`).
 - Keep `dependencies` minimal — only what the package imports at runtime; move dev tools to optional groups.
 - Pin build backend explicitly so a clean checkout builds the same wheel every time.
-- Tool sections must agree: ruff and black share the same `line-length`; mypy `python_version` matches `requires-python` lower bound.
+- Tool sections must agree: ruff and black share the same `line-length`; mypy `python_version` matches `requires-python`
+  lower bound.
 - Never put secrets, tokens, or absolute paths in `pyproject.toml`.
 - Run `tomllib.load` (Python 3.11+) or `tomli` on older versions to validate before committing.
 
 ## Examples
+
 ```toml
 [project]
 name = "researchkit"
@@ -120,6 +130,7 @@ print(config["project"]["name"])
 ```
 
 ## References
+
 - PEP 621 — https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
 - Writing pyproject.toml — https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
 - Poetry pyproject — https://python-poetry.org/docs/pyproject/

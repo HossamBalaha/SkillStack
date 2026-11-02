@@ -22,12 +22,14 @@ language: en
 # Training Curve Visualizer
 
 ## When To Use
+
 - Monitoring training and validation loss across epochs.
 - Spotting the epoch where validation diverges (overfit onset).
 - Comparing optimisers or learning-rate schedules.
 - Producing a convergence figure for a manuscript appendix.
 
 ## Workflow
+
 1. Load epoch logs containing train/val loss and accuracy.
 2. Detect the best validation epoch by lowest loss or highest accuracy.
 3. Identify the overfit region where val loss rises while train loss falls.
@@ -37,15 +39,18 @@ language: en
 7. Save the figure as PDF for the paper.
 
 ## Inputs
+
 - A training log (CSV or JSON) with columns `epoch`, `trainLoss`, `valLoss`, `trainAcc`, `valAcc`.
 - Optional metric choice to drive the best-epoch selection.
 - A title string identifying the run.
 
 ## Outputs
+
 - A PDF figure with train/val curves and annotations.
 - A JSON file recording the best epoch and overfit onset.
 
 ## Key Rules
+
 - Use two y-axes when loss and accuracy have different scales.
 - Shade the overfit region where validation diverges from training.
 - Mark the best validation epoch with a vertical line.
@@ -54,6 +59,7 @@ language: en
 - Use `constrained_layout=True` so labels do not collide.
 
 ## Examples
+
 ```python
 # Plot training and validation curves with overfit shading.
 import numpy as np
@@ -97,4 +103,5 @@ def PlotTrainingCurve(log, outputPath):
 ```
 
 ## References
+
 - matplotlib twinx docs: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.twinx.html

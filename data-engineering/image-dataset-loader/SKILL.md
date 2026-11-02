@@ -22,6 +22,7 @@ language: en
 # Image Dataset Loader
 
 ## When To Use
+
 - An image classification or detection model needs a data pipeline.
 - The dataset is organised as `<split>/<class>/<image>.jpg` on disk.
 - Augmentations differ between TRAIN (heavy) and VAL/TEST (deterministic).
@@ -29,6 +30,7 @@ language: en
 - Normalization must use the same stats (e.g., ImageNet) at train and inference.
 
 ## Workflow
+
 1. Confirm the directory layout matches `<split>/<class>/<image>`.
 2. Build the class index from TRAIN subdirectory names and persist it as JSON.
 3. Compose TRAIN transforms: RandomResizedCrop, HorizontalFlip, ColorJitter, Normalize.
@@ -39,16 +41,19 @@ language: en
 8. Persist the normalization stats and class index alongside the model artifact.
 
 ## Inputs
+
 - Dataset root path containing `train/`, `val/`, `test/` subdirectories.
 - Image size, batch size, number of workers, prefetch factor.
 - Normalization stats (default: ImageNet mean and std).
 
 ## Outputs
+
 - TRAIN, VAL, TEST `DataLoader` instances.
 - A class index JSON (class name to integer) persisted with the model.
 - Normalization stats persisted so inference matches training.
 
 ## Key Rules
+
 - VAL and TEST transforms are deterministic; no random crops or flips.
 - Normalization stats are identical at train and inference.
 - `num_workers > 0` for training; `pin_memory=True` when GPU is used.
@@ -130,6 +135,7 @@ def PersistClassIndex(classIndex, path):
 ```
 
 ## References
+
 - torchvision datasets: https://pytorch.org/vision/stable/datasets.html
 - torchvision transforms: https://pytorch.org/vision/stable/transforms.html
 - albumentations: https://albumentations.ai

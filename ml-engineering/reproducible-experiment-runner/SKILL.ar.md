@@ -22,6 +22,7 @@ language: ar
 # مشغّل التجربة القابلة للتكرار
 
 ## متى تستخدم
+
 - بدء تشغيل تدريب يجب أن يكون قابلاً للتكرار عبر الآلات.
 - إعداد موضع الجهاز للنموذج الأساسي والوحدات الإضافيّة.
 - إعداد تسجيل مزدوج (وحدة تحكّم + ملفّ) وأشرطة تقدّم `tqdm`.
@@ -29,6 +30,7 @@ language: ar
 - عندما يذكر المستخدم تخطيط "Results/{DatasetName}_{Timestamp}".
 
 ## سير العمل
+
 1. اقرأ `Configs/Config.yaml` للبذرة واسم مجموعة البيانات ومستوى التسجيل.
 2. حلّ `device = torch.device("cuda" if torch.cuda.is_available() else "cpu")` مرة واحدة تماماً.
 3. ابذر `random` و`numpy` و`torch` وCUDA حتميّاً.
@@ -40,23 +42,28 @@ language: ar
 9. في النهاية، اكتب `Aggregated/Summary.json` بكلّ المقاييس.
 
 ## المُدخلات
+
 - `Configs/Config.yaml` يحوي على الأقلّ `Seed` و`DatasetName` و`Epochs` و`BatchSize`.
 - مصنع نموذج ومصنع مجموعة بيانات.
 
 ## المُخرجات
+
 - `Results/{DatasetName}_{Timestamp}/` يحوي أربعة مجلدات فرعيّة للتقسيم.
 - `Aggregated/execution.log` بتتبّع DEBUG كامل.
 - ملفّات JSON للمقاييس لكلّ تقسيم.
 
 ## القواعد الأساسية
+
 - يجب حلّ `device` مرة واحدة وإعادة استخدامه في كلّ مكان.
-- استدعِ `.to(device)` على كلّ `nn.Module` مستقلّ (خسارة، منظّم، معاير، فرع إضافيّ) — `model.to(device)` لا ينقل الوحدات الشقيقة.
+- استدعِ `.to(device)` على كلّ `nn.Module` مستقلّ (خسارة، منظّم، معاير، فرع إضافيّ) — `model.to(device)` لا ينقل الوحدات
+  الشقيقة.
 - مجلد واحد بختم زمنيّ لكلّ تجربة؛ لا تختم ملفّات فرديّة بالزمن.
 - تسجيل مزدوج: وحدة تحكّم INFO وملفّ DEBUG في وقت واحد.
 - أشرطة `tqdm` على العصور والدفعات والمحاولات.
 - أربعة مجلدات فرعيّة فقط: `Train/` و`Validation/` و`Test/` و`Aggregated/`.
 
 ## أمثلة
+
 ```python
 # Resolve device exactly once at startup.
 import torch
@@ -102,6 +109,7 @@ def TrainLoop(Model, TrainLoader, Optimizer, LossModule, Epochs):
 ```
 
 ## المراجع
+
 - دليل قابلية التكرار في PyTorch: https://pytorch.org/docs/stable/notes/randomness.html
 - توثيق tqdm: https://tqdm.github.io/
 - كتاب طبخ التسجيل في Python: https://docs.python.org/3/howto/logging-cookbook.html

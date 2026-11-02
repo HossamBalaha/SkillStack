@@ -22,6 +22,7 @@ language: en
 # Missing Data Imputer
 
 ## When To Use
+
 - A model cannot tolerate NaN values but the data has gaps.
 - Different columns need different strategies (median for skewed, mode for categorical).
 - Leakage must be prevented: imputation fits on TRAIN only, then transforms VAL and TEST.
@@ -29,6 +30,7 @@ language: en
 - An audit trail must record which columns were imputed and with what strategy.
 
 ## Workflow
+
 1. Profile missingness per column: count, fraction, missingness pattern (MCAR/MAR/MNAR).
 2. Choose a strategy per column: simple, KNN, iterative, or MICE.
 3. Fit the imputer on the TRAIN split only.
@@ -39,17 +41,20 @@ language: en
 8. Persist the imputer (joblib) so the same transforms apply at inference.
 
 ## Inputs
+
 - TRAIN, VAL, TEST DataFrames with the same schema.
 - Per-column imputation strategy map.
 - Optional hyperparameters for KNN/iterative/MICE (n_neighbors, max_iter, sample_posterior).
 
 ## Outputs
+
 - Imputed TRAIN, VAL, TEST DataFrames.
 - An imputation report (JSON) listing column, strategy, and fit statistics.
 - A fitted imputer artifact (joblib) for inference reuse.
 - Binary indicator columns flagging originally-missing values.
 
 ## Key Rules
+
 - Imputers fit on TRAIN only; VAL and TEST are transformed, never fit.
 - Every imputed column gets a paired `<col>_was_missing` indicator.
 - Categorical columns are mode-imputed; never mean-imputed.
@@ -109,6 +114,7 @@ def PersistPlan(plan, path):
 ```
 
 ## References
+
 - scikit-learn imputation: https://scikit-learn.org/stable/modules/impute.html
 - IterativeImputer: https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html
 - MICE (van Buuren): https://stefvanbuuren.name/fimd/

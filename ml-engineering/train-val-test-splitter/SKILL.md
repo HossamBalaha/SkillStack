@@ -22,12 +22,14 @@ language: en
 # Train Val Test Splitter
 
 ## When To Use
+
 - Partitioning a dataset into train/validation/test before training.
 - Ensuring subjects (or time-series windows) do not leak across splits.
 - Documenting which subjects landed in which split.
 - Producing a reproducible partitioning manifest for the methods section.
 
 ## Workflow
+
 1. Identify the grouping column (subject ID, patient ID, time-series window ID).
 2. Choose ratios (commonly 70/15/15 or 80/10/10) from `Configs/Config.yaml`.
 3. Use `GroupShuffleSplit` when stratification is not required; `StratifiedGroupKFold` otherwise.
@@ -38,14 +40,17 @@ language: en
 8. Write `Aggregated/PartitionManifest.json` listing groups per split.
 
 ## Inputs
+
 - Features, labels, and a `Groups` array.
 - Split ratios and seed from `Configs/Config.yaml`.
 
 ## Outputs
+
 - Three index arrays (`TrainIdx`, `ValIdx`, `TestIdx`).
 - `Aggregated/PartitionManifest.json` documenting the partitioning scheme.
 
 ## Key Rules
+
 - Stratify at the highest hierarchical level — never at the sample level.
 - Use `GroupShuffleSplit` or `StratifiedGroupKFold` when groups exist.
 - Same seed for splitter, weight init, and shuffling.
@@ -53,6 +58,7 @@ language: en
 - Document the partitioning scheme in the manifest and in the manuscript.
 
 ## Examples
+
 ```python
 # Two-stage GroupShuffleSplit producing train/val/test indices.
 import json
@@ -105,5 +111,7 @@ def WriteManifest(Groups, TrainIdx, ValIdx, TestIdx, OutputPath):
 ```
 
 ## References
+
 - GroupShuffleSplit: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html
-- StratifiedGroupKFold: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html
+-
+StratifiedGroupKFold: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html

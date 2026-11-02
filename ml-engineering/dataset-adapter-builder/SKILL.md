@@ -22,12 +22,14 @@ language: en
 # Dataset Adapter Builder
 
 ## When To Use
+
 - Adding a new dataset to an existing training pipeline.
 - When the user reports that a dataset directory is missing or empty.
 - Pre-converting pandas splits to numpy arrays to avoid per-batch overhead.
 - Implementing the `--datasets` CLI filter to skip unavailable datasets.
 
 ## Workflow
+
 1. Resolve the expected dataset path from `Configs/Config.yaml`.
 2. List the expected files for this dataset (e.g. images, CSV shards).
 3. If the directory is empty or files are missing, raise `FileNotFoundError` with 4 actionable suggestions.
@@ -37,14 +39,17 @@ language: en
 7. Expose a `DatasetAdapter` interface with `LoadTrain`, `LoadValidation`, `LoadTest`.
 
 ## Inputs
+
 - `Configs/Config.yaml` with `Dataset.Path` and `Dataset.ExpectedFiles`.
 - An optional `--datasets` CLI filter list.
 
 ## Outputs
+
 - A `DatasetAdapter` instance exposing numpy-backed splits.
 - A clear `FileNotFoundError` with remediation steps when files are absent.
 
 ## Key Rules
+
 - Check that input directory contains matching files BEFORE processing.
 - On empty input, raise `FileNotFoundError` listing 4 actionable suggestions.
 - Pre-convert pandas splits to numpy once; never slice pandas DataFrames per batch.
@@ -52,6 +57,7 @@ language: en
 - All public methods return numpy arrays, not pandas objects.
 
 ## Examples
+
 ```python
 # Defensive dataset adapter with pre-conversion to numpy.
 import os
@@ -123,5 +129,6 @@ class DatasetAdapter:
 ```
 
 ## References
+
 - pandas to_numpy: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_numpy.html
 - Python argparse for `--datasets` filter: https://docs.python.org/3/library/argparse.html

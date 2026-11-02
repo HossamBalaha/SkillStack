@@ -22,12 +22,14 @@ language: en
 # Code Of Conduct Generator
 
 ## When To Use
+
 - You are opening a repo to public contributors and need a code of conduct.
 - An existing `CODE_OF_CONDUCT.md` references an outdated Contributor Covenant version.
 - A funding body or venue requires a code of conduct as part of submission.
 - You need to point contributors at a clear enforcement contact.
 
 ## Workflow
+
 1. Confirm the latest stable Contributor Covenant version (currently 2.1).
 2. Ask the caller for the enforcement contact email (e.g. `conduct@example.org`).
 3. Emit the canonical Contributor Covenant text with the contact placeholder filled in.
@@ -38,16 +40,19 @@ language: en
 8. Re-verify the version pin if a new Contributor Covenant release ships.
 
 ## Inputs
+
 - Enforcement contact email (mandatory).
 - Optional: a list of maintainers who handle reports.
 - Optional: project-specific additions (e.g. an offline reporting address for events).
 
 ## Outputs
+
 - `CODE_OF_CONDUCT.md` at the repo root.
 - A README link to it.
 - An updated `CONTRIBUTING.md` that references the code of conduct.
 
 ## Key Rules
+
 - Use the canonical Contributor Covenant text verbatim — do not paraphrase its core pledges.
 - The enforcement contact MUST be a real, monitored address; never a placeholder like `you@example.com`.
 - Pin the version explicitly at the top (`Contributor Covenant Code of Conduct v2.1`) so audits are unambiguous.
@@ -56,6 +61,7 @@ language: en
 - If the project hosts in-person events, add the event-specific reporting path.
 
 ## Examples
+
 `CODE_OF_CONDUCT.md` (excerpt):
 
 ```markdown
@@ -119,6 +125,8 @@ This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.
 ```
 
 ## References
+
 - Contributor Covenant — https://www.contributor-covenant.org
 - Contributor Covenant v2.1 text — https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
-- GitHub community code of conduct docs — https://docs.github.com/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project
+- GitHub community code of conduct
+  docs — https://docs.github.com/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project

@@ -22,6 +22,7 @@ language: en
 # Reproducible Experiment Runner
 
 ## When To Use
+
 - Starting a training run that must be reproducible across machines.
 - Configuring device placement for primary model AND auxiliary modules.
 - Setting up dual logging (console + file) and `tqdm` progress bars.
@@ -29,6 +30,7 @@ language: en
 - When the user mentions "Results/{DatasetName}_{Timestamp}" layout.
 
 ## Workflow
+
 1. Read `Configs/Config.yaml` for seed, dataset name, and logging level.
 2. Resolve `device = torch.device("cuda" if torch.cuda.is_available() else "cpu")` exactly once.
 3. Seed `random`, `numpy`, `torch`, and CUDA deterministically.
@@ -40,23 +42,28 @@ language: en
 9. At the end, write an `Aggregated/Summary.json` with all metrics.
 
 ## Inputs
+
 - `Configs/Config.yaml` with at least `Seed`, `DatasetName`, `Epochs`, `BatchSize`.
 - A model factory and a dataset factory.
 
 ## Outputs
+
 - `Results/{DatasetName}_{Timestamp}/` containing four split subfolders.
 - `Aggregated/execution.log` with full DEBUG trace.
 - Per-split metrics JSON files.
 
 ## Key Rules
+
 - `device` must be resolved ONCE and reused everywhere.
-- Call `.to(device)` on every standalone `nn.Module` (loss, regularizer, calibrator, auxiliary branch) — `model.to(device)` does NOT move sibling modules.
+- Call `.to(device)` on every standalone `nn.Module` (loss, regularizer, calibrator, auxiliary branch) —
+  `model.to(device)` does NOT move sibling modules.
 - One timestamped folder per experiment; do NOT timestamp individual files.
 - Dual logging: console INFO and file DEBUG simultaneously.
 - `tqdm` bars on epochs, batches, and trials.
 - Four subfolders only: `Train/`, `Validation/`, `Test/`, `Aggregated/`.
 
 ## Examples
+
 ```python
 # Resolve device exactly once at startup.
 import torch
@@ -102,6 +109,7 @@ def TrainLoop(Model, TrainLoader, Optimizer, LossModule, Epochs):
 ```
 
 ## References
+
 - PyTorch reproducibility guide: https://pytorch.org/docs/stable/notes/randomness.html
 - tqdm documentation: https://tqdm.github.io/
 - Python logging cookbook: https://docs.python.org/3/howto/logging-cookbook.html

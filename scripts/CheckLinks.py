@@ -15,11 +15,10 @@ CLI:
 from __future__ import annotations
 
 import argparse
+import requests
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-
-import requests
 from rich.console import Console
 from rich.table import Table
 
@@ -31,7 +30,6 @@ from _SkillLib import (
   RelativeToSkills,
   SkillsRoot,
 )
-
 
 # Number of HTTP attempts per URL.
 MaxRetries = 3

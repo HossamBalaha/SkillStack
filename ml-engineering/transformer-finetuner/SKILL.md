@@ -23,16 +23,19 @@ language: en
 # Transformer Finetuner
 
 ## When To Use
+
 - Fine-tuning a pretrained LM (BERT, RoBERTa, T5, LLaMA) on a downstream task.
 - Running parameter-efficient fine-tuning with LoRA / PEFT.
 - Configuring `TrainingArguments` (batch size, learning rate, warmup, weight decay, fp16/bf16).
 - Monitoring train/validation gap for overfitting diagnostics.
 
 ## Workflow
+
 1. Load the pretrained tokenizer and model from `transformers.AutoModelForSequenceClassification`.
 2. Tokenize the dataset with `tokenizer(text, truncation=True, padding="max_length")`.
 3. Convert to a `datasets.Dataset` and split into train/validation/test.
-4. Build `TrainingArguments` with per_device_train_batch_size, learning_rate, num_train_epochs, warmup_ratio, weight_decay, eval_strategy, save_strategy, fp16/bf16.
+4. Build `TrainingArguments` with per_device_train_batch_size, learning_rate, num_train_epochs, warmup_ratio,
+   weight_decay, eval_strategy, save_strategy, fp16/bf16.
 5. Define `compute_metrics(eval_pred)` returning accuracy, F1, AUC.
 6. Instantiate `Trainer(model, args, train_dataset, eval_dataset, compute_metrics)`.
 7. Optionally attach a `peft.LoraConfig` for parameter-efficient fine-tuning.
@@ -41,16 +44,19 @@ language: en
 10. Save the fine-tuned model and tokenizer to disk.
 
 ## Inputs
+
 - A Hugging Face model identifier (e.g. `bert-base-uncased`).
 - A labeled text dataset (CSV, JSON, or `datasets.Dataset`).
 - `Configs/Config.yaml` with training hyperparameters.
 
 ## Outputs
+
 - Fine-tuned model + tokenizer saved to `Results/{DatasetName}_{Timestamp}/Train/`.
 - Trainer log history saved as CSV.
 - Evaluation metrics JSON.
 
 ## Key Rules
+
 - Use `peft` library for LoRA / PEFT when full fine-tuning is too expensive.
 - Monitor train vs validation loss gap to detect overfitting.
 - Use `bf16=True` on Ampere+ GPUs; fall back to `fp16=True` otherwise.
@@ -58,6 +64,7 @@ language: en
 - Reference only real HuggingFace docs at https://huggingface.co/docs/transformers.
 
 ## Examples
+
 ```python
 # Fine-tune BERT with optional LoRA.
 from transformers import (
@@ -131,6 +138,8 @@ def BuildTrainer(Model, Tokenizer, TrainDataset, EvalDataset, Config, OutputDir)
 ```
 
 ## References
+
 - Hugging Face Transformers docs: https://huggingface.co/docs/transformers
 - PEFT library: https://huggingface.co/docs/peft
-- TrainingArguments reference: https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments
+- TrainingArguments
+  reference: https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments

@@ -59,8 +59,7 @@ appointed representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-**hmbala01@louisville.edu**.
+reported to the community leaders responsible for enforcement at **h3ossam@gmail.com**.
 
 All complaints will be reviewed and investigated promptly and fairly.
 

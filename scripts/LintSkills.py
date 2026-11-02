@@ -28,7 +28,6 @@ import argparse
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
@@ -36,7 +35,6 @@ from rich.text import Text
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _SkillLib import (
-  BannedMarkers,
   LoadSkillMd,
   MaxLineCount,
   MinLineCount,
@@ -119,8 +117,6 @@ def StripCodeBlocks(text: str) -> str:
   return inlineStripped
 
 
-
-
 def LintOne(doc: SkillDoc) -> list[Violation]:
   """
   Run all linter checks against a single parsed skill.
@@ -132,6 +128,7 @@ def LintOne(doc: SkillDoc) -> list[Violation]:
     list[Violation]: All violations found for this skill.
   """
   violations: list[Violation] = []
+
   # Helper to append a violation with consistent metadata.
   def Add(rule: str, detail: str) -> None:
     violations.append(Violation(
@@ -141,6 +138,7 @@ def LintOne(doc: SkillDoc) -> list[Violation]:
       Rule=rule,
       Detail=detail,
     ))
+
   # Surface any parse error from the loader before semantic checks.
   if (doc.ParseError):
     Add("frontmatter.parse", doc.ParseError)
@@ -175,13 +173,13 @@ def LintOne(doc: SkillDoc) -> list[Violation]:
   import re
   # Define marker patterns that match actual task markers, not prose mentions.
   markerPatterns = [
-    (r"\bTODO\b\s*:", "TODO"),       # TODO: (with colon)
-    (r"//\s*TODO\b", "TODO"),        # // TODO (code comment)
-    (r"#\s*TODO\b", "TODO"),         # # TODO (hash comment)
-    (r"\bFIXME\b\s*:", "FIXME"),     # FIXME: (with colon)
-    (r"//\s*FIXME\b", "FIXME"),      # // FIXME (code comment)
-    (r"#\s*FIXME\b", "FIXME"),       # # FIXME (hash comment)
-    (r"\bXXX\b(?!\w)", "XXX"),       # XXX (standalone, not part of XXXXXXX)
+    (r"\bTODO\b\s*:", "TODO"),  # TODO: (with colon)
+    (r"//\s*TODO\b", "TODO"),  # // TODO (code comment)
+    (r"#\s*TODO\b", "TODO"),  # # TODO (hash comment)
+    (r"\bFIXME\b\s*:", "FIXME"),  # FIXME: (with colon)
+    (r"//\s*FIXME\b", "FIXME"),  # // FIXME (code comment)
+    (r"#\s*FIXME\b", "FIXME"),  # # FIXME (hash comment)
+    (r"\bXXX\b(?!\w)", "XXX"),  # XXX (standalone, not part of XXXXXXX)
   ]
   for pattern, marker in markerPatterns:
     if (re.search(pattern, strippedText)):

@@ -22,15 +22,18 @@ language: en
 # Planning Note Logger
 
 ## When To Use
+
 - A deliverable is being shipped with known gaps in data or assumptions.
 - Silent omissions have occurred in the body and the user must be informed.
 - A task is partially complete pending user input (paths, parameters, citations, files).
 - The agent must surface residual unknowns without breaking the body's narrative.
 
 ## Workflow
+
 1. While completing the deliverable, maintain an internal list of every missing input and every assumption made.
 2. Once the body is finalized, draft a "Planning Note" section.
-3. For each missing item, state: (a) what specifically is missing, (b) what assumption (if any) was made in its place, (c) what the user must provide to complete the work.
+3. For each missing item, state: (a) what specifically is missing, (b) what assumption (if any) was made in its place,
+   (c) what the user must provide to complete the work.
 4. Order the items by priority: blocking items first, optional refinements second.
 5. Keep each entry to one or two sentences. Use a flat list, not nested prose.
 6. Append the Planning Note at the very end of the deliverable, after the conclusion or final section.
@@ -39,14 +42,18 @@ language: en
 9. Deliver the full document with the appended note.
 
 ## Inputs
+
 - The deliverable body.
 - The internal log of missing data and assumptions accumulated during execution.
 - Optional priority labels (blocking / optional).
 
 ## Outputs
-- A "Planning Note" section appended at the very end of the deliverable, with three columns of information per item: missing, assumption, requested user input.
+
+- A "Planning Note" section appended at the very end of the deliverable, with three columns of information per item:
+  missing, assumption, requested user input.
 
 ## Key Rules
+
 - The Planning Note is ALWAYS at the very end of the deliverable.
 - Each entry states what is missing, what was assumed, and what the user must provide.
 - Tone is professional and concise — no apologies, no filler.
@@ -58,6 +65,7 @@ language: en
 ## Examples
 
 Planning Note appended to a deliverable:
+
 ```
 ## Planning Note
 
@@ -79,6 +87,7 @@ Requested user input (in priority order):
 ```
 
 Empty Planning Note (when nothing is missing):
+
 ```
 ## Planning Note
 
@@ -86,6 +95,7 @@ No missing data. No assumptions beyond those stated inline.
 ```
 
 ## References
+
 - The "decision log" pattern from engineering documentation.
 - Project-management conventions on assumption registers.
 - Academic peer-review norms on residual unknowns.

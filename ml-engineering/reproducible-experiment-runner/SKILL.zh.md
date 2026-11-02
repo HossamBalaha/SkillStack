@@ -22,6 +22,7 @@ language: zh
 # 可复现实验运行器
 
 ## 何时使用
+
 - 启动必须在跨机器上可复现的训练运行。
 - 为主模型**以及**辅助模块配置设备放置。
 - 设置双重日志（控制台 + 文件）和 `tqdm` 进度条。
@@ -29,6 +30,7 @@ language: zh
 - 当用户提到 `Results/{DatasetName}_{Timestamp}` 布局时。
 
 ## 工作流程
+
 1. 读取 `Configs/Config.yaml` 获取随机种子、数据集名称和日志级别。
 2. 恰好解析一次 `device = torch.device("cuda" if torch.cuda.is_available() else "cpu")`。
 3. 以确定性方式为 `random`、`numpy`、`torch` 和 CUDA 播种。
@@ -40,15 +42,18 @@ language: zh
 9. 在结束时写入 `Aggregated/Summary.json`，包含所有指标。
 
 ## 输入
+
 - `Configs/Config.yaml`，至少包含 `Seed`、`DatasetName`、`Epochs`、`BatchSize`。
 - 一个模型工厂和一个数据集工厂。
 
 ## 输出
+
 - `Results/{DatasetName}_{Timestamp}/`，包含四个划分子文件夹。
 - `Aggregated/execution.log`，含完整 DEBUG 跟踪。
 - 每个划分的指标 JSON 文件。
 
 ## 核心规则
+
 - `device` 必须解析**一次**并在各处复用。
 - 对每个独立 `nn.Module`（损失、正则化器、校准器、辅助分支）调用 `.to(device)` —— `model.to(device)` 不会移动兄弟模块。
 - 每个实验一个带时间戳的文件夹；**不要**对单个文件加时间戳。
@@ -57,6 +62,7 @@ language: zh
 - 仅四个子文件夹：`Train/`、`Validation/`、`Test/`、`Aggregated/`。
 
 ## 示例
+
 ```python
 # Resolve device exactly once at startup.
 import torch
@@ -102,6 +108,7 @@ def TrainLoop(Model, TrainLoader, Optimizer, LossModule, Epochs):
 ```
 
 ## 参考资料
+
 - PyTorch 可复现性指南：https://pytorch.org/docs/stable/notes/randomness.html
 - tqdm 文档：https://tqdm.github.io/
 - Python 日志手册：https://docs.python.org/3/howto/logging-cookbook.html

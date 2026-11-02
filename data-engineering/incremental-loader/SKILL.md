@@ -22,6 +22,7 @@ language: en
 # Incremental Loader
 
 ## When To Use
+
 - Source tables are large and a full snapshot per run is too expensive.
 - Late-arriving records must be merged into the target without duplicating rows.
 - The pipeline must be re-runnable: a retry must converge to the same final state.
@@ -29,6 +30,7 @@ language: en
 - You are implementing CDC (Change Data Capture) or warehouse MERGE/UPSERT.
 
 ## Workflow
+
 1. Pick the watermark column: monotonic, populated on every update, indexed on source.
 2. Read the previous watermark from the JSON state file (default to epoch on first run).
 3. Query the source for rows with `watermark > previousWatermark` and `<= runWindowEnd`.
@@ -41,17 +43,20 @@ language: en
 10. Backfill by overriding the watermark window and running the same code.
 
 ## Inputs
+
 - Source connection spec plus watermark column and primary key.
 - Target connection spec plus the MERGE/UPSERT capability check.
 - State file path storing the last successful watermark per table.
 - Run window: start, end, and batch size for chunked reads.
 
 ## Outputs
+
 - Updated target table with new and changed rows merged.
 - Updated JSON state file with the new high-watermark.
 - A load report (JSON) summarising inserts, updates, late arrivals, and skips.
 
 ## Key Rules
+
 - The watermark is only advanced after the MERGE transaction commits.
 - Re-running the same window is idempotent: target converges to the same final state.
 - Late-arriving rows are merged by primary key, never dropped.
@@ -108,6 +113,7 @@ def DedupByKey(rows, primaryKey):
 ```
 
 ## References
+
 - Change Data Capture patterns: https://en.wikipedia.org/wiki/Change_data_capture
 - Snowflake MERGE: https://docs.snowflake.com/en/sql-reference/sql/merge
 - BigQuery MERGE: https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-syntax#merge

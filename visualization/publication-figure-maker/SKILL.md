@@ -22,12 +22,14 @@ language: en
 # Publication Figure Maker
 
 ## When To Use
+
 - Generating a final figure for a journal submission (Nature, Science, PRL, IEEE, NeurIPS camera-ready).
 - Matching a strict column width in millimetres and avoiding LaTeX-side resizing.
 - Mixing vector (PDF/EPS) and raster (PNG) output formats in one pipeline.
 - Ensuring font sizes survive the editorial typesetting pipeline.
 
 ## Workflow
+
 1. Determine the target journal and its column width in millimetres.
 2. Convert millimetres to inches using `ONE_MM = 1 / 25.4`.
 3. Pick the minimum font size per journal policy (Nature 7pt, PRL 8pt).
@@ -39,15 +41,18 @@ language: en
 9. Verify that the saved file is NOT resized downstream by LaTeX.
 
 ## Inputs
+
 - Data arrays (numpy/pandas) and metadata (axis labels, units, legends).
 - Journal name plus column specification (single or double column).
 - Optional style sheet path (SciencePlots `.mplstyle`).
 
 ## Outputs
+
 - One standalone figure file (PDF/EPS/PNG) per figure.
 - A small JSON manifest recording journal, width, DPI, and font size for reproducibility.
 
 ## Key Rules
+
 - ONE figure file per figure; never compose multiple figures with `\includegraphics`.
 - Never let LaTeX resize via `\includegraphics[width=\textwidth]`; size in matplotlib instead.
 - Use vector formats (PDF/EPS) for line plots and raster (PNG 300-600 DPI) for images/heatmaps.
@@ -56,6 +61,7 @@ language: en
 - Legends must sit outside the axes via `bbox_to_anchor`.
 
 ## Examples
+
 ```python
 # Publication figure sized to a PRL double column.
 import matplotlib
@@ -89,5 +95,6 @@ def MakeJournalFigure(xData, yData, outputPath):
 ```
 
 ## References
+
 - SciencePlots matplotlib stylesheets: https://github.com/garrettj403/SciencePlots
 - Matplotlib paper tips: https://allanchain.github.io/blog/post/mpl-paper-tips

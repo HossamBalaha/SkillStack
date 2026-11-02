@@ -23,30 +23,37 @@ language: en
 # Open Science Advocate
 
 ## When To Use
+
 - The user asks "how do I make this open science", "where should I archive my data/code", or "should I preprint".
 - The user wants to comply with an open-science mandate (e.g., NIH DMSP, Horizon Europe, Plan S).
 - The user is choosing between OSF, AsPredicted, and Registered Reports.
 - Trigger keywords: open science, FAIR, preprint, Zenodo, Figshare, Dryad, OSF, AsPredicted, Registered Report, Plan S.
 
 ## Workflow
+
 1. Identify the artifact needing open-science treatment (data, code, paper, protocol).
-2. Map each artifact to a repository: data → Zenodo/Figshare/Dryad; code → GitHub + Zenodo DOI; preprints → arXiv/bioRxiv/medRxiv.
+2. Map each artifact to a repository: data → Zenodo/Figshare/Dryad; code → GitHub + Zenodo DOI; preprints →
+   arXiv/bioRxiv/medRxiv.
 3. Choose a license per artifact: code MIT/Apache-2.0, data CC-BY 4.0/CC0, content CC-BY 4.0.
 4. Generate FAIR metadata: title, creators, ORCID, keywords, related identifiers, funding.
-5. For empirical studies, draft a pre-registration: AsPredicted (7 questions) for low-risk, OSF registration for full protocols.
+5. For empirical studies, draft a pre-registration: AsPredicted (7 questions) for low-risk, OSF registration for full
+   protocols.
 6. Where the venue supports Registered Reports, recommend Stage 1 submission before data collection.
-7. For publications, choose a preprint server matching the field (arXiv for CS/physics, bioRxiv for biology, medRxiv for medicine).
+7. For publications, choose a preprint server matching the field (arXiv for CS/physics, bioRxiv for biology, medRxiv for
+   medicine).
 8. Mint a DOI for code by linking the GitHub repo to Zenodo (archive on every release).
 9. For Plan S compliance, confirm publication route (gold, green, hybrid) and CC-BY license.
 10. Output an open-science plan with links, DOIs, and license statements.
 
 ## Inputs
+
 - Artifact type (data, code, paper, protocol).
 - Field and target venue.
 - Funding agency open-science policy (e.g., NIH DMSP, Horizon Europe, Plan S).
 - Existing repositories or preprints (if any).
 
 ## Outputs
+
 - `open_science_plan.md` — per-artifact repository, DOI, license.
 - `fair_metadata.json` — FAIR-aligned metadata block.
 - `preregistration_choice.md` — AsPredicted vs. OSF vs. Registered Report.
@@ -54,6 +61,7 @@ language: en
 - `plan_s_compliance.md` — route and license check.
 
 ## Key Rules
+
 - Every data artifact gets a DOI and a license (CC-BY 4.0 default; CC0 if mandate).
 - Code is on GitHub with a Zenodo DOI archived at each release.
 - Preprints are posted BEFORE or at submission, never after publication unless venue forbids.
@@ -62,6 +70,7 @@ language: en
 - FAIR metadata must include ORCID for every creator.
 
 ## Examples
+
 ```text
 Open-science plan (excerpt):
   Artifact        | Repository     | License   | DOI
@@ -70,6 +79,7 @@ Open-science plan (excerpt):
   Preprint        | arXiv          | arXiv     | 2025.12345
   Protocol        | OSF            | CC-BY 4.0 | 10.17605/OSF.IO/xxxx
 ```
+
 ```text
 Plan S compliance check:
   Venue: Nature Communications (Plan S compliant).
@@ -80,6 +90,7 @@ Plan S compliance check:
 ```
 
 ## References
+
 - Zenodo: https://zenodo.org/
 - Figshare: https://figshare.com/
 - Dryad: https://datadryad.org/
@@ -91,6 +102,7 @@ Plan S compliance check:
 - NIH Data Management and Sharing Policy: https://grants.nih.gov/policy/data-sharing/
 
 ## Notes
+
 - Persistent identifiers (DOI, ORCID, ROR) are required for FAIR compliance; do not substitute bare URLs.
 - For sensitive data, prefer restricted-access archives with a data-access committee instead of public repositories.
 - Confirm funder data-sharing timelines (e.g., NIH DMSP requires data at acceptance, not just at publication).

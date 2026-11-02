@@ -22,18 +22,22 @@ language: en
 # Research Repo Builder
 
 ## When To Use
+
 - The user says "scaffold a research repo", "create a project skeleton", or "set up my codebase".
 - The user has an approved plan and wants the directory tree materialized.
 - The user wants reproducible structure: configs, manuals, scripts, datasets manifest.
 - Trigger keywords: scaffold, bootstrap, repository tree, project structure, CreateProjectZip, Main.py.
 
 ## Workflow
+
 1. Read the approved plan (executive summary, code menu, repo tree) from the ideation step or user input.
 2. Create the root project directory named after the project slug.
 3. Build the directory tree below. Place a `.gitkeep` in every directory that would otherwise be empty.
 4. Write `Configs/Config.yaml` with sections for `data`, `model`, `training`, `evaluation`, `paths`, `random_seed`.
-5. Stub `Main.py` as the orchestrator: parse config, build data loader, instantiate model, train loop, eval loop, save artifacts.
-6. Stub `src/data/loader.py`, `src/data/preprocess.py`, `src/models/baseline.py`, `src/models/proposed.py`, `src/utils/metrics.py`, `src/utils/logger.py`.
+5. Stub `Main.py` as the orchestrator: parse config, build data loader, instantiate model, train loop, eval loop, save
+   artifacts.
+6. Stub `src/data/loader.py`, `src/data/preprocess.py`, `src/models/baseline.py`, `src/models/proposed.py`,
+   `src/utils/metrics.py`, `src/utils/logger.py`.
 7. Write `Datasets.md` documenting source, license, splits, preprocessing, and citation requirements.
 8. Write `Requirements.txt` (unversioned by default; pin only when user requests).
 9. Add `CreateProjectZip.py` that zips the repo, excluding `data/raw`, `outputs`, `.git`.
@@ -42,18 +46,21 @@ language: en
 12. Print the resulting tree and confirm every directory has either content or a `.gitkeep`.
 
 ## Inputs
+
 - Project slug (kebab-case).
 - Approved plan with module menu and config schema.
 - Optional: framework choice (PyTorch, JAX, TensorFlow).
 - Optional: list of datasets to register in `Datasets.md`.
 
 ## Outputs
+
 - A materialized directory tree under the project slug.
 - `Configs/Config.yaml`, `Main.py`, `Requirements.txt`, `Datasets.md`, `README.md`, `CreateProjectZip.py`, `.gitignore`.
 - `.gitkeep` in every empty directory.
 - A printed tree diagram for verification.
 
 ## Key Rules
+
 - Every directory must contain either real content or a `.gitkeep`; never leave an empty dir.
 - `Requirements.txt` is unversioned unless the user explicitly asks for pinning.
 - Config values must be referenced, not hardcoded, inside `Main.py` and modules.
@@ -62,6 +69,7 @@ language: en
 - Do not commit secrets; `.env` must be in `.gitignore`.
 
 ## Examples
+
 ```text
 Project tree generated:
 my-project/
@@ -93,6 +101,7 @@ my-project/
 │       ├── logger.py
 │       └── __init__.py
 ```
+
 ```yaml
 # Configs/Config.yaml (excerpt)
 random_seed: 42
@@ -109,6 +118,7 @@ training:
 ```
 
 ## References
+
 - Cookiecutter Data Science template: https://drivendata.github.io/cookiecutter-data-science/
 - PyTorch Lightning project structure guide: https://lightning.ai/docs/pytorch/latest/starter/starter-guide.html
-- Reproducible research repo checklist ( Nature Scientific Data ): https://www.nature.com/sdata/publish/author-guidelines
+- Reproducible research repo checklist (Nature Scientific Data ): https://www.nature.com/sdata/publish/author-guidelines

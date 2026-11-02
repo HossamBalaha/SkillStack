@@ -22,12 +22,14 @@ language: en
 # ROC / PR Curve Plotter
 
 ## When To Use
+
 - Reporting ROC-AUC and average precision for a classifier.
 - Comparing several models on the same evaluation set.
 - Dealing with class imbalance where PR curves are more informative.
 - Adding bootstrap confidence bands around a curve.
 
 ## Workflow
+
 1. Collect predicted probabilities and binary labels for the test set.
 2. Compute ROC and PR curves plus AUC via `sklearn.metrics`.
 3. Bootstrap the test set N times to estimate 95% CI bands.
@@ -37,15 +39,18 @@ language: en
 7. Save as PDF with legends outside the axes via `bbox_to_anchor`.
 
 ## Inputs
+
 - Predicted probabilities (1-D for binary, 2-D for multi-class).
 - True labels (1-D integer array).
 - Number of bootstrap iterations (default 1000).
 
 ## Outputs
+
 - A PDF/PNG with ROC and PR curves side by side.
 - A JSON file recording AUC, average precision, and CI bounds.
 
 ## Key Rules
+
 - Always include the ROC diagonal and PR prevalence baselines.
 - Bootstrap 95% CI bands use at least 1000 resamples.
 - Multi-class uses one-vs-rest with a distinct colour per class.
@@ -54,6 +59,7 @@ language: en
 - Report average precision alongside the PR curve.
 
 ## Examples
+
 ```python
 # Plot ROC and PR curves with bootstrap CI bands.
 import numpy as np
@@ -112,5 +118,6 @@ def PlotRocPr(yTrue, yScore, outputPath):
 ```
 
 ## References
+
 - sklearn ROC docs: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_curve.html
 - sklearn PR docs: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html

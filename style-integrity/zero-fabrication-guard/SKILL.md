@@ -22,33 +22,46 @@ language: en
 # Zero Fabrication Guard
 
 ## When To Use
+
 - User asks to "fact-check", "verify references", or "audit claims" in a manuscript.
 - A draft contains citations, DOIs, URLs, dataset names, or numerical statistics whose accuracy is uncertain.
 - Author is unsure whether AI-generated text introduced fabricated sources.
 - Pre-submission integrity review is required.
 
 ## Workflow
-1. Extract every factual artifact from the manuscript: author names, paper titles, journal names, years, DOIs, URLs, dataset names, and every numerical claim.
-2. For each DOI, query `https://api.crossref.org/works/{DOI}` and confirm the returned title, authors, and journal match the manuscript's citation.
-3. For each citation, search Google Scholar (or Semantic Scholar API at `https://api.semanticscholar.org/graph/v1/paper/search`) using title and first author. Confirm a matching record exists.
+
+1. Extract every factual artifact from the manuscript: author names, paper titles, journal names, years, DOIs, URLs,
+   dataset names, and every numerical claim.
+2. For each DOI, query `https://api.crossref.org/works/{DOI}` and confirm the returned title, authors, and journal match
+   the manuscript's citation.
+3. For each citation, search Google Scholar (or Semantic Scholar API at
+   `https://api.semanticscholar.org/graph/v1/paper/search`) using title and first author. Confirm a matching record
+   exists.
 4. For each URL, perform an HTTP HEAD request and confirm a 2xx/3xx response. Record redirects.
-5. For each dataset name, cross-check against the canonical registry (e.g., `https://registry.identifiers.org/` or the dataset's official landing page).
-6. For each numerical claim ("accuracy of 94.2%"), locate the originating source and confirm the number, the metric, and the experimental setting match.
-7. Apply the silent-omission protocol for any claim that cannot be verified: silently omit the claim from the body (do NOT emit `[DECLARATION: ...]` text), and append a "Planning Note" at the end of the deliverable listing what was omitted and what verification data is still needed.
+5. For each dataset name, cross-check against the canonical registry (e.g., `https://registry.identifiers.org/` or the
+   dataset's official landing page).
+6. For each numerical claim ("accuracy of 94.2%"), locate the originating source and confirm the number, the metric, and
+   the experimental setting match.
+7. Apply the silent-omission protocol for any claim that cannot be verified: silently omit the claim from the body (do
+   NOT emit `[DECLARATION: ...]` text), and append a "Planning Note" at the end of the deliverable listing what was
+   omitted and what verification data is still needed.
 8. Use only real, verifiable sources. Never invent a DOI, URL, or author to "fill in" a gap.
 9. Produce a verification report: verified items, mismatched items, and silently-omitted items.
 
 ## Inputs
+
 - Manuscript text with inline citations and bibliography.
 - Optional `.bib` file for cross-checking.
 - Access to a browser or `curl`/`httpx` for live checks.
 
 ## Outputs
+
 - Verification table: claim, source type, source URL, match status.
 - Revised manuscript with unverifiable claims silently omitted.
 - Planning Note appended at the end listing omitted items and required verifications.
 
 ## Key Rules
+
 - Every DOI, URL, citation, dataset name, author, and numerical claim must be verified against a real external source.
 - Unverifiable claims are silently omitted from the body — no `[DECLARATION: ...]` markers.
 - A "Planning Note" at the end lists what was omitted and what the user must provide.
@@ -60,17 +73,20 @@ language: en
 ## Examples
 
 Before (body):
+
 ```
 Recent work shows an accuracy of 97.4% on ImageNet [Smith et al. 2024,
 doi:10.1000/fake123].
 ```
 
 After (body):
+
 ```
 Recent work reports strong accuracy on ImageNet [verified reference].
 ```
 
 Planning Note (appended):
+
 ```
 Planning Note:
 - Omitted claim: "accuracy of 97.4%" — DOI 10.1000/fake123 returned 404
@@ -79,6 +95,7 @@ Planning Note:
 ```
 
 Verification table (excerpt):
+
 ```
 | Claim                  | Source Type | Source URL                                      | Match |
 |------------------------|-------------|--------------------------------------------------|-------|
@@ -88,6 +105,7 @@ Verification table (excerpt):
 ```
 
 ## References
+
 - Crossref REST API: https://api.crossref.org/works
 - Semantic Scholar API: https://api.semanticscholar.org/graph/v1/paper/search
 - Identifiers.org registry: https://registry.identifiers.org/

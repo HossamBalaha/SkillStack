@@ -22,6 +22,7 @@ language: en
 # Academic Book Author
 
 ## When To Use
+
 - The user asks to write or outline a textbook chapter.
 - The user provides learning objectives and wants measurable outcomes.
 - The user wants a code walkthrough sequence (pre-code prose, code, output, reflection, figure).
@@ -29,18 +30,23 @@ language: en
 - Trigger keywords: textbook, chapter, learning objectives, worked example, exercises, nomenclature, tcolorbox.
 
 ## Workflow
+
 1. State 3-4 measurable learning objectives at the chapter top using a `tcolorbox`.
 2. Open with a narrative hook (concrete scenario, historical anecdote, or motivating problem).
 3. Introduce concepts with progressive disclosure: intuition first, formalism second, edge cases last.
-4. For every concept defined in an earlier chapter, reference it ("As detailed in Section 2.3...") instead of re-explaining.
-5. Insert mandatory code-walkthrough blocks in this exact order: pre-code paragraph → `listings`/`minted` snippet → output description → reflection paragraph → figure cross-reference.
+4. For every concept defined in an earlier chapter, reference it ("As detailed in Section 2.3...") instead of
+   re-explaining.
+5. Insert mandatory code-walkthrough blocks in this exact order: pre-code paragraph → `listings`/`minted` snippet →
+   output description → reflection paragraph → figure cross-reference.
 6. For every concept requiring calculation, produce an A-Z step-by-step numerical example. Label each step.
 7. Use 2-space indentation inside code blocks; never use tabs.
-8. Close the chapter with: Summary, Key Takeaways (bulleted), Q&A (5-10 items), Exercises (graded difficulty), Nomenclature glossary (symbol → meaning).
+8. Close the chapter with: Summary, Key Takeaways (bulleted), Q&A (5-10 items), Exercises (graded difficulty),
+   Nomenclature glossary (symbol → meaning).
 9. Generate summary slides as a `tcolorbox` per major section.
 10. Cross-check that every figure, table, equation, listing has a `\label{}` and is referenced at least once.
 
 ## Inputs
+
 - Book title, chapter number, and chapter scope.
 - Learning objectives from the book's master list.
 - Prior chapters' glossaries and notation (for cross-referencing).
@@ -48,6 +54,7 @@ language: en
 - Target audience (undergraduate, graduate, practitioner).
 
 ## Outputs
+
 - `chapterXX.tex` — full chapter source.
 - `nomenclature.tex` — chapter-local glossary feeding the book-wide nomenclature.
 - `exercises.tex` — exercises with hidden solutions block.
@@ -55,6 +62,7 @@ language: en
 - `code/listing_XX_YY.py` (or `.m`, `.r`) — referenced code files.
 
 ## Key Rules
+
 - Every chapter opens with 3-4 measurable learning objectives inside a `tcolorbox`.
 - Code-walkthrough order is fixed: pre-code → code → output → reflection → figure cross-reference.
 - Never re-explain a concept defined in an earlier chapter; cross-reference instead.
@@ -64,6 +72,7 @@ language: en
 - Chapter end must contain Summary, Key Takeaways, Q&A, Exercises, Nomenclature.
 
 ## Examples
+
 ```latex
 \begin{tcolorbox}[title=Learning Objectives]
 After completing this chapter, you will be able to:
@@ -74,6 +83,7 @@ After completing this chapter, you will be able to:
 \end{enumerate}
 \end{tcolorbox}
 ```
+
 ```latex
 % Code-walkthrough sequence
 The following snippet trains a logistic regressor for one epoch. We use
@@ -97,6 +107,7 @@ See Fig.~\ref{fig:loss_curve} for the visualization.
 ```
 
 ## References
+
 - `listings` package: https://ctan.org/pkg/listings
 - `minted` package: https://ctan.org/pkg/minted
 - `tcolorbox` package: https://ctan.org/pkg/tcolorbox

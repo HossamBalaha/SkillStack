@@ -22,6 +22,7 @@ language: en
 # Statistical Validation Rigour
 
 ## When To Use
+
 - Reporting confidence intervals around accuracy, AUC, F1, or any metric.
 - Comparing two models on the same test set (paired t-test, Wilcoxon, McNemar).
 - Computing AUC for binary versus multiclass problems.
@@ -29,6 +30,7 @@ language: en
 - Quantifying effect sizes between proposed and baseline models.
 
 ## Workflow
+
 1. Collect the per-fold or per-trial metric values into a list.
 2. Bootstrap the metric of interest to build a 95% confidence interval.
 3. Guard `np.std(values, ddof=1)` with a length check to avoid NaN on single samples.
@@ -38,23 +40,28 @@ language: en
 7. Report mean, std, 95% CI, p-value, and effect size in a single table.
 
 ## Inputs
+
 - A list/array of metric values across folds or trials.
 - Predicted probabilities and ground-truth labels.
 - For paired tests: two sets of predictions on the same test set.
 
 ## Outputs
+
 - A JSON report with mean, std, CI lower/upper, p-value, effect size.
 - A comparison table saved to `Aggregated/StatisticalReport.json`.
 
 ## Key Rules
+
 - Graceful handling of n=0 (zeroed dict) and n=1 (single-value dict).
 - Guard `np.std` with `float(np.std(values, ddof=1)) if (len(values) > 1) else 0.0`.
-- Binary AUC uses 1-D positive-class probabilities; multiclass uses 2-D matrix with `multi_class="ovr", average="macro"`.
+- Binary AUC uses 1-D positive-class probabilities; multiclass uses 2-D matrix with
+  `multi_class="ovr", average="macro"`.
 - NEVER pass `multi_class=` to `sklearn.linear_model.LogisticRegression` — it is deprecated.
 - Paired tests require the same test set for both models.
 - Report exact p-values, not thresholds.
 
 ## Examples
+
 ```python
 # Bootstrap with graceful n=0 and n=1 handling.
 import numpy as np
@@ -118,6 +125,8 @@ def CohensD(SeriesA, SeriesB):
 ```
 
 ## References
+
 - sklearn metrics: https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics
 - scipy stats: https://docs.scipy.org/doc/scipy/reference/stats.html
-- LogisticRegression deprecation notice: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+- LogisticRegression deprecation
+  notice: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html

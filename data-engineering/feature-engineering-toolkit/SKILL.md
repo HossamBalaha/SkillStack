@@ -22,6 +22,7 @@ language: en
 # Feature Engineering Toolkit
 
 ## When To Use
+
 - A model needs derived features beyond the raw columns.
 - Target encoding must avoid leakage via k-fold cross-validation.
 - Time series features need lag and rolling windows with the right closure side.
@@ -29,6 +30,7 @@ language: en
 - Feature transforms must be fit on TRAIN and reused unchanged at inference.
 
 ## Workflow
+
 1. Split into TRAIN/VAL/TEST before engineering to avoid leakage.
 2. Profile each column: dtype, cardinality, missingness, distribution.
 3. Pick a transform per column: numeric, categorical, datetime, interaction, window.
@@ -39,16 +41,19 @@ language: en
 8. Emit the engineered matrix plus the manifest and the persisted transforms.
 
 ## Inputs
+
 - TRAIN, VAL, TEST DataFrames sharing the same schema.
 - Per-column transform configuration.
 - Optional target column for supervised encoders (target/mean encoding).
 
 ## Outputs
+
 - Engineered TRAIN, VAL, TEST feature matrices.
 - A feature manifest (JSON) listing transform per column and parameters.
 - Persisted transform artifacts (joblib) for inference reuse.
 
 ## Key Rules
+
 - All transforms fit on TRAIN only; VAL and TEST are transformed.
 - Target/mean encoding uses k-fold CV on TRAIN to avoid leakage.
 - Rolling windows use `closed='right'` so the current row's target is excluded.
@@ -130,6 +135,8 @@ class TargetEncoder:
 ```
 
 ## References
+
 - scikit-learn preprocessing: https://scikit-learn.org/stable/modules/preprocessing.html
 - pandas rolling: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html
-- Target encoding (Micci-Barreca 2001): https://kaggle.com/code/ogrellier/python-target-encoding-for-categorical-features
+- Target encoding (Micci-Barreca
+  2001): https://kaggle.com/code/ogrellier/python-target-encoding-for-categorical-features

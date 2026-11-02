@@ -19,21 +19,19 @@ import html
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Iterator
-
 from rich.console import Console
+from typing import Iterator
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _SkillLib import EnsureDir, IterateSkills, SkillDoc, SkillsRoot
 
-
 # Attempt to import the graphviz Python package; degrade gracefully.
 try:
   import graphviz as gv
+
   HasGraphviz = True
 except ImportError:
   HasGraphviz = False
-
 
 # Stable color palette assigned to themes in alphabetical order.
 ThemePalette = [
@@ -212,7 +210,8 @@ def RenderManualSvg(graph: SkillGraph, outputPath: Path) -> Path:
       positions[node.Name] = (x, y)
   # Compose the SVG document as a list of strings.
   parts = []
-  parts.append(f"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{canvasWidth}\" height=\"{canvasHeight}\" viewBox=\"0 0 {canvasWidth} {canvasHeight}\">")
+  parts.append(
+    f"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{canvasWidth}\" height=\"{canvasHeight}\" viewBox=\"0 0 {canvasWidth} {canvasHeight}\">")
   parts.append("<style>")
   parts.append(".node { font-family: Helvetica, Arial, sans-serif; font-size: 11px; }")
   parts.append(".theme { font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; }")
@@ -223,7 +222,8 @@ def RenderManualSvg(graph: SkillGraph, outputPath: Path) -> Path:
   # Draw one theme header per column.
   for columnIndex, theme in enumerate(themes):
     x = padding + columnIndex * columnWidth + columnWidth / 2
-    parts.append(f"<text class=\"theme\" x=\"{x:.0f}\" y=\"{padding + 16:.0f}\" text-anchor=\"middle\" fill=\"{graph.ThemeColors[theme]}\">{html.escape(theme)}</text>")
+    parts.append(
+      f"<text class=\"theme\" x=\"{x:.0f}\" y=\"{padding + 16:.0f}\" text-anchor=\"middle\" fill=\"{graph.ThemeColors[theme]}\">{html.escape(theme)}</text>")
   # Draw each node as a colored rectangle with a label.
   for theme in themes:
     color = graph.ThemeColors[theme]
@@ -231,8 +231,10 @@ def RenderManualSvg(graph: SkillGraph, outputPath: Path) -> Path:
       x, y = positions[node.Name]
       rectX = x - 80
       rectY = y - 12
-      parts.append(f"<rect class=\"node\" x=\"{rectX:.0f}\" y=\"{rectY:.0f}\" width=\"160\" height=\"24\" rx=\"4\" ry=\"4\" fill=\"{color}\" stroke=\"#333333\" stroke-width=\"1\"/>")
-      parts.append(f"<text class=\"node\" x=\"{x:.0f}\" y=\"{y + 4:.0f}\" text-anchor=\"middle\" fill=\"white\">{html.escape(node.Name)}</text>")
+      parts.append(
+        f"<rect class=\"node\" x=\"{rectX:.0f}\" y=\"{rectY:.0f}\" width=\"160\" height=\"24\" rx=\"4\" ry=\"4\" fill=\"{color}\" stroke=\"#333333\" stroke-width=\"1\"/>")
+      parts.append(
+        f"<text class=\"node\" x=\"{x:.0f}\" y=\"{y + 4:.0f}\" text-anchor=\"middle\" fill=\"white\">{html.escape(node.Name)}</text>")
   # Draw each edge as a straight line between node centers.
   for edge in graph.Edges:
     src = positions.get(edge.Source)
@@ -240,11 +242,13 @@ def RenderManualSvg(graph: SkillGraph, outputPath: Path) -> Path:
     if (src is None or dst is None):
       continue
     cls = "edge edge-related" if (edge.Kind == "related") else "edge"
-    parts.append(f"<line class=\"{cls}\" x1=\"{src[0]:.0f}\" y1=\"{src[1]:.0f}\" x2=\"{dst[0]:.0f}\" y2=\"{dst[1]:.0f}\"/>")
+    parts.append(
+      f"<line class=\"{cls}\" x1=\"{src[0]:.0f}\" y1=\"{src[1]:.0f}\" x2=\"{dst[0]:.0f}\" y2=\"{dst[1]:.0f}\"/>")
     # Place a tiny label at the midpoint of the edge.
     midX = (src[0] + dst[0]) / 2
     midY = (src[1] + dst[1]) / 2
-    parts.append(f"<text class=\"edge-label\" x=\"{midX:.0f}\" y=\"{midY - 2:.0f}\" text-anchor=\"middle\">{html.escape(edge.Kind)}</text>")
+    parts.append(
+      f"<text class=\"edge-label\" x=\"{midX:.0f}\" y=\"{midY - 2:.0f}\" text-anchor=\"middle\">{html.escape(edge.Kind)}</text>")
   parts.append("</svg>")
   # Ensure the parent directory exists before writing.
   EnsureDir(outputPath.parent)

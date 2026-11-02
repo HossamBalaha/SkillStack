@@ -22,12 +22,14 @@ language: en
 # Docker Research Container
 
 ## When To Use
+
 - A journal or conference asks for a Docker artifact so reviewers can run your code.
 - You need to reproduce results on a cluster where the host Python version differs from your dev box.
 - Your training requires CUDA and you want a pinned `nvidia/cuda` base image.
 - You want a multi-stage build that strips build tools from the final runtime image.
 
 ## Workflow
+
 1. Decide CPU vs GPU base: `python:3.11-slim` for CPU, `nvidia/cuda:12.1.0-cudnn8-runtime-ubuntu22.04` for GPU.
 2. Set `WORKDIR /app` and install system dependencies with `apt-get` in one `RUN` to keep layers small.
 3. Copy only `Requirements.txt` first, then `pip install --no-cache-dir -r Requirements.txt` to leverage layer caching.
@@ -40,18 +42,21 @@ language: en
 10. Validate with `docker build -t researchkit .` then `docker run --rm researchkit --help`.
 
 ## Inputs
+
 - Base image choice (CPU or GPU).
 - System-level dependencies (e.g. `git`, `build-essential`, `libgl1` for OpenCV).
 - The `Requirements.txt` file from the repo root.
 - The entrypoint command (default `python Main.py`).
 
 ## Outputs
+
 - `Dockerfile` at the repo root.
 - `.dockerignore` excluding heavy and non-reproducible paths.
 - Optional `docker-compose.yml` for multi-container setups.
 - A one-line `docker run` command documented in the README.
 
 ## Key Rules
+
 - Never run the final image as `root`; always create and switch to a non-root user.
 - Always use `pip install --no-cache-dir` to keep the image layer small.
 - Pin the base image by digest or full tag (`python:3.11-slim`, not `python:latest`).
@@ -62,6 +67,7 @@ language: en
 - Never bake secrets, tokens, or dataset files into the image.
 
 ## Examples
+
 Single-stage CPU image:
 
 ```dockerfile
@@ -134,6 +140,8 @@ docker run --rm --gpus all -v $(pwd)/Datasets:/app/Datasets researchkit
 ```
 
 ## References
-- Boettiger (2015), "An introduction to Docker for reproducible research" — https://dl.acm.org/doi/10.1145/2723872.2723882
+
+- Boettiger (2015), "An introduction to Docker for reproducible
+  research" — https://dl.acm.org/doi/10.1145/2723872.2723882
 - AEA Data Editor Docker guidance — https://aeadataeditor.github.io/aea-de-guidance/
 - Dockerfile reference — https://docs.docker.com/engine/reference/builder/

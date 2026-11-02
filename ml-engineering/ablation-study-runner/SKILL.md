@@ -22,12 +22,14 @@ language: en
 # Ablation Study Runner
 
 ## When To Use
+
 - Justifying the necessity of each component in a proposed model.
 - Producing an ablation table for a paper.
 - Comparing a full model against its component-stripped variants.
 - Validating design choices with identical seeds and data.
 
 ## Workflow
+
 1. Enumerate all components of the proposed model (loss term, regularizer, branch, attention head).
 2. For each component, define an ablation variant that removes or neutralizes it.
 3. Train every variant with IDENTICAL seeds, data splits, and budget.
@@ -38,15 +40,18 @@ language: en
 8. Write a short justification for each component's necessity.
 
 ## Inputs
+
 - The full model factory and a list of variant factories.
 - The shared train/validation/test splits.
 - `Configs/Config.yaml` with `Seed`, `Epochs`, `BatchSize`.
 
 ## Outputs
+
 - `Aggregated/AblationTable.csv` with one row per ablation.
 - `Aggregated/AblationReport.json` with deltas and justifications.
 
 ## Key Rules
+
 - Every ablation must use IDENTICAL seeds and data splits.
 - Every ablation must be evaluated on the SAME test set.
 - Report the metric delta versus the full model.
@@ -54,6 +59,7 @@ language: en
 - Use the same evaluation harness as the proposed model.
 
 ## Examples
+
 ```python
 # Ablation runner producing a CSV and JSON report.
 import json
@@ -104,5 +110,6 @@ def RunAblation(Variants, TrainFunction, EvalFunction, Splits, Config, OutputDir
 ```
 
 ## References
+
 - sklearn metrics for evaluation: https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics
 - Research methodology on ablation studies: https://en.wikipedia.org/wiki/Ablation_(artificial_intelligence)

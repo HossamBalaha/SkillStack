@@ -15,17 +15,17 @@ repos:
         name: Trim trailing whitespace
         exclude: ^(?!\.gitkeep$).*$|^.*\.md$
         # Allow trailing double-space markdown line breaks.
-        args: [--markdown-linebreak-ext=md]
+        args: [ --markdown-linebreak-ext=md ]
       - id: end-of-file-fixer
         name: Ensure files end with a newline
         exclude: ^docs/assets/\.gitkeep$
       - id: check-yaml
         name: Validate YAML syntax
-        args: [--allow-multiple-documents]
+        args: [ --allow-multiple-documents ]
         files: \.(yaml|yml)$
       - id: check-added-large-files
         name: Block large binary blobs
-        args: [--maxkb=512]
+        args: [ --maxkb=512 ]
       - id: check-merge-conflict
         name: Detect unresolved merge conflicts
       - id: check-case-conflict
@@ -39,14 +39,14 @@ repos:
         name: Block accidental private-key commits
       - id: mixed-line-ending
         name: Normalize line endings to LF
-        args: [--fix=lf]
+        args: [ --fix=lf ]
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: v0.7.4
     hooks:
       - id: ruff
         name: Ruff lint (scripts/)
-        args: [--fix, --exit-non-zero-on-fix]
+        args: [ --fix, --exit-non-zero-on-fix ]
         files: ^scripts/.*\.py$
       - id: ruff-format
         name: Ruff format (scripts/)
@@ -60,15 +60,15 @@ repos:
         language: system
         pass_filenames: false
         always_run: true
-        stages: [pre-commit]
+        stages: [ pre-commit ]
       - id: skillstack-manifest-check
         name: SkillStack manifest freshness check
         entry: bash -c 'python scripts/GenerateManifest.py --output skills.yaml.next && git diff --no-color --exit-code skills.yaml skills.yaml.next'
         language: system
         pass_filenames: false
         always_run: true
-        stages: [pre-commit]
+        stages: [ pre-commit ]
 
 # Configuration for pre-commit itself
 minimum_pre_commit_version: "3.2.0"
-default_install_hook_types: [pre-commit]
+default_install_hook_types: [ pre-commit ]

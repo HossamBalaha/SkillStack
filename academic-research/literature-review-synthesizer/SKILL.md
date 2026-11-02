@@ -22,26 +22,32 @@ language: en
 # Literature Review Synthesizer
 
 ## When To Use
+
 - The user asks for a "systematic review", "scoping review", or "PRISMA diagram".
 - The user wants a Boolean search string for PubMed, Scopus, Web of Science, or IEEE Xplore.
 - The user needs a thematic synthesis matrix or quality appraisal using CASP, AMSTAR-2, or ROBIS.
 - Trigger keywords: PRISMA, PICO, SPIDER, systematic review, Boolean search, CASP, AMSTAR-2, ROBIS, synthesis matrix.
 
 ## Workflow
-1. Decide review type: systematic, scoping, or rapid. Choose framework: PICO (intervention studies), SPIDER (qualitative/mixed), or PCC (scoping).
+
+1. Decide review type: systematic, scoping, or rapid. Choose framework: PICO (intervention studies), SPIDER
+   (qualitative/mixed), or PCC (scoping).
 2. Define Population, Intervention/Exposure, Comparator, Outcome (or equivalents).
-3. Construct a Boolean search string with synonyms, MeSH terms, truncation, and field tags. Run it on at least two databases plus a grey-literature source.
+3. Construct a Boolean search string with synonyms, MeSH terms, truncation, and field tags. Run it on at least two
+   databases plus a grey-literature source.
 4. Document PRISMA 2020 flow: Identification → Screening → Eligibility → Included. Report counts at every gate.
 5. Set inclusion/exclusion criteria: date range, language, study design, publication type.
 6. Deduplicate results; pilot screening on a 5% sample with two reviewers and compute Cohen's kappa.
 7. Extract data into a structured matrix: rows = studies, columns = methodology dimensions (not chronology).
 8. Perform thematic synthesis: code findings, group into descriptive themes, generate analytical themes.
-9. Run quality appraisal with the matched tool: CASP (qualitative/cohort), AMSTAR-2 (systematic reviews of RCTs), ROBIS (bias in systematic reviews).
+9. Run quality appraisal with the matched tool: CASP (qualitative/cohort), AMSTAR-2 (systematic reviews of RCTs), ROBIS
+   (bias in systematic reviews).
 10. Generate a risk-of-bias summary figure (e.g., robvis-style traffic light).
 11. Draft the synthesis narrative under thematic headings; cite each study by its row ID.
 12. Document limitations: search date, language bias, single-reviewer risk.
 
 ## Inputs
+
 - Review question in PICO/SPIDER/PCC form.
 - Target databases (PubMed, Scopus, Web of Science, IEEE Xplore, Embase).
 - Date range and language filter.
@@ -49,6 +55,7 @@ language: en
 - Optional: prior protocol registration (PROSPERO ID).
 
 ## Outputs
+
 - `protocol.docx` — review protocol (PROSPERO-ready).
 - `search_strings.md` — Boolean strings per database with hit counts.
 - `prisma_flow.tex` — PRISMA 2020 flow diagram.
@@ -58,6 +65,7 @@ language: en
 - `risk_of_bias.pdf` — robvis-style figure.
 
 ## Key Rules
+
 - Never invent counts; every number in the PRISMA diagram must come from the executed search.
 - Use PICO for interventions, SPIDER for qualitative/mixed, PCC for scoping reviews.
 - Report Cohen's kappa on the pilot screening sample; if kappa < 0.6, revise the criteria.
@@ -67,6 +75,7 @@ language: en
 - Protocol must be registered or registration-ready before screening begins.
 
 ## Examples
+
 ```text
 PICO: Population = adult stroke survivors; Intervention = robot-assisted gait
 training; Comparator = conventional physiotherapy; Outcome = 6-minute walk
@@ -78,6 +87,7 @@ Search string (PubMed):
 ("gait"[tiab] OR "walking"[tiab]) AND
 ("random*"[tiab]) Filters: Humans, English, 2015:2025
 ```
+
 ```text
 PRISMA counts sample:
 Identification: 1,284 records (PubMed 612, Scopus 410, WoS 262)
@@ -88,6 +98,7 @@ Included: 104 studies
 ```
 
 ## References
+
 - PRISMA 2020 statement: https://www.prisma-statement.org/
 - CASP checklists: https://casp-uk.net/casp-tools-checklists/
 - AMSTAR-2: https://amstar.ca/

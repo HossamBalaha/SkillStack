@@ -22,11 +22,13 @@ language: en
 # Experiment Folder Organizer
 
 ## When To Use
+
 - Starting a new experiment run that needs a clean output folder.
 - Organizing plots, JSON reports, CSVs, and logs by split.
 - Refactoring plotting functions to accept an `outputDirectory` parameter.
 
 ## Workflow
+
 1. Compose the folder name as `Results/{DatasetName}_{YYYYMMDD_HHMMSS}/`.
 2. Create exactly four subfolders: `Train/`, `Validation/`, `Test/`, `Aggregated/`.
 3. Write a persistent `Aggregated/execution.log` for the whole run.
@@ -35,15 +37,18 @@ language: en
 6. Return the four subfolder paths to the caller.
 
 ## Inputs
+
 - `DatasetName` string from `Configs/Config.yaml`.
 - The current timestamp at startup.
 
 ## Outputs
+
 - A single experiment root with four subfolders.
 - `Aggregated/execution.log` for the whole run.
 - Per-split artifacts without redundant timestamps in file names.
 
 ## Key Rules
+
 - One timestamped folder per experiment; do NOT timestamp individual files.
 - Exactly four subfolders: `Train/`, `Validation/`, `Test/`, `Aggregated/`.
 - All artifacts land in their respective split subfolder.
@@ -51,6 +56,7 @@ language: en
 - The persistent log lives at `Aggregated/execution.log`.
 
 ## Examples
+
 ```python
 # Create the canonical experiment folder layout.
 import os
@@ -95,5 +101,6 @@ def SaveMetrics(Metrics, FileName, OutputDirectory):
 ```
 
 ## References
+
 - Python os.makedirs: https://docs.python.org/3/library/os.html#os.makedirs
 - datetime strftime: https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior

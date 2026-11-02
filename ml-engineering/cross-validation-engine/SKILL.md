@@ -22,12 +22,14 @@ language: en
 # Cross Validation Engine
 
 ## When To Use
+
 - Estimating model performance with limited held-out data.
 - Grouping subjects so no subject appears in both train and test of a fold.
 - Tuning hyperparameters with nested CV (outer evaluates, inner tunes).
 - Time-series evaluation where future must not leak into the past.
 
 ## Workflow
+
 1. Choose the CV strategy: `StratifiedKFold`, `GroupKFold`, `TimeSeriesSplit`, or nested.
 2. For grouped CV, pass `Groups` so no subject appears in both train and test of a fold.
 3. For each fold, train the model with identical seed and hyperparameters.
@@ -38,14 +40,17 @@ language: en
 8. Persist `Aggregated/CvResults.json` with per-fold metrics and aggregates.
 
 ## Inputs
+
 - Features, labels, and optional `Groups` array.
 - `Configs/Config.yaml` with `NumFolds`, `Strategy`, `Seed`.
 
 ## Outputs
+
 - `Aggregated/CvResults.json` with per-fold metrics and mean/std.
 - A summary table printed to the console.
 
 ## Key Rules
+
 - For grouped CV, ensure no subject appears in both train and test of the same fold.
 - Report mean ± std across folds (use `ddof=1`).
 - For nested CV, the outer loop evaluates; the inner loop tunes.
@@ -53,6 +58,7 @@ language: en
 - Use the same seed for every fold to keep runs comparable.
 
 ## Examples
+
 ```python
 # K-fold CV with subject-level grouping and mean +/- std reporting.
 import json
@@ -110,6 +116,7 @@ def RunCrossValidation(ModelFactory, Features, Labels, Groups, Config, OutputDir
 ```
 
 ## References
+
 - sklearn cross-validation: https://scikit-learn.org/stable/modules/cross_validation.html
 - StratifiedKFold: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
 - GroupKFold: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html

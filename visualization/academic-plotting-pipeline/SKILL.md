@@ -22,12 +22,14 @@ language: en
 # Academic Plotting Pipeline
 
 ## When To Use
+
 - Producing the full figure set for a research paper in one consistent pass.
 - Selecting the right chart type from a data shape (curve, matrix, ablation table).
 - Separating system diagrams from data plots so each uses the best tool.
 - Auto-dispatching figure generation from a single metadata file.
 
 ## Workflow
+
 1. Read a figure manifest listing every figure in the paper.
 2. Classify each figure as `data` or `diagram` based on whether axes are numerical.
 3. For `data` figures, inspect the array shape to pick line, bar, scatter, or heatmap.
@@ -38,16 +40,19 @@ language: en
 8. Emit a LaTeX `\input{}` file that lists every figure for the manuscript.
 
 ## Inputs
+
 - A figure manifest (JSON/YAML) mapping figure IDs to type, data path, and caption.
 - Data files (CSV, NPZ, parquet) and a labels dictionary.
 - Style configuration (journal, font sizes, palette).
 
 ## Outputs
+
 - Per-figure PDF/PNG files under `figures/`.
 - A `figures.tex` include file for the manuscript.
 - A log mapping each figure ID to the renderer chosen.
 
 ## Key Rules
+
 - If the figure has numerical axes, use matplotlib/seaborn.
 - If the figure is boxes plus arrows, use TikZ or diagram tooling.
 - Training curves always render as line plots.
@@ -56,6 +61,7 @@ language: en
 - Keep one renderer per figure; never mix matplotlib and TikZ in one file.
 
 ## Examples
+
 ```python
 # Pick a renderer from the shape of the data array.
 import numpy as np
@@ -92,4 +98,5 @@ def RenderDataFigure(dataArray, outputPath):
 ```
 
 ## References
+
 - AI-Research-SKILLs plotting recipes: https://github.com/Orchestra-Research/AI-Research-SKILLs

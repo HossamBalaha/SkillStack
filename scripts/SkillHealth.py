@@ -26,7 +26,6 @@ import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-
 from rich.console import Console
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -34,14 +33,13 @@ from _SkillLib import (
   EnsureDir,
   IterateSkills,
   MinLineCount,
-  SkillDoc,
   SkillsRoot,
 )
-
 
 # Attempt to import jinja2; degrade gracefully when missing.
 try:
   import jinja2
+
   HasJinja2 = True
 except ImportError:
   HasJinja2 = False

@@ -22,6 +22,7 @@ language: en
 # CSV JSON Converter
 
 ## When To Use
+
 - A user needs to convert CSV to JSON, JSON to Parquet, or Arrow to CSV.
 - The source file is large and must be processed in chunks (memory budget).
 - Dates, integers, floats, and nulls must round-trip without type loss.
@@ -29,6 +30,7 @@ language: en
 - Schema must be inferred once and reused for consistent downstream output.
 
 ## Workflow
+
 1. Sniff the file: encoding, delimiter, header presence, and quoted fields.
 2. Sample the first N rows to infer column types (date, int, float, bool, string).
 3. Resolve a schema: explicit overrides win, otherwise inferred types apply.
@@ -40,17 +42,20 @@ language: en
 9. On failure, partial outputs are deleted and the manifest is not written.
 
 ## Inputs
+
 - Source file path plus format (csv, json, parquet, arrow).
 - Target file path plus format.
 - Optional schema override (column name to type mapping).
 - Streaming config: chunk size, encoding, delimiter, null marker.
 
 ## Outputs
+
 - The converted file in the requested format.
 - A sidecar manifest (JSON) with row count, schema, source hash, and conversion time.
 - Optional validation log of any rows that failed coercion.
 
 ## Key Rules
+
 - Never load the whole file into memory; chunked streaming is mandatory above 100 MB.
 - Type coercion is deterministic: a value that cannot be coerced becomes null and is logged.
 - Empty strings and nulls are distinct; preserve both.
@@ -116,6 +121,7 @@ def CoerceValue(rawValue, targetType):
 ```
 
 ## References
+
 - pandas IO: https://pandas.pydata.org/docs/reference/io.html
 - pyarrow Parquet: https://arrow.apache.org/docs/python/parquet.html
 - CSV format (RFC 4180): https://datatracker.ietf.org/doc/html/rfc4180

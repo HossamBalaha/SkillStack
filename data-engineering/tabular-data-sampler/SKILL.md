@@ -22,6 +22,7 @@ language: en
 # Tabular Data Sampler
 
 ## When To Use
+
 - A dataset is too large to fit in memory or to iterate quickly for prototyping.
 - Class imbalance requires oversampling the minority or undersampling the majority.
 - A streaming source must be sampled in one pass without knowing its length.
@@ -29,6 +30,7 @@ language: en
 - Results must be reproducible across runs (fixed seed).
 
 ## Workflow
+
 1. Identify the goal: prototype, balance classes, or sample a stream.
 2. Choose the strategy: random, stratified, weighted, or reservoir.
 3. Set a random seed so the sample is reproducible.
@@ -38,15 +40,18 @@ language: en
 7. Persist the seed and parameters so the same sample can be regenerated.
 
 ## Inputs
+
 - The source DataFrame or streaming iterator.
 - The sampling strategy and its parameters (fraction, k, weights, strata column).
 - A random seed for reproducibility.
 
 ## Outputs
+
 - A sampled DataFrame.
 - A sampling report (JSON) capturing strategy, parameters, in/out sizes, and seed.
 
 ## Key Rules
+
 - Every run records its random seed so the sample is reproducible.
 - Stratified sampling preserves class proportions within a declared tolerance.
 - WeightedRandomSampler weights sum to one so the sampling probability is well-defined.
@@ -126,6 +131,7 @@ def EmitReport(strategy, inSize, outSize, seed, params):
 ```
 
 ## References
+
 - pandas sample: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sample.html
 - PyTorch WeightedRandomSampler: https://pytorch.org/docs/stable/data.html#torch.utils.data.WeightedRandomSampler
 - Reservoir sampling (Vitter 1985): https://dl.acm.org/doi/10.1145/3147.3165

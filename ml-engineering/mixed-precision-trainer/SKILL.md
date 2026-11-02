@@ -22,12 +22,14 @@ language: en
 # Mixed Precision Trainer
 
 ## When To Use
+
 - Training a model on a GPU with limited memory.
 - Needing faster iteration on the same hardware.
 - Using Ampere+ GPUs that support bf16 natively.
 - Avoiding manual casting of every layer to half precision.
 
 ## Workflow
+
 1. Detect the GPU compute capability to decide between fp16 and bf16.
 2. On Ampere+ GPUs prefer bf16 (no scaler needed).
 3. Otherwise use fp16 with a `torch.cuda.amp.GradScaler`.
@@ -37,14 +39,17 @@ language: en
 7. Document memory savings and measured speedup in `Aggregated/AmpReport.json`.
 
 ## Inputs
+
 - Model, optimizer, loss module, and data loader.
 - A flag in `Configs/Config.yaml` indicating `Precision: "fp16"` or `"bf16"`.
 
 ## Outputs
+
 - A training loop using AMP.
 - `Aggregated/AmpReport.json` documenting peak memory and wall-clock speedup.
 
 ## Key Rules
+
 - fp16 requires a `GradScaler`; bf16 does not.
 - Wrap the forward pass with `autocast()` — never cast tensors manually.
 - Call `scaler.update()` after every step.
@@ -52,6 +57,7 @@ language: en
 - Reference the real PyTorch AMP docs.
 
 ## Examples
+
 ```python
 # AMP training loop with fp16 GradScaler fallback.
 import json
@@ -101,6 +107,7 @@ def WriteAmpReport(Report, OutputDir):
 ```
 
 ## References
+
 - PyTorch AMP docs: https://pytorch.org/docs/stable/amp.html
 - torch.cuda.amp.GradScaler: https://pytorch.org/docs/stable/amp.html#gradient-scaling
 - Automatic Mixed Precision recipes: https://pytorch.org/tutorials/recipes/recipes/amp_recipe.html

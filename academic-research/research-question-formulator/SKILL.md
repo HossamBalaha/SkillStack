@@ -22,12 +22,14 @@ language: en
 # Research Question Formulator
 
 ## When To Use
+
 - The user says "what should my research question be", "help me formulate a question", or "is my question FINER".
 - The user is preparing a thesis proposal, grant, or pre-registration.
 - The user wants multiple candidate questions ranked before committing.
 - Trigger keywords: research question, FINER, PICO, SPIDER, PCC, scoping, hypothesis seeding.
 
 ## Workflow
+
 1. Collect the broad domain, available data, and the candidate population.
 2. Pick a framework: PICO (clinical/intervention), SPIDER (qualitative/mixed), PCC (scoping).
 3. Draft 3-5 candidate questions; each phrased as a single interrogative sentence with a measurable outcome.
@@ -40,12 +42,14 @@ language: en
 10. Output the ranked candidates and a finalized question block ready for a protocol.
 
 ## Inputs
+
 - Broad domain and target population.
 - Available data sources and compute.
 - Constraints: ethics approval timeline, team expertise, funding.
 - Optional: prior literature scan or seed question.
 
 ## Outputs
+
 - `candidate_questions.md` — 3-5 questions with scores.
 - `finer_matrix.csv` — question × FINER dimension scores.
 - `framework_breakdown.md` — PICO/SPIDER/PCC elements for the top question.
@@ -53,6 +57,7 @@ language: en
 - `finalized_question.md` — final question statement ready for a protocol.
 
 ## Key Rules
+
 - Each question is a single interrogative sentence with a measurable outcome.
 - Every question is scored on all five FINER criteria.
 - Questions scoring <3 on Feasibility or Ethical must be revised or dropped.
@@ -61,6 +66,7 @@ language: en
 - Output always ends with a finalized, single-sentence question.
 
 ## Examples
+
 ```text
 Candidate Q1: In adult stroke survivors undergoing rehabilitation, does
 robot-assisted gait training (RAGT) plus conventional physiotherapy improve
@@ -74,6 +80,7 @@ PICO breakdown (Q1):
   C: conventional physiotherapy alone
   O: 6-minute walk distance at 12 weeks (continuous, meters)
 ```
+
 ```text
 Finalized question:
   Among adults (18-80 years) with first-ever ischemic stroke and baseline
@@ -83,12 +90,14 @@ Finalized question:
 ```
 
 ## References
+
 - FINER criteria (Hulley et al., Designing Clinical Research): https://www.lww.com/Designing-Clinical-Research
 - PICO framework (Cochrane): https://training.cochrane.org/handbook/current/chapter-02
 - SPIDER framework (Cooke, Smith & Booth 2012): https://doi.org/10.1108/20401621211223494
 - PCC for scoping reviews (JBI): https://jbi.global/scoping-review
 
 ## Notes
+
 - Keep the finalized question stable; downstream hypothesis design depends on it.
 - If the question is changed after hypothesis design, the entire downstream chain must be re-validated.
 - Mark secondary candidate questions explicitly so they can become future studies.

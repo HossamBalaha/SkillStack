@@ -22,12 +22,14 @@ language: en
 # Network Graph Visualizer
 
 ## When To Use
+
 - Plotting a social, citation, or dependency network.
 - Highlighting communities detected by Louvain or similar.
 - Showing node importance via degree or centrality sizing.
 - Producing an interactive HTML for exploration with `pyvis`.
 
 ## Workflow
+
 1. Load the graph from an edge list or adjacency matrix.
 2. Choose a layout: spring, circular, kamada-kawai, or Graphviz hierarchical.
 3. Compute node degree or centrality to drive node size.
@@ -38,16 +40,19 @@ language: en
 8. Save the figure and a legend mapping colours to communities.
 
 ## Inputs
+
 - An edge list or `networkx.Graph` object.
 - Optional node attributes (label, community) and edge weights.
 - A layout choice and an output format (PDF or HTML).
 
 ## Outputs
+
 - A static PDF/PNG of the graph.
 - An interactive HTML when `pyvis` is selected.
 - A legend file mapping community IDs to colours.
 
 ## Key Rules
+
 - Size nodes by degree or a centrality measure.
 - Colour nodes by community using a colourblind-friendly palette.
 - Scale edge width by weight when weights carry meaning.
@@ -56,6 +61,7 @@ language: en
 - Use `constrained_layout=True` for matplotlib output.
 
 ## Examples
+
 ```python
 # Draw a networkx graph with community colours and degree sizing.
 import networkx as nx
@@ -99,5 +105,6 @@ def DrawGraph(graph, outputPath):
 ```
 
 ## References
+
 - networkx docs: https://networkx.org/documentation/stable/
 - pyvis interactive graphs: https://pyvis.readthedocs.io/

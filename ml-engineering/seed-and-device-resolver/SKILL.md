@@ -22,12 +22,14 @@ language: en
 # Seed And Device Resolver
 
 ## When To Use
+
 - Starting any training run that requires determinism.
 - Moving a primary model AND every standalone `nn.Module` to the device.
 - Wrapping external or frozen auxiliary branches that may be `None` at runtime.
 - Resolving the device once for the entire process.
 
 ## Workflow
+
 1. Resolve `device = torch.device("cuda" if torch.cuda.is_available() else "cpu")` exactly once.
 2. Call `random.seed(seed)`, `np.random.seed(seed)`, `torch.manual_seed(seed)`.
 3. Call `torch.cuda.manual_seed_all(seed)` when CUDA is available.
@@ -37,21 +39,26 @@ language: en
 7. For auxiliary branches wrapping external models, short-circuit if the wrapped model is `None`.
 
 ## Inputs
+
 - A `Seed` integer from `Configs/Config.yaml`.
 - The primary model and any auxiliary modules.
 
 ## Outputs
+
 - A `device` constant reused across the process.
 - Deterministic behavior across reruns with the same seed.
 
 ## Key Rules
+
 - Resolve `device` exactly once; never call `torch.device(...)` per function.
 - `model.to(device)` does NOT transitively move sibling modules — move each explicitly.
-- Auxiliary branches wrapping external/frozen models MUST short-circuit and return a zero/identity tensor on the correct device if the wrapped model is `None`.
+- Auxiliary branches wrapping external/frozen models MUST short-circuit and return a zero/identity tensor on the correct
+  device if the wrapped model is `None`.
 - Set `cudnn.deterministic = True` AND `cudnn.benchmark = False` together.
 - Seed `random`, `numpy`, `torch`, and CUDA together.
 
 ## Examples
+
 ```python
 # Resolve device once and seed every RNG.
 import random
@@ -112,5 +119,6 @@ def MoveAllToDevice(Model, LossModule, Regularizer, Calibrator, Auxiliary):
 ```
 
 ## References
+
 - PyTorch reproducibility: https://pytorch.org/docs/stable/notes/randomness.html
 - torch.cuda manual: https://pytorch.org/docs/stable/cuda.html

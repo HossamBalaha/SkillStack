@@ -22,12 +22,14 @@ language: en
 # Embedding Projector
 
 ## When To Use
+
 - Inspecting the latent space of a trained encoder.
 - Comparing clusters across two embedding methods.
 - Producing a t-SNE or UMAP scatter for a paper's analysis section.
 - Building an interactive projector for exploratory analysis.
 
 ## Workflow
+
 1. Load the embedding matrix and the label vector.
 2. Choose a projector: PCA (fast, linear), t-SNE (local structure, slow), or UMAP (local plus global).
 3. Subsample if the dataset exceeds a few thousand points to keep t-SNE tractable.
@@ -37,16 +39,19 @@ language: en
 7. Optionally export TensorBoard Projector checkpoints for exploration.
 
 ## Inputs
+
 - Embedding matrix of shape `[nSamples, nDims]` with `nDims >= 3`.
 - Label array of shape `[nSamples]`.
 - Choice of projector and target dimensionality.
 
 ## Outputs
+
 - A static PDF/PNG scatter with a colour legend.
 - An interactive HTML (plotly) when requested.
 - TensorBoard Projector variable and metadata files when requested.
 
 ## Key Rules
+
 - Use PCA for a fast linear baseline before non-linear methods.
 - Subsample before t-SNE when the dataset exceeds a few thousand points.
 - Colour points by label using a colourblind-friendly palette.
@@ -55,6 +60,7 @@ language: en
 - Place legends outside the axes via `bbox_to_anchor`.
 
 ## Examples
+
 ```python
 # Project embeddings with PCA, t-SNE, or UMAP and plot a scatter.
 import numpy as np
@@ -93,6 +99,7 @@ def ProjectEmbeddings(embeddings, labels, method="pca", outputPath="emb.pdf"):
 ```
 
 ## References
+
 - sklearn PCA: https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
 - sklearn TSNE: https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
 - umap-learn: https://umap-learn.readthedocs.io/

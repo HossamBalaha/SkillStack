@@ -37,8 +37,7 @@ that fit the existing stack.
 
 Participation in this project is governed by the
 [Contributor Covenant v2.1](./CODE_OF_CONDUCT.md). By participating, you agree
-to uphold that code. Please report unacceptable behavior to
-**hmbala01@louisville.edu**.
+to uphold that code. Please report unacceptable behavior to **h3ossam@gmail.com**.
 
 ---
 
@@ -63,8 +62,7 @@ folder in the issue title (e.g., `[ml-engineering] ...`).
 ## Suggesting Enhancements
 
 Enhancements are also tracked via
-[GitHub Issues](https://github.com/Hossam-Balaha/SkillStack/issues) using the
-**Feature request** template. Describe:
+[GitHub Issues](https://github.com/Hossam-Balaha/SkillStack/issues) using the **Feature request** template. Describe:
 
 - The **problem** you are trying to solve.
 - The **proposed solution** at the skill level (which theme, which skill
@@ -131,8 +129,8 @@ skill:
 5. **String literals** use double quotes `"..."` everywhere except inside
    docstrings (which keep the triple-double-quote form).
 
-Indentation is **2 spaces**. Framework-mandated lowercase method names
-(`forward`, `backward`, `training_step`, `validation_step`,
+Indentation is **2 spaces**. Framework-mandated lowercase method names (`forward`, `backward`, `training_step`,
+`validation_step`,
 `configure_optimizers`, `setUp`, `tearDown`) are exempt.
 
 Read the full skill — including the canonical docstring template and the
@@ -148,14 +146,14 @@ single space, and a trailing newline at the end of every file.
 
 Branch off `main` and use one of the following prefixes:
 
-| Prefix     | Use when                                                                  |
-|------------|---------------------------------------------------------------------------|
-| `feature/` | Adding a new skill, theme, or capability.                                |
-| `fix/`     | Fixing a bug in an existing skill, the maestro, or the master README.     |
-| `docs/`    | Documentation-only changes (typos, README updates).                       |
-| `refactor/`| Internal reorganization with no observable behavior change.              |
-| `chore/`   | Tooling, dependency bumps, `.gitignore` updates.                          |
-| `test/`    | Adding or fixing tests for the `scripts/` directory.                      |
+| Prefix      | Use when                                                              |
+|-------------|-----------------------------------------------------------------------|
+| `feature/`  | Adding a new skill, theme, or capability.                             |
+| `fix/`      | Fixing a bug in an existing skill, the maestro, or the master README. |
+| `docs/`     | Documentation-only changes (typos, README updates).                   |
+| `refactor/` | Internal reorganization with no observable behavior change.           |
+| `chore/`    | Tooling, dependency bumps, `.gitignore` updates.                      |
+| `test/`     | Adding or fixing tests for the `scripts/` directory.                  |
 
 Examples:
 
@@ -184,17 +182,17 @@ optional `!` for a breaking change, a colon, and a short imperative summary.
 
 Allowed types:
 
-| Type         | When to use it                                                                |
-|--------------|-------------------------------------------------------------------------------|
-| `feat`       | A new skill, new theme, or new user-facing capability.                        |
-| `fix`        | A bug fix in an existing skill, script, or doc.                               |
-| `docs`       | Documentation-only changes (README, CONTRIBUTING, NOTICE).                |
-| `refactor`   | Code or doc restructuring with no behavior change.                            |
-| `perf`       | Performance improvement to a script.                                           |
-| `test`       | Adding or fixing tests.                                                        |
-| `build`      | Changes to build tooling, dependencies, or `requirements-*.txt`.              |
-| `chore`      | Routine maintenance that doesn't fit any of the above.                        |
-| `revert`     | Reverting a previous commit.                                                   |
+| Type       | When to use it                                                   |
+|------------|------------------------------------------------------------------|
+| `feat`     | A new skill, new theme, or new user-facing capability.           |
+| `fix`      | A bug fix in an existing skill, script, or doc.                  |
+| `docs`     | Documentation-only changes (README, CONTRIBUTING, NOTICE).       |
+| `refactor` | Code or doc restructuring with no behavior change.               |
+| `perf`     | Performance improvement to a script.                             |
+| `test`     | Adding or fixing tests.                                          |
+| `build`    | Changes to build tooling, dependencies, or `requirements-*.txt`. |
+| `chore`    | Routine maintenance that doesn't fit any of the above.           |
+| `revert`   | Reverting a previous commit.                                     |
 
 Examples:
 
@@ -236,8 +234,8 @@ PRs are the only path changes land on `main`. Before opening one:
    and commit `skills.yaml` if it changes.
 4. **Update docs.** If your PR adds or renames a skill, update the master
    `README.md` index and the maestro routing table in the same PR.
-5. **Open the PR against `main`** with a clear summary, the type of change
-   (bug/feature/breaking/docs), and the theme touched.
+5. **Open the PR against `main`** with a clear summary, the type of change (bug/feature/breaking/docs), and the theme
+   touched.
 
 A maintainer will review, request changes if needed, and squash-merge once
 the pre-commit hooks pass.

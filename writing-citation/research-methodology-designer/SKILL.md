@@ -22,43 +22,58 @@ language: en
 # Research Methodology Designer
 
 ## When To Use
+
 - You are writing a grant proposal and need a rigorous methods section with sample-size justification.
 - An IRB protocol requires explicit sampling strategy, data-collection instruments, and risk/benefit analysis.
 - A supervisor asked you to justify why an RCT is more appropriate than a cohort study (or vice versa).
 - A reviewer challenged the adequacy of your sample size or the representativeness of your sample.
 
 ## Workflow
+
 1. Clarify the research question (PICO/PECO/SPIDER for qualitative) and the primary outcome.
-2. Select the study design (RCT, cohort, case-control, cross-sectional, qualitative) and justify why alternatives were rejected.
-3. Define the target population, accessible population, and sampling frame; choose probability (simple random, stratified, cluster) vs. non-probability (convenience, purposive, snowball) sampling.
-4. Compute sample size via power analysis: alpha = 0.05 (two-sided), power = 0.80, effect size from pilot data or prior literature; report the formula and inputs.
-5. Specify data-collection instruments (validated scales, interview guides, sensors, administrative data) and their psychometric properties.
-6. Detail the analytic plan: descriptive statistics, primary inferential test, pre-specified subgroup analyses, and handling of missing data.
-7. Address ethics: IRB oversight, informed consent process, data-anonymization, conflicts of interest, and benefit/risk balance.
+2. Select the study design (RCT, cohort, case-control, cross-sectional, qualitative) and justify why alternatives were
+   rejected.
+3. Define the target population, accessible population, and sampling frame; choose probability (simple random,
+   stratified, cluster) vs. non-probability (convenience, purposive, snowball) sampling.
+4. Compute sample size via power analysis: alpha = 0.05 (two-sided), power = 0.80, effect size from pilot data or prior
+   literature; report the formula and inputs.
+5. Specify data-collection instruments (validated scales, interview guides, sensors, administrative data) and their
+   psychometric properties.
+6. Detail the analytic plan: descriptive statistics, primary inferential test, pre-specified subgroup analyses, and
+   handling of missing data.
+7. Address ethics: IRB oversight, informed consent process, data-anonymization, conflicts of interest, and benefit/risk
+   balance.
 8. Document threats to validity (internal, external, construct, statistical conclusion) and the mitigations for each.
-9. Package the methodology as a single coherent methods section plus an appendix with instruments and power calculations.
+9. Package the methodology as a single coherent methods section plus an appendix with instruments and power
+   calculations.
 
 ## Inputs
+
 - The research question and primary/secondary outcomes.
 - Pilot effect size, expected variance, and attrition rate (for power analysis).
 - Target population description and accessible sampling frame.
 - Institutional IRB requirements and applicable regulatory frameworks (e.g., 45 CFR 46, GDPR).
 
 ## Outputs
+
 - `methodology_design.md` — full methods section ready for a proposal or protocol.
 - `power_calculation.md` — inputs, formula, software output (G*Power or R), and resulting N.
 - `ethics_checklist.md` — IRB items, consent template pointers, data-management plan.
 - `validity_matrix.csv` — threat → category → mitigation.
 
 ## Key Rules
+
 - Sample-size calculation must state alpha, power, effect size, allocation ratio, and the assumed attrition adjustment.
 - Probability sampling is the default for quantitative generalization; non-probability sampling must be justified.
 - Every data-collection instrument must be named with a citation or attached as an appendix.
-- Ethics must cover informed consent, confidentiality, and an explicit risk/benefit statement — not just "IRB approval will be obtained."
-- Qualitative studies must report the analytic approach (thematic analysis, grounded theory, IPA) and trustworthiness criteria.
+- Ethics must cover informed consent, confidentiality, and an explicit risk/benefit statement — not just "IRB approval
+  will be obtained."
+- Qualitative studies must report the analytic approach (thematic analysis, grounded theory, IPA) and trustworthiness
+  criteria.
 - Pre-registration of the analysis plan is recommended; if not pre-registered, that must be disclosed.
 
 ## Examples
+
 ```text
 Before (vague):
 "We will recruit about 100 patients and give them the new drug. We will
@@ -83,15 +98,21 @@ registered at ClinicalTrials.gov (NCT0XXXXXXX)."
 ```
 
 ## Common Pitfalls
+
 - Quoting a sample size without stating alpha, power, effect size, and attrition adjustment — reviewers will reject.
 - Choosing a non-probability sample and then claiming generalizability to a population.
-- Listing "IRB approval will be obtained" as the entire ethics section — consent, confidentiality, and risk/benefit are required.
+- Listing "IRB approval will be obtained" as the entire ethics section — consent, confidentiality, and risk/benefit are
+  required.
 - Forgetting to pre-register the analysis plan when the journal mandates it.
-- Conflating a qualitative approach with a small quantitative study — qualitative sampling logic differs (information power, not statistical power).
+- Conflating a qualitative approach with a small quantitative study — qualitative sampling logic differs (information
+  power, not statistical power).
 - Skipping threats-to-validity; reviewers treat this as a fatal omission for empirical work.
 
 ## References
+
 - Schulz, K. F., Altman, D. G., & Moher, D. (2010). CONSORT 2010 Statement. *BMJ*, 340, c332.
-- G*Power statistical power-analysis software: https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower.
+- G*Power statistical power-analysis
+  software: https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower.
 - 45 CFR 46 — U.S. Federal Policy for the Protection of Human Subjects.
-- Creswell, J. W., & Creswell, J. D. (2018). *Research Design: Qualitative, Quantitative, and Mixed Methods Approaches*. SAGE.
+- Creswell, J. W., & Creswell, J. D. (2018). *Research Design: Qualitative, Quantitative, and Mixed Methods Approaches*.
+  SAGE.

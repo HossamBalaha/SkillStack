@@ -1,300 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SkillStack — Tag Cloud</title>
-<meta name="description" content="Interactive tag cloud over the SkillStack 168-skill library. Click a tag to filter the skill list.">
-<style>
-  /* ----- Design tokens (SkillStack brand palette) ----------------------- */
-  :root {
-    --blue-900: #0f172a;
-    --blue-800: #1e3a8a;
-    --blue-700: #1e40af;
-    --orange-500: #f97316;
-    --orange-400: #fb923c;
-    --amber-400: #fbbf24;
-    --slate-50: #f8fafc;
-    --slate-100: #f1f5f9;
-    --slate-200: #e2e8f0;
-    --slate-500: #64748b;
-    --slate-700: #334155;
-    --slate-900: #0f172a;
-    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 1px rgba(15, 23, 42, 0.04);
-    --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.10), 0 2px 4px -2px rgba(15, 23, 42, 0.06);
-    --radius: 10px;
-    --radius-lg: 14px;
-  }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>SkillStack — Tag Cloud</title>
+  <meta content="Interactive tag cloud over the SkillStack 168-skill library. Click a tag to filter the skill list."
+        name="description">
+  <style>
+    /* ----- Design tokens (SkillStack brand palette) ----------------------- */
+    :root {
+      --blue-900: #0f172a;
+      --blue-800: #1e3a8a;
+      --blue-700: #1e40af;
+      --orange-500: #f97316;
+      --orange-400: #fb923c;
+      --amber-400: #fbbf24;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-500: #64748b;
+      --slate-700: #334155;
+      --slate-900: #0f172a;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 1px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.10), 0 2px 4px -2px rgba(15, 23, 42, 0.06);
+      --radius: 10px;
+      --radius-lg: 14px;
+    }
 
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: var(--slate-900);
-    background: var(--slate-50);
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  /* ----- Header ------------------------------------------------------- */
-  header.app {
-    background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 55%, var(--blue-700) 100%);
-    color: #fff;
-    padding: 32px 28px 28px;
-    box-shadow: var(--shadow-md);
-  }
-  header.app .row {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
-  header.app .mark {
-    width: 44px;
-    height: 44px;
-    flex: 0 0 44px;
-    position: relative;
-  }
-  header.app .mark span {
-    position: absolute;
-    height: 8px;
-    border-radius: 3px;
-  }
-  header.app .mark .b1 { top: 0;    left: 0; width: 44px; background: var(--orange-500); }
-  header.app .mark .b2 { top: 12px; left: 0; width: 30px; background: var(--amber-400); }
-  header.app .mark .b3 { top: 24px; left: 14px; width: 30px; background: var(--amber-400); }
-  header.app .mark .b4 { top: 36px; left: 0; width: 44px; background: var(--orange-500); }
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
 
-  header.app h1 {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-  }
-  header.app h1 .accent { color: var(--orange-400); }
-  header.app p {
-    margin: 2px 0 0;
-    font-size: 14px;
-    color: #cbd5e1;
-    letter-spacing: 0.2px;
-  }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--slate-900);
+      background: var(--slate-50);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  /* ----- Layout ------------------------------------------------------- */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 28px;
-  }
+    /* ----- Header ------------------------------------------------------- */
+    header.app {
+      background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 55%, var(--blue-700) 100%);
+      color: #fff;
+      padding: 32px 28px 28px;
+      box-shadow: var(--shadow-md);
+    }
 
-  /* ----- Status bar --------------------------------------------------- */
-  #status {
-    font-size: 13px;
-    padding: 10px 14px;
-    border-radius: var(--radius);
-    margin-bottom: 20px;
-    background: var(--slate-100);
-    border: 1px solid var(--slate-200);
-    color: var(--slate-700);
-  }
-  #status.error {
-    background: #fef3c7;
-    border-color: var(--amber-400);
-    color: #78350f;
-  }
-  #status.ok {
-    background: #ecfdf5;
-    border-color: #6ee7b7;
-    color: #065f46;
-  }
-  #status code {
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-    font-size: 12px;
-    background: rgba(15, 23, 42, 0.06);
-    padding: 1px 5px;
-    border-radius: 4px;
-  }
+    header.app .row {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
 
-  /* ----- Controls ----------------------------------------------------- */
-  .controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
-  }
-  .controls .filter-info {
-    font-size: 14px;
-    color: var(--slate-700);
-  }
-  .controls .filter-info strong {
-    color: var(--blue-800);
-  }
-  .controls button {
-    font: inherit;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 8px 14px;
-    border-radius: var(--radius);
-    border: 1px solid var(--blue-800);
-    background: #fff;
-    color: var(--blue-800);
-    cursor: pointer;
-    transition: background 120ms ease, color 120ms ease;
-  }
-  .controls button:hover {
-    background: var(--blue-800);
-    color: #fff;
-  }
-  .controls button:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
+    header.app .mark {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      position: relative;
+    }
 
-  /* ----- Tag cloud ---------------------------------------------------- */
-  #cloud {
-    background: #fff;
-    border: 1px solid var(--slate-200);
-    border-radius: var(--radius-lg);
-    padding: 28px 26px;
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 28px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 14px;
-    align-items: baseline;
-    min-height: 80px;
-  }
-  #cloud .tag {
-    display: inline-block;
-    font-weight: 600;
-    color: var(--blue-800);
-    cursor: pointer;
-    padding: 4px 10px;
-    border-radius: 999px;
-    border: 1px solid transparent;
-    background: var(--slate-100);
-    transition: background 120ms ease, color 120ms ease, border-color 120ms ease, transform 120ms ease;
-    line-height: 1.2;
-    white-space: nowrap;
-  }
-  #cloud .tag:hover {
-    background: var(--blue-800);
-    color: #fff;
-    transform: translateY(-1px);
-  }
-  #cloud .tag.active {
-    background: var(--orange-500);
-    color: #fff;
-    border-color: var(--orange-500);
-  }
-  #cloud .tag .count {
-    font-size: 0.7em;
-    font-weight: 500;
-    opacity: 0.65;
-    margin-left: 4px;
-  }
-  #cloud .tag.active .count { opacity: 0.9; color: #fff; }
+    header.app .mark span {
+      position: absolute;
+      height: 8px;
+      border-radius: 3px;
+    }
 
-  /* ----- Skill list --------------------------------------------------- */
-  #skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 14px;
-  }
-  .card {
-    background: #fff;
-    border: 1px solid var(--slate-200);
-    border-radius: var(--radius-lg);
-    padding: 16px 18px;
-    box-shadow: var(--shadow-sm);
-    transition: border-color 120ms ease, box-shadow 120ms ease, transform 120ms ease;
-  }
-  .card:hover {
-    border-color: var(--orange-500);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-1px);
-  }
-  .card .head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .card .name {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--slate-900);
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  }
-  .card .theme {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 999px;
-    background: var(--blue-800);
-    color: #fff;
-    letter-spacing: 0.2px;
-    white-space: nowrap;
-  }
-  .card .desc {
-    font-size: 13px;
-    color: var(--slate-700);
-    margin: 0 0 10px;
-  }
-  .card .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  .card .tags .t {
-    font-size: 11px;
-    padding: 2px 7px;
-    border-radius: 4px;
-    background: var(--slate-100);
-    color: var(--slate-700);
-    border: 1px solid var(--slate-200);
-    cursor: pointer;
-  }
-  .card .tags .t:hover {
-    background: var(--blue-800);
-    color: #fff;
-    border-color: var(--blue-800);
-  }
-  .card .tags .t.active {
-    background: var(--orange-500);
-    color: #fff;
-    border-color: var(--orange-500);
-  }
+    header.app .mark .b1 {
+      top: 0;
+      left: 0;
+      width: 44px;
+      background: var(--orange-500);
+    }
 
-  #empty {
-    grid-column: 1 / -1;
-    padding: 40px;
-    text-align: center;
-    color: var(--slate-500);
-    font-size: 14px;
-  }
+    header.app .mark .b2 {
+      top: 12px;
+      left: 0;
+      width: 30px;
+      background: var(--amber-400);
+    }
 
-  /* ----- Footer ------------------------------------------------------- */
-  footer.app {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px 28px 40px;
-    color: var(--slate-500);
-    font-size: 12px;
-    text-align: center;
-  }
-  footer.app a { color: var(--blue-800); text-decoration: none; }
-  footer.app a:hover { text-decoration: underline; }
-</style>
+    header.app .mark .b3 {
+      top: 24px;
+      left: 14px;
+      width: 30px;
+      background: var(--amber-400);
+    }
+
+    header.app .mark .b4 {
+      top: 36px;
+      left: 0;
+      width: 44px;
+      background: var(--orange-500);
+    }
+
+    header.app h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    header.app h1 .accent {
+      color: var(--orange-400);
+    }
+
+    header.app p {
+      margin: 2px 0 0;
+      font-size: 14px;
+      color: #cbd5e1;
+      letter-spacing: 0.2px;
+    }
+
+    /* ----- Layout ------------------------------------------------------- */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    /* ----- Status bar --------------------------------------------------- */
+    #status {
+      font-size: 13px;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+      background: var(--slate-100);
+      border: 1px solid var(--slate-200);
+      color: var(--slate-700);
+    }
+
+    #status.error {
+      background: #fef3c7;
+      border-color: var(--amber-400);
+      color: #78350f;
+    }
+
+    #status.ok {
+      background: #ecfdf5;
+      border-color: #6ee7b7;
+      color: #065f46;
+    }
+
+    #status code {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 12px;
+      background: rgba(15, 23, 42, 0.06);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    /* ----- Controls ----------------------------------------------------- */
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .controls .filter-info {
+      font-size: 14px;
+      color: var(--slate-700);
+    }
+
+    .controls .filter-info strong {
+      color: var(--blue-800);
+    }
+
+    .controls button {
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: var(--radius);
+      border: 1px solid var(--blue-800);
+      background: #fff;
+      color: var(--blue-800);
+      cursor: pointer;
+      transition: background 120ms ease, color 120ms ease;
+    }
+
+    .controls button:hover {
+      background: var(--blue-800);
+      color: #fff;
+    }
+
+    .controls button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* ----- Tag cloud ---------------------------------------------------- */
+    #cloud {
+      background: #fff;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 28px 26px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      align-items: baseline;
+      min-height: 80px;
+    }
+
+    #cloud .tag {
+      display: inline-block;
+      font-weight: 600;
+      color: var(--blue-800);
+      cursor: pointer;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: var(--slate-100);
+      transition: background 120ms ease, color 120ms ease, border-color 120ms ease, transform 120ms ease;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    #cloud .tag:hover {
+      background: var(--blue-800);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    #cloud .tag.active {
+      background: var(--orange-500);
+      color: #fff;
+      border-color: var(--orange-500);
+    }
+
+    #cloud .tag .count {
+      font-size: 0.7em;
+      font-weight: 500;
+      opacity: 0.65;
+      margin-left: 4px;
+    }
+
+    #cloud .tag.active .count {
+      opacity: 0.9;
+      color: #fff;
+    }
+
+    /* ----- Skill list --------------------------------------------------- */
+    #skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 120ms ease, box-shadow 120ms ease, transform 120ms ease;
+    }
+
+    .card:hover {
+      border-color: var(--orange-500);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .card .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .card .name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--slate-900);
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    .card .theme {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--blue-800);
+      color: #fff;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    .card .desc {
+      font-size: 13px;
+      color: var(--slate-700);
+      margin: 0 0 10px;
+    }
+
+    .card .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .card .tags .t {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      border: 1px solid var(--slate-200);
+      cursor: pointer;
+    }
+
+    .card .tags .t:hover {
+      background: var(--blue-800);
+      color: #fff;
+      border-color: var(--blue-800);
+    }
+
+    .card .tags .t.active {
+      background: var(--orange-500);
+      color: #fff;
+      border-color: var(--orange-500);
+    }
+
+    #empty {
+      grid-column: 1 / -1;
+      padding: 40px;
+      text-align: center;
+      color: var(--slate-500);
+      font-size: 14px;
+    }
+
+    /* ----- Footer ------------------------------------------------------- */
+    footer.app {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 28px 40px;
+      color: var(--slate-500);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    footer.app a {
+      color: var(--blue-800);
+      text-decoration: none;
+    }
+
+    footer.app a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
 <header class="app">
   <div class="row">
-    <div class="mark" aria-hidden="true">
+    <div aria-hidden="true" class="mark">
       <span class="b1"></span>
       <span class="b2"></span>
       <span class="b3"></span>
@@ -312,12 +384,12 @@
 
   <div class="controls">
     <div class="filter-info" id="filterInfo">All skills</div>
-    <button id="clearBtn" type="button" disabled>Clear filter</button>
+    <button disabled id="clearBtn" type="button">Clear filter</button>
   </div>
 
-  <section id="cloud" aria-label="Tag cloud — font size reflects skill count"></section>
+  <section aria-label="Tag cloud — font size reflects skill count" id="cloud"></section>
 
-  <section id="skills" aria-label="Skills filtered by selected tag"></section>
+  <section aria-label="Skills filtered by selected tag" id="skills"></section>
 </main>
 
 <footer class="app">
@@ -326,339 +398,489 @@
 </footer>
 
 <script>
-"use strict";
+  "use strict";
 
-/* =========================================================================
- * SkillStack Tag Cloud — vanilla JS, no external deps.
- *
- * Loads skills.yaml (a flat list of {name, theme, description, tags} dicts)
- * via fetch(), counts tag frequencies, renders a weighted tag cloud, and
- * filters the skill list below by the clicked tag.
- *
- * Expected skills.yaml format (a YAML list of dicts):
- *   - name: journal-manuscript-writer
- *     theme: academic-research
- *     description: Draft publication-ready journal sections in LaTeX.
- *     tags: [latex, manuscript, ieee, elsevier]
- *   - name: hyperparameter-tuner
- *     theme: ml-engineering
- *     description: Bayesian hyperparameter optimization with Optuna.
- *     tags: [optuna, tpe, bayesian-optimization]
- *
- * If skills.yaml is missing, the page falls back to an embedded demo
- * dataset so the UI is still explorable.
- * ========================================================================= */
+  /* =========================================================================
+   * SkillStack Tag Cloud — vanilla JS, no external deps.
+   *
+   * Loads skills.yaml (a flat list of {name, theme, description, tags} dicts)
+   * via fetch(), counts tag frequencies, renders a weighted tag cloud, and
+   * filters the skill list below by the clicked tag.
+   *
+   * Expected skills.yaml format (a YAML list of dicts):
+   *   - name: journal-manuscript-writer
+   *     theme: academic-research
+   *     description: Draft publication-ready journal sections in LaTeX.
+   *     tags: [latex, manuscript, ieee, elsevier]
+   *   - name: hyperparameter-tuner
+   *     theme: ml-engineering
+   *     description: Bayesian hyperparameter optimization with Optuna.
+   *     tags: [optuna, tpe, bayesian-optimization]
+   *
+   * If skills.yaml is missing, the page falls back to an embedded demo
+   * dataset so the UI is still explorable.
+   * ========================================================================= */
 
-// ---- Embedded fallback dataset (used only if skills.yaml cannot be loaded).
-// Drawn from the real SkillStack library so the page is useful out of the box.
-const FALLBACK_SKILLS = [
-  { name: "research-ideation-planner",       theme: "academic-research",   description: "Propose 3+ novel research ideas aligned to a target venue, then build an end-to-end blueprint.", tags: ["research", "ideation", "venue", "blueprint"] },
-  { name: "journal-manuscript-writer",       theme: "academic-research",   description: "Draft publication-ready journal sections in LaTeX with strict style rules.",                          tags: ["latex", "manuscript", "ieee", "elsevier", "writing"] },
-  { name: "grant-proposal-writer",          theme: "academic-research",   description: "Draft competitive grant proposals (specific aims, significance, approach, budget).",                  tags: ["grant", "proposal", "funding", "writing"] },
-  { name: "literature-review-synthesizer",  theme: "academic-research",   description: "Build systematic reviews with PICO/SPIDER framing and PRISMA flow.",                                     tags: ["literature", "review", "prisma", "pico", "synthesis"] },
-  { name: "peer-review-simulator",          theme: "academic-research",   description: "Generate peer-review reports and author rebuttal letters.",                                              tags: ["peer-review", "rebuttal", "review"] },
-  { name: "thesis-chapter-planner",        theme: "academic-research",   description: "Plan thesis/dissertation chapters with cross-chapter non-redundancy.",                                  tags: ["thesis", "dissertation", "planning"] },
-  { name: "latex-style-guard",              theme: "style-integrity",     description: "Enforce LaTeX typography: blank lines around floats, % ====== % separators, LaTeX quotes.",            tags: ["latex", "style", "typography", "prose"] },
-  { name: "coding-conventions-enforcer",    theme: "style-integrity",     description: "Enforce camelCase variables, CamelCase functions/classes, parens in if, period-ended comments.",        tags: ["coding", "conventions", "python", "style"] },
-  { name: "zero-fabrication-guard",          theme: "style-integrity",     description: "Verify every citation, DOI, URL, dataset name via web search; silent-omit if missing.",                   tags: ["citations", "doi", "verification", "fabrication"] },
-  { name: "execution-protocol",             theme: "style-integrity",     description: "10-stage meta-discipline: Comprehend → Clarify → Define Success → ... → Deliver.",                       tags: ["discipline", "workflow", "execution", "planning"] },
-  { name: "hyperparameter-tuner",           theme: "ml-engineering",       description: "Optuna Bayesian optimization (TPE, median pruner, multi-fidelity).",                                     tags: ["optuna", "tpe", "bayesian", "hyperparameter", "ml"] },
-  { name: "reproducible-experiment-runner", theme: "ml-engineering",       description: "Setup reproducible experiments: device resolution, seeds, dual logging, 4-split folders.",               tags: ["reproducibility", "experiment", "seed", "device", "ml"] },
-  { name: "model-explainer",                theme: "ml-engineering",       description: "SHAP/LIME/Integrated-Gradients explanations and plots.",                                                  tags: ["shap", "lime", "explainability", "ml"] },
-  { name: "pytorch-lightning-scaffold",      theme: "ml-engineering",       description: "Scaffold LightningModule, DataModule, Callbacks, Loggers.",                                               tags: ["pytorch", "lightning", "scaffold", "ml"] },
-  { name: "etl-pipeline-builder",           theme: "data-engineering",     description: "Idempotent ETL with extract-validate-transform-load and audit trail.",                                    tags: ["etl", "pipeline", "data", "audit"] },
-  { name: "data-quality-validator",         theme: "data-engineering",     description: "Validate with pandera/great-expectations; null/duplicate/outlier checks.",                                tags: ["pandera", "validation", "data-quality", "data"] },
-  { name: "data-anonymizer",                theme: "data-engineering",     description: "Anonymize PII: hashing, k-anonymity, generalization, suppression.",                                      tags: ["pii", "anonymization", "privacy", "data"] },
-  { name: "publication-figure-maker",       theme: "visualization",        description: "Journal-ready matplotlib figures with correct sizes and vector formats.",                                 tags: ["matplotlib", "figure", "publication", "vector"] },
-  { name: "tikz-framework-diagrammer",      theme: "visualization",        description: "TikZ pipeline diagrams: concise nodes, solid groups, resizebox.",                                         tags: ["tikz", "diagram", "latex", "pipeline"] },
-  { name: "scientific-poster-designer",     theme: "visualization",        description: "A0 posters (841x1189mm), IMRAD layout, 1m readability.",                                                  tags: ["poster", "a0", "imrad", "design"] },
-  { name: "bibtex-citation-manager",       theme: "writing-citation",     description: "Manage BibTeX: citekeys, dedup, field validation, every bibitem cited.",                                  tags: ["bibtex", "citations", "latex", "writing"] },
-  { name: "structured-abstract-writer",    theme: "writing-citation",     description: "Draft structured abstracts (Background/Methods/Results/Conclusion).",                                      tags: ["abstract", "writing", "imrad"] },
-  { name: "english-academic-editor",       theme: "writing-citation",     description: "Edit non-native English: articles, tense, hedging, register.",                                             tags: ["english", "editing", "academic", "writing"] },
-  { name: "ai-text-detector",              theme: "ai-text",               description: "Detect AI-generated text by scanning for a structured catalogue of tells.",                              tags: ["ai-detection", "tells", "perplexity", "ai-text"] },
-  { name: "ai-text-humanizer",             theme: "ai-text",               description: "Humanize AI text but keep all facts.",                                                                    tags: ["humanize", "ai-text", "rewriting", "voice"] },
-  { name: "hallucination-detector",        theme: "ai-output-judgement",   description: "Detect hallucinated content in AI outputs — fabricated entities, fake citations, invented statistics.",  tags: ["hallucination", "factuality", "ai-output", "verification"] },
-  { name: "bias-auditor",                  theme: "ai-output-judgement",   description: "Audit LLM outputs for gender/race bias.",                                                                  tags: ["bias", "audit", "ai-output", "fairness"] },
-  { name: "groundedness-verifier",         theme: "ai-output-judgement",   description: "Check if RAG output is grounded in the retrieved docs.",                                                  tags: ["rag", "groundedness", "ai-output", "verification"] },
-  { name: "readme-generator",              theme: "project-tooling",      description: "Generate a README.md for a Python package.",                                                              tags: ["readme", "docs", "packaging"] },
-  { name: "docker-research-container",     theme: "project-tooling",      description: "Write a Dockerfile for reproducible research.",                                                            tags: ["docker", "container", "reproducibility"] },
-];
-
-// ---- State --------------------------------------------------------------
-let ALL_SKILLS = [];
-let ACTIVE_TAG = null;
-
-// ---- DOM refs -----------------------------------------------------------
-const $status     = document.getElementById("status");
-const $cloud      = document.getElementById("cloud");
-const $skills     = document.getElementById("skills");
-const $filterInfo = document.getElementById("filterInfo");
-const $clearBtn   = document.getElementById("clearBtn");
-
-// ---- Minimal YAML parser -------------------------------------------------
-// Handles a flat list of dicts with scalar or inline-list values. That is
-// the format the skills.yaml file uses, so a full YAML parser is overkill.
-function parseSkillsYAML(text) {
-  text = text.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n");
-  const lines = text.split("\n");
-  const out = [];
-  let current = null;
-
-  const unquote = (s) => {
-    if ((s.startsWith('"') && s.endsWith('"')) ||
-        (s.startsWith("'") && s.endsWith("'"))) {
-      return s.slice(1, -1);
-    }
-    return s;
-  };
-
-  const parseValue = (s) => {
-    s = s.trim();
-    if (s === "") return "";
-    // Inline list: [a, b, c]
-    if (s.startsWith("[") && s.endsWith("]")) {
-      return s.slice(1, -1)
-        .split(",")
-        .map((x) => unquote(x.trim()))
-        .filter((x) => x.length > 0);
-    }
-    return unquote(s);
-  };
-
-  for (const raw of lines) {
-    const line = raw.replace(/\s+$/, "");
-    if (!line.trim()) continue;
-    if (line.trim().startsWith("#")) continue;
-
-    // List item start: "- key: value"
-    const listItem = line.match(/^-\s+([^:]+?):\s*(.*)$/);
-    if (listItem) {
-      if (current) out.push(current);
-      current = {};
-      current[listItem[1].trim()] = parseValue(listItem[2]);
-      continue;
-    }
-
-    // Continuation: "  key: value"
-    const kv = line.match(/^(\s+)([^:]+?):\s*(.*)$/);
-    if (kv && current) {
-      current[kv[2].trim()] = parseValue(kv[3]);
-      continue;
-    }
-  }
-  if (current) out.push(current);
-  return out;
-}
-
-// ---- Normalize a parsed skill record ------------------------------------
-function normalizeSkill(rec) {
-  if (!rec || typeof rec !== "object") return null;
-  const name = (rec.name || "").toString().trim();
-  const theme = (rec.theme || "").toString().trim();
-  const description = (rec.description || "").toString().trim();
-  let tags = rec.tags;
-  if (typeof tags === "string") tags = [tags];
-  if (!Array.isArray(tags)) tags = [];
-  tags = tags.map((t) => String(t).trim()).filter((t) => t.length > 0);
-  if (!name) return null;
-  return { name, theme, description, tags };
-}
-
-// ---- Load skills.yaml (try several paths) -------------------------------
-async function loadSkills() {
-  const candidates = [
-    "./skills.yaml",
-    "../skills.yaml",
-    "../../skills.yaml",
-    "../../../skills.yaml",
+  // ---- Embedded fallback dataset (used only if skills.yaml cannot be loaded).
+  // Drawn from the real SkillStack library so the page is useful out of the box.
+  const FALLBACK_SKILLS = [
+    {
+      name: "research-ideation-planner",
+      theme: "academic-research",
+      description: "Propose 3+ novel research ideas aligned to a target venue, then build an end-to-end blueprint.",
+      tags: ["research", "ideation", "venue", "blueprint"]
+    },
+    {
+      name: "journal-manuscript-writer",
+      theme: "academic-research",
+      description: "Draft publication-ready journal sections in LaTeX with strict style rules.",
+      tags: ["latex", "manuscript", "ieee", "elsevier", "writing"]
+    },
+    {
+      name: "grant-proposal-writer",
+      theme: "academic-research",
+      description: "Draft competitive grant proposals (specific aims, significance, approach, budget).",
+      tags: ["grant", "proposal", "funding", "writing"]
+    },
+    {
+      name: "literature-review-synthesizer",
+      theme: "academic-research",
+      description: "Build systematic reviews with PICO/SPIDER framing and PRISMA flow.",
+      tags: ["literature", "review", "prisma", "pico", "synthesis"]
+    },
+    {
+      name: "peer-review-simulator",
+      theme: "academic-research",
+      description: "Generate peer-review reports and author rebuttal letters.",
+      tags: ["peer-review", "rebuttal", "review"]
+    },
+    {
+      name: "thesis-chapter-planner",
+      theme: "academic-research",
+      description: "Plan thesis/dissertation chapters with cross-chapter non-redundancy.",
+      tags: ["thesis", "dissertation", "planning"]
+    },
+    {
+      name: "latex-style-guard",
+      theme: "style-integrity",
+      description: "Enforce LaTeX typography: blank lines around floats, % ====== % separators, LaTeX quotes.",
+      tags: ["latex", "style", "typography", "prose"]
+    },
+    {
+      name: "coding-conventions-enforcer",
+      theme: "style-integrity",
+      description: "Enforce camelCase variables, CamelCase functions/classes, parens in if, period-ended comments.",
+      tags: ["coding", "conventions", "python", "style"]
+    },
+    {
+      name: "zero-fabrication-guard",
+      theme: "style-integrity",
+      description: "Verify every citation, DOI, URL, dataset name via web search; silent-omit if missing.",
+      tags: ["citations", "doi", "verification", "fabrication"]
+    },
+    {
+      name: "execution-protocol",
+      theme: "style-integrity",
+      description: "10-stage meta-discipline: Comprehend → Clarify → Define Success → ... → Deliver.",
+      tags: ["discipline", "workflow", "execution", "planning"]
+    },
+    {
+      name: "hyperparameter-tuner",
+      theme: "ml-engineering",
+      description: "Optuna Bayesian optimization (TPE, median pruner, multi-fidelity).",
+      tags: ["optuna", "tpe", "bayesian", "hyperparameter", "ml"]
+    },
+    {
+      name: "reproducible-experiment-runner",
+      theme: "ml-engineering",
+      description: "Setup reproducible experiments: device resolution, seeds, dual logging, 4-split folders.",
+      tags: ["reproducibility", "experiment", "seed", "device", "ml"]
+    },
+    {
+      name: "model-explainer",
+      theme: "ml-engineering",
+      description: "SHAP/LIME/Integrated-Gradients explanations and plots.",
+      tags: ["shap", "lime", "explainability", "ml"]
+    },
+    {
+      name: "pytorch-lightning-scaffold",
+      theme: "ml-engineering",
+      description: "Scaffold LightningModule, DataModule, Callbacks, Loggers.",
+      tags: ["pytorch", "lightning", "scaffold", "ml"]
+    },
+    {
+      name: "etl-pipeline-builder",
+      theme: "data-engineering",
+      description: "Idempotent ETL with extract-validate-transform-load and audit trail.",
+      tags: ["etl", "pipeline", "data", "audit"]
+    },
+    {
+      name: "data-quality-validator",
+      theme: "data-engineering",
+      description: "Validate with pandera/great-expectations; null/duplicate/outlier checks.",
+      tags: ["pandera", "validation", "data-quality", "data"]
+    },
+    {
+      name: "data-anonymizer",
+      theme: "data-engineering",
+      description: "Anonymize PII: hashing, k-anonymity, generalization, suppression.",
+      tags: ["pii", "anonymization", "privacy", "data"]
+    },
+    {
+      name: "publication-figure-maker",
+      theme: "visualization",
+      description: "Journal-ready matplotlib figures with correct sizes and vector formats.",
+      tags: ["matplotlib", "figure", "publication", "vector"]
+    },
+    {
+      name: "tikz-framework-diagrammer",
+      theme: "visualization",
+      description: "TikZ pipeline diagrams: concise nodes, solid groups, resizebox.",
+      tags: ["tikz", "diagram", "latex", "pipeline"]
+    },
+    {
+      name: "scientific-poster-designer",
+      theme: "visualization",
+      description: "A0 posters (841x1189mm), IMRAD layout, 1m readability.",
+      tags: ["poster", "a0", "imrad", "design"]
+    },
+    {
+      name: "bibtex-citation-manager",
+      theme: "writing-citation",
+      description: "Manage BibTeX: citekeys, dedup, field validation, every bibitem cited.",
+      tags: ["bibtex", "citations", "latex", "writing"]
+    },
+    {
+      name: "structured-abstract-writer",
+      theme: "writing-citation",
+      description: "Draft structured abstracts (Background/Methods/Results/Conclusion).",
+      tags: ["abstract", "writing", "imrad"]
+    },
+    {
+      name: "english-academic-editor",
+      theme: "writing-citation",
+      description: "Edit non-native English: articles, tense, hedging, register.",
+      tags: ["english", "editing", "academic", "writing"]
+    },
+    {
+      name: "ai-text-detector",
+      theme: "ai-text",
+      description: "Detect AI-generated text by scanning for a structured catalogue of tells.",
+      tags: ["ai-detection", "tells", "perplexity", "ai-text"]
+    },
+    {
+      name: "ai-text-humanizer",
+      theme: "ai-text",
+      description: "Humanize AI text but keep all facts.",
+      tags: ["humanize", "ai-text", "rewriting", "voice"]
+    },
+    {
+      name: "hallucination-detector",
+      theme: "ai-output-judgement",
+      description: "Detect hallucinated content in AI outputs — fabricated entities, fake citations, invented statistics.",
+      tags: ["hallucination", "factuality", "ai-output", "verification"]
+    },
+    {
+      name: "bias-auditor",
+      theme: "ai-output-judgement",
+      description: "Audit LLM outputs for gender/race bias.",
+      tags: ["bias", "audit", "ai-output", "fairness"]
+    },
+    {
+      name: "groundedness-verifier",
+      theme: "ai-output-judgement",
+      description: "Check if RAG output is grounded in the retrieved docs.",
+      tags: ["rag", "groundedness", "ai-output", "verification"]
+    },
+    {
+      name: "readme-generator",
+      theme: "project-tooling",
+      description: "Generate a README.md for a Python package.",
+      tags: ["readme", "docs", "packaging"]
+    },
+    {
+      name: "docker-research-container",
+      theme: "project-tooling",
+      description: "Write a Dockerfile for reproducible research.",
+      tags: ["docker", "container", "reproducibility"]
+    },
   ];
-  const tried = [];
-  for (const path of candidates) {
-    try {
-      const res = await fetch(path, { cache: "no-store" });
-      if (res.ok) {
-        const text = await res.text();
-        const parsed = parseSkillsYAML(text)
-          .map(normalizeSkill)
-          .filter(Boolean);
-        if (parsed.length > 0) {
-          return { source: path, skills: parsed };
+
+  // ---- State --------------------------------------------------------------
+  let ALL_SKILLS = [];
+  let ACTIVE_TAG = null;
+
+  // ---- DOM refs -----------------------------------------------------------
+  const $status = document.getElementById("status");
+  const $cloud = document.getElementById("cloud");
+  const $skills = document.getElementById("skills");
+  const $filterInfo = document.getElementById("filterInfo");
+  const $clearBtn = document.getElementById("clearBtn");
+
+  // ---- Minimal YAML parser -------------------------------------------------
+  // Handles a flat list of dicts with scalar or inline-list values. That is
+  // the format the skills.yaml file uses, so a full YAML parser is overkill.
+  function parseSkillsYAML(text) {
+    text = text.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n");
+    const lines = text.split("\n");
+    const out = [];
+    let current = null;
+
+    const unquote = (s) => {
+      if ((s.startsWith('"') && s.endsWith('"')) ||
+          (s.startsWith("'") && s.endsWith("'"))) {
+        return s.slice(1, -1);
+      }
+      return s;
+    };
+
+    const parseValue = (s) => {
+      s = s.trim();
+      if (s === "") return "";
+      // Inline list: [a, b, c]
+      if (s.startsWith("[") && s.endsWith("]")) {
+        return s.slice(1, -1)
+            .split(",")
+            .map((x) => unquote(x.trim()))
+            .filter((x) => x.length > 0);
+      }
+      return unquote(s);
+    };
+
+    for (const raw of lines) {
+      const line = raw.replace(/\s+$/, "");
+      if (!line.trim()) continue;
+      if (line.trim().startsWith("#")) continue;
+
+      // List item start: "- key: value"
+      const listItem = line.match(/^-\s+([^:]+?):\s*(.*)$/);
+      if (listItem) {
+        if (current) out.push(current);
+        current = {};
+        current[listItem[1].trim()] = parseValue(listItem[2]);
+        continue;
+      }
+
+      // Continuation: "  key: value"
+      const kv = line.match(/^(\s+)([^:]+?):\s*(.*)$/);
+      if (kv && current) {
+        current[kv[2].trim()] = parseValue(kv[3]);
+        continue;
+      }
+    }
+    if (current) out.push(current);
+    return out;
+  }
+
+  // ---- Normalize a parsed skill record ------------------------------------
+  function normalizeSkill(rec) {
+    if (!rec || typeof rec !== "object") return null;
+    const name = (rec.name || "").toString().trim();
+    const theme = (rec.theme || "").toString().trim();
+    const description = (rec.description || "").toString().trim();
+    let tags = rec.tags;
+    if (typeof tags === "string") tags = [tags];
+    if (!Array.isArray(tags)) tags = [];
+    tags = tags.map((t) => String(t).trim()).filter((t) => t.length > 0);
+    if (!name) return null;
+    return {name, theme, description, tags};
+  }
+
+  // ---- Load skills.yaml (try several paths) -------------------------------
+  async function loadSkills() {
+    const candidates = [
+      "./skills.yaml",
+      "../skills.yaml",
+      "../../skills.yaml",
+      "../../../skills.yaml",
+    ];
+    const tried = [];
+    for (const path of candidates) {
+      try {
+        const res = await fetch(path, {cache: "no-store"});
+        if (res.ok) {
+          const text = await res.text();
+          const parsed = parseSkillsYAML(text)
+              .map(normalizeSkill)
+              .filter(Boolean);
+          if (parsed.length > 0) {
+            return {source: path, skills: parsed};
+          }
+          // File exists but parsed to nothing — keep trying other paths.
+          tried.push(`${path} (parsed empty)`);
+        } else {
+          tried.push(`${path} (HTTP ${res.status})`);
         }
-        // File exists but parsed to nothing — keep trying other paths.
-        tried.push(`${path} (parsed empty)`);
-      } else {
-        tried.push(`${path} (HTTP ${res.status})`);
+      } catch (err) {
+        tried.push(`${path} (${err.message})`);
       }
-    } catch (err) {
-      tried.push(`${path} (${err.message})`);
     }
-  }
-  return { source: null, skills: FALLBACK_SKILLS, tried };
-}
-
-// ---- Tag frequency counting ---------------------------------------------
-function computeTagCounts(skills) {
-  const counts = new Map();
-  for (const s of skills) {
-    for (const t of s.tags) {
-      counts.set(t, (counts.get(t) || 0) + 1);
-    }
-  }
-  return counts;
-}
-
-// ---- Render: tag cloud --------------------------------------------------
-function renderCloud(skills) {
-  const counts = computeTagCounts(skills);
-  if (counts.size === 0) {
-    $cloud.innerHTML = "<em style='color:#64748b'>No tags found in the loaded skill data.</em>";
-    return;
+    return {source: null, skills: FALLBACK_SKILLS, tried};
   }
 
-  // Sort tags alphabetically for a stable cloud.
-  const tags = [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0]));
-  const max = Math.max(...tags.map(([, n]) => n));
-  const min = Math.min(...tags.map(([, n]) => n));
-  const MIN_FONT = 12;
-  const MAX_FONT = 32;
-
-  $cloud.innerHTML = "";
-  for (const [tag, count] of tags) {
-    // Linear scale between min and max frequency.
-    const ratio = max === min ? 0.5 : (count - min) / (max - min);
-    const size = MIN_FONT + Math.round(ratio * (MAX_FONT - MIN_FONT));
-    const el = document.createElement("button");
-    el.type = "button";
-    el.className = "tag" + (tag === ACTIVE_TAG ? " active" : "");
-    el.style.fontSize = size + "px";
-    el.dataset.tag = tag;
-    el.innerHTML = escapeHTML(tag) + "<span class='count'>" + count + "</span>";
-    el.addEventListener("click", () => {
-      ACTIVE_TAG = ACTIVE_TAG === tag ? null : tag;
-      renderCloud(ALL_SKILLS);
-      renderSkills(ALL_SKILLS);
-      updateFilterInfo();
-    });
-    $cloud.appendChild(el);
-  }
-}
-
-// ---- Render: skill list -------------------------------------------------
-function renderSkills(skills) {
-  const visible = ACTIVE_TAG
-    ? skills.filter((s) => s.tags.includes(ACTIVE_TAG))
-    : skills;
-
-  if (visible.length === 0) {
-    $skills.innerHTML =
-      '<div id="empty">No skills match the tag <code>' +
-      escapeHTML(ACTIVE_TAG) +
-      "</code>.</div>";
-    return;
-  }
-
-  $skills.innerHTML = "";
-  for (const s of visible) {
-    const card = document.createElement("article");
-    card.className = "card";
-
-    const head = document.createElement("div");
-    head.className = "head";
-    const nameEl = document.createElement("div");
-    nameEl.className = "name";
-    nameEl.textContent = s.name;
-    const themeEl = document.createElement("span");
-    themeEl.className = "theme";
-    themeEl.textContent = s.theme || "uncategorized";
-    head.appendChild(nameEl);
-    head.appendChild(themeEl);
-    card.appendChild(head);
-
-    if (s.description) {
-      const desc = document.createElement("p");
-      desc.className = "desc";
-      desc.textContent = s.description;
-      card.appendChild(desc);
-    }
-
-    if (s.tags.length > 0) {
-      const tags = document.createElement("div");
-      tags.className = "tags";
+  // ---- Tag frequency counting ---------------------------------------------
+  function computeTagCounts(skills) {
+    const counts = new Map();
+    for (const s of skills) {
       for (const t of s.tags) {
-        const tEl = document.createElement("span");
-        tEl.className = "t" + (t === ACTIVE_TAG ? " active" : "");
-        tEl.textContent = t;
-        tEl.addEventListener("click", () => {
-          ACTIVE_TAG = ACTIVE_TAG === t ? null : t;
-          renderCloud(ALL_SKILLS);
-          renderSkills(ALL_SKILLS);
-          updateFilterInfo();
-        });
-        tags.appendChild(tEl);
+        counts.set(t, (counts.get(t) || 0) + 1);
       }
-      card.appendChild(tags);
+    }
+    return counts;
+  }
+
+  // ---- Render: tag cloud --------------------------------------------------
+  function renderCloud(skills) {
+    const counts = computeTagCounts(skills);
+    if (counts.size === 0) {
+      $cloud.innerHTML = "<em style='color:#64748b'>No tags found in the loaded skill data.</em>";
+      return;
     }
 
-    $skills.appendChild(card);
-  }
-}
+    // Sort tags alphabetically for a stable cloud.
+    const tags = [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+    const max = Math.max(...tags.map(([, n]) => n));
+    const min = Math.min(...tags.map(([, n]) => n));
+    const MIN_FONT = 12;
+    const MAX_FONT = 32;
 
-// ---- Filter info / clear button -----------------------------------------
-function updateFilterInfo() {
-  if (ACTIVE_TAG) {
-    const count = ALL_SKILLS.filter((s) => s.tags.includes(ACTIVE_TAG)).length;
-    $filterInfo.innerHTML =
-      "Filter: <strong>" + escapeHTML(ACTIVE_TAG) +
-      "</strong> · " + count + " of " + ALL_SKILLS.length + " skills";
-    $clearBtn.disabled = false;
-  } else {
-    $filterInfo.innerHTML =
-      "All skills · <strong>" + ALL_SKILLS.length + "</strong> total";
-    $clearBtn.disabled = true;
-  }
-}
-
-$clearBtn.addEventListener("click", () => {
-  ACTIVE_TAG = null;
-  renderCloud(ALL_SKILLS);
-  renderSkills(ALL_SKILLS);
-  updateFilterInfo();
-});
-
-// ---- Helpers ------------------------------------------------------------
-function escapeHTML(s) {
-  return String(s)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-// ---- Boot ---------------------------------------------------------------
-(async function init() {
-  const result = await loadSkills();
-  ALL_SKILLS = result.skills;
-
-  if (result.source) {
-    $status.textContent =
-      "Loaded " + ALL_SKILLS.length + " skills from " + result.source + ".";
-    $status.className = "ok";
-  } else {
-    $status.innerHTML =
-      "Could not find <code>skills.yaml</code> — showing a " + ALL_SKILLS.length +
-      "-skill fallback dataset. Tried: " +
-      (result.tried || []).map(escapeHTML).join(", ") +
-      ". To see the full 168 skills, generate one with: " +
-      "<code>node ../../mcp-server/index.js</code> and dump the list_skills output " +
-      "to <code>skills.yaml</code> as YAML.";
-    $status.className = "error";
+    $cloud.innerHTML = "";
+    for (const [tag, count] of tags) {
+      // Linear scale between min and max frequency.
+      const ratio = max === min ? 0.5 : (count - min) / (max - min);
+      const size = MIN_FONT + Math.round(ratio * (MAX_FONT - MIN_FONT));
+      const el = document.createElement("button");
+      el.type = "button";
+      el.className = "tag" + (tag === ACTIVE_TAG ? " active" : "");
+      el.style.fontSize = size + "px";
+      el.dataset.tag = tag;
+      el.innerHTML = escapeHTML(tag) + "<span class='count'>" + count + "</span>";
+      el.addEventListener("click", () => {
+        ACTIVE_TAG = ACTIVE_TAG === tag ? null : tag;
+        renderCloud(ALL_SKILLS);
+        renderSkills(ALL_SKILLS);
+        updateFilterInfo();
+      });
+      $cloud.appendChild(el);
+    }
   }
 
-  renderCloud(ALL_SKILLS);
-  renderSkills(ALL_SKILLS);
-  updateFilterInfo();
-})();
+  // ---- Render: skill list -------------------------------------------------
+  function renderSkills(skills) {
+    const visible = ACTIVE_TAG
+        ? skills.filter((s) => s.tags.includes(ACTIVE_TAG))
+        : skills;
+
+    if (visible.length === 0) {
+      $skills.innerHTML =
+          '<div id="empty">No skills match the tag <code>' +
+          escapeHTML(ACTIVE_TAG) +
+          "</code>.</div>";
+      return;
+    }
+
+    $skills.innerHTML = "";
+    for (const s of visible) {
+      const card = document.createElement("article");
+      card.className = "card";
+
+      const head = document.createElement("div");
+      head.className = "head";
+      const nameEl = document.createElement("div");
+      nameEl.className = "name";
+      nameEl.textContent = s.name;
+      const themeEl = document.createElement("span");
+      themeEl.className = "theme";
+      themeEl.textContent = s.theme || "uncategorized";
+      head.appendChild(nameEl);
+      head.appendChild(themeEl);
+      card.appendChild(head);
+
+      if (s.description) {
+        const desc = document.createElement("p");
+        desc.className = "desc";
+        desc.textContent = s.description;
+        card.appendChild(desc);
+      }
+
+      if (s.tags.length > 0) {
+        const tags = document.createElement("div");
+        tags.className = "tags";
+        for (const t of s.tags) {
+          const tEl = document.createElement("span");
+          tEl.className = "t" + (t === ACTIVE_TAG ? " active" : "");
+          tEl.textContent = t;
+          tEl.addEventListener("click", () => {
+            ACTIVE_TAG = ACTIVE_TAG === t ? null : t;
+            renderCloud(ALL_SKILLS);
+            renderSkills(ALL_SKILLS);
+            updateFilterInfo();
+          });
+          tags.appendChild(tEl);
+        }
+        card.appendChild(tags);
+      }
+
+      $skills.appendChild(card);
+    }
+  }
+
+  // ---- Filter info / clear button -----------------------------------------
+  function updateFilterInfo() {
+    if (ACTIVE_TAG) {
+      const count = ALL_SKILLS.filter((s) => s.tags.includes(ACTIVE_TAG)).length;
+      $filterInfo.innerHTML =
+          "Filter: <strong>" + escapeHTML(ACTIVE_TAG) +
+          "</strong> · " + count + " of " + ALL_SKILLS.length + " skills";
+      $clearBtn.disabled = false;
+    } else {
+      $filterInfo.innerHTML =
+          "All skills · <strong>" + ALL_SKILLS.length + "</strong> total";
+      $clearBtn.disabled = true;
+    }
+  }
+
+  $clearBtn.addEventListener("click", () => {
+    ACTIVE_TAG = null;
+    renderCloud(ALL_SKILLS);
+    renderSkills(ALL_SKILLS);
+    updateFilterInfo();
+  });
+
+  // ---- Helpers ------------------------------------------------------------
+  function escapeHTML(s) {
+    return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+  }
+
+  // ---- Boot ---------------------------------------------------------------
+  (async function init() {
+    const result = await loadSkills();
+    ALL_SKILLS = result.skills;
+
+    if (result.source) {
+      $status.textContent =
+          "Loaded " + ALL_SKILLS.length + " skills from " + result.source + ".";
+      $status.className = "ok";
+    } else {
+      $status.innerHTML =
+          "Could not find <code>skills.yaml</code> — showing a " + ALL_SKILLS.length +
+          "-skill fallback dataset. Tried: " +
+          (result.tried || []).map(escapeHTML).join(", ") +
+          ". To see the full 168 skills, generate one with: " +
+          "<code>node ../../mcp-server/index.js</code> and dump the list_skills output " +
+          "to <code>skills.yaml</code> as YAML.";
+      $status.className = "error";
+    }
+
+    renderCloud(ALL_SKILLS);
+    renderSkills(ALL_SKILLS);
+    updateFilterInfo();
+  })();
 </script>
 
 </body>

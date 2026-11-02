@@ -22,32 +22,40 @@ language: en
 # Structured Abstract Writer
 
 ## When To Use
+
 - The journal's author guide requires a structured abstract with bold headings (e.g., JAMA, Lancet, PLOS ONE).
 - You must hit a strict word ceiling (commonly 250-350 words) without dropping required sections.
 - You need to generate the post-abstract keyword line for indexing (MeSH-style or SEO-oriented).
 - A reviewer asked the abstract to mirror the IMRaD body of the paper.
 
 ## Workflow
+
 1. Read the target journal's abstract policy: word limit, mandatory headings, whether tables are allowed.
-2. Collect source material: study question, design, sample, primary outcome, key effect size, and bottom-line conclusion.
-3. Draft each labeled section in order: **Background:**, **Methods:**, **Results:**, **Conclusion:** (add **Objective:**, **Trial Registration:** only if the journal mandates).
+2. Collect source material: study question, design, sample, primary outcome, key effect size, and bottom-line
+   conclusion.
+3. Draft each labeled section in order: **Background:**, **Methods:**, **Results:**, **Conclusion:** (add
+   **Objective:**, **Trial Registration:** only if the journal mandates).
 4. Allocate word budget roughly 15/30/35/20 percent across the four sections; trim the longest section first.
 5. Strip hedging from Results (report numbers); keep one cautious sentence in Conclusion.
-6. Generate the keyword line: 4-6 terms, semicolon-separated, none duplicating title words, ordered by specificity descending.
+6. Generate the keyword line: 4-6 terms, semicolon-separated, none duplicating title words, ordered by specificity
+   descending.
 7. Run a word-count check and a heading-presence check; iterate until both pass.
 8. Produce a plain-text version (for the submission portal) and a LaTeX version (with `\textbf`).
 
 ## Inputs
+
 - Manuscript draft or bulleted facts covering objective, methods, results, conclusion.
 - Journal name and abstract policy (word limit, required headings).
 - Paper title (so keywords can avoid duplicating it).
 
 ## Outputs
+
 - `abstract_structured.md` — the structured abstract with bold inline headings.
 - `keywords.txt` — single line of 4-6 semicolon-separated keywords.
 - `abstract_check.md` — word count per section and pass/fail on each policy rule.
 
 ## Key Rules
+
 - Every mandated heading must appear, in the order the journal specifies.
 - Keywords may not duplicate any word in the title (case-insensitive, stemming ignored).
 - Results must contain at least one numeric effect estimate with units and confidence interval when applicable.
@@ -56,6 +64,7 @@ language: en
 - Do not cite references inside the structured abstract unless the journal explicitly permits it.
 
 ## Examples
+
 ```text
 Before (free-form, 412 words, no headings):
 This study looked at whether a new drug lowers blood pressure. We enrolled
@@ -87,6 +96,8 @@ Keywords: renin inhibitor; ambulatory blood pressure; resistant hypertension; ad
 ```
 
 ## References
+
 - NIH structured abstract guidance for grant applications and reports.
-- ICMJE Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals (abstract section).
+- ICMJE Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals
+  (abstract section).
 - MeSH Browser for keyword normalization: https://meshb.nlm.nih.gov/.

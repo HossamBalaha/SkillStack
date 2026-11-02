@@ -20,9 +20,8 @@ from __future__ import annotations
 
 import argparse
 import sys
-from pathlib import Path
-
 import yaml
+from pathlib import Path
 
 # Ensure the scripts/ directory is importable when run as a script.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -41,15 +40,15 @@ def BuildSkillEntry(doc: SkillDoc) -> dict:
   """
   # Compose the per-skill manifest entry using CamelCase dict keys.
   return {
-    "Name": doc.Name,
-    "Description": doc.Description,
-    "Tags": list(doc.Tags),
-    "Related": list(doc.Related),
-    "Prerequisites": list(doc.Prerequisites),
-    "Outputs": list(doc.Outputs),
-    "Difficulty": doc.Difficulty,
+    "Name"           : doc.Name,
+    "Description"    : doc.Description,
+    "Tags"           : list(doc.Tags),
+    "Related"        : list(doc.Related),
+    "Prerequisites"  : list(doc.Prerequisites),
+    "Outputs"        : list(doc.Outputs),
+    "Difficulty"     : doc.Difficulty,
     "EstimatedTokens": int(doc.EstimatedTokens),
-    "Permissions": list(doc.Permissions),
+    "Permissions"    : list(doc.Permissions),
   }
 
 
@@ -69,9 +68,9 @@ def BuildThemeEntry(themeName: str, docs: list[SkillDoc]) -> dict:
   # Build the per-skill entries in the sorted order.
   skillEntries = [BuildSkillEntry(doc) for doc in sortedDocs]
   return {
-    "Name": themeName,
+    "Name"      : themeName,
     "SkillCount": len(sortedDocs),
-    "Skills": skillEntries,
+    "Skills"    : skillEntries,
   }
 
 
@@ -111,7 +110,7 @@ def BuildManifest(rootPath: Path) -> dict:
   return {
     "TotalSkills": totalSkills,
     "TotalThemes": len(byTheme),
-    "Themes": themeEntries,
+    "Themes"     : themeEntries,
   }
 
 

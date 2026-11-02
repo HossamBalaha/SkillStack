@@ -22,12 +22,14 @@ language: ar
 # ضابط المعاملات الفائقة
 
 ## متى تستخدم
+
 - ضبط أكثر من حفنة من المعاملات الفائقةّ حيث يصبح البحث الشبكيّ غير عمليّ.
 - قراءة فضاء البحث من `Configs/Config.yaml` والتحسين تلقائيّاً.
 - تقليم المحاولات غير الواعدة مبكّراً لتوفير الحساب.
 - الاستمرار في تاريخ المحاولة الكاملّ إلى CSV لإمكانيّة التكرار.
 
 ## سير العمل
+
 1. حمِّل `Configs/Config.yaml` واقرأ كتلة `SearchSpace`.
 2. أنشئ `optuna.study.Study` بعيّنة TPE ومولّد أرقام عشوائيّة مُبذَر.
 3. أرفق `MedianPruner` (أو `HyperbandPruner` للترقية متعدّدة الدقّة).
@@ -38,15 +40,18 @@ language: ar
 8. أعد تدريب النموذج بأفضل المعاملات واحفظه.
 
 ## المُدخلات
+
 - `Configs/Config.yaml` يحوي كتلة `SearchSpace`.
 - دالة تدريب تقبل قاموس معاملات فائقةّ وتعيد مقياس تحقّق.
 
 ## المُخرجات
+
 - `Aggregated/OptunaTrials.csv` بكلّ محاولة.
 - `Aggregated/BestParams.json` بالتكوين الفائز.
 - نقطة فحص النموذج الأفضل المُعاد تدريبه.
 
 ## القواعد الأساسية
+
 - استخدم `optuna.samplers.TPESampler(seed=...)` ببذرة ثابتة.
 - استخدم `optuna.pruners.MedianPruner` افتراضيّاً؛ HyperbandPruner للدقّة المتعدّدة.
 - يجب أن يستدعي الهدف `trial.report(metric, step)` ويتحقّق من `trial.should_prune()`.
@@ -54,6 +59,7 @@ language: ar
 - أشِر فقط إلى واجهة برمجة تطبيقات Optuna الحقيقيّة على https://optuna.org.
 
 ## أمثلة
+
 ```python
 # Bayesian optimization with TPE and a median pruner.
 import optuna
@@ -112,6 +118,7 @@ def RunTuning(SearchSpace, TrainFunction, N_trials, Seed, OutputPath):
 ```
 
 ## المراجع
+
 - توثيق Optuna: https://optuna.org
 - عيّنة TPE: https://optuna.readthedocs.io/en/stable/reference/generated/optuna.samplers.TPESampler.html
 - MedianPruner: https://optuna.readthedocs.io/en/stable/reference/generated/optuna.pruners.MedianPruner.html

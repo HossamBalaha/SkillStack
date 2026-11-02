@@ -22,12 +22,14 @@ language: en
 # Early Stopping Configurator
 
 ## When To Use
+
 - Training a model that may plateau well before `max_epochs`.
 - Preventing overfitting by monitoring a validation metric.
 - Restoring the best weights rather than the last epoch's weights.
 - Logging the exact epoch at which training stopped.
 
 ## Workflow
+
 1. Pick the monitor metric (`val_loss`, `val_auc`, `val_f1`).
 2. Choose the mode (`min` for loss, `max` for accuracy/AUC).
 3. Set `patience` (epochs without improvement before stopping).
@@ -37,14 +39,17 @@ language: en
 7. Log the epoch at which training stopped.
 
 ## Inputs
+
 - `Configs/Config.yaml` with `Monitor`, `Mode`, `Patience`, `MinDelta`.
 - The trainer or training loop instance.
 
 ## Outputs
+
 - A callback that stops training when the metric plateaus.
 - A logged `StoppedEpoch` value in `Aggregated/TrainingLog.json`.
 
 ## Key Rules
+
 - `min` mode for losses; `max` mode for accuracy/AUC.
 - `restore_best_weights=True` must be set so the best epoch is kept.
 - `min_delta` must be a small positive number (e.g. 1e-4) to avoid noise stopping.
@@ -52,6 +57,7 @@ language: en
 - Reference only real Lightning API at https://lightning.ai.
 
 ## Examples
+
 ```python
 # Lightning EarlyStopping + custom implementation fallback.
 import json
@@ -117,5 +123,6 @@ class CustomEarlyStopping:
 ```
 
 ## References
+
 - Lightning EarlyStopping: https://lightning.ai/docs/pytorch/stable/api/pytorch_lightning.callbacks.EarlyStopping.html
 - Keras-style early stopping reference: https://keras.io/api/callbacks/early_stopping/

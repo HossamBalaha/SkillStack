@@ -1,7 +1,8 @@
 # SkillStack Cookbook — 20 Skill Chains for Real Workflows
 
 > Each recipe is a one-line problem statement followed by an ordered skill chain.
-> Load `maestro/SKILL.md` first, then follow the chain left-to-right, finishing each skill's declared `Outputs` before loading the next.
+> Load `maestro/SKILL.md` first, then follow the chain left-to-right, finishing each skill's declared `Outputs` before
+> loading the next.
 >
 > 168 skills · 9 themes · MIT License · by Hossam Magdy Balaha
 
@@ -34,7 +35,8 @@
 
 ## 1. Patient CSV → publishable classifier
 
-> A clinical CSV with PII must become a trained, validated, explainable classifier documented well enough for a journal reviewer to reproduce.
+> A clinical CSV with PII must become a trained, validated, explainable classifier documented well enough for a journal
+> reviewer to reproduce.
 
 Skill chain (8 skills):
 
@@ -51,7 +53,8 @@ Skill chain (8 skills):
 
 ## 2. LLM eval harness for a fine-tuned model
 
-> Benchmark a fine-tuned checkpoint on standard suites, judge with LLM-as-judge, and ship a reproducible leaderboard table.
+> Benchmark a fine-tuned checkpoint on standard suites, judge with LLM-as-judge, and ship a reproducible leaderboard
+> table.
 
 Skill chain (6 skills):
 
@@ -94,7 +97,8 @@ Skill chain (5 skills):
 
 ## 5. Audit a chatbot for bias and safety
 
-> A deployed chatbot must pass demographic-bias, safety, prompt-injection, PII-leak, and overall-quality checks before release.
+> A deployed chatbot must pass demographic-bias, safety, prompt-injection, PII-leak, and overall-quality checks before
+> release.
 
 Skill chain (6 skills):
 
@@ -157,7 +161,8 @@ Skill chain (6 skills):
 
 ## 9. Verify a RAG system is grounded & safe
 
-> A retrieval-augmented chatbot's answers must be grounded in retrieved docs, factually correct, free of hallucination, and leak no PII.
+> A retrieval-augmented chatbot's answers must be grounded in retrieved docs, factually correct, free of hallucination,
+> and leak no PII.
 
 Skill chain (6 skills):
 
@@ -172,7 +177,8 @@ Skill chain (6 skills):
 
 ## 10. New research repo with CI/CD and docs
 
-> Bootstrap a research codebase with packaging, pinned deps, ignores, scientific tests, CI, docs, and contribution guide.
+> Bootstrap a research codebase with packaging, pinned deps, ignores, scientific tests, CI, docs, and contribution
+> guide.
 
 Skill chain (7 skills):
 
@@ -276,7 +282,8 @@ Skill chain (5 skills):
 
 ## 17. Validate LLM-generated code before shipping
 
-> An LLM produced Python code; verify it runs, is numerically correct, internally consistent, injection-free, safe, and coherent.
+> An LLM produced Python code; verify it runs, is numerically correct, internally consistent, injection-free, safe, and
+> coherent.
 
 Skill chain (6 skills):
 
@@ -342,7 +349,8 @@ Skill chain (6 skills):
 4. **Read each skill's `Outputs`** — those become the inputs to the next skill in the chain.
 5. **Prefer the more specific skill** when two seem to apply; the maestro's conflict-resolution rule.
 6. **Finish each skill before loading the next** — never overlap, or you risk half-written artifacts.
-7. **End the chain on a packaging or review skill** (e.g., `reproducibility-checklist-author`, `zero-fabrication-guard`) so the output is shippable.
+7. **End the chain on a packaging or review skill** (e.g., `reproducibility-checklist-author`, `zero-fabrication-guard`)
+   so the output is shippable.
 
 ---
 

@@ -22,33 +22,43 @@ language: en
 # Notation Consistency Checker
 
 ## When To Use
-- User submits a math-heavy manuscript (machine learning, physics, statistics) and asks for "notation check" or "symbol audit".
+
+- User submits a math-heavy manuscript (machine learning, physics, statistics) and asks for "notation check" or "symbol
+  audit".
 - A symbol appears to mean two different things in two sections.
 - The manuscript defines more than fifteen distinct math symbols.
 - Sets, feature spaces, or graphs use inconsistent font conventions.
 
 ## Workflow
-1. Scan the full `.tex` source for math-mode symbols: Greek letters, calligraphic, blackboard-bold, Roman, operators, and indexed forms.
-2. Build a symbol → concept map by reading each definition site (typically the sentence immediately following the first equation using the symbol).
+
+1. Scan the full `.tex` source for math-mode symbols: Greek letters, calligraphic, blackboard-bold, Roman, operators,
+   and indexed forms.
+2. Build a symbol → concept map by reading each definition site (typically the sentence immediately following the first
+   equation using the symbol).
 3. Flag any symbol that maps to more than one concept. Report each conflict with section and line numbers.
 4. Flag any concept that uses more than one symbol.
-5. Apply calligraphic-font conventions: `\mathcal{D}` for datasets, `\mathcal{X}` for feature spaces, `\mathcal{Y}` for label spaces, `\mathcal{V}` for vertices, `\mathcal{E}` for edges, `\mathcal{N}` for neighbor sets.
+5. Apply calligraphic-font conventions: `\mathcal{D}` for datasets, `\mathcal{X}` for feature spaces, `\mathcal{Y}` for
+   label spaces, `\mathcal{V}` for vertices, `\mathcal{E}` for edges, `\mathcal{N}` for neighbor sets.
 6. Apply blackboard-bold for standard number domains: `\mathbb{R}`, `\mathbb{Z}`, `\mathbb{N}`.
-7. Count distinct symbols. If the count exceeds fifteen, mandate a "Nomenclature" table immediately after the abstract. The table lists each symbol, its definition, and its physical/clinical unit (or "dimensionless" if applicable).
+7. Count distinct symbols. If the count exceeds fifteen, mandate a "Nomenclature" table immediately after the abstract.
+   The table lists each symbol, its definition, and its physical/clinical unit (or "dimensionless" if applicable).
 8. Rewrite conflicting definitions to enforce one-to-one mapping. Prefer the original definition site as canonical.
 9. Re-scan to confirm all conflicts are resolved.
 10. Output the symbol table and the conflict-resolution report.
 
 ## Inputs
+
 - LaTeX manuscript source (`.tex`) and any included math macro files.
 - Field-specific conventions if known (e.g., physics vs. ML conventions for vectors).
 
 ## Outputs
+
 - Revised manuscript with consistent notation.
 - A Nomenclature table (if >15 symbols) ready for insertion after the abstract.
 - A conflict report listing every original conflict and its resolution.
 
 ## Key Rules
+
 - One symbol maps to exactly one concept across the entire manuscript.
 - Calligraphic fonts reserved for sets and spaces (`\mathcal{D}`, `\mathcal{X}`, etc.).
 - Blackboard-bold reserved for number domains.
@@ -61,12 +71,14 @@ language: en
 ## Examples
 
 Conflict detected:
+
 ```
 Section 3: Let D denote the dataset of N samples.
 Section 5: Let D denote the diffusion coefficient.
 ```
 
 Resolution:
+
 ```
 Section 3: Let \mathcal{D} denote the dataset of N samples.
 Section 5: Let D_{\text{diff}} denote the diffusion coefficient.
@@ -79,6 +91,7 @@ Nomenclature (after abstract):
 ```
 
 Font convention fix:
+
 ```
 Before: Let X be the feature space, V be the vertices, and N the neighbors.
 After:  Let \mathcal{X} be the feature space, \mathcal{V} the vertices,
@@ -86,6 +99,7 @@ After:  Let \mathcal{X} be the feature space, \mathcal{V} the vertices,
 ```
 
 ## References
+
 - AMS Author Handbook on mathematical notation.
 - Goodfellow, Bengio, Courville, *Deep Learning* (Appendix on notation).
 - ISO 80000-2 mathematical signs and symbols standard.

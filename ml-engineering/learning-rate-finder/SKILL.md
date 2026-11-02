@@ -22,12 +22,14 @@ language: en
 # Learning Rate Finder
 
 ## When To Use
+
 - Choosing a starting learning rate for a new architecture.
 - Sanity-checking whether the chosen LR is in the descending region of the loss curve.
 - Picking an LR for cyclical learning rate schedules.
 - Generating the canonical loss-vs-LR log-scale plot.
 
 ## Workflow
+
 1. Load the model, data loader, and optimizer from `Configs/Config.yaml`.
 2. Initialize LR at a very small value (e.g. 1e-7) and exponentially grow to ~1e1.
 3. Iterate over a few epochs while logging loss at each LR step.
@@ -38,14 +40,17 @@ language: en
 8. Write the picked LR to `Aggregated/SuggestedLr.json`.
 
 ## Inputs
+
 - A model factory, a data loader, and a loss function.
 - `Configs/Config.yaml` with `StartLr`, `EndLr`, `NumIter`.
 
 ## Outputs
+
 - `Aggregated/LrFinder.png` log-scale plot.
 - `Aggregated/SuggestedLr.json` with the picked LR.
 
 ## Key Rules
+
 - Start LR around 1e-7 and grow exponentially to ~1e1.
 - Plot loss vs LR on a LOG scale.
 - Pick the LR at the steepest descent, not at the minimum loss.
@@ -53,6 +58,7 @@ language: en
 - Reference Smith 2015, "Cyclical Learning Rates for Training Neural Networks".
 
 ## Examples
+
 ```python
 # LR range test using torch_lr_finder.
 import json
@@ -106,6 +112,7 @@ def SuggestLrAtSteepestDescent(LrFinder):
 ```
 
 ## References
+
 - Smith 2015, "Cyclical Learning Rates for Training Neural Networks": https://arxiv.org/abs/1506.01186
 - torch_lr_finder: https://github.com/davidtvs/pytorch-lr-finder
 - Lightning Tuner.lr_find: https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.tuner.Tuner.html

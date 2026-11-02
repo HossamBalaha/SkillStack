@@ -22,14 +22,18 @@ language: en
 # Plagiarism Paraphraser
 
 ## When To Use
+
 - A similarity report flags passages over 15% with a single source.
 - You need to incorporate dense technical source material without quoting it directly.
 - A reviewer suspects patchwriting (synonym-swapping that retains original sentence structure).
 - A grant or thesis office requires a sub-threshold iThenticate score before submission.
 
 ## Workflow
-1. Read the flagged passage and its source side-by-side; identify the core claim and any technical terms that must be preserved verbatim.
-2. Decide whether paraphrase is even appropriate — direct quotation is preferred for definitions, laws, or verbatim policy language.
+
+1. Read the flagged passage and its source side-by-side; identify the core claim and any technical terms that must be
+   preserved verbatim.
+2. Decide whether paraphrase is even appropriate — direct quotation is preferred for definitions, laws, or verbatim
+   policy language.
 3. Reorganize structure: change sentence order, merge adjacent sentences, or split long sentences.
 4. Substitute non-technical vocabulary; preserve domain terms, species names, model names, and unit abbreviations.
 5. Switch voice (active ↔ passive) only when it does not distort agency.
@@ -39,16 +43,19 @@ language: en
 9. Never invent citations to lend authority to the paraphrase.
 
 ## Inputs
+
 - The flagged text passage and its matching source.
 - The intended in-text citation (author, year).
 - A list of technical terms that must be preserved.
 
 ## Outputs
+
 - `paraphrased.md` — the rewritten passage with citation in place.
 - `similarity_report.md` — estimated overlap with source before and after paraphrasing.
 - `preserved_terms.txt` — list of technical terms kept verbatim, with rationale.
 
 ## Key Rules
+
 - Never fabricate citations — if the paraphrase needs support, mark `[CITATION NEEDED]`.
 - Preserve technical terms, proper nouns, units, and species names verbatim.
 - Patchwriting (synonym-swap only) is not acceptable paraphrase — the structure must change.
@@ -57,6 +64,7 @@ language: en
 - A paraphrase without a citation is still plagiarism.
 
 ## Examples
+
 ```text
 Source (Smith et al., 2022):
 "The rapid expansion of urban green spaces has been linked to measurable
@@ -83,6 +91,7 @@ Preserved terms log:
 ```
 
 ## Common Pitfalls
+
 - Swapping synonyms without restructuring — patchwriting still trips similarity checkers and is still plagiarism.
 - Preserving the original sentence's clause order even after synonym swaps.
 - Paraphrasing without citing — a citation-free paraphrase is still plagiarism.
@@ -90,6 +99,8 @@ Preserved terms log:
 - Softening or strengthening the original claim during paraphrase — preserve meaning exactly.
 
 ## References
+
 - Howard, R. M. (1992). A Plagiarism Pentimento. *Journal of Teaching Writing*, 11(2), 233-245 — on patchwriting.
 - iThenticate similarity scoring documentation: https://www.turnitin.com/products/similarity.
-- Purdue OWL on paraphrasing: https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html.
+- Purdue OWL on
+  paraphrasing: https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html.

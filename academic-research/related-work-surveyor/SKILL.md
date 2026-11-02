@@ -22,15 +22,18 @@ language: en
 # Related Work Surveyor
 
 ## When To Use
+
 - The user asks to "write related work", "compare prior methods", or "build a SOTA table".
 - The user wants a methodology-grouped comparison matrix, not a chronological list.
 - The user needs to articulate the research gap explicitly.
 - Trigger keywords: related work, related work survey, SOTA table, comparison matrix, gap statement.
 
 ## Workflow
+
 1. Take the candidate paper list (from the literature-review-synthesizer step or user input).
 2. Group papers by methodology family, not by year. Reject chronological narrative.
-3. Define 5-8 comparison dimensions (e.g., "Aggregator type", "Topology-aware", "Public code", "Datasets used", "Backbone").
+3. Define 5-8 comparison dimensions (e.g., "Aggregator type", "Topology-aware", "Public code", "Datasets used",
+   "Backbone").
 4. Build a paper × dimension matrix. Mark unknown cells with "Not reported" rather than leaving them blank.
 5. For each methodology family, write a 4-6 sentence synthesis paragraph (not a paper-by-paper walk).
 6. Identify the intersection of weaknesses: which dimensions are under-addressed across families.
@@ -40,12 +43,14 @@ language: en
 10. Output the matrix and synthesis as LaTeX-ready content.
 
 ## Inputs
+
 - Candidate paper list with BibTeX or DOIs.
 - Proposed work's aims and contributions.
 - Comparison dimensions (or let the skill propose them).
 - Target venue and section length budget.
 
 ## Outputs
+
 - `methodology_groups.md` — papers grouped by methodology family.
 - `comparison_matrix.tex` — paper × dimension LaTeX table.
 - `synthesis_paragraphs.md` — one paragraph per methodology family.
@@ -53,6 +58,7 @@ language: en
 - `gap_to_aim_map.md` — gap dimensions mapped to Specific Aims.
 
 ## Key Rules
+
 - Group by methodology, never by year.
 - Never leave matrix cells blank; use "Not reported".
 - One synthesis paragraph per methodology family; no paper-by-paper walk.
@@ -61,6 +67,7 @@ language: en
 - Cite each paper with a stable BibTeX key.
 
 ## Examples
+
 ```text
 Methodology groups (Federated MRI segmentation):
   Group A — Aggregation-only methods: FedAvg, FedBN, FedProx.
@@ -74,6 +81,7 @@ Comparison matrix (excerpt):
   FedDG       | Mean+Adv   | No         | No          | 3
   TopoNet     | Mean+TL    | Yes        | No          | 2
 ```
+
 ```text
 Gap statement:
   Existing federated MRI segmentation methods either ignore topology (Group A/B)
@@ -83,12 +91,14 @@ Gap statement:
 ```
 
 ## References
+
 - ACM Computing Surveys review methodology: https://dl.acm.org/journal/csur
 - "Writing a related-work section that gets cited" (Jensen 2019): https://doi.org/10.1038/d41586-019-02962-9
 - Connected Papers for graphing prior art: https://www.connectedpapers.com/
 - Semantic Scholar API: https://api.semanticscholar.org/
 
 ## Notes
+
 - Keep each synthesis paragraph focused on the methodology family's shared assumption, then highlight divergences.
 - If a paper spans two methodology families, list it under both with a cross-reference note.
 - Re-run the gap audit after every new paper added to the candidate list.

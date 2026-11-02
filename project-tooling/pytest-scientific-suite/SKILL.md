@@ -22,12 +22,14 @@ language: en
 # Pytest Scientific Suite
 
 ## When To Use
+
 - You are adding tests to a research repo so refactors and seed changes are caught early.
 - You need parametrized edge cases: empty input, single sample, binary vs multiclass labels, single-class batches.
 - You want deterministic fixtures so flaky randomness never fails CI.
 - You want a coverage gate (`--cov-fail-under=80`) so untested code blocks merges.
 
 ## Workflow
+
 1. Create `tests/conftest.py` with shared fixtures: `tmpPath`, `sampleBatch`, `tinyDataset`, `deterministicSeed`.
 2. Set the seed inside fixtures using `random.seed`, `numpy.random.seed`, and `torch.manual_seed`.
 3. Add `tests/test_DataLoader.py`, `tests/test_Model.py`, `tests/test_Metrics.py` — one file per module.
@@ -40,18 +42,21 @@ language: en
 10. Commit tests alongside the code they cover; never land code without its test.
 
 ## Inputs
+
 - The package layout under `src/`.
 - Sample data files (small CSV, NPZ, or synthetic tensors) — keep them tiny and committed under `tests/fixtures/`.
 - The list of edge cases to parametrize.
 - The coverage threshold (default 80%).
 
 ## Outputs
+
 - `tests/conftest.py` with shared fixtures.
 - One `tests/test_*.py` per public module.
 - `htmlcov/` directory (gitignored) with the HTML coverage report.
 - A coverage badge referenced in the README.
 
 ## Key Rules
+
 - Every fixture that touches RNG must reset the seed at setup so tests are order-independent.
 - Use `@pytest.mark.parametrize` with explicit cases: `n=0`, `n=1`, `binary`, `multiclass`, `single-class`.
 - Never assert floating equality with `==`; use `pytest.approx(expected, rel=1e-5)`.
@@ -61,6 +66,7 @@ language: en
 - Test files mirror the module name: `src/DataLoader.py` → `tests/test_DataLoader.py`.
 
 ## Examples
+
 `tests/conftest.py`:
 
 ```python
@@ -124,6 +130,7 @@ markers = ["slow: marks tests as slow"]
 ```
 
 ## References
+
 - pytest docs — https://docs.pytest.org
 - `@pytest.mark.parametrize` — https://docs.pytest.org/en/stable/how-to/parametrize.html
 - pytest-cov — https://pytest-cov.readthedocs.io

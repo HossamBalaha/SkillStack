@@ -22,12 +22,14 @@ language: en
 # Interactive Plot Builder
 
 ## When To Use
+
 - Adding hover tooltips and zoom to a chart for exploration.
 - Embedding a chart in a dashboard or HTML report.
 - Rendering large datasets where matplotlib would choke.
 - Producing a self-contained HTML artefact for sharing.
 
 ## Workflow
+
 1. Pick the library: Plotly (hover, zoom, click), Bokeh (server-backed), or Holoviews/Datashader (large data).
 2. Build the figure object with the chosen library.
 3. Configure tooltips, axis labels, and colour scales.
@@ -37,16 +39,19 @@ language: en
 7. Smoke-test that interactivity works in a plain browser (no server needed).
 
 ## Inputs
+
 - Data frame or arrays plus column metadata for tooltips.
 - A library choice and an interaction feature list.
 - An optional theme colour palette.
 
 ## Outputs
+
 - A standalone HTML file containing the interactive plot.
 - A PNG export for static fallback when requested.
 - A small snippet to embed the HTML in a parent page.
 
 ## Key Rules
+
 - Export as standalone HTML so no server is required to view it.
 - Configure tooltips for every meaningful data column.
 - Aggregate with Datashader when rows exceed roughly 100k.
@@ -55,6 +60,7 @@ language: en
 - Test in a vanilla browser without extra dependencies.
 
 ## Examples
+
 ```python
 # Build a Plotly scatter with custom tooltips and export HTML.
 import plotly.express as px
@@ -90,6 +96,7 @@ def BuildLargeScatter(df, outputPath):
 ```
 
 ## References
+
 - Plotly Python docs: https://plotly.com/python/
 - Bokeh docs: https://docs.bokeh.org/
 - Datashader docs: https://datashader.org/

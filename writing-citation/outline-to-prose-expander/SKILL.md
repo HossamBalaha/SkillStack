@@ -22,12 +22,14 @@ language: en
 # Outline to Prose Expander
 
 ## When To Use
+
 - You have an approved section outline and need to draft the prose.
 - A co-author shared bullet points and asked for paragraphs.
 - You are turning presentation slides into a written report.
 - A reviewer says "this reads like a list" and wants connected prose.
 
 ## Workflow
+
 1. Parse the outline: identify headings (level 1/2/3) and bullet items.
 2. For each bullet, draft a topic sentence that states the bullet's main claim.
 3. Add 1-2 supporting sentences: elaboration, definition, or evidence.
@@ -39,24 +41,29 @@ language: en
 9. Emit the expanded prose with `[CITATION NEEDED]` markers aggregated into a follow-up task list.
 
 ## Inputs
+
 - A bullet outline (Markdown, plain text, or slide bullets).
 - The intended section type (Introduction, Methods, Results, Discussion) — affects tense and tone.
 - Optional known citations to insert where the agent is confident.
 
 ## Outputs
+
 - `expanded_prose.md` — paragraphs in order, one per bullet.
 - `citation_tasks.md` — list of `[CITATION NEEDED]` markers with the surrounding claim, for follow-up.
 - `outline_diff.md` — mapping of each bullet to its resulting paragraph (audit trail).
 
 ## Key Rules
+
 - Never fabricate a citation. If a claim needs support, insert `[CITATION NEEDED]`.
 - Every factual assertion in the outline must appear in the prose; none may be dropped.
 - Each paragraph must have exactly one main idea.
 - Transitions must be conceptual (the last sentence introduces the next paragraph's topic), not formulaic.
-- Tense must match the section type: past for Methods/Results, present for established facts, present perfect for prior work.
+- Tense must match the section type: past for Methods/Results, present for established facts, present perfect for prior
+  work.
 - Do not pad paragraphs with filler; if a bullet's content genuinely yields only 2 sentences, leave it at 2.
 
 ## Examples
+
 ```text
 Before (outline):
 - Federated learning trains models across many devices without moving raw data.
@@ -89,6 +96,7 @@ citation_tasks.md excerpt:
 ```
 
 ## References
+
 - Williams, J. M., & Colomb, G. G. *The Craft of Argument*. University of Chicago Press.
 - Toulmin, S. *The Uses of Argument* (for claim-evidence structure).
 - Graff, G., & Birkenstein, C. *They Say / I Say: The Moves That Matter in Academic Writing*. Norton.

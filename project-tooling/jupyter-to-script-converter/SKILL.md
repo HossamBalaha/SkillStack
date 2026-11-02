@@ -22,12 +22,14 @@ language: en
 # Jupyter To Script Converter
 
 ## When To Use
+
 - An exploratory notebook has matured and you want to promote it to a versioned `.py` module.
 - You need to remove `display(...)`, `!pip install`, `!ls`, and other cell-magic noise before committing.
 - You want cell outputs preserved as `# Output:` comments so reviewers see results without rerunning.
 - You want a runnable `if __name__ == "__main__":` block at the bottom.
 
 ## Workflow
+
 1. Parse the `.ipynb` JSON; ignore the `metadata`, `nbformat`, and `kernelspec` blocks.
 2. Walk the `cells` list; for each code cell, collect its `source` lines.
 3. Strip lines starting with `!` (shell escapes), `%` (magics), `display(`, `IPython.display`, and bare `!`.
@@ -40,15 +42,18 @@ language: en
 10. Save as `<NotebookName>.py` next to the original (or in `src/` if requested).
 
 ## Inputs
+
 - The `.ipynb` file path.
 - An optional output directory (default: same folder as the notebook).
 - A flag to keep or drop `# Output:` comments (default: keep).
 
 ## Outputs
+
 - A clean `<NotebookName>.py` module with docstring, functions, `Main`, and `__main__` guard.
 - A small conversion report listing how many cells were merged, dropped, or wrapped.
 
 ## Key Rules
+
 - Never commit the notebook's raw JSON metadata into the `.py` file.
 - All `!shell` escapes and `%magics` are dropped silently — record them in the conversion report.
 - `display(...)` calls are removed; if a return value matters, reassign it explicitly.
@@ -58,6 +63,7 @@ language: en
 - Run `ruff check --fix` and `black` on the output so it matches repo style.
 
 ## Examples
+
 Using `nbconvert`:
 
 ```bash
@@ -118,6 +124,7 @@ black Analysis.py
 ```
 
 ## References
+
 - `nbconvert` script exporter — https://nbconvert.readthedocs.io
 - `.ipynb` JSON schema — https://nbformat.readthedocs.io
 - `ruff` — https://docs.astral.sh/ruff/

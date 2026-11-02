@@ -22,18 +22,21 @@ language: ar
 # باني مستودع البحث
 
 ## متى تستخدم
+
 - يقول المستخدم "أنشئ مستودع بحث" أو "أنشئ هيكل مشروع" أو "أعدّ قاعدة الكود خاصّتي".
 - لدى المستخدم خطة معتمدة ويريد تجسيد شجرة الدليل.
 - يريد المستخدم بنية قابلة للتكرار: تكوينات، أدلّة، سكربتات، بيانات مجموعات البيانات.
 - كلمات مفتاحيّة مُحفِّزة: أنشئ، هيِّئ، شجرة المستودع، بنية المشروع، CreateProjectZip، Main.py.
 
 ## سير العمل
+
 1. اقرأ الخطة المعتمدة (الملخّص التنفيذيّ، قائمة الكود، شجرة المستودع) من خطوة التأمّل أو إدخال المستخدم.
 2. أنشئ دليل المشروع الجذريّ المُسمّى على اسم سبيكة المشروع.
 3. ابنِ شجرة الدليل أدناه. ضع `.gitkeep` في كلّ دليل سيكون فارغاً لولا ذلك.
 4. اكتب `Configs/Config.yaml` بأقسام لـ `data` و`model` و`training` و`evaluation` و`paths` و`random_seed`.
 5. أنشئ `Main.py` كمنسّق: حلّل التكوين، ابنِ محمّل البيانات، استنسخ النموذج، حلقة التدريب، حلقة التقييم، احفظ المنتجات.
-6. أنشئ `src/data/loader.py` و`src/data/preprocess.py` و`src/models/baseline.py` و`src/models/proposed.py` و`src/utils/metrics.py` و`src/utils/logger.py`.
+6. أنشئ `src/data/loader.py` و`src/data/preprocess.py` و`src/models/baseline.py` و`src/models/proposed.py` و
+   `src/utils/metrics.py` و`src/utils/logger.py`.
 7. اكتب `Datasets.md` موثِّقاً المصدر والترخيص والتقسيمات والمعالجة المسبقة ومتطلّبات الاستشهاد.
 8. اكتب `Requirements.txt` (غير مُصدَّر افتراضيّاً؛ ثبّت الإصدارات فقط عند طلب المستخدم).
 9. أضِف `CreateProjectZip.py` يضغط المستودع مع استبعاد `data/raw` و`outputs` و`.git`.
@@ -42,18 +45,21 @@ language: ar
 12. اطبع الشجرة الناتجة وتأكّد أنّ كلّ دليل يحوي إمّا محتوى أو `.gitkeep`.
 
 ## المُدخلات
+
 - سبيكة المشروع (kebab-case).
 - خطة معتمدة بقائمة الوحدات ومخطّط التكوين.
 - اختياريّ: اختيار إطار العمل (PyTorch، JAX، TensorFlow).
 - اختياريّ: قائمة مجموعات بيانات لتسجيلها في `Datasets.md`.
 
 ## المُخرجات
+
 - شجرة دليل مُجسَّدة تحت سبيكة المشروع.
 - `Configs/Config.yaml`، `Main.py`، `Requirements.txt`، `Datasets.md`، `README.md`، `CreateProjectZip.py`، `.gitignore`.
 - `.gitkeep` في كلّ دليل فارغ.
 - مخطّط شجرة مطبوع للتحقّق.
 
 ## القواعد الأساسية
+
 - كلّ دليل يجب أن يحوي إمّا محتوى حقيقيّاً أو `.gitkeep`؛ لا تترك دليلاً فارغاً أبداً.
 - `Requirements.txt` غير مُصدَّر إلا إذا طلب المستخدم صراحةً التثبيت.
 - قيم التكوين يجب الإشارة إليها، لا ترميزها داخل `Main.py` والوحدات.
@@ -62,6 +68,7 @@ language: ar
 - لا تُلتزم الأسرار؛ يجب أن يكون `.env` في `.gitignore`.
 
 ## أمثلة
+
 ```text
 Project tree generated:
 my-project/
@@ -93,6 +100,7 @@ my-project/
 │       ├── logger.py
 │       └── __init__.py
 ```
+
 ```yaml
 # Configs/Config.yaml (excerpt)
 random_seed: 42
@@ -109,6 +117,7 @@ training:
 ```
 
 ## المراجع
+
 - قالب Cookiecutter Data Science: https://drivendata.github.io/cookiecutter-data-science/
 - دليل بنية مشروع PyTorch Lightning: https://lightning.ai/docs/pytorch/latest/starter/starter-guide.html
 - قائمة فحص مستودع بحث قابل للتكرار (Nature Scientific Data): https://www.nature.com/sdata/publish/author-guidelines

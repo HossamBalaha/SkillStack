@@ -22,34 +22,40 @@ language: en
 # Annotated Bibliography Builder
 
 ## When To Use
+
 - A grant proposal requires a 1-page annotated bibliography of the most relevant prior work.
 - A thesis chapter needs a synthesis-ready set of paper notes grouped by theme.
 - You are starting a systematic review and need a structured note per candidate paper.
 - A course assignment explicitly calls for an annotated bibliography.
 
 ## Workflow
+
 1. Collect the candidate references (a `.bib` file, a Zotero collection, or a list of DOIs).
 2. For each reference, retrieve the abstract and the methods/findings sections (from the PDF or the publisher page).
 3. Write a 2-4 sentence summary covering: what the paper did, the method it used, and its key finding.
 4. Write an assessment covering: strengths, limitations, and explicit relevance to the user's research question.
 5. Format the full citation in the target style (APA, IEEE, Chicago, etc.) at the top of the entry.
-6. Group entries by theme (e.g., "Federated optimization," "Privacy attacks," "Personalization") rather than alphabetically.
+6. Group entries by theme (e.g., "Federated optimization," "Privacy attacks," "Personalization") rather than
+   alphabetically.
 7. Within each theme, sort entries by year (descending) so the most recent work leads.
 8. Produce both a Markdown report and a CSV row-per-entry version for downstream synthesis.
 9. Cross-check that every entry's "relevance" statement ties back to the user's stated research question.
 
 ## Inputs
+
 - A reference list (`.bib`, Zotero export, or DOIs).
 - The user's research question or thesis topic.
 - Target citation style.
 - Optional theme list (if the user has predefined categories).
 
 ## Outputs
+
 - `annotated_bibliography.md` — grouped, styled entries with summary + assessment per paper.
 - `annotated_bibliography.csv` — flat table: citekey, year, theme, summary, strengths, limitations, relevance.
 - `theme_index.md` — list of themes with the count of entries per theme.
 
 ## Key Rules
+
 - Each summary must be 2-4 sentences — no longer, no shorter.
 - Each assessment must contain explicit strengths, limitations, and relevance statements.
 - Entries must be grouped by theme, not by author or by year.
@@ -58,6 +64,7 @@ language: en
 - Never fabricate findings — if the source PDF is unavailable, mark the summary as "unverified."
 
 ## Examples
+
 ```text
 Theme: Privacy attacks on federated learning
 
@@ -91,6 +98,8 @@ Geiping2020Inverting,2020,Privacy attacks,"Reconstructs training data from share
 ```
 
 ## References
-- Cornell University Library guide to annotated bibliographies: https://guides.library.cornell.edu/annotatedbibliography.
+
+- Cornell University Library guide to annotated
+  bibliographies: https://guides.library.cornell.edu/annotatedbibliography.
 - Purdue OWL: https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/index.html.
 - The CRAAP test for source assessment (Currency, Relevance, Authority, Accuracy, Purpose).

@@ -22,12 +22,14 @@ language: en
 # Color Palette Selector
 
 ## When To Use
+
 - Choosing a colour scheme for a paper figure or dashboard.
 - Encoding categorical labels without relying on red/green pairs.
 - Building sequential or diverging maps for heatmaps.
 - Validating that a palette survives colourblind simulation.
 
 ## Workflow
+
 1. Decide whether the data is categorical, sequential, or diverging.
 2. For categorical, prefer Wong's palette or ColorBrewer qualitative.
 3. For sequential or diverging, prefer viridis, cividis, or ColorBrewer.
@@ -37,16 +39,19 @@ language: en
 7. Lock the palette in a project config so figures stay consistent.
 
 ## Inputs
+
 - Data kind: categorical, sequential, or diverging.
 - Number of distinct colours required.
 - Optional brand constraints (forbidden colours, contrast target).
 
 ## Outputs
+
 - A palette definition file (JSON) with hex codes and names.
 - A PNG swatch preview plus a simulated colourblind preview.
 - A matplotlib snippet registering the palette as a custom cmap.
 
 ## Key Rules
+
 - Never use red and green as the sole encoding pair.
 - Categorical palettes cap at eight distinct colours.
 - Prefer perceptually uniform maps (viridis, cividis) for sequential data.
@@ -55,6 +60,7 @@ language: en
 - Register the chosen palette once and reuse across figures.
 
 ## Examples
+
 ```python
 # Define Wong's palette and validate it for colourblind safety.
 import numpy as np
@@ -104,6 +110,7 @@ def PlotSwatch(palette, outputPath):
 ```
 
 ## References
+
 - Wong, B. Nature Methods 2011: https://www.nature.com/articles/nmeth.1618
 - ColorBrewer 2: https://colorbrewer2.org
 - Coblis simulator: https://www.color-blindness.com/coblis-color-blindness-simulator/

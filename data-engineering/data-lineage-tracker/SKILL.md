@@ -22,6 +22,7 @@ language: en
 # Data Lineage Tracker
 
 ## When To Use
+
 - An audit (regulatory or incident) asks "where did this row come from?".
 - A column breakage downstream must be traced back to the producing transform.
 - A pipeline has multiple sources, transforms, and sinks that must be graphed.
@@ -29,6 +30,7 @@ language: en
 - Each dataset version must carry an immutable content hash for replay.
 
 ## Workflow
+
 1. Assign every dataset a unique ID plus a version and source URI.
 2. Compute a content hash (sha256) of the dataset's bytes or row representation.
 3. Reference the transform function (module + function name + version) that produced it.
@@ -39,18 +41,21 @@ language: en
 8. Integrate with OpenLineage emitters so the graph is queryable by catalog tools.
 
 ## Inputs
+
 - The dataset to register (path, table, or in-memory frame).
 - The transform that produced it (function reference and version).
 - The list of parent dataset IDs.
 - The run context (run_id, job name, timestamp).
 
 ## Outputs
+
 - A lineage node record (dataset ID, version, hash, parents, transform).
 - A lineage DAG (JSON) from roots to the sink.
 - A Graphviz rendering (DOT or PNG) of the DAG.
 - An OpenLineage event payload emitted to the configured backend.
 
 ## Key Rules
+
 - Every dataset carries an immutable content hash; equal hashes mean equal content.
 - Parent IDs are recorded at write time so the graph is always reconstructable.
 - The transform reference includes module, function name, and version.
@@ -148,6 +153,7 @@ def EmitOpenLineageEvent(node, runId, jobName):
 ```
 
 ## References
+
 - OpenLineage: https://openlineage.io
 - Apache Atlas: https://atlas.apache.org
 - Amundsen: https://www.amundsen.io

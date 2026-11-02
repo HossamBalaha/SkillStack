@@ -172,8 +172,8 @@ maestro matches on. Keep the `Examples` code blocks untranslated. Submit transla
 
 ### Q17. What LLMs is SkillStack tested with?
 
-Skills are model-agnostic Markdown. They have been validated against Claude (3.5 / 4), GPT-4 / 4o, and open models (
-Llama 3, Qwen 2.5). A skill that calls a specific API (e.g., OpenAI Moderation) notes the dependency in its
+Skills are model-agnostic Markdown. They have been validated against Claude (3.5 / 4), GPT-4 / 4o, and open models
+(Llama 3, Qwen 2.5). A skill that calls a specific API (e.g., OpenAI Moderation) notes the dependency in its
 `cost_warning` and `prerequisites` fields. Smaller models may struggle with the longer multi-step workflows; load one
 skill at a time and verify each `Outputs` artifact before proceeding.
 
@@ -223,8 +223,8 @@ safety, citations.
 
 The maestro explicitly notes in its "When NOT To Use Maestro" section that tasks already covered by a built-in skill
 outside the repo should use that built-in skill directly. The two layers compose: a SkillStack chain produces the
-*content* (a manuscript's `.tex`, a results table, a figure spec) and then hands it to a built-in skill for
-*formatting* (e.g., the `pdf` skill compiles the `.tex`, the `xlsx` skill writes the results table). Neither layer
+*content* (a manuscript's `.tex`, a results table, a figure spec) and then hands it to a built-in skill for *formatting*
+(e.g., the `pdf` skill compiles the `.tex`, the `xlsx` skill writes the results table). Neither layer
 duplicates the other.
 
 ### Q25. How do I chain skills automatically?

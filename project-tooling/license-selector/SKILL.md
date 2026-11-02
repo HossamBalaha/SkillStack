@@ -22,19 +22,21 @@ language: en
 # License Selector
 
 ## When To Use
+
 - You are bootstrapping a repo and need to pick a license before the first public commit.
 - You are auditing an existing repo where `LICENSE` and `pyproject.toml` disagree.
 - You need to weigh permissive vs copyleft vs network-copyleft for a specific distribution model.
 - You need a patent grant (Apache-2.0) or strong copyleft (GPL/AGPL) for compliance reasons.
 
 ## Workflow
+
 1. Ask the caller: who owns the copyright, will the project be distributed, will it run as a network service?
 2. Map the answer to a license:
-   - MIT / BSD-3-Clause — permissive, no patent grant, simplest.
-   - Apache-2.0 — permissive + explicit patent grant, good for corporate contributions.
-   - GPL-3.0 — copyleft, derivative works must also be GPL.
-   - AGPL-3.0 — network copyleft, SaaS uses must share source.
-   - BSD-2-Clause — permissive, minimal, no patent grant.
+    - MIT / BSD-3-Clause — permissive, no patent grant, simplest.
+    - Apache-2.0 — permissive + explicit patent grant, good for corporate contributions.
+    - GPL-3.0 — copyleft, derivative works must also be GPL.
+    - AGPL-3.0 — network copyleft, SaaS uses must share source.
+    - BSD-2-Clause — permissive, minimal, no patent grant.
 3. Generate the `LICENSE` file with the chosen license's full text.
 4. Replace the placeholder year and copyright holder name in the header.
 5. Add the SPDX `license` field to `pyproject.toml` (`license = { text = "Apache-2.0" }`).
@@ -43,27 +45,34 @@ language: en
 8. If the repo bundles third-party code, add a `NOTICE` file listing their licenses.
 
 ## Inputs
+
 - Copyright holder name and year.
 - Distribution model: distributed binary, source-only, or network service.
 - Patent-grant preference (yes/no).
 - Copyleft preference (permissive / copyleft / network-copyleft).
 
 ## Outputs
+
 - `LICENSE` file at the repo root with the chosen license's full text.
 - Updated `license` field in `pyproject.toml`.
 - A README note pointing at the `LICENSE` file.
 - Optional `NOTICE` file when third-party code is bundled.
 
 ## Key Rules
+
 - The SPDX id in `pyproject.toml` MUST exactly match the license in `LICENSE` (e.g. `Apache-2.0`, not "Apache 2").
-- The copyright line in `LICENSE` must include the year and the holder's name; never leave `<name>` or `[year]` placeholders.
-- Never pick GPL-3.0 for a repo that bundles MIT-only dependencies without checking compatibility — MIT is GPL-compatible, but not everything is.
+- The copyright line in `LICENSE` must include the year and the holder's name; never leave `<name>` or `[year]`
+  placeholders.
+- Never pick GPL-3.0 for a repo that bundles MIT-only dependencies without checking compatibility — MIT is
+  GPL-compatible, but not everything is.
 - AGPL-3.0 is the only option if the code will run as a network service and you want to enforce source sharing.
 - The `LICENSE` file name is uppercase `LICENSE` (not `LICENSE.md` or `LICENSE.txt`) so GitHub renders the badge.
-- Do not invent license text — only emit canonical text from choosealicense.com (paraphrased in this skill, reproduced verbatim in the file).
+- Do not invent license text — only emit canonical text from choosealicense.com (paraphrased in this skill, reproduced
+  verbatim in the file).
 - If the project is dual-licensed, write both in the `LICENSE` file and list both SPDX ids in `pyproject.toml`.
 
 ## Examples
+
 Decision helper:
 
 ```python
@@ -110,6 +119,8 @@ Licensed under the Apache License, Version 2.0 (the "License");
 ```
 
 ## References
+
 - Choose a License — https://choosealicense.com
 - SPDX license list — https://spdx.org/licenses/
-- GitHub licensing a repository — https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository
+- GitHub licensing a
+  repository — https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository

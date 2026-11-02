@@ -22,26 +22,32 @@ language: en
 # Journal Manuscript Writer
 
 ## When To Use
+
 - The user asks to "write the manuscript", "draft Section 3", or "format my paper in LaTeX".
 - The target is a journal (IEEE TPAMI, Medical Image Analysis, Nature Scientific Reports, Elsevier).
 - The user needs mandatory back-matter (CRediT, Funding, IRB, Data Availability, Conflicts, Abbreviations).
 - Trigger keywords: manuscript, LaTeX draft, IEEEtran, elsevier, back-matter, keywords, citations.
 
 ## Workflow
-1. Confirm target venue, document class (e.g., `IEEEtran`, `elsarticle`), and bibliography style (e.g., `IEEEtran`, `elsarticle-num`).
+
+1. Confirm target venue, document class (e.g., `IEEEtran`, `elsarticle`), and bibliography style (e.g., `IEEEtran`,
+   `elsarticle-num`).
 2. Draft the abstract (150-250 words). Append 4-6 keywords after the abstract in venue-required format.
 3. Outline Introduction, Related Work, Methodology, Experiments, Discussion, Conclusion.
 4. Write each section using only `\section{}` and `\subsection{}`. Never use `\subsubsection`.
 5. Insert a blank line after every `\section` and `\subsection` command.
 6. Wrap every float, equation, table, figure, and algorithm with `% ====================== %` separator lines.
 7. Use LaTeX-style quotes: ``double'' and `single'. Never use straight quotes.
-8. Restrict `\textbf{}` to structural hierarchy (section heads, table column headers). Never use `\textit{}`; switch to `\emph{}` only when semantics demand emphasis.
+8. Restrict `\textbf{}` to structural hierarchy (section heads, table column headers). Never use `\textit{}`; switch to
+   `\emph{}` only when semantics demand emphasis.
 9. Cite using `\cite{}` (IEEE numbered style). Group multiple citations as `\cite{a, b, c}` sorted ascending.
-10. Append mandatory back-matter: CRediT author contributions, Funding, IRB/ethics approval, Informed Consent, Data Availability, Conflicts of Interest, Abbreviations.
+10. Append mandatory back-matter: CRediT author contributions, Funding, IRB/ethics approval, Informed Consent, Data
+    Availability, Conflicts of Interest, Abbreviations.
 11. Compile-check mentally: every `\label{}` has a matching `\ref{}` or `\eqref{}`.
 12. Run a final pass for orphaned subsections (no `\subsection` without an enclosing `\section`).
 
 ## Inputs
+
 - Target venue and document class.
 - Project plan / executive summary from the ideation step.
 - Figures, tables, equations (as LaTeX source or descriptions).
@@ -49,13 +55,16 @@ language: en
 - Author list with affiliations and CRediT roles.
 
 ## Outputs
+
 - `main.tex` — single root file or `\input{}` includes per section.
-- `sections/01_intro.tex`, `02_related.tex`, `03_method.tex`, `04_experiments.tex`, `05_discussion.tex`, `06_conclusion.tex`.
+- `sections/01_intro.tex`, `02_related.tex`, `03_method.tex`, `04_experiments.tex`, `05_discussion.tex`,
+  `06_conclusion.tex`.
 - `backmatter.tex` — CRediT, Funding, IRB, Informed Consent, Data Availability, Conflicts, Abbreviations.
 - `refs.bib` — IEEE-style bibliography entries.
 - Compilation checklist (labels, refs, floats, citations).
 
 ## Key Rules
+
 - Only `\section` and `\subsection`. Never `\subsubsection`.
 - Blank line after every sectioning command.
 - `% ====================== %` around every float, equation, table, figure, algorithm.
@@ -66,6 +75,7 @@ language: en
 - 4-6 keywords immediately after the abstract.
 
 ## Examples
+
 ```latex
 % ====================== %
 \section{Methodology}
@@ -86,6 +96,7 @@ is to minimize the empirical risk
 As shown in Fig.~\ref{fig:pipeline}, the proposed model ``FedTopo'' combines
 topology regularization with batch-norm-aware aggregation.
 ```
+
 ```latex
 % ====================== %
 \section*{Data Availability}
@@ -96,6 +107,7 @@ and trained weights are released at \url{https://github.com/...}.
 ```
 
 ## References
+
 - IEEEtran template and author guide: https://journals.ieeeauthorcenter.ieee.org/
 - Elsevier elsarticle class: https://www.ctan.org/pkg/elsarticle
 - CRediT taxonomy: https://credit.niso.org/

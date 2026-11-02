@@ -22,12 +22,14 @@ language: en
 # Contribution Guide Builder
 
 ## When To Use
+
 - You are opening a repo to external contributors and need a single onboarding doc.
 - The team has inconsistent branch names and commit messages and you want to standardise.
 - You want every contributor to run the same dev setup (clone → install dev deps → run tests).
 - You need to link out to the repo's `coding-conventions-enforcer` skill so style is enforced uniformly.
 
 ## Workflow
+
 1. Scaffold `CONTRIBUTING.md` with a short opening that links to the README for project context.
 2. Add a "Reporting Bugs" section: open an issue, fill in the bug template, attach reproduction steps.
 3. Add a "Suggesting Enhancements" section: open an issue with the feature template first, then a PR.
@@ -41,26 +43,32 @@ language: en
 11. Commit and link from the README.
 
 ## Inputs
+
 - The default branch name (`main`, sometimes `develop`).
 - The dev install command (`pip install -e ".[dev,test]"` or equivalent).
 - The repo's coding-conventions skill path (default `style-integrity/coding-conventions-enforcer`).
 - Whether the project uses Conventional Commits (default yes).
 
 ## Outputs
+
 - `CONTRIBUTING.md` at the repo root.
 - A README link pointing at it.
 - Consistent branch and commit conventions across the team.
 
 ## Key Rules
+
 - Every section must be actionable; avoid "be excellent to each other" filler.
 - Branch names use lowercase-kebab-case slugs: `feature/zip-denylist`, not `Feature_ZipDenylist`.
-- Commit messages follow Conventional Commits: `<type>(<scope>): <subject>` where type is one of `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`.
+- Commit messages follow Conventional Commits: `<type>(<scope>): <subject>` where type is one of `feat`, `fix`, `docs`,
+  `style`, `refactor`, `perf`, `test`, `chore`.
 - A PR must reference its issue (`Closes #42`); never merge a PR with no issue link unless it's a trivial doc fix.
 - New public code requires new tests; the CI `--cov-fail-under=80` gate blocks regressions.
-- The coding-style section MUST link to `style-integrity/coding-conventions-enforcer/SKILL.md` so style is a single source of truth.
+- The coding-style section MUST link to `style-integrity/coding-conventions-enforcer/SKILL.md` so style is a single
+  source of truth.
 - Do not duplicate the Code of Conduct content here; link to `CODE_OF_CONDUCT.md`.
 
 ## Examples
+
 ```markdown
 # Contributing to researchkit
 
@@ -112,6 +120,7 @@ Participation in this project is governed by the [Code of Conduct](CODE_OF_CONDU
 ```
 
 ## References
+
 - GitHub contributing template — https://github.com/github/contributing-template
 - Conventional Commits — https://www.conventionalcommits.org
 - `coding-conventions-enforcer` skill in this repo — `style-integrity/coding-conventions-enforcer/SKILL.md`

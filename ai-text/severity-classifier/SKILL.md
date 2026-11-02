@@ -22,6 +22,7 @@ language: en
 # Severity Classifier
 
 ## When To Use
+
 - The detector has produced a list of tell matches and you need to rank them.
 - A reviewer wants to know which matches to act on first.
 - You are deciding whether to escalate a block to humanizer or merely note it.
@@ -29,36 +30,41 @@ language: en
 - You need to override a default catalogue severity based on local context.
 
 ## Workflow
+
 1. Receive the raw match list from `ai-text-detector` (tell name, location, default severity from the catalogue).
-2. For each match, evaluate two axes: (a) specificity — how distinctive is the pattern; (b) human-occurrence rate — how often real humans produce it.
+2. For each match, evaluate two axes: (a) specificity — how distinctive is the pattern; (b) human-occurrence rate — how
+   often real humans produce it.
 3. Map to a level:
-   - **S1 Weak**: common in both human and AI writing; low specificity. Note but do not weight heavily.
-   - **S2 Moderate**: more common in AI but possible in human writing. Combine with other indicators.
-   - **S3 Strong**: rare in human writing, highly characteristic of LLM output. Flag for review or rewrite.
-   - **S4 Critical**: almost exclusively found in AI-generated text. Treat as near-confirmation; rewrite or delete.
+    - **S1 Weak**: common in both human and AI writing; low specificity. Note but do not weight heavily.
+    - **S2 Moderate**: more common in AI but possible in human writing. Combine with other indicators.
+    - **S3 Strong**: rare in human writing, highly characteristic of LLM output. Flag for review or rewrite.
+    - **S4 Critical**: almost exclusively found in AI-generated text. Treat as near-confirmation; rewrite or delete.
 4. Apply mandatory overrides:
-   - Hallucinated DOI, phantom citation, fabricated quote, invented name → S4 regardless of context.
-   - Repeated identical opening across 4+ sentences → upgrade by one level.
-   - Voice-profile match (target author genuinely uses the pattern) → downgrade by one level, minimum S2.
+    - Hallucinated DOI, phantom citation, fabricated quote, invented name → S4 regardless of context.
+    - Repeated identical opening across 4+ sentences → upgrade by one level.
+    - Voice-profile match (target author genuinely uses the pattern) → downgrade by one level, minimum S2.
 5. Aggregate: count tells by severity. Apply R1 (cumulative evidence):
-   - One S1 alone → no verdict.
-   - One S2 alone → no verdict; require a second indicator from a different category.
-   - One S3 alone → flag as `Mixed`, request review.
-   - Any S4 → near-confirmation regardless of R1.
+    - One S1 alone → no verdict.
+    - One S2 alone → no verdict; require a second indicator from a different category.
+    - One S3 alone → flag as `Mixed`, request review.
+    - Any S4 → near-confirmation regardless of R1.
 6. Emit a severity table and the aggregate verdict logic used.
 
 ## Inputs
+
 - Raw match list with tell name, location, default severity, category.
 - Optional: voice profile of claimed author (to allow downgrades).
 - Optional: citation verification results from `citation-hallucination-detector`.
 
 ## Outputs
+
 - A severity table: `Tell | Location | Default | Final | Reason`.
 - Aggregate counts: `S1=n, S2=n, S3=n, S4=n`.
 - The verdict logic chain showing which rule (R1, voice override, S4 override) produced the final label.
 - A recommended action: `Note`, `Review`, `Rewrite`, `Delete and re-author`.
 
 ## Key Rules
+
 - S4 is reserved for near-certain AI signals. Hallucinated citations are always S4.
 - Voice profile overrides can downgrade at most one level and never below S2.
 - A single S1 never produces a verdict. Ever.
@@ -69,6 +75,7 @@ language: en
 ## Examples
 
 **Input match list:**
+
 ```
 1. "delves into"                  | lexical    | default S2
 2. "pivotal role"                 | lexical    | default S2
@@ -79,6 +86,7 @@ language: en
 ```
 
 **Severity table:**
+
 ```
 | # | Tell                  | Default | Final | Reason                         |
 |---|-----------------------|---------|-------|--------------------------------|
@@ -95,6 +103,7 @@ Action: Delete and re-author; route citation to verifier.
 ```
 
 **Before/after (with voice profile override):**
+
 ```
 Before classification: "em-dash as connector" → default S2
 Voice profile: target author uses em-dashes in 12% of sentences (baseline 1%).
@@ -103,5 +112,7 @@ Reason: pattern matches the author's genuine habit, not an AI tell here.
 ```
 
 ## References
+
 - Companion skills: `ai-text-detector`, `ai-tell-catalogue`, `voice-profile-matcher`, `citation-hallucination-detector`.
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7) — empirical basis for treating any single indicator as insufficient.
+- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7) — empirical
+  basis for treating any single indicator as insufficient.

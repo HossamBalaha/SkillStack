@@ -150,8 +150,8 @@ You can also send a raw JSON-RPC request over stdio:
 ```
 
 You should see the `initialize` response, then the `list_skills` tool result
-printed as a JSON-RPC `result` envelope containing the 167 indexed skills
-(the maestro orchestrator itself is excluded from the listing).
+printed as a JSON-RPC `result` envelope containing the 167 indexed skills (the maestro orchestrator itself is excluded
+from the listing).
 
 ## Layout
 

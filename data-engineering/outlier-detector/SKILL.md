@@ -22,6 +22,7 @@ language: en
 # Outlier Detector
 
 ## When To Use
+
 - Anomalous rows must be flagged for review before model training or serving.
 - Different feature distributions suit different detectors (IQR vs Isolation Forest).
 - Each flagged row needs a numeric score for ranking and triage.
@@ -29,6 +30,7 @@ language: en
 - The detector must be fit on TRAIN only and applied unchanged to VAL/TEST.
 
 ## Workflow
+
 1. Choose the detector family per column or per feature block.
 2. Fit the detector on the TRAIN split; record the parameters used.
 3. Score VAL and TEST rows using the fitted detector.
@@ -39,15 +41,18 @@ language: en
 8. Validate that the flag rate on TRAIN matches the declared contamination rate.
 
 ## Inputs
+
 - TRAIN, VAL, TEST DataFrames with numeric features.
 - Detector configuration: method, threshold, contamination, hyperparameters.
 
 ## Outputs
+
 - DataFrames with `<feature>_score` and `<feature>_is_outlier` columns appended.
 - A detection report (JSON) with flagged counts, threshold, and rationale.
 - A fitted detector artifact (joblib) for inference reuse.
 
 ## Key Rules
+
 - Detectors fit on TRAIN only; VAL and TEST are scored, never fit.
 - Every flag carries a numeric score for ranking and audit.
 - Thresholds and rationale are documented in the report, not just code.
@@ -107,6 +112,8 @@ class IsolationForestDetector:
 ```
 
 ## References
+
 - scikit-learn Isolation Forest: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
-- scikit-learn Local Outlier Factor: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html
+- scikit-learn Local Outlier
+  Factor: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html
 - scikit-learn DBSCAN: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html

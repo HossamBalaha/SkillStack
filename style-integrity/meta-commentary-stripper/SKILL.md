@@ -22,42 +22,47 @@ language: en
 # Meta-Commentary Stripper
 
 ## When To Use
+
 - A manuscript addresses the reader directly ("The reader will learn…").
 - Body prose narrates its own structure ("In this section, we will show…", "As we will discuss…").
 - Top-tier journal submission requires dense scientific exposition without throat-clearing.
 - A reviewer has flagged conversational tone or pedagogical asides.
 
 ## Workflow
+
 1. Tokenize the manuscript into sentences.
 2. Match each sentence against the trigger-phrase list (see Key Rules).
 3. For each match, classify the action:
-   - Delete entirely if the sentence adds no information beyond narration.
-   - Rewrite if the sentence contains a substantive claim buried in meta-framing.
+    - Delete entirely if the sentence adds no information beyond narration.
+    - Rewrite if the sentence contains a substantive claim buried in meta-framing.
 4. When rewriting, drop the meta prefix and keep the substantive clause.
 5. Re-read the surrounding paragraph to confirm cohesion after deletion.
 6. Log each transformation in a change report: line, original, action (delete/rewrite), result.
 7. Re-scan to confirm no meta phrases remain.
 
 ## Inputs
+
 - Manuscript source text (LaTeX, Markdown, or plain text).
 - Optional project-specific extension list of meta phrases.
 
 ## Outputs
+
 - Revised prose with all meta-commentary removed.
 - A change report: line, original, action, result.
 
 ## Key Rules
+
 - Trigger phrases (case-insensitive, whole-phrase match):
-  - `The reader will learn`
-  - `In this section, we will show`
-  - `In this section we will show`
-  - `As we will discuss`
-  - `It is important to note that`
-  - `This article will explore`
-  - `Let us delve into`
-  - `Here's what you need to know`
-  - `We now turn to`
-  - `Having discussed X, we now`
+    - `The reader will learn`
+    - `In this section, we will show`
+    - `In this section we will show`
+    - `As we will discuss`
+    - `It is important to note that`
+    - `This article will explore`
+    - `Let us delve into`
+    - `Here's what you need to know`
+    - `We now turn to`
+    - `Having discussed X, we now`
 - Delete pure-narration sentences entirely.
 - Rewrite sentences whose meta prefix buries a substantive claim.
 - The remaining prose must stand alone without transitional narration.
@@ -66,6 +71,7 @@ language: en
 ## Examples
 
 Before:
+
 ```
 In this section, we will show that our method outperforms baselines.
 The reader will learn that the convergence rate improves under warm
@@ -74,6 +80,7 @@ starting. It is important to note that the loss curve plateaus after
 ```
 
 After:
+
 ```
 Our method outperforms baselines. The convergence rate improves under
 warm starting. The loss curve plateaus after 200 epochs. The ablation
@@ -81,6 +88,7 @@ results follow.
 ```
 
 Change report:
+
 ```
 Line 1:  "In this section, we will show that" → deleted prefix.
          Result: "Our method outperforms baselines."
@@ -93,6 +101,7 @@ Line 4:  "Let us delve into the ablation results." → rewritten.
 ```
 
 ## References
+
 - Stephen Pinker, *The Sense of Style*, on classic style and direct exposition.
 - The Economist Style Guide, on concise journal prose.
 - American Psychological Association (APA) Publication Manual, on authorial voice.

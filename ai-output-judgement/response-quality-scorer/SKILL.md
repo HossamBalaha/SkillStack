@@ -23,32 +23,44 @@ language: en
 # Response Quality Scorer
 
 ## When To Use
+
 - Ranking candidate chatbot replies for production rollout.
 - Producing scalar reward signals for RLHF or DPO training.
 - Trigger keywords: "response quality", "reward model", "RLHF", "helpfulness", "A/B test models", "chatbot evaluation".
 - Building a leaderboard comparing several model variants on a held-out prompt set.
 
 ## Workflow
-1. Pick a scoring protocol. Default is pointwise (each response scored independently); pairwise (which is better?) is supported via `llm-as-judge-evaluator`.
-2. Apply the 5-dimension rubric, each 1-5: `helpfulness`, `completeness`, `relevance`, `clarity`, `depth`. Provide anchor descriptions per integer (e.g., 5 = "fully addresses intent with depth and no filler").
-3. For each (prompt, response) pair, ask the judge LLM to output JSON with the five scores plus a one-sentence rationale per dimension.
-4. Compute per-dimension means and a weighted aggregate. Default weights: helpfulness 0.30, completeness 0.20, relevance 0.20, clarity 0.15, depth 0.15.
-5. Sanity-check with a reward model when available (e.g., RewardBench-tracked open models) and report agreement as Pearson r.
-6. Detect verbosity bias: compute correlation between response length and score; if |r| > 0.4, length-normalize or switch to length-controlled scoring.
-7. Emit per-response scores, per-prompt means, and a final leaderboard with confidence intervals from bootstrap resampling.
+
+1. Pick a scoring protocol. Default is pointwise (each response scored independently); pairwise (which is better?) is
+   supported via `llm-as-judge-evaluator`.
+2. Apply the 5-dimension rubric, each 1-5: `helpfulness`, `completeness`, `relevance`, `clarity`, `depth`. Provide
+   anchor descriptions per integer (e.g., 5 = "fully addresses intent with depth and no filler").
+3. For each (prompt, response) pair, ask the judge LLM to output JSON with the five scores plus a one-sentence rationale
+   per dimension.
+4. Compute per-dimension means and a weighted aggregate. Default weights: helpfulness 0.30, completeness 0.20, relevance
+   0.20, clarity 0.15, depth 0.15.
+5. Sanity-check with a reward model when available (e.g., RewardBench-tracked open models) and report agreement as
+   Pearson r.
+6. Detect verbosity bias: compute correlation between response length and score; if |r| > 0.4, length-normalize or
+   switch to length-controlled scoring.
+7. Emit per-response scores, per-prompt means, and a final leaderboard with confidence intervals from bootstrap
+   resampling.
 
 ## Inputs
+
 - A list of `{prompt, response}` records (and optionally `model_id` to group by).
 - A judge LLM endpoint (or a local reward model).
 - Optional: rubric override, weight override, held-out human-rated set for calibration.
 - Optional: few-shot graded examples to anchor the judge.
 
 ## Outputs
+
 - `scores.jsonl` — one row per (prompt, response): five dimension scores, rationale, aggregate, response_length.
 - `leaderboard.md` — per-model mean per dimension, weighted aggregate, 95% bootstrap CI, sample size.
 - `bias_check.md` — length-score correlation, agreement with reference reward model.
 
 ## Key Rules
+
 - Always include the rubric anchors in the judge prompt; bare "score 1-5" yields inconsistent grading.
 - One response per scoring call to prevent cross-contamination of judgments.
 - If length-score correlation exceeds 0.4, switch to length-controlled mode before trusting rankings.
@@ -83,6 +95,7 @@ Calibration against human ratings (held-out set, n=200):
 ```
 
 ## Common Pitfalls
+
 - Scoring multiple responses in a single judge call — judgments contaminate each other; one response per call.
 - Reporting a mean score without confidence intervals — noisy rankings masquerade as real differences.
 - Ignoring the length-score correlation — verbosity bias goes undetected and the leaderboard rewards wordiness.
@@ -91,7 +104,9 @@ Calibration against human ratings (held-out set, n=200):
 - Forgetting to calibrate against held-out human ratings — the judge may be self-consistent yet systematically biased.
 
 ## References
-- Lambert, N. et al. (2024). "RewardBench: Evaluating Reward Models for Language Modeling." https://arxiv.org/abs/2403.13787
+
+- Lambert, N. et al. (2024). "RewardBench: Evaluating Reward Models for Language
+  Modeling." https://arxiv.org/abs/2403.13787
 - OpenAI Evals framework: https://github.com/openai/evals
 - HELM (Holistic Evaluation of Language Models), Stanford CRFM: https://crfm.stanford.edu/helm
 - Companion skills: `llm-as-judge-evaluator`, `relevance-scorer`, `coherence-fluency-scorer`.

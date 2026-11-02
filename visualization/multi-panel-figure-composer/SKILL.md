@@ -22,12 +22,14 @@ language: en
 # Multi-Panel Figure Composer
 
 ## When To Use
+
 - Combining several subplots into one publication figure.
 - Sharing x or y axes across panels to ease comparison.
 - Labelling panels with (a), (b), (c) for cross-reference.
 - Laying out an ablation grid or a results-at-a-glance view.
 
 ## Workflow
+
 1. Decide the grid size (`nrows`, `ncols`) from the number of panels.
 2. Create the figure with `plt.subplots(nrows, ncols, figsize=..., constrained_layout=True)`.
 3. Set `sharex=True` and/or `sharey=True` when axes are comparable.
@@ -38,16 +40,19 @@ language: en
 8. Save as PDF for the manuscript.
 
 ## Inputs
+
 - A list of plotting callables, one per panel.
 - The grid shape and shared-axis flags.
 - A figure size matching the target journal column.
 
 ## Outputs
+
 - A single PDF/PNG containing every panel.
 - A LaTeX caption referencing each panel label.
 - A small JSON manifest recording the grid and labels.
 
 ## Key Rules
+
 - Use `constrained_layout=True`; never combine with `tight_layout()`.
 - Share axes with `sharex` and `sharey` when scales are comparable.
 - Panel labels use `ax.text(-0.1, 1.05, "(a)", transform=ax.transAxes)`.
@@ -56,6 +61,7 @@ language: en
 - One combined caption is acceptable; each panel may also have its own.
 
 ## Examples
+
 ```python
 # Compose a two-by-two multi-panel figure with shared axes and labels.
 import numpy as np
@@ -93,5 +99,6 @@ def ComposeFigure(panels, outputPath):
 ```
 
 ## References
+
 - matplotlib subplots docs: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html
 - matplotlib constrained_layout guide: https://matplotlib.org/stable/tutorials/intermediate/constrainedlayout_guide.html

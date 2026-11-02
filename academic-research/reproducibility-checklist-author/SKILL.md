@@ -22,13 +22,17 @@ language: en
 # Reproducibility Checklist Author
 
 ## When To Use
+
 - The user is about to submit a manuscript and needs reproducibility artifacts.
 - The user asks "what do I need for reproducibility", "checklist for code release", or "ML Reproducibility Checklist".
 - A venue requires a reproducibility checklist (NeurIPS, ICLR, ACM).
-- Trigger keywords: reproducibility checklist, ML reproducibility, code release, environment lockfile, random seeds, compute time, license file.
+- Trigger keywords: reproducibility checklist, ML reproducibility, code release, environment lockfile, random seeds,
+  compute time, license file.
 
 ## Workflow
-1. Identify the venue's required checklist (NeurIPS Reproducibility Checklist, ML Reproducibility Checklist, ACM Artifact Badging).
+
+1. Identify the venue's required checklist (NeurIPS Reproducibility Checklist, ML Reproducibility Checklist, ACM
+   Artifact Badging).
 2. Confirm the code repository is public on GitHub and that a release tag is linked to Zenodo for a DOI.
 3. Confirm the dataset is archived (Zenodo/Figshare/Dryad) with a DOI and a license.
 4. Generate the environment lockfile: `requirements.txt` (pip) or `environment.yml` (conda); pin versions exactly.
@@ -41,6 +45,7 @@ language: en
 11. Output the filled checklist with links to every artifact.
 
 ## Inputs
+
 - Manuscript (final draft).
 - Code repository URL.
 - Dataset archive (or description if restricted).
@@ -49,6 +54,7 @@ language: en
 - Venue-specific checklist (NeurIPS, ICLR, ACM).
 
 ## Outputs
+
 - `reproducibility_checklist.md` — filled checklist with links and DOIs.
 - `requirements.txt` or `environment.yml` — pinned environment.
 - `reproduce.sh` — one-command reproduction script.
@@ -56,6 +62,7 @@ language: en
 - `compute_log.md` — per-experiment GPU-hours.
 
 ## Key Rules
+
 - Code must be on a public GitHub repo with a Zenodo DOI for at least one release.
 - Environment lockfile must pin exact versions; never `>=`.
 - Random seeds set in code AND documented in README.
@@ -64,6 +71,7 @@ language: en
 - A one-command reproduction script runs the main results table without manual setup.
 
 ## Examples
+
 ```text
 Checklist excerpt (NeurIPS-style):
   [x] Code released: https://github.com/org/repo (DOI 10.5281/zenodo.1234567)
@@ -77,6 +85,7 @@ Checklist excerpt (NeurIPS-style):
   [x] License: code MIT; data CC-BY 4.0.
   [x] reproduce.sh runs main table in one command.
 ```
+
 ```bash
 # reproduce.sh (excerpt)
 set -e
@@ -87,6 +96,7 @@ python src/utils/aggregate_results.py --out outputs/main_table.csv
 ```
 
 ## References
+
 - NeurIPS Reproducibility Checklist: https://neurips.cc/Conferences/2025/PaperInformation/CodeSubmission
 - ML Reproducibility Checklist: https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf
 - ACM Artifact Badging: https://www.acm.org/publications/artifacts-and-artifact-evaluation

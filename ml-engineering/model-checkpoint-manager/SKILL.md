@@ -22,13 +22,16 @@ language: en
 # Model Checkpoint Manager
 
 ## When To Use
+
 - Saving a checkpoint after every epoch or after each improvement.
 - Resuming training from a previous run without losing optimizer state.
 - Keeping only the top-K checkpoints by validation metric.
 - Using Lightning's `ModelCheckpoint` callback.
 
 ## Workflow
-1. Define the checkpoint payload: model `state_dict`, optimizer `state_dict`, scheduler `state_dict`, epoch, val metric, RNG states.
+
+1. Define the checkpoint payload: model `state_dict`, optimizer `state_dict`, scheduler `state_dict`, epoch, val metric,
+   RNG states.
 2. Save via `torch.save(payload, path)`.
 3. Load via `torch.load(path, map_location=device)`.
 4. Reconstruct model, optimizer, scheduler, and RNG states from the payload.
@@ -37,14 +40,17 @@ language: en
 7. Log the best checkpoint path to `Aggregated/BestCheckpoint.json`.
 
 ## Inputs
+
 - The model, optimizer, scheduler, epoch, val metric.
 - `Configs/Config.yaml` with `SaveTopK`, `Monitor`, `Mode`.
 
 ## Outputs
+
 - Checkpoint files under `Results/{DatasetName}_{Timestamp}/Train/`.
 - `Aggregated/BestCheckpoint.json` with the path to the best checkpoint.
 
 ## Key Rules
+
 - Always save RNG states so resume is byte-identical.
 - Load with `map_location=device` to move across CPU/GPU safely.
 - Keep at most top-K checkpoints; delete the rest.
@@ -52,6 +58,7 @@ language: en
 - Reference real `torch.save` / `torch.load` patterns.
 
 ## Examples
+
 ```python
 # Checkpoint manager with top-K pruning.
 import os
@@ -120,6 +127,9 @@ def PruneTopK(CheckpointDir, KeepK, Mode, OutputPath):
 ```
 
 ## References
+
 - torch.save / torch.load: https://pytorch.org/docs/stable/generated/torch.save.html
-- Lightning ModelCheckpoint: https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.ModelCheckpoint.html
-- Saving and loading models recipe: https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_models_for_inference.html
+- Lightning
+  ModelCheckpoint: https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.ModelCheckpoint.html
+- Saving and loading models
+  recipe: https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_models_for_inference.html

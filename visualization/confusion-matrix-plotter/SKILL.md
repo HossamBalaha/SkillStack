@@ -22,12 +22,14 @@ language: en
 # Confusion Matrix Plotter
 
 ## When To Use
+
 - Reporting classification results with per-class accuracy.
 - Comparing two classifiers on their error patterns.
 - Diagnosing systematic confusion between similar classes.
 - Producing a figure for a paper's results section.
 
 ## Workflow
+
 1. Compute the confusion matrix from predicted and true labels.
 2. Build the row-normalised variant by dividing each row by its sum.
 3. Create a two-panel figure with `plt.subplots(1, 2)`.
@@ -37,15 +39,18 @@ language: en
 7. Save as PDF for the manuscript and PNG for quick inspection.
 
 ## Inputs
+
 - Predicted labels and ground-truth labels (lists or 1-D arrays).
 - Class name list aligned with label indices.
 - Optional sample weights for weighted metrics.
 
 ## Outputs
+
 - A two-panel PDF/PNG with raw and normalised matrices.
 - A small JSON file recording accuracy, macro-F1, and weighted-F1.
 
 ## Key Rules
+
 - Always show raw counts AND row-normalised variants.
 - Annotate every cell with its count using `annot=True`.
 - Use `fmt="d"` for integer counts and `fmt=".2f"` for normalised values.
@@ -54,6 +59,7 @@ language: en
 - Use `constrained_layout=True` and keep legends outside when present.
 
 ## Examples
+
 ```python
 # Plot raw and normalised confusion matrices side by side.
 import numpy as np
@@ -92,5 +98,6 @@ def PlotConfusion(yTrue, yPred, classNames, outputPath):
 ```
 
 ## References
+
 - seaborn heatmap docs: https://seaborn.pydata.org/generated/seaborn.heatmap.html
 - sklearn confusion_matrix: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html

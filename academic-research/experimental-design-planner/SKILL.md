@@ -22,25 +22,35 @@ language: en
 # Experimental Design Planner
 
 ## When To Use
+
 - The user says "design my experiment", "what is the right study design", or "calculate my sample size".
 - The user has hypotheses and needs a study design and randomization scheme.
 - The user wants a pre-registration-ready design block.
-- Trigger keywords: RCT, factorial, crossover, repeated-measures, quasi-experimental, power analysis, randomization, blinding.
+- Trigger keywords: RCT, factorial, crossover, repeated-measures, quasi-experimental, power analysis, randomization,
+  blinding.
 
 ## Workflow
+
 1. Read the hypothesis table from the hypothesis-designer step.
-2. Select a design family: RCT, factorial, crossover, repeated-measures, or quasi-experimental. Justify the choice against the hypothesis type.
+2. Select a design family: RCT, factorial, crossover, repeated-measures, or quasi-experimental. Justify the choice
+   against the hypothesis type.
 3. Define the control condition (active, sham, wait-list, or no-treatment).
-4. Specify the randomization scheme: simple, block, stratified, or minimization. State block size (or concealed-range technique).
-5. Specify the blinding level: open, single-blind, double-blind; identify who is blinded (participant, investigator, outcome assessor, statistician).
-6. Run sample-size calculation: alpha = 0.05 (two-sided unless one-sided is justified), power = 0.80, effect size from the hypothesis table, allocation ratio.
+4. Specify the randomization scheme: simple, block, stratified, or minimization. State block size (or concealed-range
+   technique).
+5. Specify the blinding level: open, single-blind, double-blind; identify who is blinded (participant, investigator,
+   outcome assessor, statistician).
+6. Run sample-size calculation: alpha = 0.05 (two-sided unless one-sided is justified), power = 0.80, effect size from
+   the hypothesis table, allocation ratio.
 7. Add an attrition buffer (typically 10-20%) to the calculated n.
-8. Define the analysis population: intention-to-treat, per-protocol, safety; specify handling of missing data (multiple imputation, mixed-effects).
-9. Plan the analysis: primary test (per hypothesis), secondary tests, multiplicity correction (Bonferroni, Holm, Hochberg, FDR).
+8. Define the analysis population: intention-to-treat, per-protocol, safety; specify handling of missing data (multiple
+   imputation, mixed-effects).
+9. Plan the analysis: primary test (per hypothesis), secondary tests, multiplicity correction (Bonferroni, Holm,
+   Hochberg, FDR).
 10. Draft the timeline (CONSORT-style for RCTs) and identify potential threats to validity.
 11. Output the design block ready for pre-registration.
 
 ## Inputs
+
 - Hypothesis table with effect sizes.
 - Primary outcome variable and its scale.
 - Expected attrition rate.
@@ -48,6 +58,7 @@ language: en
 - One-sided vs. two-sided alpha.
 
 ## Outputs
+
 - `design_block.md` — design family, control, randomization, blinding.
 - `sample_size_calc.md` — inputs, formula, software used, computed n, n with attrition buffer.
 - `randomization_plan.md` — scheme, block size, allocation concealment.
@@ -55,6 +66,7 @@ language: en
 - `threats_to_validity.md` — internal/external validity threats and mitigations.
 
 ## Key Rules
+
 - Default alpha = 0.05 two-sided; one-sided requires explicit justification.
 - Default power = 0.80; increase to 0.90 for pivotal trials.
 - Sample size must cite the formula used and the software (G*Power, PASS, R `pwr`, statsmodels).
@@ -63,6 +75,7 @@ language: en
 - Multiplicity correction required when multiple primary or secondary endpoints exist.
 
 ## Examples
+
 ```text
 Design: Two-arm parallel-group RCT, 1:1 allocation.
   Control: Conventional physiotherapy.
@@ -74,6 +87,7 @@ Design: Two-arm parallel-group RCT, 1:1 allocation.
   Sample size: alpha = 0.025 one-sided, power = 0.80, d = 0.5, n = 51 per
     arm (G*Power 3.1); with 15% attrition, n = 60 per arm.
 ```
+
 ```text
 Multiplicity:
   Primary endpoint: 6-minute walk distance (one-sided t-test).
@@ -82,12 +96,15 @@ Multiplicity:
 ```
 
 ## References
+
 - CONSORT 2010 statement: https://www.consort-statement.org/
 - G*Power: https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower
 - R `pwr` package: https://cran.r-project.org/package=pwr
-- Schulz & Grimes "Generation of allocation sequences in randomised trials": https://doi.org/10.1016/S0140-6736(02)07683-5
+- Schulz & Grimes "Generation of allocation sequences in randomised
+  trials": https://doi.org/10.1016/S0140-6736(02)07683-5
 
 ## Notes
+
 - Crossover designs require washout periods long enough to eliminate carryover; quantify if possible.
 - For factorial designs, confirm the interactions are estimable by checking the aliasing structure.
 - Quasi-experimental designs must declare the counterfactual and the matching strategy.

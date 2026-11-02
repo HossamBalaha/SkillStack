@@ -22,43 +22,52 @@ language: en
 # Reference List Formatter
 
 ## When To Use
+
 - The manuscript is final and the bibliography must be rendered in the exact journal style.
 - The journal requires abbreviated journal names (e.g., ISO 4 / NLM) but your `.bib` has full names.
 - You need a plain-text reference list (no LaTeX) for a non-LaTeX submission portal.
 - A copyeditor flagged inconsistent italics or punctuation across reference entries.
 
 ## Workflow
+
 1. Load the `.bib` and the list of citekeys actually cited in the manuscript (from the `.aux` file or a manual scan).
 2. Filter the bibliography: keep only entries that appear at least once in the manuscript; flag orphans.
-3. Apply author-name formatting per style (IEEE: initials before surname; APA: surname first, then initials; MLA: surname, first name).
+3. Apply author-name formatting per style (IEEE: initials before surname; APA: surname first, then initials; MLA:
+   surname, first name).
 4. Apply container formatting (italicize journal title for APA/MLA; italicize volume only for some styles).
-5. Convert journal names to the abbreviated form if the style requires it (ISO 4 via the ISSN List of Title Word Abbreviations).
+5. Convert journal names to the abbreviated form if the style requires it (ISO 4 via the ISSN List of Title Word
+   Abbreviations).
 6. Apply punctuation rules: comma vs. period between fields, en-dash for page ranges, and trailing period.
 7. Order the list per the style: alphabetical (APA, MLA, Chicago author-date), citation order (IEEE, Vancouver).
 8. Render either as a LaTeX `\begin{thebibliography}...\end{thebibliography}` block or as a plain-text list.
 9. Cross-check every cited key against the rendered list; report any missing entries.
 
 ## Inputs
+
 - The `.bib` file.
 - The cited-keys list (from `.aux` or a manual extraction).
 - Target style declaration (IEEE, APA, Chicago, Vancouver, MLA, journal-specific).
 - Journal abbreviation preference: full names, ISO 4 abbreviations, or NLM abbreviations.
 
 ## Outputs
+
 - `references_formatted.tex` — the `\begin{thebibliography}` block (LaTeX path).
 - `references_formatted.txt` — the plain-text reference list (non-LaTeX path).
 - `formatting_report.md` — entry-by-entry log of name order, italicization, and abbreviation decisions.
 - `orphan_report.md` — entries in the `.bib` that were never cited.
 
 ## Key Rules
+
 - Every entry in the rendered list must be cited at least once in the manuscript.
 - Page ranges use an en-dash (–), not a hyphen (-).
 - Journal-name abbreviation must be consistent across the entire list.
-- Author surname must precede initials for the first author in author-date styles; subsequent authors may be "first name initial + surname" per style.
+- Author surname must precede initials for the first author in author-date styles; subsequent authors may be "first name
+  initial + surname" per style.
 - Italics applied to journal title (APA) or volume number (some biomedical styles) must be consistent.
 - The list must be sorted exactly as the style mandates; alphabetical sort must use the first author's surname.
 
 ## Examples
+
 ```text
 Before (.bib entry):
 @article{Smith2021Survey,
@@ -95,6 +104,7 @@ Orphan report:
 ```
 
 ## References
+
 - ISSN List of Title Word Abbreviations (ISO 4): https://www.issn.org/services/online-services/access-to-the-ltwa/.
 - biblatex style manuals (`style=ieee`, `style=apa`, `style=chicago`).
 - Cite Them Right (Harvard referencing companion): https://www.citethemrightonline.com/.

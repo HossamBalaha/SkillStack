@@ -22,13 +22,16 @@ language: en
 # PyTorch Lightning Scaffold
 
 ## When To Use
+
 - Starting a fresh training project with PyTorch Lightning.
 - Migrating a vanilla `torch.nn` training loop to Lightning.
 - Wiring callbacks for early stopping, checkpointing, and LR monitoring.
 - Attaching loggers (W&B, MLflow, TensorBoard) to a trainer.
 
 ## Workflow
-1. Define a `LightningModule` subclass with `__init__`, `forward`, `training_step`, `validation_step`, `configure_optimizers`.
+
+1. Define a `LightningModule` subclass with `__init__`, `forward`, `training_step`, `validation_step`,
+   `configure_optimizers`.
 2. Define a `LightningDataModule` with `setup`, `train_dataloader`, `val_dataloader`, `test_dataloader`.
 3. Build a callback list: `EarlyStopping`, `ModelCheckpoint`, `LearningRateMonitor`.
 4. Build a logger list: `WandbLogger`, `MLFlowLogger`, or `TensorBoardLogger`.
@@ -37,23 +40,28 @@ language: en
 7. Persist the best checkpoint path to `Aggregated/BestCheckpoint.json`.
 
 ## Inputs
+
 - `Configs/Config.yaml` with model hyperparameters, batch size, max epochs.
 - A model factory producing a `nn.Module`.
 - A dataset path or `LightningDataModule`.
 
 ## Outputs
+
 - A reproducible Lightning training script.
 - Best checkpoint under `Results/{DatasetName}_{Timestamp}/Train/`.
 - Logged metrics in W&B / MLflow / TensorBoard.
 
 ## Key Rules
-- `LightningModule` methods (`forward`, `training_step`, `validation_step`, `configure_optimizers`) are framework-mandated lowercase and exempt from CamelCase.
+
+- `LightningModule` methods (`forward`, `training_step`, `validation_step`, `configure_optimizers`) are
+  framework-mandated lowercase and exempt from CamelCase.
 - Every other function and class name is CamelCase.
 - `configure_optimizers` must return either an optimizer or a tuple of (optimizer, scheduler).
 - Use `self.log("ValLoss", loss, prog_bar=True)` to expose metrics to callbacks.
 - Reference only the real Lightning API at https://lightning.ai.
 
 ## Examples
+
 ```python
 # Lightning module + datamodule + callbacks + logger.
 import pytorch_lightning as L
@@ -118,5 +126,6 @@ def BuildTrainer(MaxEpochs, Callbacks, Logger):
 ```
 
 ## References
+
 - PyTorch Lightning documentation: https://lightning.ai/docs/pytorch/stable/
 - Lightning callbacks: https://lightning.ai/docs/pytorch/stable/api_references.html#callbacks

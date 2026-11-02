@@ -22,12 +22,14 @@ language: en
 # Results Table Formatter
 
 ## When To Use
+
 - Building a benchmark comparison table for a paper or report.
 - Summarising ablation results across multiple model variants.
 - Reporting metrics with statistical significance markers and 95% CIs.
 - Exporting the same table to both LaTeX and CSV.
 
 ## Workflow
+
 1. Collect raw metric rows from experiment logs.
 2. Compute mean and 95% confidence interval per metric per model.
 3. Determine the best result per column and mark it bold.
@@ -38,16 +40,19 @@ language: en
 8. Verify that bold, CI, and significance glyphs survive the LaTeX compile.
 
 ## Inputs
+
 - A dataframe of metric rows (model, dataset, metric, mean, std, n).
 - A significance threshold and the reference model for paired tests.
 - A list of metrics and the rounding policy (3 for metrics, 4 for p-values).
 
 ## Outputs
+
 - A LaTeX `table` environment using `booktabs` macros.
 - A CSV file mirroring every numeric cell.
 - A short log noting the best model per metric.
 
 ## Key Rules
+
 - Use `\toprule`, `\midrule`, `\bottomrule`; never `\hline`.
 - Headers may use `\multirow` and `\multicolumn`; keep alignment consistent.
 - Significance markers are `*` for p<0.05, `**` for p<0.01, `***` for p<0.001.
@@ -56,6 +61,7 @@ language: en
 - Metrics round to 3 decimals; p-values round to 4 decimals.
 
 ## Examples
+
 ```python
 # Format a results row with CI, significance, and bold best.
 def FormatCell(meanValue, ciValue, pValue, isBest):
@@ -89,5 +95,6 @@ def EmitLatexTable(rows, bestIndex):
 ```
 
 ## References
+
 - booktabs LaTeX package: https://ctan.org/pkg/booktabs
 - multirow LaTeX package: https://ctan.org/pkg/multirow

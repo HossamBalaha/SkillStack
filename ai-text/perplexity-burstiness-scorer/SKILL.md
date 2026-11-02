@@ -23,6 +23,7 @@ language: en
 # Perplexity and Burstiness Scorer
 
 ## When To Use
+
 - An `ai-text-detector` verdict needs numeric corroboration, not just pattern matching.
 - You want a before/after metric for a `ai-text-humanizer` rewrite.
 - A reviewer asks "how machine-like is this text, quantitatively?"
@@ -30,6 +31,7 @@ language: en
 - You want to compare a draft against a known-human baseline by the same author.
 
 ## Workflow
+
 1. Load or receive the input text. Confirm the encoding is plain UTF-8.
 2. Choose a small reference language model (GPT-2 small is a reasonable default; ~124M parameters, runs locally).
 3. Tokenize the input using the model's tokenizer.
@@ -41,21 +43,28 @@ language: en
 9. Compare both metrics against a baseline distribution (human prose, AI prose) you maintain.
 10. Classify severity: very low PPL + low B → S3; very low PPL + normal B → S2; normal PPL + low B → S1.
 11. Emit a numeric scorecard with the raw values, the normalized z-scores against baseline, and a severity label.
-12. If token-level probabilities reveal long runs of highly-predictable tokens, note the longest such run — long low-surprise runs are a strong AI signal.
+12. If token-level probabilities reveal long runs of highly-predictable tokens, note the longest such run — long
+    low-surprise runs are a strong AI signal.
 
 ## Inputs
+
 - The text to score (at least 100 words for a stable estimate; 300+ preferred).
 - Reference model name (default: `gpt2`).
 - Optional: a human-prose baseline corpus to compute z-scores.
 - Optional: per-sentence output flag.
 
 ## Outputs
-- A scorecard with: token count, perplexity, burstiness (CV of sentence length), longest low-surprise run, z-scores against baseline, severity label (S1-S3).
+
+- A scorecard with: token count, perplexity, burstiness (CV of sentence length), longest low-surprise run, z-scores
+  against baseline, severity label (S1-S3).
 - Optional: per-sentence table (length, log-prob, contribution to burstiness).
-- A short interpretation paragraph: "Perplexity in the bottom 5% of human prose; burstiness below the 10th percentile; pattern consistent with LLM output."
+- A short interpretation paragraph: "Perplexity in the bottom 5% of human prose; burstiness below the 10th percentile;
+  pattern consistent with LLM output."
 
 ## Key Rules
-- Perplexity is model-relative. Always state which model computed it. Never compare PPL across models without re-baselining.
+
+- Perplexity is model-relative. Always state which model computed it. Never compare PPL across models without
+  re-baselining.
 - A single short paragraph produces unstable PPL. Require a minimum sample size or mark the result as low-confidence.
 - Burstiness alone is weak — pair it with perplexity. R1 (cumulative evidence) still applies.
 - Do not present a numeric score as proof of authorship. These are signals, not verdicts.
@@ -66,6 +75,7 @@ language: en
 ## Examples
 
 **Scorecard output:**
+
 ```
 Sample: 412 tokens, 23 sentences
 Reference model: gpt2
@@ -80,12 +90,14 @@ consistent with LLM output. Pair with lexical/citation tells before concluding.
 ```
 
 **Before/after (humanizer progress):**
+
 ```
 Before: PPL 14.2, B 0.41, severity S3
 After:  PPL 31.7, B 0.78, severity S1  → mixed, acceptable.
 ```
 
 **Edge case (mixed signals):**
+
 ```
 Sample: 220 tokens
 Perplexity: 28.4  (z = -0.4 → 35th percentile, unremarkable)
@@ -99,6 +111,9 @@ burstiness alone — pair with lexical and citation tells before concluding.
 ```
 
 ## References
+
 - GPT-2 reference model: Radford, A. et al. (2019). "Language Models are Unsupervised Multitask Learners." OpenAI.
-- Concept of burstiness in authorship attribution: Grieve, J. (2007). "Quantitative authorship attribution: A history and evaluation of methods."
-- Weber-Wulff et al. (2023) caution that statistical scores alone misclassify at non-trivial rates — combine with manual tell analysis.
+- Concept of burstiness in authorship attribution: Grieve, J. (2007). "Quantitative authorship attribution: A history
+  and evaluation of methods."
+- Weber-Wulff et al. (2023) caution that statistical scores alone misclassify at non-trivial rates — combine with manual
+  tell analysis.

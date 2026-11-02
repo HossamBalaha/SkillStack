@@ -22,12 +22,14 @@ language: en
 # Attention Map Visualizer
 
 ## When To Use
+
 - Inspecting per-head attention patterns in a transformer.
 - Comparing attention across layers for a single example.
 - Overlaying attention weights on input tokens for interpretability.
 - Producing a figure for a model analysis section.
 
 ## Workflow
+
 1. Extract attention weights from the model's attention modules.
 2. Align token strings with the row and column indices of the matrix.
 3. Build a grid of per-head heatmaps for one layer.
@@ -37,16 +39,19 @@ language: en
 7. Save as PDF for the manuscript plus PNG for quick inspection.
 
 ## Inputs
+
 - Attention tensor of shape `[nLayers, nHeads, seqLen, seqLen]`.
 - Token list aligned with `seqLen`.
 - Optional layer and head indices to spotlight.
 
 ## Outputs
+
 - A multi-panel PDF with per-head heatmaps.
 - A summary PNG averaging across heads when the head count is large.
 - A token-overlay HTML file colouring tokens by attention weight.
 
 ## Key Rules
+
 - Use `cmap="viridis"` or `seaborn.heatmap` for the heatmap.
 - Average across heads when there are too many to display individually.
 - Align row and column ticks with token strings.
@@ -55,6 +60,7 @@ language: en
 - Do not annotate every cell when sequence length exceeds 20.
 
 ## Examples
+
 ```python
 # Plot per-head attention heatmaps for one transformer layer.
 import numpy as np
@@ -94,5 +100,6 @@ def PlotHeads(attention, tokens, outputPath, layerIdx=0):
 ```
 
 ## References
+
 - bertviz attention visualisation: https://github.com/jessevig/bertviz
 - captum attention attribution: https://captum.ai/api/attribution.html

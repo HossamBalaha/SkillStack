@@ -16,12 +16,10 @@ from __future__ import annotations
 
 import os
 import re
+import yaml
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterator
-
-import yaml
-
 
 # Canonical list of required frontmatter keys enforced by the linter.
 RequiredFrontmatterKeys = [
@@ -254,10 +252,12 @@ def LoadSkillMd(skillPath: Path, theme: str | None = None) -> SkillDoc:
     section for section in RequiredSections if (section not in body)
   ]
   # Has-examples is true when the Examples section is non-empty.
-  doc.HasExamples = "## Examples" in body and bool(re.search(r"^## Examples\s*$.+?^## ", body + "\n## ", flags=re.MULTILINE | re.DOTALL))
+  doc.HasExamples = "## Examples" in body and bool(
+    re.search(r"^## Examples\s*$.+?^## ", body + "\n## ", flags=re.MULTILINE | re.DOTALL))
   # Has-references is true when the References section contains at least one URL or bullet.
   referencesBlock = _ExtractSection(body, "## References")
-  doc.HasReferences = bool(referencesBlock) and bool(re.search(r"(https?://|^\s*[-*]\s+)", referencesBlock, flags=re.MULTILINE))
+  doc.HasReferences = bool(referencesBlock) and bool(
+    re.search(r"(https?://|^\s*[-*]\s+)", referencesBlock, flags=re.MULTILINE))
   return doc
 
 

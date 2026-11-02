@@ -22,12 +22,14 @@ language: en
 # Inference Pipeline Builder
 
 ## When To Use
+
 - Serving a trained model behind an HTTP API.
 - Building `/predict` and `/healthz` endpoints with FastAPI.
 - Defining request/response schemas with pydantic.
 - Supporting batched inference for throughput.
 
 ## Workflow
+
 1. Load the trained model and preprocessing artifacts (tokenizer, scaler) once at startup.
 2. Resolve device once and call `model.to(device)` and `model.eval()`.
 3. Define pydantic request and response schemas.
@@ -38,16 +40,19 @@ language: en
 8. Run with `uvicorn` and document the OpenAPI schema automatically.
 
 ## Inputs
+
 - A trained model checkpoint.
 - Preprocessing artifacts (tokenizer, scaler) persisted via `joblib`.
 - `Configs/Config.yaml` with `Host`, `Port`, `BatchSize`.
 
 ## Outputs
+
 - A runnable FastAPI app file.
 - `/predict` and `/healthz` endpoints.
 - Auto-generated OpenAPI schema.
 
 ## Key Rules
+
 - Call `model.eval()` and use `torch.no_grad()` for inference.
 - Validate inputs with pydantic schemas.
 - Load the model ONCE at startup, not per request.
@@ -55,6 +60,7 @@ language: en
 - Reference real FastAPI docs at https://fastapi.tiangolo.com.
 
 ## Examples
+
 ```python
 # FastAPI inference endpoint with batch support.
 from typing import List
@@ -140,6 +146,7 @@ Model = LoadModel("Aggregated/BestModel.pt")
 ```
 
 ## References
+
 - FastAPI documentation: https://fastapi.tiangolo.com
 - pydantic v2: https://docs.pydantic.dev/latest/
 - uvicorn deployment: https://www.uvicorn.org/

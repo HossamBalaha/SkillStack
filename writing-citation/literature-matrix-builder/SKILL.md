@@ -22,16 +22,20 @@ language: en
 # Literature Matrix Builder
 
 ## When To Use
+
 - You need to compare 10+ papers across a fixed set of dimensions for a literature review.
 - A grant proposal asks for a "gap analysis" table.
 - You are preparing input for a scoping or systematic review.
 - A thesis advisor wants to see the landscape of prior work before approving a contribution.
 
 ## Workflow
-1. Confirm the dimensions the matrix must capture: year, methodology, dataset/sample, key findings, limitations, relevance, plus any user-specific columns (e.g., population, intervention, comparator).
+
+1. Confirm the dimensions the matrix must capture: year, methodology, dataset/sample, key findings, limitations,
+   relevance, plus any user-specific columns (e.g., population, intervention, comparator).
 2. Collect the candidate paper set (Zotero collection, `.bib`, or DOI list).
 3. For each paper, extract the dimension values from the abstract, methods, and conclusions.
-4. Normalize categorical values (e.g., "RCT," "randomized controlled trial," "randomised trial" → "RCT") so they group cleanly.
+4. Normalize categorical values (e.g., "RCT," "randomized controlled trial," "randomised trial" → "RCT") so they group
+   cleanly.
 5. Build the matrix as a Markdown table for human reading and a CSV for downstream analysis.
 6. Sort by year (descending) by default; offer a theme-based sort as an alternative.
 7. Run a gap analysis: which dimension values are over-represented (clusters) and which are empty (gaps).
@@ -39,18 +43,21 @@ language: en
 9. Cross-check that every row's "relevance" cell ties to the user's research question.
 
 ## Inputs
+
 - The list of papers (`.bib`, DOIs, or titles).
 - The dimension schema (default: year, methodology, dataset, sample size, key findings, limitations, relevance).
 - The user's research question or thesis topic.
 - Sort preference (year descending vs. theme).
 
 ## Outputs
+
 - `literature_matrix.md` — Markdown table.
 - `literature_matrix.csv` — same content, machine-readable.
 - `gap_analysis.md` — clusters, gaps, and a short narrative interpretation.
 - `theme_index.md` — list of themes with the count of papers per theme.
 
 ## Key Rules
+
 - Every cell must be sourced from the paper itself — never inferred or fabricated.
 - Categorical values must be normalized to a controlled vocabulary before clustering.
 - Each row must populate the relevance column with an explicit tie to the user's research question.
@@ -59,6 +66,7 @@ language: en
 - A paper with missing dimensions must be flagged `[MISSING]`, not silently left blank.
 
 ## Examples
+
 ```text
 | Year | Author        | Method  | Dataset           | N      | Key finding                                     | Limitations                | Relevance to our work        |
 |------|---------------|---------|-------------------|--------|-------------------------------------------------|----------------------------|------------------------------|
@@ -77,16 +85,21 @@ Gap analysis excerpt:
 ```
 
 ## Common Pitfalls
+
 - Leaving cells blank instead of marking `[MISSING]` — silent gaps distort the gap analysis.
-- Failing to normalize categorical values, so "RCT" and "randomized controlled trial" count as two distinct methodologies.
+- Failing to normalize categorical values, so "RCT" and "randomized controlled trial" count as two distinct
+  methodologies.
 - Inferring cells from abstracts alone — for methods and limitations, the full PDF is often required.
 - Forcing a paper into a theme where it does not fit; an "Other" theme is better than misclassification.
 - Claiming clusters or gaps without backing counts — every claim must trace to matrix data.
 
 ## References
+
 - Garrard, J. (2013). *Health Sciences Literature Review Made Easy*. Jones & Bartlett — on the matrix method.
 - PRISMA 2020 statement: https://www.prisma-statement.org/ — for systematic-review reporting.
 - Booth, A., Papaioannou, D., & Sutton, A. (2012). *Systematic Approaches to a Successful Literature Review*. SAGE.
-- Arksey, H., & O'Malley, L. (2005). Scoping studies: Towards a methodological framework. *International Journal of Social Research Methodology*, 8(1), 19-32.
-- Tricco, A. C., et al. (2018). PRISMA extension for scoping reviews (PRISMA-ScR). *Annals of Internal Medicine*, 169(7), 467-473.
+- Arksey, H., & O'Malley, L. (2005). Scoping studies: Towards a methodological framework. *International Journal of
+  Social Research Methodology*, 8(1), 19-32.
+- Tricco, A. C., et al. (2018). PRISMA extension for scoping reviews (PRISMA-ScR). *Annals of Internal Medicine*, 169
+  (7), 467-473.
 - Covidence systematic review software: https://www.covidence.org/ — for collaborative matrix building.

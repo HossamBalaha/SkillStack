@@ -22,12 +22,14 @@ language: en
 # GitHub Actions Research CI
 
 ## When To Use
+
 - You want every push and pull request to run install, lint, tests, and docs build automatically.
 - You need to test against multiple Python versions (3.10 / 3.11 / 3.12) in a matrix.
 - You want failed tests to block merges via a required status check.
 - You want to publish a Docker image to the GitHub Container Registry on every release tag.
 
 ## Workflow
+
 1. Create `.github/workflows/ci.yml` at the repo root.
 2. Define `on: push` and `on: pull_request` triggers for `main` and `develop` branches.
 3. Add an `install` job using `actions/setup-python@v5` with a `matrix.python-version` of `["3.10","3.11","3.12"]`.
@@ -41,17 +43,20 @@ language: en
 11. Verify by pushing a small commit and watching the Actions tab.
 
 ## Inputs
+
 - Python versions to test (default `3.10`, `3.11`, `3.12`).
 - The OS matrix (default `ubuntu-latest`).
 - Whether to enable the Docker push job (requires `packages: write` permission).
 - Coverage threshold (default `--cov-fail-under=80`).
 
 ## Outputs
+
 - `.github/workflows/ci.yml` — the main CI pipeline.
 - Optional `.github/workflows/docs.yml` if docs are split out.
 - Badges in the README pointing at the CI status.
 
 ## Key Rules
+
 - Always pin `actions/setup-python@v5` (or the latest major) to avoid silent breaking changes.
 - Cache pip by `hashFiles('Requirements.txt')` so a dep change busts the cache cleanly.
 - Use `fail-fast: false` on the matrix so one Python version failing doesn't cancel the others.
@@ -61,6 +66,7 @@ language: en
 - Keep job names lowercase-kebab-case and step names descriptive.
 
 ## Examples
+
 ```yaml
 # .github/workflows/ci.yml — research CI pipeline.
 name: ci
@@ -133,7 +139,9 @@ Badge for the README:
 ```
 
 ## References
+
 - GitHub Actions docs — https://docs.github.com/actions
 - `actions/setup-python` — https://github.com/actions/setup-python
 - `actions/cache` — https://github.com/actions/cache
-- Publishing to GHCR — https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+- Publishing to
+  GHCR — https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry

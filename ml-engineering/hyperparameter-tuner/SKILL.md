@@ -22,12 +22,14 @@ language: en
 # Hyperparameter Tuner
 
 ## When To Use
+
 - Tuning more than a handful of hyperparameters where grid search is infeasible.
 - Reading the search space from `Configs/Config.yaml` and optimizing automatically.
 - Pruning unpromising trials early to save compute.
 - Persisting the full trial history to CSV for reproducibility.
 
 ## Workflow
+
 1. Load `Configs/Config.yaml` and read the `SearchSpace` block.
 2. Construct an `optuna.study.Study` with the TPE sampler and a seeded RNG.
 3. Attach a `MedianPruner` (or `HyperbandPruner` for multi-fidelity promotion).
@@ -38,15 +40,18 @@ language: en
 8. Re-train the model with the best parameters and save it.
 
 ## Inputs
+
 - `Configs/Config.yaml` containing a `SearchSpace` block.
 - A training function that accepts a hyperparameter dict and returns a validation metric.
 
 ## Outputs
+
 - `Aggregated/OptunaTrials.csv` with every trial.
 - `Aggregated/BestParams.json` with the winning configuration.
 - The re-trained best model checkpoint.
 
 ## Key Rules
+
 - Use `optuna.samplers.TPESampler(seed=...)` with a fixed seed.
 - Use `optuna.pruners.MedianPruner` by default; HyperbandPruner for multi-fidelity.
 - The objective must call `trial.report(metric, step)` and check `trial.should_prune()`.
@@ -54,6 +59,7 @@ language: en
 - Reference only the real Optuna API at https://optuna.org.
 
 ## Examples
+
 ```python
 # Bayesian optimization with TPE and a median pruner.
 import optuna
@@ -112,6 +118,7 @@ def RunTuning(SearchSpace, TrainFunction, N_trials, Seed, OutputPath):
 ```
 
 ## References
+
 - Optuna documentation: https://optuna.org
 - TPE sampler: https://optuna.readthedocs.io/en/stable/reference/generated/optuna.samplers.TPESampler.html
 - MedianPruner: https://optuna.readthedocs.io/en/stable/reference/generated/optuna.pruners.MedianPruner.html

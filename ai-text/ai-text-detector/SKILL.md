@@ -22,6 +22,7 @@ language: en
 # AI Text Detector
 
 ## When To Use
+
 - A user asks "is this AI-written?" or wants a likelihood score for a passage.
 - You need to audit a long document (essay, report, blog post) and flag suspect paragraphs.
 - A reviewer wants reproducible evidence rather than a gut judgement.
@@ -29,31 +30,38 @@ language: en
 - You want to feed clean inputs into a humanization or rewrite workflow.
 
 ## Workflow
+
 1. Read the full passage once end-to-end without judging.
 2. Split the text into analysis windows (paragraph or ~300-word blocks).
 3. For each window, scan the six tell categories in order: lexical, structural, thematic, tonal, statistical, citation.
 4. Cross-reference every match against the `ai-tell-catalogue` to confirm it is a known pattern.
 5. Assign each match a severity level (S1-S4) using `severity-classifier`.
 6. Record the evidence: tell name, location (quote + offset), category, severity.
-7. Apply the cumulative-evidence rule R1: a single S1 or S2 match is never enough on its own. Require at least two overlapping patterns from different categories before flagging a block.
+7. Apply the cumulative-evidence rule R1: a single S1 or S2 match is never enough on its own. Require at least two
+   overlapping patterns from different categories before flagging a block.
 8. Where statistics are involved, optionally call `perplexity-burstiness-scorer` to add numeric support.
-9. Verify any suspicious citations with `citation-hallucination-detector`. Hallucinated DOIs count as S4 regardless of other evidence.
+9. Verify any suspicious citations with `citation-hallucination-detector`. Hallucinated DOIs count as S4 regardless of
+   other evidence.
 10. Produce a verdict per window: `Likely Human`, `Mixed`, `Likely AI`, or `Near-Certain AI`.
 11. Emit a summary table with counts by category and severity.
 
 ## Inputs
+
 - The text under review (plain text preferred; HTML/Markdown acceptable if structural tells matter).
 - Optional: claimed author or source, so verdict can be contextualized.
 - Optional: target voice profile, if you want to check deviation from an author's baseline.
 
 ## Outputs
+
 - A verdict per window plus an overall document verdict.
 - An evidence table: `Location | Tell | Category | Severity | Note`.
 - Category coverage summary showing which of the six categories were triggered.
 - A short justification paragraph citing the strongest overlapping patterns.
 
 ## Key Rules
-- R1 (cumulative evidence): never issue an AI verdict on a single indicator. Require overlap from at least two categories.
+
+- R1 (cumulative evidence): never issue an AI verdict on a single indicator. Require overlap from at least two
+  categories.
 - Treat S4 signals (hallucinated citations, phantom DOIs) as near-confirmation; they override R1.
 - Quote exact spans. Do not paraphrase evidence — reviewers need to verify.
 - Distinguish "common in both" (S1) from "rare in human writing" (S3) before weighting.
@@ -64,6 +72,7 @@ language: en
 ## Examples
 
 **Input passage:**
+
 ```
 The 2023 study by Chen et al. delves into the pivotal role of federated learning
 in the broader landscape of edge computing. It underscores how seamless
@@ -72,6 +81,7 @@ DOI: 10.1109/FAKE.2023.99999.
 ```
 
 **Detector output (excerpt):**
+
 ```
 Window 1 — Verdict: Near-Certain AI
 
@@ -90,11 +100,15 @@ Action: treat as near-certain AI; route to humanizer and citation verifier.
 ```
 
 **Before/After (human-style rewrite):**
+
 ```
 Before: This section delves into the pivotal role of caching.
 After:  Caching matters here because every repeated query hits the database twice.
 ```
 
 ## References
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns*, 4(7). Documents high error rates in commercial detectors — motivates R1.
-- Refer companion skills: `ai-tell-catalogue`, `severity-classifier`, `perplexity-burstiness-scorer`, `citation-hallucination-detector`.
+
+- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns*, 4(7). Documents high
+  error rates in commercial detectors — motivates R1.
+- Refer companion skills: `ai-tell-catalogue`, `severity-classifier`, `perplexity-burstiness-scorer`,
+  `citation-hallucination-detector`.

@@ -22,6 +22,7 @@ language: en
 # Staging Tell Remover
 
 ## When To Use
+
 - `ai-text-detector` flagged staging-category tells (catalogue #1-#5).
 - A draft repeatedly tells the reader how important something is rather than what it is.
 - A passage opens with "Let's dive in" or "Here's what you need to know" before the actual content.
@@ -29,30 +30,39 @@ language: en
 - A document ends paragraphs with deep-sounding aphorisms that add no information.
 
 ## Workflow
-1. Identify staging tells using the catalogue (#1 Not X but Y; #2 one-line closers; #3 sayings that sound deep; #4 staged run-ups; #5 arguing with no one).
+
+1. Identify staging tells using the catalogue (#1 Not X but Y; #2 one-line closers; #3 sayings that sound deep; #4
+   staged run-ups; #5 arguing with no one).
 2. For each match, locate the underlying factual claim.
 3. Apply the canonical fix:
-   - **Not X but Y**: collapse to a single direct statement. "It's not merely a report, it's a manifesto" → "The report also functions as a manifesto."
-   - **One-line closers**: delete the sentence. The prior sentence already makes the point.
-   - **Sayings that sound deep**: replace the aphorism with a concrete claim. "Symmetry is the language of trust" → "Symmetric layouts feel more predictable to readers."
-   - **Staged run-ups**: delete. "Let's dive in.", "Here's what you need to know." Cut them; the content follows.
-   - **Arguing with no one**: state the actual choice. "A tempting approach would be to cache everything, but we chose lazy loading" → "We chose lazy loading because writes are infrequent."
+    - **Not X but Y**: collapse to a single direct statement. "It's not merely a report, it's a manifesto" → "The report
+      also functions as a manifesto."
+    - **One-line closers**: delete the sentence. The prior sentence already makes the point.
+    - **Sayings that sound deep**: replace the aphorism with a concrete claim. "Symmetry is the language of trust" →
+      "Symmetric layouts feel more predictable to readers."
+    - **Staged run-ups**: delete. "Let's dive in.", "Here's what you need to know." Cut them; the content follows.
+    - **Arguing with no one**: state the actual choice. "A tempting approach would be to cache everything, but we chose
+      lazy loading" → "We chose lazy loading because writes are infrequent."
 4. If the underlying fact cannot be verified, invoke `grace-degradation-protocol`: omit or insert `[Verify Source]`.
-5. Re-read for cohesion. Staging removal often leaves a paragraph feeling abrupt; add a single concrete sentence where needed.
+5. Re-read for cohesion. Staging removal often leaves a paragraph feeling abrupt; add a single concrete sentence where
+   needed.
 6. Voice override: if the author's profile shows a genuine habit of aphorism, keep one or two but cut the rest.
 7. Emit the rewritten text plus a staging log: `Span removed | Tell type | Replacement`.
 
 ## Inputs
+
 - The text containing staging tells.
 - Optional: source material to verify underlying facts.
 - Optional: voice profile (aphorism-prone authors keep some).
 
 ## Outputs
+
 - The rewritten text.
 - A staging log: `Span | Tell type (#) | Replacement`.
 - A note on which tells were voice-kept (if a profile was applied).
 
 ## Key Rules
+
 - Staging signals importance; rewrite to add facts instead.
 - One-line closers are deleted, not paraphrased.
 - Staged run-ups are deleted unconditionally.
@@ -64,12 +74,14 @@ language: en
 ## Examples
 
 **Not X but Y:**
+
 ```
 Before: It's not merely a song — it's a statement about belonging.
 After:  The song makes a clear statement about belonging.
 ```
 
 **One-line closer:**
+
 ```
 Before: The cache hit rate doubled overnight. And that, ultimately, is the real win.
 After:  The cache hit rate doubled overnight.
@@ -79,18 +91,21 @@ After:  The cache hit rate doubled overnight.
 ```
 
 **Saying that sounds deep:**
+
 ```
 Before: Symmetry is the language of trust.
 After:  Symmetric layouts feel more predictable to readers.
 ```
 
 **Staged run-up:**
+
 ```
 Before: Let's dive in. The API exposes three endpoints.
 After:  The API exposes three endpoints.
 ```
 
 **Arguing with no one:**
+
 ```
 Before: A tempting approach would be to cache everything, but we chose lazy loading.
 After:  We chose lazy loading because writes are infrequent and cache invalidation
@@ -98,6 +113,7 @@ After:  We chose lazy loading because writes are infrequent and cache invalidati
 ```
 
 **Mixed (multiple staging tells):**
+
 ```
 Before: Let's dive in. It's not merely a refactor, it's a re-architecture. The new
 shape handles 3× the load. Symmetry is the language of trust. And that is the real win.
@@ -113,5 +129,7 @@ After:  The refactor re-architected the ingestion path; the new shape handles 3�
 ```
 
 ## References
-- Companion skills: `ai-text-detector`, `ai-tell-catalogue` (tells #1-#5), `grace-degradation-protocol`, `voice-profile-matcher`.
+
+- Companion skills: `ai-text-detector`, `ai-tell-catalogue` (tells #1-#5), `grace-degradation-protocol`,
+  `voice-profile-matcher`.
 - Principles paraphrased; before/after examples written from scratch.

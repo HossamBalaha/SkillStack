@@ -22,16 +22,19 @@ language: en
 # Release Notes Generator
 
 ## When To Use
+
 - You are cutting a release and need a structured body for the GitHub Release.
 - You want every `feat:` / `fix:` / `docs:` commit grouped under a clear heading.
 - You want to auto-bump the version and push a tag in one step.
 - You are auditing a repo whose release notes have drifted from the git log.
 
 ## Workflow
+
 1. Determine the last tag with `git describe --tags --abbrev=0`.
 2. Collect commits since that tag with `git log <lastTag>..HEAD --pretty=format:"- %s"`.
 3. Parse each commit's Conventional Commits type prefix (`feat`, `fix`, `docs`, `refactor`, `perf`, `test`, `chore`).
-4. Group commits under headings: Features (feat), Bug Fixes (fix), Documentation (docs), Refactoring (refactor), Performance (perf), Tests (test), Miscellaneous (chore).
+4. Group commits under headings: Features (feat), Bug Fixes (fix), Documentation (docs), Refactoring (refactor),
+   Performance (perf), Tests (test), Miscellaneous (chore).
 5. Decide the bump: any `feat!` or breaking footer → major; any `feat:` → minor; otherwise patch.
 6. Compose the release body and print it for review.
 7. Optionally create the tag (`git tag -a vx.y.z -m "..."`) and push it.
@@ -39,18 +42,21 @@ language: en
 9. Mirror the entry into `CHANGELOG.md` under a new `## [x.y.z] - YYYY-MM-DD` heading.
 
 ## Inputs
+
 - The last tag (auto-detected via `git describe`, or passed explicitly).
 - The next version (auto-bumped by default; explicit override if provided).
 - Today's date in ISO 8601.
 - Whether to push the tag and create the GitHub Release (default: dry-run only).
 
 ## Outputs
+
 - A release-notes body printed to stdout.
 - A new git tag `vx.y.z` (when push is enabled).
 - A GitHub Release (when `gh` is available and push is enabled).
 - An appended `CHANGELOG.md` entry.
 
 ## Key Rules
+
 - Only commits since the last tag are included; never re-list already-released commits.
 - Commits without a Conventional Commits prefix go under "Miscellaneous".
 - Breaking changes (`feat!:` or a `BREAKING CHANGE:` footer) force a major bump and are listed at the top.
@@ -60,6 +66,7 @@ language: en
 - The `CHANGELOG.md` entry uses the same grouping and ordering as the release body.
 
 ## Examples
+
 `GenerateReleaseNotes.py`:
 
 ```python
@@ -149,6 +156,7 @@ gh release create v0.3.0 --notes-file release_notes.md
 ```
 
 ## References
+
 - Conventional Commits — https://www.conventionalcommits.org
 - GitHub CLI `gh release create` — https://cli.github.com/manual/gh_release_create
 - `git describe` — https://git-scm.com/docs/git-describe

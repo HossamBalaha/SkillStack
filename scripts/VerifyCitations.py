@@ -19,11 +19,10 @@ CLI:
 from __future__ import annotations
 
 import argparse
+import requests
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-
-import requests
 from rich.console import Console
 from rich.table import Table
 

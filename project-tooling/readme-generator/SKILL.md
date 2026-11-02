@@ -22,34 +22,40 @@ language: en
 # Readme Generator
 
 ## When To Use
+
 - You are starting a new repo and need a README that gets a reader from clone to working in minutes.
 - An existing README has drifted from the code (commands fail, paths moved) and needs auditing.
 - You want to ship a README that avoids boilerplate ("Contributing", "License" sections that don't apply yet).
 - You need per-ecosystem install instructions (Python, Node, R) without copy-pasting templates.
 
 ## Workflow
+
 1. Read the repo to identify the language, build tool, entrypoint, and the single most common task.
 2. Write a `# Project Name` heading followed by a one-line hook (≤12 words).
 3. Add a "What & Why" section (2–4 sentences) answering what the project does and why it exists.
 4. Write a "Quick Start" section: clone → install → run, each command tested by actually running it.
 5. Add a "Usage" section with 1–2 real, tested code examples — never pseudocode.
 6. Add per-ecosystem install notes (Python: `pip install -e .`, Node: `npm ci`, R: `install.packages`).
-7. Only add sections this repo needs: skip "Contributing" until there are contributors, skip "Citation" until there's a paper.
+7. Only add sections this repo needs: skip "Contributing" until there are contributors, skip "Citation" until there's a
+   paper.
 8. Cross-check every command against the repo: do `pip install -e .` and `python Main.py` actually work?
 9. Add a license badge or line only if `LICENSE` exists.
 10. Keep the file under ~300 lines; link out to `docs/` for depth.
 
 ## Inputs
+
 - The repo root (so the agent can verify commands and paths).
 - The primary language / ecosystem.
 - The single most important user task (what does a new user do first?).
 - Optional badges: CI status, coverage, PyPI version, DOI.
 
 ## Outputs
+
 - `README.md` at the repo root.
 - A list of any drift found during audit (commands that fail, paths that don't exist).
 
 ## Key Rules
+
 - Every command in the README must be runnable as written; if you can't test it, mark it `# Untested:` and stop.
 - No pseudocode in examples — only real, copy-pasteable snippets.
 - Drop sections that don't apply; an empty "FAQ" is worse than no "FAQ".
@@ -59,6 +65,7 @@ language: en
 - Use a single `# H1` for the project name; lower-level sections use `##` and `###`.
 
 ## Examples
+
 ```markdown
 # researchkit — Reproducible research utilities that don't get in your way.
 
@@ -133,5 +140,7 @@ if (__name__ == "__main__"):
 ```
 
 ## References
+
 - Standard Readme spec — https://github.com/RichardLitt/standard-readme
-- GitHub README best practices — https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
+- GitHub README best
+  practices — https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes

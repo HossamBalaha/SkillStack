@@ -22,12 +22,14 @@ language: en
 # Baseline Model Zoo
 
 ## When To Use
+
 - Building reference models to compare against a proposed model.
 - Running the same preprocessing pipeline for every model.
 - Documenting per-baseline hyperparameter search.
 - Avoiding the deprecated `multi_class=` parameter in `LogisticRegression`.
 
 ## Workflow
+
 1. Load the SAME preprocessed train/validation/test splits for every baseline.
 2. Instantiate each baseline: Logistic Regression, Random Forest, XGBoost/LightGBM, simple MLP, k-NN.
 3. Fit a per-baseline hyperparameter search using `Configs/Config.yaml`.
@@ -37,14 +39,17 @@ language: en
 7. Save per-baseline metrics to `Aggregated/BaselineResults.json`.
 
 ## Inputs
+
 - Preprocessed train/validation/test splits.
 - `Configs/Config.yaml` with per-baseline hyperparameter grids.
 
 ## Outputs
+
 - Trained baseline models.
 - `Aggregated/BaselineResults.json` with metrics per baseline.
 
 ## Key Rules
+
 - Every baseline must use the SAME data pipeline as the proposed model.
 - NEVER pass `multi_class=` to `sklearn.linear_model.LogisticRegression` — it is deprecated.
 - Document hyperparameter search per baseline.
@@ -52,6 +57,7 @@ language: en
 - Report the same metrics computed by `metrics-computation-suite`.
 
 ## Examples
+
 ```python
 # Baseline zoo with a shared pipeline and NO multi_class parameter.
 import json
@@ -107,7 +113,9 @@ def TrainAndEvaluateBaselines(TrainFeatures, TrainLabels, TestFeatures, TestLabe
 ```
 
 ## References
-- sklearn LogisticRegression: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+
+- sklearn
+  LogisticRegression: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
 - RandomForestClassifier: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
 - XGBoost: https://xgboost.readthedocs.io
 - LightGBM: https://lightgbm.readthedocs.io

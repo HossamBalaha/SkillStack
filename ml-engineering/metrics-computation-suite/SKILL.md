@@ -22,14 +22,17 @@ language: en
 # Metrics Computation Suite
 
 ## When To Use
+
 - Computing classification metrics after a training run.
 - Branching AUC by binary vs multiclass based on the number of unique labels.
 - Reporting calibration error (ECE, MCE) for probabilistic predictions.
 - Producing a confusion matrix and derived metrics with 95% CIs.
 
 ## Workflow
+
 1. Collect predicted probabilities, predicted classes, and ground-truth labels.
-2. Branch AUC: 1-D positive-class probabilities for binary, 2-D matrix `multi_class="ovr", average="macro"` for multiclass.
+2. Branch AUC: 1-D positive-class probabilities for binary, 2-D matrix `multi_class="ovr", average="macro"` for
+   multiclass.
 3. Compute accuracy, precision, recall, F1 (macro/micro/weighted).
 4. Compute Matthews Correlation Coefficient (MCC) and Cohen's kappa.
 5. Compute calibration error (ECE, MCE) by binning predicted probabilities.
@@ -38,15 +41,18 @@ language: en
 8. Persist `Aggregated/MetricsReport.json`.
 
 ## Inputs
+
 - Predicted probabilities (2-D for multiclass, or 1-D positive-class for binary).
 - Predicted class labels and ground-truth labels.
 - Number of bootstrap iterations from `Configs/Config.yaml`.
 
 ## Outputs
+
 - `Aggregated/MetricsReport.json` with point estimates and 95% CIs.
 - `Aggregated/ConfusionMatrix.csv`.
 
 ## Key Rules
+
 - Branch AUC computation by `len(np.unique(labels))`.
 - Binary AUC uses 1-D positive-class probabilities.
 - Multiclass AUC uses 2-D matrix with `multi_class="ovr", average="macro"`.
@@ -54,6 +60,7 @@ language: en
 - Use `sklearn.metrics` as the reference implementation.
 
 ## Examples
+
 ```python
 # Metrics suite with AUC branching and bootstrap CIs.
 import json
@@ -164,6 +171,7 @@ def ComputeMetricsSuite(Probabilities, PredLabels, TrueLabels, NumBootstraps=100
 ```
 
 ## References
+
 - sklearn metrics: https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics
 - roc_auc_score: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html
 - matthews_corrcoef: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.matthews_corrcoef.html

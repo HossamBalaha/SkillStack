@@ -22,6 +22,7 @@ language: en
 # Data Drift Monitor
 
 ## When To Use
+
 - A model has shipped and you need to detect when production data drifts from TRAIN.
 - Per-feature drift scores (PSI, KS, Wasserstein) must be reported on a dashboard.
 - Alerts must fire when any top-10 feature crosses a defined PSI threshold.
@@ -29,6 +30,7 @@ language: en
 - You are integrating with evidently AI or alibi-detect.
 
 ## Workflow
+
 1. Snapshot the TRAIN distribution per feature (bin edges + frequencies) and version it.
 2. Collect the current production window (e.g., last 7 days) for the same features.
 3. Compute PSI per feature using the shared bin edges from TRAIN.
@@ -40,17 +42,20 @@ language: en
 9. Refresh the reference snapshot only when a retrain is approved.
 
 ## Inputs
+
 - A versioned TRAIN reference snapshot (bin edges, counts, hash).
 - A production sample (DataFrame) covering the desired window.
 - Feature list (typically the model's top features).
 - Alerting config: PSI thresholds (0.1, 0.25), top-k, alert channel.
 
 ## Outputs
+
 - A drift report (JSON) with PSI, KS, and Wasserstein per feature.
 - An alert payload if any top-10 feature exceeds the configured threshold.
 - A trend file appended on each run for historical drift tracking.
 
 ## Key Rules
+
 - The TRAIN reference snapshot is immutable; refresh only on an approved retrain.
 - PSI bins are derived from TRAIN and reused for production, never recomputed.
 - PSI < 0.1 stable, 0.1–0.25 moderate drift, > 0.25 significant.
@@ -115,6 +120,7 @@ def AlertIfDrift(reportDf, topK=10, threshold=0.2):
 ```
 
 ## References
+
 - evidently AI: https://www.evidentlyai.com
 - alibi-detect: https://docs.seldon.io/projects/alibi-detect
 - PSI (Yurdakul 2018): https://scholarworks.wmich.edu/dissertations/3514/

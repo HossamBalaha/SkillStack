@@ -22,12 +22,14 @@ language: en
 # Requirements Pinner
 
 ## When To Use
+
 - You are bootstrapping a new repo and need a `Requirements.txt` for collaborators to install against.
 - You want to freeze a known-good environment into `requirements.lock` so future runs reproduce exactly.
 - You are preparing a release and must distinguish "broad install" from "exact repro" inputs.
 - A CI matrix needs the unversioned list, while a Docker image build needs the locked list.
 
 ## Workflow
+
 1. Inspect the codebase to collect every `import` used in `src/`, tests, notebooks, and scripts.
 2. Map each top-level import to its canonical PyPI package name (e.g. `cv2` → `opencv-python`).
 3. Decide the variant: unversioned `Requirements.txt` for compatibility, or `requirements.lock` for reproducibility.
@@ -39,16 +41,19 @@ language: en
 9. Document the tradeoff in the README so users know which file to install.
 
 ## Inputs
+
 - The repo's import surface (scan `src/`, `tests/`, `notebooks/`, `scripts/`).
 - An activated virtualenv with the working environment (only needed for the pinned variant).
 - An optional extra-specs list (e.g. `--index-url`, `--extra-index-url`).
 
 ## Outputs
+
 - `Requirements.txt` — unversioned list, one package per line, alphabetical.
 - `requirements.lock` — exact pinned list from `pip freeze` (only when requested).
 - A short note in `README.md` describing which file to install for which use case.
 
 ## Key Rules
+
 - Never mix variants in one file: unversioned OR pinned, never both.
 - The unversioned file must NOT contain `==`, `>=`, `<=`, `~=`, or `@` markers.
 - The pinned file must contain an exact `==X.Y.Z` on every line; no ranges.
@@ -58,6 +63,7 @@ language: en
 - If a package is GPU-specific (e.g. `torch` with CUDA), note the index URL in a comment above the line.
 
 ## Examples
+
 Unversioned `Requirements.txt`:
 
 ```text
@@ -113,6 +119,7 @@ if (__name__ == "__main__"):
 ```
 
 ## References
+
 - `pip freeze` — https://pip.pypa.io/en/stable/cli/pip_freeze/
 - `pip install -r` — https://pip.pypa.io/en/stable/cli/pip_install/#cmdoption-r
 - pip-tools for compiling unversioned → pinned — https://pip-tools.readthedocs.io

@@ -22,6 +22,7 @@ language: en
 # Feature Store Recipe
 
 ## When To Use
+
 - Training data must join historical features at a specific event timestamp (no future leakage).
 - The same feature definition must serve both batch training and low-latency online inference.
 - Features are versioned, reviewed, and reused across teams.
@@ -29,6 +30,7 @@ language: en
 - You are adopting Feast, Hopsworks, Tecton, or a homegrown offline/online pair.
 
 ## Workflow
+
 1. Define feature views as code: entities, features, source, TTL, and aggregation windows.
 2. Stamp every feature row with an `event_timestamp` and an entity key.
 3. Materialise the offline store (Parquet/BigQuery) for historical joins.
@@ -40,18 +42,21 @@ language: en
 9. Version feature definitions in git and tag them per training run.
 
 ## Inputs
+
 - Raw event tables or streams with entity id and event timestamp.
 - Feature view definitions (Python module declaring entities and feature specs).
 - Label table with entity id and event timestamp for point-in-time joins.
 - Online store connection spec (Redis/DynamoDB/feature-store server).
 
 ## Outputs
+
 - A versioned feature definition module checked into git.
 - An offline materialised dataset (Parquet/warehouse table) for training.
 - A populated online store keyed by entity for inference.
 - A freshness dashboard plus alerting rules.
 
 ## Key Rules
+
 - Point-in-time correctness: never let a feature row's `event_timestamp` exceed the label's.
 - One feature definition drives both stores; duplication causes skew.
 - Entities must be stable identifiers; never use mutable columns as entity keys.
@@ -102,6 +107,7 @@ def CheckFreshness(featureView, onlineStore, now):
 ```
 
 ## References
+
 - Feast: https://docs.feast.dev
 - Hopsworks: https://www.hopsworks.ai
 - Tecton: https://www.tecton.ai

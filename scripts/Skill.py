@@ -20,12 +20,11 @@ CLI:
 
 from __future__ import annotations
 
+import click
 import subprocess
 import sys
 from collections import Counter
 from pathlib import Path
-
-import click
 from rich.console import Console
 from rich.markdown import Markdown
 from rich.panel import Panel
@@ -35,11 +34,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _SkillLib import (
   FindSkillByName,
   IterateSkills,
-  RequiredSections,
   SkillDoc,
   SkillsRoot,
 )
-
 
 # Shared rich console for every subcommand.
 console = Console()

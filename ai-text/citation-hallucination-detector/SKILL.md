@@ -23,6 +23,7 @@ language: en
 # Citation Hallucination Detector
 
 ## When To Use
+
 - `ai-text-detector` flagged citation-category tells.
 - A passage cites DOIs, paper titles, or journals that may be fabricated.
 - A claim says "featured in regional trade publications" or "widely cited in industry literature" with no names.
@@ -30,39 +31,55 @@ language: en
 - A reviewer requires evidence that citations resolve before approving a draft.
 
 ## Workflow
-1. Extract every citation-shaped claim: DOI strings, paper titles in quotes, author+year pairs, journal names, "featured in" / "widely cited" claims.
-2. For each DOI, query Crossref (`https://api.crossref.org/works/{DOI}`). If the DOI resolves and returns metadata matching the cited title and authors, mark `Verified`. If it 404s or returns mismatched metadata, mark `Hallucinated`.
-3. For each paper title, search Google Scholar or the publisher site. If no exact or near-exact match exists, mark `Likely hallucinated`.
-4. For each author+year pair, verify the named author exists in the field and published in that year. If the author is plausible but the paper is not found, mark `Author plausible, paper not verified`.
-5. For each journal name, verify the journal exists (Ulrichsweb, ISSN portal, publisher site). Watch for plausible-but-fake names ("Journal of Applied Computational Studies").
-6. For "featured in regional trade publications" or "widely cited in industry" with no names, mark `Unverifiable claim — no source named`.
-7. Cross-check internal consistency: does the cited DOI's metadata actually list the cited authors and title? A DOI that resolves to a different paper is a hallucination.
+
+1. Extract every citation-shaped claim: DOI strings, paper titles in quotes, author+year pairs, journal names, "featured
+   in" / "widely cited" claims.
+2. For each DOI, query Crossref (`https://api.crossref.org/works/{DOI}`). If the DOI resolves and returns metadata
+   matching the cited title and authors, mark `Verified`. If it 404s or returns mismatched metadata, mark
+   `Hallucinated`.
+3. For each paper title, search Google Scholar or the publisher site. If no exact or near-exact match exists, mark
+   `Likely hallucinated`.
+4. For each author+year pair, verify the named author exists in the field and published in that year. If the author is
+   plausible but the paper is not found, mark `Author plausible, paper not verified`.
+5. For each journal name, verify the journal exists (Ulrichsweb, ISSN portal, publisher site). Watch for
+   plausible-but-fake names ("Journal of Applied Computational Studies").
+6. For "featured in regional trade publications" or "widely cited in industry" with no names, mark
+   `Unverifiable claim — no source named`.
+7. Cross-check internal consistency: does the cited DOI's metadata actually list the cited authors and title? A DOI that
+   resolves to a different paper is a hallucination.
 8. Assign severity: every hallucinated citation is S4 (critical), per `severity-classifier`.
-9. Emit a verification table and a recommendation: verify with the author, delete the citation, or replace with a verified source.
+9. Emit a verification table and a recommendation: verify with the author, delete the citation, or replace with a
+   verified source.
 
 ## Inputs
+
 - The text or reference list containing citations.
 - Optional: known-good reference corpus to cross-check against.
 - Optional: API access to Crossref (default: public API).
 
 ## Outputs
+
 - A verification table: `Citation | Type | Verification method | Result | Severity`.
 - A list of unverifiable claims with the phrasing flagged.
 - A recommendation per citation: `Verified`, `Replace`, `Delete`, `Ask author for source`.
 - A summary: `n citations checked, m verified, k hallucinated, j unverifiable`.
 
 ## Key Rules
+
 - Every hallucinated DOI or phantom citation is S4. No exceptions.
 - A DOI that resolves to a different paper is hallucinated, even if the DOI itself exists.
-- Plausible-sounding journal names ("Journal of Contemporary Applied Systems Research") require verification; do not assume existence.
+- Plausible-sounding journal names ("Journal of Contemporary Applied Systems Research") require verification; do not
+  assume existence.
 - "Featured in regional trade publications" without named publications is unverifiable; flag, do not silently accept.
 - If a citation cannot be verified, do not invent a replacement. Route to `grace-degradation-protocol`.
-- Crossref's public API is the canonical DOI resolver. A publisher landing page alone is not enough for journals Crossref does not index — note the gap.
+- Crossref's public API is the canonical DOI resolver. A publisher landing page alone is not enough for journals
+  Crossref does not index — note the gap.
 - Author plausibility is not verification. A real author's name attached to a non-existent paper is still hallucinated.
 
 ## Examples
 
 **Verification table:**
+
 ```
 | Citation                                              | Type      | Method          | Result                | Sev |
 |-------------------------------------------------------|-----------|-----------------|-----------------------|-----|
@@ -79,6 +96,7 @@ Recommendation: delete hallucinated citations; route unverifiable claim to autho
 ```
 
 **Plausible-but-fake example:**
+
 ```
 Cited: Patel, R., & Nguyen, T. (2022). "Adaptive routing in mesh networks."
        Journal of Network Systems, 14(2), 88-103.
@@ -92,6 +110,7 @@ Author names plausible (real surnames in the field) but the paper is not real.
 ```
 
 **Author plausible, paper not:**
+
 ```
 Cited: LeCun, Y., Bengio, Y., & Hinton, G. (2015). "Deep learning reinvents vision."
 
@@ -103,8 +122,10 @@ Result: author plausible, paper title fabricated (S3 → S4 because title mismat
 ```
 
 ## References
+
 - Crossref REST API: https://api.crossref.org — canonical DOI resolver.
 - Google Scholar: https://scholar.google.com — title and author search.
 - Ulrichsweb (serials directory) and the ISSN Portal (portal.issn.org) for journal verification.
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7) — documents hallucinated citations as a strong AI signal.
+- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7) — documents
+  hallucinated citations as a strong AI signal.
 - Companion skills: `ai-text-detector`, `severity-classifier`, `grace-degradation-protocol`.

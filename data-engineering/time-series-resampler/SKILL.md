@@ -22,6 +22,7 @@ language: en
 # Time Series Resampler
 
 ## When To Use
+
 - A series arrives at an irregular cadence and must be aligned to a fixed grid.
 - Multiple series must share a common index before being joined or stacked.
 - Forward fill, backward fill, or interpolation is needed to fill gaps.
@@ -29,6 +30,7 @@ language: en
 - The series is large enough that resampling must happen in chunks.
 
 ## Workflow
+
 1. Parse the timestamp column into a datetime with explicit timezone.
 2. Sort by timestamp; drop duplicate timestamps keeping the latest observation.
 3. Set the timestamp as the index.
@@ -40,17 +42,20 @@ language: en
 9. Emit metadata: original cadence, target cadence, rows in/out, fill counts.
 
 ## Inputs
+
 - The time series (DataFrame with a datetime column or index).
 - Target frequency string (pandas offset alias).
 - Per-column aggregation map (sum, mean, last, max, min, count).
 - Fill strategy (ffill, bfill, linear, spline, none) and max gap to fill.
 
 ## Outputs
+
 - A resampled DataFrame on the target frequency grid.
 - A metadata JSON capturing original and target cadence plus fill counts.
 - Optional alignment report when multiple series are joined.
 
 ## Key Rules
+
 - Timestamps are parsed with explicit timezone; never naive unless source is naive.
 - Duplicate timestamps are collapsed keeping the latest observation.
 - Fill strategies cap the max gap; longer gaps stay as NaN.
@@ -109,6 +114,7 @@ def EmitMetadata(originalDf, resampledDf, targetFreq):
 ```
 
 ## References
+
 - pandas resample: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html
 - pandas asfreq: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.asfreq.html
 - pandas reindex: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.reindex.html

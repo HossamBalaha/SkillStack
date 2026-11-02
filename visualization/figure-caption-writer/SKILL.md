@@ -22,6 +22,7 @@ language: en
 # Figure Caption Writer
 
 ## When To Use
+
 - Drafting captions for manuscript figures during revision.
 - Tightening a thesis chapter's figure captions to a house style.
 - Adding captions to a technical report's figures.
@@ -29,6 +30,7 @@ language: en
 - Standardising caption voice and length across a multi-author paper.
 
 ## Workflow
+
 1. Inspect the figure and list its visual elements.
 2. State WHAT the figure shows in one or two sentences.
 3. State HOW the methodology produced the visualization.
@@ -40,16 +42,19 @@ language: en
 9. Log every caption in a central file so revisions stay in sync.
 
 ## Inputs
+
 - The figure file or its description.
 - The methods section to reference for HOW and WHY.
 - A list of abbreviations and their expansions.
 
 ## Outputs
+
 - A LaTeX caption block ready to paste into the figure environment.
 - A plain-text caption for the supplementary README.
 - A checklist of references used in the caption for verification.
 
 ## Key Rules
+
 - Each caption covers WHAT, HOW, and WHY.
 - Reference methods and equations via `\ref{}` and `\eqref{}`.
 - Define every abbreviation on first use.
@@ -58,6 +63,7 @@ language: en
 - Avoid restating the title in the caption.
 
 ## Examples
+
 ```python
 # Assemble a caption from structured fields.
 def BuildCaption(fields):
@@ -94,4 +100,5 @@ def CheckReferences(caption, labelSet):
 ```
 
 ## References
+
 - Nature author guide on figure captions: https://www.nature.com/nature/for-authors/final-submission

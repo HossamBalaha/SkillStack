@@ -22,12 +22,14 @@ language: en
 # Changelog Writer
 
 ## When To Use
+
 - You are cutting a release and need to convert the `## [Unreleased]` backlog into a dated `## [x.y.z]` entry.
 - You want every merged PR to append one bullet under the right subsection in `## [Unreleased]`.
 - You need to decide whether the next version is a major, minor, or patch bump.
 - You are auditing a repo whose `CHANGELOG.md` has drifted from the git history.
 
 ## Workflow
+
 1. Open `CHANGELOG.md`; if absent, scaffold it with the Keep a Changelog header and an empty `## [Unreleased]` block.
 2. Read the merged PRs / commits since the last tag using `git log $(git describe --tags --abbrev=0)..HEAD`.
 3. Classify each change into one of: Added, Changed, Deprecated, Removed, Fixed, Security.
@@ -38,17 +40,20 @@ language: en
 8. Cross-check the date is in ISO 8601 (`YYYY-MM-DD`) and the version matches the tag.
 
 ## Inputs
+
 - The current `CHANGELOG.md` (or a request to create one).
 - The git log range since the last tag.
 - The bump policy (auto-detect by default; explicit override if provided).
 - Today's date in ISO 8601.
 
 ## Outputs
+
 - `CHANGELOG.md` updated with the new release entry.
 - A git tag `vx.y.z` (when cutting a release).
 - A short summary of which subsections received entries.
 
 ## Key Rules
+
 - Always keep a `## [Unreleased]` section at the top, even when empty — that is where ongoing work lands.
 - Dates are ISO 8601 `YYYY-MM-DD`, never `01/02/2026` or `Jan 1, 2026`.
 - Version numbers are `MAJOR.MINOR.PATCH` with no `v` prefix inside the heading (the git tag carries the `v`).
@@ -58,6 +63,7 @@ language: en
 - Never delete past release entries — the changelog is append-only.
 
 ## Examples
+
 `CHANGELOG.md`:
 
 ```markdown
@@ -122,5 +128,6 @@ git push origin v0.2.0
 ```
 
 ## References
+
 - Keep a Changelog — https://keepachangelog.com
 - Semantic Versioning — https://semver.org

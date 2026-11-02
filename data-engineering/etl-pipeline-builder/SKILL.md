@@ -22,6 +22,7 @@ language: en
 # ETL Pipeline Builder
 
 ## When To Use
+
 - A user asks to "build an ETL pipeline", "wire a DAG", or "move data from source X to warehouse Y".
 - Reproducibility matters: re-running the same job must produce identical output (idempotency).
 - Sources include REST APIs, OLTP databases, files (CSV/Parquet/JSON), or message queues.
@@ -30,6 +31,7 @@ language: en
 - You are using orchestrators such as Airflow, Prefect, Dagster, or dbt models.
 
 ## Workflow
+
 1. Profile the source: schema, primary keys, update cadence, expected row volume.
 2. Pick the extraction mode: full snapshot vs incremental watermark (CDC).
 3. Define a `DataFrameSchema` (pandera) or pydantic models that describe valid rows.
@@ -43,18 +45,21 @@ language: en
 11. Backfill safely by parameterising the run window and stamping the batch_id.
 
 ## Inputs
+
 - Source connection spec (URI, credentials reference, table or endpoint name).
 - Target connection spec (warehouse table or lake path, partition columns).
 - Schema definition file (YAML/JSON or pandera/pydantic module).
 - Run configuration: start/end time, batch_id, mode (full or incremental).
 
 ## Outputs
+
 - A runnable pipeline module with `Extract`, `Validate`, `Transform`, `Load` functions.
 - An audit log table/file with one row per source row plus batch metadata.
 - A run report (JSON) capturing counts, durations, and validation failures.
 - A quarantine sink for rows that failed validation.
 
 ## Key Rules
+
 - Idempotency is non-negotiable: same input window plus run_id yields identical output.
 - Never mutate the source during Extract; always read with a snapshot or as-of timestamp.
 - Reject silent drops: every filtered row must land in the quarantine sink with a reason.
@@ -115,6 +120,7 @@ def LoadToWarehouse(rows, targetTable, runConfig):
 ```
 
 ## References
+
 - dbt ETL best practices: https://www.getdbt.com/blog/etl-pipeline-best-practices
 - Databricks SQL ETL: https://www.databricks.com/blog/sql-etl-pipeline
 - Airflow: https://airflow.apache.org

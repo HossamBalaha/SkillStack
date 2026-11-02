@@ -22,6 +22,7 @@ language: en
 # Text Preprocessor
 
 ## When To Use
+
 - Raw text must be cleaned before being fed to a TF-IDF, count, or embedding model.
 - Tokenization needs to be word-level or subword (BPE/SentencePiece).
 - Lemmatization (spaCy) or stemming (Porter/Snowball) is required.
@@ -29,6 +30,7 @@ language: en
 - Optional steps like spell correction or n-gram extraction are needed.
 
 ## Workflow
+
 1. Decide on the output form: token list or joined string.
 2. Strip HTML (BeautifulSoup) if the source is web content.
 3. Remove URLs and emails via regex before tokenization.
@@ -42,14 +44,17 @@ language: en
 11. Emit the cleaned token list or joined string plus a preprocessing manifest.
 
 ## Inputs
+
 - Raw text (string, list of strings, or a file).
 - Pipeline config: language, tokenization mode, lemmatize/stem, stopword list, n-gram size.
 
 ## Outputs
+
 - A list of cleaned tokens (or joined string) per input text.
 - A preprocessing manifest (JSON) listing the steps applied and parameters.
 
 ## Key Rules
+
 - Stopword removal uses a declared language; never silently pick a default.
 - Lemmatization and stemming are mutually exclusive; one or the other, not both.
 - HTML stripping happens before tokenization so tags do not pollute tokens.
@@ -135,6 +140,7 @@ class TextPreprocessor:
 ```
 
 ## References
+
 - NLTK: https://www.nltk.org
 - spaCy: https://spacy.io
 - SentencePiece: https://github.com/google/sentencepiece

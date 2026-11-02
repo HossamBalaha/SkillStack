@@ -22,6 +22,7 @@ language: en
 # Data Anonymizer
 
 ## When To Use
+
 - A dataset containing PII must be shared internally or externally.
 - Quasi-identifiers (ZIP, DOB, gender) could re-identify individuals in combination.
 - Compliance with GDPR Article 5 (data minimisation) or HIPAA Safe Harbor is required.
@@ -29,6 +30,7 @@ language: en
 - Re-identification risk must be quantified before a release is approved.
 
 ## Workflow
+
 1. Classify columns: direct identifiers, quasi-identifiers, sensitive attributes, others.
 2. Direct identifiers: hash with a per-release salt or remove entirely.
 3. Quasi-identifiers: generalise (e.g., ZIP → 3 digits, DOB → year) and suppress rare values.
@@ -40,17 +42,20 @@ language: en
 9. Run a re-identification risk test before signing off.
 
 ## Inputs
+
 - The dataset containing direct, quasi, and sensitive attributes.
 - Classification map: column to category (direct/quasi/sensitive/other).
 - Privacy parameters: k, l, t, epsilon, delta.
 - Salt value (rotated per release) for hashing direct identifiers.
 
 ## Outputs
+
 - An anonymized dataset satisfying the declared privacy parameters.
 - A release manifest recording parameters, hashes, and risk score.
 - A re-identification risk report quantifying residual risk.
 
 ## Key Rules
+
 - Direct identifiers are never shipped in cleartext; hash or remove.
 - k-anonymity is enforced on the combination of all quasi-identifiers, not per column.
 - The salt is rotated per release and never shared with the data recipient.
@@ -114,6 +119,7 @@ def Anonymize(df, config):
 ```
 
 ## References
+
 - GDPR Article 5: https://gdpr-info.eu/art-5-gdpr/
 - HIPAA Safe Harbor: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
 - k-anonymity (Sweeney 2002): https://epic.org/privacy/reidentification/Sweeney_Article.pdf

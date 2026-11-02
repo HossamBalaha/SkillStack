@@ -22,12 +22,15 @@ language: en
 # Project Zip Packager
 
 ## When To Use
+
 - You need a single archive file that reproduces the repo layout for handoff, review, or archival.
 - A submission portal (journal, conference, grant) requires a flat `.zip` of the project.
 - You want a reproducible snapshot at a known commit without pushing the `.git` history.
-- You are packaging code that pairs with large `Datasets/` or `results/` directories that must NOT travel with the source.
+- You are packaging code that pairs with large `Datasets/` or `results/` directories that must NOT travel with the
+  source.
 
 ## Workflow
+
 1. Inspect the repo root and list top-level directories to confirm what exists.
 2. Build the denylist of paths and glob patterns that must never enter the archive.
 3. Generate `CreateProjectZip.py` at the repo root using `zipfile` + `os.walk`.
@@ -38,18 +41,23 @@ language: en
 8. Document the script in the README under a "Build Archive" section.
 
 ## Inputs
+
 - The repository root path (default: current working directory).
 - An optional denylist override if the caller wants extra exclusions.
 - An optional output filename (default: `ProjectArchive.zip`).
 
 ## Outputs
+
 - `CreateProjectZip.py` — runnable packaging script at the repo root.
 - `ProjectArchive.zip` — the produced archive (gitignored, never committed).
 - A short log printed to stdout listing how many files were added and skipped.
 
 ## Key Rules
-- The script MUST exclude its own output (`ProjectArchive.zip`) AND every `*.zip` file, otherwise the next run will recurse on the previous archive and grow unbounded.
-- Heavy directories are excluded unconditionally: `Datasets/`, `results/`, `.git/`, `__pycache__/`, `.venv/`, `dist/`, `build/`, `.pytest_cache/`.
+
+- The script MUST exclude its own output (`ProjectArchive.zip`) AND every `*.zip` file, otherwise the next run will
+  recurse on the previous archive and grow unbounded.
+- Heavy directories are excluded unconditionally: `Datasets/`, `results/`, `.git/`, `__pycache__/`, `.venv/`, `dist/`,
+  `build/`, `.pytest_cache/`.
 - Match by both directory name and path suffix so nested copies (e.g. `subpkg/__pycache__/`) are caught.
 - Use `zipfile.ZIP_DEFLATED` to compress; never use `ZIP_STORED` for source archives.
 - Preserve relative paths inside the archive so the unpacked layout matches the repo.
@@ -57,6 +65,7 @@ language: en
 - Never walk into symlinks that point outside the repo; guard with `os.path.realpath` checks.
 
 ## Examples
+
 ```python
 # CreateProjectZip.py — bundle this repo into ProjectArchive.zip.
 import os
@@ -129,5 +138,6 @@ python CreateProjectZip.py
 ```
 
 ## References
+
 - Python `zipfile` module — https://docs.python.org/3/library/zipfile.html
 - Python `os.walk` with in-place pruning — https://docs.python.org/3/library/os.html#os.walk

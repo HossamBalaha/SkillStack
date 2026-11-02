@@ -22,6 +22,7 @@ language: en
 # Dataset Card Generator
 
 ## When To Use
+
 - A dataset is being released internally or to the public and needs documentation.
 - Reviewers must understand provenance, license, and composition before approving use.
 - Downstream model owners need to assess bias and out-of-scope use.
@@ -29,6 +30,7 @@ language: en
 - A new version of the dataset ships and the card must be regenerated.
 
 ## Workflow
+
 1. Collect provenance facts: who collected, when, where, and via which method.
 2. Capture the license and any third-party data usage restrictions.
 3. Profile composition: row count, columns, classes, demographic coverage, splits.
@@ -40,17 +42,20 @@ language: en
 9. Pair the card with the dataset in storage and link from the catalog entry.
 
 ## Inputs
+
 - Dataset location (file path, warehouse table, or HuggingFace repo id).
 - Provenance notes (collector, date, method, consent basis).
 - License file or SPDX identifier.
 - Optional profiling summary (class counts, demographic stats).
 
 ## Outputs
+
 - A `DATASET_CARD.md` describing the dataset for humans.
 - A `dataset_card.yaml` sidecar describing the dataset for machines.
 - An entry in the data catalog pointing at the card and the dataset.
 
 ## Key Rules
+
 - Every card declares an explicit intended use and an explicit out-of-scope use.
 - Provenance includes the collection method and consent basis; "unknown" is rejected.
 - Sensitive attributes (demographics, PII) are called out, never buried.
@@ -111,6 +116,7 @@ def RenderCard(card, outputPath):
 ```
 
 ## References
+
 - Model Cards paper (Mitchell et al. 2019): https://arxiv.org/abs/1810.03977
 - HuggingFace Dataset Cards: https://huggingface.co/docs/datasets/dataset-card
 - Dataset Nutrition Label: https://datasetnutritionlabel.com

@@ -22,40 +22,52 @@ language: en
 # Zotero BetterBibTeX Bridge
 
 ## When To Use
+
 - You maintain references in Zotero and write the manuscript in LaTeX.
 - Citekeys must remain stable across machines, co-authors, and rebuilds.
 - The `.bib` file must update automatically when Zotero entries change.
 - You want cite-as-you-write (`\cite{}` completion) inside vim, Atom, or Scrivener.
 
 ## Workflow
+
 1. Install Zotero (6+) and the BetterBibTeX plugin from the official release page.
-2. Open Zotero → Edit → Preferences → BetterBibTeX and set the citekey format (e.g., `authYearShort` → `Smith2023Survey`; pin citekeys so they survive metadata edits).
-3. Configure the export: choose "Better BibTeX" format, enable "Keep updated" so the exported `.bib` rewrites itself when entries change.
+2. Open Zotero → Edit → Preferences → BetterBibTeX and set the citekey format (e.g., `authYearShort` →
+   `Smith2023Survey`; pin citekeys so they survive metadata edits).
+3. Configure the export: choose "Better BibTeX" format, enable "Keep updated" so the exported `.bib` rewrites itself
+   when entries change.
 4. Place the exported `.bib` in the LaTeX project directory (or symlink it).
-5. Add `\bibliography{references}` and `\bibliographystyle{...}` (or `\addbibresource{references.bib}` for biblatex) to the `.tex` file.
-6. Wire cite-as-you-write in your editor: vim with `vimtex` + `coc-vimtex`, Atom with `latexer`, Scrivener with a BibTeX lookup plugin.
-7. Validate the pipeline: edit a Zotero entry, confirm the `.bib` updates, rebuild the document, confirm the rendered citation reflects the change.
+5. Add `\bibliography{references}` and `\bibliographystyle{...}` (or `\addbibresource{references.bib}` for biblatex) to
+   the `.tex` file.
+6. Wire cite-as-you-write in your editor: vim with `vimtex` + `coc-vimtex`, Atom with `latexer`, Scrivener with a BibTeX
+   lookup plugin.
+7. Validate the pipeline: edit a Zotero entry, confirm the `.bib` updates, rebuild the document, confirm the rendered
+   citation reflects the change.
 8. Document the workflow in a project README so co-authors can reproduce it.
 
 ## Inputs
+
 - A Zotero library (synced locally or via Zotero Storage).
 - The LaTeX project directory where the `.bib` will live.
 - Editor choice (vim, Atom, Scrivener) for cite-as-you-write configuration.
 
 ## Outputs
+
 - `references.bib` — auto-updating BibTeX export from Zotero.
 - `zotero_betterbibtex_setup.md` — the configuration steps applied (citekey pattern, pin status, export path).
 - `editor_cayw_config.md` — editor-specific snippet / plugin config for cite completion.
 
 ## Key Rules
+
 - Pin every citekey after generation so future metadata edits do not break it.
 - Never edit the exported `.bib` by hand — Zotero is the source of truth; hand-edits will be overwritten.
 - Use "Better BibTeX" (not "Better BibLaTeX") unless the project specifically requires biblatex-only fields.
-- The export must be in "Keep updated" mode for live editing; manual one-shot exports are reserved for archival snapshots.
+- The export must be in "Keep updated" mode for live editing; manual one-shot exports are reserved for archival
+  snapshots.
 - Citekeys must be ASCII and must not collide across the library.
 - Co-authors must install BetterBibTeX with the same citekey format or citekey drift will occur.
 
 ## Examples
+
 ```text
 Before:
   Hand-typed .bib with citekeys: ref1, ref2, smith2021, REF_3
@@ -89,6 +101,7 @@ vim config (.vimrc snippet):
 ```
 
 ## References
+
 - BetterBibTeX plugin: https://retorquere.github.io/zotero-better-bibtex/.
 - vimtex: https://github.com/lervag/vimtex.
 - Zotero documentation: https://www.zotero.org/support/.

@@ -11,17 +11,14 @@
 // Author: Hossam Magdy Balaha
 // License: MIT
 
-import { Server } from "@modelcontextprotocol/sdk/server/index.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import {
-  CallToolRequestSchema,
-  ListToolsRequestSchema,
-} from "@modelcontextprotocol/sdk/types.js";
-import { glob } from "glob";
+import {Server} from "@modelcontextprotocol/sdk/server/index.js";
+import {StdioServerTransport} from "@modelcontextprotocol/sdk/server/stdio.js";
+import {CallToolRequestSchema, ListToolsRequestSchema,} from "@modelcontextprotocol/sdk/types.js";
+import {glob} from "glob";
 import yaml from "js-yaml";
 import fs from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import {fileURLToPath} from "node:url";
 
 // ---------------------------------------------------------------------------
 // Path setup — skills/ is the parent directory of this script.
@@ -243,12 +240,12 @@ function parseTagsField(raw) {
 function extractFrontmatter(content) {
   // Frontmatter is delimited by leading "---" on its own line.
   const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
-  if (!match) return { frontmatter: null, body: content };
-  return { frontmatter: match[1], body: content.slice(match[0].length) };
+  if (!match) return {frontmatter: null, body: content};
+  return {frontmatter: match[1], body: content.slice(match[0].length)};
 }
 
 function parseSkillFile(filePath, content) {
-  const { frontmatter, body } = extractFrontmatter(content);
+  const {frontmatter, body} = extractFrontmatter(content);
   let parsed = null;
   if (frontmatter) {
     try {
@@ -437,7 +434,7 @@ async function searchSkills(query) {
         reason.push(`tag token "${token}"`);
       }
     }
-    return { s, score, reason: [...new Set(reason)] };
+    return {s, score, reason: [...new Set(reason)]};
   });
 
   const matches = scored
@@ -453,7 +450,7 @@ async function searchSkills(query) {
       matched_on: x.reason,
     }));
 
-  return { query, match_count: matches.length, matches };
+  return {query, match_count: matches.length, matches};
 }
 
 async function getSkill(theme, skillName) {
@@ -546,7 +543,7 @@ async function routeTask(taskDescription) {
 
     const hits = [...phraseHits];
     for (const t of matchedTokens) hits.push("token:" + t);
-    return { theme, score, hits };
+    return {theme, score, hits};
   });
 
   const ranked = themeScores
@@ -606,7 +603,7 @@ async function routeTask(taskDescription) {
       score += 4;
       hits.push("name-substring-match");
     }
-    return { skill: s, score, hits: [...new Set(hits)] };
+    return {skill: s, score, hits: [...new Set(hits)]};
   });
 
   const topSkills = skillScores
@@ -736,7 +733,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
 }));
 
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
-  const { name, arguments: args } = request.params;
+  const {name, arguments: args} = request.params;
   let result;
   try {
     switch (name) {

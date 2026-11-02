@@ -22,12 +22,14 @@ language: en
 # Distributed Training Setup
 
 ## When To Use
+
 - Training on multiple GPUs on a single node.
 - Training across multiple nodes over NCCL.
 - Scaling batch size beyond a single GPU.
 - Setting up `torchrun`-based launch with the correct environment variables.
 
 ## Workflow
+
 1. Launch the script with `torchrun --nproc_per_node=N main.py`.
 2. Read `RANK`, `WORLD_SIZE`, `LOCAL_RANK` from environment variables.
 3. Call `torch.distributed.init_process_group(backend="nccl")`.
@@ -39,14 +41,17 @@ language: en
 9. Call `torch.distributed.destroy_process_group()` at shutdown.
 
 ## Inputs
+
 - `Configs/Config.yaml` with `WorldSize`, `Backend` (default `"nccl"`).
 - A model factory and a dataset factory.
 
 ## Outputs
+
 - A DDP-wrapped model training across all GPUs.
 - Artifacts written by rank 0 only.
 
 ## Key Rules
+
 - Use `torchrun --nproc_per_node=N main.py` to launch.
 - Backend must be `"nccl"` for GPU training.
 - Use `DistributedSampler` and call `set_epoch(epoch)` every epoch.
@@ -55,6 +60,7 @@ language: en
 - Reference the real PyTorch DDP tutorial.
 
 ## Examples
+
 ```python
 # DDP setup with rank-aware artifact writing.
 import os
@@ -109,6 +115,7 @@ def SaveIfRankZero(Path, SaveFunction):
 ```
 
 ## References
+
 - PyTorch DDP tutorial: https://pytorch.org/tutorials/intermediate/ddp_tutorial.html
 - torchrun launcher: https://pytorch.org/docs/stable/elastic/run.html
 - DistributedSampler: https://pytorch.org/docs/stable/data.html#torch.utils.data.distributed.DistributedSampler

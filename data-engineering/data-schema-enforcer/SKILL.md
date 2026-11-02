@@ -22,6 +22,7 @@ language: en
 # Data Schema Enforcer
 
 ## When To Use
+
 - A pipeline ingests user-uploaded or partner-supplied rows of unknown quality.
 - Hard rejection and soft quarantine must be distinguishable per column rule.
 - A validation report must accompany every batch (counts, samples, reasons).
@@ -29,6 +30,7 @@ language: en
 - You are using pydantic models or pandera schemas as the contract.
 
 ## Workflow
+
 1. Author a pydantic `BaseModel` (row-level) or pandera `DataFrameSchema` (batch-level).
 2. Tag each field with type, nullability, and a validator where needed.
 3. Configure severity per rule: `fail` halts the row, `warn` quarantines it.
@@ -39,17 +41,20 @@ language: en
 8. Surface the report to the orchestrator so downstream tasks can branch on status.
 
 ## Inputs
+
 - The incoming batch (list of dicts, DataFrame, or file).
 - The schema definition (pydantic model or pandera schema).
 - The severity map (column to fail/warn/quarantine).
 
 ## Outputs
+
 - A clean rows artifact that passed every fail-level rule.
 - A quarantined rows artifact with one reason column per row.
 - A validation report (JSON) with passed count, failed count, and samples.
 - An exit code the orchestrator can branch on.
 
 ## Key Rules
+
 - Schemas are versioned; a batch records the schema version it was validated against.
 - Fail-level rules reject the row entirely; warn-level rules quarantine but keep going.
 - Reports include sample failures, not the entire bad batch.
@@ -106,6 +111,7 @@ def BuildReport(cleanRows, quarantinedRows, schemaVersion):
 ```
 
 ## References
+
 - pydantic: https://docs.pydantic.dev
 - pandera: https://pandera.readthedocs.io
 - JSON Schema: https://json-schema.org

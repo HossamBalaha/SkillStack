@@ -26,7 +26,9 @@ language: ar
 
 ## الغرض
 
-هذه المهارة هي البوابة الأمامية لمكتبة قابلة للتكوين مؤلفة من 168 مهارة منظّمة في 9 مجلدات موضوعات مستقلّة. الموضوعات وحدات مستقلّة — يمكنك حذف أو استبدال أو إعادة تسمية أيٍّ منها ولا يزال باقي المجموع يعمل. عندما تتلقّى مهمّة، لا تخمّن أيّ مهارة تُحمَّل، بل:
+هذه المهارة هي البوابة الأمامية لمكتبة قابلة للتكوين مؤلفة من 168 مهارة منظّمة في 9 مجلدات موضوعات مستقلّة. الموضوعات
+وحدات مستقلّة — يمكنك حذف أو استبدال أو إعادة تسمية أيٍّ منها ولا يزال باقي المجموع يعمل. عندما تتلقّى مهمّة، لا تخمّن
+أيّ مهارة تُحمَّل، بل:
 
 1. اقرأ وصف المهمّة.
 2. طابقه مع **واحد** من الموضوعات التسعة أدناه.
@@ -50,88 +52,97 @@ skillstack/
 └── project-tooling/       (20 مهارة)         ← التغليف وDocker والتكامل المستمرّ
 ```
 
-كلّ مجلد موضوع فرعيّ يحتوي على مجلّد واحد لكلّ مهارة، وكلّ مجلد مهارة يحوي `SKILL.md` (وبعضها يحوي مجلد `references/` فرعيّاً بقواعد أعمق).
+كلّ مجلد موضوع فرعيّ يحتوي على مجلّد واحد لكلّ مهارة، وكلّ مجلد مهارة يحوي `SKILL.md` (وبعضها يحوي مجلد `references/`
+فرعيّاً بقواعد أعمق).
 
 ## جدول توجيه الموضوعات
 
-| مجلد الموضوع | يُستخدم عندما تتضمّن المهمّة... | # المهارات |
-|---|---|---|
-| `academic-research/` | تخطيط دراسة، صياغة مسوّدة مخطوطة، كتابة أطروحة، تصميم منح، مراجعة ورقة، تجهيز محاضرة | 20 |
-| `style-integrity/` | فرض قواعد LaTeX/النص/البرمجة، فحوصات عدم الاختلاق، اتّساق الرموز، تنفيذ أيّ مهمّة متعدّدة الخطوات بانضباط | 18 |
-| `ml-engineering/` | بناء أو تدريب أو ضبط أو تفسير أو التحقّق من نماذج التعلّم الآليّ في PyTorch/Lightning/HuggingFace | 22 |
-| `data-engineering/` | ETL وجودة البيانات وفرض المخطّطات ومخازن الخصائص وبطاقات مجموعات البيانات والمحوّلات | 18 |
-| `visualization/` | أشكال النشر ومخطّطات TikZ والملصقات والجداول ولوحات القيادة والرسوم البيانيّة | 18 |
-| `writing-citation/` | BibTeX والاستشهادات والملخّصات وIMRaD والمنهجيّة وتحرير الإنجليزيّة وإعادة الصياغة | 18 |
-| `ai-text/` | كشف النصّ المُولَّد بالذكاء الاصطناعيّ، تأنيس النصّ الآليّ، التحيّز/الانفجاريّة، كشف العلامات المائيّة | 15 |
-| `ai-output-judgement/` | تقييم مخرجات الذكاء الاصطناعيّ للواقعيّة والهلعلة والتحيّز والسلامة والتأريض والإخلاص والمحاذاة وصحّة الكود، بناء هياكل التقييم | 18 |
-| `project-tooling/` | التغليف وDocker والتكامل المستمرّ وpytest والتوثيق وREADMEs وpyproject.toml وMakefiles | 20 |
+| مجلد الموضوع           | يُستخدم عندما تتضمّن المهمّة...                                                                                                | # المهارات |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------------|------------|
+| `academic-research/`   | تخطيط دراسة، صياغة مسوّدة مخطوطة، كتابة أطروحة، تصميم منح، مراجعة ورقة، تجهيز محاضرة                                         | 20         |
+| `style-integrity/`     | فرض قواعد LaTeX/النص/البرمجة، فحوصات عدم الاختلاق، اتّساق الرموز، تنفيذ أيّ مهمّة متعدّدة الخطوات بانضباط                       | 18         |
+| `ml-engineering/`      | بناء أو تدريب أو ضبط أو تفسير أو التحقّق من نماذج التعلّم الآليّ في PyTorch/Lightning/HuggingFace                              | 22         |
+| `data-engineering/`    | ETL وجودة البيانات وفرض المخطّطات ومخازن الخصائص وبطاقات مجموعات البيانات والمحوّلات                                          | 18         |
+| `visualization/`       | أشكال النشر ومخطّطات TikZ والملصقات والجداول ولوحات القيادة والرسوم البيانيّة                                                 | 18         |
+| `writing-citation/`    | BibTeX والاستشهادات والملخّصات وIMRaD والمنهجيّة وتحرير الإنجليزيّة وإعادة الصياغة                                             | 18         |
+| `ai-text/`             | كشف النصّ المُولَّد بالذكاء الاصطناعيّ، تأنيس النصّ الآليّ، التحيّز/الانفجاريّة، كشف العلامات المائيّة                                | 15         |
+| `ai-output-judgement/` | تقييم مخرجات الذكاء الاصطناعيّ للواقعيّة والهلعلة والتحيّز والسلامة والتأريض والإخلاص والمحاذاة وصحّة الكود، بناء هياكل التقييم | 18         |
+| `project-tooling/`     | التغليف وDocker والتكامل المستمرّ وpytest والتوثيق وREADMEs وpyproject.toml وMakefiles                                       | 20         |
 
 ## كيفيّة التوجيه
 
 ### الخطوة 1 — تصنيف المهمّة
 
-اقرأ طلب المستخدم واختر موضوعاً أساسيّاً واحداً فقط. إذا امتدّت المهمّة عبر موضوعين (مثلاً «اكتب ورقة وأنتِج أشكالها»)، وجِّه إلى الموضوع **الأساسي** أوّلاً ثمّ تسلسل إلى الثاني.
+اقرأ طلب المستخدم واختر موضوعاً أساسيّاً واحداً فقط. إذا امتدّت المهمّة عبر موضوعين (مثلاً «اكتب ورقة وأنتِج أشكالها»)،
+وجِّه إلى الموضوع **الأساسي** أوّلاً ثمّ تسلسل إلى الثاني.
 
 ### الخطوة 2 — اختيار المهارة
 
-داخل مجلد الموضوع، امسح أسماء المهارات. كلّ `SKILL.md` يبدأ بحقل `description` في YAML يوضّح متى يُستخدم. طابق المهمّة مع أقرب وصف.
+داخل مجلد الموضوع، امسح أسماء المهارات. كلّ `SKILL.md` يبدأ بحقل `description` في YAML يوضّح متى يُستخدم. طابق المهمّة
+مع أقرب وصف.
 
 ### الخطوة 3 — التحميل والاتّباع
 
-افتح `SKILL.md` المختار، اقرأه كاملاً، واتّبع سير عمله. إذا أحال إلى ملفّ فرعيّ في `references/`، فاقرأه أيضاً قبل التصرّف.
+افتح `SKILL.md` المختار، اقرأه كاملاً، واتّبع سير عمله. إذا أحال إلى ملفّ فرعيّ في `references/`، فاقرأه أيضاً قبل
+التصرّف.
 
 ### الخطوة 4 — التسلسل عند الحاجة
 
-إذا تسلسلت المهمّة طبيعيّاً (مثلاً `research-ideation-planner` ← `research-repo-builder` ← `modular-ml-architect`)، فأكمل مخرجات المهارة الأولى قبل تحميل التالية.
+إذا تسلسلت المهمّة طبيعيّاً (مثلاً `research-ideation-planner` ← `research-repo-builder` ← `modular-ml-architect`)،
+فأكمل مخرجات المهارة الأولى قبل تحميل التالية.
 
 ## أمثلة شائعة على التوجيه
 
-| يقول المستخدم | الموضوع | المهارة |
-|---|---|---|
-| "اقترح 3 أفكار بحثيّة لمجلّة تصوير طبيّ" | academic-research | research-ideation-planner |
-| "أنشئ مستودع بحثيّاً بـ src/ وconfigs ودليل" | academic-research | research-repo-builder |
-| "صُغ قسم المنهجيّة بـ LaTeX" | academic-research | journal-manuscript-writer |
-| "افرض مسافة بادئة بمقدار 2 فراغ وCamelCase وتعليقات منتهيّة بنقطة في Python" | style-integrity | coding-conventions-enforcer |
-| "افحص LaTeX بحثاً عن فواصل `% ====== %` مفقودة" | style-integrity | latex-style-guard |
-| "تحقّق من أنّ كلّ DOI في المراجع حقيقيّ" | style-integrity | zero-fabrication-guard |
-| "شغّل حلقة تدريب متعدّدة البذور مع `.to(device)` على كلّ nn.Module" | ml-engineering | reproducible-experiment-runner |
-| "بحث بايزيّ للضبط الفائق بـ Optuna TPE" | ml-engineering | hyperparameter-tuner |
-| "أنشئ ملخّص SHAP + رسوم الاعتماديّة" | ml-engineering | model-explainer |
-| "ابنِ ETL بتحويلات غير مُتماثلة ومسار تدقيق" | data-engineering | etl-pipeline-builder |
-| "تحقّق من CSV مقابل مخطّط pandera" | data-engineering | data-quality-validator |
-| "اصنع شكل matplotlib بدقّة 300 DPI جاهز للنشر" | visualization | publication-figure-maker |
-| "ارسم مخطّط TikZ لخطّ أنابيب بخطوط تجميع صلبة" | visualization | tikz-framework-diagrammer |
-| "حوّل .bib إلى نمط استشهاد IEEE" | writing-citation | citation-style-converter |
-| "تأكّد أنّ كلّ bibitem مُستشهَد به مرة على الأقلّ" | writing-citation | bibtex-citation-manager |
-| "اكشف إن كان هذا المقال مُولَّداً بالذكاء الاصطناعيّ" | ai-text | ai-text-detector |
-| "أنسِن هذا النصّ الآليّ مع الحفاظ على كلّ الحقائق" | ai-text | ai-text-humanizer |
-| "تحقّق إن كانت استجابة LLM تتضمّن حقائق مُهلْولة" | ai-output-judgement | hallucination-detector |
-| "تحقّق من الادّعاءات الواقعيّة في فقرة مُولَّدة بالذكاء الاصطناعيّ" | ai-output-judgement | factuality-checker |
-| "تحقّق إن كان مخرج RAG مُؤرَّضاً في المستندات المسترجعة" | ai-output-judgement | groundedness-verifier |
-| "دقّق مخرجات LLM بحثاً عن تحيّز الجنس/العرق" | ai-output-judgement | bias-auditor |
-| "ابنِ هيكل تقييم LLM مع MMLU + GSM8K" | ai-output-judgement | evaluation-harness-builder |
-| "استخدم LLM-as-judge لتقييم استجابات روبوت المحادثة" | ai-output-judgement | llm-as-judge-evaluator |
-| "اكشف حقن الأوامر في صفحة ويب مسترجعة" | ai-output-judgement | prompt-injection-detector |
-| "تحقّق من أنّ كود Python المُولَّد بالذكاء الاصطناعيّ يعمل ويمرّر الاختبارات" | ai-output-judgement | code-output-validator |
-| "احزم مستودعي في ملفّ zip مع استبعاد results/ و .git/" | project-tooling | project-zip-packager |
-| "اكتب Dockerfile لبحث قابل للتكرار" | project-tooling | docker-research-container |
-| "ولِّد README.md لحزمتي Python" | project-tooling | readme-generator |
+| يقول المستخدم                                                               | الموضوع             | المهارة                        |
+|-----------------------------------------------------------------------------|---------------------|--------------------------------|
+| "اقترح 3 أفكار بحثيّة لمجلّة تصوير طبيّ"                                       | academic-research   | research-ideation-planner      |
+| "أنشئ مستودع بحثيّاً بـ src/ وconfigs ودليل"                                  | academic-research   | research-repo-builder          |
+| "صُغ قسم المنهجيّة بـ LaTeX"                                                  | academic-research   | journal-manuscript-writer      |
+| "افرض مسافة بادئة بمقدار 2 فراغ وCamelCase وتعليقات منتهيّة بنقطة في Python" | style-integrity     | coding-conventions-enforcer    |
+| "افحص LaTeX بحثاً عن فواصل `% ====== %` مفقودة"                              | style-integrity     | latex-style-guard              |
+| "تحقّق من أنّ كلّ DOI في المراجع حقيقيّ"                                        | style-integrity     | zero-fabrication-guard         |
+| "شغّل حلقة تدريب متعدّدة البذور مع `.to(device)` على كلّ nn.Module"            | ml-engineering      | reproducible-experiment-runner |
+| "بحث بايزيّ للضبط الفائق بـ Optuna TPE"                                      | ml-engineering      | hyperparameter-tuner           |
+| "أنشئ ملخّص SHAP + رسوم الاعتماديّة"                                          | ml-engineering      | model-explainer                |
+| "ابنِ ETL بتحويلات غير مُتماثلة ومسار تدقيق"                                  | data-engineering    | etl-pipeline-builder           |
+| "تحقّق من CSV مقابل مخطّط pandera"                                            | data-engineering    | data-quality-validator         |
+| "اصنع شكل matplotlib بدقّة 300 DPI جاهز للنشر"                               | visualization       | publication-figure-maker       |
+| "ارسم مخطّط TikZ لخطّ أنابيب بخطوط تجميع صلبة"                                | visualization       | tikz-framework-diagrammer      |
+| "حوّل .bib إلى نمط استشهاد IEEE"                                             | writing-citation    | citation-style-converter       |
+| "تأكّد أنّ كلّ bibitem مُستشهَد به مرة على الأقلّ"                                | writing-citation    | bibtex-citation-manager        |
+| "اكشف إن كان هذا المقال مُولَّداً بالذكاء الاصطناعيّ"                            | ai-text             | ai-text-detector               |
+| "أنسِن هذا النصّ الآليّ مع الحفاظ على كلّ الحقائق"                              | ai-text             | ai-text-humanizer              |
+| "تحقّق إن كانت استجابة LLM تتضمّن حقائق مُهلْولة"                               | ai-output-judgement | hallucination-detector         |
+| "تحقّق من الادّعاءات الواقعيّة في فقرة مُولَّدة بالذكاء الاصطناعيّ"                | ai-output-judgement | factuality-checker             |
+| "تحقّق إن كان مخرج RAG مُؤرَّضاً في المستندات المسترجعة"                         | ai-output-judgement | groundedness-verifier          |
+| "دقّق مخرجات LLM بحثاً عن تحيّز الجنس/العرق"                                   | ai-output-judgement | bias-auditor                   |
+| "ابنِ هيكل تقييم LLM مع MMLU + GSM8K"                                        | ai-output-judgement | evaluation-harness-builder     |
+| "استخدم LLM-as-judge لتقييم استجابات روبوت المحادثة"                        | ai-output-judgement | llm-as-judge-evaluator         |
+| "اكشف حقن الأوامر في صفحة ويب مسترجعة"                                      | ai-output-judgement | prompt-injection-detector      |
+| "تحقّق من أنّ كود Python المُولَّد بالذكاء الاصطناعيّ يعمل ويمرّر الاختبارات"      | ai-output-judgement | code-output-validator          |
+| "احزم مستودعي في ملفّ zip مع استبعاد results/ و .git/"                       | project-tooling     | project-zip-packager           |
+| "اكتب Dockerfile لبحث قابل للتكرار"                                         | project-tooling     | docker-research-container      |
+| "ولِّد README.md لحزمتي Python"                                               | project-tooling     | readme-generator               |
 
 ## مهارة قواعد البرمجة (ملاحظة خاصّة)
 
-يفرض مستودع المستخدم نمط Python صارماً وغير قياسيّ. كلّما كتبت أو حرّرت كود Python في هذا المستودع، حمّل `style-integrity/coding-conventions-enforcer/SKILL.md` أوّلاً. القواعد الخمس:
+يفرض مستودع المستخدم نمط Python صارماً وغير قياسيّ. كلّما كتبت أو حرّرت كود Python في هذا المستودع، حمّل
+`style-integrity/coding-conventions-enforcer/SKILL.md` أوّلاً. القواعد الخمس:
 
 1. **المتغيّرات** تستخدم `camelCase` (مثل `dataSourceUrl`).
-2. **الدوالّ والأصناف وأسماء الملفّات ومفاتيح القواميس** تستخدم `CamelCase` (مثل `ProcessData`، `DataProcessor`، `VisualizationUtils.py`، `"ValidationStatus"`).
+2. **الدوالّ والأصناف وأسماء الملفّات ومفاتيح القواميس** تستخدم `CamelCase` (مثل `ProcessData`، `DataProcessor`،
+   `VisualizationUtils.py`، `"ValidationStatus"`).
 3. **عبارات `if`** تُحيط الشروط دائماً بأقواس: `if (condition):`.
 4. **التعليقات** تأتي فوق كلّ عبارة وتنتهي بنقطة: `# Initialize the data source URL.`.
 5. **النصوص** تستخدم علامتي اقتباس مزدوجتين `""` في كلّ مكان ما عدا داخل docstrings.
 
-أسماء الطرق التي يفرضها إطار العمل بأحرف صغيرة (`forward`، `backward`، `training_step`، `validation_step`، `configure_optimizers`، `setUp`، `tearDown`) معفاة.
+أسماء الطرق التي يفرضها إطار العمل بأحرف صغيرة (`forward`، `backward`، `training_step`، `validation_step`،
+`configure_optimizers`، `setUp`، `tearDown`) معفاة.
 
 ## حلّ التعارض
 
 إذا بدت مهارتان منطبقتين:
+
 - فضِّل المهارة **الأكثر تخصّصاً**.
 - فضِّل المهارة في الموضوع الذي يطابق **المخرج الأساسيّ** للمهمّة (الملفّ أو المنتج النهائيّ الذي يريده المستخدم).
 - عند عدم اليقين، اطلب من المستخدم تأكيد أيّ منتج يريد إنتاجه.
@@ -144,6 +155,8 @@ skillstack/
 
 ## تحديث هذا الملفّ
 
-إذا أضفت مهارة جديدة إلى أيّ موضوع، حدِّث عدّاد ذلك الموضوع في جدول التوجيه أعلاه وفي `README.md`. أبقِ الملفّين متزامنين.
+إذا أضفت مهارة جديدة إلى أيّ موضوع، حدِّث عدّاد ذلك الموضوع في جدول التوجيه أعلاه وفي `README.md`. أبقِ الملفّين
+متزامنين.
 
-الموضوعات غير مرقّمة عمداً — يمكنك حذف أو إعادة تسمية أيّ مجلد موضوع دون إعادة ترقيم الباقي. الـ maestro يوجِّه حسب اسم المجلد، لا حسب الترتيب.
+الموضوعات غير مرقّمة عمداً — يمكنك حذف أو إعادة تسمية أيّ مجلد موضوع دون إعادة ترقيم الباقي. الـ maestro يوجِّه حسب اسم
+المجلد، لا حسب الترتيب.

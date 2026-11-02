@@ -22,6 +22,7 @@ language: en
 # Scientific Poster Designer
 
 ## When To Use
+
 - Producing a conference poster for A0 print (841x1189 mm).
 - Creating a portrait or landscape defence poster.
 - Summarising a paper visually for a workshop or hallway display.
@@ -29,6 +30,7 @@ language: en
 - Adapting an existing poster to a new venue's size requirements.
 
 ## Workflow
+
 1. Decide orientation (portrait or landscape) and the A0 dimensions in millimetres.
 2. Lay out the IMRAD columns: Intro, Methods, Results, Conclusions.
 3. Place title and authors across the top banner.
@@ -40,16 +42,19 @@ language: en
 9. Print a small-scale proof to catch font and overflow issues early.
 
 ## Inputs
+
 - Title, author list, affiliations, and the paper's main figures.
 - Section text (Intro, Methods, Results, Conclusions) trimmed to poster length.
 - A QR target URL and a colour palette aligned with the institution brand.
 
 ## Outputs
+
 - A single A0 PDF (portrait or landscape) ready for print.
 - A PNG thumbnail for web promotion.
 - A `poster.tex` source file (Beamerposter or TikZ) for future edits.
 
 ## Key Rules
+
 - Minimum body font is 24 pt; title is approximately 85 pt.
 - IMRAD columns must be readable from one metre away.
 - Colour-code each section header consistently.
@@ -58,6 +63,7 @@ language: en
 - Embed all fonts and include bleed in the exported PDF.
 
 ## Examples
+
 ```python
 # Compute A0 dimensions and recommend font sizes.
 def PosterSpecs(orientation):
@@ -97,5 +103,6 @@ def ValidatePoster(specs, qrSizeMm):
 ```
 
 ## References
+
 - PosterPresentation templates: https://www.posterpresentations.com/free-poster-templates.html
 - SciFig A0 templates: https://scifig.ai/scientific-poster-templates/a0

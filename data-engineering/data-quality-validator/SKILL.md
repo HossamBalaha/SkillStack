@@ -22,6 +22,7 @@ language: en
 # Data Quality Validator
 
 ## When To Use
+
 - A pipeline must fail fast on bad data instead of silently propagating garbage.
 - You need declarative checks: null presence, uniqueness, value range, set membership.
 - Drift between train and production data must be quantified and alerted on.
@@ -29,6 +30,7 @@ language: en
 - Validation results must be tracked over time (run_id, suite version, pass rate).
 
 ## Workflow
+
 1. Profile a sample of the dataset to learn column types and distributions.
 2. Author a pandera `DataFrameSchema` (or Great Expectations suite) capturing the contract.
 3. Encode column-level checks: not-null, unique, in-set, value range, regex format.
@@ -41,18 +43,21 @@ language: en
 10. Re-run on a fixed window when fixes are deployed to confirm regression is gone.
 
 ## Inputs
+
 - The dataset to validate (DataFrame, file, or warehouse table).
 - The schema/suite definition (Python module or YAML).
 - A reference snapshot for drift comparison (optional).
 - Severity map per check: fail, warn, or quarantine.
 
 ## Outputs
+
 - A validation report (JSON) with per-check status and sample failures.
 - A quarantined rows artifact for warn-level failures.
 - A drift report comparing current vs reference distributions.
 - An exit code the orchestrator can branch on (0 pass, non-zero fail).
 
 ## Key Rules
+
 - Validation is declarative and versioned alongside the dataset contract.
 - Fail fast: a hard failure halts the pipeline before downstream consumers see bad data.
 - Every failed check carries sample rows and the exact failing predicate.
@@ -98,6 +103,7 @@ def AssertUniqueness(df, primaryKey):
 ```
 
 ## References
+
 - pandera: https://pandera.readthedocs.io
 - Great Expectations: https://greatexpectations.io
 - Expectation gallery: https://greatexpectations.io/expectations

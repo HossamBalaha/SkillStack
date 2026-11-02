@@ -23,6 +23,7 @@ language: en
 # Multi-Engine Verification
 
 ## When To Use
+
 - A single detector's verdict is not sufficient because the stakes are high (academic integrity, publication, legal).
 - A reviewer demands triangulation across independent systems.
 - `ai-text-detector` returned `Mixed` and you need a tiebreaker.
@@ -30,26 +31,34 @@ language: en
 - Compliance requires more than one independent check before a finding.
 
 ## Workflow
-1. Confirm the candidate engines are available and their terms permit the use case. Note: OpenAI retired its classifier in July 2023; do not cite it as an active detector.
-2. Select at least two engines from: GPTZero, Originality.ai, Turnitin AI detection, Copyleaks, Winston AI, Sapling, or similar current offerings. Prefer engines with independent methodologies.
-3. Run the same text through each engine. Use identical input (same character count, same formatting) so results are comparable.
+
+1. Confirm the candidate engines are available and their terms permit the use case. Note: OpenAI retired its classifier
+   in July 2023; do not cite it as an active detector.
+2. Select at least two engines from: GPTZero, Originality.ai, Turnitin AI detection, Copyleaks, Winston AI, Sapling, or
+   similar current offerings. Prefer engines with independent methodologies.
+3. Run the same text through each engine. Use identical input (same character count, same formatting) so results are
+   comparable.
 4. Capture each engine's verdict and score (percentage, label, confidence) with timestamp.
 5. Record each engine's documented methodology if disclosed (perplexity-based, transformer-based, hybrid).
 6. Compare verdicts:
-   - All engines agree → high-confidence result, but still combine with manual tell analysis.
-   - Majority agree → medium-confidence; note the dissenting engine and its methodology.
-   - Engines disagree substantially → low-confidence; treat as `Inconclusive` and route to manual review.
-7. Apply R1 (cumulative evidence): do not rely on any single detector. Weber-Wulff et al. (2023) documented non-trivial error rates, including false positives on non-native English writing.
-8. Combine engine output with `ai-text-detector` manual tell analysis and `perplexity-burstiness-scorer` numeric scores. A finding stands when at least two independent signal classes agree.
+    - All engines agree → high-confidence result, but still combine with manual tell analysis.
+    - Majority agree → medium-confidence; note the dissenting engine and its methodology.
+    - Engines disagree substantially → low-confidence; treat as `Inconclusive` and route to manual review.
+7. Apply R1 (cumulative evidence): do not rely on any single detector. Weber-Wulff et al. (2023) documented non-trivial
+   error rates, including false positives on non-native English writing.
+8. Combine engine output with `ai-text-detector` manual tell analysis and `perplexity-burstiness-scorer` numeric scores.
+   A finding stands when at least two independent signal classes agree.
 9. Emit a comparison table and a combined verdict with confidence level.
 10. Log engine versions and timestamps so the verdict is reproducible.
 
 ## Inputs
+
 - The text to verify.
 - Credentials or API access for at least two detection engines.
 - Optional: a known-human baseline by the same author for false-positive calibration.
 
 ## Outputs
+
 - A comparison table: `Engine | Verdict | Score | Confidence | Methodology | Timestamp`.
 - An agreement summary: `unanimous`, `majority`, `split`.
 - A combined verdict: `Likely Human`, `Mixed`, `Likely AI`, `Near-Certain AI`, or `Inconclusive`.
@@ -57,18 +66,22 @@ language: en
 - A reconciliation note: how the engine output was combined with manual tell analysis and statistical scores.
 
 ## Key Rules
+
 - R1: do not rely on a single detector. Always require at least two engines for a publishable finding.
 - OpenAI's classifier was retired in July 2023. Do not cite it as active.
 - Disagreement between engines is itself a signal. Report it; do not average it away.
-- Be alert to known false-positive biases: non-native English writing, formulaic genres (legal, technical specs), and short samples.
+- Be alert to known false-positive biases: non-native English writing, formulaic genres (legal, technical specs), and
+  short samples.
 - Engine verdicts are model-relative. An 80% score from one engine is not equivalent to 80% from another.
-- Combine with manual tell analysis (`ai-text-detector`) and statistical scores (`perplexity-burstiness-scorer`). A finding stands on overlapping independent signal classes, not on a single engine's number.
+- Combine with manual tell analysis (`ai-text-detector`) and statistical scores (`perplexity-burstiness-scorer`). A
+  finding stands on overlapping independent signal classes, not on a single engine's number.
 - Log engine versions and timestamps. Detector models change; reproducibility requires provenance.
 - Treat commercial-detector output as evidence, not proof. Always state confidence level and known limitations.
 
 ## Examples
 
 **Comparison table (agreement):**
+
 ```
 | Engine          | Verdict        | Score | Methodology      | Timestamp        |
 |-----------------|----------------|-------|------------------|------------------|
@@ -83,6 +96,7 @@ and citation tells; `perplexity-burstiness-scorer` z-scores in the bottom decile
 ```
 
 **Disagreement (inconclusive):**
+
 ```
 | Engine          | Verdict        | Score | Methodology      |
 |-----------------|----------------|-------|------------------|
@@ -98,6 +112,7 @@ known false-positive factor. Recommend manual review; do not publish a finding.
 ```
 
 **Note on OpenAI classifier:**
+
 ```
 The OpenAI classifier was retired in July 2023 due to low accuracy. Do not
 treat it as an active engine. If a prior report cited it, re-run with a
@@ -105,8 +120,12 @@ current engine before relying on the finding.
 ```
 
 ## References
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7). Documents high error rates and false-positive bias against non-native English writing — basis for R1 and the caution on single-detector reliance.
-- OpenAI (2023). "AI Text Classifier — no longer available." https://help.openai.com/en/articles/5727991 — confirms retirement.
+
+- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7). Documents high
+  error rates and false-positive bias against non-native English writing — basis for R1 and the caution on
+  single-detector reliance.
+- OpenAI (2023). "AI Text Classifier — no longer available." https://help.openai.com/en/articles/5727991 — confirms
+  retirement.
 - GPTZero: https://gptzero.me — methodology includes perplexity and burstiness.
 - Originality.ai: https://originality.ai — transformer-based detection.
 - Turnitin AI detection: https://www.turnitin.com/solutions/ai-writing — proprietary, used in academic contexts.

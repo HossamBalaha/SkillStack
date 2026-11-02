@@ -1,185 +1,220 @@
-<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SkillStack — 168 skills, 9 themes, MIT">
-  <title>SkillStack — 168 skills, 9 themes, MIT</title>
-  <desc>Social preview card for SkillStack: a composable 168-skill, 9-theme library by Hossam Magdy Balaha, MIT licensed.</desc>
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="SkillStack — 168 skills, 9 themes, MIT">
+    <title>SkillStack — 168 skills, 9 themes, MIT</title>
+    <desc>Social preview card for SkillStack: a composable 168-skill, 9-theme library by Hossam Magdy Balaha, MIT
+        licensed.
+    </desc>
 
-  <defs>
-    <!-- Tasteful background gradient: deep slate-navy → deep blue. -->
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"  stop-color="#0f172a"/>
-      <stop offset="55%" stop-color="#1e3a8a"/>
-      <stop offset="100%" stop-color="#1e40af"/>
-    </linearGradient>
+    <defs>
+        <!-- Tasteful background gradient: deep slate-navy → deep blue. -->
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0f172a"/>
+            <stop offset="55%" stop-color="#1e3a8a"/>
+            <stop offset="100%" stop-color="#1e40af"/>
+        </linearGradient>
 
-    <!-- Orange accent gradient for the bottom (front-most) stack card. -->
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"  stop-color="#f97316"/>
-      <stop offset="100%" stop-color="#fb923c"/>
-    </linearGradient>
+        <!-- Orange accent gradient for the bottom (front-most) stack card. -->
+        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#f97316"/>
+            <stop offset="100%" stop-color="#fb923c"/>
+        </linearGradient>
 
-    <!-- Subtle radial glow behind the stack to add depth. -->
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%"  stop-color="#f97316" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
-    </radialGradient>
+        <!-- Subtle radial glow behind the stack to add depth. -->
+        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f97316" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+        </radialGradient>
 
-    <!-- Reusable pill symbol for the 9 theme chips. -->
-    <symbol id="pill" overflow="visible">
-      <rect x="0" y="0" rx="18" ry="18" width="100%" height="36"
-            fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-    </symbol>
-  </defs>
+        <!-- Reusable pill symbol for the 9 theme chips. -->
+        <symbol id="pill" overflow="visible">
+            <rect x="0" y="0" rx="18" ry="18" width="100%" height="36"
+                  fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+        </symbol>
+    </defs>
 
-  <!-- Background. -->
-  <rect width="1200" height="630" fill="url(#bg)"/>
+    <!-- Background. -->
+    <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <!-- Subtle radial glow centred on the stack area. -->
-  <ellipse cx="600" cy="270" rx="380" ry="180" fill="url(#glow)"/>
+    <!-- Subtle radial glow centred on the stack area. -->
+    <ellipse cx="600" cy="270" rx="380" ry="180" fill="url(#glow)"/>
 
-  <!-- Top-left: logo mark + wordmark + subtitle. -->
-  <g transform="translate(60, 48)" shape-rendering="geometricPrecision">
-    <!-- Logo mark — 4 stacked rounded rectangles forming an S. -->
-    <g>
-      <rect x="0"  y="0"  width="50" height="9" rx="2.5" fill="#f97316"/>
-      <rect x="0"  y="13" width="34" height="9" rx="2.5" fill="#fbbf24"/>
-      <rect x="16" y="26" width="34" height="9" rx="2.5" fill="#fbbf24"/>
-      <rect x="0"  y="39" width="50" height="9" rx="2.5" fill="#f97316"/>
-    </g>
-    <!-- Wordmark. -->
-    <text x="68" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="42" font-weight="800" fill="#ffffff"
-          dominant-baseline="central" text-rendering="geometricPrecision">Skill<tspan fill="#f97316">Stack</tspan></text>
-    <!-- Subtitle. -->
-    <text x="68" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="18" font-weight="500" fill="#cbd5e1" letter-spacing="0.3"
-          dominant-baseline="central" text-rendering="geometricPrecision">168 skills · 9 themes · MIT</text>
-  </g>
-
-  <!-- Top-right: small attribution pill. -->
-  <g transform="translate(960, 56)">
-    <rect x="0" y="0" width="180" height="36" rx="18"
-          fill="#ffffff" fill-opacity="0.08"
-          stroke="#ffffff" stroke-opacity="0.25" stroke-width="1"/>
-    <text x="90" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="13" font-weight="500" fill="#e2e8f0"
-          text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">by Hossam Magdy Balaha</text>
-  </g>
-
-  <!-- Middle: 3 stacked rectangles representing modules. -->
-  <g transform="translate(200, 138)" shape-rendering="geometricPrecision">
-    <!-- Card 1 (back, topmost). -->
-    <rect x="0" y="0"   width="800" height="78" rx="14"
-          fill="#ffffff" fill-opacity="0.08"
-          stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
-    <text x="32" y="39" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="22" font-weight="700" fill="#e2e8f0"
-          dominant-baseline="central" text-rendering="geometricPrecision">academic-research</text>
-    <text x="768" y="39" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="22" font-weight="600" fill="#fbbf24" text-anchor="end"
-          dominant-baseline="central" text-rendering="geometricPrecision">20 skills</text>
-
-    <!-- Card 2 (middle). -->
-    <rect x="0" y="92"  width="800" height="78" rx="14"
-          fill="#ffffff" fill-opacity="0.14"
-          stroke="#ffffff" stroke-opacity="0.20" stroke-width="1"/>
-    <text x="32" y="131" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="22" font-weight="700" fill="#f1f5f9"
-          dominant-baseline="central" text-rendering="geometricPrecision">ml-engineering</text>
-    <text x="768" y="131" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="22" font-weight="600" fill="#fbbf24" text-anchor="end"
-          dominant-baseline="central" text-rendering="geometricPrecision">22 skills</text>
-
-    <!-- Card 3 (front, accent). -->
-    <rect x="0" y="184" width="800" height="78" rx="14" fill="url(#accent)"/>
-    <text x="32" y="223" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="22" font-weight="700" fill="#1e1b2e"
-          dominant-baseline="central" text-rendering="geometricPrecision">visualization</text>
-    <text x="768" y="223" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-          font-size="22" font-weight="700" fill="#1e1b2e" text-anchor="end"
-          dominant-baseline="central" text-rendering="geometricPrecision">18 skills</text>
-  </g>
-
-  <!-- Bottom: 9 theme chips as small pills (5 in row 1, 4 in row 2). -->
-  <g shape-rendering="geometricPrecision">
-    <!-- Row 1: 5 pills. -->
-    <!-- academic-research -->
-    <g transform="translate(178, 462)">
-      <rect width="160" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-      <text x="80" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="13" font-weight="600" fill="#f1f5f9"
-            text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">academic-research</text>
-    </g>
-    <!-- style-integrity -->
-    <g transform="translate(350, 462)">
-      <rect width="140" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-      <text x="70" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="13" font-weight="600" fill="#f1f5f9"
-            text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">style-integrity</text>
-    </g>
-    <!-- ml-engineering -->
-    <g transform="translate(502, 462)">
-      <rect width="145" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-      <text x="72.5" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="13" font-weight="600" fill="#f1f5f9"
-            text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">ml-engineering</text>
-    </g>
-    <!-- data-engineering -->
-    <g transform="translate(659, 462)">
-      <rect width="160" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-      <text x="80" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="13" font-weight="600" fill="#f1f5f9"
-            text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">data-engineering</text>
-    </g>
-    <!-- visualization -->
-    <g transform="translate(831, 462)">
-      <rect width="125" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-      <text x="62.5" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="13" font-weight="600" fill="#f1f5f9"
-            text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">visualization</text>
+    <!-- Top-left: logo mark + wordmark + subtitle. -->
+    <g transform="translate(60, 48)" shape-rendering="geometricPrecision">
+        <!-- Logo mark — 4 stacked rounded rectangles forming an S. -->
+        <g>
+            <rect x="0" y="0" width="50" height="9" rx="2.5" fill="#f97316"/>
+            <rect x="0" y="13" width="34" height="9" rx="2.5" fill="#fbbf24"/>
+            <rect x="16" y="26" width="34" height="9" rx="2.5" fill="#fbbf24"/>
+            <rect x="0" y="39" width="50" height="9" rx="2.5" fill="#f97316"/>
+        </g>
+        <!-- Wordmark. -->
+        <text x="68" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="42" font-weight="800" fill="#ffffff"
+              dominant-baseline="central" text-rendering="geometricPrecision">Skill
+            <tspan fill="#f97316">Stack</tspan>
+        </text>
+        <!-- Subtitle. -->
+        <text x="68" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="18" font-weight="500" fill="#cbd5e1" letter-spacing="0.3"
+              dominant-baseline="central" text-rendering="geometricPrecision">168 skills · 9 themes · MIT
+        </text>
     </g>
 
-    <!-- Row 2: 4 pills (centered). -->
-    <!-- writing-citation -->
-    <g transform="translate(277, 510)">
-      <rect width="155" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-      <text x="77.5" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="13" font-weight="600" fill="#f1f5f9"
-            text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">writing-citation</text>
+    <!-- Top-right: small attribution pill. -->
+    <g transform="translate(960, 56)">
+        <rect x="0" y="0" width="180" height="36" rx="18"
+              fill="#ffffff" fill-opacity="0.08"
+              stroke="#ffffff" stroke-opacity="0.25" stroke-width="1"/>
+        <text x="90" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="13" font-weight="500" fill="#e2e8f0"
+              text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">by Hossam Magdy
+            Balaha
+        </text>
     </g>
-    <!-- ai-text -->
-    <g transform="translate(444, 510)">
-      <rect width="90" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-      <text x="45" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="13" font-weight="600" fill="#f1f5f9"
-            text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">ai-text</text>
-    </g>
-    <!-- ai-output-judgement -->
-    <g transform="translate(546, 510)">
-      <rect width="190" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-      <text x="95" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="13" font-weight="600" fill="#f1f5f9"
-            text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">ai-output-judgement</text>
-    </g>
-    <!-- project-tooling -->
-    <g transform="translate(752, 510)">
-      <rect width="155" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
-            stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
-      <text x="77.5" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-            font-size="13" font-weight="600" fill="#f1f5f9"
-            text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">project-tooling</text>
-    </g>
-  </g>
 
-  <!-- Footer: tiny line above the bottom edge. -->
-  <text x="600" y="595" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="12" font-weight="500" fill="#94a3b8" letter-spacing="2"
-        text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">DROP ANY THEME · CHAIN ANY SKILLS · SHIP THE WORK</text>
+    <!-- Middle: 3 stacked rectangles representing modules. -->
+    <g transform="translate(200, 138)" shape-rendering="geometricPrecision">
+        <!-- Card 1 (back, topmost). -->
+        <rect x="0" y="0" width="800" height="78" rx="14"
+              fill="#ffffff" fill-opacity="0.08"
+              stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+        <text x="32" y="39" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="22" font-weight="700" fill="#e2e8f0"
+              dominant-baseline="central" text-rendering="geometricPrecision">academic-research
+        </text>
+        <text x="768" y="39" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="22" font-weight="600" fill="#fbbf24" text-anchor="end"
+              dominant-baseline="central" text-rendering="geometricPrecision">20 skills
+        </text>
+
+        <!-- Card 2 (middle). -->
+        <rect x="0" y="92" width="800" height="78" rx="14"
+              fill="#ffffff" fill-opacity="0.14"
+              stroke="#ffffff" stroke-opacity="0.20" stroke-width="1"/>
+        <text x="32" y="131" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="22" font-weight="700" fill="#f1f5f9"
+              dominant-baseline="central" text-rendering="geometricPrecision">ml-engineering
+        </text>
+        <text x="768" y="131" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="22" font-weight="600" fill="#fbbf24" text-anchor="end"
+              dominant-baseline="central" text-rendering="geometricPrecision">22 skills
+        </text>
+
+        <!-- Card 3 (front, accent). -->
+        <rect x="0" y="184" width="800" height="78" rx="14" fill="url(#accent)"/>
+        <text x="32" y="223" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="22" font-weight="700" fill="#1e1b2e"
+              dominant-baseline="central" text-rendering="geometricPrecision">visualization
+        </text>
+        <text x="768" y="223" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              font-size="22" font-weight="700" fill="#1e1b2e" text-anchor="end"
+              dominant-baseline="central" text-rendering="geometricPrecision">18 skills
+        </text>
+    </g>
+
+    <!-- Bottom: 9 theme chips as small pills (5 in row 1, 4 in row 2). -->
+    <g shape-rendering="geometricPrecision">
+        <!-- Row 1: 5 pills. -->
+        <!-- academic-research -->
+        <g transform="translate(178, 462)">
+            <rect width="160" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+            <text x="80" y="18"
+                  font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-size="13" font-weight="600" fill="#f1f5f9"
+                  text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">academic-research
+            </text>
+        </g>
+        <!-- style-integrity -->
+        <g transform="translate(350, 462)">
+            <rect width="140" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+            <text x="70" y="18"
+                  font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-size="13" font-weight="600" fill="#f1f5f9"
+                  text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">style-integrity
+            </text>
+        </g>
+        <!-- ml-engineering -->
+        <g transform="translate(502, 462)">
+            <rect width="145" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+            <text x="72.5" y="18"
+                  font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-size="13" font-weight="600" fill="#f1f5f9"
+                  text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">ml-engineering
+            </text>
+        </g>
+        <!-- data-engineering -->
+        <g transform="translate(659, 462)">
+            <rect width="160" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+            <text x="80" y="18"
+                  font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-size="13" font-weight="600" fill="#f1f5f9"
+                  text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">data-engineering
+            </text>
+        </g>
+        <!-- visualization -->
+        <g transform="translate(831, 462)">
+            <rect width="125" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+            <text x="62.5" y="18"
+                  font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-size="13" font-weight="600" fill="#f1f5f9"
+                  text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">visualization
+            </text>
+        </g>
+
+        <!-- Row 2: 4 pills (centered). -->
+        <!-- writing-citation -->
+        <g transform="translate(277, 510)">
+            <rect width="155" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+            <text x="77.5" y="18"
+                  font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-size="13" font-weight="600" fill="#f1f5f9"
+                  text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">writing-citation
+            </text>
+        </g>
+        <!-- ai-text -->
+        <g transform="translate(444, 510)">
+            <rect width="90" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+            <text x="45" y="18"
+                  font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-size="13" font-weight="600" fill="#f1f5f9"
+                  text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">ai-text
+            </text>
+        </g>
+        <!-- ai-output-judgement -->
+        <g transform="translate(546, 510)">
+            <rect width="190" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+            <text x="95" y="18"
+                  font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-size="13" font-weight="600" fill="#f1f5f9"
+                  text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">
+                ai-output-judgement
+            </text>
+        </g>
+        <!-- project-tooling -->
+        <g transform="translate(752, 510)">
+            <rect width="155" height="36" rx="18" fill="#ffffff" fill-opacity="0.10"
+                  stroke="#f97316" stroke-opacity="0.55" stroke-width="1"/>
+            <text x="77.5" y="18"
+                  font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+                  font-size="13" font-weight="600" fill="#f1f5f9"
+                  text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">project-tooling
+            </text>
+        </g>
+    </g>
+
+    <!-- Footer: tiny line above the bottom edge. -->
+    <text x="600" y="595" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          font-size="12" font-weight="500" fill="#94a3b8" letter-spacing="2"
+          text-anchor="middle" dominant-baseline="central" text-rendering="geometricPrecision">DROP ANY THEME · CHAIN
+        ANY SKILLS · SHIP THE WORK
+    </text>
 </svg>

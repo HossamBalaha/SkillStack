@@ -22,12 +22,14 @@ language: en
 # Surface Plotter
 
 ## When To Use
+
 - Visualising a loss landscape over two parameters.
 - Plotting a response surface from a DOE study.
 - Inspecting a 2-D scalar field with height and colour.
 - Producing both a 3-D surface and a 2-D contour for a paper.
 
 ## Workflow
+
 1. Build a meshgrid from the two parameter axes.
 2. Evaluate the scalar field on the grid to get `Z`.
 3. Create a 3-D axis with `mpl_toolkits.mplot3d.Axes3D`.
@@ -38,16 +40,19 @@ language: en
 8. Save both views as PDF for the manuscript.
 
 ## Inputs
+
 - Two 1-D arrays `x` and `y` defining the grid.
 - A callable `Z = f(x, y)` or a precomputed 2-D array.
 - Axis labels with units and an optional colourbar label.
 
 ## Outputs
+
 - A PDF with the 3-D surface.
 - A PDF with the 2-D contour overlay.
 - A JSON record of the view angle and colour map for reproducibility.
 
 ## Key Rules
+
 - Use `ax.view_init(elev=30, azim=45)` as the default camera.
 - Always include a colourbar labelled with the quantity and units.
 - Label axes with units, not bare variable names.
@@ -56,6 +61,7 @@ language: en
 - Use `cmap="viridis"` or another perceptually uniform map.
 
 ## Examples
+
 ```python
 # Plot a 3-D surface and a 2-D contour for the same field.
 import numpy as np
@@ -93,5 +99,6 @@ def PlotSurface(x, y, zFunc, outputPath):
 ```
 
 ## References
+
 - matplotlib 3D surface docs: https://matplotlib.org/stable/gallery/mplot3d/surface3d.html
 - loss landscape visualisation: https://github.com/tomgoldstein/loss-landscape

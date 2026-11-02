@@ -22,6 +22,7 @@ language: en
 # Categorical Encoder
 
 ## When To Use
+
 - A model requires numeric inputs but the source has categorical columns.
 - Cardinality varies widely per column and one strategy does not fit all.
 - Target/mean encoding must avoid leakage via k-fold cross-validation.
@@ -29,6 +30,7 @@ language: en
 - An audit trail must record the chosen strategy per column.
 
 ## Workflow
+
 1. Profile every categorical column: cardinality, top values, missingness.
 2. Pick a strategy per column based on cardinality and presence of order.
 3. Fit the encoder on TRAIN only and persist it for inference.
@@ -39,15 +41,18 @@ language: en
 8. Emit the encoded matrices and the manifest.
 
 ## Inputs
+
 - TRAIN, VAL, TEST DataFrames with categorical columns.
 - Per-column strategy specification (one_hot, ordinal, target, frequency, hash, embedding).
 
 ## Outputs
+
 - Encoded TRAIN, VAL, TEST matrices.
 - An encoding manifest (JSON) listing strategy per column.
 - Persisted encoder artifacts (joblib) for inference reuse.
 
 ## Key Rules
+
 - Encoders fit on TRAIN only; VAL and TEST are transformed.
 - Unseen categories at inference fall back to a declared default, never error silently.
 - One-hot encoding is reserved for low cardinality (typically < 20 categories).
@@ -136,6 +141,7 @@ def ChooseStrategy(cardinality, hasOrder, hasTarget):
 ```
 
 ## References
+
 - scikit-learn encoders: https://scikit-learn.org/stable/modules/preprocessing.html#encoding-categorical-features
 - FeatureHasher: https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html
 - Entity embeddings (Guo & Berkhahn 2016): https://arxiv.org/abs/1604.06737

@@ -22,30 +22,38 @@ language: en
 # Thesis Chapter Planner
 
 ## When To Use
+
 - The user is writing a master's thesis or PhD dissertation.
 - The user wants a chapter outline that avoids redundancy across chapters.
 - The user asks for a concept map showing where each concept is introduced and reused.
 - Trigger keywords: thesis, dissertation, chapter plan, cross-referencing, concept map, monograph.
 
 ## Workflow
+
 1. Capture the thesis title, central research question, and degree (MSc, PhD).
-2. List the canonical chapter set: Introduction, Background, Related Work, Methodology, Experiments, Discussion, Conclusion. Add appendices if needed.
+2. List the canonical chapter set: Introduction, Background, Related Work, Methodology, Experiments, Discussion,
+   Conclusion. Add appendices if needed.
 3. For each chapter, write a 2-3 sentence scope statement and a list of sections (e.g., 2.1, 2.2, 2.3).
-4. Build a concept inventory: every key term, notation symbol, dataset, and method gets a unique ID and a "defined-in" section reference.
-5. For every later chapter, scan for each concept and replace any re-explanation with "As defined in Section X.Y, ..." cross-references.
+4. Build a concept inventory: every key term, notation symbol, dataset, and method gets a unique ID and a "defined-in"
+   section reference.
+5. For every later chapter, scan for each concept and replace any re-explanation with "As defined in Section X.Y, ..."
+   cross-references.
 6. Produce a cumulative concept map (graphviz DOT or Markdown adjacency list) showing introduction → reuse edges.
-7. Identify forward references where a concept is used before being defined; either reorder or insert a placeholder ("defined later in Section Z").
+7. Identify forward references where a concept is used before being defined; either reorder or insert a placeholder (
+   "defined later in Section Z").
 8. Draft a per-chapter milestone calendar aligned with the defense date.
 9. Validate against institutional formatting requirements (page limits, margins, citation style).
 10. Output the chapter plan and the non-redundancy audit log.
 
 ## Inputs
+
 - Thesis title and degree.
 - Central research question(s) and hypothesis.
 - Institution's thesis formatting guide.
 - Defense target date and committee feedback (if any).
 
 ## Outputs
+
 - `chapter_plan.md` — chapter list with scope and section headings.
 - `concept_inventory.csv` — concept ID, name, defined-in section, reused-in sections.
 - `concept_map.dot` — graphviz source for the concept map.
@@ -53,6 +61,7 @@ language: en
 - `milestone_calendar.md` — chapter drafts vs. defense date.
 
 ## Key Rules
+
 - Every concept has exactly one "defined-in" section; all other mentions must cross-reference.
 - Re-explaining a concept is forbidden; use "As defined in Section X.Y, ..." instead.
 - Forward references are allowed only if a placeholder is inserted.
@@ -61,6 +70,7 @@ language: en
 - Plan validated against the institution's thesis format guide.
 
 ## Examples
+
 ```text
 Chapter plan excerpt:
   Ch 2 Background
@@ -73,6 +83,7 @@ Chapter plan excerpt:
            and discuss limitations.
     Sections: 5.1 Findings; 5.2 Topology Revisited; 5.3 Limitations.
 ```
+
 ```text
 Non-redundancy audit log:
   Found: Section 5.2 redefines persistent homology (1 paragraph).
@@ -83,12 +94,15 @@ Non-redundancy audit log:
 ```
 
 ## References
+
 - "How to Write a Thesis" (Umberto Eco) structural guidance.
 - LaTeX thesis classes: https://ctan.org/topic/thesis
 - Graphviz DOT language: https://graphviz.org/doc/info/lang.html
 - MIT thesis specifications: https://libraries.mit.edu/dist/ams/thesis-specs/
 
 ## Notes
-- Treat the concept inventory as the canonical truth; if a concept is missing from the inventory, it has not been formally defined.
+
+- Treat the concept inventory as the canonical truth; if a concept is missing from the inventory, it has not been
+  formally defined.
 - Each time a chapter is drafted, run the non-redundancy audit before sending to the advisor.
 - Update the concept map whenever a new section is added so forward references stay valid.

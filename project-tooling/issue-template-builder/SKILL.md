@@ -22,34 +22,42 @@ language: en
 # Issue Template Builder
 
 ## When To Use
+
 - You want every bug report to arrive with reproduction steps, expected/actual, environment, and logs.
 - You want feature requests structured around problem, proposed solution, alternatives, and context.
 - You want to disable the blank issue button and force users through templates.
 - You are migrating from legacy `.md` templates to the newer YAML form schema.
 
 ## Workflow
+
 1. Create `.github/ISSUE_TEMPLATE/bug_report.yml` with the GitHub form schema.
-2. Add fields: description (textarea), reproduction steps (textarea), expected behavior (textarea), actual behavior (textarea), environment (input), logs (textarea).
+2. Add fields: description (textarea), reproduction steps (textarea), expected behavior (textarea), actual behavior
+   (textarea), environment (input), logs (textarea).
 3. Mark each required field with `validations: required: true`.
-4. Create `.github/ISSUE_TEMPLATE/feature_request.yml` with fields: problem, proposed solution, alternatives, additional context.
+4. Create `.github/ISSUE_TEMPLATE/feature_request.yml` with fields: problem, proposed solution, alternatives, additional
+   context.
 5. Create `.github/ISSUE_TEMPLATE/question.md` for free-form questions that don't fit the other two.
 6. Create `.github/ISSUE_TEMPLATE/config.yml` with `blank_issues_enabled: false` and a contact link.
 7. Validate the YAML with `python -c "import yaml; yaml.safe_load(open('...'))"`.
 8. Push to `main` and open a test issue on GitHub to confirm the form renders.
 
 ## Inputs
+
 - The list of fields the maintainer wants on each form.
 - The contact link (e.g. a Discussions URL or a support email).
 - Whether blank issues are allowed (default: false).
 
 ## Outputs
+
 - `.github/ISSUE_TEMPLATE/bug_report.yml`
 - `.github/ISSUE_TEMPLATE/feature_request.yml`
 - `.github/ISSUE_TEMPLATE/question.md`
 - `.github/ISSUE_TEMPLATE/config.yml`
 
 ## Key Rules
-- Use the YAML form schema (keys: `name`, `description`, `title`, `labels`, `body`), not the legacy markdown-only templates.
+
+- Use the YAML form schema (keys: `name`, `description`, `title`, `labels`, `body`), not the legacy markdown-only
+  templates.
 - Every required field must have `validations: required: true`.
 - Field `type` is one of `textarea`, `input`, `dropdown`, `checkboxes`, `markdown`.
 - The `config.yml` must set `blank_issues_enabled` explicitly (false by default for this skill).
@@ -58,6 +66,7 @@ language: en
 - Keep forms short — long forms reduce response rates; cap at ~8 fields.
 
 ## Examples
+
 `.github/ISSUE_TEMPLATE/bug_report.yml`:
 
 ```yaml
@@ -132,5 +141,8 @@ python -c "import yaml, glob; [yaml.safe_load(open(p)) for p in glob.glob('.gith
 ```
 
 ## References
-- GitHub issue form schema — https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
-- Configuring issue templates — https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+
+- GitHub issue form
+  schema — https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
+- Configuring issue
+  templates — https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository

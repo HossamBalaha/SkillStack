@@ -22,12 +22,14 @@ language: en
 # Dashboard Builder
 
 ## When To Use
+
 - Prototyping an ML model demo for stakeholders.
 - Sharing interactive results internally without a front-end team.
 - Building an analytics view over a dataset with live filters.
 - Comparing Streamlit, Dash, or Gradio for a new project.
 
 ## Workflow
+
 1. Choose the framework: Streamlit (Python-native, quick), Dash (Plotly, control), or Gradio (ML demos).
 2. Define the layout: sidebar controls, metric cards, charts, and a data table.
 3. Wire callbacks so controls refresh the charts without a full page reload.
@@ -37,16 +39,19 @@ language: en
 7. Smoke-test every control path before sharing the link.
 
 ## Inputs
+
 - A dataset (CSV/parquet) or a model artefact.
 - A specification of controls (sliders, dropdowns, file uploaders).
 - A list of metric cards and charts to render.
 
 ## Outputs
+
 - A runnable Python app (`app.py`) plus a requirements file.
 - A container image spec when cloud deployment is required.
 - A short README describing how to launch the dashboard.
 
 ## Key Rules
+
 - Sidebar holds controls; the main area holds metrics, charts, and tables.
 - Use framework caching for expensive computations.
 - Every control must drive a callback; no dead widgets.
@@ -55,6 +60,7 @@ language: en
 - Choose Streamlit for speed, Dash for control, Gradio for ML demos.
 
 ## Examples
+
 ```python
 # Streamlit dashboard with sidebar controls and metric cards.
 import pandas as pd
@@ -87,6 +93,7 @@ if (__name__ == "__main__"):
 ```
 
 ## References
+
 - Streamlit docs: https://streamlit.io
 - Dash docs: https://dash.plotly.com
 - Gradio docs: https://gradio.app

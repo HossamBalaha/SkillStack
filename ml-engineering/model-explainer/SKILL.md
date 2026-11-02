@@ -22,6 +22,7 @@ language: en
 # Model Explainer
 
 ## When To Use
+
 - Interpreting a tree model with `TreeExplainer`.
 - Explaining a PyTorch neural network with `DeepExplainer` or Captum.
 - Generating a kernel-based explanation for an arbitrary black-box model.
@@ -29,6 +30,7 @@ language: en
 - Auditing which features drive a model's predictions.
 
 ## Workflow
+
 1. Identify the model family (tree, deep, kernel) and pick the matching explainer.
 2. Prepare a background dataset (sample of training data) for kernel/deep explainers.
 3. Compute SHAP values on a held-out evaluation set.
@@ -40,12 +42,14 @@ language: en
 9. Persist mean-absolute-SHAP ranking as a CSV.
 
 ## Inputs
+
 - Trained model object.
 - Background dataset (training sample).
 - Evaluation dataset (held-out).
 - Feature names list.
 
 ## Outputs
+
 - `Aggregated/ShapBeeswarm.png` global summary.
 - `Aggregated/ShapDependence.png` top-feature dependence.
 - `Aggregated/ShapWaterfall.png` single-prediction explanation.
@@ -53,6 +57,7 @@ language: en
 - `Aggregated/FeatureRanking.csv` mean-absolute-SHAP table.
 
 ## Key Rules
+
 - `TreeExplainer` for tree models, `DeepExplainer` for PyTorch, `KernelExplainer` for general black-box.
 - SHAP reflects model behavior, NOT causality.
 - Cluster correlated features to avoid double-counting importance.
@@ -60,6 +65,7 @@ language: en
 - Disable gradients when computing DeepExplainer values on eval mode.
 
 ## Examples
+
 ```python
 # SHAP for a tree model, with a beeswarm plot and ranking CSV.
 import shap
@@ -107,6 +113,7 @@ def ExplainPyTorchModel(Model, Background, Evaluation, OutputDir):
 ```
 
 ## References
+
 - SHAP documentation: https://shap.readthedocs.io
 - Captum (Integrated Gradients): https://captum.ai
 - LIME: https://github.com/marcotcr/lime

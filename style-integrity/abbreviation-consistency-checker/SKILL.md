@@ -22,33 +22,42 @@ language: en
 # Abbreviation Consistency Checker
 
 ## When To Use
+
 - A manuscript mixes defined and undefined abbreviations.
 - An abbreviation is re-expanded in later sections ("Convolutional Neural Network (CNN)" appears twice).
 - The number of distinct abbreviations exceeds ten and a list is warranted.
 - A reviewer has flagged inconsistent acronym usage.
 
 ## Workflow
-1. Scan the manuscript for every parenthetical definition matching the pattern `<Full Term> (<UPPERCASE>)` (e.g., "Convolutional Neural Network (CNN)").
+
+1. Scan the manuscript for every parenthetical definition matching the pattern `<Full Term> (<UPPERCASE>)` (e.g.,
+   "Convolutional Neural Network (CNN)").
 2. Build a map: `abbreviation → first-definition-site` (section, line, full term).
-3. Flag any abbreviation defined more than once. Keep the first occurrence; rewrite later occurrences to use the bare abbreviation.
+3. Flag any abbreviation defined more than once. Keep the first occurrence; rewrite later occurrences to use the bare
+   abbreviation.
 4. Scan for every use of each abbreviation outside its definition site. Flag any abbreviation used before it is defined.
 5. Flag abbreviations defined but never used afterwards — either use them or remove the definition.
-6. If the distinct abbreviation count exceeds ten, generate an "Abbreviations" table at the end of the manuscript listing each abbreviation and its full form.
+6. If the distinct abbreviation count exceeds ten, generate an "Abbreviations" table at the end of the manuscript
+   listing each abbreviation and its full form.
 7. Apply fixes: delete redundant definitions, move first-use definitions earlier when needed, expand lone abbreviations.
 8. Re-scan to confirm one-definition-per-abbreviation.
 9. Produce a change report: line, original, action taken.
 
 ## Inputs
+
 - Manuscript source text (LaTeX, Markdown, or plain text).
 - Optional project-specific glossary of permitted abbreviations.
 
 ## Outputs
+
 - Revised manuscript with one definition per abbreviation at first appearance.
 - An "Abbreviations" table appended at the end if count > 10.
 - A change report listing redundant definitions removed and reordering actions.
 
 ## Key Rules
-- Every abbreviation is defined exactly once, at its first appearance in the body (including abstract if the abbreviation also appears there).
+
+- Every abbreviation is defined exactly once, at its first appearance in the body (including abstract if the
+  abbreviation also appears there).
 - The full term precedes the abbreviation in parentheses: "Convolutional Neural Network (CNN)".
 - The abbreviation is used consistently after definition; the full term is not re-expanded.
 - An abbreviation must not be used before it is defined.
@@ -57,6 +66,7 @@ language: en
 ## Examples
 
 Before:
+
 ```
 We use a Convolutional Neural Network (CNN) for feature extraction.
 The Convolutional Neural Network (CNN) is trained on ImageNet.
@@ -65,6 +75,7 @@ Adversarial Network (GAN) for synthesis.
 ```
 
 After:
+
 ```
 We use a Convolutional Neural Network (CNN) for feature extraction.
 The CNN is trained on ImageNet.
@@ -73,6 +84,7 @@ show that the GAN outperforms baselines.
 ```
 
 Abbreviations table (appended):
+
 ```
 ## Abbreviations
 
@@ -83,6 +95,7 @@ Abbreviations table (appended):
 ```
 
 Change report:
+
 ```
 Line 2:  Removed redundant definition of "Convolutional Neural Network (CNN)".
 Line 3:  Moved first-use definition of "Generative Adversarial Network (GAN)"
@@ -90,6 +103,7 @@ Line 3:  Moved first-use definition of "Generative Adversarial Network (GAN)"
 ```
 
 ## References
+
 - AMA Manual of Style on acronyms and abbreviations.
 - IEEE Editorial Style Manual, section on abbreviations.
 - The `glossaries` LaTeX package for managing acronyms programmatically.

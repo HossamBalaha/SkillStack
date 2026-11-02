@@ -22,12 +22,14 @@ language: en
 # Makefile Generator
 
 ## When To Use
+
 - You want a single `make <target>` entrypoint so contributors don't have to memorise tool-specific commands.
 - You are standardising across a team: everyone runs `make install`, `make test`, `make lint`.
 - You want the `zip` target to invoke `python CreateProjectZip.py` so the archive is one command away.
 - You want `make clean` to wipe every generated artifact (`__pycache__/`, `.pytest_cache/`, `dist/`, `build/`).
 
 ## Workflow
+
 1. Detect the tools the repo uses by scanning for `pyproject.toml`, `ruff.toml`, `pytest.ini`, `docs/conf.py`.
 2. Emit a `Makefile` with a `.PHONY` line listing every target.
 3. Add `install`: `pip install -e ".[dev,test]"`.
@@ -43,15 +45,18 @@ language: en
 13. Document each target in a comment header.
 
 ## Inputs
+
 - The repo's tooling (ruff, black, mypy, pytest, sphinx).
 - The package install command (`pip install -e ".[dev,test]"` by default).
 - The entrypoint script (`Main.py` by default).
 
 ## Outputs
+
 - `Makefile` at the repo root.
 - A README section documenting the common targets.
 
 ## Key Rules
+
 - Every target is listed under `.PHONY` so Make never treats a same-named file as up-to-date.
 - Recipe lines start with a TAB character, never spaces; this is non-negotiable in Make.
 - Targets are idempotent — running `make test` twice gives the same result.
@@ -61,6 +66,7 @@ language: en
 - Keep commands short; chain with `&&` so a failure stops the recipe.
 
 ## Examples
+
 ```makefile
 # Makefile — standard developer entrypoints for researchkit.
 
@@ -125,5 +131,6 @@ if (__name__ == "__main__"):
 ```
 
 ## References
+
 - GNU Make manual — https://www.gnu.org/software/make/manual/
 - `.PHONY` targets — https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html

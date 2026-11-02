@@ -22,33 +22,41 @@ language: en
 # Gitignore Builder
 
 ## When To Use
+
 - You are scaffolding a new repo and need a `.gitignore` that matches the stack from day one.
 - An existing repo is committing junk (`__pycache__/`, `.DS_Store`, `Datasets/`) and you want to stop the bleed.
 - You are combining multiple stacks (Python backend + Node frontend + R notebooks) in one repo.
 - You want a single curated file instead of stitching together GitHub's templates by hand.
 
 ## Workflow
+
 1. Detect the stack(s) by scanning for `pyproject.toml`, `package.json`, `DESCRIPTION`, `*.Rproj`, `renv.lock`.
 2. Pick the matching section templates: Python, Node, R, Data, IDE, OS, plus the project-tooling specifics.
 3. Compose the `.gitignore` in this fixed order: Python → Node → R → Data → IDE → OS → Local.
-4. For the Data section, decide per-file: ignore large `Datasets/` wholesale but keep small fixtures under `tests/fixtures/`.
-5. Add the project-specific artifacts: `ProjectArchive.zip`, `*.zip`, `results/`, `htmlcov/`, `.mypy_cache/`, `.ruff_cache/`.
+4. For the Data section, decide per-file: ignore large `Datasets/` wholesale but keep small fixtures under
+   `tests/fixtures/`.
+5. Add the project-specific artifacts: `ProjectArchive.zip`, `*.zip`, `results/`, `htmlcov/`, `.mypy_cache/`,
+   `.ruff_cache/`.
 6. Append a "Local overrides" comment block at the end so individuals can append personal ignores.
 7. Verify with `git status --ignored` that intended paths show as ignored.
 8. Commit the `.gitignore` and document the per-stack reasoning in a code comment header.
 
 ## Inputs
+
 - The repo root (for stack detection).
 - A list of large-data paths that should be ignored wholesale.
 - A list of small fixture paths that must NOT be ignored.
 
 ## Outputs
+
 - `.gitignore` at the repo root.
 - A short note in the README about which directories are intentionally not tracked.
 
 ## Key Rules
+
 - One file per concern; group with a `# ---` header so the file reads top to bottom.
-- `Datasets/` is ignored by default; small committed fixtures go under `tests/fixtures/` and must be un-ignored with `!tests/fixtures/`.
+- `Datasets/` is ignored by default; small committed fixtures go under `tests/fixtures/` and must be un-ignored with
+  `!tests/fixtures/`.
 - `*.zip` and `ProjectArchive.zip` are always ignored — the zip-packager output never commits.
 - `.venv/` is ignored but the lock file (`requirements.lock`, `poetry.lock`, `uv.lock`) is committed.
 - `.env` is always ignored; `.env.example` is always committed.
@@ -56,6 +64,7 @@ language: en
 - Use trailing slashes for directories (`__pycache__/`) and glob stars sparingly.
 
 ## Examples
+
 ```gitignore
 # .gitignore — generated for the project-tooling stack.
 
@@ -134,5 +143,6 @@ git status --ignored --short
 ```
 
 ## References
+
 - GitHub's gitignore templates — https://github.com/github/gitignore
 - git documentation — https://git-scm.com/docs/gitignore
