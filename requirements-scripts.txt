@@ -1,0 +1,15 @@
+# SkillStack helper-script dependencies.
+#
+# These are the pinned requirements for the repo-level Python scripts that
+# lint skills, check cross-references, and generate the skills.yaml manifest
+# under scripts/. They are NOT the runtime dependencies of any individual
+# SkillStack skill — each skill declares its own runtime deps inside its
+# SKILL.md or its theme folder.
+#
+# Install with:
+#   pip install -r requirements-scripts.txt
+
+pyyaml>=6.0
+requests>=2.31
+rich>=13.7
+click>=8.1

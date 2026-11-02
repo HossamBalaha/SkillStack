@@ -1,0 +1,75 @@
+# SkillStack pre-commit hooks
+#
+# Install once:
+#   pip install pre-commit
+#   pre-commit install
+#
+# Run on all files:
+#   pre-commit run --all-files
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        name: Trim trailing whitespace
+        exclude: ^(?!\.gitkeep$).*$|^.*\.md$
+        # Allow trailing double-space markdown line breaks.
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+        name: Ensure files end with a newline
+        exclude: ^docs/assets/\.gitkeep$
+      - id: check-yaml
+        name: Validate YAML syntax
+        args: [--allow-multiple-documents]
+        files: \.(yaml|yml)$
+        exclude: ^\.github/ISSUE_TEMPLATE/.*\.yml$
+      - id: check-added-large-files
+        name: Block large binary blobs
+        args: [--maxkb=512]
+      - id: check-merge-conflict
+        name: Detect unresolved merge conflicts
+      - id: check-case-conflict
+        name: Detect case-only filename conflicts
+      - id: check-symlinks
+        name: Validate symlinks point at real targets
+      - id: debug-statements
+        name: Block stray `breakpoint()` / `pdb` calls
+        files: \.py$
+      - id: detect-private-key
+        name: Block accidental private-key commits
+      - id: mixed-line-ending
+        name: Normalize line endings to LF
+        args: [--fix=lf]
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.7.4
+    hooks:
+      - id: ruff
+        name: Ruff lint (scripts/)
+        args: [--fix, --exit-non-zero-on-fix]
+        files: ^scripts/.*\.py$
+      - id: ruff-format
+        name: Ruff format (scripts/)
+        files: ^scripts/.*\.py$
+
+  - repo: local
+    hooks:
+      - id: skillstack-lint
+        name: SkillStack skill linter (scripts/LintSkills.py)
+        entry: python scripts/LintSkills.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+      - id: skillstack-manifest-check
+        name: SkillStack manifest freshness check
+        entry: bash -c 'python scripts/GenerateManifest.py --output skills.yaml.next && git diff --no-color --exit-code skills.yaml skills.yaml.next'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+
+# Configuration for pre-commit itself
+minimum_pre_commit_version: "3.2.0"
+default_install_hook_types: [pre-commit]

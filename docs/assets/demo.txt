@@ -1,0 +1,159 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║   ███████  ██  ██████  ██      ██ ███████ ██   ██ ██████   ██████         ║
+║   ██      ██ ██    ██ ██      ██ ██       ██ ██  ██   ██ ██    ██         ║
+║   ███████ ██ ██    ██ ██      ██ █████     ███   ██   ██ ██    ██         ║
+║        ██ ██ ██    ██ ██      ██ ██       ██ ██  ██   ██ ██    ██         ║
+║   ███████ ██  ██████  ███████ ██ ███████ ██   ██ ██████   ██████          ║
+║                                                                          ║
+║   168 skills · 9 themes · MIT · by Hossam Magdy Balaha                   ║
+║                                                                          ║
+║   Maestro routing flow — three live examples.                            ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+
+──────────────────────────────────────────────────────────────────────────────
+EXAMPLE 1 — academic-research theme
+──────────────────────────────────────────────────────────────────────────────
+
+$ User: "Draft a methods section in LaTeX"
+↓
+[maestro] routing...
+    │
+    ├─ keywords matched: manuscript, latex, draft, section
+    ├─ theme candidate:   academic-research   (score 9)
+    ├─ theme candidate:   style-integrity     (score 3)  ← secondary
+    └─ theme candidate:   visualization       (score 1)
+    │
+    → THEME: academic-research
+    → SKILL: journal-manuscript-writer        (matched on: latex, manuscript, section)
+↓
+[skill loaded] academic-research/journal-manuscript-writer/SKILL.md   (~2,100 tokens)
+↓
+[agent follows workflow]
+    1. Confirm target venue and document class (e.g., IEEEtran, elsarticle).
+    2. Draft the methods section using only \section and \subsection.
+    3. Wrap every equation, table, and figure with "% ====== %" separators.
+    4. Use \cite{} (IEEE numbered style); group multi-cites sorted ascending.
+    5. Cross-check every \label{} has a matching \ref{} or \eqref{}.
+↓
+[output] LaTeX methods section saved to manuscript/methods.tex
+         (style: LaTeX, separator comments applied, IEEEtran-compliant)
+
+  ⤷ next skill chain (if requested):
+       style-integrity/latex-style-guard         → enforce typography
+       writing-citation/bibtex-citation-manager  → verify bibitems cited
+
+
+──────────────────────────────────────────────────────────────────────────────
+EXAMPLE 2 — ml-engineering theme
+──────────────────────────────────────────────────────────────────────────────
+
+$ User: "Run a Bayesian hyperparameter search with Optuna TPE on my CNN"
+↓
+[maestro] routing...
+    │
+    ├─ keywords matched: optuna, tpe, hyperparameter, bayesian, search, cnn
+    ├─ theme candidate:   ml-engineering   (score 11) ← primary
+    ├─ theme candidate:   data-engineering (score 2)
+    └─ theme candidate:   project-tooling (score 1)
+    │
+    → THEME: ml-engineering
+    → SKILL: hyperparameter-tuner             (matched on: optuna, tpe, hyperparameter, bayesian)
+↓
+[skill loaded] ml-engineering/hyperparameter-tuner/SKILL.md   (~1,950 tokens)
+↓
+[agent follows workflow]
+    1. Load Configs/Config.yaml and read the SearchSpace block.
+    2. Construct optuna.study.Study with TPESampler and a seeded RNG.
+    3. Attach MedianPruner (n_startup_trials=5, n_warmup_steps=20).
+    4. Define objective(trial): suggest params, train CNN, return val_metric.
+    5. Call study.optimize(objective, n_trials=50, timeout=3600).
+    6. Persist study.trials_dataframe() to Aggregated/OptunaTrials.csv.
+    7. Log best trial number, value, and parameter dict.
+↓
+[output] Best trial: #37 · val_f1=0.917 · lr=3.2e-4 · dropout=0.21 · bs=64
+         (Aggregated/OptunaTrials.csv written, full reproducibility metadata saved)
+
+  ⤷ next skill chain (if requested):
+       ml-engineering/statistical-validation-rigour → bootstrap CIs on the best trial
+       ml-engineering/model-checkpoint-manager       → load the best checkpoint
+       visualization/training-curve-visualizer       → plot loss-vs-trial
+
+
+──────────────────────────────────────────────────────────────────────────────
+EXAMPLE 3 — ai-output-judgement theme
+──────────────────────────────────────────────────────────────────────────────
+
+$ User: "Check if this LLM response contains hallucinated facts or fake citations"
+↓
+[maestro] routing...
+    │
+    ├─ keywords matched: hallucinated, hallucination, facts, fake, citations, llm
+    ├─ theme candidate:   ai-output-judgement   (score 12) ← primary
+    ├─ theme candidate:   style-integrity       (score 3)   ← secondary (zero-fabrication)
+    ├─ theme candidate:   writing-citation      (score 2)
+    └─ theme candidate:   ai-text               (score 1)
+    │
+    → THEME: ai-output-judgement
+    → SKILL: hallucination-detector             (matched on: hallucinated, hallucination, facts)
+↓
+[skill loaded] ai-output-judgement/hallucination-detector/SKILL.md   (~2,320 tokens)
+↓
+[agent follows workflow]
+    1. Extract candidate entities: spaCy en_core_web_sm + regex for DOIs, URLs,
+       version strings, and API-shaped tokens (package.Class.method).
+    2. Classify each entity: person, organization, paper/DOI, library, API method,
+       statistic, quote, law/regulation.
+    3. Verify per type:
+         Person/Org    → Wikidata SPARQL + Wikipedia API
+         Paper/DOI     → Crossref (https://api.crossref.org/works/{DOI}) + arXiv API
+         Library/API   → PyPI JSON + npm registry + GitHub repo existence check
+         Statistic     → route to numeric-accuracy-verifier
+         Quote         → web search for exact quoted string
+    4. Cross-corroborate: require ≥2 independent sources; one self-cited blog is not enough.
+    5. Assign severity: S1 cosmetic · S2 minor · S3 misleading · S4 fabricated.
+    6. Emit flagged spans with offsets, type, evidence, and severity.
+↓
+[output] 4 flagged spans found in the LLM response:
+           • [S4] "Smith et al., 2023, Nature 612:45-52"  — DOI does not resolve
+           • [S4] "torch.nn.attention.MultiheadFlash"     — no such API method
+           • [S3] "GPT-4 scored 92.1 on MMLU"             — uncorroborated statistic
+           • [S2] "Schmidt Foundation"                    → likely "Schmidt Futures"
+         Hallucination report written to qa/hallucination_report.json
+
+  ⤷ next skill chain (if requested):
+       ai-output-judgement/factuality-checker   → verify atomic truth claims
+       ai-output-judgement/numeric-accuracy-verifier → re-check the 92.1% stat
+       style-integrity/zero-fabrication-guard    → silent-omit or rewrite
+
+
+──────────────────────────────────────────────────────────────────────────────
+HOW ROUTING WORKS
+──────────────────────────────────────────────────────────────────────────────
+
+1. The maestro (skills/maestro/SKILL.md) reads the task description.
+2. It tokenises the text and matches each token against the 9-theme keyword
+   table (academic-research, style-integrity, ml-engineering, data-engineering,
+   visualization, writing-citation, ai-text, ai-output-judgement, project-tooling).
+3. The highest-scoring theme becomes the primary theme. The agent then picks
+   the 1–3 skills inside that theme whose name/description overlap most with
+   the task tokens.
+4. The chosen SKILL.md is loaded and its workflow is followed step-by-step.
+5. If the task naturally chains (e.g., draft manuscript → enforce LaTeX style
+   → verify citations), the maestro loads the next skill after the first one
+   produces its output. Themes are independent — drop or rename any of them
+   and the routing still works.
+
+The same flow is available programmatically via the SkillStack MCP server:
+
+    route_task("Draft a methods section in LaTeX")
+    → { top_theme: "academic-research",
+        suggestions: [{ skill: "journal-manuscript-writer", ... }] }
+
+Install:  cd skills/mcp-server && npm install
+Run:      npm start
+Register: see skills/mcp-server/README.md for Claude Desktop / Cursor configs.
+
+──────────────────────────────────────────────────────────────────────────────

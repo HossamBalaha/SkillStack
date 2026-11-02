@@ -1,0 +1,61 @@
+SkillStack — NOTICE
+====================
+
+Copyright (c) 2026 Hossam Magdy Balaha. Licensed under the MIT License
+(see `LICENSE`).
+
+Originality & Provenance
+------------------------
+
+Every `SKILL.md` in this repository (the workflows, key rules, examples,
+and any auxiliary `references/` files) was written from scratch by the
+author with the assistance of AI tools (large language models) and
+external web searches. No third-party skill content, prompt library
+text, or proprietary playbook material is reproduced verbatim.
+
+Some skills may resemble other public skill collections, style guides,
+or best-practice documents in topic, structure, or naming. This is
+expected: the underlying practices (e.g., "verify DOIs via Crossref",
+"use Optuna TPE for Bayesian optimization") are well-established and
+documented in many places. SkillStack does not claim these practices as
+its own invention. Where a skill references a real tool, paper, or
+framework, that reference is by name and URL only; the cited work
+belongs to its respective owners.
+
+Trade Names & Trademarks
+------------------------
+
+All trade names, service marks, trademarks, registered trademarks,
+product names, library names, framework names, or company names
+referenced in any skill, in the master `README.md`, in the maestro, or
+in this notice are the property of their respective owners. Such
+references are for identification and informational purposes only and
+do not imply endorsement by, affiliation with, or sponsorship from the
+trademark holders.
+
+Authorship & AI Assistance
+--------------------------
+
+This repository was authored by Hossam Magdy Balaha with the assistance
+of AI tools and external web searches. The author directed the AI,
+reviewed every generated file, and accepted the final content. Despite
+this review, AI may have hallucinated facts, URLs, paper titles, or API
+signatures in skill bodies — always verify claims against primary
+sources before relying on them.
+
+Cross-References
+----------------
+
+For the full set of protective disclaimers (use at your own risk, no
+ethical/academic/professional guarantee, no commercial warranty,
+responsible-use expectations, third-party service risks, and citation
+expectations), see the `## ⚠️ Disclaimers` section of the master
+`README.md`. For the canonical theme list and routing rules, see
+`maestro/SKILL.md`. This NOTICE intentionally does not duplicate those
+contents.
+
+Contact
+-------
+
+Author:  Hossam Magdy Balaha
+Email:   hmbala01@louisville.edu

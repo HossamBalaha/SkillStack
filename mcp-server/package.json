@@ -1,0 +1,31 @@
+{
+  "name": "skillstack-mcp",
+  "version": "1.0.0",
+  "description": "MCP server exposing the SkillStack 168-skill library: list_skills, search_skills, get_skill, route_task.",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "skillstack-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "skillstack",
+    "skill-library",
+    "claude",
+    "cursor"
+  ],
+  "author": "Hossam Magdy Balaha",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "glob": "^11.0.0",
+    "js-yaml": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

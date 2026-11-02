@@ -1,0 +1,241 @@
+#!/usr/bin/env python3
+"""
+Generate the SkillStack coverage report.
+
+Walks every skill, computes per-skill metrics (line count, has-examples,
+has-references, under-80-lines, missing-required-sections), and writes a
+Markdown report to docs/coverage.md. Skills are sorted by theme then name.
+A summary block at the top records total skills, average line count,
+percentage with examples, and percentage with references.
+
+CLI:
+  python scripts/coverage_report.py
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from dataclasses import dataclass
+from pathlib import Path
+
+from rich.console import Console
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _SkillLib import (
+  EnsureDir,
+  IterateSkills,
+  MinLineCount,
+  RequiredSections,
+  SkillDoc,
+  SkillsRoot,
+)
+
+
+@dataclass
+class SkillRow:
+  """One row of the coverage report."""
+
+  Theme: str
+  Name: str
+  LineCount: int
+  HasExamples: bool
+  HasReferences: bool
+  UnderMinLines: bool
+  MissingSections: list
+
+
+def BuildRow(doc: SkillDoc) -> SkillRow:
+  """
+  Build a coverage report row from a parsed SkillDoc.
+
+  Args:
+    doc (SkillDoc): The parsed skill document.
+
+  Returns:
+    SkillRow: The computed coverage row.
+  """
+  # Re-compute missing sections against the canonical required list.
+  missing = [s for s in RequiredSections if (s not in doc.Body)]
+  return SkillRow(
+    Theme=doc.Theme,
+    Name=doc.Name or doc.SkillPath.parent.name,
+    LineCount=doc.LineCount,
+    HasExamples=doc.HasExamples,
+    HasReferences=doc.HasReferences,
+    UnderMinLines=(doc.LineCount < MinLineCount),
+    MissingSections=missing,
+  )
+
+
+def CollectRows(rootPath: Path) -> list[SkillRow]:
+  """
+  Walk every skill and return coverage rows sorted by theme then name.
+
+  Args:
+    rootPath (Path): The skills repository root.
+
+  Returns:
+    list[SkillRow]: Coverage rows sorted by theme then name.
+  """
+  # Build a row for every parsed skill document.
+  rows = [BuildRow(doc) for doc in IterateSkills(rootPath)]
+  # Sort rows by theme then name for deterministic output.
+  rows.sort(key=lambda r: (r.Theme, r.Name))
+  return rows
+
+
+def FormatYesNo(value: bool) -> str:
+  """Return a friendly yes/no string for a boolean flag."""
+  return "yes" if (value) else "no"
+
+
+def RenderSummary(rows: list[SkillRow]) -> str:
+  """
+  Render the Markdown summary block at the top of the coverage report.
+
+  Args:
+    rows (list[SkillRow]): Coverage rows for every skill.
+
+  Returns:
+    str: Markdown text for the summary block.
+  """
+  # Compute the total skill count from the row list.
+  total = len(rows)
+  # Avoid division by zero when there are no skills at all.
+  if (total == 0):
+    return (
+      "## Summary\n\n"
+      "- Total skills: 0\n"
+      "- Average lines: 0\n"
+      "- % with examples: 0%\n"
+      "- % with references: 0%\n"
+    )
+  # Compute average line count across all skills.
+  avgLines = sum(r.LineCount for r in rows) / total
+  # Compute the fraction of skills that include worked examples.
+  withExamples = sum(1 for r in rows if (r.HasExamples))
+  pctExamples = (withExamples / total) * 100.0
+  # Compute the fraction of skills that include references.
+  withReferences = sum(1 for r in rows if (r.HasReferences))
+  pctReferences = (withReferences / total) * 100.0
+  return (
+    "## Summary\n\n"
+    f"- Total skills: {total}\n"
+    f"- Average lines: {avgLines:.1f}\n"
+    f"- % with examples: {pctExamples:.1f}% ({withExamples}/{total})\n"
+    f"- % with references: {pctReferences:.1f}% ({withReferences}/{total})\n"
+  )
+
+
+def RenderTable(rows: list[SkillRow]) -> str:
+  """
+  Render the per-skill coverage table as Markdown.
+
+  Args:
+    rows (list[SkillRow]): Coverage rows for every skill.
+
+  Returns:
+    str: Markdown table text.
+  """
+  # Header row defining each column.
+  header = (
+    "| Theme | Skill | Lines | Examples | References | Under-80 | Missing sections |\n"
+    "|---|---|---:|:---:|:---:|:---:|---|\n"
+  )
+  lines = [header]
+  # Emit one table row per skill.
+  for r in rows:
+    # Render the missing sections as a comma-separated list or em-dash.
+    missing = ", ".join(r.MissingSections) if (r.MissingSections) else "---"
+    # Escape pipe characters in the missing-sections cell to avoid breaking the table.
+    missing = missing.replace("|", "\\|")
+    lines.append(
+      f"| {r.Theme} | {r.Name} | {r.LineCount} | "
+      f"{FormatYesNo(r.HasExamples)} | "
+      f"{FormatYesNo(r.HasReferences)} | "
+      f"{FormatYesNo(r.UnderMinLines)} | "
+      f"{missing} |\n"
+    )
+  return "".join(lines)
+
+
+def RenderMarkdown(rows: list[SkillRow]) -> str:
+  """
+  Render the complete coverage report Markdown document.
+
+  Args:
+    rows (list[SkillRow]): Coverage rows for every skill.
+
+  Returns:
+    str: Markdown document text.
+  """
+  # Assemble the document from header, summary, and per-skill table.
+  parts = [
+    "# SkillStack Coverage Report\n",
+    "\nAuto-generated by `scripts/coverage_report.py`.\n\n",
+    RenderSummary(rows),
+    "\n## Per-Skill Coverage\n\n",
+    RenderTable(rows),
+  ]
+  return "".join(parts)
+
+
+def WriteReport(reportPath: Path, rows: list[SkillRow]) -> None:
+  """
+  Write the coverage report Markdown document to disk.
+
+  Args:
+    reportPath (Path): Destination file path.
+    rows (list[SkillRow]): Coverage rows for every skill.
+  """
+  # Ensure the parent directory exists before opening the file.
+  EnsureDir(reportPath.parent)
+  # Render the Markdown and write it atomically.
+  text = RenderMarkdown(rows)
+  reportPath.write_text(text, encoding="utf-8")
+
+
+def ParseArgs(argv: list[str] | None = None) -> argparse.Namespace:
+  """Parse command-line arguments."""
+  parser = argparse.ArgumentParser(
+    description="Generate docs/coverage.md with per-skill coverage metrics.",
+  )
+  parser.add_argument(
+    "--root",
+    default=str(SkillsRoot()),
+    help="Path to the skills repository root (default: auto-detected).",
+  )
+  parser.add_argument(
+    "--output",
+    default=str(SkillsRoot() / "docs" / "coverage.md"),
+    help="Destination report path (default: <root>/docs/coverage.md).",
+  )
+  return parser.parse_args(argv)
+
+
+def Main(argv: list[str] | None = None) -> int:
+  """
+  Entry point for the coverage report generator.
+
+  Args:
+    argv (list[str] | None): Optional argv override for tests.
+
+  Returns:
+    int: Process exit code; always zero on success.
+  """
+  args = ParseArgs(argv)
+  rootPath = Path(args.root).resolve()
+  reportPath = Path(args.output).resolve()
+  console = Console()
+  # Collect and sort coverage rows from every skill.
+  rows = CollectRows(rootPath)
+  # Write the rendered report to disk.
+  WriteReport(reportPath, rows)
+  # Print a one-line summary so the user knows the report was written.
+  console.print(f"[green]wrote[/green] {reportPath} ({len(rows)} skills)")
+  return 0
+
+
+if (__name__ == "__main__"):
+  sys.exit(Main())

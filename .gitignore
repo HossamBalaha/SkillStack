@@ -1,0 +1,155 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# SkillStack .gitignore
+# Python + Data + IDE + OS + Node patterns
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.egg-link
+.Python
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Testing / Coverage ───────────────────────────────────────────────────────
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ── Virtual Environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# ── Build / Distribution ─────────────────────────────────────────────────────
+dist/
+build/
+*.manifest
+*.spec
+pip-wheel-metadata/
+
+# ── Data & Artifacts (large / generated / per-run) ──────────────────────────
+# Keep these out of git; they are produced by skills at run time.
+Datasets/
+Results/
+results/
+Outputs/
+outputs/
+Experiments/
+experiments/
+Checkpoints/
+checkpoints/
+*.zip
+*.tar.gz
+*.tgz
+*.parquet
+*.feather
+*.h5
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.csv
+*.tsv
+*.arrow
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# ── Jupyter ─────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+# ── Notebooks outputs (uncomment if you want to strip cell outputs) ─────────
+# *.ipynb
+# but keep notebooks themselves tracked by default
+
+# ── IDEs ─────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-workspace
+*.sublime-project
+.atom/
+.project
+.pydevproject
+.settings/
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+Logs/
+
+# ── Secrets / Env ───────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# ── Node (for skills that ship JS tooling) ──────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# ── Misc / Tooling caches ────────────────────────────────────────────────────
+.dvc/
+.dvc/cache/
+.mlruns/
+mlartifacts/
+wandb/
+.torch/
+wandb-debug-*
