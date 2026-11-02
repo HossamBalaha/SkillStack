@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use SkillStack in your research, please cite it as below."
 title: "SkillStack"
 abstract: >-
-  SkillStack is a composable library of 168 skills, organized into 9
+  SkillStack is a composable library of 237 skills, organized into 14
   independent theme folders, that an LLM agent loads on demand to execute
   research, ML, data, writing, and AI-safety tasks. A maestro orchestrator at
   the root classifies any incoming task and routes it to the correct theme and
@@ -26,17 +26,22 @@ keywords:
   - ai-output-judgement
   - project-tooling
   - style-integrity
+  - prompt-engineering
+  - ethics-compliance
+  - devops
+  - teaching-pedagogy
+  - data-storytelling
 type: software
 version: "1.0.0"
 date-released: "2026-11-02"
 license: MIT
-license-url: "https://opensource.org/license/mit"
+license-url: "https://opensource.org/licenses/MIT"
 repository-code: "https://github.com/HossamBalaha/skillstack"
 repository-artifact: "https://github.com/HossamBalaha/skillstack/releases/tag/v1.0.0"
 url: "https://github.com/HossamBalaha/skillstack"
 preferred-citation:
   type: software
-  title: "SkillStack: A composable 168-skill library with a maestro orchestrator"
+  title: "SkillStack: A composable 237-skill library with a maestro orchestrator"
   authors:
     - given-names: "Hossam Magdy"
       family-names: "Balaha"

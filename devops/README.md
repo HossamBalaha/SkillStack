@@ -1,8 +1,10 @@
 # 🛠️ DevOps — Infrastructure, Delivery & Reliability
 
 > Build Kubernetes manifests, Helm charts, and Terraform modules; wire CI/CD pipelines and GitOps; ship hardened
-> container images; configure service meshes and secrets; stand up observability stacks; and author SRE runbooks, incident
-> response plans, and disaster recovery playbooks. Skills span the full cloud-native delivery and reliability lifecycle —
+> container images; configure service meshes and secrets; stand up observability stacks; and author SRE runbooks,
+> incident
+> response plans, and disaster recovery playbooks. Skills span the full cloud-native delivery and reliability
+> lifecycle —
 > from `kubectl apply` to a blameless postmortem. Use this theme whenever the deliverable is platform infrastructure, a
 > deploy pipeline, or an operational runbook.
 

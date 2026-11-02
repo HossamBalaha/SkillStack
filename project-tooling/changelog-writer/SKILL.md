@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
-tags: [changelog, semver, releases, keep-a-changelog]
-related: [project-tooling/release-notes-generator, project-tooling/contribution-guide-builder]
-prerequisites: []
-outputs: [markdown]
+tags: [ changelog, semver, releases, keep-a-changelog ]
+related: [ project-tooling/release-notes-generator, project-tooling/contribution-guide-builder ]
+prerequisites: [ ]
+outputs: [ markdown ]
 difficulty: beginner
 estimated_tokens: 1900
 permissions:
@@ -18,7 +18,7 @@ permissions:
   execute_code: false
 language: en
 last_reviewed: 2026-11-02
-verified_against: []
+verified_against: [ ]
 ---
 
 # Changelog Writer
@@ -78,26 +78,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - Support for Pixi lock files in the environment builder.
 
 ### Fixed
+
 - Off-by-one in the stratified splitter when a class has a single sample.
 
 ## [0.2.0] - 2026-01-15
 
 ### Added
+
 - `environment-yaml-builder` skill for conda envs.
 - `--cov-fail-under=80` gate in the pytest suite.
 
 ### Changed
+
 - Switched the CI matrix to Python 3.10 / 3.11 / 3.12.
 
 ### Fixed
+
 - Zip packager no longer recurses into its own output.
 
 ## [0.1.0] - 2025-11-02
 
 ### Added
+
 - Initial public release with 20 project-tooling skills.
 ```
 

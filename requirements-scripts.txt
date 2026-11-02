@@ -13,3 +13,9 @@ pyyaml>=6.0
 requests>=2.31
 rich>=13.7
 click>=8.1
+
+# Optional dependencies for richer rendering (graceful fallback if absent).
+# SkillBrowser.py uses streamlit; GraphvizChains.py uses graphviz; SkillHealth.py uses jinja2.
+streamlit>=1.30
+graphviz>=0.20
+jinja2>=3.1

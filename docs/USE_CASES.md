@@ -219,8 +219,8 @@ paper's results from a clean checkout.
 5. `project-tooling/project-zip-packager` — bundle the repo into a zip
    excluding `results/`, `.git/`, and `__pycache__/`.
 
-**Outcome.** A `Dockerfile`, `Makefile`, `.github/workflows/ci.yml`, and
-a reproducible zip artifact.
+**Outcome.** A `Dockerfile`, `Makefile`, `justfile`, and a CI workflow of your choice, producing a reproducible zip
+artifact.
 
 ---
 
