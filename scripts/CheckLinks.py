@@ -8,8 +8,8 @@ with retries and a per-request timeout. Prints a summary of total/OK/broken
 URLs and a list of broken URLs. Exits non-zero when any URL is broken.
 
 CLI:
-  python scripts/check_links.py
-  python scripts/check_links.py --timeout 5
+  python scripts/CheckLinks.py
+  python scripts/CheckLinks.py --timeout 5
 """
 
 from __future__ import annotations

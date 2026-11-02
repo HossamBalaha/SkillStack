@@ -13,7 +13,7 @@ Failures (non-200 status codes or transport errors) are reported. The script
 exits non-zero when any citation fails verification.
 
 CLI:
-  python scripts/verify_citations.py
+  python scripts/VerifyCitations.py
 """
 
 from __future__ import annotations
@@ -35,7 +35,6 @@ from _SkillLib import (
   RelativeToSkills,
   SkillsRoot,
 )
-
 
 # Per-request timeout in seconds for both verifiers.
 RequestTimeout = 10

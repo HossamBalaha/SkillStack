@@ -14,8 +14,8 @@ Anthropic's format:
 The body is the original SKILL.md body verbatim.
 
 CLI:
-  python scripts/export_anthropic.py
-  python scripts/export_anthropic.py --out export/anthropic
+  python scripts/ExportAnthropic.py
+  python scripts/ExportAnthropic.py --out export/anthropic
 """
 
 from __future__ import annotations

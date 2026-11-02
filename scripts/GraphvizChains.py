@@ -9,7 +9,7 @@ package when available; otherwise falls back to a manual SVG writer with
 a simple column layout (one column per theme).
 
 CLI:
-  python scripts/graphviz_chains.py
+  python scripts/GraphvizChains.py
 """
 
 from __future__ import annotations

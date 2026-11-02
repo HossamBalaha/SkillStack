@@ -15,7 +15,7 @@ Subcommands:
 Uses ``rich`` for colored output and ``click`` for subcommand dispatch.
 
 CLI:
-  python scripts/skill.py <command> [args]
+  python scripts/Skill.py <command> [args]
 """
 
 from __future__ import annotations
@@ -170,8 +170,8 @@ def ValidateCommand(skillname: str) -> None:
     # Surface a clear error when the skill name is unknown.
     console.print(f"[red]error:[/red] no skill named '{skillname}'")
     sys.exit(2)
-  # Delegate to lint_skills.py via subprocess to reuse its full logic.
-  scriptPath = Path(__file__).resolve().parent / "lint_skills.py"
+  # Delegate to LintSkills.py via subprocess to reuse its full logic.
+  scriptPath = Path(__file__).resolve().parent / "LintSkills.py"
   command = [sys.executable, str(scriptPath), str(doc.SkillPath)]
   # Run the linter and propagate its exit code.
   completed = subprocess.run(command)
@@ -229,8 +229,8 @@ def TagsCommand() -> None:
 @Cli.command("health", help="Run the coverage report and print a summary.")
 def HealthCommand() -> None:
   """Run the coverage report and print the headline summary."""
-  # Delegate to coverage_report.py via subprocess to reuse its full logic.
-  scriptPath = Path(__file__).resolve().parent / "coverage_report.py"
+  # Delegate to CoverageReport.py via subprocess to reuse its full logic.
+  scriptPath = Path(__file__).resolve().parent / "CoverageReport.py"
   command = [sys.executable, str(scriptPath)]
   # Run the coverage report and capture its exit code.
   completed = subprocess.run(command)
@@ -239,7 +239,7 @@ def HealthCommand() -> None:
     console.print(f"[red]coverage report exited with code {completed.returncode}[/red]")
     sys.exit(completed.returncode)
   # Read the generated coverage Markdown and print its summary block.
-  coveragePath = SkillsRoot() / "docs" / "coverage.md"
+  coveragePath = SkillsRoot() / "docs" / "Coverage.md"
   if (not coveragePath.is_file()):
     console.print(f"[red]error:[/red] coverage report not found at {coveragePath}")
     sys.exit(2)

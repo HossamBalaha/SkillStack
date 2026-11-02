@@ -127,7 +127,7 @@ Before opening a pull request, confirm every item:
 - [ ] No fabricated citations. Every cited paper or tool has been verified to exist.
 - [ ] Body is 80–180 lines long.
 - [ ] Python code blocks follow the repo's strict style (camelCase/CamelCase, parenthesized `if`, period-ended comments, double quotes, 2-space indent).
-- [ ] The linter passes: `python skills/skill-creator/scripts/quick_validate.py <theme>/<skill-name>/SKILL.md`.
+- [ ] The linter passes: `python scripts/LintSkills.py <theme>/<skill-name>/SKILL.md`.
 - [ ] You have updated the theme's skill count in `maestro/SKILL.md` and `README.md` if you added a new skill.
 - [ ] No files outside `docs/`, `maestro/`, or the skill's own folder were modified.
 

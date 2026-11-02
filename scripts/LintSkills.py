@@ -18,8 +18,8 @@ Output is colored via ``rich``. The script exits non-zero when any
 violation is reported.
 
 CLI:
-  python scripts/lint_skills.py             # lint all skills
-  python scripts/lint_skills.py <path>     # lint one skill (dir or file)
+  python scripts/LintSkills.py             # lint all skills
+  python scripts/LintSkills.py <path>     # lint one skill (dir or file)
 """
 
 from __future__ import annotations

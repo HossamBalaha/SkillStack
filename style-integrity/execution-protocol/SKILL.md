@@ -65,14 +65,14 @@ language: en
 
 Input task:
 ```
-Add a CLI option `--output-format` to scripts/run.py that accepts
+Add a CLI option `--output-format` to scripts/Run.py that accepts
 "json" or "csv".
 ```
 
 Delivery block:
 ```
 Files changed:
-- /home/z/my-project/scripts/run.py  (added --output-format argument)
+- /home/z/my-project/scripts/Run.py  (added --output-format argument)
 
 Residual risk: existing callers that do not pass --output-format
 default to "csv", matching prior behavior. No breaking change.
@@ -84,7 +84,7 @@ Planning Note:
 
 Anti-example (forbidden output):
 ```
-Updated scripts/run.py. The changes look good! Let me know if you need
+Updated scripts/Run.py. The changes look good! Let me know if you need
 anything else. [TODO: implement the JSON path].
 ```
 This output violates stages 6 (placeholder) and 10 (preamble, no residual-risk line).

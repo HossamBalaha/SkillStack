@@ -502,27 +502,255 @@ All scripts follow the repo's strict coding conventions. Install deps: `pip inst
 | `GraphvizChains.py`   | Generate `docs/skill-graph.svg` dependency graph             | `python scripts/GraphvizChains.py`                             |
 | `ExportAnthropic.py`  | Export to Anthropic Agent Skills format                      | `python scripts/ExportAnthropic.py [--out export/anthropic]`   |
 
-### Skill CLI Quick Examples
+### Skill CLI — Many Examples
+
+The `scripts/Skill.py` CLI is the primary interface for terminal-based skill discovery, validation, and inspection. Below are concrete examples covering every subcommand.
+
+#### `list` — enumerate skills
 
 ```bash
-python scripts/Skill.py list                    # list all skills grouped by theme
-python scripts/Skill.py search "latex"          # full-text search across name/description/tags
-python scripts/Skill.py show hyperparameter-tuner # print a skill's full SKILL.md
-python scripts/Skill.py validate latex-style-guard  # lint one skill
-python scripts/Skill.py graph                   # print skill dependency graph
-python scripts/Skill.py tags                    # print tag cloud
-python scripts/Skill.py health                  # print coverage summary
+# List every skill across every theme (defaults to all 9 SkillStack themes).
+python scripts/Skill.py list
+
+# List is theme-aware: skills are grouped under their theme header.
+# Sample output (truncated):
+#   academic-research (20 skills)
+#     research-ideation-planner
+#     research-repo-builder
+#     journal-manuscript-writer
+#     ...
+#   style-integrity (18 skills)
+#     coding-conventions-enforcer
+#     latex-style-guard
+#     ...
+```
+
+#### `search <query>` — full-text search
+
+```bash
+# Search by keyword (matches name, description, and tags).
+python scripts/Skill.py search "latex"
+
+# Search for a tool name.
+python scripts/Skill.py search "optuna"
+
+# Search for a domain.
+python scripts/Skill.py search "hallucination"
+
+# Search for a tag.
+python scripts/Skill.py search "citations"
+
+# Multi-word query.
+python scripts/Skill.py search "bootstrap confidence interval"
+```
+
+#### `show <skill-name>` — print a skill's full SKILL.md
+
+```bash
+# Print the full skill body to stdout.
+python scripts/Skill.py show hyperparameter-tuner
+
+# Print the maestro itself.
+python scripts/Skill.py show maestro
+
+# Pipe into a pager.
+python scripts/Skill.py show coding-conventions-enforcer | less
+
+# Save to a file for offline reference.
+python scripts/Skill.py show factuality-checker > /tmp/factuality-checker.md
+```
+
+#### `validate <skill-name>` — lint one skill
+
+```bash
+# Validate a single skill's frontmatter + sections + line count.
+python scripts/Skill.py validate latex-style-guard
+
+# Validate a skill you are about to commit.
+python scripts/Skill.py validate ai-output-judgement/prompt-injection-detector
+
+# Exit code is non-zero on violations — useful in pre-commit hooks.
+python scripts/Skill.py validate my-new-skill || echo "VALIDATION FAILED"
+```
+
+#### `graph` — print the skill dependency graph
+
+```bash
+# Print a Markdown table of every skill's related + prerequisites.
+python scripts/Skill.py graph
+
+# Save the graph for review.
+python scripts/Skill.py graph > /tmp/skill-graph.md
+
+# Filter to one theme.
+python scripts/Skill.py graph | grep "ml-engineering"
+```
+
+#### `tags` — print the tag cloud
+
+```bash
+# Print every tag with the number of skills carrying it.
+python scripts/Skill.py tags
+
+# Sort by frequency (default).
+python scripts/Skill.py tags
+
+# Find the most-tagged skills.
+python scripts/Skill.py tags | head -10
+```
+
+#### `health` — coverage summary
+
+```bash
+# Print the high-level coverage summary (total skills, % with examples, % with references).
+python scripts/Skill.py health
+
+# Sample output:
+#   Total skills: 168
+#   Average lines: 109.5
+#   % with examples: 99.4% (167/168)
+#   % with references: 99.4% (167/168)
+```
+
+### Other Scripts — Many Examples
+
+#### `GenerateManifest.py` — produce `skills.yaml`
+
+```bash
+# Generate (or refresh) the manifest at skills.yaml.
+python scripts/GenerateManifest.py
+
+# Check freshness: exit non-zero if skills.yaml is stale (used in pre-commit).
+python scripts/GenerateManifest.py --check
+
+# Sample output:
+#   wrote /home/z/my-project/skills/skills.yaml (167 skills, 9 themes)
+```
+
+#### `LintSkills.py` — validate every SKILL.md
+
+```bash
+# Lint every skill across every theme.
+python scripts/LintSkills.py
+
+# Lint one skill.
+python scripts/LintSkills.py academic-research/journal-manuscript-writer/SKILL.md
+
+# Lint one theme.
+python scripts/LintSkills.py style-integrity/
+
+# Exit code is non-zero on any violation.
+python scripts/LintSkills.py && echo "ALL SKILLS PASS"
+```
+
+#### `CheckLinks.py` — verify every URL resolves
+
+```bash
+# HEAD-request every URL in every skill's References section.
+python scripts/CheckLinks.py
+
+# Use a longer timeout for slow networks.
+python scripts/CheckLinks.py --timeout 10
+
+# Sample output:
+#   Total URLs: 412
+#   OK: 405
+#   Broken: 7
+#   Broken URLs:
+#     https://example.com/dead-link  (404)
+#     ...
+```
+
+#### `VerifyCitations.py` — verify arXiv IDs and DOIs
+
+```bash
+# Verify every arXiv ID and DOI cited in any skill.
+python scripts/VerifyCitations.py
+
+# Sample output:
+#   arXiv IDs checked: 23
+#   DOIs checked: 14
+#   Failures: 0
+```
+
+#### `CoverageReport.py` — generate `docs/coverage.md`
+
+```bash
+# Generate the per-skill coverage report.
+python scripts/CoverageReport.py
+
+# Output: docs/coverage.md (Markdown table with line count, has-examples, has-references per skill).
+```
+
+#### `SkillHealth.py` — generate `docs/health.html` dashboard
+
+```bash
+# Generate the visual HTML dashboard.
+python scripts/SkillHealth.py
+
+# Open in a browser.
+python scripts/SkillHealth.py && open docs/health.html
+```
+
+#### `GraphvizChains.py` — generate `docs/skill-graph.svg`
+
+```bash
+# Generate the skill dependency graph as SVG.
+python scripts/GraphvizChains.py
+
+# Output: docs/skill-graph.svg (nodes = skills, edges = related/prerequisites).
+```
+
+#### `ExportAnthropic.py` — export to Anthropic Agent Skills format
+
+```bash
+# Export every skill to export/anthropic/<theme>/<skill-name>.md.
+python scripts/ExportAnthropic.py
+
+# Use a custom output directory.
+python scripts/ExportAnthropic.py --out /tmp/anthropic-export
+
+# Verify the export.
+ls export/anthropic/academic-research/
+#   academic-book-author.md
+#   citation-network-mapper.md
+#   ...
+```
+
+#### `Audit.py` — log skill invocations
+
+```bash
+# Log that you ran a skill (with input/output files).
+python scripts/Audit.py log hyperparameter-tuner --input configs/Config.yaml --output Results/
+
+# Show the last 50 audit entries.
+python scripts/Audit.py show
+
+# Print top-10 most-used skills.
+python scripts/Audit.py stats
+```
+
+#### `CacheSkill.py` — pre-concatenate a skill + its references
+
+```bash
+# Concatenate one skill's SKILL.md + references/*.md into a single context blob.
+python scripts/CacheSkill.py hyperparameter-tuner
+
+# Output: .cache/hyperparameter-tuner.md (single file ready to load).
+
+# Cache every skill at once.
+python scripts/CacheSkill.py --all
 ```
 
 ### Generated Artifacts (auto-regenerated by CI)
 
-| Path                   | Source                                                                    |
-|------------------------|---------------------------------------------------------------------------|
-| `skills.yaml`          | `generate_manifest.py` — machine-readable manifest of all 168+ skills     |
-| `docs/coverage.md`     | `coverage_report.py` — per-skill line count, has-examples, has-references |
-| `docs/health.html`     | `skill_health.py` — visual dashboard                                      |
-| `docs/skill-graph.svg` | `graphviz_chains.py` — skill dependency graph                             |
-| `export/anthropic/`    | `export_anthropic.py` — Anthropic-format export                           |
+| Path                   | Source                                                                   |
+|------------------------|--------------------------------------------------------------------------|
+| `skills.yaml`          | `GenerateManifest.py` — machine-readable manifest of all 168+ skills     |
+| `docs/coverage.md`     | `CoverageReport.py` — per-skill line count, has-examples, has-references |
+| `docs/health.html`     | `SkillHealth.py` — visual dashboard                                      |
+| `docs/skill-graph.svg` | `GraphvizChains.py` — skill dependency graph                             |
+| `export/anthropic/`    | `ExportAnthropic.py` — Anthropic-format export                           |
 
 ## 📚 Documentation (`docs/`)
 

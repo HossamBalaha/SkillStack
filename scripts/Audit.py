@@ -18,9 +18,9 @@ Subcommands:
       Print the top-10 most-used skills.
 
 CLI:
-  python scripts/audit.py log <skill> [--input f] [--output f]
-  python scripts/audit.py show
-  python scripts/audit.py stats
+  python scripts/Audit.py log <skill> [--input f] [--output f]
+  python scripts/Audit.py show
+  python scripts/Audit.py stats
 """
 
 from __future__ import annotations

@@ -14,7 +14,7 @@ Styling is provided by embedded CSS; no external dependencies are required.
 Uses ``jinja2`` when available, otherwise falls back to string formatting.
 
 CLI:
-  python scripts/skill_health.py
+  python scripts/SkillHealth.py
 """
 
 from __future__ import annotations

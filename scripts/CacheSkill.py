@@ -7,8 +7,8 @@ Produces a single Markdown blob suitable for context caching, written to
 repository.
 
 CLI:
-  python scripts/cache_skill.py <skill-name>
-  python scripts/cache_skill.py <skill-name> --all
+  python scripts/CacheSkill.py <skill-name>
+  python scripts/CacheSkill.py <skill-name> --all
 """
 
 from __future__ import annotations
