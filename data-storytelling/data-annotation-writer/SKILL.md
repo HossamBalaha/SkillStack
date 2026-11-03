@@ -78,7 +78,7 @@ def AnnotateSpike(ax, xSpike, ySpike, targetY, label):
   ax.annotate(
     label,
     xy=(xSpike, ySpike),
-    xytext=(xSpike + 6, ySpike + 0.08 * ySpike),
+    xytext=(xSpike + 1, ySpike + 20),
     fontsize=11, fontweight="bold",
     arrowprops=dict(arrowstyle="->", color="#cf222e", lw=1.5),
   )
@@ -86,7 +86,7 @@ def AnnotateSpike(ax, xSpike, ySpike, targetY, label):
 
 fig, ax = plt.subplots(figsize=(8, 4.5))
 # (plot calls elided)
-AnnotateSpike(ax, xSpike="2024-Q2", ySpike=232, targetY=120,
+AnnotateSpike(ax, xSpike=2, ySpike=232, targetY=120,
               label="Q2 spike: 2x target, post-protocol gap")
 fig.savefig("annotated_chart.svg", bbox_inches="tight")
 ```

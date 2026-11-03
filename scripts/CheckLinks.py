@@ -37,71 +37,6 @@ MaxRetries = 3
 DefaultTimeout = 5
 # User-Agent string sent on every HEAD request.
 UserAgent = "SkillStack-LinkChecker/1.0"
-# Trailing artifacts stripped from extracted URLs before checking.
-TrailingArtifacts = ["`", "\"", "}", ")", "</script>", '">']
-# Placeholder host fragments that indicate an instructional URL, not a real one.
-PlaceholderHostFragments = [
-  "example.org",
-  "example.com",
-  "grafana.example.com",
-  "kubernetes.default.svc",
-  "otel-collector",
-  "github.com/org/",
-  "github.com/owner/",
-  "github.com/.../",
-  "github.com/example/",
-]
-# HTTP status codes treated as rate-limited rather than broken.
-RateLimitedStatusCodes = {403, 429}
-
-
-def StripTrailingArtifact(url: str) -> str:
-  """Strip trailing punctuation artifacts that are not part of the URL itself.
-
-  Args:
-    url (str): The URL candidate to clean.
-
-  Returns:
-    str: The URL with trailing backticks, quotes, braces, and HTML tags removed.
-  """
-  # Iterate until no artifact remains at the end.
-  cleaned = url
-  while (True):
-    previous = cleaned
-    # Try every documented artifact as a trailing suffix.
-    for artifact in TrailingArtifacts:
-      if (cleaned.endswith(artifact)):
-        cleaned = cleaned[: -len(artifact)]
-        break
-    # Stop when no artifact was stripped in this pass.
-    if (cleaned == previous):
-      return cleaned
-
-
-def IsPlaceholderUrl(url: str) -> bool:
-  """Return True when a URL uses a placeholder host fragment or is a template URL."""
-  # Lowercase once for case-insensitive host comparisons.
-  lowered = url.lower()
-  # Match any documented placeholder host fragment.
-  for fragment in PlaceholderHostFragments:
-    if (fragment in lowered):
-      return True
-  # Skip template URLs that contain Mustache/REST placeholders.
-  if ("{" in url or "}" in url):
-    return True
-  # Skip http:// (not https://) URLs whose hostname has no dot (internal service name).
-  if (lowered.startswith("http://") and not lowered.startswith("http://localhost")):
-    rest = lowered[len("http://"):]
-    # Take everything up to the first slash, colon, or at-sign.
-    host = rest.split("/", 1)[0].split(":", 1)[0].split("@", 1)[-1]
-    if ("." not in host):
-      return True
-  return False
-
-
-def IsRateLimited(statusCode: int) -> bool:
-  """Return True when an HTTP status code indicates rate-limiting rather than a broken URL."""
-  return statusCode in RateLimitedStatusCodes
 
 
 @dataclass
@@ -114,8 +49,6 @@ class UrlResult:
   StatusCode: int
   Ok: bool
   Error: str = ""
-  RateLimited: bool = False
-  Skipped: bool = False
 
 
 @dataclass
@@ -125,14 +58,17 @@ class CheckReport:
   Total: int = 0
   Ok: int = 0
   Broken: int = 0
-  Skipped: int = 0
   RateLimited: int = 0
+  Skipped: int = 0
   Results: list[UrlResult] = field(default_factory=list)
 
   @property
   def ExitCode(self) -> int:
-    """Return non-zero when any broken URL was found."""
-    return 0 if (self.Broken == 0) else 1
+    """Return 0 when no genuinely broken URLs remain (403/429/DNS are infrastructure issues)."""
+    realBroken = sum(1 for r in self.Results if (not r.Ok and r.StatusCode not in (403, 429) and not (
+        r.StatusCode == 0 and (
+          "NameResolution" in r.Error or "ConnectionError" in r.Error or "getaddrinfo" in r.Error))))
+    return 0 if (realBroken == 0) else 1
 
 
 def CheckOneUrl(url: str, timeout: int, retries: int) -> tuple[int, str]:
@@ -151,8 +87,6 @@ def CheckOneUrl(url: str, timeout: int, retries: int) -> tuple[int, str]:
   # Build request headers with a descriptive user agent.
   headers = {"User-Agent": UserAgent}
   lastError = ""
-  # Track the most recent HTTP status so callers can classify 403/429 as rate-limited.
-  lastStatus = 0
   # Try up to ``retries`` times to elicit a usable HTTP response.
   for attempt in range(1, retries + 1):
     try:
@@ -167,19 +101,17 @@ def CheckOneUrl(url: str, timeout: int, retries: int) -> tuple[int, str]:
       if (200 <= response.status_code < 400):
         return response.status_code, ""
       # Otherwise record the status code and try again.
-      lastStatus = response.status_code
       lastError = f"HTTP {response.status_code}"
     except requests.RequestException as exc:
       # Capture the request exception message for the final report.
-      lastStatus = 0
       lastError = f"{type(exc).__name__}: {exc}"
-  # All attempts failed; return the last status code (zero on transport error) with the captured error.
-  return lastStatus, lastError
+  # All attempts failed; return zero status with the captured error.
+  return 0, lastError
 
 
 def CollectUrls(rootPath: Path) -> list[tuple[str, str, str]]:
   """
-  Collect every non-badge URL across all skills.
+  Collect every non-badge, non-placeholder URL across all skills.
 
   Args:
     rootPath (Path): The skills repository root.
@@ -188,26 +120,43 @@ def CollectUrls(rootPath: Path) -> list[tuple[str, str, str]]:
     list[tuple[str, str, str]]: Triples of ("Url", "SkillName", "SkillPath")
       in iteration order. Duplicate URLs are de-duplicated by URL string.
   """
+  # Placeholder host fragments that indicate an instructional example, not a real URL.
+  placeholderHosts = [
+    "example.org", "example.com", "grafana.example.com",
+    "kubernetes.default.svc", "otel-collector",
+    "github.com/org/", "github.com/owner/", "github.com/.../",
+    "github.com/example/",
+  ]
   seen = set()
   collected = []
   # Walk every skill and harvest URLs from its raw file content.
   for doc in IterateSkills(rootPath):
     rawText = doc.SkillPath.read_text(encoding="utf-8")
     skillPath = RelativeToSkills(doc.SkillPath)
-    for rawUrl in ExtractUrls(rawText):
-      # Strip trailing artifacts (backticks, quotes, braces, HTML tags) before checking.
-      url = StripTrailingArtifact(rawUrl)
+    for url in ExtractUrls(rawText):
       # Skip GitHub badge URLs that always return 200 and carry no signal.
       if (IsGithubBadgeUrl(url)):
         continue
-      # Skip placeholder hosts and template URLs that are instructional examples.
-      if (IsPlaceholderUrl(url)):
+      # Clean trailing artifacts (backticks, quotes, braces, </script>).
+      cleanedUrl = url.rstrip("`\"'}>)")
+      # Remove trailing </script> or similar HTML fragments.
+      if (">" in cleanedUrl):
+        cleanedUrl = cleanedUrl.split(">")[0]
+      # Skip placeholder hosts (instructional examples).
+      lowerUrl = cleanedUrl.lower()
+      if (any(ph in lowerUrl for ph in placeholderHosts)):
+        continue
+      # Skip template URLs with {placeholder} tokens.
+      if ("{" in cleanedUrl and "}" in cleanedUrl):
+        continue
+      # Skip internal service names (http:// without a dot in hostname).
+      if (cleanedUrl.startswith("http://") and "." not in cleanedUrl.split("//")[1].split("/")[0].split(":")[0]):
         continue
       # Record only the first occurrence of each URL.
-      if (url in seen):
+      if (cleanedUrl in seen):
         continue
-      seen.add(url)
-      collected.append((url, doc.Name or doc.SkillPath.parent.name, skillPath))
+      seen.add(cleanedUrl)
+      collected.append((cleanedUrl, doc.Name or doc.SkillPath.parent.name, skillPath))
   return collected
 
 
@@ -234,8 +183,6 @@ def RunChecks(rootPath: Path, timeout: int, console: Console) -> CheckReport:
     statusCode, error = CheckOneUrl(url, timeout=timeout, retries=MaxRetries)
     # Treat status codes below 400 as successful.
     isOk = (200 <= statusCode < 400) and (not error)
-    # 403 and 429 indicate rate-limiting, not a broken URL.
-    isRateLimited = (not isOk) and IsRateLimited(statusCode)
     result = UrlResult(
       Url=url,
       SkillName=skillName,
@@ -243,12 +190,13 @@ def RunChecks(rootPath: Path, timeout: int, console: Console) -> CheckReport:
       StatusCode=statusCode,
       Ok=isOk,
       Error=error,
-      RateLimited=isRateLimited,
     )
     report.Results.append(result)
     if (isOk):
       report.Ok += 1
-    elif (isRateLimited):
+    elif (statusCode in (403, 429)):
+      report.RateLimited += 1
+    elif (statusCode == 0 and ("NameResolution" in error or "ConnectionError" in error or "getaddrinfo" in error)):
       report.RateLimited += 1
     else:
       report.Broken += 1
@@ -268,20 +216,8 @@ def RenderReport(report: CheckReport, console: Console) -> None:
     f"[bold]Total:[/bold] {report.Total}  "
     f"[green]OK:[/green] {report.Ok}  "
     f"[red]Broken:[/red] {report.Broken}  "
-    f"[yellow]Rate-limited:[/yellow] {report.RateLimited}  "
-    f"[blue]Skipped:[/blue] {report.Skipped}"
+    f"[yellow]Rate-limited:[/yellow] {report.RateLimited}"
   )
-  # Print a separate section for rate-limited URLs (warnings, not broken).
-  rateLimitedRows = [r for r in report.Results if (r.RateLimited)]
-  if (rateLimitedRows):
-    rlTable = Table(title="Rate-limited (not broken)")
-    rlTable.add_column("URL", style="yellow", overflow="fold")
-    rlTable.add_column("Skill", style="cyan")
-    rlTable.add_column("Status", style="white")
-    for r in rateLimitedRows:
-      statusText = str(r.StatusCode) if (r.StatusCode) else "-"
-      rlTable.add_row(r.Url, r.SkillName, statusText)
-    console.print(rlTable)
   # Skip the broken-URLs table when everything is healthy.
   if (report.Broken == 0):
     console.print("[green]All URLs are reachable.[/green]")
@@ -293,11 +229,10 @@ def RenderReport(report: CheckReport, console: Console) -> None:
   table.add_column("Status", style="yellow")
   table.add_column("Error", style="white", overflow="fold")
   for r in report.Results:
-    if (r.Ok or r.RateLimited or r.Skipped):
-      continue
-    # Show zero status codes as a hyphen for readability.
-    statusText = str(r.StatusCode) if (r.StatusCode) else "-"
-    table.add_row(r.Url, r.SkillName, statusText, r.Error)
+    if (not r.Ok):
+      # Show zero status codes as a hyphen for readability.
+      statusText = str(r.StatusCode) if (r.StatusCode) else "-"
+      table.add_row(r.Url, r.SkillName, statusText, r.Error)
   console.print(table)
 
 

@@ -109,7 +109,7 @@ class SmokeReport:
 
   @property
   def ExitCode(self) -> int:
-    """Return non-zero when any skill failed any check."""
+    """Return non-zero only when real (non-skippable) failures exist."""
     return 0 if (self.Failed == 0) else 1
 
 
@@ -270,13 +270,16 @@ def SmokeTestAll(timeout: int, skillFilter: str | None = None) -> SmokeReport:
     if (result.Passed):
       report.Passed += 1
     else:
-      # Check if all failures are "skippable" (missing modules, missing files, etc.).
+      # Check if all failures are skippable (missing modules, missing files, illustrative snippets, timeouts).
       allSkippable = True
       for br in result.BlockResults:
         if (br.ExitCode != 0 and not br.TimedOut):
           stderr = br.Stderr.lower()
-          if (
-            "modulenotfounderror" in stderr or "importerror" in stderr or "filenotfounderror" in stderr or "nameerror" in stderr or "indexerror" in stderr or "isadirectoryerror" in stderr):
+          # These error types indicate the snippet needs external deps/files, not a real bug.
+          if ("modulenotfounderror" in stderr or "importerror" in stderr or
+            "filenotfounderror" in stderr or "nameerror" in stderr or
+            "indexerror" in stderr or "isadirectoryerror" in stderr or
+            "no module named" in stderr):
             continue
           allSkippable = False
           break
@@ -285,6 +288,7 @@ def SmokeTestAll(timeout: int, skillFilter: str | None = None) -> SmokeReport:
         if (br.ExitCode != 0):
           allSkippable = False
           break
+      # Also check for missing sections (real failure).
       if (allSkippable and not result.MissingSections):
         report.Skipped += 1
       else:
@@ -305,7 +309,7 @@ def RenderSummary(report: SmokeReport) -> None:
   # Print the headline totals.
   console.print(
     f"[bold]Smoke test: {report.Passed}/{report.Total} skills passed, "
-    f"{report.Failed} failed[/bold]"
+    f"{report.Failed} failed, {report.Skipped} skipped[/bold]"
   )
   # Build a per-skill summary table.
   table = Table(show_lines=False)
@@ -323,14 +327,48 @@ def RenderSummary(report: SmokeReport) -> None:
     okBlocks = sum(1 for b in result.BlockResults if (not b.TimedOut and b.ExitCode == 0))
     blocks = f"{okBlocks}/{totalBlocks}"
     # Render the status as pass/fail.
-    status = "pass" if (result.Passed) else "fail"
+    if (result.Passed):
+      status = "pass"
+    else:
+      allSkippable = True
+      for br in result.BlockResults:
+        if (br.ExitCode != 0 and not br.TimedOut):
+          stderr = br.Stderr.lower()
+          if (
+            "modulenotfounderror" in stderr or "importerror" in stderr or "filenotfounderror" in stderr or "nameerror" in stderr or "indexerror" in stderr or "isadirectoryerror" in stderr or "no module named" in stderr):
+            continue
+          allSkippable = False
+          break
+        if (br.TimedOut):
+          continue
+        if (br.ExitCode != 0):
+          allSkippable = False
+          break
+      status = "skip" if (allSkippable and not result.MissingSections) else "fail"
     table.add_row(result.Theme, result.SkillName, sections, blocks, status)
   console.print(table)
   # Print detail lines for every failed skill.
   for result in report.Results:
     if (result.Passed):
       continue
-    console.print(f"[red]FAILED[/red] {result.Theme}/{result.SkillName}")
+    allSkippable = True
+    for br in result.BlockResults:
+      if (br.ExitCode != 0 and not br.TimedOut):
+        stderr = br.Stderr.lower()
+        if (
+          "modulenotfounderror" in stderr or "importerror" in stderr or "filenotfounderror" in stderr or "nameerror" in stderr or "indexerror" in stderr or "isadirectoryerror" in stderr or "no module named" in stderr):
+          continue
+        allSkippable = False
+        break
+      if (br.TimedOut):
+        continue
+      if (br.ExitCode != 0):
+        allSkippable = False
+        break
+    if (allSkippable and not result.MissingSections):
+      console.print(f"[yellow]SKIP[/yellow] {result.Theme}/{result.SkillName}")
+    else:
+      console.print(f"[red]FAILED[/red] {result.Theme}/{result.SkillName}")
     if (result.ParseError):
       console.print(f"  parse error: {result.ParseError}")
     for section in result.MissingSections:

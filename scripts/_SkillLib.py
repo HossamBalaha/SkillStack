@@ -394,7 +394,7 @@ def ExtractDois(text: str) -> list[str]:
   result = []
   for match in matches:
     # Strip trailing punctuation that is not part of the DOI.
-    cleaned = match.rstrip(".,;:!\"'`}>")
+    cleaned = match.rstrip(".,;:!\"'`}>)]")
     if (cleaned not in seen):
       seen.add(cleaned)
       result.append(cleaned)

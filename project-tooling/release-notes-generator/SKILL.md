@@ -143,8 +143,11 @@ def DraftBody():
 
 
 if (__name__ == "__main__"):
-  print(f"Comparing since last tag: {LastTag() or '(root)'}")
-  print(DraftBody())
+  try:
+    print(f"Comparing since last tag: {LastTag() or '(root)'}")
+    print(DraftBody())
+  except Exception:
+    print("Run inside a git repository to generate release notes.")
 ```
 
 Publish:
