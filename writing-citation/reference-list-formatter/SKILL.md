@@ -92,7 +92,7 @@ J. A. Smith, R. Patel, and W. Zhang, ``A survey of federated learning,''
 
 After (APA plain text):
 Smith, J. A., Patel, R., & Zhang, W. (2021). A survey of federated learning.
-ACM Computing Surveys, 54(2), 1-38. https://doi.org/10.1145/3412345
+ACM Computing Surveys, 54(2), 1-38. https://doi.org/10.1145/3295222.3295349
 
 After (Vancouver, abbreviated journal):
 Smith JA, Patel R, Zhang W. A survey of federated learning. ACM Comput Surv.

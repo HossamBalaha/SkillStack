@@ -84,8 +84,8 @@ verified_against: []
     <div class="step" data-step="3"><p>Swap the protocol and the gap closes in 90 days.</p></div>
   </article>
 </div>
-<script src="https://unpkg.com/scrollama"></script>
-<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/scrollama></script>
+<script src="https://d3js.org/d3.v7.min.js></script>
 <script>
 function SetStep(index) {
   // One function mutates the same chart per step.

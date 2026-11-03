@@ -36,7 +36,7 @@ verified_against: []
 2. Compute ROC and PR curves plus AUC via `sklearn.metrics`.
 3. Bootstrap the test set N times to estimate 95% CI bands.
 4. Add the ROC diagonal and the PR prevalence baseline references.
-5. For multi-class, iterate one-vs-rest per class with distinct colours.
+5. For multi-class, iterate one-vs-rest per class with distinct colors.
 6. Place the AUC value in the legend and the band outside the curve.
 7. Save as PDF with legends outside the axes via `bbox_to_anchor`.
 
@@ -55,7 +55,7 @@ verified_against: []
 
 - Always include the ROC diagonal and PR prevalence baselines.
 - Bootstrap 95% CI bands use at least 1000 resamples.
-- Multi-class uses one-vs-rest with a distinct colour per class.
+- Multi-class uses one-vs-rest with a distinct color per class.
 - AUC must appear in the legend, not the title only.
 - Use `constrained_layout=True` and place legends outside the axes.
 - Report average precision alongside the PR curve.
@@ -100,7 +100,7 @@ def PlotRocPr(yTrue, yScore, outputPath):
   aucVal = auc(fpr, tpr)
   bFpr, mTpr, lo, hi, _ = BootstrapRoc(yTrue, yScore)
   # ROC panel with diagonal baseline and CI band.
-  axes[0].plot([0, 1], [0, 1], "--", color="grey", lw=0.8)
+  axes[0].plot([0, 1], [0, 1], "--", color="gray", lw=0.8)
   axes[0].plot(fpr, tpr, color="#1f77b4", label=f"AUC={aucVal:.3f}")
   axes[0].fill_between(bFpr, lo, hi, color="#1f77b4", alpha=0.15)
   axes[0].set_xlabel("False positive rate")
@@ -109,7 +109,7 @@ def PlotRocPr(yTrue, yScore, outputPath):
   prec, rec, _ = precision_recall_curve(yTrue, yScore)
   ap = average_precision_score(yTrue, yScore)
   prev = float(np.mean(yTrue))
-  axes[1].plot([0, 1], [prev, prev], "--", color="grey", lw=0.8)
+  axes[1].plot([0, 1], [prev, prev], "--", color="gray", lw=0.8)
   axes[1].plot(rec, prec, color="#d62728", label=f"AP={ap:.3f}")
   axes[1].set_xlabel("Recall")
   axes[1].set_ylabel("Precision")

@@ -6,8 +6,8 @@ metadata:
   version: "1.0"
   theme: ai-text
 tags: [humanization, inflation, prose, ai-text]
-related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/grace-degradation-protocol, ai-text/ai-tell-catalogue]
-prerequisites: [ai-text/ai-tell-catalogue]
+related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/grace-degradation-protocol, ai-text/ai-tell-catalog]
+prerequisites: [ai-text/ai-tell-catalog]
 outputs: [markdown]
 difficulty: intermediate
 estimated_tokens: 2000
@@ -25,7 +25,7 @@ verified_against: []
 
 ## When To Use
 
-- `ai-text-detector` flagged inflation-category tells (catalogue #13-#17).
+- `ai-text-detector` flagged inflation-category tells (catalog #13-#17).
 - A passage reads as marketing copy or grand narrative rather than reporting.
 - A reviewer says "this overstates things; what actually happened?"
 - A draft contains a "Future Outlook" or "What This Means" section that inflates rather than informs.
@@ -33,7 +33,7 @@ verified_against: []
 
 ## Workflow
 
-1. Identify inflation phrases using the catalogue list (overused lexical choices, inflated significance, vague
+1. Identify inflation phrases using the catalog list (overused lexical choices, inflated significance, vague
    connections, "-ing" riders, sales language, borrowed authority).
 2. For each match, locate the underlying factual claim. If the source material contains the fact, retrieve it. If not,
    mark the spot for `grace-degradation-protocol`.

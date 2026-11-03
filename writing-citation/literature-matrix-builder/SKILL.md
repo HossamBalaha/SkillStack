@@ -36,7 +36,7 @@ verified_against: []
    relevance, plus any user-specific columns (e.g., population, intervention, comparator).
 2. Collect the candidate paper set (Zotero collection, `.bib`, or DOI list).
 3. For each paper, extract the dimension values from the abstract, methods, and conclusions.
-4. Normalize categorical values (e.g., "RCT," "randomized controlled trial," "randomised trial" → "RCT") so they group
+4. Normalize categorical values (e.g., "RCT," "randomized controlled trial," "randomized trial" → "RCT") so they group
    cleanly.
 5. Build the matrix as a Markdown table for human reading and a CSV for downstream analysis.
 6. Sort by year (descending) by default; offer a theme-based sort as an alternative.

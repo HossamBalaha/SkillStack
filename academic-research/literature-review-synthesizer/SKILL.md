@@ -36,7 +36,7 @@ verified_against: []
    (qualitative/mixed), or PCC (scoping).
 2. Define Population, Intervention/Exposure, Comparator, Outcome (or equivalents).
 3. Construct a Boolean search string with synonyms, MeSH terms, truncation, and field tags. Run it on at least two
-   databases plus a grey-literature source.
+   databases plus a gray-literature source.
 4. Document PRISMA 2020 flow: Identification → Screening → Eligibility → Included. Report counts at every gate.
 5. Set inclusion/exclusion criteria: date range, language, study design, publication type.
 6. Deduplicate results; pilot screening on a 5% sample with two reviewers and compute Cohen's kappa.

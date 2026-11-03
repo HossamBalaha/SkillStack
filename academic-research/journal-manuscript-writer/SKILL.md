@@ -105,5 +105,5 @@ topology regularization with batch-norm-aware aggregation.
 % ====================== %
 The multi-site MRI dataset used in this study is available from
 \url{https://example.org/data} under the CC-BY-NC 4.0 license. Code
-and trained weights are released at \url{https://github.com/...}.
+and trained weights are released at \url{https://github.com/user/repo}.
 ```

@@ -1,6 +1,6 @@
 ---
 name: confusion-matrix-plotter
-description: Plot raw-count and row-normalised confusion matrices side by side with cell annotations and accuracy/F1 in a side panel. Trigger when evaluating a classifier, comparing models on class-wise performance, or reporting per-class errors.
+description: Plot raw-count and row-normalized confusion matrices side by side with cell annotations and accuracy/F1 in a side panel. Trigger when evaluating a classifier, comparing models on class-wise performance, or reporting per-class errors.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -33,7 +33,7 @@ verified_against: []
 ## Workflow
 
 1. Compute the confusion matrix from predicted and true labels.
-2. Build the row-normalised variant by dividing each row by its sum.
+2. Build the row-normalized variant by dividing each row by its sum.
 3. Create a two-panel figure with `plt.subplots(1, 2)`.
 4. Render each matrix with `seaborn.heatmap(annot=True, fmt="d", cmap="Blues")`.
 5. Rotate long class labels by 45 degrees on the x-axis.
@@ -48,14 +48,14 @@ verified_against: []
 
 ## Outputs
 
-- A two-panel PDF/PNG with raw and normalised matrices.
+- A two-panel PDF/PNG with raw and normalized matrices.
 - A small JSON file recording accuracy, macro-F1, and weighted-F1.
 
 ## Key Rules
 
-- Always show raw counts AND row-normalised variants.
+- Always show raw counts AND row-normalized variants.
 - Annotate every cell with its count using `annot=True`.
-- Use `fmt="d"` for integer counts and `fmt=".2f"` for normalised values.
+- Use `fmt="d"` for integer counts and `fmt=".2f"` for normalized values.
 - Rotate long class labels to 45 degrees to avoid overlap.
 - Report accuracy and F1 either in the title or a side panel.
 - Use `constrained_layout=True` and keep legends outside when present.
@@ -63,7 +63,7 @@ verified_against: []
 ## Examples
 
 ```python
-# Plot raw and normalised confusion matrices side by side.
+# Plot raw and normalized confusion matrices side by side.
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
@@ -76,7 +76,7 @@ plt.rcParams['font.sans-serif'] = ['Noto Sans SC', 'DejaVu Sans']
 plt.rcParams['axes.unicode_minus'] = False
 
 def PlotConfusion(yTrue, yPred, classNames, outputPath):
-  # Compute raw counts and the row-normalised variant.
+  # Compute raw counts and the row-normalized variant.
   cm = confusion_matrix(yTrue, yPred)
   cmNorm = cm.astype(float) / cm.sum(axis=1, keepdims=True)
   acc = float(np.mean(np.asarray(yTrue) == np.asarray(yPred)))

@@ -42,7 +42,7 @@
 | 36 | "Detect if this essay is AI-generated"                                | ai-text             | ai-text-detector               |
 | 37 | "Humanize this AI text but keep all facts intact"                     | ai-text             | ai-text-humanizer              |
 | 38 | "Score perplexity and burstiness of this text"                        | ai-text             | perplexity-burstiness-scorer   |
-| 39 | "Find AI tells like 'delve' and 'tapestry' in my draft"               | ai-text             | ai-tell-catalogue              |
+| 39 | "Find AI tells like 'delve' and 'tapestry' in my draft"               | ai-text             | ai-tell-catalog                |
 | 40 | "Check if this text carries a SynthID watermark"                      | ai-text             | ai-watermark-detector          |
 | 41 | "Check if this LLM response contains hallucinated facts"              | ai-output-judgement | hallucination-detector         |
 | 42 | "Verify the factual claims in this AI-generated paragraph"            | ai-output-judgement | factuality-checker             |
@@ -65,7 +65,7 @@
 | data-engineering    | 6      | etl-pipeline-builder, data-quality-validator, categorical-encoder, data-lineage-tracker, data-drift-monitor, dataset-card-generator                        |
 | visualization       | 6      | publication-figure-maker, tikz-framework-diagrammer, color-palette-selector, multi-panel-figure-composer, roc-pr-curve-plotter, scientific-poster-designer |
 | writing-citation    | 5      | citation-style-converter, bibtex-citation-manager, doi-verifier, paragraph-transition-smoother, annotated-bibliography-builder                             |
-| ai-text             | 5      | ai-text-detector, ai-text-humanizer, perplexity-burstiness-scorer, ai-tell-catalogue, ai-watermark-detector                                                |
+| ai-text             | 5      | ai-text-detector, ai-text-humanizer, perplexity-burstiness-scorer, ai-tell-catalog, ai-watermark-detector                                                  |
 | ai-output-judgement | 5      | hallucination-detector, factuality-checker, groundedness-verifier, bias-auditor, evaluation-harness-builder                                                |
 | project-tooling     | 5      | project-zip-packager, docker-research-container, readme-generator, release-notes-generator, pyproject-toml-builder                                         |
 | **Total**           | **50** | **All 9 themes covered**                                                                                                                                   |

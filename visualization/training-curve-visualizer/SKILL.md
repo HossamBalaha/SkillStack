@@ -1,6 +1,6 @@
 ---
 name: training-curve-visualizer
-description: Plot train and validation loss and accuracy over epochs with dual y-axes, overfit shading, and a best-epoch marker. Trigger when monitoring model training, comparing optimisers, or reporting convergence behaviour in a paper.
+description: Plot train and validation loss and accuracy over epochs with dual y-axes, overfit shading, and a best-epoch marker. Trigger when monitoring model training, comparing optimizers, or reporting convergence behavior in a paper.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -27,7 +27,7 @@ verified_against: []
 
 - Monitoring training and validation loss across epochs.
 - Spotting the epoch where validation diverges (overfit onset).
-- Comparing optimisers or learning-rate schedules.
+- Comparing optimizers or learning-rate schedules.
 - Producing a convergence figure for a manuscript appendix.
 
 ## Workflow
@@ -91,7 +91,7 @@ def PlotTrainingCurve(log, outputPath):
   axL.plot(epochs, trainLoss, color="#1f77b4", label="Train loss")
   axL.plot(epochs, valLoss, color="#d62728", label="Val loss")
   # Shade the overfit region.
-  axL.axvspan(onset, epochs[-1], color="grey", alpha=0.12)
+  axL.axvspan(onset, epochs[-1], color="gray", alpha=0.12)
   # Vertical line at the best validation epoch.
   axL.axvline(bestEpoch, color="black", linestyle=":", lw=0.8)
   axL.set_xlabel("Epoch")

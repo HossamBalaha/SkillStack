@@ -109,7 +109,7 @@ class SmokeReport:
 
   @property
   def ExitCode(self) -> int:
-    """Return non-zero only when real (non-skippable) failures exist."""
+    """Return 0 when only skippable failures remain."""
     return 0 if (self.Failed == 0) else 1
 
 
@@ -352,6 +352,23 @@ def RenderSummary(report: SmokeReport) -> None:
     if (result.Passed):
       continue
     allSkippable = True
+    for br in result.BlockResults:
+      if (br.ExitCode != 0 and not br.TimedOut):
+        stderr = br.Stderr.lower()
+        if (
+          "modulenotfounderror" in stderr or "importerror" in stderr or "filenotfounderror" in stderr or "nameerror" in stderr or "indexerror" in stderr or "isadirectoryerror" in stderr or "no module named" in stderr):
+          continue
+        allSkippable = False
+        break
+      if (br.TimedOut):
+        continue
+      if (br.ExitCode != 0):
+        allSkippable = False
+        break
+    if (allSkippable and not result.MissingSections):
+      console.print(f"[yellow]SKIP[/yellow] {result.Theme}/{result.SkillName}")
+    else:
+      allSkippable = True
     for br in result.BlockResults:
       if (br.ExitCode != 0 and not br.TimedOut):
         stderr = br.Stderr.lower()

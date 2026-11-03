@@ -1,6 +1,6 @@
 ---
 name: color-palette-selector
-description: Select colourblind-friendly palettes (viridis, cividis, ColorBrewer, Wong's palette) and verify them with simulators. Trigger when choosing colours for figures, dashboards, or diagrams that must be readable by viewers with colour vision deficiencies.
+description: Select colorblind-friendly palettes (viridis, cividis, ColorBrewer, Wong's palette) and verify them with simulators. Trigger when choosing colors for figures, dashboards, or diagrams that must be readable by viewers with color vision deficiencies.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -25,10 +25,10 @@ verified_against: []
 
 ## When To Use
 
-- Choosing a colour scheme for a paper figure or dashboard.
+- Choosing a color scheme for a paper figure or dashboard.
 - Encoding categorical labels without relying on red/green pairs.
 - Building sequential or diverging maps for heatmaps.
-- Validating that a palette survives colourblind simulation.
+- Validating that a palette survives colorblind simulation.
 
 ## Workflow
 
@@ -43,28 +43,28 @@ verified_against: []
 ## Inputs
 
 - Data kind: categorical, sequential, or diverging.
-- Number of distinct colours required.
-- Optional brand constraints (forbidden colours, contrast target).
+- Number of distinct colors required.
+- Optional brand constraints (forbidden colors, contrast target).
 
 ## Outputs
 
 - A palette definition file (JSON) with hex codes and names.
-- A PNG swatch preview plus a simulated colourblind preview.
+- A PNG swatch preview plus a simulated colorblind preview.
 - A matplotlib snippet registering the palette as a custom cmap.
 
 ## Key Rules
 
 - Never use red and green as the sole encoding pair.
-- Categorical palettes cap at eight distinct colours.
+- Categorical palettes cap at eight distinct colors.
 - Prefer perceptually uniform maps (viridis, cividis) for sequential data.
 - For more than eight categories, switch to a lightness gradient.
-- Validate every palette with a colourblind simulator.
+- Validate every palette with a colorblind simulator.
 - Register the chosen palette once and reuse across figures.
 
 ## Examples
 
 ```python
-# Define Wong's palette and validate it for colourblind safety.
+# Define Wong's palette and validate it for colorblind safety.
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
@@ -91,11 +91,11 @@ def RegisterWongCmap(name="wong"):
 def ValidatePalette(palette):
   # Simulate deuteranopia by removing the red-green channel contrast.
   rgb = [plt.matplotlib.colors.to_rgb(c) for c in palette]
-  grey = [0.299 * r + 0.587 * g + 0.114 * b for (r, g, b) in rgb]
-  # If any two greys are too close, the palette is unsafe.
-  for (i) in range(len(grey)):
-    for (j) in range(i + 1, len(grey)):
-      if (abs(grey[i] - grey[j]) < 0.05):
+  gray = [0.299 * r + 0.587 * g + 0.114 * b for (r, g, b) in rgb]
+  # If any two grays are too close, the palette is unsafe.
+  for (i) in range(len(gray)):
+    for (j) in range(i + 1, len(gray)):
+      if (abs(gray[i] - gray[j]) < 0.05):
         return False
   return True
 

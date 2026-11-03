@@ -38,7 +38,7 @@ always exempt, so removing the enforcer does not break PyTorch Lightning or unit
 ### Q4. What's the difference between `ai-text` and `ai-output-judgement`?
 
 `ai-text` (15 skills) judges whether a **piece of prose** was written by an AI and rewrites it to sound human —
-detectors, humanizers, perplexity/burstiness scorers, watermark detectors, tell catalogues. `ai-output-judgement` (18
+detectors, humanizers, perplexity/burstiness scorers, watermark detectors, tell catalogs. `ai-output-judgement` (18
 skills) judges whether an **LLM response** is correct, grounded, safe, unbiased, and consistent — hallucination
 detectors, factuality checkers, bias auditors, eval harnesses, LLM-as-judge. Rule of thumb: if the input is a
 *document*, use `ai-text`; if the input is a *model response*, use `ai-output-judgement`.

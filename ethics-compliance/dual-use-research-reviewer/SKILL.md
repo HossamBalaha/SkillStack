@@ -28,7 +28,7 @@ verified_against: []
 - The user says "is my research dual-use?", "review for biosecurity concerns", or "do we need DURC review?".
 - A life-sciences project involves enhanced potential pandemic pathogens (ePPPs), gain-of-function studies, toxin
   production, or antimicrobial resistance work.
-- A chemistry project produces, purifies, or stabilises scheduled chemicals.
+- A chemistry project produces, purifies, or stabilizes scheduled chemicals.
 - A cyber or AI project could plausibly enable offensive operations, surveillance, or weaponisation.
 - A funder or institution requests a DURC review before releasing funds or accepting a manuscript.
 - Trigger keywords: dual-use, DURC, ePPP, gain-of-function, biosecurity, NSPM-33, institutional review entity (IRE).
@@ -48,9 +48,9 @@ verified_against: []
    BSL-4), pre-publication review, training requirements, and access controls.
 7. Document the responsible conduct decisions: who can access materials, who is trained, and how chain of custody is
    maintained.
-8. Specify communication plans: communication with funders, the IRE, the funding agency's programme officer, and (where
+8. Specify communication plans: communication with funders, the IRE, the funding agency's program officer, and (where
    required) the USG funding agency review.
-9. Address international considerations: export control, the Australia Group, and any dual-use export licence
+9. Address international considerations: export control, the Australia Group, and any dual-use export license
    requirements.
 10. Set up ongoing monitoring: annual review, deviation reporting, and a re-review trigger if protocols or personnel
     change.
@@ -74,7 +74,7 @@ verified_against: []
 - `risk_register.md` — risk × likelihood × consequence × mitigation.
 - `mitigation_plan.md` — mitigation strategy, owner, deadline, and verification.
 - `communication_plan.md` — internal and external communications and timelines.
-- `export_control_review.md` — Australia Group, EAR, and licence requirements.
+- `export_control_review.md` — Australia Group, EAR, and license requirements.
 - `monitoring_plan.md` — annual review, deviation reporting, re-review triggers.
 - `durc_review_record.yaml` — machine-readable determination for the IRE.
 

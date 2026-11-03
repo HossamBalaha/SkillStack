@@ -1,6 +1,6 @@
 ---
 name: algorithmic-audit-reporter
-description: Produce algorithmic audit reports containing a model card summary, a dataset card, performance by subgroup, fairness metrics, robustness tests, and prioritised recommendations. Use when an internal or external auditor needs a structured accountability document for an AI system.
+description: Produce algorithmic audit reports containing a model card summary, a dataset card, performance by subgroup, fairness metrics, robustness tests, and prioritized recommendations. Use when an internal or external auditor needs a structured accountability document for an AI system.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -44,10 +44,10 @@ verified_against: []
 5. Compute performance by subgroup: accuracy, precision, recall, F1, calibration error, and confidence intervals.
 6. Compute fairness metrics chosen by the fairness-metric-selector; present per-subgroup and disparity ratios.
 7. Run robustness tests: input perturbation (typo, paraphrase, brightness, jitter), distribution shift, adversarial
-   examples (PGD where relevant), and abstention behaviour.
+   examples (PGD where relevant), and abstention behavior.
 8. Run stress tests on edge cases: rare subgroups, out-of-distribution inputs, and minimum cell sizes.
 9. Document the human-in-the-loop setup: who reviews, override rates, and observed override patterns.
-10. Compile recommendations: prioritise by severity (critical, high, medium, low), owner, deadline, and verification
+10. Compile recommendations: prioritize by severity (critical, high, medium, low), owner, deadline, and verification
     method.
 11. Produce a one-page executive summary, a full audit report, and structured findings in YAML for downstream tooling.
 12. Define the re-audit cadence and the trigger conditions: retraining, distribution shift, incident, or regulatory
@@ -70,7 +70,7 @@ verified_against: []
 - `performance_by_subgroup.md` — metric × subgroup table with CIs.
 - `fairness_results.md` — chosen metrics with disparity ratios.
 - `robustness_tests.md` — perturbation, shift, adversarial, abstention.
-- `recommendations.md` — prioritised actions with owner and deadline.
+- `recommendations.md` — prioritized actions with owner and deadline.
 - `executive_summary.md` — one-page plain-language summary.
 - `findings.yaml` — machine-readable findings for downstream tooling.
 - `subgroup_chart.svg` — visual performance by subgroup.
@@ -81,7 +81,7 @@ verified_against: []
 - Performance must be reported with confidence intervals, not point estimates alone; small subgroups need bootstrap CIs.
 - Out-of-scope items must be explicitly listed; "everything else" is not acceptable.
 - Recommendations must be actionable; "improve fairness" without specifying the intervention is non-compliant.
-- Recommendations must be prioritised by severity and tied to a verification method.
+- Recommendations must be prioritized by severity and tied to a verification method.
 - Human-in-the-loop findings must report observed override rates, not only nominal authority.
 - Robustness tests must include distribution shift, not only adversarial inputs; both are common failure modes.
 - The re-audit cadence must be specified; an audit without a refresh plan goes stale.

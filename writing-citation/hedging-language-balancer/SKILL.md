@@ -98,7 +98,7 @@ Calibration log:
 
 - Stacking hedges ("may possibly seem to suggest") — one device per claim is enough.
 - Removing hedges from LOW-evidence claims because the author "wants to sound confident."
-- Adding hedges to HIGH-evidence claims (meta-analyses, causal mechanisms) — this weakens defensible results.
+- Adding hedges to HIGH-evidence claims (meta-analyzes, causal mechanisms) — this weakens defensible results.
 - Using informal hedges ("maybe," "kind of") in formal academic prose.
 - Treating all reporting verbs as interchangeable — "demonstrates," "indicates," and "suggests" carry different hedge
   strength.

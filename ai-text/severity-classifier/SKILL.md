@@ -6,8 +6,8 @@ metadata:
   version: "1.0"
   theme: ai-text
 tags: [severity, classification, tells, ai-detection]
-related: [ai-text/ai-text-detector, ai-text/ai-tell-catalogue]
-prerequisites: [ai-text/ai-tell-catalogue]
+related: [ai-text/ai-text-detector, ai-text/ai-tell-catalog]
+prerequisites: [ai-text/ai-tell-catalog]
 outputs: [markdown, json]
 difficulty: intermediate
 estimated_tokens: 1500
@@ -29,11 +29,11 @@ verified_against: []
 - A reviewer wants to know which matches to act on first.
 - You are deciding whether to escalate a block to humanizer or merely note it.
 - A compliance audit requires a reproducible severity scale across reviewers.
-- You need to override a default catalogue severity based on local context.
+- You need to override a default catalog severity based on local context.
 
 ## Workflow
 
-1. Receive the raw match list from `ai-text-detector` (tell name, location, default severity from the catalogue).
+1. Receive the raw match list from `ai-text-detector` (tell name, location, default severity from the catalog).
 2. For each match, evaluate two axes: (a) specificity — how distinctive is the pattern; (b) human-occurrence rate — how
    often real humans produce it.
 3. Map to a level:

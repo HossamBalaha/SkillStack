@@ -6,8 +6,8 @@ metadata:
   version: "1.0"
   theme: ai-text
 tags: [humanization, rhythm, prose, ai-text]
-related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/ai-tell-catalogue]
-prerequisites: [ai-text/ai-tell-catalogue]
+related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/ai-tell-catalog]
+prerequisites: [ai-text/ai-tell-catalog]
 outputs: [markdown]
 difficulty: intermediate
 estimated_tokens: 2200
@@ -25,7 +25,7 @@ verified_against: []
 
 ## When To Use
 
-- `ai-text-detector` flagged rhythm-by-rule tells (catalogue #6-#12).
+- `ai-text-detector` flagged rhythm-by-rule tells (catalog #6-#12).
 - A passage reads in a metronomic, evenly-paced rhythm that suggests machine generation.
 - Every sentence begins with "The" or "This".
 - Em-dashes appear in nearly every sentence as the default connector.
@@ -34,7 +34,7 @@ verified_against: []
 
 ## Workflow
 
-1. Identify rhythm tells using the catalogue (#6-#12).
+1. Identify rhythm tells using the catalog (#6-#12).
 2. For each tell, apply the canonical fix:
     - **Forced triads**: replace 3-item lists with the actual items, even if there are two or four. "fast, reliable, and
       scalable" → list the real properties measured.

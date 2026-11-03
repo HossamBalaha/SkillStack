@@ -72,7 +72,7 @@ production corpora. Use
 > Remaining `ml-engineering` skills (`modular-ml-architect`, `seed-and-device-resolver`,
 > `experiment-folder-organizer`, `train-val-test-splitter`, `early-stopping-configurator`,
 > `learning-rate-finder`, `mixed-precision-trainer`, `data-leakage-guard`,
-> `statistical-validation-rigour`, `pytorch-lightning-scaffold`, `dataset-adapter-builder`,
+> `statistical-validation-rigor`, `pytorch-lightning-scaffold`, `dataset-adapter-builder`,
 > `ablation-study-runner`) all operate locally on the user's files and model objects.
 > Privacy risk: **None**.
 
@@ -127,7 +127,7 @@ production corpora. Use
 | `ai-text-humanizer`               | Text                 | Configured LLM (remote)           | Rewrite to sound human              | High — text leaves the host            |
 | `perplexity-burstiness-scorer`    | Text                 | Local GPT-2 scoring               | Compute perplexity + burstiness     | None — local only                      |
 | `ai-watermark-detector`           | Text                 | Local watermark decoder           | Detect SynthID / OpenAI watermark   | None — local only                      |
-| `ai-tell-catalogue`               | Text                 | Local lexicon                     | Flag AI-flavored words              | None — local only                      |
+| `ai-tell-catalog`                 | Text                 | Local lexicon                     | Flag AI-flavored words              | None — local only                      |
 | `chatbot-residue-cleaner`         | Text                 | Local regex + lexicon             | Strip chatbot residues              | None — local only                      |
 | `formatting-by-rule-cleaner`      | Text                 | Local regex                       | Apply formatting rules              | None — local only                      |
 | `rhythm-by-rule-fixer`            | Text                 | Local syllable counter            | Fix sentence rhythm                 | None — local only                      |
@@ -172,7 +172,7 @@ All skills in these three themes operate locally:
 - `project-tooling/*` — READMEs, Dockerfiles, pyproject.toml, Makefiles,
   CI workflows, zip packager. Privacy risk: **None** (the generated
   `Dockerfile` may pull a base image from Docker Hub at *build* time — that
-  is your Docker daemon's standard behaviour, not SkillStack's).
+  is your Docker daemon's standard behavior, not SkillStack's).
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: attention-map-visualizer
-description: Visualize transformer attention weights as per-head and per-layer heatmaps with token overlay. Trigger when debugging attention patterns, comparing heads, or explaining model behaviour in an NLP or vision-transformer paper.
+description: Visualize transformer attention weights as per-head and per-layer heatmaps with token overlay. Trigger when debugging attention patterns, comparing heads, or explaining model behavior in an NLP or vision-transformer paper.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -36,7 +36,7 @@ verified_against: []
 2. Align token strings with the row and column indices of the matrix.
 3. Build a grid of per-head heatmaps for one layer.
 4. If the head count is large, average across heads for a summary panel.
-5. Overlay attention on tokens by colouring the token text.
+5. Overlay attention on tokens by coloring the token text.
 6. Use `viridis` or a seaborn heatmap with cell annotations off.
 7. Save as PDF for the manuscript plus PNG for quick inspection.
 
@@ -50,7 +50,7 @@ verified_against: []
 
 - A multi-panel PDF with per-head heatmaps.
 - A summary PNG averaging across heads when the head count is large.
-- A token-overlay HTML file colouring tokens by attention weight.
+- A token-overlay HTML file coloring tokens by attention weight.
 
 ## Key Rules
 

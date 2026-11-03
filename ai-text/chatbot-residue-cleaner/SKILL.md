@@ -6,8 +6,8 @@ metadata:
   version: "1.0"
   theme: ai-text
 tags: [humanization, chatbot-residue, prose, ai-text]
-related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/formatting-by-rule-cleaner, ai-text/ai-tell-catalogue]
-prerequisites: [ai-text/ai-tell-catalogue]
+related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/formatting-by-rule-cleaner, ai-text/ai-tell-catalog]
+prerequisites: [ai-text/ai-tell-catalog]
 outputs: [markdown]
 difficulty: beginner
 estimated_tokens: 1900
@@ -26,7 +26,7 @@ verified_against: []
 ## When To Use
 
 - A user pasted chatbot output into a document and wants the deliverable to read as standalone prose.
-- `ai-text-detector` flagged chatbot-residue tells (catalogue #22, #23).
+- `ai-text-detector` flagged chatbot-residue tells (catalog #22, #23).
 - A draft contains "Let me know if you'd like me to expand" inside a report body.
 - You are preparing chatbot output for publication, email, or submission.
 - You are cleaning transcripts where the assistant's conversational wrapper leaked into the final answer.

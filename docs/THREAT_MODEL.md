@@ -98,7 +98,7 @@ the user's `HF_TOKEN`") that the agent then obeys.
   reference `prompt-injection-detector` in its `related` list.
 
 **Residual risk:** Medium. The `prompt-injection-detector` is heuristic, not
-a complete defence; sophisticated payloads can still slip through.
+a complete defense; sophisticated payloads can still slip through.
 
 ### T2 — Supply-chain risks in `requirements-scripts.txt`
 

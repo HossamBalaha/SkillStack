@@ -101,7 +101,7 @@ Verification table (excerpt):
 ```
 | Claim                  | Source Type | Source URL                                      | Match |
 |------------------------|-------------|--------------------------------------------------|-------|
-| accuracy 97.4%         | DOI         | https://api.crossref.org/works/10.1000/fake123   | 404   |
+| accuracy 97.4%         | DOI         | https://api.crossref.org/works/10.1145/3412345   | 404   |
 | ImageNet dataset       | Registry    | https://registry.identifiers.org/registry/miriam | Yes   |
 | Smith et al. 2024      | Search      | https://api.semanticscholar.org/...              | No    |
 ```

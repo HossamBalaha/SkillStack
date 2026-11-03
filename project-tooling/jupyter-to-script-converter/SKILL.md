@@ -40,7 +40,7 @@ verified_against: []
 6. Add an `if __name__ == "__main__": Main()` block at the bottom.
 7. For each cell that has `outputs`, append `# Output:` followed by the captured text.
 8. Add a module docstring at the top stating the notebook's origin and conversion date.
-9. Optionally run `ruff` and `black` on the result to normalise formatting.
+9. Optionally run `ruff` and `black` on the result to normalize formatting.
 10. Save as `<NotebookName>.py` next to the original (or in `src/` if requested).
 
 ## Inputs

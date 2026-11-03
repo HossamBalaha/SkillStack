@@ -1,5 +1,5 @@
 ---
-name: statistical-validation-rigour
+name: statistical-validation-rigor
 description: Apply rigorous statistical validation when reporting metrics, comparing models, or computing confidence intervals. Triggers on "bootstrap CI", "AUC binary vs multiclass", "Cohen's d", "McNemar test", "Wilcoxon signed-rank", "paired t-test", "LogisticRegression deprecated multi_class".
 metadata:
   author: Hossam Magdy Balaha

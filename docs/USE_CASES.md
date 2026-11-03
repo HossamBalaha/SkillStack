@@ -37,7 +37,7 @@ figures good enough for a workshop submission.
 **Chain.**
 
 1. `academic-research/research-question-formulator` — sharpen her vague
-   "I want to detect tumours" into a FINER-framed question with PICO
+   "I want to detect tumors" into a FINER-framed question with PICO
    population/intervention/comparator/outcome.
 2. `academic-research/hypothesis-designer` — convert the question into H0
    and H1 with effect-size framing and the statistical test that will
@@ -48,7 +48,7 @@ figures good enough for a workshop submission.
 4. `ml-engineering/reproducible-experiment-runner` — set up seeds, device
    resolution, dual logging, and the 4-split experiment folder so the
    paper's results section is reproducible.
-5. `ml-engineering/statistical-validation-rigour` — bootstrap CIs, paired
+5. `ml-engineering/statistical-validation-rigor` — bootstrap CIs, paired
    t-test/Wilcoxon/McNemar, AUC branching for the reported metrics.
 6. `visualization/publication-figure-maker` — journal-ready 300 DPI
    matplotlib figures with colorblind-safe palettes.
@@ -294,7 +294,7 @@ significance callout in the paper.
    loop with dual logging and 4-split folders.
 3. `ml-engineering/ablation-study-runner` — run ablations by removing/
    altering each attention variant systematically.
-4. `ml-engineering/statistical-validation-rigour` — bootstrap CIs + paired
+4. `ml-engineering/statistical-validation-rigor` — bootstrap CIs + paired
    t-test/Wilcoxon/McNemar for the significance callout.
 5. `visualization/results-table-formatter` — format the leaderboard as a
    LaTeX booktabs table.
@@ -424,7 +424,7 @@ LLM against MMLU and GSM8K with LLM-as-judge scoring.
    AUC / MCC / calibration error.
 3. `ai-output-judgement/llm-as-judge-evaluator` — use a stronger LLM as a
    judge for the open-ended responses.
-4. `ml-engineering/statistical-validation-rigour` — bootstrap CIs on the
+4. `ml-engineering/statistical-validation-rigor` — bootstrap CIs on the
    leaderboard scores.
 5. `visualization/results-table-formatter` — format the leaderboard as a
    LaTeX booktabs table.
@@ -446,7 +446,7 @@ Across all 15 stories, three patterns repeat:
    `style-integrity/latex-style-guard` (for LaTeX) loads early.
 3. **Validate before ship.** When a story ends with shipping an artifact,
    the last 1–2 links are validators (`zero-fabrication-guard`,
-   `statistical-validation-rigour`, `pii-leak-detector`,
+   `statistical-validation-rigor`, `pii-leak-detector`,
    `prompt-injection-detector`).
 
 ---

@@ -25,7 +25,7 @@ verified_against: []
 
 ## When To Use
 
-- The user says "what data do we actually need?", "design a privacy-by-default schema", or "minimise our data
+- The user says "what data do we actually need?", "design a privacy-by-default schema", or "minimize our data
   collection".
 - A new form, sensor, or analytics event is being added and there is no field-level justification.
 - A model is being trained and the team wants to know which features are necessary versus merely available.
@@ -54,7 +54,7 @@ verified_against: []
 10. Add privacy-by-design controls: default opt-out, default off for sensitive toggles, encryption at rest and in
     transit, and access reviews on a fixed cadence.
 11. Provide a code-level minimisation snippet showing how to enforce the reduced schema in an ingestion pipeline.
-12. Produce a minimisation report card with the original count of fields, the minimised count, and the per-field
+12. Produce a minimisation report card with the original count of fields, the minimized count, and the per-field
     rationale.
 
 ## Inputs
@@ -63,13 +63,13 @@ verified_against: []
 - Candidate data dictionary with proposed fields and types.
 - Roles in the system and their access needs.
 - Retention policy and legal basis for each field.
-- Any prior minimisation analyses or audits.
+- Any prior minimisation analyzes or audits.
 
 ## Outputs
 
 - `purpose_statement.md` — primary and secondary purposes explicitly listed.
 - `field_necessity_matrix.md` — field × purpose × necessity × alternative × retained precision.
-- `minimised_schema.yaml` — the reduced schema enforced by the pipeline.
+- `minimized_schema.yaml` — the reduced schema enforced by the pipeline.
 - `retention_schedule.md` — category × retention period × trigger × destruction method.
 - `access_matrix.md` — role × data category × purpose × audit logging.
 - `data_flow_diagram.md` — collection → processing → storage → sharing → destruction.
@@ -80,7 +80,7 @@ verified_against: []
 
 - Each retained field must map to at least one stated purpose; orphan fields must be removed.
 - Pseudonymisation does not equal anonymisation; the linking key still requires protection.
-- Aggregated data with cells smaller than the minimum cell size must be suppressed or merged with a neighbour.
+- Aggregated data with cells smaller than the minimum cell size must be suppressed or merged with a neighbor.
 - Retention periods must be enforced automatically; "we will delete when we remember" is non-compliant.
 - Access must be purpose-bound at the time of access; broad "read-all" roles are non-compliant.
 - Encryption is necessary but not sufficient; minimisation reduces risk before encryption applies.
@@ -102,6 +102,6 @@ Field necessity matrix (excerpt):
 ```python
 # minimisation_snippet.py (excerpt)
 ALLOWED_FIELDS = {"user_id", "age_band", "city", "device_class"}
-def minimise(record: dict) -> dict:
+def minimize(record: dict) -> dict:
     return {k: v for k, v in record.items() if k in ALLOWED_FIELDS}
 ```

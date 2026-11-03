@@ -26,7 +26,7 @@ verified_against: []
 ## When To Use
 
 - An image classification or detection model needs a data pipeline.
-- The dataset is organised as `<split>/<class>/<image>.jpg` on disk.
+- The dataset is organized as `<split>/<class>/<image>.jpg` on disk.
 - Augmentations differ between TRAIN (heavy) and VAL/TEST (deterministic).
 - Batching must overlap with compute via `num_workers`, `pin_memory`, and `prefetch_factor`.
 - Normalization must use the same stats (e.g., ImageNet) at train and inference.

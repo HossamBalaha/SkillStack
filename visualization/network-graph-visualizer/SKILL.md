@@ -1,6 +1,6 @@
 ---
 name: network-graph-visualizer
-description: Visualize network graphs with layout algorithms, node sizing by degree, community colouring, and edge widths by weight. Trigger when analysing social networks, citation graphs, or neural-network architectures, and when producing static or interactive graph figures.
+description: Visualize network graphs with layout algorithms, node sizing by degree, community coloring, and edge widths by weight. Trigger when analyzing social networks, citation graphs, or neural-network architectures, and when producing static or interactive graph figures.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -35,11 +35,11 @@ verified_against: []
 1. Load the graph from an edge list or adjacency matrix.
 2. Choose a layout: spring, circular, kamada-kawai, or Graphviz hierarchical.
 3. Compute node degree or centrality to drive node size.
-4. Detect communities (Louvain) and assign colours.
+4. Detect communities (Louvain) and assign colors.
 5. Scale edge width by weight when weights carry meaning.
 6. Render static with `networkx` + `matplotlib`, or interactive with `pyvis`.
 7. For large graphs (over 1000 nodes), aggregate or sample before plotting.
-8. Save the figure and a legend mapping colours to communities.
+8. Save the figure and a legend mapping colors to communities.
 
 ## Inputs
 
@@ -51,12 +51,12 @@ verified_against: []
 
 - A static PDF/PNG of the graph.
 - An interactive HTML when `pyvis` is selected.
-- A legend file mapping community IDs to colours.
+- A legend file mapping community IDs to colors.
 
 ## Key Rules
 
 - Size nodes by degree or a centrality measure.
-- Colour nodes by community using a colourblind-friendly palette.
+- Color nodes by community using a colorblind-friendly palette.
 - Scale edge width by weight when weights carry meaning.
 - For graphs over 1000 nodes, aggregate or sample first.
 - Place legends outside the axes via `bbox_to_anchor` for static plots.
@@ -65,7 +65,7 @@ verified_against: []
 ## Examples
 
 ```python
-# Draw a networkx graph with community colours and degree sizing.
+# Draw a networkx graph with community colors and degree sizing.
 import networkx as nx
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
@@ -86,7 +86,7 @@ def DrawGraph(graph, outputPath):
   # Size nodes by degree.
   degrees = dict(graph.degree())
   sizes = [30.0 + degrees[n] * 5.0 for (n) in graph.nodes()]
-  # Colour by Louvain community.
+  # Color by Louvain community.
   communities = louvain_communities(graph, seed=0)
   palette = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
              "#8c564b", "#e377c2", "#7f7f7f"]

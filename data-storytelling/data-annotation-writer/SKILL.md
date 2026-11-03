@@ -39,7 +39,7 @@ verified_against: []
 4. Write a short label (five to ten words) that states what the reader is looking at.
 5. Add a narrative arrow only when direction matters (trend, before/after, deviation).
 6. Place a reference line when a threshold, target, or baseline clarifies the finding.
-7. Tone down the rest of the chart so the annotation wins the eye: mute colours, thin axes.
+7. Tone down the rest of the chart so the annotation wins the eye: mute colors, thin axes.
 8. Verify the annotation does not overlap data; if it does, move the label, not the data.
 9. Emit a Python annotation script (matplotlib or Plotly) and a Markdown annotation brief.
 
@@ -52,7 +52,7 @@ verified_against: []
 ## Outputs
 
 - `annotate.py` — matplotlib or Plotly script that overlays the annotation.
-- `annotated_chart.svg` — vector output for embedding.
+- `output_chart.svg` — vector output for embedding.
 - `annotation_brief.md` — per-annotation label, anchor, and rationale.
 
 ## Key Rules
@@ -63,7 +63,7 @@ verified_against: []
 - Reference lines are labelled at the right edge with the value and the unit.
 - Callout boxes do not cover data; if they would, use a leader line to place them outside.
 - Narrative arrows carry direction only when direction is part of the finding.
-- Annotations replace the legend where possible; direct labels beat colour keys.
+- Annotations replace the legend where possible; direct labels beat color keys.
 
 ## Examples
 
@@ -88,14 +88,14 @@ fig, ax = plt.subplots(figsize=(8, 4.5))
 # (plot calls elided)
 AnnotateSpike(ax, xSpike=2, ySpike=232, targetY=120,
               label="Q2 spike: 2x target, post-protocol gap")
-fig.savefig("annotated_chart.svg", bbox_inches="tight")
+fig.savefig("output_chart.svg", bbox_inches="tight")
 ```
 
 ```text
 Annotation brief (excerpt):
 - Anchor: 2024-Q2 bar, value 232 readmissions.
 - Label: "Q2 spike: 2x target, post-protocol gap".
-- Style: callout with leader arrow, colour #cf222e.
+- Style: callout with leader arrow, color #cf222e.
 - Reference line: dashed at y=120, labelled "target 120".
 - Rationale: target line shows breach magnitude; callout names the cause.
 ```

@@ -6,7 +6,7 @@ metadata:
   version: "1.0"
   theme: ml-engineering
 tags: [cross-validation, kfold, stratified, grouped, timeseries]
-related: [ml-engineering/train-val-test-splitter, ml-engineering/statistical-validation-rigour, ml-engineering/data-leakage-guard]
+related: [ml-engineering/train-val-test-splitter, ml-engineering/statistical-validation-rigor, ml-engineering/data-leakage-guard]
 prerequisites: [ml-engineering/train-val-test-splitter]
 outputs: [python, csv, json]
 difficulty: advanced

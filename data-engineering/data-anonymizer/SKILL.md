@@ -35,7 +35,7 @@ verified_against: []
 
 1. Classify columns: direct identifiers, quasi-identifiers, sensitive attributes, others.
 2. Direct identifiers: hash with a per-release salt or remove entirely.
-3. Quasi-identifiers: generalise (e.g., ZIP → 3 digits, DOB → year) and suppress rare values.
+3. Quasi-identifiers: generalize (e.g., ZIP → 3 digits, DOB → year) and suppress rare values.
 4. Check k-anonymity: every quasi-identifier combination covers at least k records.
 5. Check l-diversity on sensitive attributes within each k-group.
 6. Check t-closeness: the distribution of a sensitive value within a group is close to global.
@@ -64,7 +64,7 @@ verified_against: []
 - The privacy budget (epsilon, delta) is consumed once per release and tracked.
 - Generalisation rules are deterministic and versioned.
 - Re-identification risk is reported with a numeric score, not a yes/no verdict.
-- Sensitive attributes are never generalised away (l-diversity still needs them).
+- Sensitive attributes are never generalized away (l-diversity still needs them).
 
 ## Examples
 

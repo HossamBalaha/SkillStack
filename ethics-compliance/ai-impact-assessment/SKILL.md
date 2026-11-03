@@ -87,7 +87,7 @@ verified_against: []
   direct users.
 - Every identified harm must have at least one mitigation; harms without mitigations are unacceptable.
 - Human oversight must be effective: the human must have authority, competence, and time to override;
-  "human-in-the-loop" without override authority is theatre.
+  "human-in-the-loop" without override authority is theater.
 - Transparency measures must include information for deployers (Article 4) and information for affected individuals
   (Article 86, where high-risk).
 - Data governance must address representativeness and bias, not only lawful basis.

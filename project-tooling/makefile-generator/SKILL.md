@@ -25,7 +25,7 @@ verified_against: []
 
 ## When To Use
 
-- You want a single `make <target>` entrypoint so contributors don't have to memorise tool-specific commands.
+- You want a single `make <target>` entrypoint so contributors don't have to memorize tool-specific commands.
 - You are standardising across a team: everyone runs `make install`, `make test`, `make lint`.
 - You want the `zip` target to invoke `python CreateProjectZip.py` so the archive is one command away.
 - You want `make clean` to wipe every generated artifact (`__pycache__/`, `.pytest_cache/`, `dist/`, `build/`).
@@ -63,7 +63,7 @@ verified_against: []
 - Recipe lines start with a TAB character, never spaces; this is non-negotiable in Make.
 - Targets are idempotent — running `make test` twice gives the same result.
 - `make clean` must remove every artifact listed in `.gitignore` (caches, build dirs, coverage).
-- `make zip` invokes the `CreateProjectZip.py` script, not a raw `zip` command, so the denylist is honoured.
+- `make zip` invokes the `CreateProjectZip.py` script, not a raw `zip` command, so the denylist is honored.
 - Default target (first in the file) is `install` so bare `make` does the sensible thing.
 - Keep commands short; chain with `&&` so a failure stops the recipe.
 

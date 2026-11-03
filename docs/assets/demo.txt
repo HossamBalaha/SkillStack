@@ -77,7 +77,7 @@ $ User: "Run a Bayesian hyperparameter search with Optuna TPE on my CNN"
          (Aggregated/OptunaTrials.csv written, full reproducibility metadata saved)
 
   ⤷ next skill chain (if requested):
-       ml-engineering/statistical-validation-rigour → bootstrap CIs on the best trial
+       ml-engineering/statistical-validation-rigor → bootstrap CIs on the best trial
        ml-engineering/model-checkpoint-manager       → load the best checkpoint
        visualization/training-curve-visualizer       → plot loss-vs-trial
 

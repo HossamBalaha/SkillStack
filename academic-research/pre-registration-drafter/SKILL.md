@@ -71,7 +71,7 @@ verified_against: []
 - Sample size must cite the power analysis (G*Power or equivalent).
 - Exclusion criteria are pre-specified, not post-hoc.
 - Analysis population and any switching rule are pre-registered.
-- Stopping rule required for any study with interim analyses.
+- Stopping rule required for any study with interim analyzes.
 
 ## Examples
 

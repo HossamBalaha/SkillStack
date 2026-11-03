@@ -88,7 +88,7 @@ Skill chain (5 skills):
 Skill chain (5 skills):
 
 1. `ai-text/ai-text-detector` →
-2. `ai-text/ai-tell-catalogue` →
+2. `ai-text/ai-tell-catalog` →
 3. `ai-text/staging-tell-remover` →
 4. `ai-text/inflation-stripper` →
 5. `ai-text/ai-text-humanizer`
@@ -200,7 +200,7 @@ Skill chain (5 skills):
 
 1. `ai-text/ai-watermark-detector` →
 2. `ai-text/perplexity-burstiness-scorer` →
-3. `ai-text/ai-tell-catalogue` →
+3. `ai-text/ai-tell-catalog` →
 4. `ai-text/formatting-by-rule-cleaner` →
 5. `ai-text/chatbot-residue-cleaner`
 
@@ -229,7 +229,7 @@ Skill chain (7 skills):
 
 1. `ml-engineering/seed-and-device-resolver` →
 2. `ml-engineering/ablation-study-runner` →
-3. `ml-engineering/statistical-validation-rigour` →
+3. `ml-engineering/statistical-validation-rigor` →
 4. `ml-engineering/metrics-computation-suite` →
 5. `visualization/results-table-formatter` →
 6. `visualization/training-curve-visualizer` →

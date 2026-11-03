@@ -143,7 +143,7 @@ Items captured but not yet scheduled:
   skills by invocation frequency, with a "most-used" leaderboard in the
   Streamlit browser.
 - **AI-red-team theme.** Skills for red-teaming LLMs: adversarial prompt
-  generation, jailbreak catalogues, automated jailbreak discovery,
+  generation, jailbreak catalogs, automated jailbreak discovery,
   model-extraction attack patterns.
 
 None of these have a target version. Open an issue on the SkillStack repo

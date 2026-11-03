@@ -82,14 +82,14 @@ verified_against: []
 ## Key Rules
 
 - "Sale" under CCPA includes any exchange of personal information for monetary or other valuable consideration; "share"
-  includes cross-context behavioural advertising even without payment.
+  includes cross-context behavioral advertising even without payment.
 - Sensitive personal information includes precise geolocation, racial/ethnic origin, religious beliefs, biometric data
   for identification, health data, financial account credentials, and contents of mail/email/text unless for business
   purposes.
-- The privacy policy must be updated at least every 12 months; changes must be summarised for consumers.
+- The privacy policy must be updated at least every 12 months; changes must be summarized for consumers.
 - A consumer's right to know covers the 12 months preceding the request; longer look-backs are optional but must be
   offered if technically feasible.
-- The opt-out preference signals (Global Privacy Control) must be honoured as a valid opt-out request.
+- The opt-out preference signals (Global Privacy Control) must be honored as a valid opt-out request.
 - Service provider contracts must explicitly prohibit using personal information for any purpose other than the business
   purposes specified.
 - The 45-day response window may be extended once by 45 days with notice to the consumer.
@@ -110,6 +110,6 @@ Consumer request workflow (delete):
 Privacy policy gap finding:
   Missing: categories of third-party recipients in last 12 months.
   Missing: description of sensitive personal information collected.
-  Missing: notice that GPC signals are honoured.
+  Missing: notice that GPC signals are honored.
   Severity: HIGH. Remediation deadline: 30 days.
 ```

@@ -6,8 +6,8 @@ metadata:
   version: "1.0"
   theme: ai-text
 tags: [humanization, staging, rewriting, ai-text]
-related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/inflation-stripper, ai-text/ai-tell-catalogue]
-prerequisites: [ai-text/ai-tell-catalogue]
+related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/inflation-stripper, ai-text/ai-tell-catalog]
+prerequisites: [ai-text/ai-tell-catalog]
 outputs: [markdown]
 difficulty: intermediate
 estimated_tokens: 2100
@@ -25,7 +25,7 @@ verified_against: []
 
 ## When To Use
 
-- `ai-text-detector` flagged staging-category tells (catalogue #1-#5).
+- `ai-text-detector` flagged staging-category tells (catalog #1-#5).
 - A draft repeatedly tells the reader how important something is rather than what it is.
 - A passage opens with "Let's dive in" or "Here's what you need to know" before the actual content.
 - A sentence argues against a position nobody took ("A tempting approach would be… but").
@@ -33,7 +33,7 @@ verified_against: []
 
 ## Workflow
 
-1. Identify staging tells using the catalogue (#1 Not X but Y; #2 one-line closers; #3 sayings that sound deep; #4
+1. Identify staging tells using the catalog (#1 Not X but Y; #2 one-line closers; #3 sayings that sound deep; #4
    staged run-ups; #5 arguing with no one).
 2. For each match, locate the underlying factual claim.
 3. Apply the canonical fix:

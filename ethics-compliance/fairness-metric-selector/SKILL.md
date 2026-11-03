@@ -55,7 +55,7 @@ verified_against: []
    negatives and false positives both carry harm to candidates".
 10. Specify acceptance thresholds: e.g., disparate impact ratio >= 0.8 (four-fifths rule) or equalized odds
     difference <= 0.05.
-11. Provide a code snippet that computes the chosen metrics from a predictions file and produces the visualisations.
+11. Provide a code snippet that computes the chosen metrics from a predictions file and produces the visualizations.
 12. Document the limitations and the next-step mitigations: data augmentation, reweighting, threshold adjustment, or
     post-processing.
 
@@ -71,7 +71,7 @@ verified_against: []
 
 - `metric_catalog.md` — every metric with definition, assumptions, and failure modes.
 - `metric_results.md` — point estimate and 95% bootstrap CI per subgroup for each candidate metric.
-- `tradeoff_heatmap.svg` — metric × subgroup visualisation.
+- `tradeoff_heatmap.svg` — metric × subgroup visualization.
 - `pareto_frontier.svg` — conflicting metrics Pareto frontier.
 - `justification.md` — chosen metric, threshold, and rationale against the application context.
 - `compute_fairness.py` — Python snippet that loads predictions and produces the metrics and figures.

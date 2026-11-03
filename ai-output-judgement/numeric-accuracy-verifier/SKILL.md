@@ -84,7 +84,7 @@ Status: INCORRECT.  Correction: "15% of 460 is 69."
 ```
 
 ```text
-Output: "The world population reached 8 billion in November 2022."
+Output: "World population to reach 8 billion on 15 November 2022."
 Type: date + statistical.
 Date check: Wikidata Q... confirms UN projected 8 billion on 15 Nov 2022.
 Source value: 8,000,000,000 (UN World Population Prospects).

@@ -1,11 +1,11 @@
 ---
-name: ai-tell-catalogue
-description: Reference catalogue of 26 AI tells organized into six categories, each with a name, what to watch for, why it is a problem, and a before/after pair. Use this as the lookup table when running `ai-text-detector` or `ai-text-humanizer`; do not invent new tells on the fly.
+name: ai-tell-catalog
+description: Reference catalog of 26 AI tells organized into six categories, each with a name, what to watch for, why it is a problem, and a before/after pair. Use this as the lookup table when running `ai-text-detector` or `ai-text-humanizer`; do not invent new tells on the fly.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
-tags: [reference, ai-tells, catalogue, ai-text]
+tags: [reference, ai-tells, catalog, ai-text]
 related: [ai-text/ai-text-detector, ai-text/ai-text-humanizer, ai-text/severity-classifier]
 prerequisites: []
 outputs: [markdown]
@@ -33,10 +33,10 @@ verified_against: []
 ## Workflow
 
 1. Receive a candidate phrase or pattern from the detector or humanizer.
-2. Look up the phrase against the catalogue, scanning each of the six categories.
+2. Look up the phrase against the catalog, scanning each of the six categories.
 3. If matched, return the tell's canonical name, severity, and the recommended fix.
 4. If not matched, do NOT invent a new tell ad hoc. Return `unknown-tell` and let the caller treat it as S1 at most.
-5. When extending the catalogue (rare), add the tell through a versioned update to this file, with before/after examples
+5. When extending the catalog (rare), add the tell through a versioned update to this file, with before/after examples
    you have written yourself.
 
 ## Inputs
@@ -52,12 +52,12 @@ verified_against: []
 
 ## Key Rules
 
-- This catalogue is the single source of truth. Detector and humanizer MUST consult it; they do not invent tells.
+- This catalog is the single source of truth. Detector and humanizer MUST consult it; they do not invent tells.
 - 26 tells total: 5 staging, 7 rhythm-by-rule, 5 inflation, 4 formatting-by-rule, 4 leftovers, 1 wrong-reader.
-- Severity labels in this catalogue are defaults; `severity-classifier` may upgrade or downgrade based on context.
+- Severity labels in this catalog are defaults; `severity-classifier` may upgrade or downgrade based on context.
 - Before/after examples here are illustrative, not prescriptive. The humanizer may produce different fixes if voice
   demands it.
-- Never copy catalogue text verbatim into user-facing output. Use paraphrase.
+- Never copy catalog text verbatim into user-facing output. Use paraphrase.
 - Adding a new tell requires a version bump (e.g. 1.0 → 1.1).
 
 ## The 26 Tells

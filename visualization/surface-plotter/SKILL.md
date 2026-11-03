@@ -1,6 +1,6 @@
 ---
 name: surface-plotter
-description: Plot 3D surfaces with proper view angles, colourbars, and a 2D contour overlay for loss landscapes. Trigger when visualising loss landscapes, response surfaces, or any scalar field over two variables.
+description: Plot 3D surfaces with proper view angles, colorbars, and a 2D contour overlay for loss landscapes. Trigger when visualising loss landscapes, response surfaces, or any scalar field over two variables.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -27,7 +27,7 @@ verified_against: []
 
 - Visualising a loss landscape over two parameters.
 - Plotting a response surface from a DOE study.
-- Inspecting a 2-D scalar field with height and colour.
+- Inspecting a 2-D scalar field with height and color.
 - Producing both a 3-D surface and a 2-D contour for a paper.
 
 ## Workflow
@@ -37,7 +37,7 @@ verified_against: []
 3. Create a 3-D axis with `mpl_toolkits.mplot3d.Axes3D`.
 4. Plot the surface with `ax.plot_surface(X, Y, Z, cmap="viridis")`.
 5. Set the view angle via `ax.view_init(elev=30, azim=45)`.
-6. Add a colourbar and label axes with units.
+6. Add a colorbar and label axes with units.
 7. Produce a 2-D contour overlay for the same field.
 8. Save both views as PDF for the manuscript.
 
@@ -45,21 +45,21 @@ verified_against: []
 
 - Two 1-D arrays `x` and `y` defining the grid.
 - A callable `Z = f(x, y)` or a precomputed 2-D array.
-- Axis labels with units and an optional colourbar label.
+- Axis labels with units and an optional colorbar label.
 
 ## Outputs
 
 - A PDF with the 3-D surface.
 - A PDF with the 2-D contour overlay.
-- A JSON record of the view angle and colour map for reproducibility.
+- A JSON record of the view angle and color map for reproducibility.
 
 ## Key Rules
 
 - Use `ax.view_init(elev=30, azim=45)` as the default camera.
-- Always include a colourbar labelled with the quantity and units.
+- Always include a colorbar labelled with the quantity and units.
 - Label axes with units, not bare variable names.
 - Produce a 2-D contour overlay for loss landscapes.
-- Keep `constrained_layout=True` so the colourbar fits.
+- Keep `constrained_layout=True` so the colorbar fits.
 - Use `cmap="viridis"` or another perceptually uniform map.
 
 ## Examples
@@ -93,7 +93,7 @@ def PlotSurface(x, y, zFunc, outputPath):
   cf = ax2d.contourf(X, Y, Z, levels=20, cmap="viridis")
   ax2d.set_xlabel("Parameter A (a.u.)")
   ax2d.set_ylabel("Parameter B (a.u.)")
-  # Shared colourbar placed outside the axes.
+  # Shared colorbar placed outside the axes.
   cbar = fig.colorbar(cf, ax=ax2d, shrink=0.8)
   cbar.set_label("Loss")
   fig.savefig(outputPath, format="pdf")

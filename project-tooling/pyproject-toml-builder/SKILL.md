@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: project-tooling
-tags: [pyproject, packaging, pep-621, build-system]
-related: [project-tooling/requirements-pinner, project-tooling/environment-yaml-builder, project-tooling/pre-commit-hook-builder, project-tooling/license-selector]
-prerequisites: []
-outputs: [bash]
+tags: [ pyproject, packaging, pep-621, build-system ]
+related: [ project-tooling/requirements-pinner, project-tooling/environment-yaml-builder, project-tooling/pre-commit-hook-builder, project-tooling/license-selector ]
+prerequisites: [ ]
+outputs: [ bash ]
 difficulty: intermediate
 estimated_tokens: 2000
 permissions:
@@ -18,7 +18,7 @@ permissions:
   execute_code: false
 language: en
 last_reviewed: 2026-11-02
-verified_against: []
+verified_against: [ ]
 ---
 
 # Pyproject Toml Builder
@@ -79,11 +79,11 @@ authors = [{ name = "Lab Tooling", email = "tooling@example.org" }]
 license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = [
-  "numpy",
-  "pandas",
-  "torch",
-  "optuna",
-  "tqdm",
+    "numpy",
+    "pandas",
+    "torch",
+    "optuna",
+    "tqdm",
 ]
 
 [project.optional-dependencies]

@@ -90,12 +90,12 @@ System prompt (excerpt):
 User:
   <context>
   [1] (doc-7#chunk-3): "The Eiffel Tower was completed in 1889 for the World's Fair."
-  [2] (doc-9#chunk-1): "It is 330 metres tall."
+  [2] (doc-9#chunk-1): "It is 330 meters tall."
   </context>
   When was the Eiffel Tower completed and how tall is it?
 
 Assistant:
-  The Eiffel Tower was completed in 1889 for the World's Fair [1] and stands 330 metres tall [2].
+  The Eiffel Tower was completed in 1889 for the World's Fair [1] and stands 330 meters tall [2].
   Sources: [1] doc-7#chunk-3, [2] doc-9#chunk-1
 ```
 

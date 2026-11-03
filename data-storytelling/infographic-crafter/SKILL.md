@@ -1,6 +1,6 @@
 ---
 name: infographic-crafter
-description: Craft single-takeaway infographics with deliberate visual hierarchy, a curated icon set, statistics callouts at display size, and a restrained colour palette. Use when the user needs a one-page visual summary of a report, a social-share graphic, or a briefing card for a non-technical audience.
+description: Craft single-takeaway infographics with deliberate visual hierarchy, a curated icon set, statistics callouts at display size, and a restrained color palette. Use when the user needs a one-page visual summary of a report, a social-share graphic, or a briefing card for a non-technical audience.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -25,7 +25,7 @@ verified_against: []
 
 ## When To Use
 
-- The user says "summarise this report on one page" or "make me a shareable graphic".
+- The user says "summarize this report on one page" or "make me a shareable graphic".
 - The audience is non-technical and will not read past the headline numbers.
 - A briefing needs to land a single takeaway without scrolling.
 - The user wants an SVG or PDF that prints cleanly at A4 and shares on social.
@@ -37,7 +37,7 @@ verified_against: []
 2. Pull three to five key statistics that anchor the takeaway; reject any that do not support it.
 3. Choose a layout: title block, key-stat row, and one detail column or icon list.
 4. Select icons from a single consistent set; one icon per section, no mixing styles.
-5. Restrict the palette to three or four colours: one dark, one accent, one neutral, one alert.
+5. Restrict the palette to three or four colors: one dark, one accent, one neutral, one alert.
 6. Size the key statistic numbers at display size (at least 60 pt) with short captions beneath.
 7. Render as HTML/CSS and snapshot to PNG, SVG, or PDF via Playwright or D3-to-SVG.
 8. Verify readability at the intended display size; if text shrinks below 14 pt, cut content.
@@ -47,7 +47,7 @@ verified_against: []
 
 - A source report or dataset and the headline takeaway.
 - Optional preselected key statistics.
-- Brand palette or an open-licence icon set (Feather, Material, Phosphor).
+- Brand palette or an open-license icon set (Feather, Material, Phosphor).
 - Output format: HTML, SVG, or PDF for print.
 
 ## Outputs
@@ -55,14 +55,14 @@ verified_against: []
 - `infographic.html` — standalone HTML, mobile and print friendly.
 - `infographic.svg` — vector version for embedding and editing.
 - `infographic.pdf` — print-ready PDF when requested.
-- `palette.json` — the three or four colours and their roles.
+- `palette.json` — the three or four colors and their roles.
 - `takeaway.md` — the single sentence plus the supporting stats.
 
 ## Key Rules
 
 - One takeaway per infographic; if there are two, make two infographics.
-- Hierarchy is enforced by size first, colour second, weight third.
-- Palette is three or four colours total; one is reserved for the alert state.
+- Hierarchy is enforced by size first, color second, weight third.
+- Palette is three or four colors total; one is reserved for the alert state.
 - Icons come from one set; mixing line and filled icons is forbidden.
 - Key statistic numbers are display-sized with captions beneath, never beside.
 - Text is sparse; if a reader has to read a paragraph, it is not an infographic.

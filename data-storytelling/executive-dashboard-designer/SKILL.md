@@ -1,6 +1,6 @@
 ---
 name: executive-dashboard-designer
-description: Design executive dashboards that surface the right KPI hierarchy, encode state with restrained colour, annotate thresholds, and offer drill-down paths that hold up on mobile. Use when the user is building a leadership-facing dashboard, fixing a cluttered KPI wall, or wiring annotations and drill-downs into a Streamlit, Dash, or Power BI view.
+description: Design executive dashboards that surface the right KPI hierarchy, encode state with restrained color, annotate thresholds, and offer drill-down paths that hold up on mobile. Use when the user is building a leadership-facing dashboard, fixing a cluttered KPI wall, or wiring annotations and drill-downs into a Streamlit, Dash, or Power BI view.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -36,13 +36,13 @@ verified_against: []
 1. List the three to five questions an executive will ask at 7 a.m. and at 4 p.m.; each becomes a tile.
 2. Build a KPI tree: a single north-star metric, two to three driver metrics, and supporting detail.
 3. For each metric, define the target, the alert threshold, and the comparison baseline (last week, last year).
-4. Map colour to state only: green for on-track, amber for watch, red for breach; no decorative colour.
+4. Map color to state only: green for on-track, amber for watch, red for breach; no decorative color.
 5. Place KPI cards top-left, supporting charts below, and drill-down tables reachable via click-through.
 6. Annotate every chart with the threshold line and a one-line caption naming the action it implies.
 7. Wire drill-down: click a KPI card to filter the charts to that segment and reveal the next layer.
 8. Verify on a 360-pixel-wide viewport: cards stack, fonts stay above 14 pt, no horizontal scroll.
 9. Add a "last refreshed" stamp and a data-quality flag tied to the ingestion job.
-10. Smoke-test the alert state by injecting a breach value and confirming the colour flips.
+10. Smoke-test the alert state by injecting a breach value and confirming the color flips.
 
 ## Inputs
 
@@ -53,7 +53,7 @@ verified_against: []
 
 ## Outputs
 
-- `dashboard_spec.yaml` — KPI tree, thresholds, drill-down map, colour rules.
+- `dashboard_spec.yaml` — KPI tree, thresholds, drill-down map, color rules.
 - `app.py` — Streamlit or Dash skeleton wired to the spec.
 - `kpi_cards.html` — standalone card components for embedding.
 - `annotation_layer.md` — captions and threshold lines per chart.
@@ -62,7 +62,7 @@ verified_against: []
 ## Key Rules
 
 - A dashboard answers questions; it does not display data. Every tile ties to a question.
-- Colour encodes state, never decoration; reserve red for breaches only.
+- Color encodes state, never decoration; reserve red for breaches only.
 - Maximum five KPI cards above the fold; everything else is a drill-down.
 - Every chart has a one-line caption naming the action it implies.
 - Targets and thresholds are visible on the chart, not hidden in a tooltip.
@@ -72,7 +72,7 @@ verified_against: []
 ## Examples
 
 ```python
-# Streamlit executive dashboard: KPI cards with state colour + drill-down.
+# Streamlit executive dashboard: KPI cards with state color + drill-down.
 import pandas as pd
 import streamlit as st
 

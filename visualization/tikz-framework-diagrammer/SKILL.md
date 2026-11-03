@@ -35,7 +35,7 @@ verified_against: []
 
 1. List every pipeline stage and the blocks inside each stage.
 2. Assign a short identifier per block (for example, `Conv2D, k=3`).
-3. Choose a subtle colour per stage from a perceptually uniform palette.
+3. Choose a subtle color per stage from a perceptually uniform palette.
 4. Lay out nodes on a grid with generous horizontal and vertical spacing.
 5. Wrap each stage in a solid grouping box (never dashed).
 6. Connect blocks with arrows anchored explicitly via `.east` and `.west`.
@@ -46,7 +46,7 @@ verified_against: []
 ## Inputs
 
 - A pipeline specification listing stages, blocks, and connections.
-- A colour palette mapping stage names to fills.
+- A color palette mapping stage names to fills.
 - Optional caption text for the figure environment.
 
 ## Outputs
@@ -60,7 +60,7 @@ verified_against: []
 - Node labels must be concise identifiers, never dense math formulations.
 - Grouping boxes use SOLID lines; never dashed.
 - Every arrow uses explicit anchors (`.east`, `.west`, `.north`, `.south`).
-- Reserve subtle colour coding for pipeline stages, not for emphasis.
+- Reserve subtle color coding for pipeline stages, not for emphasis.
 - Wrap the whole picture in `\resizebox{\linewidth}{!}{...}`.
 - Keep padding generous; never let boxes touch arrows or text.
 

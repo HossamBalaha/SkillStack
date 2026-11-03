@@ -105,7 +105,7 @@
 - `pytorch-lightning-scaffold`
 - `reproducible-experiment-runner`
 - `seed-and-device-resolver`
-- `statistical-validation-rigour`
+- `statistical-validation-rigor`
 - `train-val-test-splitter`
 - `transformer-finetuner`
 
@@ -182,7 +182,7 @@
 
 > Detect & humanize AI text; perplexity, burstiness, watermark detection.
 
-- `ai-tell-catalogue`
+- `ai-tell-catalog`
 - `ai-text-detector`
 - `ai-text-humanizer`
 - `ai-watermark-detector`
@@ -395,7 +395,7 @@ Themes captured but not yet scheduled (see `docs/ROADMAP.md`):
   shadow-deploy patterns. Distinct from `devops` and `ml-engineering`.
 - `security/` — threat-modeling skills, SBOM generation, secret scanning,
   dependency-vuln triage. Distinct from `ethics-compliance`.
-- `ai-red-team/` — adversarial prompt generation, jailbreak catalogues,
+- `ai-red-team/` — adversarial prompt generation, jailbreak catalogs,
   automated jailbreak discovery, model-extraction attack patterns.
 
 Per-skill versioning (semver in the frontmatter) is on the backlog; it

@@ -26,14 +26,14 @@ verified_against: []
 ## When To Use
 
 - Generating a final figure for a journal submission (Nature, Science, PRL, IEEE, NeurIPS camera-ready).
-- Matching a strict column width in millimetres and avoiding LaTeX-side resizing.
+- Matching a strict column width in millimeters and avoiding LaTeX-side resizing.
 - Mixing vector (PDF/EPS) and raster (PNG) output formats in one pipeline.
 - Ensuring font sizes survive the editorial typesetting pipeline.
 
 ## Workflow
 
-1. Determine the target journal and its column width in millimetres.
-2. Convert millimetres to inches using `ONE_MM = 1 / 25.4`.
+1. Determine the target journal and its column width in millimeters.
+2. Convert millimeters to inches using `ONE_MM = 1 / 25.4`.
 3. Pick the minimum font size per journal policy (Nature 7pt, PRL 8pt).
 4. Build the figure with `plt.subplots(figsize=..., constrained_layout=True)`.
 5. Register the Chinese font plus DejaVu Sans fallback.

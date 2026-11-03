@@ -6,7 +6,7 @@ metadata:
   version: "1.0"
   theme: ml-engineering
 tags: [metrics, f1, auc, mcc, cohen-kappa, calibration]
-related: [ml-engineering/statistical-validation-rigour, ml-engineering/ablation-study-runner, ml-engineering/baseline-model-zoo]
+related: [ml-engineering/statistical-validation-rigor, ml-engineering/ablation-study-runner, ml-engineering/baseline-model-zoo]
 prerequisites: []
 outputs: [python, json, csv]
 difficulty: advanced

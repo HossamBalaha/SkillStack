@@ -26,7 +26,7 @@ verified_against: []
 ## When To Use
 
 - The user says "prepare our ethics checklist", "what COPE items do we need?", or "ready our submission package".
-- A manuscript is being finalised and the journal requires a research ethics disclosure section.
+- A manuscript is being finalized and the journal requires a research ethics disclosure section.
 - A grant proposal needs an ethics annex covering human subjects, animals, conflicts, and data sharing.
 - An institutional review is auditing past submissions for ethics compliance.
 - Trigger keywords: research ethics, COPE, ICMJE, conflict of interest, funding, data sharing, animal welfare, IRB
@@ -45,13 +45,13 @@ verified_against: []
    competition), and intellectual (deeply held beliefs). State "none declared" only when truly none.
 6. Compile funding sources: funder name, grant number, funder role (if any), and a statement if the funder had no role.
 7. Compile data sharing commitments: what will be shared, where (repository with DOI), when (immediately or embargo),
-   under what licence, and any access conditions.
+   under what license, and any access conditions.
 8. Author contributions: CRediT taxonomy per author, with explicit statements on conceptualisation, methodology,
-   software, validation, analysis, writing, visualisation, supervision, and administration.
+   software, validation, analysis, writing, visualization, supervision, and administration.
 9. Address authorship criteria: ICMJE four criteria (substantial contribution, drafting or revising, final approval,
    accountability) — flag any author failing any criterion.
 10. Address registration: clinical trial registration number (if applicable) per ICMJE requirement and pre-registration
-    of analyses.
+    of analyzes.
 11. Address dual-use and biosafety (if applicable): refer to the dual-use-research-reviewer skill outputs.
 12. Produce the checklist as a Markdown table and as a YAML file for downstream tooling, with each item assigned an
     owner and a status.
@@ -71,7 +71,7 @@ verified_against: []
 - `animal_welfare_section.md` — IACUC approval, 3Rs, ARRIVE 2.0.
 - `conflict_of_interest.md` — COI declarations per author.
 - `funding_statement.md` — funders, grant numbers, funder role.
-- `data_sharing_statement.md` — what, where, when, licence, access.
+- `data_sharing_statement.md` — what, where, when, license, access.
 - `credit_contributions.md` — CRediT taxonomy per author.
 - `ethics_checklist.yaml` — machine-readable items with status and owner.
 
@@ -80,7 +80,7 @@ verified_against: []
 - "No conflict of interest" is only valid when the author has reviewed the full COI definition; default to disclosure.
 - ICMJE requires all four authorship criteria to be met; honorary and ghost authorship are non-compliant.
 - IRB approval numbers must be verifiable; placeholder values are non-conformances.
-- Data sharing statements must specify the repository, DOI, licence, and access conditions; "available upon request" is
+- Data sharing statements must specify the repository, DOI, license, and access conditions; "available upon request" is
   non-compliant under most modern policies.
 - Animal research must report on the 3Rs and follow ARRIVE 2.0; absence of reporting is a non-conformance.
 - Funding sources must include the funder's role; "no role" must be stated explicitly, not implied.

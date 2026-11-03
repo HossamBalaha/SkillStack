@@ -31,7 +31,7 @@ Rules:
 - **`SKILL.md` is the only required file.** Do not ship scripts, notebooks, or binaries inside a skill folder unless the
   skill explicitly generates them at runtime. Skills are instructions, not executables.
 - The optional **`references/`** subfolder holds longer reference material the agent reads on demand (e.g., an API
-  cheat-sheet, an edge-case catalogue). Reference it from the `References` section of `SKILL.md`.
+  cheat-sheet, an edge-case catalog). Reference it from the `References` section of `SKILL.md`.
 
 ---
 

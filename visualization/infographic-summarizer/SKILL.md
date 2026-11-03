@@ -1,6 +1,6 @@
 ---
 name: infographic-summarizer
-description: Convert dense reports into single-page infographics with visual hierarchy, key-stat callouts, and a limited colour palette. Trigger when summarising a long document, briefing report, or survey for a one-page visual.
+description: Convert dense reports into single-page infographics with visual hierarchy, key-stat callouts, and a limited color palette. Trigger when summarising a long document, briefing report, or survey for a one-page visual.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -36,7 +36,7 @@ verified_against: []
 2. Pull out three to five key statistics that anchor the message.
 3. Choose a layout: title block, key-stat row, and detail columns.
 4. Select icons for each section from a consistent icon set.
-5. Restrict the colour palette to three or four colours total.
+5. Restrict the color palette to three or four colors total.
 6. Render as HTML/CSS and snapshot via Playwright to PNG or PDF.
 7. Review readability at the intended display size and iterate.
 
@@ -44,7 +44,7 @@ verified_against: []
 
 - Source document (markdown, HTML, or plain text).
 - Optional key statistics already chosen by the author.
-- Brand palette and an icon set (for example, an open-licence emoji set).
+- Brand palette and an icon set (for example, an open-license emoji set).
 
 ## Outputs
 
@@ -55,7 +55,7 @@ verified_against: []
 ## Key Rules
 
 - Establish visual hierarchy: title, key stats, then details.
-- Limit the palette to three or four colours.
+- Limit the palette to three or four colors.
 - Every section is paired with an icon for fast scanning.
 - Key statistics are large numerals with short captions.
 - Text is sparse; visuals carry the message.
@@ -68,7 +68,7 @@ verified_against: []
 from playwright.sync_api import sync_playwright
 
 def BuildHtml(title, stats, details):
-  # Assemble an HTML string with a strict four-colour palette.
+  # Assemble an HTML string with a strict four-color palette.
   palette = ["#1f3a5f", "#2e86ab", "#a8d0e6", "#f6c89f"]
   statCards = ""
   for (i, s) in enumerate(stats):

@@ -1,12 +1,12 @@
 ---
 name: ai-text-detector
-description: Detect AI-generated text by scanning for a structured catalogue of tells across lexical, structural, thematic, tonal, statistical, and citation categories. Use when you need to assess whether a passage was likely written by an LLM, audit a document for machine-written sections, or triage submissions for human review.
+description: Detect AI-generated text by scanning for a structured catalog of tells across lexical, structural, thematic, tonal, statistical, and citation categories. Use when you need to assess whether a passage was likely written by an LLM, audit a document for machine-written sections, or triage submissions for human review.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: ai-text
 tags: [ai-detection, tells, perplexity, burstiness]
-related: [ai-text/ai-tell-catalogue, ai-text/severity-classifier, ai-text/perplexity-burstiness-scorer, ai-text/citation-hallucination-detector]
+related: [ai-text/ai-tell-catalog, ai-text/severity-classifier, ai-text/perplexity-burstiness-scorer, ai-text/citation-hallucination-detector]
 prerequisites: []
 outputs: [markdown, json]
 difficulty: intermediate
@@ -36,7 +36,7 @@ verified_against: []
 1. Read the full passage once end-to-end without judging.
 2. Split the text into analysis windows (paragraph or ~300-word blocks).
 3. For each window, scan the six tell categories in order: lexical, structural, thematic, tonal, statistical, citation.
-4. Cross-reference every match against the `ai-tell-catalogue` to confirm it is a known pattern.
+4. Cross-reference every match against the `ai-tell-catalog` to confirm it is a known pattern.
 5. Assign each match a severity level (S1-S4) using `severity-classifier`.
 6. Record the evidence: tell name, location (quote + offset), category, severity.
 7. Apply the cumulative-evidence rule R1: a single S1 or S2 match is never enough on its own. Require at least two

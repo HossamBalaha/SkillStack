@@ -9,7 +9,7 @@
 # Install with:
 #   pip install -r requirements-scripts.txt
 
-pyyaml>=6.0
-requests>=2.31
-rich>=13.7
-click>=8.1
+pyyaml
+requests
+rich
+click

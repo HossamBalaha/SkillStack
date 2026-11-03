@@ -94,7 +94,7 @@ verified_against: []
 ```text
 Lawful basis decision (e-commerce analytics):
   Basis: Article 6(1)(f) legitimate interests.
-  Balancing test: analytics necessary to improve service; data minimised; opt-out available.
+  Balancing test: analytics necessary to improve service; data minimized; opt-out available.
   Special category: none.
   Retention: 13 months then aggregated.
   Documented in LIA dated 2024-03-12.

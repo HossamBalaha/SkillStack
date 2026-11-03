@@ -6,8 +6,8 @@ metadata:
   version: "1.0"
   theme: ai-text
 tags: [humanization, formatting, prose, ai-text]
-related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/chatbot-residue-cleaner, ai-text/ai-tell-catalogue]
-prerequisites: [ai-text/ai-tell-catalogue]
+related: [ai-text/ai-text-humanizer, ai-text/ai-text-detector, ai-text/chatbot-residue-cleaner, ai-text/ai-tell-catalog]
+prerequisites: [ai-text/ai-tell-catalog]
 outputs: [markdown]
 difficulty: intermediate
 estimated_tokens: 2400
@@ -25,7 +25,7 @@ verified_against: []
 
 ## When To Use
 
-- `ai-text-detector` flagged formatting-by-rule tells (catalogue #18-#21).
+- `ai-text-detector` flagged formatting-by-rule tells (catalog #18-#21).
 - A document bolds random words for emphasis inside flowing prose.
 - Headings are in Title Case, decorated with emojis, or followed by horizontal rules between every section.
 - Code or plain-text contains curly ("smart") quotation marks that break tools.
@@ -33,7 +33,7 @@ verified_against: []
 
 ## Workflow
 
-1. Identify formatting tells using the catalogue (#18-#21).
+1. Identify formatting tells using the catalog (#18-#21).
 2. Apply the canonical fixes:
     - **Bold as decoration**: remove bold unless it carries structural meaning (a defined term on first use, a column
       header, a UI label the user must click). Emphasis in flowing prose is removed.
@@ -159,7 +159,7 @@ The system is fast, reliable, and scalable.
 - emoji in heading (#20)        | "🚀"               | removed
 - bold as decoration (#18)      | "**Key Takeaways**" | heading un-bolded, sentence-cased
 - bold as decoration (#18)      | "**fast**", "**reliable**", "**scalable**" | removed
-- italic as decoration          | "*game-changer*"   | removed (no catalogue entry; treated as bold sibling)
+- italic as decoration          | "*game-changer*"   | removed (no catalog entry; treated as bold sibling)
 - decorative hr (#21)           | "---"              | removed
 - bold as decoration (#18)      | "**What's Next?**" | un-bolded, sentence-cased
 - curly quote (#21)             | "What's"           | straightened

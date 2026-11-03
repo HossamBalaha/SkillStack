@@ -1,6 +1,6 @@
 ---
 name: embedding-projector
-description: Project high-dimensional embeddings to 2D or 3D using PCA, t-SNE, or UMAP with label colouring. Trigger when inspecting latent spaces, comparing encoders, or producing a t-SNE scatter for a paper.
+description: Project high-dimensional embeddings to 2D or 3D using PCA, t-SNE, or UMAP with label coloring. Trigger when inspecting latent spaces, comparing encoders, or producing a t-SNE scatter for a paper.
 metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
@@ -36,7 +36,7 @@ verified_against: []
 2. Choose a projector: PCA (fast, linear), t-SNE (local structure, slow), or UMAP (local plus global).
 3. Subsample if the dataset exceeds a few thousand points to keep t-SNE tractable.
 4. Project to 2-D (or 3-D) and store the coordinates.
-5. Colour points by label using a colourblind-friendly palette.
+5. Color points by label using a colorblind-friendly palette.
 6. Save a static PDF and optionally an interactive HTML via plotly.
 7. Optionally export TensorBoard Projector checkpoints for exploration.
 
@@ -48,7 +48,7 @@ verified_against: []
 
 ## Outputs
 
-- A static PDF/PNG scatter with a colour legend.
+- A static PDF/PNG scatter with a color legend.
 - An interactive HTML (plotly) when requested.
 - TensorBoard Projector variable and metadata files when requested.
 
@@ -56,7 +56,7 @@ verified_against: []
 
 - Use PCA for a fast linear baseline before non-linear methods.
 - Subsample before t-SNE when the dataset exceeds a few thousand points.
-- Colour points by label using a colourblind-friendly palette.
+- Color points by label using a colorblind-friendly palette.
 - Report the projector, perplexity (t-SNE), or `n_neighbors` (UMAP) in the caption.
 - Always set a random seed for reproducibility.
 - Place legends outside the axes via `bbox_to_anchor`.
@@ -87,7 +87,7 @@ def ProjectEmbeddings(embeddings, labels, method="pca", outputPath="emb.pdf"):
     from umap import UMAP
     model = UMAP(n_components=2, n_neighbors=15, random_state=0)
   coords = model.fit_transform(embeddings)
-  # Scatter coloured by label.
+  # Scatter colored by label.
   fig, ax = plt.subplots(figsize=(3.5, 3.0), constrained_layout=True)
   for (lab) in np.unique(labels):
     mask = np.asarray(labels) == lab

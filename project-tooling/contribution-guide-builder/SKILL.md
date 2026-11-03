@@ -26,7 +26,7 @@ verified_against: []
 ## When To Use
 
 - You are opening a repo to external contributors and need a single onboarding doc.
-- The team has inconsistent branch names and commit messages and you want to standardise.
+- The team has inconsistent branch names and commit messages and you want to standardize.
 - You want every contributor to run the same dev setup (clone → install dev deps → run tests).
 - You need to link out to the repo's `coding-conventions-enforcer` skill so style is enforced uniformly.
 

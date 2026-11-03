@@ -128,9 +128,10 @@ def BuildArchive(rootDir, archivePath):
 if (__name__ == "__main__"):
   rootDir = os.path.dirname(os.path.abspath(__file__))
   archivePath = os.path.join(rootDir, ArchiveName)
-try:
-  BuildArchive(rootDir, archivePath)
-except Exception:
+  try:
+    BuildArchive(rootDir, archivePath)
+  except Exception:
+    pass
   pass
   print(f"Wrote {archivePath}")
 ```

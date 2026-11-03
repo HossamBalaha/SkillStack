@@ -41,7 +41,7 @@ verified_against: []
    literature; report the formula and inputs.
 5. Specify data-collection instruments (validated scales, interview guides, sensors, administrative data) and their
    psychometric properties.
-6. Detail the analytic plan: descriptive statistics, primary inferential test, pre-specified subgroup analyses, and
+6. Detail the analytic plan: descriptive statistics, primary inferential test, pre-specified subgroup analyzes, and
    handling of missing data.
 7. Address ethics: IRB oversight, informed consent process, data-anonymization, conflicts of interest, and benefit/risk
    balance.

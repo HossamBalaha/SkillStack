@@ -18,7 +18,7 @@
 [![SHAP](https://img.shields.io/badge/SHAP-Explainability-9b59b6)](https://shap.readthedocs.io)
 [![pytest](https://img.shields.io/badge/pytest-scientific-0a9ed4?logo=pytest&logoColor=white)](https://docs.pytest.org)
 [![Docker](https://img.shields.io/badge/Docker-reproducible-2496ed?logo=docker&logoColor=white)](https://www.docker.com)
-[![BibTeX](https://img.shields.io/badge/BibTeX-managed-lightgrey)](https://www.bibtex.org)
+[![BibTeX](https://img.shields.io/badge/BibTeX-managed-lightgray)](https://www.bibtex.org)
 [![CLI](https://img.shields.io/badge/CLI-Skill.py-blueviolet)](scripts/Skill.py)
 [![MCP](https://img.shields.io/badge/MCP-server-teal)](mcp-server/)
 
@@ -173,7 +173,7 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 1  | [`modular-ml-architect`](ml-engineering/modular-ml-architect/SKILL.md)                     | Enforce modular Python conventions: 2-space indent, CamelCase, period-ended comments.    | `ml-engineering/modular-ml-architect/SKILL.md`           |
 | 2  | [`reproducible-experiment-runner`](ml-engineering/reproducible-experiment-runner/SKILL.md) | Setup reproducible experiments: device resolution, seeds, dual logging, 4-split folders. | `ml-engineering/reproducible-experiment-runner/SKILL.md` |
 | 3  | [`data-leakage-guard`](ml-engineering/data-leakage-guard/SKILL.md)                         | Enforce train/val/test isolation; fit preprocessing on train only.                       | `ml-engineering/data-leakage-guard/SKILL.md`             |
-| 4  | [`statistical-validation-rigour`](ml-engineering/statistical-validation-rigour/SKILL.md)   | Bootstrap CIs, paired t-test/Wilcoxon/McNemar, AUC branching.                            | `ml-engineering/statistical-validation-rigour/SKILL.md`  |
+| 4  | [`statistical-validation-rigor`](ml-engineering/statistical-validation-rigor/SKILL.md)     | Bootstrap CIs, paired t-test/Wilcoxon/McNemar, AUC branching.                            | `ml-engineering/statistical-validation-rigor/SKILL.md`   |
 | 5  | [`hyperparameter-tuner`](ml-engineering/hyperparameter-tuner/SKILL.md)                     | Optuna Bayesian optimization (TPE, median pruner, multi-fidelity).                       | `ml-engineering/hyperparameter-tuner/SKILL.md`           |
 | 6  | [`model-explainer`](ml-engineering/model-explainer/SKILL.md)                               | SHAP/LIME/Integrated-Gradients explanations and plots.                                   | `ml-engineering/model-explainer/SKILL.md`                |
 | 7  | [`pytorch-lightning-scaffold`](ml-engineering/pytorch-lightning-scaffold/SKILL.md)         | Scaffold LightningModule, DataModule, Callbacks, Loggers.                                | `ml-engineering/pytorch-lightning-scaffold/SKILL.md`     |
@@ -289,7 +289,7 @@ Some skills also have a `references/` subfolder with deeper rule files.
 | 1  | [`ai-text-detector`](ai-text/ai-text-detector/SKILL.md)                               | Detect AI text using 6-category tells with S1-S4 severity.    | `ai-text/ai-text-detector/SKILL.md`                |
 | 2  | [`ai-text-humanizer`](ai-text/ai-text-humanizer/SKILL.md)                             | Rewrite AI text to restore natural voice, preserving facts.   | `ai-text/ai-text-humanizer/SKILL.md`               |
 | 3  | [`perplexity-burstiness-scorer`](ai-text/perplexity-burstiness-scorer/SKILL.md)       | Compute perplexity and burstiness statistics for a text.      | `ai-text/perplexity-burstiness-scorer/SKILL.md`    |
-| 4  | [`ai-tell-catalogue`](ai-text/ai-tell-catalogue/SKILL.md)                             | Reference catalogue of 26 AI tells organized by category.     | `ai-text/ai-tell-catalogue/SKILL.md`               |
+| 4  | [`ai-tell-catalog`](ai-text/ai-tell-catalog/SKILL.md)                                 | Reference catalog of 26 AI tells organized by category.       | `ai-text/ai-tell-catalog/SKILL.md`                 |
 | 5  | [`severity-classifier`](ai-text/severity-classifier/SKILL.md)                         | Classify detected tells into S1/S2/S3/S4 severity.            | `ai-text/severity-classifier/SKILL.md`             |
 | 6  | [`voice-profile-matcher`](ai-text/voice-profile-matcher/SKILL.md)                     | Match a target author voice profile (vocabulary, rhythm).     | `ai-text/voice-profile-matcher/SKILL.md`           |
 | 7  | [`chatbot-residue-cleaner`](ai-text/chatbot-residue-cleaner/SKILL.md)                 | Remove "I hope this helps", "Great question!" residue.        | `ai-text/chatbot-residue-cleaner/SKILL.md`         |
@@ -513,15 +513,15 @@ then load the next.
 
 ### ⚙️ ML Engineering Chains
 
-| Chain                                                                                                                                               | Why                                       |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|
-| `train-val-test-splitter` → `data-leakage-guard` → `seed-and-device-resolver` → `experiment-folder-organizer`                                       | Split → isolate → seed → folder           |
-| `dataset-adapter-builder` → `image-dataset-loader` → `data-leakage-guard` → `modular-ml-architect`                                                  | Adapter → loader → isolation → code style |
-| `pytorch-lightning-scaffold` → `mixed-precision-trainer` → `early-stopping-configurator` → `model-checkpoint-manager`                               | Lightning → AMP → early stop → checkpoint |
-| `hyperparameter-tuner` → `early-stopping-configurator` → `model-checkpoint-manager` → `metrics-computation-suite` → `statistical-validation-rigour` | Tune → stop → save → metrics → stats      |
-| `transformer-finetuner` → `model-explainer` → `ablation-study-runner` → `cross-validation-engine`                                                   | Train → explain → ablate → CV             |
-| `baseline-model-zoo` → `metrics-computation-suite` → `statistical-validation-rigour` → `ablation-study-runner`                                      | Baselines → metrics → stats → ablations   |
-| `inference-pipeline-builder` → `model-checkpoint-manager` → `metrics-computation-suite`                                                             | Deploy → load → evaluate                  |
+| Chain                                                                                                                                              | Why                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|
+| `train-val-test-splitter` → `data-leakage-guard` → `seed-and-device-resolver` → `experiment-folder-organizer`                                      | Split → isolate → seed → folder           |
+| `dataset-adapter-builder` → `image-dataset-loader` → `data-leakage-guard` → `modular-ml-architect`                                                 | Adapter → loader → isolation → code style |
+| `pytorch-lightning-scaffold` → `mixed-precision-trainer` → `early-stopping-configurator` → `model-checkpoint-manager`                              | Lightning → AMP → early stop → checkpoint |
+| `hyperparameter-tuner` → `early-stopping-configurator` → `model-checkpoint-manager` → `metrics-computation-suite` → `statistical-validation-rigor` | Tune → stop → save → metrics → stats      |
+| `transformer-finetuner` → `model-explainer` → `ablation-study-runner` → `cross-validation-engine`                                                  | Train → explain → ablate → CV             |
+| `baseline-model-zoo` → `metrics-computation-suite` → `statistical-validation-rigor` → `ablation-study-runner`                                      | Baselines → metrics → stats → ablations   |
+| `inference-pipeline-builder` → `model-checkpoint-manager` → `metrics-computation-suite`                                                            | Deploy → load → evaluate                  |
 
 ### 🔬 Data Engineering Chains
 
@@ -557,12 +557,12 @@ then load the next.
 
 ### 🤖 AI-Text Chains
 
-| Chain                                                                                                                                                   | Why                                                            |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| `ai-text-detector` → `severity-classifier` → `ai-tell-catalogue` → `ai-text-humanizer` → `grace-degradation-protocol` → `multi-engine-verification`     | Detect → classify → catalogue → humanize → degrade → re-verify |
-| `ai-text-detector` → `citation-hallucination-detector` → `ai-watermark-detector` → `perplexity-burstiness-scorer` → `multi-engine-verification`         | Multi-signal detection suite                                   |
-| `ai-text-humanizer` → `chatbot-residue-cleaner` → `inflation-stripper` → `staging-tell-remover` → `rhythm-by-rule-fixer` → `formatting-by-rule-cleaner` | Humanizer sub-skills in sequence                               |
-| `voice-profile-matcher` → `ai-text-humanizer` → `multi-engine-verification`                                                                             | Match voice → humanize → verify                                |
+| Chain                                                                                                                                                   | Why                                                          |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `ai-text-detector` → `severity-classifier` → `ai-tell-catalog` → `ai-text-humanizer` → `grace-degradation-protocol` → `multi-engine-verification`       | Detect → classify → catalog → humanize → degrade → re-verify |
+| `ai-text-detector` → `citation-hallucination-detector` → `ai-watermark-detector` → `perplexity-burstiness-scorer` → `multi-engine-verification`         | Multi-signal detection suite                                 |
+| `ai-text-humanizer` → `chatbot-residue-cleaner` → `inflation-stripper` → `staging-tell-remover` → `rhythm-by-rule-fixer` → `formatting-by-rule-cleaner` | Humanizer sub-skills in sequence                             |
+| `voice-profile-matcher` → `ai-text-humanizer` → `multi-engine-verification`                                                                             | Match voice → humanize → verify                              |
 
 ### 🔍 AI-Output Judgement Chains
 
@@ -639,13 +639,13 @@ then load the next.
 
 ### 🌐 Cross-Theme Mega-Chains
 
-| Chain                                                                                                                                                                                                                                                                                                                       | Why                                                                                                                         |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| `research-ideation-planner` → `research-repo-builder` → `coding-conventions-enforcer` → `reproducible-experiment-runner` → `statistical-validation-rigour` → `journal-manuscript-writer` → `latex-style-guard` → `bibtex-citation-manager` → `zero-fabrication-guard` → `publication-figure-maker` → `project-zip-packager` | Idea → repo → code → experiments → stats → manuscript → LaTeX → BibTeX → verify → figures → ZIP                             |
-| `peer-review-simulator` → `claim-source-tracer` → `zero-fabrication-guard` → `cross-reference-validator` → `bibtex-citation-manager` → `doi-verifier`                                                                                                                                                                       | Review → trace → verify → cross-ref → BibTeX → DOI                                                                          |
-| `etl-pipeline-builder` → `data-quality-validator` → `feature-engineering-toolkit` → `train-val-test-splitter` → `data-leakage-guard` → `hyperparameter-tuner` → `model-explainer` → `ablation-study-runner` → `metrics-computation-suite` → `statistical-validation-rigour`                                                 | Full ML pipeline from raw data to validated metrics                                                                         |
-| `inference-pipeline-builder` → `response-quality-scorer` → `groundedness-verifier` → `factuality-checker` → `hallucination-detector` → `safety-classifier` → `pii-leak-detector` → `bias-auditor` → `alignment-evaluator`                                                                                                   | Deploy LLM → judge output quality → verify grounding → check facts → catch hallucinations → safety → PII → bias → alignment |
-| `evaluation-harness-builder` → `llm-as-judge-evaluator` → `response-quality-scorer` → `consistency-checker` → `factuality-checker` → `reference-accuracy-checker` → `numeric-accuracy-verifier` → `code-output-validator`                                                                                                   | Build eval suite → judge → score → consistency → factuality → references → numerics → code                                  |
+| Chain                                                                                                                                                                                                                                                                                                                      | Why                                                                                                                         |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| `research-ideation-planner` → `research-repo-builder` → `coding-conventions-enforcer` → `reproducible-experiment-runner` → `statistical-validation-rigor` → `journal-manuscript-writer` → `latex-style-guard` → `bibtex-citation-manager` → `zero-fabrication-guard` → `publication-figure-maker` → `project-zip-packager` | Idea → repo → code → experiments → stats → manuscript → LaTeX → BibTeX → verify → figures → ZIP                             |
+| `peer-review-simulator` → `claim-source-tracer` → `zero-fabrication-guard` → `cross-reference-validator` → `bibtex-citation-manager` → `doi-verifier`                                                                                                                                                                      | Review → trace → verify → cross-ref → BibTeX → DOI                                                                          |
+| `etl-pipeline-builder` → `data-quality-validator` → `feature-engineering-toolkit` → `train-val-test-splitter` → `data-leakage-guard` → `hyperparameter-tuner` → `model-explainer` → `ablation-study-runner` → `metrics-computation-suite` → `statistical-validation-rigor`                                                 | Full ML pipeline from raw data to validated metrics                                                                         |
+| `inference-pipeline-builder` → `response-quality-scorer` → `groundedness-verifier` → `factuality-checker` → `hallucination-detector` → `safety-classifier` → `pii-leak-detector` → `bias-auditor` → `alignment-evaluator`                                                                                                  | Deploy LLM → judge output quality → verify grounding → check facts → catch hallucinations → safety → PII → bias → alignment |
+| `evaluation-harness-builder` → `llm-as-judge-evaluator` → `response-quality-scorer` → `consistency-checker` → `factuality-checker` → `reference-accuracy-checker` → `numeric-accuracy-verifier` → `code-output-validator`                                                                                                  | Build eval suite → judge → score → consistency → factuality → references → numerics → code                                  |
 
 ## 💻 The Coding-Conventions Skill (Special Note)
 
@@ -1293,7 +1293,7 @@ is reproduced verbatim — every rule is paraphrased in the author's own words.
 - [Helm docs](https://helm.sh/docs) — Kubernetes package manager
 - [Terraform docs](https://developer.hashicorp.com/terraform/docs) — Infrastructure as code
 - [Prometheus docs](https://prometheus.io/docs) — Metrics and alerting
-- [Grafana docs](https://grafana.com/docs) — Dashboards and visualisation
+- [Grafana docs](https://grafana.com/docs) — Dashboards and visualization
 - [OpenTelemetry docs](https://opentelemetry.io/docs) — Vendor-neutral observability
 - [Google SRE Book](https://sre.google/sre-book/table-of-contents) — Beyer et al. 2016
 - [NIST SP 800-190](https://csrc.nist.gov/pubs/sp/800/190/final) — Application Container Security Guide
@@ -1504,7 +1504,7 @@ SkillStack provides tools; it does **not** guarantee:
 - 🏥 **Clinical, legal, or financial safety**: No skill in this repository provides medical, legal, or financial advice.
   Outputs from these skills must not be used to make clinical, legal, or financial decisions without independent expert
   review.
-- 🔬 **Scientific validity**: Using `statistical-validation-rigour` or `reproducible-experiment-runner` does not
+- 🔬 **Scientific validity**: Using `statistical-validation-rigor` or `reproducible-experiment-runner` does not
   guarantee your study is methodologically sound or its conclusions are correct. These skills enforce procedural
   discipline, not scientific truth.
 

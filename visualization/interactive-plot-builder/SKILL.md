@@ -34,7 +34,7 @@ verified_against: []
 
 1. Pick the library: Plotly (hover, zoom, click), Bokeh (server-backed), or Holoviews/Datashader (large data).
 2. Build the figure object with the chosen library.
-3. Configure tooltips, axis labels, and colour scales.
+3. Configure tooltips, axis labels, and color scales.
 4. If data is large, aggregate with Datashader before rendering.
 5. Export as a standalone HTML file.
 6. Optionally embed the HTML in a dashboard or report.
@@ -44,7 +44,7 @@ verified_against: []
 
 - Data frame or arrays plus column metadata for tooltips.
 - A library choice and an interaction feature list.
-- An optional theme colour palette.
+- An optional theme color palette.
 
 ## Outputs
 
@@ -57,7 +57,7 @@ verified_against: []
 - Export as standalone HTML so no server is required to view it.
 - Configure tooltips for every meaningful data column.
 - Aggregate with Datashader when rows exceed roughly 100k.
-- Keep colour scales colourblind-friendly.
+- Keep color scales colorblind-friendly.
 - Embed via iframe when dropping the HTML into a larger page.
 - Test in a vanilla browser without extra dependencies.
 

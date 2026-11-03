@@ -948,14 +948,14 @@ Themes:
   - Name: ai-text
     SkillCount: 15
     Skills:
-      - Name: ai-tell-catalogue
-        Description: Reference catalogue of 26 AI tells organized into six categories, each with a name, what to watch for, why
+      - Name: ai-tell-catalog
+        Description: Reference catalog of 26 AI tells organized into six categories, each with a name, what to watch for, why
           it is a problem, and a before/after pair. Use this as the lookup table when running `ai-text-detector` or `ai-text-humanizer`;
           do not invent new tells on the fly.
         Tags:
           - reference
           - ai-tells
-          - catalogue
+          - catalog
           - ai-text
         Related:
           - ai-text/ai-text-detector
@@ -972,7 +972,7 @@ Themes:
             network: false
             execute_code: false
       - Name: ai-text-detector
-        Description: Detect AI-generated text by scanning for a structured catalogue of tells across lexical, structural, thematic,
+        Description: Detect AI-generated text by scanning for a structured catalog of tells across lexical, structural, thematic,
           tonal, statistical, and citation categories. Use when you need to assess whether a passage was likely written by an
           LLM, audit a document for machine-written sections, or triage submissions for human review.
         Tags:
@@ -981,7 +981,7 @@ Themes:
           - perplexity
           - burstiness
         Related:
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
           - ai-text/severity-classifier
           - ai-text/perplexity-burstiness-scorer
           - ai-text/citation-hallucination-detector
@@ -1060,9 +1060,9 @@ Themes:
           - ai-text/ai-text-humanizer
           - ai-text/ai-text-detector
           - ai-text/formatting-by-rule-cleaner
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Prerequisites:
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Outputs:
           - markdown
         Difficulty: beginner
@@ -1110,9 +1110,9 @@ Themes:
           - ai-text/ai-text-humanizer
           - ai-text/ai-text-detector
           - ai-text/chatbot-residue-cleaner
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Prerequisites:
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Outputs:
           - markdown
         Difficulty: intermediate
@@ -1160,9 +1160,9 @@ Themes:
           - ai-text/ai-text-humanizer
           - ai-text/ai-text-detector
           - ai-text/grace-degradation-protocol
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Prerequisites:
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Outputs:
           - markdown
         Difficulty: intermediate
@@ -1234,9 +1234,9 @@ Themes:
         Related:
           - ai-text/ai-text-humanizer
           - ai-text/ai-text-detector
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Prerequisites:
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Outputs:
           - markdown
         Difficulty: intermediate
@@ -1257,9 +1257,9 @@ Themes:
           - ai-detection
         Related:
           - ai-text/ai-text-detector
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Prerequisites:
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Outputs:
           - markdown
           - json
@@ -1283,9 +1283,9 @@ Themes:
           - ai-text/ai-text-humanizer
           - ai-text/ai-text-detector
           - ai-text/inflation-stripper
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Prerequisites:
-          - ai-text/ai-tell-catalogue
+          - ai-text/ai-tell-catalog
         Outputs:
           - markdown
         Difficulty: intermediate
@@ -1874,7 +1874,7 @@ Themes:
             network: false
             execute_code: false
       - Name: executive-dashboard-designer
-        Description: Design executive dashboards that surface the right KPI hierarchy, encode state with restrained colour, annotate
+        Description: Design executive dashboards that surface the right KPI hierarchy, encode state with restrained color, annotate
           thresholds, and offer drill-down paths that hold up on mobile. Use when the user is building a leadership-facing dashboard,
           fixing a cluttered KPI wall, or wiring annotations and drill-downs into a Streamlit, Dash, or Power BI view.
         Tags:
@@ -1902,7 +1902,7 @@ Themes:
             execute_code: true
       - Name: infographic-crafter
         Description: Craft single-takeaway infographics with deliberate visual hierarchy, a curated icon set, statistics callouts
-          at display size, and a restrained colour palette. Use when the user needs a one-page visual summary of a report, a social-share
+          at display size, and a restrained color palette. Use when the user needs a one-page visual summary of a report, a social-share
           graphic, or a briefing card for a non-technical audience.
         Tags:
           - infographic
@@ -2534,7 +2534,7 @@ Themes:
             execute_code: false
       - Name: algorithmic-audit-reporter
         Description: Produce algorithmic audit reports containing a model card summary, a dataset card, performance by subgroup,
-          fairness metrics, robustness tests, and prioritised recommendations. Use when an internal or external auditor needs
+          fairness metrics, robustness tests, and prioritized recommendations. Use when an internal or external auditor needs
           a structured accountability document for an AI system.
         Tags:
           - algorithmic-audit
@@ -2877,7 +2877,7 @@ Themes:
           - timeseries
         Related:
           - ml-engineering/train-val-test-splitter
-          - ml-engineering/statistical-validation-rigour
+          - ml-engineering/statistical-validation-rigor
           - ml-engineering/data-leakage-guard
         Prerequisites:
           - ml-engineering/train-val-test-splitter
@@ -3104,7 +3104,7 @@ Themes:
           - cohen-kappa
           - calibration
         Related:
-          - ml-engineering/statistical-validation-rigour
+          - ml-engineering/statistical-validation-rigor
           - ml-engineering/ablation-study-runner
           - ml-engineering/baseline-model-zoo
         Prerequisites: [ ]
@@ -3297,7 +3297,7 @@ Themes:
             write_files: true
             network: false
             execute_code: false
-      - Name: statistical-validation-rigour
+      - Name: statistical-validation-rigor
         Description: Apply rigorous statistical validation when reporting metrics, comparing models, or computing confidence intervals.
           Triggers on "bootstrap CI", "AUC binary vs multiclass", "Cohen's d", "McNemar test", "Wilcoxon signed-rank", "paired
           t-test", "LogisticRegression deprecated multi_class".
@@ -5062,7 +5062,7 @@ Themes:
             execute_code: true
       - Name: attention-map-visualizer
         Description: Visualize transformer attention weights as per-head and per-layer heatmaps with token overlay. Trigger when
-          debugging attention patterns, comparing heads, or explaining model behaviour in an NLP or vision-transformer paper.
+          debugging attention patterns, comparing heads, or explaining model behavior in an NLP or vision-transformer paper.
         Tags:
           - attention
           - transformer
@@ -5084,9 +5084,9 @@ Themes:
             network: false
             execute_code: true
       - Name: color-palette-selector
-        Description: Select colourblind-friendly palettes (viridis, cividis, ColorBrewer, Wong's palette) and verify them with
-          simulators. Trigger when choosing colours for figures, dashboards, or diagrams that must be readable by viewers with
-          colour vision deficiencies.
+        Description: Select colorblind-friendly palettes (viridis, cividis, ColorBrewer, Wong's palette) and verify them with
+          simulators. Trigger when choosing colors for figures, dashboards, or diagrams that must be readable by viewers with
+          color vision deficiencies.
         Tags:
           - color
           - palette
@@ -5107,7 +5107,7 @@ Themes:
             network: false
             execute_code: true
       - Name: confusion-matrix-plotter
-        Description: Plot raw-count and row-normalised confusion matrices side by side with cell annotations and accuracy/F1 in
+        Description: Plot raw-count and row-normalized confusion matrices side by side with cell annotations and accuracy/F1 in
           a side panel. Trigger when evaluating a classifier, comparing models on class-wise performance, or reporting per-class
           errors.
         Tags:
@@ -5153,7 +5153,7 @@ Themes:
             network: true
             execute_code: true
       - Name: embedding-projector
-        Description: Project high-dimensional embeddings to 2D or 3D using PCA, t-SNE, or UMAP with label colouring. Trigger when
+        Description: Project high-dimensional embeddings to 2D or 3D using PCA, t-SNE, or UMAP with label coloring. Trigger when
           inspecting latent spaces, comparing encoders, or producing a t-SNE scatter for a paper.
         Tags:
           - embeddings
@@ -5200,7 +5200,7 @@ Themes:
             execute_code: false
       - Name: infographic-summarizer
         Description: Convert dense reports into single-page infographics with visual hierarchy, key-stat callouts, and a limited
-          colour palette. Trigger when summarising a long document, briefing report, or survey for a one-page visual.
+          color palette. Trigger when summarising a long document, briefing report, or survey for a one-page visual.
         Tags:
           - infographic
           - summary
@@ -5270,8 +5270,8 @@ Themes:
             network: false
             execute_code: true
       - Name: network-graph-visualizer
-        Description: Visualize network graphs with layout algorithms, node sizing by degree, community colouring, and edge widths
-          by weight. Trigger when analysing social networks, citation graphs, or neural-network architectures, and when producing
+        Description: Visualize network graphs with layout algorithms, node sizing by degree, community coloring, and edge widths
+          by weight. Trigger when analyzing social networks, citation graphs, or neural-network architectures, and when producing
           static or interactive graph figures.
         Tags:
           - network
@@ -5367,8 +5367,8 @@ Themes:
             network: false
             execute_code: true
       - Name: scientific-poster-designer
-        Description: Design A0 scientific posters with IMRAD layout and one-metre readability. Trigger when preparing a conference
-          poster, defence poster, or summary poster for a workshop.
+        Description: Design A0 scientific posters with IMRAD layout and one-meter readability. Trigger when preparing a conference
+          poster, defense poster, or summary poster for a workshop.
         Tags:
           - poster
           - a0
@@ -5390,7 +5390,7 @@ Themes:
             network: false
             execute_code: false
       - Name: surface-plotter
-        Description: Plot 3D surfaces with proper view angles, colourbars, and a 2D contour overlay for loss landscapes. Trigger
+        Description: Plot 3D surfaces with proper view angles, colorbars, and a 2D contour overlay for loss landscapes. Trigger
           when visualising loss landscapes, response surfaces, or any scalar field over two variables.
         Tags:
           - 3d
@@ -5438,7 +5438,7 @@ Themes:
             execute_code: false
       - Name: training-curve-visualizer
         Description: Plot train and validation loss and accuracy over epochs with dual y-axes, overfit shading, and a best-epoch
-          marker. Trigger when monitoring model training, comparing optimisers, or reporting convergence behaviour in a paper.
+          marker. Trigger when monitoring model training, comparing optimizers, or reporting convergence behavior in a paper.
         Tags:
           - training
           - loss
