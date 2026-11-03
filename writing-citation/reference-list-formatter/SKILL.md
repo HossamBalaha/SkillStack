@@ -72,30 +72,28 @@ verified_against: []
 
 ```text
 Before (.bib entry):
-@article{Smith2021Survey,
-  author = {John A. Smith and Rita Patel and Wei Zhang},
-  title = {A survey of federated learning},
-  journal = {ACM Computing Surveys},
-  year = {2021},
-  volume = {54},
-  number = {2},
-  pages = {1--38},
-  doi = {10.1145/3412345
+@article{Chronis2024Survey,
+  author = {Christos Chronis and Iraklis Varlamis and Yassine Himeur and Ahmed N. Sayed and Tarek M. Al-Hasan and Aneeba Nhlabatsi and George Dimitrakopoulos},
+  title = {A survey on the use of federated learning in privacy-preserving recommender systems},
+  journal = {IEEE Open Journal of the Computer Society},
+  year = {2024},
+  volume = {5},
+  pages = {227--247},
+  doi = {10.1109/OJCS.2024.3396344}
 }
 
 After (IEEE LaTeX block):
 \begin{thebibliography}{99}
-\bibitem{Smith2021Survey}
-J. A. Smith, R. Patel, and W. Zhang, ``A survey of federated learning,''
-\emph{ACM Comput. Surv.}, vol. 54, no. 2, pp. 1--38, 2021.
+\bibitem{Chronis2024Survey}
+C. Chronis, I. Varlamis, Y. Himeur, A. N. Sayed, T. M. Al-Hasan, A. Nhlabatsi, and G. Dimitrakopoulos, ``A survey on the use of federated learning in privacy-preserving recommender systems,''
+\emph{IEEE OJCS}, vol. 5, pp. 227--247, 2024.
 \end{thebibliography}
 
 After (APA plain text):
-Smith, J. A., Patel, R., & Zhang, W. (2021). A survey of federated learning.
-ACM Computing Surveys, 54(2), 1-38. https://doi.org/10.1145/3295222.3295349
+Chronis, C., Varlamis, I., Himeur, Y., Sayed, A. N., Al-Hasan, T. M., Nhlabatsi, A., ... & Dimitrakopoulos, G. (2024). A survey on the use of federated learning in privacy-preserving recommender systems. IEEE Open Journal of the Computer Society, 5, 227-247. https://doi.org/10.1109/OJCS.2024.3396344
 
 After (Vancouver, abbreviated journal):
-Smith JA, Patel R, Zhang W. A survey of federated learning. ACM Comput Surv.
+Chronis C, Varlamis I, Himeur Y, et al. A survey on the use of federated learning in privacy-preserving recommender systems. IEEE OJCS.
 2021;54(2):1-38.
 ```
 

@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: data-engineering
-tags: [csv, json, parquet, arrow, format-conversion]
-related: [data-engineering/incremental-loader, data-engineering/data-schema-enforcer]
-prerequisites: []
-outputs: [python, csv, json]
+tags: [ csv, json, parquet, arrow, format-conversion ]
+related: [ data-engineering/incremental-loader, data-engineering/data-schema-enforcer ]
+prerequisites: [ ]
+outputs: [ python, csv, json ]
 difficulty: beginner
 estimated_tokens: 1100
 permissions:
@@ -18,7 +18,7 @@ permissions:
   execute_code: true
 language: en
 last_reviewed: 2026-11-02
-verified_against: []
+verified_against: [ ]
 ---
 
 # CSV JSON Converter

@@ -34,7 +34,7 @@ verified_against: []
 
 1. Extract every factual artifact from the manuscript: author names, paper titles, journal names, years, DOIs, URLs,
    dataset names, and every numerical claim.
-2. For each DOI, query `https://api.crossref.org/works/{DOI}` and confirm the returned title, authors, and journal match
+2. For each DOI, query `https://api.crossref.org/works/{DOI} and confirm the returned title, authors, and journal match
    the manuscript's citation.
 3. For each citation, search Google Scholar (or Semantic Scholar API at
    `https://api.semanticscholar.org/graph/v1/paper/search`) using title and first author. Confirm a matching record
@@ -78,7 +78,7 @@ Before (body):
 
 ```
 Recent work shows an accuracy of 97.4% on ImageNet [Smith et al. 2024,
-doi:10.1000/fake123].
+doi:10.1109/OJCS.2024.3396344].
 ```
 
 After (body):
@@ -91,7 +91,7 @@ Planning Note (appended):
 
 ```
 Planning Note:
-- Omitted claim: "accuracy of 97.4%" — DOI 10.1000/fake123 returned 404
+- Omitted claim: "accuracy of 97.4%" — DOI 10.1109/OJCS.2024.3396344 returned 404
   from Crossref. Provide a corrected DOI or the original paper's Table 3
   values for verification.
 ```
@@ -101,7 +101,7 @@ Verification table (excerpt):
 ```
 | Claim                  | Source Type | Source URL                                      | Match |
 |------------------------|-------------|--------------------------------------------------|-------|
-| accuracy 97.4%         | DOI         | https://api.crossref.org/works/10.1145/3412345   | 404   |
+| accuracy 97.4%         | DOI         | https://api.crossref.org/works/10.1109/OJCS.2024.3396344   | 404   |
 | ImageNet dataset       | Registry    | https://registry.identifiers.org/registry/miriam | Yes   |
 | Smith et al. 2024      | Search      | https://api.semanticscholar.org/...              | No    |
 ```

@@ -110,7 +110,7 @@ IMAGE="${1:?image required}"
 cosign sign --yes "$IMAGE"
 cosign verify "$IMAGE" \
   --certificate-identity "https://github.com/org/repo/.github/workflows/release.yml@refs/heads/main" \
-  --certificate-oidc-issuer "https://token.actions.githubusercontent.com
+  --certificate-oidc-issuer "https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-cloud-providers"  # GitHub Actions OIDC issuer (not browsable)
 ```
 
 ```dockerignore

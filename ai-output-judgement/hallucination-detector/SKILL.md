@@ -41,7 +41,7 @@ verified_against: []
    law/regulation.
 3. Verify existence per type:
     - Person/Org/Place: Wikidata SPARQL search, Wikipedia API.
-    - Paper/DOI: Crossref (`https://api.crossref.org/works/{DOI}`) and arXiv API.
+    - Paper/DOI: Crossref (`https://api.crossref.org/works/{DOI}) and arXiv API.
     - Library/API: package registry (PyPI JSON API, npm registry, GitHub repo existence via
       `https://api.github.com/repos/{owner}/{repo}`).
     - Statistic: route to `numeric-accuracy-verifier`.

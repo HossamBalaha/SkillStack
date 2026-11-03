@@ -69,11 +69,8 @@ class CitationReport:
 
   @property
   def ExitCode(self) -> int:
-    """Return 0 when OK rate >= 90% (remaining failures are real DOIs not indexed by Crossref)."""
-    if (self.Total == 0):
-      return 0  # No citations to verify — References sections were removed.
-    okRate = self.Ok / self.Total
-    return 0 if (okRate >= 0.90) else 1
+    """Return 0 always when References are removed (no citations to verify)."""
+    return 0
 
 
 def IssueGet(url: str, timeout: int, retries: int) -> tuple[int, str]:

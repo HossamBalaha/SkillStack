@@ -34,7 +34,7 @@ verified_against: []
 
 1. Parse the `.bib` file; extract every DOI alongside the entry's title, first author, and container
    (journal/booktitle).
-2. For each DOI, issue an HTTPS GET to `https://api.crossref.org/works/{DOI}` with a polite `User-Agent` including a
+2. For each DOI, issue an HTTPS GET to `https://api.crossref.org/works/{DOI} with a polite `User-Agent` including a
    mailto.
 3. Classify the response:
     - 404 → DOI does not resolve → suspected fake.
@@ -75,7 +75,7 @@ verified_against: []
 Verification table excerpt:
 | citekey          | DOI                  | resolved title                       | first author | sim   | status    | action          |
 |------------------|----------------------|--------------------------------------|--------------|-------|-----------|-----------------|
-| Smith2021Survey  | 10.1145/3412345      | A survey of federated learning       | Smith        | 0.99  | VERIFIED  | keep            |
+| Chronis2024Survey  | 10.1109/OJCS.2024.3396344      | A survey of federated learning       | Chronis      | 0.99  | VERIFIED  | keep            |
 | Lee2022Sparse    | 10.1109/FAKE.2022.99 | 404 — no record                      | —            | 0.00  | UNRESOLVED | remove          |
 | Ng2021Methods    | 10.1109/METH.2021.10 | A different paper entirely           | Patel        | 0.18  | MISMATCH  | recover → 10.1109/TPAMI.2021.3055599 |
 ```

@@ -36,7 +36,7 @@ verified_against: []
 
 1. Extract every citation-shaped claim: DOI strings, paper titles in quotes, author+year pairs, journal names, "featured
    in" / "widely cited" claims.
-2. For each DOI, query Crossref (`https://api.crossref.org/works/{DOI}`). If the DOI resolves and returns metadata
+2. For each DOI, query Crossref (`https://api.crossref.org/works/{DOI}). If the DOI resolves and returns metadata
    matching the cited title and authors, mark `Verified`. If it 404s or returns mismatched metadata, mark
    `Hallucinated`.
 3. For each paper title, search Google Scholar or the publisher site. If no exact or near-exact match exists, mark

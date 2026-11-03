@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
-tags: [systematic-review, prisma, pico, synthesis, casp]
-related: [academic-research/related-work-surveyor, academic-research/citation-network-mapper, style-integrity/zero-fabrication-guard]
-prerequisites: []
-outputs: [markdown, latex]
+tags: [ systematic-review, prisma, pico, synthesis, casp ]
+related: [ academic-research/related-work-surveyor, academic-research/citation-network-mapper, style-integrity/zero-fabrication-guard ]
+prerequisites: [ ]
+outputs: [ markdown, latex ]
 difficulty: advanced
 estimated_tokens: 840
 permissions:
@@ -18,7 +18,7 @@ permissions:
   execute_code: false
 language: en
 last_reviewed: 2026-11-02
-verified_against: []
+verified_against: [ ]
 ---
 
 # Literature Review Synthesizer

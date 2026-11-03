@@ -36,7 +36,7 @@ verified_against: []
 
 1. Parse citations from the output: inline `(Author, Year)` markers, numbered `[1]` references, and full bibliography
    entries. Normalize each into a record with fields: `title`, `authors`, `year`, `venue`, `DOI` (if present).
-2. For each DOI, query `https://api.crossref.org/works/{DOI}` with a polite `User-Agent` mailto. Classify:
+2. For each DOI, query `https://api.crossref.org/works/{DOI} with a polite `User-Agent` mailto. Classify:
     - 200 + matching metadata → `VERIFIED`.
     - 200 + mismatched title/author → `MISMATCH` (the DOI is real but points elsewhere — common hallucination).
     - 404 → `UNRESOLVED`.
