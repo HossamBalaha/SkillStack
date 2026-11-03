@@ -455,6 +455,36 @@ Some skills also have a `references/` subfolder with deeper rule files.
 
 </details>
 
+<details><summary><strong>🎓 <code>academic-research/</code> — Research Planning & Writing</strong></summary>
+
+
+> Plan studies, draft manuscripts, write theses, design grants, review papers, prepare talks.
+
+| #  | Skill                                                                                               | One-Line Description                                                                           | Link                                                           |
+|----|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| 1  | [`research-ideation-planner`](academic-research/research-ideation-planner/SKILL.md)                 | Propose 3+ novel research ideas aligned to a target venue, then build an end-to-end blueprint. | `academic-research/research-ideation-planner/SKILL.md`         |
+| 2  | [`research-repo-builder`](academic-research/research-repo-builder/SKILL.md)                         | Scaffold a complete modular research repository (src/, configs, manual, datasets.md).          | `academic-research/research-repo-builder/SKILL.md`             |
+| 3  | [`journal-manuscript-writer`](academic-research/journal-manuscript-writer/SKILL.md)                 | Draft publication-ready journal sections in LaTeX with strict style rules.                     | `academic-research/journal-manuscript-writer/SKILL.md`         |
+| 4  | [`academic-book-author`](academic-research/academic-book-author/SKILL.md)                           | Draft academic book chapters with pedagogical structure and code walkthroughs.                 | `academic-research/academic-book-author/SKILL.md`              |
+| 5  | [`grant-proposal-writer`](academic-research/grant-proposal-writer/SKILL.md)                         | Draft competitive grant proposals (specific aims, significance, approach, budget).             | `academic-research/grant-proposal-writer/SKILL.md`             |
+| 6  | [`literature-review-synthesizer`](academic-research/literature-review-synthesizer/SKILL.md)         | Build systematic reviews with PICO/SPIDER framing and PRISMA flow.                             | `academic-research/literature-review-synthesizer/SKILL.md`     |
+| 7  | [`peer-review-simulator`](academic-research/peer-review-simulator/SKILL.md)                         | Generate peer-review reports and author rebuttal letters.                                      | `academic-research/peer-review-simulator/SKILL.md`             |
+| 8  | [`conference-talk-prep`](academic-research/conference-talk-prep/SKILL.md)                           | Draft conference talks with slide outline, notes, and Q&A prep.                                | `academic-research/conference-talk-prep/SKILL.md`              |
+| 9  | [`thesis-chapter-planner`](academic-research/thesis-chapter-planner/SKILL.md)                       | Plan thesis/dissertation chapters with cross-chapter non-redundancy.                           | `academic-research/thesis-chapter-planner/SKILL.md`            |
+| 10 | [`research-question-formulator`](academic-research/research-question-formulator/SKILL.md)           | Formulate FINER/PICO research questions and hypotheses.                                        | `academic-research/research-question-formulator/SKILL.md`      |
+| 11 | [`hypothesis-designer`](academic-research/hypothesis-designer/SKILL.md)                             | Design testable hypotheses with null/alternative and effect-size framing.                      | `academic-research/hypothesis-designer/SKILL.md`               |
+| 12 | [`experimental-design-planner`](academic-research/experimental-design-planner/SKILL.md)             | Plan experimental designs (RCT, factorial, crossover) with sample-size calculation.            | `academic-research/experimental-design-planner/SKILL.md`       |
+| 13 | [`scope-and-aims-writer`](academic-research/scope-and-aims-writer/SKILL.md)                         | Draft scope, aims, and contribution statements.                                                | `academic-research/scope-and-aims-writer/SKILL.md`             |
+| 14 | [`related-work-surveyor`](academic-research/related-work-surveyor/SKILL.md)                         | Survey related work and build thematic comparison tables.                                      | `academic-research/related-work-surveyor/SKILL.md`             |
+| 15 | [`citation-network-mapper`](academic-research/citation-network-mapper/SKILL.md)                     | Map citation networks and identify influential/bridge papers.                                  | `academic-research/citation-network-mapper/SKILL.md`           |
+| 16 | [`research-portfolio-tracker`](academic-research/research-portfolio-tracker/SKILL.md)               | Track research outputs, deadlines, and submission status.                                      | `academic-research/research-portfolio-tracker/SKILL.md`        |
+| 17 | [`open-science-advocate`](academic-research/open-science-advocate/SKILL.md)                         | Apply open-science practices (open data, open code, preprints, OSF).                           | `academic-research/open-science-advocate/SKILL.md`             |
+| 18 | [`pre-registration-drafter`](academic-research/pre-registration-drafter/SKILL.md)                   | Draft pre-registration documents (AsPredicted, OSF, Registered Report).                        | `academic-research/pre-registration-drafter/SKILL.md`          |
+| 19 | [`reproducibility-checklist-author`](academic-research/reproducibility-checklist-author/SKILL.md)   | Author a reproducibility checklist for a submitted manuscript.                                 | `academic-research/reproducibility-checklist-author/SKILL.md`  |
+| 20 | [`supplementary-materials-organizer`](academic-research/supplementary-materials-organizer/SKILL.md) | Organize supplementary materials (appendices, code, data, figures).                            | `academic-research/supplementary-materials-organizer/SKILL.md` |
+
+</details>
+
 ## 🔗 Common Skill Chains
 
 Skills rarely run in isolation. These chains reflect real research workflows — load the first skill, finish its output,
@@ -1329,10 +1359,10 @@ project-tooling · docker · github-actions · pytest · sphinx ·
 agent-skills · skill-repository · maestro-orchestrator
 ```
 
+## 👤 About the Author
+
 <details>
 <summary><strong>👤 About the Author (click to expand)</strong></summary>
-
-## 👤 About the Author
 
 <div align="center">
 
@@ -1372,6 +1402,8 @@ Development — applied to oncology (breast, bladder, prostate, Wilms' tumor) an
 - 👨‍🏫 Teaches BE 544 (AI Techniques in Digital Histopathology) and BE 645 (AI and Radiomics) at UofL, with all materials
   open-sourced on GitHub and YouTube
 - ✉️ Contact: h3ossam@gmail.com
+
+</details>
 
 ## 📜 License
 
@@ -1518,35 +1550,6 @@ run such a skill:
 
 </details>
 
-<details><summary><strong>🎓 <code>academic-research/</code> — Research Planning & Writing</strong></summary>
-
-
-> Plan studies, draft manuscripts, write theses, design grants, review papers, prepare talks.
-
-| #  | Skill                                                                                               | One-Line Description                                                                           | Link                                                           |
-|----|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| 1  | [`research-ideation-planner`](academic-research/research-ideation-planner/SKILL.md)                 | Propose 3+ novel research ideas aligned to a target venue, then build an end-to-end blueprint. | `academic-research/research-ideation-planner/SKILL.md`         |
-| 2  | [`research-repo-builder`](academic-research/research-repo-builder/SKILL.md)                         | Scaffold a complete modular research repository (src/, configs, manual, datasets.md).          | `academic-research/research-repo-builder/SKILL.md`             |
-| 3  | [`journal-manuscript-writer`](academic-research/journal-manuscript-writer/SKILL.md)                 | Draft publication-ready journal sections in LaTeX with strict style rules.                     | `academic-research/journal-manuscript-writer/SKILL.md`         |
-| 4  | [`academic-book-author`](academic-research/academic-book-author/SKILL.md)                           | Draft academic book chapters with pedagogical structure and code walkthroughs.                 | `academic-research/academic-book-author/SKILL.md`              |
-| 5  | [`grant-proposal-writer`](academic-research/grant-proposal-writer/SKILL.md)                         | Draft competitive grant proposals (specific aims, significance, approach, budget).             | `academic-research/grant-proposal-writer/SKILL.md`             |
-| 6  | [`literature-review-synthesizer`](academic-research/literature-review-synthesizer/SKILL.md)         | Build systematic reviews with PICO/SPIDER framing and PRISMA flow.                             | `academic-research/literature-review-synthesizer/SKILL.md`     |
-| 7  | [`peer-review-simulator`](academic-research/peer-review-simulator/SKILL.md)                         | Generate peer-review reports and author rebuttal letters.                                      | `academic-research/peer-review-simulator/SKILL.md`             |
-| 8  | [`conference-talk-prep`](academic-research/conference-talk-prep/SKILL.md)                           | Draft conference talks with slide outline, notes, and Q&A prep.                                | `academic-research/conference-talk-prep/SKILL.md`              |
-| 9  | [`thesis-chapter-planner`](academic-research/thesis-chapter-planner/SKILL.md)                       | Plan thesis/dissertation chapters with cross-chapter non-redundancy.                           | `academic-research/thesis-chapter-planner/SKILL.md`            |
-| 10 | [`research-question-formulator`](academic-research/research-question-formulator/SKILL.md)           | Formulate FINER/PICO research questions and hypotheses.                                        | `academic-research/research-question-formulator/SKILL.md`      |
-| 11 | [`hypothesis-designer`](academic-research/hypothesis-designer/SKILL.md)                             | Design testable hypotheses with null/alternative and effect-size framing.                      | `academic-research/hypothesis-designer/SKILL.md`               |
-| 12 | [`experimental-design-planner`](academic-research/experimental-design-planner/SKILL.md)             | Plan experimental designs (RCT, factorial, crossover) with sample-size calculation.            | `academic-research/experimental-design-planner/SKILL.md`       |
-| 13 | [`scope-and-aims-writer`](academic-research/scope-and-aims-writer/SKILL.md)                         | Draft scope, aims, and contribution statements.                                                | `academic-research/scope-and-aims-writer/SKILL.md`             |
-| 14 | [`related-work-surveyor`](academic-research/related-work-surveyor/SKILL.md)                         | Survey related work and build thematic comparison tables.                                      | `academic-research/related-work-surveyor/SKILL.md`             |
-| 15 | [`citation-network-mapper`](academic-research/citation-network-mapper/SKILL.md)                     | Map citation networks and identify influential/bridge papers.                                  | `academic-research/citation-network-mapper/SKILL.md`           |
-| 16 | [`research-portfolio-tracker`](academic-research/research-portfolio-tracker/SKILL.md)               | Track research outputs, deadlines, and submission status.                                      | `academic-research/research-portfolio-tracker/SKILL.md`        |
-| 17 | [`open-science-advocate`](academic-research/open-science-advocate/SKILL.md)                         | Apply open-science practices (open data, open code, preprints, OSF).                           | `academic-research/open-science-advocate/SKILL.md`             |
-| 18 | [`pre-registration-drafter`](academic-research/pre-registration-drafter/SKILL.md)                   | Draft pre-registration documents (AsPredicted, OSF, Registered Report).                        | `academic-research/pre-registration-drafter/SKILL.md`          |
-| 19 | [`reproducibility-checklist-author`](academic-research/reproducibility-checklist-author/SKILL.md)   | Author a reproducibility checklist for a submitted manuscript.                                 | `academic-research/reproducibility-checklist-author/SKILL.md`  |
-| 20 | [`supplementary-materials-organizer`](academic-research/supplementary-materials-organizer/SKILL.md) | Organize supplementary materials (appendices, code, data, figures).                            | `academic-research/supplementary-materials-organizer/SKILL.md` |
-
-</details>
 
 ---
 
