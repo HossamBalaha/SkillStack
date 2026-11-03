@@ -113,11 +113,3 @@ def TrainAndEvaluateBaselines(TrainFeatures, TrainLabels, TestFeatures, TestLabe
     json.dump(results, f, indent=2)
   return results
 ```
-
-## References
-
-- sklearn
-  LogisticRegression: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
-- RandomForestClassifier: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
-- XGBoost: https://xgboost.readthedocs.io
-- LightGBM: https://lightgbm.readthedocs.io

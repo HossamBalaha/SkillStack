@@ -112,10 +112,3 @@ def RunReactLoop(SystemPrompt, Question, Tools, MaxSteps):
   # Raise when the agent exhausted its step budget without finishing.
   raise RuntimeError("Step budget exhausted before Final Answer.")
 ```
-
-## References
-
-- Yao, S. et al. (2022). "ReAct: Synergizing Reasoning and Acting in Language Models."
-  https://arxiv.org/abs/2210.03629
-- HotpotQA benchmark: https://hotpotqa.github.io/
-- LangChain ReAct agent docs: https://python.langchain.com/docs/modules/agents/agent_types/react

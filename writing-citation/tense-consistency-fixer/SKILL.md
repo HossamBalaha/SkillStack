@@ -100,9 +100,3 @@ mechanisms help in noisy settings. Prior work has shown similar gains."
 (Discussion: past for the study's own result; present for the
 interpretation; present perfect for prior work.)
 ```
-
-## References
-
-- Swales, J. M., & Feak, C. B. *Academic Writing for Graduate Students*. University of Michigan Press.
-- Grammar Bytes guide to verb tense in academic writing: https://www.chompchomp.com/.
-- APA Style verb tense guidelines: https://apastyle.apa.org/.

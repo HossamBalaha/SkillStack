@@ -136,11 +136,3 @@ loki:
     aws:
       s3: s3://loki-bucket
 ```
-
-## References
-
-- Loki Documentation: https://grafana.com/docs/loki/latest/
-- Fluent Bit Documentation: https://docs.fluentbit.io/manual
-- Elasticsearch Log Retention
-  (ILM): https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html
-- Structured Logging (structlog): https://www.structlog.org/

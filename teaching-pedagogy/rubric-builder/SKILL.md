@@ -107,10 +107,3 @@ Independent scores from three graders: 3, 3, 4.
 Reconciled: 3 (revised the third grader on the integration rule).
 Cohen's kappa after calibration: 0.72 (acceptable).
 ```
-
-## References
-
-- Stevens & Levi (2013), "Introduction to Rubrics" (2nd ed.) — Stylus.
-- Suskie (2018), "Assessing Student Learning: A Common Sense Guide" (3rd ed.) — Jossey-Bass.
-- Carnegie Mellon Eberly Center — Rubrics: https://www.cmu.edu/teaching/assessment/assesslearning/rubrics.html
-- UNC Charlotte Center for Teaching & Learning — Rubric design: https://cte.uncc.edu/resources/rubrics

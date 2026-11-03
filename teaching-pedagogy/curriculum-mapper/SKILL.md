@@ -113,11 +113,3 @@ CS101,O1,I,Quiz 3 Q1-Q5,Smith J.
 CS201,O1,R,Lab 2,Smith J.
 CS401,O1,M,Capstone deliverable 1,Patel A.
 ```
-
-## References
-
-- Nicholls (1978), "Developing a Curriculum: A Practical Guide" — Routledge. Curriculum design framework.
-- Biggs & Tang (2011), "Teaching for Quality Learning at University" (4th ed.) — Open University Press. Constructive
-  alignment.
-- Harden (2001), "Outcome-based education — the future is today" — Medical Teacher, 24(2), 125-138. Outcome mapping.
-- ABET criteria for accrediting programs — https://www.abet.org/accreditation/

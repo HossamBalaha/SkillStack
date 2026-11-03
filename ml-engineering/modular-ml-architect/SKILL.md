@@ -123,8 +123,3 @@ Training:
   Seed: 42
 Device: "auto"
 ```
-
-## References
-
-- Python packaging guide: https://packaging.python.org/en/latest/tutorials/packaging-projects/
-- The "src" layout discussion: https://hynek.me/articles/testing-packaging/

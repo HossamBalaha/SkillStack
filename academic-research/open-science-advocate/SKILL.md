@@ -91,18 +91,6 @@ Plan S compliance check:
   APC: covered by institutional transform agreement.
 ```
 
-## References
-
-- Zenodo: https://zenodo.org/
-- Figshare: https://figshare.com/
-- Dryad: https://datadryad.org/
-- Open Science Framework (OSF): https://osf.io/
-- AsPredicted: https://aspredicted.org/
-- Center for Open Science Registered Reports: https://www.cos.io/initiatives/registered-reports
-- arXiv / bioRxiv / medRxiv: https://arxiv.org/, https://www.biorxiv.org/, https://www.medrxiv.org/
-- Plan S: https://www.coalition-s.org/
-- NIH Data Management and Sharing Policy: https://grants.nih.gov/policy/data-sharing/
-
 ## Notes
 
 - Persistent identifiers (DOI, ORCID, ROR) are required for FAIR compliance; do not substitute bare URLs.

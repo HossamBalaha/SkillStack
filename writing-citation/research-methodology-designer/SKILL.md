@@ -109,12 +109,3 @@ registered at ClinicalTrials.gov (NCT0XXXXXXX)."
 - Conflating a qualitative approach with a small quantitative study — qualitative sampling logic differs (information
   power, not statistical power).
 - Skipping threats-to-validity; reviewers treat this as a fatal omission for empirical work.
-
-## References
-
-- Schulz, K. F., Altman, D. G., & Moher, D. (2010). CONSORT 2010 Statement. *BMJ*, 340, c332.
-- G*Power statistical power-analysis
-  software: https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower.
-- 45 CFR 46 — U.S. Federal Policy for the Protection of Human Subjects.
-- Creswell, J. W., & Creswell, J. D. (2018). *Research Design: Qualitative, Quantitative, and Mixed Methods Approaches*.
-  SAGE.

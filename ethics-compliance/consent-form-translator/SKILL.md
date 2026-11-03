@@ -110,14 +110,3 @@ def score(text: str) -> dict:
         "smog_index": textstat.smog_index(text),
     }
 ```
-
-## References
-
-- NIH Plain Language
-  guidelines: https://www.nih.gov/institutes-nih/nih-office-communications-public-liaison/clear-communication/plain-language
-- Plain Writing Act of 2010: https://www.congress.gov/bill/111th-congress/house-bill/946
-- Flesch-Kincaid readability (Wikipedia reference
-  page): https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
-- textstat Python library: https://github.com/shivam5992/textstat
-- HHS Health Literacy guidance: https://health.gov/healthliteracyonline
-- CDC Clear Communication Index: https://www.cdc.gov/ccindex/

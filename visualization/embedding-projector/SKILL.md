@@ -99,9 +99,3 @@ def ProjectEmbeddings(embeddings, labels, method="pca", outputPath="emb.pdf"):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- sklearn PCA: https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
-- sklearn TSNE: https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
-- umap-learn: https://umap-learn.readthedocs.io/

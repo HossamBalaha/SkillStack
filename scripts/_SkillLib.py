@@ -42,8 +42,10 @@ RequiredSections = [
   "## Outputs",
   "## Key Rules",
   "## Examples",
-  "## References",
 ]
+
+# Optional sections (recommended but not required by the linter).
+OptionalSections = ["## References"]
 
 # Banned tokens that indicate incomplete work in any SKILL.md.
 BannedMarkers = ["TODO", "XXX", "FIXME"]

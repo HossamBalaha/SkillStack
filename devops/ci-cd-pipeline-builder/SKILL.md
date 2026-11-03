@@ -142,10 +142,3 @@ yq -i ".spec.template.spec.containers[0].image = \"ghcr.io/org/api:sha-${PREV_TA
 git commit -am "rollback ${ENV} to sha-${PREV_TAG}"
 git push
 ```
-
-## References
-
-- GitHub Actions Workflows: https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions
-- GitLab CI/CD Pipeline: https://docs.gitlab.com/ee/ci/pipelines/
-- Trivy Action: https://github.com/aquasecurity/trivy-action
-- Docker build-push-action: https://github.com/docker/build-push-action

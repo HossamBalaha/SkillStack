@@ -116,9 +116,3 @@ def RenderCard(card, outputPath):
     handle.write(markdown)
   return {"Path": outputPath, "Version": card.Version}
 ```
-
-## References
-
-- Model Cards paper (Mitchell et al. 2019): https://arxiv.org/abs/1810.03977
-- HuggingFace Dataset Cards: https://huggingface.co/docs/datasets/dataset-card
-- Dataset Nutrition Label: https://datasetnutritionlabel.com

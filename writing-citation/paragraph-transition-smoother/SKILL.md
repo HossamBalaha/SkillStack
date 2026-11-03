@@ -103,9 +103,3 @@ Transition map excerpt:
 - Smoothing transitions so heavily that the prose loses structural signposts the reader needs.
 - Replacing every banned opener with a near-synonym banned opener ("In addition," "Additionally") — these count too.
 - Altering citations or numbers while smoothing; only connective tissue should change.
-
-## References
-
-- Williams, J. M. *Style: Lessons in Clarity and Grace*. Pearson.
-- Graff, G., & Birkenstein, C. *They Say / I Say*. Norton.
-- Halliday, M. A. K., & Hasan, R. *Cohesion in English*. Longman.

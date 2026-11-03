@@ -95,8 +95,3 @@ def MakeJournalFigure(xData, yData, outputPath):
   fig.savefig(outputPath.replace(".pdf", ".png"), dpi=600)
   plt.close(fig)
 ```
-
-## References
-
-- SciencePlots matplotlib stylesheets: https://github.com/garrettj403/SciencePlots
-- Matplotlib paper tips: https://allanchain.github.io/blog/post/mpl-paper-tips

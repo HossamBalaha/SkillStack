@@ -103,9 +103,3 @@ Line 2:  Removed redundant definition of "Convolutional Neural Network (CNN)".
 Line 3:  Moved first-use definition of "Generative Adversarial Network (GAN)"
          earlier; reordered sentence so definition precedes use.
 ```
-
-## References
-
-- AMA Manual of Style on acronyms and abbreviations.
-- IEEE Editorial Style Manual, section on abbreviations.
-- The `glossaries` LaTeX package for managing acronyms programmatically.

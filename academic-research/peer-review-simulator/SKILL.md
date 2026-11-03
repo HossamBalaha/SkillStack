@@ -91,14 +91,6 @@ Rebuttal row sample:
 | lines 312-318) and the effect remains significant (p=0.012). |
 ```
 
-## References
-
-- COPE Ethical Guidelines for Peer
-  Reviewers: https://publicationethics.org/resources/guidelines/cope-ethical-guidelines-peer-reviewers
-- Publons peer review guidance: https://publons.com/about/peer-review/
-- Reviewer 2.0 initiative (constructive peer review): https://sites.google.com/view/reviewer20
-- ICLR OpenReview best practices: https://openreview.net/
-
 ## Notes
 
 - Keep reviewer and rebuttal tone strictly professional; no sarcasm or speculation about authorship.

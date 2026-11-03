@@ -97,10 +97,3 @@ Contributions (Introduction only):
   • We release a 4-dataset benchmark and topology-descriptor toolkit
     under an MIT license.
 ```
-
-## References
-
-- NIH "Developing Specific Aims"
-  guide: https://grants.nih.gov/grants/how-to-apply-application-guide/format-and-write/develop-specific-aims.htm
-- Simon "The Art of Writing Specific Aims": https://www.nature.com/articles/d41586-021-00180-3
-- Stanford HAI writing guide for contributions: https://hai.stanford.edu/

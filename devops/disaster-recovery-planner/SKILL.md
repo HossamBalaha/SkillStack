@@ -128,12 +128,3 @@ Drill date: 2025-Q1.
 Drill owner: DR on-call (rotate).
 Result: PASS / FAIL with action items.
 ```
-
-## References
-
-- AWS Well-Architected Reliability
-  Pillar: https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html
-- AWS Disaster Recovery
-  Strategies: https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/disaster-recovery-dr.html
-- Google SRE Workbook — Disaster Recovery: https://sre.google/workbook/disaster-recovery/
-- pgBackRest: https://pgbackrest.org/

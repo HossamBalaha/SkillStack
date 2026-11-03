@@ -93,14 +93,6 @@ Registered Report Stage 1 stopping rule:
   Stop for efficacy if p < 0.0051; stop for futility if conditional power < 20%.
 ```
 
-## References
-
-- AsPredicted: https://aspredicted.org/
-- Open Science Framework registrations: https://osf.io/registrations
-- Registered Reports (Center for Open Science): https://www.cos.io/initiatives/registered-reports
-- OSF Preregistration guidance: https://help.osf.io/article/345-create-registrations
-- Nosek et al. "The Preregistration Revolution": https://doi.org/10.1073/pnas.1708274114
-
 ## Notes
 
 - Stamp the registration timestamp and the OSF/AsPredicted ID prominently on the document.

@@ -97,12 +97,3 @@ def BuildSelfConsistencySampler(PromptTemplate, Question, SampleCount, Temperatu
   # Return the most frequent answer as the consensus.
   return MostCommon(Answers)
 ```
-
-## References
-
-- Wei, J. et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models."
-  https://arxiv.org/abs/2201.11903
-- Wang, X. et al. (2023). "Self-Consistency Improves Chain of Thought Reasoning in Language Models."
-  https://arxiv.org/abs/2203.11171
-- Kojima, T. et al. (2022). "Large Language Models are Zero-Shot Reasoners." https://arxiv.org/abs/2205.11916
-- GSM8K benchmark: https://openai.com/index/grade-school-math/

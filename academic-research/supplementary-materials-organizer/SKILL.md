@@ -94,15 +94,6 @@ Main-text cross-reference (excerpt):
    2^3 ablation is reported in Supplementary Table ST1."
 ```
 
-## References
-
-- Elsevier supplementary materials
-  guide: https://www.elsevier.com/researcher/author/tools-and-resources/research-data/supplementary-materials
-- Nature Scientific Reports supplementary information: https://www.nature.com/srep/publish/guidelines
-- Zenodo for archive DOIs: https://zenodo.org/
-- Figshare for video and figures: https://figshare.com/
-- SHA-256 checksum generation (OpenSSL): https://www.openssl.org/
-
 ## Notes
 
 - Re-run the cross-reference audit every time the main text or the supplementary PDF changes.

@@ -135,10 +135,3 @@ class TargetEncoder:
   def Persist(self, path):
     joblib.dump(self, path)
 ```
-
-## References
-
-- scikit-learn preprocessing: https://scikit-learn.org/stable/modules/preprocessing.html
-- pandas rolling: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html
-- Target encoding (Micci-Barreca
-  2001): https://kaggle.com/code/ogrellier/python-target-encoding-for-categorical-features

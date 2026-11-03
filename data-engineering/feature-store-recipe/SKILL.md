@@ -107,10 +107,3 @@ def CheckFreshness(featureView, onlineStore, now):
   if (age > featureView.OnlineTtl):
     raise FreshnessError(f"{featureView.Name} stale by {age}")
 ```
-
-## References
-
-- Feast: https://docs.feast.dev
-- Hopsworks: https://www.hopsworks.ai
-- Tecton: https://www.tecton.ai
-- Point-in-time joins (Feast): https://docs.feast.dev/getting-started/concepts/feature-views

@@ -93,9 +93,3 @@ def BuildApp(dataPath):
 if (__name__ == "__main__"):
   BuildApp("results.csv")
 ```
-
-## References
-
-- Streamlit docs: https://streamlit.io
-- Dash docs: https://dash.plotly.com
-- Gradio docs: https://gradio.app

@@ -125,10 +125,3 @@ def CohensD(SeriesA, SeriesB):
     return 0.0
   return float((np.mean(SeriesA) - np.mean(SeriesB)) / pooledStd)
 ```
-
-## References
-
-- sklearn metrics: https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics
-- scipy stats: https://docs.scipy.org/doc/scipy/reference/stats.html
-- LogisticRegression deprecation
-  notice: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html

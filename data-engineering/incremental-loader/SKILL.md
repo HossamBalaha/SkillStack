@@ -113,9 +113,3 @@ def DedupByKey(rows, primaryKey):
       latest[key] = row
   return list(latest.values())
 ```
-
-## References
-
-- Change Data Capture patterns: https://en.wikipedia.org/wiki/Change_data_capture
-- Snowflake MERGE: https://docs.snowflake.com/en/sql-reference/sql/merge
-- BigQuery MERGE: https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-syntax#merge

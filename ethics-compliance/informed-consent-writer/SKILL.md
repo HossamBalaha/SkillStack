@@ -95,12 +95,3 @@ Withdrawal clause:
    If you stop, the data already collected about you will be kept and used for the study
    unless you tell us in writing to destroy it."
 ```
-
-## References
-
-- Belmont Report: https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html
-- 21 CFR 50 (FDA informed consent): https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-50
-- 45 CFR 46.116 (general requirements for consent): https://www.ecfr.gov/current/title-45/part-46#46.116
-- OHRP informed consent FAQs: https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/informed-consent/index.html
-- NIH Plain Language
-  guidelines: https://www.nih.gov/institutes-nih/nih-office-communications-public-liaison/clear-communication/plain-language

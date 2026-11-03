@@ -113,14 +113,3 @@ BAA sufficiency finding:
   Finding: NON-CONFORMANCE, severity HIGH,
   remediation: amend BAA within 30 days.
 ```
-
-## References
-
-- 45 CFR 160 (HIPAA general provisions): https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-160
-- 45 CFR 164 (HIPAA Security and Privacy Rules): https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164
-- HHS HIPAA de-identification
-  guidance: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html
-- HHS Business Associate
-  Contracts: https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/index.html
-- HHS Breach Notification Rule: https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html
-- NIST SP 800-66 (HIPAA Security Rule implementation): https://csrc.nist.gov/pubs/sp/800/66/r2/final

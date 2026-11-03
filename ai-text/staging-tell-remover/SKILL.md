@@ -129,9 +129,3 @@ After:  The refactor re-architected the ingestion path; the new shape handles 3Ã
 - "Symmetry is the language of trust."                       | deep saying (#3) | replaced with concrete claim
 - "And that is the real win."                                | closer (#2)     | deleted
 ```
-
-## References
-
-- Companion skills: `ai-text-detector`, `ai-tell-catalogue` (tells #1-#5), `grace-degradation-protocol`,
-  `voice-profile-matcher`.
-- Principles paraphrased; before/after examples written from scratch.

@@ -131,8 +131,3 @@ def CheckTabs(path):
 if (__name__ == "__main__"):
   CheckTabs("Makefile")
 ```
-
-## References
-
-- GNU Make manual — https://www.gnu.org/software/make/manual/
-- `.PHONY` targets — https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html

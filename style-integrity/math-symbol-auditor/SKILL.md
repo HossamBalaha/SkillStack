@@ -100,9 +100,3 @@ Nomenclature (excerpt, when count > 15):
 | \eta | Learning rate | — |
 | \sigma | Noise standard deviation | — |
 ```
-
-## References
-
-- AMS Author Handbook on mathematical notation.
-- Goodfellow, Bengio, Courville, *Deep Learning*, Appendix on notation.
-- ISO 80000-2 mathematical signs and symbols standard.

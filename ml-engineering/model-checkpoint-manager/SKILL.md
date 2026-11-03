@@ -127,11 +127,3 @@ def PruneTopK(CheckpointDir, KeepK, Mode, OutputPath):
     with open(OutputPath + "BestCheckpoint.json", "w") as fh:
       json.dump({"Path": metrics[0][0], "ValMetric": metrics[0][1]}, fh, indent=2)
 ```
-
-## References
-
-- torch.save / torch.load: https://pytorch.org/docs/stable/generated/torch.save.html
-- Lightning
-  ModelCheckpoint: https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.ModelCheckpoint.html
-- Saving and loading models
-  recipe: https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_models_for_inference.html

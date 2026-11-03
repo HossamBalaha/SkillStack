@@ -100,11 +100,3 @@ the study protocol." (grade 14)
 
 After: "You must sign a consent form before the study begins." (grade 6)
 ```
-
-## References
-
-- Flesch, R. (1948). A new readability yardstick. *Journal of Applied Psychology*, 32(3), 221-233.
-- Gunning, R. (1952). *The Technique of Clear Writing*. McGraw-Hill.
-- McLaughlin, G. H. (1969). SMOG grading — a new readability formula. *Journal of Reading*, 12(8), 639-646.
-- NIH Plain Language
-  guidelines: https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/clear-communication/plain-language.

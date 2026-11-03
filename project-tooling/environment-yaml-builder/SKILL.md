@@ -155,10 +155,3 @@ pipenv install --dev
 # pixi (produces pixi.lock).
 pixi install
 ```
-
-## References
-
-- Conda environment.yml — https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
-- pipenv Pipfile — https://pipenv.pypa.io/en/latest/pipfile.html
-- pixi — https://pixi.sh/latest/
-- conda-lock — https://conda.github.io/conda-lock/

@@ -138,11 +138,3 @@ spec:
         retryOn: 5xx,reset,connect-failure
       timeout: 5s
 ```
-
-## References
-
-- Istio Documentation: https://istio.io/latest/docs/
-- Istio PeerAuthentication: https://istio.io/latest/docs/reference/config/security/peer_authentication/
-- Istio VirtualService: https://istio.io/latest/docs/reference/config/networking/virtual-service/
-- Istio DestinationRule: https://istio.io/latest/docs/reference/config/networking/destination-rule/
-- Istio Traffic Management: https://istio.io/latest/docs/concepts/traffic-management/

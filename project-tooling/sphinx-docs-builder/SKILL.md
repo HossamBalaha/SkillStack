@@ -139,11 +139,3 @@ Makefile target:
 docs:
         sphinx-build -W --keep-going -b html docs docs/_build/html
 ```
-
-## References
-
-- Sphinx — https://www.sphinx-doc.org
-- Napoleon extension — https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
-- intersphinx — https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html
-- MkDocs Material — https://squidfunk.github.io/mkdocs-material/
-- mkdocstrings — https://mkdocstrings.github.io

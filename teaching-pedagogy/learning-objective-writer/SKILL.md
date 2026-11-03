@@ -101,13 +101,3 @@ Negation test:
   Verdict:  Sounds wrong because appreciation is internal —
             the objective is unmeasurable. Revise.
 ```
-
-## References
-
-- Bloom (1956), "Taxonomy of Educational Objectives, Handbook I: Cognitive Domain" — David McKay.
-- Anderson & Krathwohl (2001), "A Taxonomy for Learning, Teaching, and Assessing" — Longman. Revised taxonomy with verb
-  list.
-- Vanderbilt University Center for Teaching — Bloom's
-  taxonomy: https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/
-- Carnegie Mellon Eberly Center — Learning
-  objectives: https://www.cmu.edu/teaching/designteach/design/learningObjectives.html

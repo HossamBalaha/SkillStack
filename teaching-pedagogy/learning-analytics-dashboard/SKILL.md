@@ -126,10 +126,3 @@ Top features by absolute weight:
   4. discussion_posts_week (negative)
 Action: model accepted for weekly use; revisit at end of term.
 ```
-
-## References
-
-- Society for Learning Analytics Research (SoLAR) — https://www.solaresearch.org/
-- Sclater, Peasgood & Mullan (2017), "Learning Analytics in Higher Education" — JISC. SOLES framework.
-- Siemens & Long (2011), "Penetrating the Fog: Analytics in Learning and Education" — EDUCAUSE Review, 46(5), 30-32.
-- Canvas LMS REST API — https://canvas.instructure.com/doc/api/

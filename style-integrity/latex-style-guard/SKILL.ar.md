@@ -102,9 +102,3 @@ L = (y - \hat{y})^2
 
 The ``standard'' approach is shown in Figure~\ref{fig:x}.
 ```
-
-## المراجع
-
-- Leslie Lamport، *LaTeX: A Document Preparation System* (الطبعة الثانية).
-- TeX FAQ حول موضع العناصر الطافية: https://texfaq.org/FAQ-floats
-- دليل مستخدم `amsmath` (AMS) لبيئات المعادلات.

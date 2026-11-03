@@ -114,10 +114,3 @@ def RenderTemplate(TemplateEntry, VariableValues):
   # Return the final prompt string.
   return Rendered
 ```
-
-## References
-
-- OpenAI Prompt Examples: https://platform.openai.com/docs/examples
-- LangChain PromptHub: https://smith.langchain.com/hub
-- PromptingGuide.ai templates: https://www.promptingguide.ai/
-- Companion skills: `few-shot-template-builder`, `system-prompt-architect`, `prompt-versioning-system`.

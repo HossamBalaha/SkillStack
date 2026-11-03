@@ -101,9 +101,3 @@ L = (y - \hat{y})^2
 
 The ``standard'' approach is shown in Figure~\ref{fig:x}.
 ```
-
-## 参考资料
-
-- Leslie Lamport，《LaTeX: A Document Preparation System》（第 2 版）。
-- TeX FAQ 关于浮动体位置：https://texfaq.org/FAQ-floats
-- `amsmath` 用户指南（AMS）关于公式环境。

@@ -119,9 +119,3 @@ def CollectImports(rootDir):
 if (__name__ == "__main__"):
   print("\n".join(CollectImports("src")))
 ```
-
-## References
-
-- `pip freeze` — https://pip.pypa.io/en/stable/cli/pip_freeze/
-- `pip install -r` — https://pip.pypa.io/en/stable/cli/pip_install/#cmdoption-r
-- pip-tools for compiling unversioned → pinned — https://pip-tools.readthedocs.io

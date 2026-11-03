@@ -122,12 +122,3 @@ Detection:
 - Closest real paper: LeCun, Bengio, Hinton (2015), "Deep learning", Nature 521.
 Result: author plausible, paper title fabricated (S3 → S4 because title mismatch).
 ```
-
-## References
-
-- Crossref REST API: https://api.crossref.org — canonical DOI resolver.
-- Google Scholar: https://scholar.google.com — title and author search.
-- Ulrichsweb (serials directory) and the ISSN Portal (portal.issn.org) for journal verification.
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7) — documents
-  hallucinated citations as a strong AI signal.
-- Companion skills: `ai-text-detector`, `severity-classifier`, `grace-degradation-protocol`.

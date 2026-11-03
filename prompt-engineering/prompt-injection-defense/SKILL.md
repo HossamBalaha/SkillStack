@@ -108,15 +108,3 @@ def SanitizeUntrustedInput(RawText, MaxLength=4000):
   # Wrap the cleaned text in the delimiter fence.
   return f"<untrusted_input>{Cleaned}</untrusted_input>"
 ```
-
-## References
-
-- Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with
-  Indirect Prompt Injection." https://arxiv.org/abs/2302.12173
-- Zou, A. et al. (2023). "Universal and Transferable Adversarial Attacks on Aligned Text Models." (AdvBench)
-  https://arxiv.org/abs/2307.15043
-- Chao, P. et al. (2024). "JailbreakBench." https://arxiv.org/abs/2404.01318
-- ProtectAI DeBERTa-v3 prompt injection model: https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2
-- Lakera Guard: https://www.lakera.ai/lakera-guard
-- OpenAI — Prompt Injection mitigation: https://platform.openai.com/docs/guides/prompt-injection
-- Companion skills: `prompt-injection-detector`, `system-prompt-architect`, `rag-prompt-designer`.

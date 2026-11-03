@@ -96,9 +96,3 @@ citation_tasks.md excerpt:
       each client to maintain a tailored model..."
       Suggested search: "Collins et al. 2021 personalization federated."
 ```
-
-## References
-
-- Williams, J. M., & Colomb, G. G. *The Craft of Argument*. University of Chicago Press.
-- Toulmin, S. *The Uses of Argument* (for claim-evidence structure).
-- Graff, G., & Birkenstein, C. *They Say / I Say: The Moves That Matter in Academic Writing*. Norton.

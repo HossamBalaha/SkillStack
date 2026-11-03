@@ -108,13 +108,3 @@ def RouteMessage(Message, Topology, RoundCap):
     # Wrap the reply in a new envelope and continue routing.
     RouteMessage(Reply, Topology, RoundCap)
 ```
-
-## References
-
-- Wu, Q. et al. (2023). "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation."
-  https://arxiv.org/abs/2308.08155
-- CrewAI framework: https://docs.crewai.com/
-- LangGraph — multi-agent orchestration: https://langchain-ai.github.io/langgraph/
-- Hong, S. et al. (2023). "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework."
-  https://arxiv.org/abs/2308.00352
-- Companion skills: `react-agent-prompter`, `system-prompt-architect`, `chain-of-thought-prompter`.

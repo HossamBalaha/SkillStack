@@ -95,11 +95,3 @@ Empty Planning Note (when nothing is missing):
 
 No missing data. No assumptions beyond those stated inline.
 ```
-
-## References
-
-- The "decision log" pattern from engineering documentation.
-- Project-management conventions on assumption registers.
-- Academic peer-review norms on residual unknowns.
-- The ADR (Architecture Decision Record) format for documenting assumptions.
-- The `silent-omission-protocol` skill in this repository (companion skill).

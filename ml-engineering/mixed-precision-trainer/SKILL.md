@@ -107,9 +107,3 @@ def WriteAmpReport(Report, OutputDir):
   with open(OutputDir + "AmpReport.json", "w") as f:
     json.dump(Report, f, indent=2)
 ```
-
-## References
-
-- PyTorch AMP docs: https://pytorch.org/docs/stable/amp.html
-- torch.cuda.amp.GradScaler: https://pytorch.org/docs/stable/amp.html#gradient-scaling
-- Automatic Mixed Precision recipes: https://pytorch.org/tutorials/recipes/recipes/amp_recipe.html

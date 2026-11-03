@@ -108,13 +108,3 @@ Faithfulness score: 3/4 = 0.75. Flag A4.
 - Confusing faithfulness with completeness — a summary can be perfectly faithful yet omit key points; route completeness
   to `response-quality-scorer`.
 - Atomizing at sentence level only — long sentences often carry multiple facts that need individual checks.
-
-## References
-
-- Kryscinski, W. et al. (2020). "Evaluating the Factual Consistency of Abstractive Text Summarization."
-  EMNLP. https://arxiv.org/abs/1910.12840
-- Wang, A. et al. (2020). "Asking and Answering Questions to Evaluate the Factual Consistency of Summaries." (QAGS)
-  NAACL. https://arxiv.org/abs/2004.04228
-- Laban, P. et al. (2022). "SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization."
-  TACL. https://arxiv.org/abs/2111.09525
-- Companion skills: `groundedness-verifier`, `factuality-checker`, `hallucination-detector`.

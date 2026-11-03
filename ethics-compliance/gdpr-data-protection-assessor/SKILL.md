@@ -107,14 +107,3 @@ DPIA residual risk (hospital ML triage):
   Residual risk: MEDIUM — proceed without Article 36 consultation,
   but review every 12 months.
 ```
-
-## References
-
-- EU GDPR full text: https://gdpr-info.eu/
-- GDPR Article 5 (principles): https://gdpr-info.eu/art-5-gdpr/
-- GDPR Article 6 (lawfulness): https://gdpr-info.eu/art-6-gdpr/
-- GDPR Article 35 (DPIA): https://gdpr-info.eu/art-35-gdpr/
-- GDPR Article 30 (records): https://gdpr-info.eu/art-30-gdpr/
-- EDPB DPIA guidelines (WP248): https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-dpia_en
-- European Commission SCC
-  page: https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en

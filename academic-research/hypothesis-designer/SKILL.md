@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
-tags: [hypothesis, h0-h1, effect-size, statistical-test, finer]
-related: [academic-research/research-question-formulator, academic-research/experimental-design-planner, academic-research/pre-registration-drafter]
-prerequisites: [academic-research/research-question-formulator]
-outputs: [markdown]
+tags: [ hypothesis, h0-h1, effect-size, statistical-test, finer ]
+related: [ academic-research/research-question-formulator, academic-research/experimental-design-planner, academic-research/pre-registration-drafter ]
+prerequisites: [ academic-research/research-question-formulator ]
+outputs: [ markdown ]
 difficulty: intermediate
 estimated_tokens: 800
 permissions:
@@ -18,7 +18,7 @@ permissions:
   execute_code: false
 language: en
 last_reviewed: 2026-11-02
-verified_against: []
+verified_against: [ ]
 ---
 
 # Hypothesis Designer
@@ -90,14 +90,6 @@ Secondary hypothesis (binary outcome):
   Test: logistic regression adjusting for age and baseline NIHSS.
   Assumptions: linearity in logit for continuous covariates; checked by Box-Tidwell.
 ```
-
-## References
-
-- Cohen's effect-size conventions: https://www.utexas.edu/cola/statistics/faculty/jcohen/
-- Wasserman "All of Statistics" hypothesis testing chapter.
-- Kleinbaum "Logistic Regression" assumptions: https://www.sas.com/store/prodBrowse_1_2.html?parentCategory=252
-- G*Power sample-size
-  tool: https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower
 
 ## Notes
 

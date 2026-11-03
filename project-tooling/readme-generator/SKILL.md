@@ -148,9 +148,3 @@ if (__name__ == "__main__"):
     status = "ok" if (code == 0) else "fail"
     print(f"{status}: {cmd}")
 ```
-
-## References
-
-- Standard Readme spec — https://github.com/RichardLitt/standard-readme
-- GitHub README best
-  practices — https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes

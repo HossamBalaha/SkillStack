@@ -98,10 +98,3 @@ Validation report excerpt:
   @inproceedings{Ng2021}    — OK
   Citekey 'Brown2020Survey' is defined but never \cite'd  -> ORPHAN
 ```
-
-## References
-
-- LaTeX bibliography management
-  overview: https://resources.latex-cloud-studio.com/learn/latex/bibliography/bibliography-management-bibtex
-- IEEE Editorial Style Manual (citation format reference).
-- `biblatex` package documentation for field-name normalization.

@@ -100,10 +100,3 @@ Midterm (summative)               20%  Bloom: Understand/Apply
 Final exam (summative)           25%  Bloom: Analyze/Evaluate
 Total                           100%
 ```
-
-## References
-
-- Wiggins & McTighe (2005), "Understanding by Design" (Expanded 2nd ed.) — ASCD. Backward design framework.
-- Fink (2003), "Creating Significant Learning Experiences" — Jossey-Bass. Integrated course design.
-- Carnegie Mellon Eberly Center — Syllabus design: https://www.cmu.edu/teaching/designteach/design/syllabus/
-- Yale Poorvu Center — Course design: https://poorvucenter.yale.edu/CourseDesign

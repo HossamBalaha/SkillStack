@@ -112,9 +112,3 @@ def SuggestLrAtSteepestDescent(LrFinder):
   minIdx = gradients.index(min(gradients))
   return lrs[minIdx + 1]
 ```
-
-## References
-
-- Smith 2015, "Cyclical Learning Rates for Training Neural Networks": https://arxiv.org/abs/1506.01186
-- torch_lr_finder: https://github.com/davidtvs/pytorch-lr-finder
-- Lightning Tuner.lr_find: https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.tuner.Tuner.html

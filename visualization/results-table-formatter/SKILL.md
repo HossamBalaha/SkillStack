@@ -95,8 +95,3 @@ def EmitLatexTable(rows, bestIndex):
   lines.append("\\end{tabular}")
   return "\n".join(lines)
 ```
-
-## References
-
-- booktabs LaTeX package: https://ctan.org/pkg/booktabs
-- multirow LaTeX package: https://ctan.org/pkg/multirow

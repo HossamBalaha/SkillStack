@@ -107,12 +107,3 @@ Peer-review form (3 criteria):
 3. Mechanics (1-4): grammar, spelling, citation format.
 Calibration sample: anchor paper at level 3 attached.
 ```
-
-## References
-
-- Carnegie Mellon Eberly Center — Assessing student learning: https://www.cmu.edu/teaching/assessment/
-- Haladyna (2004), "Developing and Validating Multiple-Choice Test Items" — Routledge.
-- Brown University Sheridan Center —
-  Assessment: https://www.brown.edu/sheridon/teaching-learning-tools/assessment-evaluation
-- Vanderbilt University Center for Teaching — Just-in-time teaching and
-  assessment: https://cft.vanderbilt.edu/guides-sub-pages/just-in-time-teaching/

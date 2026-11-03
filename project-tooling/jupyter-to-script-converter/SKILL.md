@@ -124,9 +124,3 @@ Post-conversion cleanup:
 ruff check --fix Analysis.py
 black Analysis.py
 ```
-
-## References
-
-- `nbconvert` script exporter — https://nbconvert.readthedocs.io
-- `.ipynb` JSON schema — https://nbformat.readthedocs.io
-- `ruff` — https://docs.astral.sh/ruff/

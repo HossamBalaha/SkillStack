@@ -121,9 +121,3 @@ schedules:
 - **Comms Lead:** owns status-page updates and the exec loop.
 - **Scribe:** timestamps every action in the channel for the postmortem.
 ```
-
-## References
-
-- PagerDuty Incident Response: https://response.pagerduty.com/
-- Atlassian Incident Handbook: https://www.atlassian.com/incident-management/handbook
-- Google SRE Book — Incident Response: https://sre.google/sre-book/incident-response/

@@ -95,11 +95,3 @@ Risk/benefit excerpt:
   certificate of confidentiality from NIH.
   Benefit: validated screening tool provided to participant at no cost.
 ```
-
-## References
-
-- 45 CFR 46 (Common Rule): https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-46
-- OHRP IRB Submission guidance: https://www.hhs.gov/ohrp/regulations-and-policy/guidance/index.html
-- OHRP exemption categories: https://www.hhs.gov/ohrp/regulations-and-policy/regulations/45-cfr-46/index.html
-- CITI Program human-subjects training: https://about.citiprogram.org/
-- Declaration of Helsinki: https://www.wma.net/policies-post/wma-declaration-of-helsinki/

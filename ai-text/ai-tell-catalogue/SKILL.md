@@ -133,9 +133,3 @@ Before: The 2023 paper leaves an indelible mark on the field.
 After:  The 2023 paper introduced a 38% latency reduction in federated test clusters.
 Default severity: S2
 ```
-
-## References
-
-- Companion skills: `ai-text-detector`, `ai-text-humanizer`, `severity-classifier`, `chatbot-residue-cleaner`,
-  `inflation-stripper`, `staging-tell-remover`, `rhythm-by-rule-fixer`, `formatting-by-rule-cleaner`.
-- Principles paraphrased from widely documented observations on AI-generated prose; no external text reproduced.

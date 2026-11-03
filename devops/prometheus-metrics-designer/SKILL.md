@@ -115,11 +115,3 @@ LATENCY = Histogram(
 
 start_http_server(9100)
 ```
-
-## References
-
-- Prometheus Metric Types: https://prometheus.io/docs/concepts/metric_types/
-- Prometheus Naming: https://prometheus.io/docs/practices/naming/
-- Prometheus Histograms and Summaries: https://prometheus.io/docs/practices/histograms/
-- Prometheus Recording Rules: https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/
-- `promtool`: https://prometheus.io/docs/prometheus/latest/management_tools/

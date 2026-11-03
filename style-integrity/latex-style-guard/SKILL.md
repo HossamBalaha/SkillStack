@@ -106,9 +106,3 @@ L = (y - \hat{y})^2
 
 The ``standard'' approach is shown in Figure~\ref{fig:x}.
 ```
-
-## References
-
-- Leslie Lamport, *LaTeX: A Document Preparation System* (2nd ed.).
-- The TeX FAQ on float placement: https://texfaq.org/FAQ-floats
-- `amsmath` user guide (AMS) for equation environments.

@@ -118,12 +118,3 @@ def BuildRagPrompt(Question, Chunks, SystemTemplate):
   # Substitute the question and context into the system template.
   return SystemTemplate.replace("{{Question}}", Question).replace("{{Context}}", WrappedContext)
 ```
-
-## References
-
-- Lewis, P. et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks."
-  https://arxiv.org/abs/2005.11401
-- Gao, Y. et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey."
-  https://arxiv.org/abs/2312.10997
-- RAGAS evaluation framework: https://docs.ragas.io/
-- Companion skills: `faithfulness-scorer`, `prompt-injection-defense`, `context-window-optimizer`.

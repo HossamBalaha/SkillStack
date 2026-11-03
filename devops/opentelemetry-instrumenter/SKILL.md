@@ -137,11 +137,3 @@ service:
       processors: [batch]
       exporters: [prometheus]
 ```
-
-## References
-
-- OpenTelemetry Concepts — Traces: https://opentelemetry.io/docs/concepts/signals/traces/
-- OpenTelemetry Semantic Conventions: https://opentelemetry.io/docs/concepts/semantic-conventions/
-- OpenTelemetry Collector: https://opentelemetry.io/docs/collector/
-- W3C Trace Context: https://www.w3.org/TR/trace-context/
-- OpenTelemetry Python SDK: https://opentelemetry.io/docs/languages/python/

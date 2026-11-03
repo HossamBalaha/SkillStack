@@ -104,13 +104,3 @@ Flag: sycophancy-resistance below threshold — recommend correction-focused fin
 - Collapsing multiple axes into a single overall score too early — surface per-axis scores; a low axis can hide behind a
   high mean.
 - Disclosing only the aggregate score without the dataset and version — alignment is relative to the eval set.
-
-## References
-
-- Askell, A. et al. (2021). "A General Language Assistant as a Laboratory for Alignment." arXiv:
-  2112.00861. https://arxiv.org/abs/2112.00861
-- Lin, S. et al. (2022). "TruthfulQA: Measuring How Models Mimic Human Falsehoods."
-  ACL. https://arxiv.org/abs/2109.07958
-- Perez, E. et al. (2022). "Discovering Language Model Behaviors with Model-Written Evaluations." (Anthropic
-  sycophancy) https://arxiv.org/abs/2212.09251
-- Companion skills: `safety-classifier`, `bias-auditor`, `prompt-injection-detector`, `response-quality-scorer`.

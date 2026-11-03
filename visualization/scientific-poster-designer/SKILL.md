@@ -103,8 +103,3 @@ def ValidatePoster(specs, qrSizeMm):
     raise ValueError("QR code smaller than 2 cm may not scan at distance.")
   return True
 ```
-
-## References
-
-- PosterPresentation templates: https://www.posterpresentations.com/free-poster-templates.html
-- SciFig A0 templates: https://scifig.ai/scientific-poster-templates/a0

@@ -98,10 +98,3 @@ A: "DANN aligns feature distributions globally, which discards
    DANN in Table 3 (rows 7-8) and outperform it by 3.1 Dice."
    Backup one-liner: "Empirically it underperforms; details in Table 3."
 ```
-
-## References
-
-- NeurIPS speaker guidelines: https://neurips.cc/Conferences/2025/PaperInformation/SpeakerInstructions
-- WCAG 2.1 color contrast: https://www.w3.org/WAI/WCAG21/quickref/
-- De Cristo presentation design principles (Presentation Zen): https://www.presentationzen.com/
-- Microsoft Accessibility checker: https://support.microsoft.com/accessibility

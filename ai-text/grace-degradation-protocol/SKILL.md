@@ -128,9 +128,3 @@ RIGHT (clean body, log outside):
 [Omission Log]
 - Omitted: "73% adoption across Fortune 500 companies" — verification pending.
 ```
-
-## References
-
-- Companion skills: `ai-text-humanizer`, `inflation-stripper`, `citation-hallucination-detector`.
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7) — hallucinated
-  citations as a documented LLM failure mode.

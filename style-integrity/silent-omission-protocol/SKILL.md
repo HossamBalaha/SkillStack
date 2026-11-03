@@ -114,9 +114,3 @@ Planning Note — Silent Omissions:
   learning rate was supplied. Provide the canonical learning rate and
   optimizer choice to restore the training step.
 ```
-
-## References
-
-- The "silent failure" pattern from software engineering (return clean output, log the issue elsewhere).
-- Academic peer-review norms on unsupported claims.
-- Technical-writing guides on cohesion and reader immersion.

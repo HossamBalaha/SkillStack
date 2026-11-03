@@ -115,14 +115,3 @@ Benefit/harm analysis excerpt:
   for applicants over 50 flagged low-confidence.
   Residual: LOW after second-review safeguard.
 ```
-
-## References
-
-- EU Artificial Intelligence Act (Regulation 2024/1689): https://eur-lex.europa.eu/eli/reg/2024/1689/oj
-- NIST AI Risk Management Framework (AI RMF 1.0): https://www.nist.gov/itl/ai-risk-management-framework
-- Treasury Board of Canada Directive on Automated
-  Decision-Making: https://www.canada.ca/en/treasury-board-secretariat/services/innovation/directive-automated-decision-making.html
-- OECD AI Principles: https://oecd.ai/en/ai-principles
-- AlgorithmWatch AI ethics guidelines global inventory: https://algorithmwatch.org/en/ai-ethics-guidelines-inventory/
-- Assessment List for Trustworthy AI
-  (ALTAI): https://digital-strategy.ec.europa.eu/en/library/assessment-list-trustworthy-artificial-intelligence-altai-self-assessment

@@ -139,11 +139,3 @@ Badge for the README:
 ```markdown
 ![ci](https://github.com/owner/repo/actions/workflows/ci.yml/badge.svg)
 ```
-
-## References
-
-- GitHub Actions docs — https://docs.github.com/actions
-- `actions/setup-python` — https://github.com/actions/setup-python
-- `actions/cache` — https://github.com/actions/cache
-- Publishing to
-  GHCR — https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry

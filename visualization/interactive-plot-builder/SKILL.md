@@ -96,9 +96,3 @@ def BuildLargeScatter(df, outputPath):
   img = tf.shade(agg, cmap=["white", "#1f77b4"])
   img.to_pil().save(outputPath)
 ```
-
-## References
-
-- Plotly Python docs: https://plotly.com/python/
-- Bokeh docs: https://docs.bokeh.org/
-- Datashader docs: https://datashader.org/

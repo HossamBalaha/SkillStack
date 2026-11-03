@@ -103,7 +103,3 @@ def PlotTrainingCurve(log, outputPath):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- matplotlib twinx docs: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.twinx.html

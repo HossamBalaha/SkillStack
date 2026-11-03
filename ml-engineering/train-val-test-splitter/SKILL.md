@@ -111,10 +111,3 @@ def WriteManifest(Groups, TrainIdx, ValIdx, TestIdx, OutputPath):
     json.dump(manifest, f, indent=2)
   return manifest
 ```
-
-## References
-
-- GroupShuffleSplit: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html
--
-
-StratifiedGroupKFold: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html

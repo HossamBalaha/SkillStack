@@ -113,12 +113,3 @@ Privacy policy gap finding:
   Missing: notice that GPC signals are honoured.
   Severity: HIGH. Remediation deadline: 30 days.
 ```
-
-## References
-
-- California Civil Code 1798.100-1798.199
-  (CCPA/CPRA): https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=3.&part=4.&lawCode=CIV&title=1.81.5
-- California Privacy Protection Agency regulations: https://cppa.ca.gov/regulations/
-- CCPA FAQ (California AG): https://oag.ca.gov/privacy/ccpa
-- CPPA enforcement actions: https://cppa.ca.gov/enforcement/
-- "Do Not Sell My Personal Information" guidance: https://oag.ca.gov/privacy/ccpa#section6

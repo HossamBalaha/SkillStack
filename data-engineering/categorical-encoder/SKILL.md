@@ -141,9 +141,3 @@ def ChooseStrategy(cardinality, hasOrder, hasTarget):
     return "hash"
   return "frequency"
 ```
-
-## References
-
-- scikit-learn encoders: https://scikit-learn.org/stable/modules/preprocessing.html#encoding-categorical-features
-- FeatureHasher: https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.FeatureHasher.html
-- Entity embeddings (Guo & Berkhahn 2016): https://arxiv.org/abs/1604.06737

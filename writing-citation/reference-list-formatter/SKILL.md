@@ -104,9 +104,3 @@ Orphan report:
   @inproceedings{Brown2020Old} — defined in .bib but never \cite'd.
   Action: flagged for author review (do not auto-remove).
 ```
-
-## References
-
-- ISSN List of Title Word Abbreviations (ISO 4): https://www.issn.org/services/online-services/access-to-the-ltwa/.
-- biblatex style manuals (`style=ieee`, `style=apa`, `style=chicago`).
-- Cite Them Right (Harvard referencing companion): https://www.citethemrightonline.com/.

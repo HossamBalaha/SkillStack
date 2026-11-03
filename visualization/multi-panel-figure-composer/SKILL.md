@@ -99,8 +99,3 @@ def ComposeFigure(panels, outputPath):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- matplotlib subplots docs: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html
-- matplotlib constrained_layout guide: https://matplotlib.org/stable/tutorials/intermediate/constrainedlayout_guide.html

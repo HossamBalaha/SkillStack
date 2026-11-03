@@ -101,8 +101,3 @@ def SaveMetrics(Metrics, FileName, OutputDirectory):
     json.dump(Metrics, f, indent=2)
   return fullPath
 ```
-
-## References
-
-- Python os.makedirs: https://docs.python.org/3/library/os.html#os.makedirs
-- datetime strftime: https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior

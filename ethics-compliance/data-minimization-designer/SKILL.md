@@ -105,14 +105,3 @@ ALLOWED_FIELDS = {"user_id", "age_band", "city", "device_class"}
 def minimise(record: dict) -> dict:
     return {k: v for k, v in record.items() if k in ALLOWED_FIELDS}
 ```
-
-## References
-
-- GDPR Article 5 (principles): https://gdpr-info.eu/art-5-gdpr/
-- Cavoukian, "Privacy by Design — The 7 Foundational
-  Principles": https://www.ipc.on.ca/wp-content/uploads/resources/7foundationalprinciples.pdf
-- ICO guidance on data
-  minimisation: https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-fairness/data-minimisation/
-- ENISA Privacy by Design guidelines: https://www.enisa.europa.eu/publications/privacy-and-data-protection-by-design
-- OECD Privacy Guidelines: https://www.oecd.org/sti/ieconomy/privacy.htm
-- ISO/IEC 29100 (privacy framework): https://www.iso.org/standard/45170.html

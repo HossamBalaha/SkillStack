@@ -143,9 +143,3 @@ report that afternoon. Friday's postmortem is on the calendar.
 - Uniform length (#12) | all four sentences ~17 words | varied to 8/9/10 words; CV 0.31 → 0.58
 - Passive voice (#11)  | "was filed"                  | restored actor ("We filed")
 ```
-
-## References
-
-- Companion skills: `ai-text-detector`, `ai-tell-catalogue` (tells #6-#12), `perplexity-burstiness-scorer`,
-  `voice-profile-matcher`.
-- Burstiness concept: Grieve, J. (2007). "Quantitative authorship attribution."

@@ -103,9 +103,3 @@ Discussion (correct, interpretation):
 likely because the dual-attention mechanism (Section 4.2) reduces sequence-
 length sensitivity — a known weakness of vanilla RNNs."
 ```
-
-## References
-
-- Swales, J. M. (1990). *Genre Analysis: English in Academic and Research Settings*. Cambridge University Press.
-- Booth, W. C., Colomb, G. G., & Williams, J. M. *The Craft of Research*. University of Chicago Press.
-- Institutional graduate-school thesis formatting guides (consult your institution's dissertation office).

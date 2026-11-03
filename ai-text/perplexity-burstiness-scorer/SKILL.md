@@ -111,11 +111,3 @@ Interpretation: Perplexity is in normal range, but burstiness is in the bottom
 1%. Uniform sentence length is the only red flag here. Do not conclude AI on
 burstiness alone — pair with lexical and citation tells before concluding.
 ```
-
-## References
-
-- GPT-2 reference model: Radford, A. et al. (2019). "Language Models are Unsupervised Multitask Learners." OpenAI.
-- Concept of burstiness in authorship attribution: Grieve, J. (2007). "Quantitative authorship attribution: A history
-  and evaluation of methods."
-- Weber-Wulff et al. (2023) caution that statistical scores alone misclassify at non-trivial rates — combine with manual
-  tell analysis.

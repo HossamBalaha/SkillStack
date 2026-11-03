@@ -102,11 +102,3 @@ Calibration log:
 - Using informal hedges ("maybe," "kind of") in formal academic prose.
 - Treating all reporting verbs as interchangeable — "demonstrates," "indicates," and "suggests" carry different hedge
   strength.
-
-## References
-
-- Hyland, K. (1998). *Hedging in Scientific Research Articles*. John Benjamins.
-- Hedging in academic writing (CASRAI): https://casrai.org/guides/hedging-in-academic-writing.
-- Hu, G., & Liu, R. (2018). Hedging in academic writing: A contrastive analysis. *Journal of English for Academic
-  Purposes*.
-- Myers, G. (1989). The pragmatics of politeness in scientific articles. *Applied Linguistics*, 10(1), 1-35.

@@ -101,9 +101,3 @@ vim config (.vimrc snippet):
   Plug 'lervag/vimtex'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
-
-## References
-
-- BetterBibTeX plugin: https://retorquere.github.io/zotero-better-bibtex/.
-- vimtex: https://github.com/lervag/vimtex.
-- Zotero documentation: https://www.zotero.org/support/.

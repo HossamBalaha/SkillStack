@@ -96,10 +96,3 @@ hypertension is uncontrolled on standard monotherapy.
 
 Keywords: renin inhibitor; ambulatory blood pressure; resistant hypertension; add-on therapy; randomized controlled trial
 ```
-
-## References
-
-- NIH structured abstract guidance for grant applications and reports.
-- ICMJE Recommendations for the Conduct, Reporting, Editing, and Publication of Scholarly Work in Medical Journals
-  (abstract section).
-- MeSH Browser for keyword normalization: https://meshb.nlm.nih.gov/.

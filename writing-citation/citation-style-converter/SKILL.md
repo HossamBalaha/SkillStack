@@ -104,10 +104,3 @@ biblatex switch (LaTeX preamble):
   \usepackage[style=ieee]{biblatex}
   \addbibresource{references.bib}
 ```
-
-## References
-
-- biblatex style options: `style=ieee`, `style=apa`, `style=chicago`, `style=mla`, `style=numeric` (for Vancouver-like).
-- IEEE Editorial Style Manual.
-- APA Style and Grammar Guidelines: https://apastyle.apa.org/.
-- Chicago Manual of Style Online: https://www.chicagomanualofstyle.org/.

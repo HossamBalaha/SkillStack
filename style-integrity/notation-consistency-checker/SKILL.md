@@ -99,11 +99,3 @@ Before: Let X be the feature space, V be the vertices, and N the neighbors.
 After:  Let \mathcal{X} be the feature space, \mathcal{V} the vertices,
         and \mathcal{N} the neighbors.
 ```
-
-## References
-
-- AMS Author Handbook on mathematical notation.
-- Goodfellow, Bengio, Courville, *Deep Learning* (Appendix on notation).
-- ISO 80000-2 mathematical signs and symbols standard.
-- The LaTeX `amsmath` user guide for environment and symbol conventions.
-- Notation in *The Elements of Statistical Learning* (Hastie, Tibshirani, Friedman).

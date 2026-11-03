@@ -98,8 +98,3 @@ def PlotConfusion(yTrue, yPred, classNames, outputPath):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- seaborn heatmap docs: https://seaborn.pydata.org/generated/seaborn.heatmap.html
-- sklearn confusion_matrix: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html

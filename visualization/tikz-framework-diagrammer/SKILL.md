@@ -96,7 +96,3 @@ verified_against: []
 \end{tikzpicture}
 \end{document}
 ```
-
-## References
-
-- TikZ & PGF manual: https://ctan.org/pkg/pgf

@@ -96,16 +96,3 @@ Raw output record (raw_outputs.jsonl):
   {"task": "mmlu_anatomy", "prompt": "...", "response": "A", "parsed": "A",
    "gold": "A", "correct": true, "seed": 42, "timestamp": "2025-01-15T10:23:01Z"}
 ```
-
-## References
-
-- EleutherAI lm-evaluation-harness: https://github.com/EleutherAI/lm-evaluation-harness
-- Stanford HELM (Holistic Evaluation of Language Models): https://crfm.stanford.edu/helm — paper: Liang et al.
-  (2022) https://arxiv.org/abs/2211.09110
-- OpenAI Evals: https://github.com/openai/evals
-- Hendrycks, D. et al. (2021). "Measuring Massive Multitask Language Understanding." (MMLU)
-  ICLR. https://arxiv.org/abs/2009.03300
-- Cobbe, K. et al. (2021). "Training Verifiers to Solve Math Word Problems." (GSM8K) https://arxiv.org/abs/2110.14168
-- Chen, M. et al. (2021). (HumanEval, pass@k) https://arxiv.org/abs/2107.03374
-- Lin, S. et al. (2022). (TruthfulQA) https://arxiv.org/abs/2109.07958
-- Companion skills: `response-quality-scorer`, `llm-as-judge-evaluator`, `code-output-validator`, `alignment-evaluator`.

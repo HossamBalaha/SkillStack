@@ -112,10 +112,3 @@ class IsolationForestDetector:
   def Persist(self, path):
     joblib.dump(self, path)
 ```
-
-## References
-
-- scikit-learn Isolation Forest: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
-- scikit-learn Local Outlier
-  Factor: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html
-- scikit-learn DBSCAN: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html

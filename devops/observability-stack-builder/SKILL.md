@@ -144,11 +144,3 @@ services:
     image: grafana/grafana:11.2.0
     ports: ["3000:3000"]
 ```
-
-## References
-
-- OpenTelemetry Collector: https://opentelemetry.io/docs/collector/
-- Google SRE Workbook — Alerting on SLOs: https://sre.google/workbook/alerting-on-slos/
-- Google SRE Book — Service Level Objectives: https://sre.google/sre-book/service-level-objectives/
-- Sloth (SLO generator): https://sloth.dev/
-- Grafana LGTM Stack: https://grafana.com/

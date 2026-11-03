@@ -108,16 +108,3 @@ Security:
   semgrep: python.lang.security.audit.subprocess-shell-injection (CRITICAL).
 Verdict: FAIL (command injection). Recommend: use `csv` module, never `os.system` on user input.
 ```
-
-## References
-
-- Chen, M. et al. (2021). "Evaluating Large Language Models Trained on Code." (HumanEval) arXiv:
-  2107.03374. https://arxiv.org/abs/2107.03374
-- Austin, J. et al. (2021). "Program Synthesis with Large Language Models." (MBPP) https://arxiv.org/abs/2108.07732
-- Jimenez, C. et al. (2024). "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
-  ICLR. https://arxiv.org/abs/2310.06770
-- Bandit (Python SAST): https://github.com/PyCQA/bandit
-- Semgrep (multi-language SAST): https://semgrep.dev/
-- e2b.dev sandboxed code execution: https://e2b.dev/
-- Companion skills: `hallucination-detector` (for non-existent API methods), `safety-classifier`,
-  `evaluation-harness-builder`.

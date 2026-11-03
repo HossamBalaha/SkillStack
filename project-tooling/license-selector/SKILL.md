@@ -119,10 +119,3 @@ Copyright 2026 Lab Tooling
 Licensed under the Apache License, Version 2.0 (the "License");
 ... (full Apache-2.0 text follows) ...
 ```
-
-## References
-
-- Choose a License — https://choosealicense.com
-- SPDX license list — https://spdx.org/licenses/
-- GitHub licensing a
-  repository — https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository

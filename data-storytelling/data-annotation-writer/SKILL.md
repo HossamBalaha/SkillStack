@@ -99,11 +99,3 @@ Annotation brief (excerpt):
 - Reference line: dashed at y=120, labelled "target 120".
 - Rationale: target line shows breach magnitude; callout names the cause.
 ```
-
-## References
-
-- Tufte, E. R. (2001). The Visual Display of Quantitative Information, 2nd ed. Graphics Press, Chapters on data-ink and
-  annotation. https://www.edwardtufte.com/tufte/books_vdqi
-- Knaflic, C. N. (2015). Storytelling with Data. Wiley, Chapters 4-5 on focusing attention.
-- Cairo, A. (2016). The Truthful Art. New Riders, Chapter 8 on annotation.
-- matplotlib annotation tutorial: https://matplotlib.org/stable/tutorials/text/annotations.html

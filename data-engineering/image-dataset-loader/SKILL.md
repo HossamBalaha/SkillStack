@@ -135,10 +135,3 @@ def PersistClassIndex(classIndex, path):
   with open(path, "w", encoding="utf-8") as handle:
     json.dump({"ClassIndex": classIndex, "Mean": IMAGENET_MEAN, "Std": IMAGENET_STD}, handle)
 ```
-
-## References
-
-- torchvision datasets: https://pytorch.org/vision/stable/datasets.html
-- torchvision transforms: https://pytorch.org/vision/stable/transforms.html
-- albumentations: https://albumentations.ai
-- PyTorch DataLoader: https://pytorch.org/docs/stable/data.html

@@ -107,10 +107,3 @@ Action: treat as near-certain AI; route to humanizer and citation verifier.
 Before: This section delves into the pivotal role of caching.
 After:  Caching matters here because every repeated query hits the database twice.
 ```
-
-## References
-
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns*, 4(7). Documents high
-  error rates in commercial detectors — motivates R1.
-- Refer companion skills: `ai-tell-catalogue`, `severity-classifier`, `perplexity-burstiness-scorer`,
-  `citation-hallucination-detector`.

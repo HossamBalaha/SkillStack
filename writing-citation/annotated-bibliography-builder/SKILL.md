@@ -98,10 +98,3 @@ CSV row example:
 citekey,year,theme,summary,strengths,limitations,relevance
 Geiping2020Inverting,2020,Privacy attacks,"Reconstructs training data from shared gradients via distance-minimization.","Clean formulation; reproducible code","Assumes small batches (≤8)","Motivates our gradient-noise defense (Ch.3)"
 ```
-
-## References
-
-- Cornell University Library guide to annotated
-  bibliographies: https://guides.library.cornell.edu/annotatedbibliography.
-- Purdue OWL: https://owl.purdue.edu/owl/general_writing/common_writing_assignments/annotated_bibliographies/index.html.
-- The CRAAP test for source assessment (Currency, Relevance, Authority, Accuracy, Purpose).

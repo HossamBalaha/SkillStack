@@ -143,10 +143,3 @@ Total 90-day forecast: ~$17,644
 | search-api    | 500m    | 2000m   | 1Gi     | 4Gi     | raise  |
 | ingest-worker | 100m    | 500m    | 512Mi   | 1Gi     | keep   |
 ```
-
-## References
-
-- Kubernetes Horizontal Pod Autoscaler: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
-- Kubernetes Vertical Pod Autoscaler: https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler
-- Kubernetes Cluster Autoscaler: https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler
-- PodDisruptionBudgets: https://kubernetes.io/docs/tasks/run-application/configure-pdb/

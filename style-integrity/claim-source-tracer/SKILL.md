@@ -97,11 +97,3 @@ Planning Note:
   level 0.1" while the manuscript omits the noise level. Add the
   qualifier to the manuscript sentence.
 ```
-
-## References
-
-- Cochrane Handbook for Systematic Reviews (on source tracing).
-- PRISMA 2020 reporting guideline for traceable claims.
-- Zotero / Mendeley documentation on binder organization.
-- The Open Science Framework (OSF) primer on reproducible provenance.
-- Crossref REST API for citation metadata verification.

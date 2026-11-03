@@ -125,10 +125,3 @@ README link:
 ```markdown
 This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
 ```
-
-## References
-
-- Contributor Covenant — https://www.contributor-covenant.org
-- Contributor Covenant v2.1 text — https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
-- GitHub community code of conduct
-  docs — https://docs.github.com/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project

@@ -103,9 +103,3 @@ def AssertUniqueness(df, primaryKey):
   if (duplicateCount > 0):
     raise ValueError(f"{duplicateCount} duplicate {primaryKey} rows")
 ```
-
-## References
-
-- pandera: https://pandera.readthedocs.io
-- Great Expectations: https://greatexpectations.io
-- Expectation gallery: https://greatexpectations.io/expectations

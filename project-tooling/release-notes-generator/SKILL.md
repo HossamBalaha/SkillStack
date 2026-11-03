@@ -159,9 +159,3 @@ git tag -a v0.3.0 -m "Release 0.3.0"
 git push origin v0.3.0
 gh release create v0.3.0 --notes-file release_notes.md
 ```
-
-## References
-
-- Conventional Commits — https://www.conventionalcommits.org
-- GitHub CLI `gh release create` — https://cli.github.com/manual/gh_release_create
-- `git describe` — https://git-scm.com/docs/git-describe

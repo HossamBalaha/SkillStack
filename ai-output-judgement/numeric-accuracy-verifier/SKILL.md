@@ -109,11 +109,3 @@ Status: CORRECT (rounded).
 - Using the model's stated conversion factor — always use canonical sources (NIST, BIPM SI brochure).
 - Trusting dates that "sound right" — verify against a knowledge base; an LLM can confidently misplace an event by a
   decade.
-
-## References
-
-- Gupta, A. et al. (2024). "REALTIME: A Benchmark for Reasoning About Numeric and Temporal
-  Information." https://arxiv.org/abs/2402.18949
-- Cobbe, K. et al. (2021). "Training Verifiers to Solve Math Word Problems." (GSM8K) https://arxiv.org/abs/2110.14168
-- NIST Reference on Constants, Units, and Uncertainty: https://physics.nist.gov/cuu/Units/
-- Companion skills: `factuality-checker`, `hallucination-detector`, `reference-accuracy-checker`.

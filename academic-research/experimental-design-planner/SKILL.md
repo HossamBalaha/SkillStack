@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
-tags: [experimental-design, rct, power-analysis, sample-size, randomization]
-related: [academic-research/hypothesis-designer, academic-research/research-question-formulator, academic-research/pre-registration-drafter]
-prerequisites: [academic-research/hypothesis-designer]
-outputs: [markdown]
+tags: [ experimental-design, rct, power-analysis, sample-size, randomization ]
+related: [ academic-research/hypothesis-designer, academic-research/research-question-formulator, academic-research/pre-registration-drafter ]
+prerequisites: [ academic-research/hypothesis-designer ]
+outputs: [ markdown ]
 difficulty: advanced
 estimated_tokens: 810
 permissions:
@@ -18,7 +18,7 @@ permissions:
   execute_code: false
 language: en
 last_reviewed: 2026-11-02
-verified_against: []
+verified_against: [ ]
 ---
 
 # Experimental Design Planner
@@ -96,14 +96,6 @@ Multiplicity:
   Secondary endpoints (3): Berg Balance, gait speed, FIM.
   Correction: Holm-Bonferroni across the three secondary endpoints.
 ```
-
-## References
-
-- CONSORT 2010 statement: https://www.consort-statement.org/
-- G*Power: https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower
-- R `pwr` package: https://cran.r-project.org/package=pwr
-- Schulz & Grimes "Generation of allocation sequences in randomised
-  trials": https://doi.org/10.1016/S0140-6736(02)07683-5
 
 ## Notes
 

@@ -155,10 +155,3 @@ spec:
   prune: true
   wait: true
 ```
-
-## References
-
-- ArgoCD Documentation: https://argo-cd.readthedocs.io/
-- ArgoCD Sync Waves: https://argo-cd.readthedocs.io/en/stable/user-guide/sync-waves/
-- FluxCD Documentation: https://fluxcd.io/flux/
-- FluxCD Kustomization: https://fluxcd.io/flux/components/kustomize/kustomizations/

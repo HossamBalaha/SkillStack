@@ -100,11 +100,3 @@ def RunHarness(TestCases, PromptTemplate, ModelMatrix, Evaluators):
   # Return the full result set for aggregation.
   return Results
 ```
-
-## References
-
-- promptfoo — prompt testing & evaluation: https://www.promptfoo.dev/
-- PromptBench — unified framework for prompt evaluation: https://arxiv.org/abs/2312.03964
-- LangSmith — LLM application tracing & eval: https://docs.smith.langchain.com/
-- SacreBLEU — reproducible BLEU: https://github.com/mjpost/sacrebleu
-- Companion skills: `prompt-versioning-system`, `llm-as-judge-evaluator`.

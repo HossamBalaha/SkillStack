@@ -98,12 +98,3 @@ Screening (title/abstract): 891 → 142 included for full-text
 Eligibility (full-text): 142 → 38 excluded (reasons logged)
 Included: 104 studies
 ```
-
-## References
-
-- PRISMA 2020 statement: https://www.prisma-statement.org/
-- CASP checklists: https://casp-uk.net/casp-tools-checklists/
-- AMSTAR-2: https://amstar.ca/
-- ROBIS: http://www.robis-tool.info/
-- PROSPERO registration: https://www.crd.york.ac.uk/prospero/
-- robvis visualization tool: https://www.riskofbias.info/welcome/robvis-visualization-tool

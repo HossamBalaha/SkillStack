@@ -131,9 +131,3 @@ def EmitReport(strategy, inSize, outSize, seed, params):
   }
   return json.dumps(report, indent=2)
 ```
-
-## References
-
-- pandas sample: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.sample.html
-- PyTorch WeightedRandomSampler: https://pytorch.org/docs/stable/data.html#torch.utils.data.WeightedRandomSampler
-- Reservoir sampling (Vitter 1985): https://dl.acm.org/doi/10.1145/3147.3165

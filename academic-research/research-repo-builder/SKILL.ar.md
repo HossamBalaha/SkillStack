@@ -115,9 +115,3 @@ training:
   batch_size: 16
   lr: 0.0001
 ```
-
-## المراجع
-
-- قالب Cookiecutter Data Science: https://drivendata.github.io/cookiecutter-data-science/
-- دليل بنية مشروع PyTorch Lightning: https://lightning.ai/docs/pytorch/latest/starter/starter-guide.html
-- قائمة فحص مستودع بحث قابل للتكرار (Nature Scientific Data): https://www.nature.com/sdata/publish/author-guidelines

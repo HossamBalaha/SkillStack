@@ -107,11 +107,3 @@ Panel 8 (Conclusion + kicker):
   beat: surprise
   transition: "Skip one step, double the readmissions. Can we close the gap?"
 ```
-
-## References
-
-- McKee, R. (1997). Story: Substance, Structure, Style, and the Principles of Screenwriting.
-  Harper-Collins. https://www.mckeestory.com/
-- Segel, E., and Heer, J. (2010). Narrative Visualization. IEEE TVCG, on narrative genres.
-- Hullman, J. et al. (2013). A Framing Study on the Impact of Message Sequence. https://idl.cs.washington.edu/
-- Lee, B. et al. (2015). More Than Telling a Story: Transforming Data into Visually Shared Stories. IEEE CG&A.

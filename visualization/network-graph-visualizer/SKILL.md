@@ -105,8 +105,3 @@ def DrawGraph(graph, outputPath):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- networkx docs: https://networkx.org/documentation/stable/
-- pyvis interactive graphs: https://pyvis.readthedocs.io/

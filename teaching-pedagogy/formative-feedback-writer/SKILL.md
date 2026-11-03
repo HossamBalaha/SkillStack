@@ -109,10 +109,3 @@ Student | Point                          | Acted on next submission
 0124    | Compare SDs across groups      | No — same omission in lab 4
 Action for 0124: schedule 5-minute office hour before lab 5.
 ```
-
-## References
-
-- Hattie & Timperley (2007), "The Power of Feedback" — Review of Educational Research, 77(1), 81-112.
-- Wiggins (2012), "Seven Keys to Effective Feedback" — Educational Leadership, 70(1), 10-16.
-- Brookhart (2017), "How to Give Effective Feedback to Your Students" (2nd ed.) — ASCD.
-- Vanderbilt University Center for Teaching — Providing feedback: https://cft.vanderbilt.edu/guides-sub-pages/feedback/

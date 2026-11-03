@@ -91,13 +91,6 @@ Summary counts:
   Open-science flags: 1 (MedIA paper accepted, no public code yet).
 ```
 
-## References
-
-- ORCID for researcher identifiers: https://orcid.org/
-- Zenodo for DOI minting: https://zenodo.org/
-- GitHub Actions for deadline reminders: https://docs.github.com/en/actions
-- Pandoc for Markdown-to-CSV conversion: https://pandoc.org/
-
 ## Notes
 
 - Refresh the dashboard at least weekly during submission-heavy periods.

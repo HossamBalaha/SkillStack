@@ -88,10 +88,3 @@ Source list entry:
   url: https://example.org/data/d4_readmissions.csv
   accessed: 2025-01-14
 ```
-
-## References
-
-- ProPublica Newsroom Style Guide: https://www.propublica.org/newsroom/news-app-style-guide
-- FiveThirtyEight Style Guide: https://github.com/fivethirtyeight/data/tree/master/style-guide
-- The Data Journalism Handbook (2nd ed.), Open Knowledge Foundation: https://datajournalism.com/
-- Cairo, A. (2013). The Functional Art, Chapter 9 on data journalism workflow.

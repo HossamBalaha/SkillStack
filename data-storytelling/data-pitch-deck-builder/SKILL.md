@@ -110,10 +110,3 @@ som:
     - 2400 target hospitals in pilot states
     - 130000 average annual contract USD
 ```
-
-## References
-
-- Sequoia Capital business plan pitch deck template: https://www.sequoiacap.com/article/writing-a-business-plan/
-- Y Combinator Demo Day pitch deck guide: https://www.ycombinator.com/library/6q-how-to-design-a-better-pitch-deck
-- Kawasaki, G. (2015). The Art of the Start 2.0. Portfolio, 10-slide format.
-- Andelman, R. (2017). Masters of Scale podcast, on traction narrative.

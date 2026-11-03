@@ -164,8 +164,3 @@ The system is fast, reliable, and scalable.
 - bold as decoration (#18)      | "**What's Next?**" | un-bolded, sentence-cased
 - curly quote (#21)             | "What's"           | straightened
 ```
-
-## References
-
-- Companion skills: `ai-text-detector`, `ai-tell-catalogue` (tells #18-#21), `voice-profile-matcher`.
-- Markdown and plain-text formatting conventions: CommonMark specification (commonmark.org).

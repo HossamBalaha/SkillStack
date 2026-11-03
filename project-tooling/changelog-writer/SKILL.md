@@ -134,8 +134,3 @@ Tag and push:
 git tag -a v0.2.0 -m "Release 0.2.0"
 git push origin v0.2.0
 ```
-
-## References
-
-- Keep a Changelog — https://keepachangelog.com
-- Semantic Versioning — https://semver.org

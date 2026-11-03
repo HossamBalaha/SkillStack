@@ -105,11 +105,3 @@ def CompileMultimodalPrompt(Images, Instruction, ModalityOrder="image-first"):
   # Return the compiled content blocks.
   return Blocks
 ```
-
-## References
-
-- OpenAI Vision guide (GPT-4V): https://platform.openai.com/docs/guides/vision
-- Liu, H. et al. (2023). "Visual Instruction Tuning." (LLaVA) https://arxiv.org/abs/2304.08485
-- Anthropic Claude — Vision: https://docs.anthropic.com/en/docs/build-with-claude/vision
-- Google Gemini — Image understanding: https://ai.google.dev/gemini-api/docs/vision
-- Companion skills: `rag-prompt-designer`, `system-prompt-architect`, `output-format-enforcer`.

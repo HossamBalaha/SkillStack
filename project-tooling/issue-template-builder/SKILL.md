@@ -141,10 +141,3 @@ Validate:
 # Confirm the YAML parses cleanly before pushing.
 python -c "import yaml, glob; [yaml.safe_load(open(p)) for p in glob.glob('.github/ISSUE_TEMPLATE/*.yml')]"
 ```
-
-## References
-
-- GitHub issue form
-  schema — https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
-- Configuring issue
-  templates — https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository

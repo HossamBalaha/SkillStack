@@ -101,11 +101,3 @@ Device inventory (paragraph 3 of Results):
 Suggested fix: replace one "however" with a conceptual contrast; vary
 two occurrences of "model" with "architecture" and "system."
 ```
-
-## References
-
-- Halliday, M. A. K., & Hasan, R. (1976). *Cohesion in English*. Longman — the foundational reference for cohesive
-  devices.
-- Hoey, M. (1991). *Patterns of Lexis in Text*. Oxford University Press.
-- Purdue OWL on
-  cohesion: https://owl.purdue.edu/owl/general_writing/mechanics/transitions_and_transitional_devices/index.html.

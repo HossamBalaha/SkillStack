@@ -110,10 +110,3 @@ def RollbackVersion(PromptId):
   # Return the rollback record.
   return {"Status": "RolledBack", "From": Entry["DefaultVersion"], "To": Entry["PreviousDefault"]}
 ```
-
-## References
-
-- LangSmith — prompt management & versioning: https://docs.smith.langchain.com/
-- Microsoft Promptflow: https://microsoft.github.io/promptflow/
-- Semantic Versioning 2.0.0: https://semver.org/
-- Companion skills: `prompt-testing-harness`, `system-prompt-architect`, `prompt-template-library`.

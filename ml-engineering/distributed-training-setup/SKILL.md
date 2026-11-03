@@ -115,9 +115,3 @@ def SaveIfRankZero(Path, SaveFunction):
   if (rank == 0):
     SaveFunction(Path)
 ```
-
-## References
-
-- PyTorch DDP tutorial: https://pytorch.org/tutorials/intermediate/ddp_tutorial.html
-- torchrun launcher: https://pytorch.org/docs/stable/elastic/run.html
-- DistributedSampler: https://pytorch.org/docs/stable/data.html#torch.utils.data.distributed.DistributedSampler

@@ -107,10 +107,3 @@ The multi-site MRI dataset used in this study is available from
 \url{https://example.org/data} under the CC-BY-NC 4.0 license. Code
 and trained weights are released at \url{https://github.com/...}.
 ```
-
-## References
-
-- IEEEtran template and author guide: https://journals.ieeeauthorcenter.ieee.org/
-- Elsevier elsarticle class: https://www.ctan.org/pkg/elsarticle
-- CRediT taxonomy: https://credit.niso.org/
-- LaTeX float placement guide (Overleaf): https://www.overleaf.com/learn/latex/Positioning_images_and_tables

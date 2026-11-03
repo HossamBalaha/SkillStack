@@ -106,9 +106,3 @@ After (prose, no em-dash):
 Our model trains in 2 hours on a single GPU, reaches 94% top-1 accuracy,
 and contains 4M parameters.
 ```
-
-## References
-
-- William Zinsser, *On Writing Well* (for density and clarity).
-- The Economist Style Guide (concise prose conventions).
-- ACS/IEEE author guidelines on register and abbreviations.

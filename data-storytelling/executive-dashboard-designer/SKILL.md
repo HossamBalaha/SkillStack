@@ -116,11 +116,3 @@ cards:
     breach: 1.15
     drill_down: segments/churn_by_cohort.csv
 ```
-
-## References
-
-- Few, S. (2006). Information Dashboard Design: The Effective Visual Communication of Data.
-  O'Reilly. https://www.oreilly.com/library/view/information-dashboard-design/9780596100167/
-- Knaflic, C. N. (2015). Storytelling with Data. Wiley, Chapter 11 on dashboards.
-- Perisic, I. (2017). Information Dashboard Design, Three Characteristics. https://www.informationweek.com/
-- Streamlit layout guide: https://docs.streamlit.io/library/api-reference/layout

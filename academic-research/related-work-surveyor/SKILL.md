@@ -92,13 +92,6 @@ Gap statement:
   with open code and a 4-dataset benchmark (Aims 2 and 3).
 ```
 
-## References
-
-- ACM Computing Surveys review methodology: https://dl.acm.org/journal/csur
-- "Writing a related-work section that gets cited" (Jensen 2019): https://doi.org/10.1038/d41586-019-02962-9
-- Connected Papers for graphing prior art: https://www.connectedpapers.com/
-- Semantic Scholar API: https://api.semanticscholar.org/
-
 ## Notes
 
 - Keep each synthesis paragraph focused on the methodology family's shared assumption, then highlight divergences.

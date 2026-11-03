@@ -100,10 +100,3 @@ Planning Note:
 | ImageNet dataset       | Registry    | https://registry.identifiers.org/registry/miriam | Yes   |
 | Smith et al. 2024      | Search      | https://api.semanticscholar.org/...              | No    |
 ```
-
-## المراجع
-
-- Crossref REST API: https://api.crossref.org/works
-- Semantic Scholar API: https://api.semanticscholar.org/graph/v1/paper/search
-- سجلّ Identifiers.org: https://registry.identifiers.org/
-- Google Scholar: https://scholar.google.com

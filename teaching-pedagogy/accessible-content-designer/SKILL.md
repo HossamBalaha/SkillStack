@@ -108,10 +108,3 @@ Contrast check (WebAIM contrast checker):
 - Warning text #FF0000 on #FFFFFF: 4.0:1 — FAILS AA (need 4.5:1);
   darken to #CC0000 → 5.9:1, passes.
 ```
-
-## References
-
-- WCAG 2.2 Recommendation — W3C: https://www.w3.org/TR/WCAG22/
-- Section 508 standards — U.S. Access Board: https://www.section508.gov/
-- WAI tutorials — W3C Web Accessibility Initiative: https://www.w3.org/WAI/
-- WebAIM contrast checker and resources: https://webaim.org/resources/contrastchecker/

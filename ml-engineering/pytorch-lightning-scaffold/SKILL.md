@@ -126,8 +126,3 @@ def BuildTrainer(MaxEpochs, Callbacks, Logger):
     logger=Logger
   )
 ```
-
-## References
-
-- PyTorch Lightning documentation: https://lightning.ai/docs/pytorch/stable/
-- Lightning callbacks: https://lightning.ai/docs/pytorch/stable/api_references.html#callbacks

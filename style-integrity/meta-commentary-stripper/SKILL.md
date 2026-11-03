@@ -101,9 +101,3 @@ Line 3:  "It is important to note that"      → deleted prefix.
 Line 4:  "Let us delve into the ablation results." → rewritten.
          Result: "The ablation results follow."
 ```
-
-## References
-
-- Stephen Pinker, *The Sense of Style*, on classic style and direct exposition.
-- The Economist Style Guide, on concise journal prose.
-- American Psychological Association (APA) Publication Manual, on authorial voice.

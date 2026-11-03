@@ -99,8 +99,3 @@ def PlotSurface(x, y, zFunc, outputPath):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- matplotlib 3D surface docs: https://matplotlib.org/stable/gallery/mplot3d/surface3d.html
-- loss landscape visualisation: https://github.com/tomgoldstein/loss-landscape

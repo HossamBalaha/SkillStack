@@ -96,12 +96,3 @@ Assumption: base 275,000 active subscribers. Source: product dashboard.
   ]
 }
 ```
-
-## References
-
-- Heath, C., and Heath, D. (2007). Made to Stick: Why Some Ideas Survive and Others Die. Random House, on concreteness
-  and the SUCCESs checklist. https://heathbrothers.com/made-to-stick/
-- Monroe, M. et al. (2013). Better together: An evaluation of juxtaposed and unit
-  visualizations. https://idl.cs.washington.edu/
-- Cairo, A. (2016). The Truthful Art. New Riders, on human-scaled framing.
-- Knaflic, C. N. (2015). Storytelling with Data. Wiley, on contextualising numbers.

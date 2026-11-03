@@ -103,14 +103,3 @@ Recommendation: prompt-rewriting + system-level calibration before deployment.
 - Mixing representational harm (demeaning text) and allocational harm (unequal outcomes) in a single metric — they need
   separate reporting.
 - Using only U.S.-centric name lists for global deployments — coverage is regional.
-
-## References
-
-- Bolukbasi, T. et al. (2016). "Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings."
-  NeurIPS. https://arxiv.org/abs/1607.06520
-- Nadeem, M. et al. (2021). "StereoSet: Measuring Stereotypical Bias in Pretrained Language Models."
-  ACL. https://arxiv.org/abs/2004.09456
-- De-Arteaga, M. et al. (2019). "Bias in Bios: A Case Study of Semantic Representation Bias in a High-Stakes Setting."
-  FAT*. https://arxiv.org/abs/1901.09451
-- U.S. Equal Employment Opportunity Commission — disparate impact and the 4/5ths rule.
-- Companion skills: `safety-classifier`, `response-quality-scorer`.

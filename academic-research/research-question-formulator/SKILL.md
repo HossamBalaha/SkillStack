@@ -91,13 +91,6 @@ Finalized question:
   conventional physiotherapy alone?
 ```
 
-## References
-
-- FINER criteria (Hulley et al., Designing Clinical Research): https://www.lww.com/Designing-Clinical-Research
-- PICO framework (Cochrane): https://training.cochrane.org/handbook/current/chapter-02
-- SPIDER framework (Cooke, Smith & Booth 2012): https://doi.org/10.1108/20401621211223494
-- PCC for scoping reviews (JBI): https://jbi.global/scoping-review
-
 ## Notes
 
 - Keep the finalized question stable; downstream hypothesis design depends on it.

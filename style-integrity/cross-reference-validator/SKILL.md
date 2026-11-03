@@ -106,9 +106,3 @@ Unlabeled floats:   figure (added \label{fig:results})
 Uncross-referenced: (none)
 Punctuation violations: 1 (moved '.' outside \ref{} brace)
 ```
-
-## References
-
-- LaTeX `hyperref` and `cleveref` package documentation on cross-references.
-- TeX Stack Exchange canonical answers on `undefined reference` warnings.
-- The `chktex` static checker for LaTeX: https://www.nongnu.org/chktex/

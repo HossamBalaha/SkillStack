@@ -119,8 +119,3 @@ def MoveAllToDevice(Model, LossModule, Regularizer, Calibrator, Auxiliary):
   # Auxiliary branch moved separately.
   Auxiliary.to(device)
 ```
-
-## References
-
-- PyTorch reproducibility: https://pytorch.org/docs/stable/notes/randomness.html
-- torch.cuda manual: https://pytorch.org/docs/stable/cuda.html

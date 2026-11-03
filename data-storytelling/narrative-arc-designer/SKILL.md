@@ -93,13 +93,3 @@ beats:
     role: resolution
     evidence: [tables/protocol_swap.md]
 ```
-
-## References
-
-- Segel, E., and Heer, J. (2010). Narrative Visualization: Telling Stories with Data. IEEE TVCG 16
-  (6). https://ieeexplore.ieee.org/document/5506124
-- Kosara, R. (2016). Narrative Tableau. https://eagereyes.org/
-- Lee, B. et al. (2015). More Than Telling a Story: Transforming Data into Visually Shared Stories. IEEE CG&A 35
-  (5). https://ieeexplore.ieee.org/document/7241862
-- Hullman, J., and Diakopoulos, N. (2011). Visualization Rhetoric: Framing Effects in Dynamic Data
-  Visualization. https://idl.cs.washington.edu/papers/visualization-rhetoric/

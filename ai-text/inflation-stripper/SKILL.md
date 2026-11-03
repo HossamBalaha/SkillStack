@@ -128,8 +128,3 @@ Open questions: Whether the framework's 38% latency reduction will hold at
 - "stands poised to reshape the industry" → replaced with the open measurable question
 - "leaving an indelible mark on generations to come" → removed (no evidence)
 ```
-
-## References
-
-- Companion skills: `ai-text-detector`, `ai-tell-catalogue` (tells #13-#17), `grace-degradation-protocol`.
-- Principles paraphrased from widely documented observations on inflated LLM prose; no external text reproduced.

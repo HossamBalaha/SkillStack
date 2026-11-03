@@ -106,13 +106,3 @@ CRediT matrix excerpt:
   D. Researcher: Supervision, Writing - review & editing, Funding acquisition.
   All authors meet ICMJE four criteria: yes.
 ```
-
-## References
-
-- COPE core practices: https://publicationethics.org/core-practices
-- ICMJE recommendations: https://www.icmje.org/recommendations/
-- ICMJE conflict of interest form: https://www.icmje.org/disclosure-of-conflicts-of-interest/
-- CRediT taxonomy: https://credit.niso.org/
-- ARRIVE 2.0 guidelines: https://arriveguidelines.org/
-- ICMJE clinical trial
-  registration: https://www.icmje.org/recommendations/browse/publishing-and-editorial-issues/clinical-trial-registration.html

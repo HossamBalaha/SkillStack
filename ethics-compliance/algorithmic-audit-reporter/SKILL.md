@@ -105,12 +105,3 @@ Robustness test excerpt (NLP classifier):
   Threshold: 3 pp overall.
   Status: FAIL — recommendations to fine-tune on augmented data.
 ```
-
-## References
-
-- Raji et al. "Closing the AI Accountability Gap" (FAccT 2020): https://arxiv.org/abs/2010.05306
-- Mitchell et al. "Model Cards for Model Reporting" (FAccT 2019): https://arxiv.org/abs/1810.03777
-- Gebru et al. "Datasheets for Datasets" (CACM 2021): https://arxiv.org/abs/1803.09010
-- AI Now Institute "Algorithmic Impact Assessments" (2018): https://ainowinstitute.org/aia-now-2018.pdf
-- Raji and Buolamwini "Actionable Auditing" (FAT* 2019): https://arxiv.org/abs/1802.06879
-- NIST AI RMF 1.0 (Measure function): https://www.nist.gov/itl/ai-risk-management-framework

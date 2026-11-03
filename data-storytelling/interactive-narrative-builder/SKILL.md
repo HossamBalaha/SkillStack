@@ -117,12 +117,3 @@ window.addEventListener("resize", scroller.resize);
   text: "Swap the protocol and the gap closes in 90 days."
   chart_state: { marks: counterfactual, highlight: D4, callout: protocol_swap }
 ```
-
-## References
-
-- Russell, A. (2018). scrollama: Scrollytelling with
-  IntersectionObserver. https://github.com/russellgoldenberg/scrollama
-- Bostock, M. D3.js documentation: https://d3js.org/
-- The Pudding, a visual essays magazine: https://pudding.cool/
-- New York Times interactive style archive: https://www.nytimes.com/interactive/
-- Observable notebooks on scrollytelling patterns: https://observablehq.com/

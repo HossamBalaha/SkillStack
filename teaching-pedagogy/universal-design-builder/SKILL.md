@@ -107,10 +107,3 @@ Interview: students did not know where to get materials.
 Action: publish a materials kit list at the assignment release;
 do not remove the option — the barrier was supply, not interest.
 ```
-
-## References
-
-- CAST UDL Guidelines (version 3.0) — https://udlguidelines.cast.org/
-- Meyer, Rose & Gordon (2014), "Universal Design for Learning: Theory and Practice" — CAST Professional Publishing.
-- CAST — UDL on Campus (higher education): https://udloncampus.cast.org/
-- Higbee, Goff & Schultz (2017), "Pedagogy and Practice for Universal Design for Learning in Higher Education" — Stylus.

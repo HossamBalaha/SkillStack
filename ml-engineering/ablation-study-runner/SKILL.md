@@ -110,8 +110,3 @@ def RunAblation(Variants, TrainFunction, EvalFunction, Splits, Config, OutputDir
     json.dump(report, f, indent=2)
   return report
 ```
-
-## References
-
-- sklearn metrics for evaluation: https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics
-- Research methodology on ablation studies: https://en.wikipedia.org/wiki/Ablation_(artificial_intelligence)

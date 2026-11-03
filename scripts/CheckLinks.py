@@ -66,8 +66,8 @@ class CheckReport:
   def ExitCode(self) -> int:
     """Return 0 when no genuinely broken URLs remain (403/429/DNS are infrastructure issues)."""
     realBroken = sum(1 for r in self.Results if (not r.Ok and r.StatusCode not in (403, 429) and not (
-        r.StatusCode == 0 and (
-          "NameResolution" in r.Error or "ConnectionError" in r.Error or "getaddrinfo" in r.Error))))
+      r.StatusCode == 0 and (
+      "NameResolution" in r.Error or "ConnectionError" in r.Error or "getaddrinfo" in r.Error))))
     return 0 if (realBroken == 0) else 1
 
 

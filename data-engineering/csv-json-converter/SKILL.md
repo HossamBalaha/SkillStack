@@ -121,9 +121,3 @@ def CoerceValue(rawValue, targetType):
     return float(rawValue)
   return str(rawValue)
 ```
-
-## References
-
-- pandas IO: https://pandas.pydata.org/docs/reference/io.html
-- pyarrow Parquet: https://arrow.apache.org/docs/python/parquet.html
-- CSV format (RFC 4180): https://datatracker.ietf.org/doc/html/rfc4180

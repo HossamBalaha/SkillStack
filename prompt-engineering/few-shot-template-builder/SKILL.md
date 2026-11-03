@@ -109,13 +109,3 @@ def CompileFewShotPrompt(Template, Exemplars, TestInput):
   # Join all blocks and return the compiled prompt.
   return "\n\n".join(Blocks) + "\n\n" + TestBlock
 ```
-
-## References
-
-- Brown, T. et al. (2020). "Language Models are Few-Shot Learners." (GPT-3 in-context learning)
-  https://arxiv.org/abs/2005.14165
-- Liu, J. et al. (2022). "What Makes Good In-Context Examples for Large Language Models?"
-  https://arxiv.org/abs/2301.12785
-- Zhao, T. et al. (2021). "Calibrate Before Use: Improving Few-Shot Performance of Language Models."
-  https://arxiv.org/abs/2102.09690
-- Companion skills: `prompt-template-library`, `prompt-testing-harness`, `system-prompt-architect`.

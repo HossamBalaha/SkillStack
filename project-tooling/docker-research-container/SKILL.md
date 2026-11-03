@@ -140,10 +140,3 @@ docker run --rm -v $(pwd)/Datasets:/app/Datasets researchkit
 # GPU run.
 docker run --rm --gpus all -v $(pwd)/Datasets:/app/Datasets researchkit
 ```
-
-## References
-
-- Boettiger (2015), "An introduction to Docker for reproducible
-  research" — https://dl.acm.org/doi/10.1145/2723872.2723882
-- AEA Data Editor Docker guidance — https://aeadataeditor.github.io/aea-de-guidance/
-- Dockerfile reference — https://docs.docker.com/engine/reference/builder/

@@ -101,10 +101,3 @@ Timeline sample:
   Week 19-20: Internal review
   Week 21:    Submission
 ```
-
-## References
-
-- IEEE TPAMI aims and scope: https://www.computer.org/publications/tpami/about
-- Medical Image Analysis author
-  guide: https://www.sciencedirect.com/journal/medical-image-analysis/publish/guide-for-authors
-- Nature Scientific Reports submission guide: https://www.nature.com/srep/publish/guidelines

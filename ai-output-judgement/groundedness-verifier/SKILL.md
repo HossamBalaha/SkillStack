@@ -107,12 +107,3 @@ Verdict: PARTIALLY_GROUNDED. Flag C3 for human review or re-retrieval.
 - Treating empty retrieval as grounded — by construction, every claim is UNGROUNDED when no context was retrieved.
 - Confusing grounding (answer is in context) with faithfulness (answer is faithful to a source) — overlap is high,
   framing differs.
-
-## References
-
-- Gekhman, Z. et al. (2024). "Does Fine-Tuning LLMs on New Knowledge Encourage Hallucinations?"
-  NeurIPS. https://arxiv.org/abs/2405.05904
-- Laban, P. et al. (2022). "SummaC: Re-Visiting NLI-based Models for Inconsistency Detection in Summarization."
-  TACL. https://arxiv.org/abs/2111.09525
-- Hugging Face NLI models: `roberta-large-mnli`, `microsoft/deberta-v3-large-mnli`.
-- Companion skills: `faithfulness-scorer`, `factuality-checker`, `hallucination-detector`.

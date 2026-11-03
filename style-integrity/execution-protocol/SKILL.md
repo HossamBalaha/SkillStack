@@ -105,9 +105,3 @@ anything else. [TODO: implement the JSON path].
 ```
 
 This output violates stages 6 (placeholder) and 10 (preamble, no residual-risk line).
-
-## References
-
-- The clean-code and "boy-scout rule" traditions (Robert C. Martin).
-- Software engineering best practices on surgical edits and regression safety.
-- Academic writing traditions on factual verification and reproducible audit trails.

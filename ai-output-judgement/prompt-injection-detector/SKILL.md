@@ -107,15 +107,3 @@ Mitigation: strip the chunk from context; rerun retrieval with a sanitizer.
 - Ignoring system-prompt leakage as a separate failure class — it is S4 and must notify the system owner.
 - Running the classifier at low recall to reduce false positives — recall should be high; precision can be tuned
   downstream.
-
-## References
-
-- Greshake, K. et al. (2023). "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with
-  Indirect Prompt Injection." https://arxiv.org/abs/2302.12173
-- Chao, P. et al. (2024). "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models."
-  NeurIPS. https://arxiv.org/abs/2404.01318
-- Zou, A. et al. (2023). "Universal and Transferable Adversarial Attacks on Aligned Text Models."
-  (AdvBench) https://arxiv.org/abs/2307.15043
-- ProtectAI DeBERTa-v3 prompt injection model: https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2
-- Lakera Guard: https://www.lakera.ai/lakera-guard
-- Companion skills: `safety-classifier`, `pii-leak-detector`, `alignment-evaluator`.

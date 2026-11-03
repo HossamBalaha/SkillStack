@@ -141,8 +141,3 @@ Run it:
 # Produce the archive from the repo root.
 python CreateProjectZip.py
 ```
-
-## References
-
-- Python `zipfile` module — https://docs.python.org/3/library/zipfile.html
-- Python `os.walk` with in-place pruning — https://docs.python.org/3/library/os.html#os.walk

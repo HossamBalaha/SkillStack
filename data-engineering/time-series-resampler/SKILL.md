@@ -114,9 +114,3 @@ def EmitMetadata(originalDf, resampledDf, targetFreq):
     "FillCount": int(resampledDf.isna().sum().sum()),
   }
 ```
-
-## References
-
-- pandas resample: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html
-- pandas asfreq: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.asfreq.html
-- pandas reindex: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.reindex.html

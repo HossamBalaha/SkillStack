@@ -109,11 +109,3 @@ def Render(htmlPath, pdfPath):
     page.pdf(path=pdfPath, format="A4", print_background=True)
     b.close()
 ```
-
-## References
-
-- Cairo, A. (2013). The Functional Art: An Introduction to Information Graphics and Visualization. New
-  Riders. https://www.thefunctionalart.com/
-- Cairo, A. (2016). The Truthful Art. New Riders, Chapter 7 on infographic composition.
-- Few, S. (2012). Show Me the Numbers, 2nd ed. Analytics Press, on chart hierarchy.
-- Lankow, J., Ritchie, R., and Crooks, J. (2012). Infographics: The Power of Visual Storytelling. Wiley.

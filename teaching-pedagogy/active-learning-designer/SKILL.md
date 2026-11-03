@@ -113,11 +113,3 @@ confirm, and what imaging study is first-line?"
 Decision point: pick the two findings and justify over
 alternatives; the case has one best answer.
 ```
-
-## References
-
-- Bonwell & Eison (1991), "Active Learning: Creating Excitement in the Classroom" — ASHE-ERIC Higher Education Report.
-- Mazur (1997), "Peer Instruction: A User's Manual" — Prentice Hall.
-- Felder & Brent (2016), "Teaching and Learning STEM: A Practical Guide" — Jossey-Bass.
-- Cornell University Center for Teaching Innovation — Active
-  learning: https://teaching.cornell.edu/teaching-resources/active-collaborative-learning

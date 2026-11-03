@@ -118,9 +118,3 @@ def RunTuning(SearchSpace, TrainFunction, N_trials, Seed, OutputPath):
     json.dump(bestParams, f, indent=2)
   return bestParams
 ```
-
-## References
-
-- Optuna documentation: https://optuna.org
-- TPE sampler: https://optuna.readthedocs.io/en/stable/reference/generated/optuna.samplers.TPESampler.html
-- MedianPruner: https://optuna.readthedocs.io/en/stable/reference/generated/optuna.pruners.MedianPruner.html

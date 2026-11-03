@@ -104,10 +104,3 @@ The multi-site MRI dataset used in this study is available from
 \url{https://example.org/data} under the CC-BY-NC 4.0 license. Code
 and trained weights are released at \url{https://github.com/...}.
 ```
-
-## المراجع
-
-- قالب ودليل مؤلّف IEEEtran: https://journals.ieeeauthorcenter.ieee.org/
-- فئة Elsevier elsarticle: https://www.ctan.org/pkg/elsarticle
-- تصنيف CRediT: https://credit.niso.org/
-- دليل موضع العناصر الطافية في LaTeX (Overleaf): https://www.overleaf.com/learn/latex/Positioning_images_and_tables

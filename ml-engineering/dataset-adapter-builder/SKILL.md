@@ -129,8 +129,3 @@ class DatasetAdapter:
     # Pre-convert to numpy.
     return ConvertDataFramesToNumpy(splits)
 ```
-
-## References
-
-- pandas to_numpy: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_numpy.html
-- Python argparse for `--datasets` filter: https://docs.python.org/3/library/argparse.html

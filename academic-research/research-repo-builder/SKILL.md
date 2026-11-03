@@ -118,9 +118,3 @@ training:
   batch_size: 16
   lr: 0.0001
 ```
-
-## References
-
-- Cookiecutter Data Science template: https://drivendata.github.io/cookiecutter-data-science/
-- PyTorch Lightning project structure guide: https://lightning.ai/docs/pytorch/latest/starter/starter-guide.html
-- Reproducible research repo checklist (Nature Scientific Data ): https://www.nature.com/sdata/publish/author-guidelines

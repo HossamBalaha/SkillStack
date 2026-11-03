@@ -116,11 +116,3 @@ def RunCrossValidation(ModelFactory, Features, Labels, Groups, Config, OutputDir
     json.dump(report, f, indent=2)
   return report
 ```
-
-## References
-
-- sklearn cross-validation: https://scikit-learn.org/stable/modules/cross_validation.html
-- StratifiedKFold: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
-- GroupKFold: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html
-- TimeSeriesSplit: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html
-- Nested CV: https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html

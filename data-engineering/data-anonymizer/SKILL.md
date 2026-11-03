@@ -119,10 +119,3 @@ def Anonymize(df, config):
   CheckKAnonymity(df, ["zip3", "gender", "birth_year"], config.K)
   return df
 ```
-
-## References
-
-- GDPR Article 5: https://gdpr-info.eu/art-5-gdpr/
-- HIPAA Safe Harbor: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
-- k-anonymity (Sweeney 2002): https://epic.org/privacy/reidentification/Sweeney_Article.pdf
-- Differential privacy (Dwork 2006): https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/dwork.pdf

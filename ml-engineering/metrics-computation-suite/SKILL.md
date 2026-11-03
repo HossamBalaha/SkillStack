@@ -171,10 +171,3 @@ def ComputeMetricsSuite(Probabilities, PredLabels, TrueLabels, NumBootstraps=100
   np.savetxt("Aggregated/ConfusionMatrix.csv", cm, delimiter=",", fmt="%d")
   return report
 ```
-
-## References
-
-- sklearn metrics: https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics
-- roc_auc_score: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html
-- matthews_corrcoef: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.matthews_corrcoef.html
-- Calibration of classifiers: https://scikit-learn.org/stable/modules/calibration.html

@@ -140,10 +140,3 @@ class TextPreprocessor:
       return " ".join(tokens)
     return tokens
 ```
-
-## References
-
-- NLTK: https://www.nltk.org
-- spaCy: https://spacy.io
-- SentencePiece: https://github.com/google/sentencepiece
-- BeautifulSoup: https://www.crummy.com/software/BeautifulSoup/

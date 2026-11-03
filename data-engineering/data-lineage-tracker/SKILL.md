@@ -153,10 +153,3 @@ def EmitOpenLineageEvent(node, runId, jobName):
     }],
   }
 ```
-
-## References
-
-- OpenLineage: https://openlineage.io
-- Apache Atlas: https://atlas.apache.org
-- Amundsen: https://www.amundsen.io
-- Graphviz DOT: https://graphviz.org/doc/info/lang.html

@@ -101,8 +101,3 @@ def FitScalersOnTrainOnly(TrainFeatures, ValFeatures, TestFeatures):
   joblib.dump(scaler, "Aggregated/Scaler.joblib")
   return scaledTrain, scaledVal, scaledTest
 ```
-
-## References
-
-- sklearn preprocessing: https://scikit-learn.org/stable/modules/preprocessing.html
-- GroupShuffleSplit: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupShuffleSplit.html

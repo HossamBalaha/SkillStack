@@ -98,9 +98,3 @@ PIP replaced:          1
 etc.etc. collapsed:    1
 Macro defined:         once (verified)
 ```
-
-## References
-
-- LaTeX `\ensuremath` documentation (for the macro definition).
-- The TeX FAQ on typesetting numbers: https://texfaq.org/FAQ-numbers
-- `siunitx` package (alternative when unit-aware number formatting is required).

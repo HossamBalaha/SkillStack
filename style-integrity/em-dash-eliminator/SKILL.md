@@ -100,9 +100,3 @@ Line 1:  "—" → "," (parenthetical separator).
 Line 2:  "10 – 20" → "10--20" (numerical range, no surrounding spaces).
 Line 3:  "non–linear" → "non-linear" (compound modifier → ASCII hyphen).
 ```
-
-## References
-
-- Chicago Manual of Style, sections on dashes.
-- The TeX FAQ on dashes: https://texfaq.org/FAQ-dashes
-- `typogr` and `smartypants` libraries for dash normalization.

@@ -127,11 +127,3 @@ Module 14 — first-attempt accuracy 71%, day-21 retention 64%.
 Module 15 — completion 22%, accuracy 80%.  Action: investigate
   why completion is low (length? device? notifications?).
 ```
-
-## References
-
-- Kapp & Defelice (2019), "Microlearning Short and Sweet" — ATD Press.
-- Ebbinghaus (1885/1913), "Memory: A Contribution to Experimental Psychology" — Teachers College Press. Forgetting
-  curve.
-- FSRS algorithm — open-spaced-repetition project: https://github.com/open-spaced-repetition/fsrs4anki
-- Anki documentation on spaced repetition: https://docs.ankiweb.net/

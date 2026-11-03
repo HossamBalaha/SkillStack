@@ -117,14 +117,3 @@ def report(y_true, y_pred, sensitive):
         "eo_diff": equalized_odds_difference(y_true, y_pred, sensitive_features=sensitive),
     }
 ```
-
-## References
-
-- Barocas, Hardt, and Narayanan "Fairness and Machine Learning" (2019): https://fairmlbook.org/
-- Hardt, Price, and Srebro "Equality of Opportunity in Supervised Learning" (NeurIPS
-  2016): https://arxiv.org/abs/1610.02413
-- Chouldechova "Fair prediction with disparate impact" (2017): https://arxiv.org/abs/1703.00056
-- Kleinberg, Mullainathan, Raghavan "Inherent Trade-Offs in the Fair Determination of Risk Scores" (ITCS
-  2017): https://arxiv.org/abs/1609.05807
-- Fairlearn toolkit documentation: https://fairlearn.org/
-- US EEOC four-fifths rule: https://www.eeoc.gov/laws-guiadance/section-15-national-origin-discrimination#VI-A

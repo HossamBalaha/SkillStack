@@ -103,9 +103,3 @@ Allow-list exception (kept as-is):
 ```
 
 This passive preserves historical attribution and is not rewritten.
-
-## References
-
-- Strunk & White, *The Elements of Style*, on active voice.
-- Williams & Bizup, *Style: Lessons in Clarity and Grace*.
-- The `passive` checker module from the `write-good` linter: https://github.com/btford/write-good

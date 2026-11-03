@@ -118,8 +118,3 @@ def PlotRocPr(yTrue, yScore, outputPath):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- sklearn ROC docs: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_curve.html
-- sklearn PR docs: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_recall_curve.html

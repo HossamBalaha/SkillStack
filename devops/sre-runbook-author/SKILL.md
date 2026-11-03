@@ -134,9 +134,3 @@ A migration added a NOT NULL column without a default; reads on the legacy code 
 - [ ] Add a canary stage to the deploy pipeline — @bob — 2025-02-28
 - [ ] Add a synthetic checkout test — @carol — 2025-03-10
 ```
-
-## References
-
-- Google SRE Book — Postmortem Culture: https://sre.google/sre-book/postmortem-culture/
-- Google SRE Workbook — Alerting on SLOs: https://sre.google/workbook/alerting-on-slos/
-- PagerDuty — Incident Response Documentation: https://response.pagerduty.com/

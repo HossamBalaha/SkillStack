@@ -120,12 +120,3 @@ def LoadToWarehouse(rows, targetTable, runConfig):
   warehouse.Merge(targetTable, rows, primaryKey="UserId")
   return {"Loaded": len(rows), "BatchId": runConfig["BatchId"]}
 ```
-
-## References
-
-- dbt ETL best practices: https://www.getdbt.com/blog/etl-pipeline-best-practices
-- Databricks SQL ETL: https://www.databricks.com/blog/sql-etl-pipeline
-- Airflow: https://airflow.apache.org
-- Prefect: https://www.prefect.io
-- Dagster: https://dagster.io
-- dbt: https://www.getdbt.com

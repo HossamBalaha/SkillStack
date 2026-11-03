@@ -98,12 +98,3 @@ sample omits two hospitals that switched EHRs mid-year. Even after
 controlling for age, payer, and DRG, the district effect holds
 (OR 2.31, p<0.001), so the gap is not a coding artefact."
 ```
-
-## References
-
-- Knaflic, C. N. (2015). Storytelling with Data. Wiley, Chapter 7 on understanding
-  context. https://www.storytellingwithdata.com/books
-- Heath, C., and Heath, D. (2007). Made to Stick. Random House, on the SUCCESs checklist.
-- Tufte, E. R. (1997). Visual Explanations, on audience and granularity.
-- Bernstein, M. S. et al. (2019). The Data Memo: a reusable, transparent format for communicating
-  findings. https://jsav.org/

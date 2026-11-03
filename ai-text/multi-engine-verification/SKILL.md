@@ -120,15 +120,3 @@ The OpenAI classifier was retired in July 2023 due to low accuracy. Do not
 treat it as an active engine. If a prior report cited it, re-run with a
 current engine before relying on the finding.
 ```
-
-## References
-
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7). Documents high
-  error rates and false-positive bias against non-native English writing — basis for R1 and the caution on
-  single-detector reliance.
-- OpenAI (2023). "AI Text Classifier — no longer available." https://help.openai.com/en/articles/5727991 — confirms
-  retirement.
-- GPTZero: https://gptzero.me — methodology includes perplexity and burstiness.
-- Originality.ai: https://originality.ai — transformer-based detection.
-- Turnitin AI detection: https://www.turnitin.com/solutions/ai-writing — proprietary, used in academic contexts.
-- Companion skills: `ai-text-detector`, `perplexity-burstiness-scorer`, `severity-classifier`, `voice-profile-matcher`.

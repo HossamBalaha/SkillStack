@@ -107,9 +107,3 @@ def TrainLoop(Model, TrainLoader, Optimizer, LossModule, Epochs):
       loss.backward()
       Optimizer.step()
 ```
-
-## المراجع
-
-- دليل قابلية التكرار في PyTorch: https://pytorch.org/docs/stable/notes/randomness.html
-- توثيق tqdm: https://tqdm.github.io/
-- كتاب طبخ التسجيل في Python: https://docs.python.org/3/howto/logging-cookbook.html

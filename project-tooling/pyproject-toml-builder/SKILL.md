@@ -130,10 +130,3 @@ with open("pyproject.toml", "rb") as handle:
   config = tomllib.load(handle)
 print(config["project"]["name"])
 ```
-
-## References
-
-- PEP 621 — https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
-- Writing pyproject.toml — https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
-- Poetry pyproject — https://python-poetry.org/docs/pyproject/
-- Hatch backends — https://hatch.pypa.io/latest/config/build/

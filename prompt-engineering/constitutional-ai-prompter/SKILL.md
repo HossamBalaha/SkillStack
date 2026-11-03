@@ -105,12 +105,3 @@ def RunConstitutionalLoop(UserRequest, Constitution, Passes=2):
   # Return the final revised response and the critique trace.
   return Draft, Critique
 ```
-
-## References
-
-- Bai, Y. et al. (2022). "Constitutional AI: Harmlessness from AI Feedback."
-  https://arxiv.org/abs/2212.08073
-- Anthropic — Constitutional AI: https://www.anthropic.com/research/constitutional-ai
-- Askell, A. et al. (2021). "A General Language Assistant as a Laboratory for Alignment."
-  https://arxiv.org/abs/2112.00861
-- Companion skills: `system-prompt-architect`, `prompt-injection-defense`, `safety-classifier`.

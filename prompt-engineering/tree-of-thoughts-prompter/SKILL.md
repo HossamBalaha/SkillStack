@@ -115,10 +115,3 @@ def RunTreeOfThoughts(RootState, GenerateThoughts, EvaluateState, BeamWidth, Max
   # Raise when no goal state was found within the budget.
   raise RuntimeError("No solution found within depth budget.")
 ```
-
-## References
-
-- Yao, S. et al. (2023). "Tree of Thoughts: Deliberate Problem Solving with Large Language Models."
-  https://arxiv.org/abs/2305.10601
-- Long, J. (2023). "Large Language Model Guided Tree-of-Thought." https://arxiv.org/abs/2305.08291
-- 24-game dataset (ToT paper): https://github.com/princeton-nlp/tree-of-thought-llm

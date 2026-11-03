@@ -135,10 +135,3 @@ CI step:
     pip install pre-commit
     pre-commit run --all-files
 ```
-
-## References
-
-- pre-commit — https://pre-commit.com
-- pre-commit-hooks — https://github.com/pre-commit/pre-commit-hooks
-- ruff-pre-commit — https://github.com/astral-sh/ruff-pre-commit
-- mirrors-mypy — https://github.com/pre-commit/mirrors-mypy

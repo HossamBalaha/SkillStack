@@ -104,12 +104,3 @@ def OptimizeContext(Instruction, Chunks, ModelLimit, ReserveForAnswer):
   # Return the rendered prompt and the budget audit.
   return Instruction + "\n\n" + ContextBlock, {"Budget": Budget, "Used": Used, "KeptCount": len(Kept)}
 ```
-
-## References
-
-- OpenAI tokenizer (tiktoken): https://github.com/openai/tiktoken
-- LangChain — text splitters & summarization
-  chains: https://python.langchain.com/docs/modules/data_connection/document_transformers/
-- Liu et al. (2023). "Lost in the Middle: How Language Models Use Long Contexts."
-  https://arxiv.org/abs/2307.03172
-- Companion skills: `rag-prompt-designer`, `prompt-testing-harness`, `few-shot-template-builder`.

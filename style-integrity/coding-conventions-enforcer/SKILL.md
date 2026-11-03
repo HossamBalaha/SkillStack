@@ -308,10 +308,3 @@ inputs = inputs.to(device)
 # Run the forward pass.
 outputs = model(inputs)
 ```
-
-## References
-
-- PEP 8 (context only; this skill overrides PEP 8 where stated).
-- PyTorch `nn.Module` documentation: https://pytorch.org/docs/stable/generated/torch.nn.Module.html
-- PyTorch Lightning lifecycle hooks: https://lightning.ai/docs/pytorch/stable/common/lightning_module.html
-- Python `unittest` framework: https://docs.python.org/3/library/unittest.html

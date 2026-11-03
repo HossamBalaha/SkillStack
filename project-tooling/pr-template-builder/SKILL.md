@@ -105,10 +105,3 @@ Validate rendering:
 # Confirm the file is valid Markdown and renders on GitHub.
 python -c "import pathlib; t = pathlib.Path('.github/PULL_REQUEST_TEMPLATE.md').read_text(); assert '## Summary' in t and '## Checklist' in t; print('ok')"
 ```
-
-## References
-
-- GitHub PR
-  templates — https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository
-- Closing keywords (`Closes`, `Fixes`,
-  `Resolves`) — https://docs.github.com/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue

@@ -110,9 +110,3 @@ def PlotSwatch(palette, outputPath):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- Wong, B. Nature Methods 2011: https://www.nature.com/articles/nmeth.1618
-- ColorBrewer 2: https://colorbrewer2.org
-- Coblis simulator: https://www.color-blindness.com/coblis-color-blindness-simulator/

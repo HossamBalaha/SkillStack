@@ -122,10 +122,3 @@ O4        | Q14-15| Evaluate   | 14  | 25 min
 O5        | Q16   | Create     | 13  | 20 min
                                     = 70 pts, 90 min
 ```
-
-## References
-
-- Haladyna (2004), "Developing and Validating Multiple-Choice Test Items" (2nd ed.) — Routledge.
-- Bloom (1956), "Taxonomy of Educational Objectives, Handbook I: Cognitive Domain" — David McKay.
-- Anderson & Krathwohl (2001), "A Taxonomy for Learning, Teaching, and Assessing" — Longman.
-- Osterlind (1998), "Constructing Test Items" (2nd ed.) — Kluwer. Item-writing standards.

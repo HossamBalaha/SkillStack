@@ -111,9 +111,3 @@ def BuildReport(cleanRows, quarantinedRows, schemaVersion):
     "SampleFailures": quarantinedRows[:10],
   }
 ```
-
-## References
-
-- pydantic: https://docs.pydantic.dev
-- pandera: https://pandera.readthedocs.io
-- JSON Schema: https://json-schema.org

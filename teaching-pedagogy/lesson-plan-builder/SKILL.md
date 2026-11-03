@@ -107,11 +107,3 @@ Backup plan (if tech fails):
 - If the timer app fails: use the wall clock and the printed
   agenda taped to the podium.
 ```
-
-## References
-
-- Hunter (1982), "Mastery Teaching" — Corwin. The original lesson design model.
-- Danielson (2007), "Enhancing Professional Practice: A Framework for Teaching" — ASCD.
-- Marzano (2007), "The Art and Science of Teaching" — ASCD.
-- Carnegie Mellon Eberly Center — Lesson
-  planning: https://www.cmu.edu/teaching/designteach/teach/instructionalstrategies/

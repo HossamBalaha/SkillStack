@@ -98,7 +98,3 @@ def RenderDataFigure(dataArray, outputPath):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- AI-Research-SKILLs plotting recipes: https://github.com/Orchestra-Research/AI-Research-SKILLs

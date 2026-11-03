@@ -124,12 +124,3 @@ tests/
 .pytest_cache/
 .venv/
 ```
-
-## References
-
-- NIST SP 800-190 — Application Container Security Guide: https://csrc.nist.gov/pubs/sp/800/190/final
-- Distroless images: https://github.com/GoogleContainerTools/distroless
-- Trivy: https://aquasecurity.github.io/trivy/
-- Grype: https://github.com/anchore/grype
-- Syft (SBOM): https://github.com/anchore/syft
-- Cosign: https://github.com/sigstore/cosign

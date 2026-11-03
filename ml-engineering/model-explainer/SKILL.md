@@ -113,9 +113,3 @@ def ExplainPyTorchModel(Model, Background, Evaluation, OutputDir):
   shapValues = explainer.shap_values(Evaluation)
   return shapValues
 ```
-
-## References
-
-- SHAP documentation: https://shap.readthedocs.io
-- Captum (Integrated Gradients): https://captum.ai
-- LIME: https://github.com/marcotcr/lime

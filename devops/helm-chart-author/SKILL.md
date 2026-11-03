@@ -125,10 +125,3 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end -}}
 ```
-
-## References
-
-- Helm Charts — Chart.yaml: https://helm.sh/docs/topics/charts/
-- Helm Templates — functions and pipelines: https://helm.sh/docs/chart_template_guide/functions_and_pipelines/
-- Helm Hooks: https://helm.sh/docs/topics/charts_hooks/
-- Helm Values files: https://helm.sh/docs/chart_template_guide/values_files/

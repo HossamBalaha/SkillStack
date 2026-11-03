@@ -126,10 +126,3 @@ Paraphrased (z = 1.1):           389 tokens
 Verdict: watermark degraded by paraphrase. Do not conclude human authorship
 from the absence of the watermark alone.
 ```
-
-## References
-
-- Kirchenbauer, J., Geiping, J., Wen, Y., Katz, J., Interlandi, I., Lee, K., & Goldstein, T. (2023). "A Watermark for
-  Large Language Models." arXiv:2301.10226. https://arxiv.org/abs/2301.10226
-- Follow-up work on robustness and paraphrase attacks: e.g., Kirchenbauer et al. (2023) §5 on paraphrase robustness.
-- Companion skills: `ai-text-detector`, `perplexity-burstiness-scorer`, `multi-engine-verification`.

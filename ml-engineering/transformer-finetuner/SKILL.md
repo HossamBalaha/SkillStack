@@ -138,10 +138,3 @@ def BuildTrainer(Model, Tokenizer, TrainDataset, EvalDataset, Config, OutputDir)
     compute_metrics=ComputeMetrics
   )
 ```
-
-## References
-
-- Hugging Face Transformers docs: https://huggingface.co/docs/transformers
-- PEFT library: https://huggingface.co/docs/peft
-- TrainingArguments
-  reference: https://huggingface.co/docs/transformers/main_classes/trainer#transformers.TrainingArguments

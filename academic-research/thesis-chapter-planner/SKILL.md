@@ -95,13 +95,6 @@ Non-redundancy audit log:
   Forward reference inserted at Section 1.4 ("defined later in Section 2.3").
 ```
 
-## References
-
-- "How to Write a Thesis" (Umberto Eco) structural guidance.
-- LaTeX thesis classes: https://ctan.org/topic/thesis
-- Graphviz DOT language: https://graphviz.org/doc/info/lang.html
-- MIT thesis specifications: https://libraries.mit.edu/dist/ams/thesis-specs/
-
 ## Notes
 
 - Treat the concept inventory as the canonical truth; if a concept is missing from the inventory, it has not been

@@ -114,9 +114,3 @@ def PersistPlan(plan, path):
   # Save the imputation plan so inference reuses the same transforms.
   joblib.dump(plan, path)
 ```
-
-## References
-
-- scikit-learn imputation: https://scikit-learn.org/stable/modules/impute.html
-- IterativeImputer: https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html
-- MICE (van Buuren): https://stefvanbuuren.name/fimd/

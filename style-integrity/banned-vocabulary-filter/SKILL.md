@@ -106,9 +106,3 @@ After:
 This work uses a new architecture that is central to working with the
 complex field of representation learning. Our approach shows this trend.
 ```
-
-## References
-
-- The Princeton Review list of filler words in academic prose.
-- Stephen Pinker, *The Sense of Style* (on hedging and throat-clearing).
-- The Economist Style Guide on concrete verbs.

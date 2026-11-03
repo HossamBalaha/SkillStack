@@ -123,8 +123,3 @@ class CustomEarlyStopping:
     with open(OutputPath + "TrainingLog.json", "w") as f:
       json.dump({"StoppedEpoch": Epoch}, f, indent=2)
 ```
-
-## References
-
-- Lightning EarlyStopping: https://lightning.ai/docs/pytorch/stable/api/pytorch_lightning.callbacks.EarlyStopping.html
-- Keras-style early stopping reference: https://keras.io/api/callbacks/early_stopping/

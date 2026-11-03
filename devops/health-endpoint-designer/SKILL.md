@@ -156,11 +156,3 @@ Endpoint semantics table:
 | /healthz  | liveness   | no                 | no                     | yes               |
 | /ready    | readiness  | yes                | yes (returns 503)      | no (just unready) |
 ```
-
-## References
-
-- Kubernetes Pod Liveness, Readiness, Startup
-  Probes: https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/
-- Configure Liveness, Readiness, Startup
-  Probes: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
-- Graceful Shutdown of Pods: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination

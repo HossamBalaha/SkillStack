@@ -146,9 +146,3 @@ def PredictBatch(Request: BatchPredictionRequest):
 # Model loaded at import time; replace path with configured value.
 Model = LoadModel("Aggregated/BestModel.pt")
 ```
-
-## References
-
-- FastAPI documentation: https://fastapi.tiangolo.com
-- pydantic v2: https://docs.pydantic.dev/latest/
-- uvicorn deployment: https://www.uvicorn.org/

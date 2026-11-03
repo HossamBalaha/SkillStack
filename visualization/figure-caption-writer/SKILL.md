@@ -100,7 +100,3 @@ def CheckReferences(caption, labelSet):
     raise ValueError(f"Unresolved references: {missing}")
   return True
 ```
-
-## References
-
-- Nature author guide on figure captions: https://www.nature.com/nature/for-authors/final-submission

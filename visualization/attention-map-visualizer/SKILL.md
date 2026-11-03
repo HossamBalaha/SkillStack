@@ -100,8 +100,3 @@ def PlotHeads(attention, tokens, outputPath, layerIdx=0):
   fig.savefig(outputPath, format="pdf")
   plt.close(fig)
 ```
-
-## References
-
-- bertviz attention visualisation: https://github.com/jessevig/bertviz
-- captum attention attribution: https://captum.ai/api/attribution.html

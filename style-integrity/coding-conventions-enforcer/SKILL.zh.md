@@ -304,10 +304,3 @@ inputs = inputs.to(device)
 # Run the forward pass.
 outputs = model(inputs)
 ```
-
-## 参考资料
-
-- PEP 8（仅作上下文；本技能在所述之处覆盖 PEP 8）。
-- PyTorch `nn.Module` 文档：https://pytorch.org/docs/stable/generated/torch.nn.Module.html
-- PyTorch Lightning 生命周期钩子：https://lightning.ai/docs/pytorch/stable/common/lightning_module.html
-- Python `unittest` 框架：https://docs.python.org/3/library/unittest.html

@@ -151,11 +151,3 @@ resource "vault_database_secret_backend_role" "readonly" {
   max_ttl             = "24h"
 }
 ```
-
-## References
-
-- HashiCorp Vault Documentation: https://developer.hashicorp.com/vault/docs
-- Vault Kubernetes Auth: https://developer.hashicorp.com/vault/docs/auth/kubernetes
-- External Secrets Operator: https://external-secrets.io/
-- AWS Secrets Manager Rotation: https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html
-- Vault Database Secrets Engine: https://developer.hashicorp.com/vault/docs/secrets/databases

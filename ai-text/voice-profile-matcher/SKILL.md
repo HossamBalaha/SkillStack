@@ -119,10 +119,3 @@ than the people inside it."
 Verdict: keep verbatim. The mixed-feeling marker ("or rather", "I keep
 coming back to this") is idiosyncratic voice, not an AI tell.
 ```
-
-## References
-
-- Companion skills: `ai-text-humanizer`, `ai-tell-catalogue`, `severity-classifier`.
-- Authorship attribution background: Grieve, J. (2007). "Quantitative authorship attribution: A history and evaluation
-  of methods."
-- Stamatatos, E. (2009). "A survey of modern authorship attribution methods." *JASIST* 60(3).

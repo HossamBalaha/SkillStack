@@ -127,11 +127,3 @@ providers:
     options:
       path: /var/lib/grafana/dashboards
 ```
-
-## References
-
-- Grafana Dashboards: https://grafana.com/docs/grafana/latest/dashboards/
-- Grafana Templating: https://grafana.com/docs/grafana/latest/dashboards/variables/
-- Grafana Alerting: https://grafana.com/docs/grafana/latest/alerting/
-- Grafana Provisioning: https://grafana.com/docs/grafana/latest/administration/provisioning/
-- RED Method (Tom Wilkie): https://grafana.com/blog/2018/08/02/the-red-method-how-to-instrument-your-services/

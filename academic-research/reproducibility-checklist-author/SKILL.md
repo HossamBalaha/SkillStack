@@ -96,11 +96,3 @@ python Main.py --config Configs/main_result.yaml --seed 42
 python Main.py --config Configs/main_result.yaml --seed 123
 python src/utils/aggregate_results.py --out outputs/main_table.csv
 ```
-
-## References
-
-- NeurIPS Reproducibility Checklist: https://neurips.cc/Conferences/2025/PaperInformation/CodeSubmission
-- ML Reproducibility Checklist: https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf
-- ACM Artifact Badging: https://www.acm.org/publications/artifacts-and-artifact-evaluation
-- Zenodo-GitHub integration: https://guides.github.com/activities/citable-code/
-- PyTorch reproducibility guide: https://pytorch.org/docs/stable/notes/randomness.html

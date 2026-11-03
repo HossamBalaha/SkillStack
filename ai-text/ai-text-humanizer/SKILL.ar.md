@@ -110,9 +110,3 @@ latency by 38% in their test cluster.
 - Original line "stands as a testament to..." was removed: significance claim
   not supported by the cited paper's abstract.
 ```
-
-## المراجع
-
-- المهارات المرافقة: `ai-text-detector`، `ai-tell-catalogue`، `grace-degradation-protocol`، `voice-profile-matcher`.
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7) — أساس خطوة
-  إعادة التحقّق التكراريّة.

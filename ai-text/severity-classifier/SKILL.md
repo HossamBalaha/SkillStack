@@ -112,9 +112,3 @@ Voice profile: target author uses em-dashes in 12% of sentences (baseline 1%).
 After classification: S1 (downgraded one level, voice override).
 Reason: pattern matches the author's genuine habit, not an AI tell here.
 ```
-
-## References
-
-- Companion skills: `ai-text-detector`, `ai-tell-catalogue`, `voice-profile-matcher`, `citation-hallucination-detector`.
-- Weber-Wulff, S., et al. (2023). "Testing of detection signals for AI-generated text." *Patterns* 4(7) — empirical
-  basis for treating any single indicator as insufficient.

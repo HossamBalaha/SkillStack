@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
-tags: [citations, literature, network-graph, semantic-scholar, connected-papers]
-related: [academic-research/literature-review-synthesizer, academic-research/related-work-surveyor, style-integrity/zero-fabrication-guard]
-prerequisites: []
-outputs: [json, markdown]
+tags: [ citations, literature, network-graph, semantic-scholar, connected-papers ]
+related: [ academic-research/literature-review-synthesizer, academic-research/related-work-surveyor, style-integrity/zero-fabrication-guard ]
+prerequisites: [ ]
+outputs: [ json, markdown ]
 difficulty: intermediate
 estimated_tokens: 860
 cost_warning: "Optional: Connected Papers / Semantic Scholar / Inciteful APIs may have rate limits or paid tiers."
@@ -19,7 +19,7 @@ permissions:
   execute_code: false
 language: en
 last_reviewed: 2026-11-02
-verified_against: []
+verified_against: [ ]
 ---
 
 # Citation Network Mapper
@@ -104,11 +104,3 @@ digraph citation_network {
   li2020 -> acar2021;
 }
 ```
-
-## References
-
-- Connected Papers: https://www.connectedpapers.com/
-- Semantic Scholar API: https://api.semanticscholar.org/api-docs/
-- Inciteful: https://inciteful.xyz/
-- NetworkX citation-graph analysis: https://networkx.org/
-- Graphviz DOT language: https://graphviz.org/doc/info/lang.html

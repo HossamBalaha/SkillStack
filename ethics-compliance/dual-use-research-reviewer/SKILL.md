@@ -114,13 +114,3 @@ Cyber dual-use finding:
   Mitigation: coordinated disclosure with vendor; 90-day embargo;
   redaction of full exploit code; responsible-disclosure plan documented.
 ```
-
-## References
-
-- NSPM-33 (United States Government Policy for Institutional Oversight of Life Sciences Dual Use Research of
-  Concern): https://www.whitehouse.gov/wp-content/uploads/2022/01/10-NSPM-33-Implementation-Guidance.pdf
-- USG DURC Policy (2014): https://www.phe.gov/s3/dualuse/Pages/default.aspx
-- NIH DURC policies: https://osp.od.nih.gov/policies/dual-use-research-of-concern/
-- Australia Group common control lists: https://australiagroup.net/en/control-lists.html
-- BMBF (Germany) code of conduct for DURC: https://www.bmbf.de/bmbf/en/research/biosecurity/biosecurity_node.html
-- Select Agents and Toxins list: https://www.selectagents.gov/sat/list.htm

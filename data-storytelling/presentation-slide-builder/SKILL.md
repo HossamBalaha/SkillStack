@@ -92,11 +92,3 @@ Slide 5 (90 s) — Assertion: "District 4 readmissions are 2.3x the average."
   Notes: Emphasise the 14-day window; skip the per-hospital breakdown if short.
   Back-row check: assertion 32 pt, scatter labels 18 pt, source line 12 pt.
 ```
-
-## References
-
-- Alley, M. (2013). The Craft of Scientific Presentations, 2nd ed. Springer, assertion-evidence
-  method. https://link.springer.com/book/10.1007/978-1-4757-2486-1
-- Assertion-Evidence Structure (Penn State): https://www.assertion-evidence.com/
-- Tufte, E. R. (2003). The Cognitive Style of PowerPoint. Graphics Press. https://www.edwardtufte.com/tufte/books_pp
-- Duarte, N. (2008). slide:ology. O'Reilly. https://www.oreilly.com/library/view/slideology/9780596522366/

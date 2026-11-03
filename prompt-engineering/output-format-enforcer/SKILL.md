@@ -117,13 +117,3 @@ def EnforceStructuredOutput(RawOutput, Schema, MaxRepairAttempts=2):
         # Surface the failure after exhausting repair attempts.
         raise
 ```
-
-## References
-
-- OpenAI Function Calling: https://platform.openai.com/docs/guides/function-calling
-- Anthropic Tool Use: https://docs.anthropic.com/en/docs/build-with-claude/tool-use
-- Outlines — structured generation: https://github.com/outlines-dev/outlines
-- Guidance — constrained generation: https://github.com/guidance-ai/guidance
-- Pydantic: https://docs.pydantic.dev/
-- JSON Schema specification: https://json-schema.org/
-- Companion skills: `system-prompt-architect`, `few-shot-template-builder`, `prompt-testing-harness`.

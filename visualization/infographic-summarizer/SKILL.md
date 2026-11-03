@@ -103,8 +103,3 @@ def SnapshotInfographic(htmlPath, pngPath):
     page.screenshot(path=pngPath, full_page=True)
     browser.close()
 ```
-
-## References
-
-- Playwright Python docs: https://playwright.dev/python/
-- Canva infographic layouts: https://www.canva.com/infographics/templates/

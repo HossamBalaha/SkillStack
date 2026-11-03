@@ -132,10 +132,3 @@ output "bucket_arn" {
   description = "ARN of the created bucket."
 }
 ```
-
-## References
-
-- Terraform Standard Module Structure: https://developer.hashicorp.com/terraform/language/modules/develop/structure
-- Terraform Input Variables: https://developer.hashicorp.com/terraform/language/values/variables
-- Terraform Output Values: https://developer.hashicorp.com/terraform/language/values/outputs
-- Terraform Provider Versions: https://developer.hashicorp.com/terraform/language/providers/requirements

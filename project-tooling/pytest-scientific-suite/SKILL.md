@@ -130,9 +130,3 @@ testpaths = ["tests"]
 addopts = "-ra --cov=src --cov-report=term-missing --cov-fail-under=80"
 markers = ["slow: marks tests as slow"]
 ```
-
-## References
-
-- pytest docs — https://docs.pytest.org
-- `@pytest.mark.parametrize` — https://docs.pytest.org/en/stable/how-to/parametrize.html
-- pytest-cov — https://pytest-cov.readthedocs.io

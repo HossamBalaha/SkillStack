@@ -5,10 +5,10 @@ metadata:
   author: Hossam Magdy Balaha
   version: "1.0"
   theme: academic-research
-tags: [latex, textbook, book-chapter, exercises, nomenclature]
-related: [academic-research/journal-manuscript-writer, academic-research/thesis-chapter-planner, style-integrity/latex-style-guard]
-prerequisites: []
-outputs: [latex]
+tags: [ latex, textbook, book-chapter, exercises, nomenclature ]
+related: [ academic-research/journal-manuscript-writer, academic-research/thesis-chapter-planner, style-integrity/latex-style-guard ]
+prerequisites: [ ]
+outputs: [ latex ]
 difficulty: advanced
 estimated_tokens: 910
 permissions:
@@ -18,7 +18,7 @@ permissions:
   execute_code: false
 language: en
 last_reviewed: 2026-11-02
-verified_against: []
+verified_against: [ ]
 ---
 
 # Academic Book Author
@@ -107,10 +107,3 @@ Reflecting on this, the smooth decay confirms that the learning rate
 ($\eta = 10^{-2}$) is well-tuned; larger rates would oscillate.
 See Fig.~\ref{fig:loss_curve} for the visualization.
 ```
-
-## References
-
-- `listings` package: https://ctan.org/pkg/listings
-- `minted` package: https://ctan.org/pkg/minted
-- `tcolorbox` package: https://ctan.org/pkg/tcolorbox
-- Bloom's taxonomy for measurable learning objectives: https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/

@@ -105,9 +105,3 @@ Voice Notes:
 - Overridden: academic-prose-polisher rule on em-dashes.
 - Overridden: meta-commentary-stripper on conversational asides.
 ```
-
-## References
-
-- Jack Hart, *A Writer's Coach* (on voice and rhythm).
-- Mark Tredinnick, *The Little Red Writing Book* (on authorial voice).
-- Anne Lamott, *Bird by Bird* (on preserving the writer's honest stance).

@@ -120,10 +120,3 @@ def AlertIfDrift(reportDf, topK=10, threshold=0.2):
     return {"Alert": True, "FlaggedFeatures": flagged.to_dict("records")}
   return {"Alert": False}
 ```
-
-## References
-
-- evidently AI: https://www.evidentlyai.com
-- alibi-detect: https://docs.seldon.io/projects/alibi-detect
-- PSI (Yurdakul 2018): https://scholarworks.wmich.edu/dissertations/3514/
-- KS test (scipy): https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks_2samp.html

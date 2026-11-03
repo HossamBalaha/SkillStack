@@ -97,13 +97,6 @@ surviving client count, with a verified fallback to centralized training
 on the remaining sites."
 ```
 
-## References
-
-- NIH R01 grant page: https://grants.nih.gov/grants/funding/r01.htm
-- NSF CAREER program: https://www.nsf.gov/funding/opportunities/career-faculty-early-career-development-program
-- ERC Starting Grant: https://erc.europa.eu/funding/starting-grants
-- NIH Biosketch format (SciENcv): https://grants.nih.gov/grants/forms/biosketch.htm
-
 ## Notes
 
 - Always match section lengths to the FOA's explicit page limits; reviewers penalize non-compliant formatting.

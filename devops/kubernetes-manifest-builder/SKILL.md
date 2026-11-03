@@ -140,12 +140,3 @@ spec:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
 ```
-
-## References
-
-- Kubernetes Workloads — Deployments: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-- Kubernetes Services: https://kubernetes.io/docs/concepts/services-networking/service/
-- Kubernetes Ingress: https://kubernetes.io/docs/concepts/services-networking/ingress/
-- Kubernetes ConfigMaps: https://kubernetes.io/docs/concepts/configuration/configmap/
-- Kubernetes Secrets: https://kubernetes.io/docs/concepts/configuration/secret/
-- Kubernetes PersistentVolumeClaims: https://kubernetes.io/docs/concepts/storage/persistent-volumes/

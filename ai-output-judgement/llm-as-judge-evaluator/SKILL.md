@@ -108,12 +108,3 @@ Self-enhancement bias check:
 - Forgetting length normalization before declaring a winner — verbose responses routinely out-score concise ones
   regardless of quality.
 - Running the judge at high temperature — judgments become irreproducible; use T ≤ 0.3.
-
-## References
-
-- Zheng, L. et al. (2023). "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena."
-  NeurIPS. https://arxiv.org/abs/2306.05685
-- Dubois, Y. et al. (2024). "Length-Controlled AlpacaEval: A Simple Way to Debias Automatic
-  Evaluators." https://arxiv.org/abs/2404.04475
-- Cohen, J. (1960). "A Coefficient of Agreement for Nominal Scales." *Educational and Psychological Measurement* 20(1).
-- Companion skills: `response-quality-scorer`, `relevance-scorer`, `faithfulness-scorer`.

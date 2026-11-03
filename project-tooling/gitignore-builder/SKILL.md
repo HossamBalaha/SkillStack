@@ -143,8 +143,3 @@ Verify what is ignored:
 # Confirm the ignore rules behave as expected.
 git status --ignored --short
 ```
-
-## References
-
-- GitHub's gitignore templates — https://github.com/github/gitignore
-- git documentation — https://git-scm.com/docs/gitignore

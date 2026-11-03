@@ -131,8 +131,3 @@ The API was deprecated in April, though support continues through Q3.
 [Removal Log]
 - "Certainly!" | opening wrapper | salvaged nothing (factual sentence already standalone)
 ```
-
-## References
-
-- Companion skills: `ai-text-detector`, `ai-tell-catalogue` (tells #22, #23), `grace-degradation-protocol`.
-- Pattern list paraphrased from widely observed chatbot conversational conventions; no external text reproduced.
