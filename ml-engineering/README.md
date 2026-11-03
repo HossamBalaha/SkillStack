@@ -5,13 +5,6 @@
 > rigor — every piece needed to take a model from notebook to publishable experiment. Output is always paired with a
 > metrics report and a reproducibility manifest.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-22-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-ml-engineering-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **22 skills** in the `ml-engineering/` theme. Each subfolder holds a `SKILL.md` whose YAML

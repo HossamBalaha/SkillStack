@@ -4,13 +4,6 @@
 > Covers tabular, image, text, and time-series data, plus the quality, drift, and dataset-card tooling required to ship
 > data that is auditable and reproducible. Every pipeline ends with a dataset card describing provenance and license.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-18-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-data-engineering-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **18 skills** in the `data-engineering/` theme. Each subfolder holds a `SKILL.md` whose YAML

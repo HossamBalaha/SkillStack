@@ -5,13 +5,6 @@
 > audience tailoring, scrollytelling, storyboarding, metric translation, and pitch decks. Use this theme
 > whenever the deliverable is a story a human reads, watches, or clicks through — not a raw chart or a notebook.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-11-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-data-storytelling-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **11 skills** in the `data-storytelling/` theme. Each subfolder holds a `SKILL.md` whose YAML

@@ -5,13 +5,6 @@
 > suites, pre-commit hooks, Sphinx docs, and release/changelog tooling. Drop a single skill into a fresh repo to get the
 > rest of the bundle as a chain.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-20-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-project-tooling-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **20 skills** in the `project-tooling/` theme. Each subfolder holds a `SKILL.md` whose YAML

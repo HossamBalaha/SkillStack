@@ -8,13 +8,6 @@
 > from `kubectl apply` to a blameless postmortem. Use this theme whenever the deliverable is platform infrastructure, a
 > deploy pipeline, or an operational runbook.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-18-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-devops-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **18 skills** in the `devops/` theme. Each subfolder holds a `SKILL.md` whose YAML

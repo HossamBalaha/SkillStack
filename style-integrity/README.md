@@ -4,13 +4,6 @@
 > source; audit math notation; and execute multi-step tasks with discipline. These skills act as the quality gates that
 > keep a research artifact honest, consistent, and submission-ready. Load them before submission, not after.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-18-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-style-integrity-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **18 skills** in the `style-integrity/` theme. Each subfolder holds a `SKILL.md` whose YAML

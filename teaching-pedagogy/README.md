@@ -7,13 +7,6 @@
 > design, CAST UDL Guidelines, Hattie & Timperley's feedback model). Use this theme whenever the deliverable is a
 > teaching artifact rather than raw code or data.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-13-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-teaching-pedagogy-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **13 skills** in the `teaching-pedagogy/` theme. Each subfolder holds a `SKILL.md` whose YAML

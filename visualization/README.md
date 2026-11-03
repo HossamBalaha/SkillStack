@@ -6,13 +6,6 @@
 > SVG)
 > with a paired caption.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-18-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-visualization-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **18 skills** in the `visualization/` theme. Each subfolder holds a `SKILL.md` whose YAML

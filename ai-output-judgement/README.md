@@ -5,13 +5,6 @@
 > scoring for end-to-end output quality assurance. Output is always a numeric score plus an evidence trace, never a bare
 > verdict.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-18-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-ai-output-judgement-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **18 skills** in the `ai-output-judgement/` theme. Each subfolder holds a `SKILL.md` whose YAML

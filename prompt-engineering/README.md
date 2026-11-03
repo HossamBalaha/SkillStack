@@ -5,13 +5,6 @@
 > roll back prompts like code. Use this theme whenever the deliverable is a prompt (system, few-shot, agent, RAG, or
 > multimodal) rather than a research artifact or a figure.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-15-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-prompt-engineering-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **15 skills** in the `prompt-engineering/` theme. Each subfolder holds a `SKILL.md` whose YAML

@@ -6,13 +6,6 @@
 > pre-registration, to journal articles, academic books, and reproducibility checklists. Use this theme whenever the
 > deliverable is a research artifact rather than raw code or data.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-20-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-academic-research-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **20 skills** in the `academic-research/` theme. Each subfolder holds a `SKILL.md` whose YAML

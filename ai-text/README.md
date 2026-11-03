@@ -5,13 +5,6 @@
 > multi-engine verification, and voice-profile matching for author-attributed rewrites. Every humanization ends with a
 > re-detection pass to confirm the rewrite held.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-15-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-ai-text-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **15 skills** in the `ai-text/` theme. Each subfolder holds a `SKILL.md` whose YAML frontmatter

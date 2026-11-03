@@ -7,13 +7,6 @@
 > privacy-by-design pipelines and algorithmic audit reports. Use this theme whenever the deliverable is an ethics,
 > privacy, or accountability document rather than raw code.
 
-<div align="center">
-
-[![Skills](https://img.shields.io/badge/Skills-12-blue)]()
-[![Theme](https://img.shields.io/badge/Theme-ethics-compliance-green)]()
-
-</div>
-
 ## Theme Overview
 
 This folder contains **12 skills** in the `ethics-compliance/` theme. Each subfolder holds a `SKILL.md` whose YAML
